@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, Sparkles, AlertTriangle, ArrowRight, BrainCircuit, Info } from "lucide-react";
+import { Search, Sparkles, AlertTriangle, ArrowRight, BrainCircuit, Info, Twitter, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major, getLevelColor } from "@/lib/data";
 import { AnimatedNumber } from "@/components/ui/animated-number";
@@ -18,6 +18,7 @@ import { toPng } from "html-to-image";
 export default function Home() {
   const [query, setQuery] = useState("");
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
+  const [isScanning, setIsScanning] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleDownload = async () => {
@@ -30,6 +31,32 @@ export default function Home() {
       link.click();
     } catch (err) {
       console.error('oops, something went wrong!', err);
+    }
+  };
+
+  const handleSelect = (major: Major) => {
+    setQuery("");
+    setIsScanning(true);
+    // Dramatic delay for the scan
+    setTimeout(() => {
+      setSelectedMajor(major);
+      setIsScanning(false);
+      // Scroll to result after a tiny beat
+      setTimeout(() => {
+        document.getElementById("result")?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }, 2000);
+  };
+
+  const handleShare = (platform: 'x' | 'wa') => {
+    if (!selectedMajor) return;
+    const emoji = selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : '🍳';
+    const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: cooked-major.vercel.app`;
+    
+    if (platform === 'x') {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+    } else {
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
     }
   };
 
@@ -61,16 +88,44 @@ export default function Home() {
       .map(item => item.major);
   }, [query]);
 
-  const handleSelect = (major: Major) => {
-    setSelectedMajor(major);
-    setQuery("");
-  };
 
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
       <ThemeToggle />
       {/* Interactive Hero */}
       <Hero />
+
+      {/* Scanning Overlay */}
+      <AnimatePresence>
+        {isScanning && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-xl flex flex-col items-center justify-center p-6"
+          >
+            <div className="w-full max-w-md space-y-8 text-center">
+              <div className="relative inline-block">
+                <BrainCircuit className="w-24 h-24 text-primary animate-pulse" />
+                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse -z-10" />
+              </div>
+              <div className="space-y-2">
+                  <h2 className="text-3xl font-black tracking-tighter uppercase italic">Scanning Your Future...</h2>
+                  <p className="text-muted-foreground font-mono text-sm uppercase tracking-widest">Running Simulation v4.0.2...</p>
+              </div>
+              <div className="w-full h-1 bg-muted rounded-full overflow-hidden">
+                  <motion.div 
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 2, ease: "easeInOut" }}
+                      className="h-full bg-primary"
+                  />
+              </div>
+              <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.3em]">Analyzing market trends & AI growth models</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Search Section */}
       <div id="search" className="w-full max-w-2xl mt-16 relative z-30 px-6">
@@ -132,6 +187,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 30 }}
             className="w-full max-w-2xl mt-16 z-20 relative px-4"
+            id="result"
           >
             {/* The Actual Downloadable Card */}
             <div ref={cardRef} className="p-4 bg-background rounded-[40px]">
@@ -228,12 +284,26 @@ export default function Home() {
             </div>
 
             {/* Actions for User */}
-            <div className="grid grid-cols-2 gap-4 mt-8 px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 px-4">
+              <button
+                onClick={() => handleShare('x')}
+                className="py-4 rounded-2xl bg-sky-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+              >
+                <Twitter className="w-4 h-4 fill-current" />
+                SHARE ON X
+              </button>
+              <button
+                onClick={() => handleShare('wa')}
+                className="py-4 rounded-2xl bg-emerald-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WHATSAPP
+              </button>
               <button
                 onClick={handleDownload}
-                className="py-6 rounded-2xl bg-foreground text-background font-black text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-xl"
+                className="py-4 rounded-2xl bg-foreground text-background font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
-                <Info className="w-5 h-5" />
+                <Info className="w-4 h-4" />
                 SAVE CARD
               </button>
               <button
@@ -243,9 +313,9 @@ export default function Home() {
                   navigator.clipboard.writeText(text);
                   alert("Text copied! Ready to post 🫡");
                 }}
-                className="py-6 rounded-2xl bg-muted border border-border text-foreground font-black text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-xl"
+                className="py-4 rounded-2xl bg-muted border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
-                <Sparkles className="w-5 h-5 fill-current" />
+                <Sparkles className="w-4 h-4 fill-current" />
                 COPY TEXT
               </button>
             </div>
