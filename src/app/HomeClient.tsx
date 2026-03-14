@@ -211,31 +211,33 @@ export default function HomeClient() {
             className="w-full max-w-2xl mt-16 z-20 relative px-4"
             id="result"
           >
-            {/* The Actual Downloadable Card */}
+            {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <div ref={cardRef} className="p-2 sm:p-4 bg-background rounded-[40px]">
               <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-10 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-700",
+                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-700 flex flex-col justify-between aspect-[4/5]",
               )}>
                 {/* Branding on Card */}
-                <div className="absolute top-8 left-10 flex items-center gap-2 opacity-40">
-                  <BrainCircuit className="w-4 h-4" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
+                <div className="absolute top-6 left-8 flex items-center gap-2 opacity-30">
+                  <BrainCircuit className="w-3 h-3" />
+                  <span className="text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-4">
-                  <div className="flex justify-between items-start mb-8 sm:mb-12">
-                      <div className="max-w-[75%]">
-                          <p className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-2 sm:mb-3">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground leading-[0.95] tracking-tighter uppercase break-words">{selectedMajor.name}</h2>
+                <div className="relative pt-6 flex-1 flex flex-col">
+                  {/* Top Header Area */}
+                  <div className="flex justify-between items-start mb-6">
+                      <div className="max-w-[80%]">
+                          <p className="text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground leading-[0.9] tracking-tighter uppercase break-words line-clamp-3">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
-                          "p-3 sm:p-4 rounded-2xl sm:rounded-3xl bg-foreground text-background",
+                          "p-2 sm:p-3 rounded-xl bg-foreground text-background shrink-0",
                       )}>
-                          <Sparkles className="w-6 h-6 sm:w-10 sm:h-10 fill-current" />
+                          <Sparkles className="w-5 h-5 sm:w-8 sm:h-8 fill-current" />
                       </div>
                   </div>
-                  
-                  <div className="grid grid-cols-2 gap-4 sm:gap-10 mb-8 sm:mb-12">
+
+                  {/* Split Dashboard Area */}
+                  <div className="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-foreground/5">
                     <div className="space-y-2 sm:space-y-4">
                       <p className="text-[8px] sm:text-[10px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-1">
@@ -275,25 +277,23 @@ export default function HomeClient() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="mb-10">
-                    <div className="border-t-4 border-dashed border-foreground/10 pt-10">
-                      <h3 className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-6">AI ROAST VERDICT</h3>
-                      <p className="text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight">
+                       {/* Roast Verdict Area */}
+                  <div className="flex-1 flex flex-col justify-center py-4 border-t-2 border-dashed border-foreground/10">
+                    <h3 className="text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-3">AI ROAST VERDICT</h3>
+                    <p className="text-xl sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight">
                         "{selectedMajor.roast}"
-                      </p>
-                    </div>
+                    </p>
                   </div>
 
-                  {/* QR Code Placeholder / Aesthetic Branding */}
-                  <div className="pt-10 border-t-2 border-foreground/5 flex justify-between items-end">
+                  {/* Card Footer */}
+                  <div className="pt-6 mt-4 border-t border-foreground/5 flex justify-between items-end">
                     <div>
-                      <p className="text-[8px] font-black text-muted-foreground uppercase mb-1">DATA VERIFIED BY</p>
-                      <p className="text-xs font-black">MAJORLABS INTELLIGENCE</p>
+                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">DATA VERIFIED BY</p>
+                      <p className="text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[8px] font-black text-muted-foreground uppercase mb-1">SCAN TO CHECK YOURS</p>
-                      <p className="text-xs font-black">COOKED-MAJOR.VERCEL.APP</p>
+                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">SCAN TO CHECK YOURS</p>
+                      <p className="text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
                     </div>
                   </div>
                 </div>
