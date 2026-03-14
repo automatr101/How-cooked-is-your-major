@@ -5,131 +5,89 @@ import React from "react";
 // @ts-ignore
 import { ReactTyped } from "react-typed";
 
-// @ts-ignore
-function n(e) {
-  // @ts-ignore
-  this.init(e || {});
-}
-n.prototype = {
-  // @ts-ignore
-  init: function (e) {
-    // @ts-ignore
+class n {
+  phase: number = 0;
+  offset: number = 0;
+  frequency: number = 0;
+  amplitude: number = 0;
+
+  constructor(e: any = {}) {
     this.phase = e.phase || 0;
-    // @ts-ignore
     this.offset = e.offset || 0;
-    // @ts-ignore
     this.frequency = e.frequency || 0.001;
-    // @ts-ignore
     this.amplitude = e.amplitude || 1;
-  },
-  update: function () {
-    // @ts-ignore
-    this.phase += this.frequency;
-    // @ts-ignore
-    return (this.offset + Math.sin(this.phase) * this.amplitude);
-  },
-  value: function () {
-    // @ts-ignore
-    return this.offset + Math.sin(this.phase) * this.amplitude;
-  },
-};
+  }
 
-// @ts-ignore
-function Line(e) {
-  // @ts-ignore
-  this.init(e || {});
+  update() {
+    this.phase += this.frequency;
+    return this.offset + Math.sin(this.phase) * this.amplitude;
+  }
+
+  value() {
+    return this.offset + Math.sin(this.phase) * this.amplitude;
+  }
 }
 
-Line.prototype = {
-  // @ts-ignore
-  init: function (e) {
-    // @ts-ignore
+class Line {
+  spring: number = 0;
+  friction: number = 0;
+  nodes: any[] = [];
+
+  constructor(e: any = {}) {
     this.spring = e.spring + 0.1 * Math.random() - 0.05;
-    // @ts-ignore
     this.friction = E.friction + 0.01 * Math.random() - 0.005;
-    // @ts-ignore
     this.nodes = [];
-    for (var t, n = 0; n < E.size; n++) {
+    for (var t, i = 0; i < E.size; i++) {
       t = new Node();
-      // @ts-ignore
-      t.x = pos.x;
-      // @ts-ignore
-      t.y = pos.y;
-      // @ts-ignore
+      t.x = (pos as any).x;
+      t.y = (pos as any).y;
       this.nodes.push(t);
     }
-  },
-  update: function () {
-    // @ts-ignore
+  }
+
+  update() {
     let e = this.spring,
-      // @ts-ignore
       t = this.nodes[0];
-    // @ts-ignore
-    t.vx += (pos.x - t.x) * e;
-    // @ts-ignore
-    t.vy += (pos.y - t.y) * e;
-    // @ts-ignore
+    t.vx += ((pos as any).x - t.x) * e;
+    t.vy += ((pos as any).y - t.y) * e;
     for (var n, i = 0, a = this.nodes.length; i < a; i++) {
-      // @ts-ignore
       t = this.nodes[i];
       if (0 < i) {
-          // @ts-ignore
-          n = this.nodes[i - 1];
-          // @ts-ignore
-          t.vx += (n.x - t.x) * e;
-          // @ts-ignore
-          t.vy += (n.y - t.y) * e;
-          // @ts-ignore
-          t.vx += n.vx * E.dampening;
-          // @ts-ignore
-          t.vy += n.vy * E.dampening;
+        n = this.nodes[i - 1];
+        t.vx += (n.x - t.x) * e;
+        t.vy += (n.y - t.y) * e;
+        t.vx += n.vx * E.dampening;
+        t.vy += n.vy * E.dampening;
       }
-      // @ts-ignore
       t.vx *= this.friction;
-      // @ts-ignore
       t.vy *= this.friction;
-      // @ts-ignore
       t.x += t.vx;
-      // @ts-ignore
       t.y += t.vy;
-      // @ts-ignore
       e *= E.tension;
     }
-  },
-  draw: function () {
+  }
+
+  draw() {
     let e,
       t,
-      // @ts-ignore
       n = this.nodes[0].x,
-      // @ts-ignore
       i = this.nodes[0].y;
-    // @ts-ignore
-    ctx.beginPath();
-    // @ts-ignore
-    ctx.moveTo(n, i);
-    // @ts-ignore
+    (ctx as any).beginPath();
+    (ctx as any).moveTo(n, i);
     for (var a = 1, o = this.nodes.length - 2; a < o; a++) {
-      // @ts-ignore
       e = this.nodes[a];
-      // @ts-ignore
       t = this.nodes[a + 1];
       n = 0.5 * (e.x + t.x);
       i = 0.5 * (e.y + t.y);
-      // @ts-ignore
-      ctx.quadraticCurveTo(e.x, e.y, n, i);
+      (ctx as any).quadraticCurveTo(e.x, e.y, n, i);
     }
-    // @ts-ignore
     e = this.nodes[a];
-    // @ts-ignore
     t = this.nodes[a + 1];
-    // @ts-ignore
-    ctx.quadraticCurveTo(e.x, e.y, t.x, t.y);
-    // @ts-ignore
-    ctx.stroke();
-    // @ts-ignore
-    ctx.closePath();
-  },
-};
+    (ctx as any).quadraticCurveTo(e.x, e.y, t.x, t.y);
+    (ctx as any).stroke();
+    (ctx as any).closePath();
+  }
+}
 
 // @ts-ignore
 function onMousemove(e) {
@@ -210,13 +168,13 @@ function resizeCanvas() {
 }
 
 // @ts-ignore
-var ctx,
+var ctx: any,
   // @ts-ignore
-  f,
+  f: any,
   e = 0,
   pos = {},
   // @ts-ignore
-  lines = [],
+  lines: any[] = [],
   E = {
     debug: true,
     friction: 0.5,
@@ -226,16 +184,11 @@ var ctx,
     tension: 0.99,
   };
 
-// @ts-ignore
-function Node() {
-  // @ts-ignore
-  this.x = 0;
-  // @ts-ignore
-  this.y = 0;
-  // @ts-ignore
-  this.vy = 0;
-  // @ts-ignore
-  this.vx = 0;
+class Node {
+  x: number = 0;
+  y: number = 0;
+  vy: number = 0;
+  vx: number = 0;
 }
 
 const renderCanvas = function () {
