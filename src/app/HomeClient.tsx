@@ -212,9 +212,9 @@ export default function HomeClient() {
             id="result"
           >
             {/* The Actual Downloadable Card */}
-            <div ref={cardRef} className="p-4 bg-background rounded-[40px]">
+            <div ref={cardRef} className="p-2 sm:p-4 bg-background rounded-[40px]">
               <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-10 md:p-14 shadow-[20px_20px_0px_0px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-700",
+                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-10 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-700",
               )}>
                 {/* Branding on Card */}
                 <div className="absolute top-8 left-10 flex items-center gap-2 opacity-40">
@@ -222,41 +222,41 @@ export default function HomeClient() {
                   <span className="text-[10px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-6">
-                  <div className="flex justify-between items-start mb-14">
-                      <div className="max-w-[70%]">
-                          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-3">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-5xl md:text-6xl font-black text-foreground leading-[0.95] tracking-tighter uppercase break-words">{selectedMajor.name}</h2>
+                <div className="relative pt-4">
+                  <div className="flex justify-between items-start mb-8 sm:mb-12">
+                      <div className="max-w-[75%]">
+                          <p className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-2 sm:mb-3">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground leading-[0.95] tracking-tighter uppercase break-words">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
-                          "p-4 rounded-3xl bg-foreground text-background",
+                          "p-3 sm:p-4 rounded-2xl sm:rounded-3xl bg-foreground text-background",
                       )}>
-                          <Sparkles className="w-10 h-10 fill-current" />
+                          <Sparkles className="w-6 h-6 sm:w-10 sm:h-10 fill-current" />
                       </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
-                    <div className="space-y-4">
-                      <p className="text-[10px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
+                  <div className="grid grid-cols-2 gap-4 sm:gap-10 mb-8 sm:mb-12">
+                    <div className="space-y-2 sm:space-y-4">
+                      <p className="text-[8px] sm:text-[10px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-1">
                         <span className={cn(
-                            "text-9xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[8px_8px_0px_rgba(0,0,0,0.1)]",
+                            "text-6xl sm:text-8xl md:text-9xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[5px_5px_0px_rgba(0,0,0,0.1)]",
                             selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
                         </span>
-                        <span className="text-4xl font-black opacity-30 select-none">%</span>
+                        <span className="text-2xl sm:text-4xl font-black opacity-30 select-none">%</span>
                         
                         {/* Decorative Background Element for Number */}
                         <div className="absolute -inset-4 bg-foreground/5 -z-10 rounded-3xl rotate-3 blur-2xl" />
                       </div>
                     </div>
                     
-                    <div className="space-y-4 flex flex-col items-start">
-                      <p className="text-[10px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
-                      <div className="flex flex-col gap-4">
+                    <div className="space-y-2 sm:space-y-4 flex flex-col items-start pl-4 border-l border-foreground/5">
+                      <p className="text-[8px] sm:text-[10px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
+                      <div className="flex flex-col gap-2 sm:gap-4">
                           <span className={cn(
-                              "text-5xl font-black tracking-tighter uppercase leading-none italic",
+                              "text-2xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none italic",
                               selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : "text-foreground"
                           )}>
                               {selectedMajor.level}
@@ -264,18 +264,13 @@ export default function HomeClient() {
                           
                           {/* The Marked Icon Refinement: High-Contrast Stamp Container */}
                           <div className={cn(
-                              "relative flex items-center justify-center w-24 h-24 rounded-3xl border-4 border-foreground bg-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-6deg]",
+                              "relative flex items-center justify-center w-14 h-14 sm:w-24 sm:h-24 rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-foreground bg-background shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg]",
                               selectedMajor.score > 80 ? "bg-destructive/10 border-destructive shadow-destructive/20" : 
                               selectedMajor.score > 60 ? "bg-orange-500/10 border-orange-500 shadow-orange-500/20" : ""
                           )}>
-                              <span className="text-5xl select-none">
+                              <span className="text-3xl sm:text-5xl select-none">
                                 {selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : selectedMajor.score > 40 ? '🍳' : '🌱'}
                               </span>
-                              
-                              {/* Pulse Effect for High Risk Status Icons */}
-                              {selectedMajor.score > 70 && (
-                                <div className="absolute inset-0 rounded-2xl animate-ping bg-destructive/20 -z-10" />
-                              )}
                           </div>
                       </div>
                     </div>
