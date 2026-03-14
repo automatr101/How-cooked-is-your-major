@@ -76,15 +76,13 @@ export const Hero = () => {
           <Plus strokeWidth={8} className="text-destructive absolute left-0 bottom-0 h-12 w-12 opacity-20 -translate-x-1/2 translate-y-1/2" />
           <Plus strokeWidth={8} className="text-primary absolute right-0 bottom-0 h-12 w-12 opacity-20 translate-x-1/2 translate-y-1/2" />
 
+          {/* Status Bar - Integrated into flow to prevent overlap */}
+          <div className="flex items-center gap-3 pt-6">
+              <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
+              <p className="text-[10px] font-black text-emerald-600 dark:text-emerald-400 tracking-[0.4em] uppercase">Server Status: Optimal</p>
+          </div>
         </div>
       </div>
-      
-      {/* Status Bar */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
-          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
-          <p className="text-[10px] font-black text-emerald-600 dark:text-emerald-400 tracking-[0.4em] uppercase">Server Status: Optimal</p>
-      </div>
-
     </main>
   );
 };
