@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, Sparkles, AlertTriangle, ArrowRight, BrainCircuit, Info, Twitter, MessageCircle } from "lucide-react";
+import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap } from "lucide-react";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major, getLevelColor } from "@/lib/data";
 import { AnimatedNumber } from "@/components/ui/animated-number";
@@ -151,22 +152,30 @@ export default function HomeClient() {
 
       {/* Search Section */}
       <div id="search" className="w-full max-w-2xl mt-16 relative z-30 px-6">
-        <div className="relative group">
-          <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-1000" />
-          <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden backdrop-blur-2xl transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5 shadow-xl">
-            <Search className="w-6 h-6 ml-6 text-muted-foreground transition-colors group-focus-within:text-primary" />
-            <input
-              type="text"
-              className="w-full bg-transparent border-none text-xl text-foreground placeholder-muted-foreground/50 px-6 py-6 focus:outline-none focus:ring-0 font-bold tracking-tight"
-              placeholder="Search 1,800+ courses..."
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                if (selectedMajor) setSelectedMajor(null);
-              }}
-            />
+        <ShimmerButton 
+          borderRadius="24px" 
+          shimmerSize="0.1em"
+          background="transparent"
+          shimmerColor="var(--primary)"
+          className="w-full p-0 overflow-visible"
+        >
+          <div className="relative group w-full">
+            <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-1000" />
+            <div className="relative flex items-center bg-card/80 border border-border/50 rounded-2xl overflow-hidden backdrop-blur-2xl transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5 shadow-2xl w-full">
+              <Search className="w-6 h-6 ml-6 text-muted-foreground transition-colors group-focus-within:text-primary" />
+              <input
+                type="text"
+                className="w-full bg-transparent border-none text-xl text-foreground placeholder-muted-foreground/50 px-6 py-6 focus:outline-none focus:ring-0 font-bold tracking-tight"
+                placeholder="Search 1,800+ courses..."
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  if (selectedMajor) setSelectedMajor(null);
+                }}
+              />
+            </div>
           </div>
-        </div>
+        </ShimmerButton>
 
         {/* Autocomplete Suggestions */}
         <AnimatePresence>

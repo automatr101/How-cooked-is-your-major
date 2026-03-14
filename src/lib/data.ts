@@ -16209,6 +16209,186 @@ export const majors: Major[] = [
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
   }
+  {
+  "name": "BSc Administration (Accounting)",
+  "score": 84,
+  "level": "Very Cooked",
+  "roast": "AI balances books faster, cheaper, and without complaining.",
+  "advice": "Transition to strategic financial consulting or tax strategy.",
+  "salary": "$65k - $140k",
+  "growth": "-6% Growth"
+},
+  {
+  "name": "BSc Administration (Marketing)",
+  "score": 70,
+  "level": "Cooked",
+  "roast": "AI can target your audience better than you can target your morning coffee.",
+  "advice": "Focus on high-level creative strategy and brand psychology.",
+  "salary": "$57k - $138k",
+  "growth": "-5% Growth"
+},
+  {
+  "name": "BSc Administration (Human Resource Management)",
+  "score": 51,
+  "level": "Kinda Cooked",
+  "roast": "AI can write business plans, but can it close the deal at a fancy dinner?",
+  "advice": "Focus heavily on networking and human relationships.",
+  "salary": "$68k - $199k",
+  "growth": "+1% Growth"
+},
+  {
+  "name": "BSc Administration (Public Administration)",
+  "score": 51,
+  "level": "Kinda Cooked",
+  "roast": "AI can write business plans, but can it close the deal at a fancy dinner?",
+  "advice": "Focus heavily on networking and human relationships.",
+  "salary": "$68k - $199k",
+  "growth": "+1% Growth"
+},
+  {
+  "name": "BSc Administration (Health Services Management)",
+  "score": 10,
+  "level": "Not Cooked",
+  "roast": "AI can diagnose, but can it hold a hand when it counts?",
+  "advice": "Specialize in nursing informatics or geriatric care.",
+  "salary": "$94k - $160k",
+  "growth": "+17% Growth"
+},
+  {
+  "name": "BSc Administration (Banking and Finance)",
+  "score": 63,
+  "level": "Cooked",
+  "roast": "Algo trading is already beating you. Focus on the relationships.",
+  "advice": "Move towards wealth management and corporate strategy.",
+  "salary": "$83k - $190k",
+  "growth": "0% Growth"
+},
+  {
+  "name": "BSc Information Technology (IT)",
+  "score": 75,
+  "level": "Cooked",
+  "roast": "You built the thing that is replacing you. Now you have to debug it forever.",
+  "advice": "Pivot to AI engineering and system architecture immediately.",
+  "salary": "$101k - $203k",
+  "growth": "-1% Growth"
+},
+  {
+  "name": "B.Ed. Early Grade Specialism",
+  "score": 24,
+  "level": "Slightly Cooked",
+  "roast": "Kids won't listen to a robot tutor for 8 hours a day.",
+  "advice": "Incorporate AI into your curriculum.",
+  "salary": "$62k - $117k",
+  "growth": "+4% Growth"
+},
+  {
+  "name": "B.Ed. Upper-Grade Specialism",
+  "score": 16,
+  "level": "Not Cooked",
+  "roast": "Kids won't listen to a robot tutor for 8 hours a day.",
+  "advice": "Incorporate AI into your curriculum.",
+  "salary": "$64k - $121k",
+  "growth": "+4% Growth"
+},
+  {
+  "name": "B.Ed. J.H.S Specialism",
+  "score": 22,
+  "level": "Slightly Cooked",
+  "roast": "Kids won't listen to a robot tutor for 8 hours a day.",
+  "advice": "Incorporate AI into your curriculum.",
+  "salary": "$63k - $118k",
+  "growth": "+4% Growth"
+},
+  {
+  "name": "BSc. Mobile Computing",
+  "score": 70,
+  "level": "Cooked",
+  "roast": "You built the thing that is replacing you. Now you have to debug it forever.",
+  "advice": "Pivot to AI engineering and system architecture immediately.",
+  "salary": "$103k - $207k",
+  "growth": "0% Growth"
+},
+  {
+  "name": "BSc. Software Engineering",
+  "score": 73,
+  "level": "Cooked",
+  "roast": "You built the thing that is replacing you. Now you have to debug it forever.",
+  "advice": "Pivot to AI engineering and system architecture immediately.",
+  "salary": "$102k - $204k",
+  "growth": "-1% Growth"
+},
+  {
+  "name": "BSc. Business Information Systems",
+  "score": 61,
+  "level": "Cooked",
+  "roast": "AI analyzes data better than you, but you still need to explain it to humans.",
+  "advice": "Move into AI Strategy and decision intelligence.",
+  "salary": "$114k - $203k",
+  "growth": "+16% Growth"
+},
+  {
+  "name": "BSc. Data Science & Analytics",
+  "score": 63,
+  "level": "Cooked",
+  "roast": "AI analyzes data better than you, but you still need to explain it to humans.",
+  "advice": "Move into AI Strategy and decision intelligence.",
+  "salary": "$113k - $201k",
+  "growth": "+16% Growth"
+},
+  {
+  "name": "BSc Cyber Security",
+  "score": 71,
+  "level": "Cooked",
+  "roast": "You built the thing that is replacing you. Now you have to debug it forever.",
+  "advice": "Pivot to AI engineering and system architecture immediately.",
+  "salary": "$103k - $206k",
+  "growth": "-1% Growth"
+},
+  {
+  "name": "BSc. Procurement and Logistics",
+  "score": 55,
+  "level": "Kinda Cooked",
+  "roast": "AI can write business plans, but can it close the deal at a fancy dinner?",
+  "advice": "Focus heavily on networking and human relationships.",
+  "salary": "$67k - $196k",
+  "growth": "+1% Growth"
+},
+  {
+  "name": "BSc. Financial Technology",
+  "score": 59,
+  "level": "Kinda Cooked",
+  "roast": "Algo trading is already beating you. Focus on the relationships.",
+  "advice": "Move towards wealth management and corporate strategy.",
+  "salary": "$84k - $193k",
+  "growth": "0% Growth"
+},
+  {
+  "name": "BSc. Economics",
+  "score": 64,
+  "level": "Cooked",
+  "roast": "Algo trading is already beating you. Focus on the relationships.",
+  "advice": "Move towards wealth management and corporate strategy.",
+  "salary": "$83k - $189k",
+  "growth": "0% Growth"
+},
+  {
+  "name": "BSc. Accounting with Computing",
+  "score": 87,
+  "level": "Very Cooked",
+  "roast": "AI balances books faster, cheaper, and without complaining.",
+  "advice": "Transition to strategic financial consulting or tax strategy.",
+  "salary": "$64k - $138k",
+  "growth": "-7% Growth"
+},
+  {
+  "name": "BSc. Human Resource Management",
+  "score": 50,
+  "level": "Kinda Cooked",
+  "roast": "AI can write business plans, but can it close the deal at a fancy dinner?",
+  "advice": "Focus heavily on networking and human relationships.",
+  "salary": "$69k - $200k",
+  "growth": "+2% Growth"
+},
 ];
 
 export function getLevelColor(level: string) {

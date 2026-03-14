@@ -59,14 +59,9 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
             <div className="flex flex-col items-start gap-2">
               <div className="flex -space-x-3">
-                {[
-                  { icon: BrainCircuit, color: "text-primary" },
-                  { icon: Sparkles, color: "text-secondary" },
-                  { icon: Plus, color: "text-destructive" },
-                  { icon: BrainCircuit, color: "text-primary/70" }
-                ].map((item, i) => (
-                  <div key={i} className="w-12 h-12 rounded-full border-2 border-background bg-card/80 flex items-center justify-center overflow-hidden shadow-xl backdrop-blur-xl">
-                    <item.icon className={cn("w-6 h-6", item.color)} />
+                {[1,2,3,4].map((i) => (
+                  <div key={i} className="w-12 h-12 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden shadow-xl">
+                    <img src={`https://i.pravatar.cc/150?u=${i+50}`} alt="user" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
