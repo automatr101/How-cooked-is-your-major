@@ -14,10 +14,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   if (major && score) {
     const title = `I'm ${score}% Cooked (${major})`;
     const description = `Survival Status: ${level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
-    const ogUrl = new URL('https://cooked-major.vercel.app/api/og');
-    ogUrl.searchParams.set('major', major);
-    ogUrl.searchParams.set('score', score);
-    ogUrl.searchParams.set('level', level);
+    const ogUrl = `https://cooked-major.vercel.app/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}`;
 
     return {
       title,
@@ -25,20 +22,29 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       openGraph: {
         title,
         description,
+        url: 'https://cooked-major.vercel.app',
+        siteName: 'How Cooked Is Your Major?',
         images: [
           {
-            url: ogUrl.toString(),
+            url: ogUrl,
             width: 1200,
             height: 630,
-            alt: `Cooked Analysis for ${major}`,
           },
         ],
+        locale: 'en_US',
+        type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
         title,
         description,
-        images: [ogUrl.toString()],
+        images: [ogUrl],
+      },
+      other: {
+        'google-adsense-account': 'ca-pub-6100632094350229',
+      },
+      alternates: {
+        canonical: 'https://cooked-major.vercel.app',
       },
     };
   }
@@ -61,5 +67,25 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 
 export default function Page() {
-  return <HomeClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "How Cooked Is Your Major?",
+    "description": "Find out how cooked your major is before graduation. AI risk assessment for students.",
+    "url": "https://cooked-major.vercel.app",
+    "applicationCategory": "EducationalApplication",
+    "genre": "Education",
+    "browserRequirements": "Requires JavaScript",
+    "softwareVersion": "1.0.4",
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HomeClient />
+    </>
+  );
 }

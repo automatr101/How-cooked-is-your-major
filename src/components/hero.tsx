@@ -7,6 +7,7 @@ import { Plus, BrainCircuit, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button"; 
 import { ShineBorder } from "@/components/ui/hero-designali";
 import { TypeWriter } from "@/components/ui/hero-designali";
+import { cn } from "@/lib/utils";
 
 export const Hero = () => {
   const talkAbout = [
@@ -47,10 +48,10 @@ export const Hero = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative bg-card/60 border border-border px-8 py-10 rounded-3xl backdrop-blur-2xl">
               <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                The most advanced AI risk assessment for students in <br className="hidden md:block" />
-                <span className="text-foreground font-black underline decoration-primary/50 underline-offset-8">
+                Find out how <span className="text-foreground font-black italic">cooked</span> your major is before graduation. <br className="hidden md:block" />
+                Analyzing <span className="text-foreground font-black underline decoration-primary/50 underline-offset-8">
                   <TypeWriter strings={talkAbout} />
-                </span> fields.
+                </span> with cold, hard AI logic.
               </p>
             </div>
           </div>
@@ -58,9 +59,14 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
             <div className="flex flex-col items-start gap-2">
               <div className="flex -space-x-3">
-                {[1,2,3,4].map((i) => (
-                  <div key={i} className="w-12 h-12 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden shadow-xl">
-                    <img src={`https://i.pravatar.cc/150?u=${i+50}`} alt="user" className="w-full h-full object-cover" />
+                {[
+                  { icon: BrainCircuit, color: "text-primary" },
+                  { icon: Sparkles, color: "text-secondary" },
+                  { icon: Plus, color: "text-destructive" },
+                  { icon: BrainCircuit, color: "text-primary/70" }
+                ].map((item, i) => (
+                  <div key={i} className="w-12 h-12 rounded-full border-2 border-background bg-card/80 flex items-center justify-center overflow-hidden shadow-xl backdrop-blur-xl">
+                    <item.icon className={cn("w-6 h-6", item.color)} />
                   </div>
                 ))}
               </div>

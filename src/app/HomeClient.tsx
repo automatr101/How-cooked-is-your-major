@@ -237,44 +237,50 @@ export default function HomeClient() {
                   </div>
 
                   {/* Split Dashboard Area */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-foreground/5">
-                    <div className="space-y-2 sm:space-y-4">
-                      <p className="text-[8px] sm:text-[10px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
+                  <div className="grid grid-cols-2 gap-4 mb-4 pt-4 border-t border-foreground/5">
+                    <div className="space-y-1">
+                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-1">
                         <span className={cn(
-                            "text-6xl sm:text-8xl md:text-9xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[5px_5px_0px_rgba(0,0,0,0.1)]",
+                            "text-5xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[4px_4px_0px_rgba(0,0,0,0.1)]",
                             selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
                         </span>
-                        <span className="text-2xl sm:text-4xl font-black opacity-30 select-none">%</span>
-                        
-                        {/* Decorative Background Element for Number */}
-                        <div className="absolute -inset-4 bg-foreground/5 -z-10 rounded-3xl rotate-3 blur-2xl" />
+                        <span className="text-xl font-black opacity-30 select-none">%</span>
                       </div>
                     </div>
                     
-                    <div className="space-y-2 sm:space-y-4 flex flex-col items-start pl-4 border-l border-foreground/5">
-                      <p className="text-[8px] sm:text-[10px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
-                      <div className="flex flex-col gap-2 sm:gap-4">
+                    <div className="space-y-1 flex flex-col items-start pl-4 border-l border-foreground/5">
+                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
+                      <div className="flex flex-col gap-1">
                           <span className={cn(
-                              "text-2xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none italic",
+                              "text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase leading-none italic",
                               selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : "text-foreground"
                           )}>
                               {selectedMajor.level}
                           </span>
-                          
-                          {/* The Marked Icon Refinement: High-Contrast Stamp Container */}
-                          <div className={cn(
-                              "relative flex items-center justify-center w-14 h-14 sm:w-24 sm:h-24 rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-foreground bg-background shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] rotate-[-4deg]",
-                              selectedMajor.score > 80 ? "bg-destructive/10 border-destructive shadow-destructive/20" : 
-                              selectedMajor.score > 60 ? "bg-orange-500/10 border-orange-500 shadow-orange-500/20" : ""
-                          )}>
-                              <span className="text-3xl sm:text-5xl select-none">
-                                {selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : selectedMajor.score > 40 ? '🍳' : '🌱'}
-                              </span>
-                          </div>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* Market Stats Dashboard */}
+                  <div className="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-foreground/5">
+                    <div className="space-y-1">
+                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
+                      <p className="text-lg sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
+                        {selectedMajor.salary}
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-1 pl-4 border-l border-foreground/5">
+                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
+                      <p className={cn(
+                        "text-lg sm:text-xl font-black tabular-nums tracking-tighter",
+                        selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
+                      )}>
+                        {selectedMajor.growth}
+                      </p>
                     </div>
                   </div>
                        {/* Roast Verdict Area */}
