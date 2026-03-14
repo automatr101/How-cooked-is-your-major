@@ -16208,7 +16208,7 @@ export const majors: Major[] = [
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
-  }
+  },
   {
   "name": "BSc Administration (Accounting)",
   "score": 84,
