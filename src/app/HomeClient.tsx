@@ -212,9 +212,9 @@ export default function HomeClient() {
             id="result"
           >
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
-            <div ref={cardRef} className="p-2 sm:p-4 bg-background rounded-[40px]">
+            <div ref={cardRef} className="p-1 sm:p-2 bg-background rounded-[40px]">
               <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-700 flex flex-col justify-between aspect-[4/5]",
+                  "relative rounded-[32px] border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col justify-between aspect-[4/5] overflow-visible",
               )}>
                 {/* Branding on Card */}
                 <div className="absolute top-6 left-8 flex items-center gap-2 opacity-30">
@@ -222,17 +222,17 @@ export default function HomeClient() {
                   <span className="text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-6 flex-1 flex flex-col">
+                <div className="relative pt-4 flex-1 flex flex-col min-h-0">
                   {/* Top Header Area */}
-                  <div className="flex justify-between items-start mb-6">
+                  <div className="flex justify-between items-start mb-3 sm:mb-6">
                       <div className="max-w-[80%]">
-                          <p className="text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground leading-[0.9] tracking-tighter uppercase break-words line-clamp-3">{selectedMajor.name}</h2>
+                          <p className="text-[6px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground leading-[0.9] tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
-                          "p-2 sm:p-3 rounded-xl bg-foreground text-background shrink-0",
+                          "p-1 sm:p-3 rounded-lg sm:xl bg-foreground text-background shrink-0",
                       )}>
-                          <Sparkles className="w-5 h-5 sm:w-8 sm:h-8 fill-current" />
+                          <Sparkles className="w-4 h-4 sm:w-8 sm:h-8 fill-current" />
                       </div>
                   </div>
 
@@ -265,18 +265,18 @@ export default function HomeClient() {
                   </div>
 
                   {/* Market Stats Dashboard */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-foreground/5">
-                    <div className="space-y-1">
-                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
-                      <p className="text-lg sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-6 pt-2 sm:pt-4 border-t border-foreground/5">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <p className="text-[6px] sm:text-[7px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
+                      <p className="text-base sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
                         {selectedMajor.salary}
                       </p>
                     </div>
                     
-                    <div className="space-y-1 pl-4 border-l border-foreground/5">
-                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
+                    <div className="space-y-0.5 sm:space-y-1 pl-2 sm:pl-4 border-l border-foreground/5">
+                      <p className="text-[6px] sm:text-[7px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
                       <p className={cn(
-                        "text-lg sm:text-xl font-black tabular-nums tracking-tighter",
+                        "text-base sm:text-xl font-black tabular-nums tracking-tighter",
                         selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
                       )}>
                         {selectedMajor.growth}
@@ -284,9 +284,9 @@ export default function HomeClient() {
                     </div>
                   </div>
                        {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col justify-center py-4 border-t-2 border-dashed border-foreground/10">
-                    <h3 className="text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-3">AI ROAST VERDICT</h3>
-                    <p className="text-xl sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight">
+                  <div className="flex-1 flex flex-col justify-center py-2 sm:py-4 border-t-2 border-dashed border-foreground/10">
+                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-3">AI ROAST VERDICT</h3>
+                    <p className="text-lg sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight line-clamp-4">
                         "{selectedMajor.roast}"
                     </p>
                   </div>
