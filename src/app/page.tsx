@@ -141,7 +141,7 @@ export default function Home() {
                 {/* Branding on Card */}
                 <div className="absolute top-8 left-10 flex items-center gap-2 opacity-40">
                   <BrainCircuit className="w-4 h-4" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">HowCookedIsYourMajor.com</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
                 <div className="relative pt-6">
@@ -220,7 +220,7 @@ export default function Home() {
                     </div>
                     <div className="text-right">
                       <p className="text-[8px] font-black text-muted-foreground uppercase mb-1">SCAN TO CHECK YOURS</p>
-                      <p className="text-xs font-black">HOWCOOKEDISYOURMAJOR.COM</p>
+                      <p className="text-xs font-black">COOKED-MAJOR.VERCEL.APP</p>
                     </div>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function Home() {
               <button
                 onClick={() => {
                   const emoji = selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : '🍳';
-                  const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: howcookedisyourmajor.com`;
+                  const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: cooked-major.vercel.app`;
                   navigator.clipboard.writeText(text);
                   alert("Text copied! Ready to post 🫡");
                 }}
