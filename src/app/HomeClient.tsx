@@ -237,12 +237,12 @@ export default function HomeClient() {
                 resolvedTheme === "dark" ? "dark" : ""
             )}>
               <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between min-h-[500px] aspect-[4/5] overflow-hidden text-foreground",
+                  "relative rounded-[24px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between aspect-[4/5] overflow-hidden text-foreground w-full",
               )}>
                 {/* Branding on Card */}
-                <div className="absolute top-6 left-8 flex items-center gap-2 opacity-30">
-                  <BrainCircuit className="w-3 h-3" />
-                  <span className="text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
+                <div className="absolute top-3 left-4 sm:top-6 sm:left-8 flex items-center gap-2 opacity-30">
+                  <BrainCircuit className="w-2 h-2 sm:w-3 sm:h-3" />
+                  <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
                 <div className="relative pt-2 sm:pt-4 flex-1 flex flex-col min-h-0">
@@ -316,14 +316,14 @@ export default function HomeClient() {
                   </div>
 
                   {/* Card Footer */}
-                  <div className="pt-4 sm:pt-8 mt-2 sm:mt-6 border-t border-foreground/5 flex justify-between items-end">
+                  <div className="pt-2 sm:pt-8 mt-1 sm:mt-6 border-t border-foreground/5 flex justify-between items-end">
                     <div>
-                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">DATA VERIFIED BY</p>
-                      <p className="text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
+                      <p className="text-[5px] sm:text-[7px] font-black text-muted-foreground uppercase mb-0.5">DATA VERIFIED BY</p>
+                      <p className="text-[7px] sm:text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">SCAN TO CHECK YOURS</p>
-                      <p className="text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
+                      <p className="text-[5px] sm:text-[7px] font-black text-muted-foreground uppercase mb-0.5">SCAN TO CHECK YOURS</p>
+                      <p className="text-[7px] sm:text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
                     </div>
                   </div>
                 </div>
