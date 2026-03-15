@@ -66,7 +66,7 @@ export const Hero = () => {
                 ))}
               </div>
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-1">
-                <span className="text-foreground">1.8M</span> Nodes Analyzed
+                <span className="text-foreground">2.4M+</span> Majors Scanned
               </p>
             </div>
           </div>

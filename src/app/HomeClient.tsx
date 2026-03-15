@@ -13,13 +13,18 @@ import { cn } from "@/lib/utils";
 
 import { Hero } from "@/components/hero";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LiveTicker } from "@/components/live-ticker";
+import { Recommendations } from "@/components/recommendations";
 
 import { toPng } from "html-to-image";
 
 export default function HomeClient() {
   const [query, setQuery] = useState("");
+  const [comparisonQuery, setComparisonQuery] = useState("");
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
+  const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
   const [isScanning, setIsScanning] = useState(false);
+  const [showComparisonSearch, setShowComparisonSearch] = useState(false);
   const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -90,24 +95,15 @@ export default function HomeClient() {
 
   const filteredMajors = useMemo(() => {
     if (!query) return [];
-    
     const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    if (searchTerms.length === 0) return [];
-
     return majors
       .map(major => {
         const name = major.name.toLowerCase();
         let score = 0;
-
-        // Exact match gets highest priority
         if (name === query.toLowerCase().trim()) score = 100;
-        // Starts with the full query
         else if (name.startsWith(query.toLowerCase().trim())) score = 80;
-        // Contains the full query as a phrase
         else if (name.includes(query.toLowerCase().trim())) score = 60;
-        // All keywords are present somewhere in the name
         else if (searchTerms.every(term => name.includes(term))) score = 40;
-        
         return { major, score };
       })
       .filter(item => item.score > 0)
@@ -116,12 +112,32 @@ export default function HomeClient() {
       .map(item => item.major);
   }, [query]);
 
+  const filteredComparisonMajors = useMemo(() => {
+    if (!comparisonQuery) return [];
+    const searchTerms = comparisonQuery.toLowerCase().trim().split(/\s+/);
+    return majors
+      .map(major => {
+        const name = major.name.toLowerCase();
+        let score = 0;
+        if (name === comparisonQuery.toLowerCase().trim()) score = 100;
+        else if (name.startsWith(comparisonQuery.toLowerCase().trim())) score = 80;
+        else if (name.includes(comparisonQuery.toLowerCase().trim())) score = 60;
+        else if (searchTerms.every(term => name.includes(term))) score = 40;
+        return { major, score };
+      })
+      .filter(item => item.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10)
+      .map(item => item.major);
+  }, [comparisonQuery]);
+
 
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
       <ThemeToggle />
       {/* Interactive Hero */}
       <Hero />
+      <LiveTicker />
 
       {/* Scanning Overlay */}
       <AnimatePresence>
@@ -313,6 +329,114 @@ export default function HomeClient() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
+
+            {/* Comparison Section */}
+            <div className="mt-12 w-full">
+              {!showComparisonSearch && !comparedMajor && (
+                <button
+                  onClick={() => setShowComparisonSearch(true)}
+                  className="w-full py-6 rounded-3xl border-2 border-dashed border-primary/20 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-black uppercase tracking-widest text-primary flex items-center justify-center gap-3"
+                >
+                  <Zap className="w-5 h-5 fill-current" />
+                  COMPARE WITH ANOTHER MAJOR
+                </button>
+              )}
+
+              {showComparisonSearch && (
+                <div className="relative group w-full mb-8">
+                  <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-1000" />
+                  <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden backdrop-blur-2xl transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5 shadow-xl">
+                    <Search className="w-6 h-6 ml-6 text-muted-foreground transition-colors group-focus-within:text-primary" />
+                    <input
+                      type="text"
+                      className="w-full bg-transparent border-none text-xl text-foreground placeholder-muted-foreground/50 px-6 py-6 focus:outline-none focus:ring-0 font-bold tracking-tight"
+                      placeholder="Select a major to compare..."
+                      value={comparisonQuery}
+                      onChange={(e) => setComparisonQuery(e.target.value)}
+                    />
+                  </div>
+                  
+                  <AnimatePresence>
+                    {filteredComparisonMajors.length > 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        className="absolute top-full left-0 right-0 mt-4 bg-card/90 backdrop-blur-3xl border border-border rounded-2xl overflow-hidden shadow-2xl z-50 p-2"
+                      >
+                        {filteredComparisonMajors.map((m) => (
+                          <button
+                            key={m.name}
+                            onClick={() => {
+                              setComparedMajor(m);
+                              setShowComparisonSearch(false);
+                              setComparisonQuery("");
+                            }}
+                            className="w-full flex items-center justify-between px-6 py-4 hover:bg-muted rounded-xl text-left transition-all"
+                          >
+                            <span className="text-foreground font-bold">{m.name}</span>
+                            <span className="text-xs font-black text-muted-foreground">{m.score}%</span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
+
+              {comparedMajor && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"
+                >
+                  {/* Side-by-Side Cards */}
+                  {[selectedMajor, comparedMajor].map((m, idx) => {
+                    const isMoreAtRisk = idx === 0 ? selectedMajor.score > comparedMajor.score : comparedMajor.score > selectedMajor.score;
+                    const isSafer = !isMoreAtRisk;
+                    return (
+                      <div key={m.name} className={cn(
+                        "relative rounded-3xl p-6 bg-card border-4",
+                        isMoreAtRisk ? "border-destructive/50" : "border-emerald-500/50"
+                      )}>
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-xl font-black uppercase tracking-tighter leading-none line-clamp-2">{m.name}</h4>
+                          <span className={cn(
+                            "px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest",
+                            isMoreAtRisk ? "bg-destructive text-white" : "bg-emerald-500 text-white"
+                          )}>
+                            {isMoreAtRisk ? "MORE AT RISK" : "SAFER CHOICE"}
+                          </span>
+                        </div>
+                        <div className="flex items-baseline gap-2 mb-4">
+                          <span className="text-5xl font-black">{m.score}%</span>
+                          <span className="text-xs font-bold text-muted-foreground uppercase">{m.level}</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/10">
+                          <div>
+                            <p className="text-[8px] font-black text-muted-foreground tracking-widest mb-1 uppercase">SALARY</p>
+                            <p className="text-sm font-black">{m.salary}</p>
+                          </div>
+                          <div>
+                            <p className="text-[8px] font-black text-muted-foreground tracking-widest mb-1 uppercase">GROWTH</p>
+                            <p className="text-sm font-black">{m.growth}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                  
+                  <button
+                    onClick={() => setComparedMajor(null)}
+                    className="md:col-span-2 py-4 text-[10px] font-black uppercase text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Clear Comparison
+                  </button>
+                </motion.div>
+              )}
             </div>
 
             {/* Actions for User */}
