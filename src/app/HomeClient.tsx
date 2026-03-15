@@ -310,9 +310,9 @@ export default function HomeClient() {
                   </div>
 
                    {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col items-center justify-center py-4 sm:py-6 border-t-2 border-dashed border-foreground/10 min-h-[100px] sm:min-h-[140px]">
-                    <h3 className="text-[7px] sm:text-[9px] font-black text-muted-foreground uppercase tracking-widest mb-2 sm:mb-4">AI ROAST VERDICT</h3>
-                    <p className="text-base sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight text-center px-4 w-full">
+                  <div className="flex flex-col items-center justify-center py-2 sm:py-4 border-t-2 border-dashed border-foreground/10 min-h-[80px] sm:min-h-[120px] overflow-hidden">
+                    <h3 className="text-[7px] sm:text-[9px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
+                    <p className="text-[11px] sm:text-base md:text-[18px] font-black italic text-foreground leading-snug tracking-tight text-center px-4 w-full line-clamp-4">
                         "{selectedMajor.roast}"
                     </p>
                   </div>
