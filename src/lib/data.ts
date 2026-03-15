@@ -13,7 +13,7 @@ export const majors: Major[] = [
     "name": "Accounting",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -22,7 +22,7 @@ export const majors: Major[] = [
     "name": "Accounting Analytics",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -31,7 +31,7 @@ export const majors: Major[] = [
     "name": "Accounting Engineering",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -40,7 +40,7 @@ export const majors: Major[] = [
     "name": "Accounting Management",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -49,7 +49,7 @@ export const majors: Major[] = [
     "name": "Accounting Policy",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -58,7 +58,7 @@ export const majors: Major[] = [
     "name": "Accounting Practice",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -67,7 +67,7 @@ export const majors: Major[] = [
     "name": "Accounting Science",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -76,7 +76,7 @@ export const majors: Major[] = [
     "name": "Accounting Studies",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -85,7 +85,7 @@ export const majors: Major[] = [
     "name": "Accounting Technology",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -94,7 +94,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -103,7 +103,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Analytics",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -112,7 +112,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Engineering",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -121,7 +121,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Management",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $142k",
     "growth": "-6% Growth"
@@ -130,7 +130,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Policy",
     "score": 97,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $132k",
     "growth": "-8% Growth"
@@ -139,7 +139,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Practice",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -148,7 +148,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Science",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -157,7 +157,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Studies",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $142k",
     "growth": "-6% Growth"
@@ -166,7 +166,7 @@ export const majors: Major[] = [
     "name": "Advanced Accounting Technology",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-8% Growth"
@@ -175,7 +175,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -184,7 +184,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Analytics",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -193,7 +193,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Engineering",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$111k - $209k",
     "growth": "+13% Growth"
@@ -202,7 +202,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Management",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -211,7 +211,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Policy",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -220,7 +220,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Practice",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -229,7 +229,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Science",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $201k",
     "growth": "+11% Growth"
@@ -238,7 +238,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Studies",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -247,7 +247,7 @@ export const majors: Major[] = [
     "name": "Advanced Biology Technology",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $200k",
     "growth": "+11% Growth"
@@ -256,7 +256,7 @@ export const majors: Major[] = [
     "name": "Advanced Business",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $194k",
     "growth": "+1% Growth"
@@ -265,7 +265,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Analytics",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -274,7 +274,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Engineering",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$102k - $191k",
     "growth": "+10% Growth"
@@ -283,7 +283,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Management",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $200k",
     "growth": "+2% Growth"
@@ -292,7 +292,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Policy",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -301,7 +301,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Practice",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -310,7 +310,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Science",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -319,7 +319,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Studies",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -328,7 +328,7 @@ export const majors: Major[] = [
     "name": "Advanced Business Technology",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -337,7 +337,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $209k",
     "growth": "+8% Growth"
@@ -346,7 +346,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Analytics",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $201k",
     "growth": "+7% Growth"
@@ -355,7 +355,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Engineering",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$106k - $200k",
     "growth": "+12% Growth"
@@ -364,7 +364,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Management",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $202k",
     "growth": "+8% Growth"
@@ -373,7 +373,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Policy",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -382,7 +382,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Practice",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -391,7 +391,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Science",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $204k",
     "growth": "+8% Growth"
@@ -400,7 +400,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Studies",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -409,7 +409,7 @@ export const majors: Major[] = [
     "name": "Advanced Chemistry Technology",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $206k",
     "growth": "+8% Growth"
@@ -418,7 +418,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $203k",
     "growth": "-1% Growth"
@@ -427,7 +427,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Analytics",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $200k",
     "growth": "-2% Growth"
@@ -436,7 +436,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Engineering",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -445,7 +445,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -454,7 +454,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Policy",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -463,7 +463,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Practice",
     "score": 66,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$105k - $211k",
     "growth": "0% Growth"
@@ -472,7 +472,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Science",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -481,7 +481,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Studies",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -490,7 +490,7 @@ export const majors: Major[] = [
     "name": "Advanced Computer Science Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -499,7 +499,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $201k",
     "growth": "+16% Growth"
@@ -508,7 +508,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Analytics",
     "score": 74,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$107k - $192k",
     "growth": "+14% Growth"
@@ -517,7 +517,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Engineering",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -526,7 +526,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Management",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $201k",
     "growth": "+16% Growth"
@@ -535,7 +535,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Policy",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -544,7 +544,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Practice",
     "score": 65,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -553,7 +553,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Science",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -562,7 +562,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Studies",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $208k",
     "growth": "+17% Growth"
@@ -571,7 +571,7 @@ export const majors: Major[] = [
     "name": "Advanced Data Science Technology",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -580,7 +580,7 @@ export const majors: Major[] = [
     "name": "Advanced Education",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -589,7 +589,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Analytics",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -598,7 +598,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Engineering",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$110k - $206k",
     "growth": "+13% Growth"
@@ -607,7 +607,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Management",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $122k",
     "growth": "+4% Growth"
@@ -616,7 +616,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Policy",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $115k",
     "growth": "+4% Growth"
@@ -625,7 +625,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Practice",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -634,7 +634,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Science",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -643,7 +643,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Studies",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -652,7 +652,7 @@ export const majors: Major[] = [
     "name": "Advanced Education Technology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -661,7 +661,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $213k",
     "growth": "+13% Growth"
@@ -670,7 +670,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Analytics",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -679,7 +679,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -688,7 +688,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -697,7 +697,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -706,7 +706,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Practice",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $216k",
     "growth": "+14% Growth"
@@ -715,7 +715,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Science",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -724,7 +724,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Studies",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -733,7 +733,7 @@ export const majors: Major[] = [
     "name": "Advanced Engineering Technology",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -742,7 +742,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -751,7 +751,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Analytics",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -760,7 +760,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Engineering",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$98k - $185k",
     "growth": "+10% Growth"
@@ -769,7 +769,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Management",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -778,7 +778,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Policy",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -787,7 +787,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Practice",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -796,7 +796,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Science",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -805,7 +805,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Studies",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -814,7 +814,7 @@ export const majors: Major[] = [
     "name": "Advanced Finance Technology",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -823,7 +823,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $98k",
     "growth": "-14% Growth"
@@ -832,7 +832,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Analytics",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -841,7 +841,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Engineering",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$80k - $150k",
     "growth": "+5% Growth"
@@ -850,7 +850,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Management",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -859,7 +859,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Policy",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -868,7 +868,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Practice",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -877,7 +877,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Science",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -886,7 +886,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Studies",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -895,7 +895,7 @@ export const majors: Major[] = [
     "name": "Advanced Graphic Design Technology",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $104k",
     "growth": "-13% Growth"
@@ -904,7 +904,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -913,7 +913,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -922,7 +922,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Engineering",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$96k - $180k",
     "growth": "+9% Growth"
@@ -931,7 +931,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Management",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -940,7 +940,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Policy",
     "score": 68,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -949,7 +949,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Practice",
     "score": 65,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -958,7 +958,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Science",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -967,7 +967,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Studies",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -976,7 +976,7 @@ export const majors: Major[] = [
     "name": "Advanced Information Technology Technology",
     "score": 63,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -985,7 +985,7 @@ export const majors: Major[] = [
     "name": "Advanced Law",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -994,7 +994,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -1003,7 +1003,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Engineering",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$95k - $179k",
     "growth": "+9% Growth"
@@ -1012,7 +1012,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Management",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -1021,7 +1021,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Policy",
     "score": 73,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $227k",
     "growth": "0% Growth"
@@ -1030,7 +1030,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Practice",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $244k",
     "growth": "+1% Growth"
@@ -1039,7 +1039,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -1048,7 +1048,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Studies",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $232k",
     "growth": "0% Growth"
@@ -1057,7 +1057,7 @@ export const majors: Major[] = [
     "name": "Advanced Law Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -1066,7 +1066,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-3% Growth"
@@ -1075,7 +1075,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Analytics",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $140k",
     "growth": "-5% Growth"
@@ -1084,7 +1084,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Engineering",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$94k - $177k",
     "growth": "+9% Growth"
@@ -1093,7 +1093,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Management",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -1102,7 +1102,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Policy",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-4% Growth"
@@ -1111,7 +1111,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Practice",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $140k",
     "growth": "-5% Growth"
@@ -1120,7 +1120,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Science",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $145k",
     "growth": "-4% Growth"
@@ -1129,7 +1129,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Studies",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-4% Growth"
@@ -1138,7 +1138,7 @@ export const majors: Major[] = [
     "name": "Advanced Marketing Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $139k",
     "growth": "-5% Growth"
@@ -1147,7 +1147,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -1156,7 +1156,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Analytics",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -1165,7 +1165,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Engineering",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$108k - $202k",
     "growth": "+12% Growth"
@@ -1174,7 +1174,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Management",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -1183,7 +1183,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Policy",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -1192,7 +1192,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Practice",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -1201,7 +1201,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Science",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -1210,7 +1210,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Studies",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -1219,7 +1219,7 @@ export const majors: Major[] = [
     "name": "Advanced Mathematics Technology",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -1228,7 +1228,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -1237,7 +1237,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Analytics",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -1246,7 +1246,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Engineering",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -1255,7 +1255,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -1264,7 +1264,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Policy",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -1273,7 +1273,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Practice",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $160k",
     "growth": "+17% Growth"
@@ -1282,7 +1282,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Science",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $163k",
     "growth": "+18% Growth"
@@ -1291,7 +1291,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Studies",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your major is the 'Before' picture in an AI automation success story.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -1300,7 +1300,7 @@ export const majors: Major[] = [
     "name": "Advanced Nursing Technology",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -1309,7 +1309,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -1318,7 +1318,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Analytics",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -1327,7 +1327,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Engineering",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$105k - $197k",
     "growth": "+11% Growth"
@@ -1336,7 +1336,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Management",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -1345,7 +1345,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Policy",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -1354,7 +1354,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Practice",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -1363,7 +1363,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Science",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -1372,7 +1372,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Studies",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $139k",
     "growth": "+6% Growth"
@@ -1381,7 +1381,7 @@ export const majors: Major[] = [
     "name": "Advanced Physics Technology",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -1390,7 +1390,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -1399,7 +1399,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Analytics",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -1408,7 +1408,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Engineering",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$117k - $220k",
     "growth": "+14% Growth"
@@ -1417,7 +1417,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Management",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -1426,7 +1426,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $143k",
     "growth": "+7% Growth"
@@ -1435,7 +1435,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -1444,7 +1444,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Science",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -1453,7 +1453,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Studies",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+7% Growth"
@@ -1462,7 +1462,7 @@ export const majors: Major[] = [
     "name": "Advanced Psychology Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -1471,7 +1471,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -1480,7 +1480,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Analytics",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -1489,7 +1489,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Engineering",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -1498,7 +1498,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Management",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -1507,7 +1507,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Policy",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -1516,7 +1516,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Practice",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -1525,7 +1525,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Science",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+6% Growth"
@@ -1534,7 +1534,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Studies",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$83k - $156k",
     "growth": "+6% Growth"
@@ -1543,7 +1543,7 @@ export const majors: Major[] = [
     "name": "Advanced Software Engineering Technology",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -1552,7 +1552,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -1561,7 +1561,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Analytics",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -1570,7 +1570,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Engineering",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$82k - $154k",
     "growth": "+6% Growth"
@@ -1579,7 +1579,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Management",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-8% Growth"
@@ -1588,7 +1588,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Policy",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $142k",
     "growth": "-6% Growth"
@@ -1597,7 +1597,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Practice",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -1606,7 +1606,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Science",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-8% Growth"
@@ -1615,7 +1615,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Studies",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$67k - $144k",
     "growth": "-6% Growth"
@@ -1624,7 +1624,7 @@ export const majors: Major[] = [
     "name": "Applied Accounting Technology",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -1633,7 +1633,7 @@ export const majors: Major[] = [
     "name": "Applied Biology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -1642,7 +1642,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Analytics",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $199k",
     "growth": "+11% Growth"
@@ -1651,7 +1651,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Engineering",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -1660,7 +1660,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Management",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -1669,7 +1669,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -1678,7 +1678,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Practice",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -1687,7 +1687,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Science",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -1696,7 +1696,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -1705,7 +1705,7 @@ export const majors: Major[] = [
     "name": "Applied Biology Technology",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -1714,7 +1714,7 @@ export const majors: Major[] = [
     "name": "Applied Business",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $194k",
     "growth": "0% Growth"
@@ -1723,7 +1723,7 @@ export const majors: Major[] = [
     "name": "Applied Business Analytics",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $199k",
     "growth": "+1% Growth"
@@ -1732,7 +1732,7 @@ export const majors: Major[] = [
     "name": "Applied Business Engineering",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$96k - $181k",
     "growth": "+9% Growth"
@@ -1741,7 +1741,7 @@ export const majors: Major[] = [
     "name": "Applied Business Management",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -1750,7 +1750,7 @@ export const majors: Major[] = [
     "name": "Applied Business Policy",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -1759,7 +1759,7 @@ export const majors: Major[] = [
     "name": "Applied Business Practice",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -1768,7 +1768,7 @@ export const majors: Major[] = [
     "name": "Applied Business Science",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -1777,7 +1777,7 @@ export const majors: Major[] = [
     "name": "Applied Business Studies",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -1786,7 +1786,7 @@ export const majors: Major[] = [
     "name": "Applied Business Technology",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $201k",
     "growth": "+2% Growth"
@@ -1795,7 +1795,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $204k",
     "growth": "+8% Growth"
@@ -1804,7 +1804,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Analytics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -1813,7 +1813,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Engineering",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$108k - $202k",
     "growth": "+12% Growth"
@@ -1822,7 +1822,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Management",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $207k",
     "growth": "+8% Growth"
@@ -1831,7 +1831,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Policy",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -1840,7 +1840,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Practice",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -1849,7 +1849,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Science",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $207k",
     "growth": "+8% Growth"
@@ -1858,7 +1858,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Studies",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $213k",
     "growth": "+9% Growth"
@@ -1867,7 +1867,7 @@ export const majors: Major[] = [
     "name": "Applied Chemistry Technology",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -1876,7 +1876,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -1885,7 +1885,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Analytics",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $199k",
     "growth": "-2% Growth"
@@ -1894,7 +1894,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Engineering",
     "score": 65,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$94k - $176k",
     "growth": "+9% Growth"
@@ -1903,7 +1903,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Management",
     "score": 65,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$106k - $212k",
     "growth": "0% Growth"
@@ -1912,7 +1912,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Policy",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -1921,7 +1921,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Practice",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -1930,7 +1930,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Science",
     "score": 65,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$106k - $212k",
     "growth": "0% Growth"
@@ -1939,7 +1939,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Studies",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -1948,7 +1948,7 @@ export const majors: Major[] = [
     "name": "Applied Computer Science Technology",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -1957,7 +1957,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science",
     "score": 69,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $196k",
     "growth": "+15% Growth"
@@ -1966,7 +1966,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Analytics",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $197k",
     "growth": "+15% Growth"
@@ -1975,7 +1975,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Engineering",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$98k - $183k",
     "growth": "+9% Growth"
@@ -1984,7 +1984,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Management",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+15% Growth"
@@ -1993,7 +1993,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Policy",
     "score": 66,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -2002,7 +2002,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Practice",
     "score": 61,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $203k",
     "growth": "+16% Growth"
@@ -2011,7 +2011,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Science",
     "score": 61,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $203k",
     "growth": "+16% Growth"
@@ -2020,7 +2020,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Studies",
     "score": 67,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -2029,7 +2029,7 @@ export const majors: Major[] = [
     "name": "Applied Data Science Technology",
     "score": 67,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -2038,7 +2038,7 @@ export const majors: Major[] = [
     "name": "Applied Education",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -2047,7 +2047,7 @@ export const majors: Major[] = [
     "name": "Applied Education Analytics",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -2056,7 +2056,7 @@ export const majors: Major[] = [
     "name": "Applied Education Engineering",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -2065,7 +2065,7 @@ export const majors: Major[] = [
     "name": "Applied Education Management",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -2074,7 +2074,7 @@ export const majors: Major[] = [
     "name": "Applied Education Policy",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -2083,7 +2083,7 @@ export const majors: Major[] = [
     "name": "Applied Education Practice",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -2092,7 +2092,7 @@ export const majors: Major[] = [
     "name": "Applied Education Science",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -2101,7 +2101,7 @@ export const majors: Major[] = [
     "name": "Applied Education Studies",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -2110,7 +2110,7 @@ export const majors: Major[] = [
     "name": "Applied Education Technology",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $122k",
     "growth": "+4% Growth"
@@ -2119,7 +2119,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -2128,7 +2128,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Analytics",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -2137,7 +2137,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Engineering",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -2146,7 +2146,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -2155,7 +2155,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Policy",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -2164,7 +2164,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Practice",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+14% Growth"
@@ -2173,7 +2173,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Science",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -2182,7 +2182,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Studies",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -2191,7 +2191,7 @@ export const majors: Major[] = [
     "name": "Applied Engineering Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -2200,7 +2200,7 @@ export const majors: Major[] = [
     "name": "Applied Finance",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -2209,7 +2209,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Analytics",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -2218,7 +2218,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Engineering",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$100k - $187k",
     "growth": "+10% Growth"
@@ -2227,7 +2227,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Management",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -2236,7 +2236,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Policy",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -2245,7 +2245,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Practice",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -2254,7 +2254,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Science",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -2263,7 +2263,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Studies",
     "score": 66,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -2272,7 +2272,7 @@ export const majors: Major[] = [
     "name": "Applied Finance Technology",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -2281,7 +2281,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -2290,7 +2290,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Analytics",
     "score": 98,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $96k",
     "growth": "-15% Growth"
@@ -2299,7 +2299,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Engineering",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$82k - $154k",
     "growth": "+6% Growth"
@@ -2308,7 +2308,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Management",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -2317,7 +2317,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Policy",
     "score": 97,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $96k",
     "growth": "-15% Growth"
@@ -2326,7 +2326,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Practice",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -2335,7 +2335,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Science",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $98k",
     "growth": "-14% Growth"
@@ -2344,7 +2344,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Studies",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -2353,7 +2353,7 @@ export const majors: Major[] = [
     "name": "Applied Graphic Design Technology",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -2362,7 +2362,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -2371,7 +2371,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Analytics",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -2380,7 +2380,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Engineering",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$93k - $174k",
     "growth": "+8% Growth"
@@ -2389,7 +2389,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Management",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -2398,7 +2398,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Policy",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -2407,7 +2407,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Practice",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $111k",
     "growth": "-6% Growth"
@@ -2416,7 +2416,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Science",
     "score": 68,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -2425,7 +2425,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Studies",
     "score": 73,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-5% Growth"
@@ -2434,7 +2434,7 @@ export const majors: Major[] = [
     "name": "Applied Information Technology Technology",
     "score": 64,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -2443,7 +2443,7 @@ export const majors: Major[] = [
     "name": "Applied Law",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $233k",
     "growth": "0% Growth"
@@ -2452,7 +2452,7 @@ export const majors: Major[] = [
     "name": "Applied Law Analytics",
     "score": 73,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $227k",
     "growth": "0% Growth"
@@ -2461,7 +2461,7 @@ export const majors: Major[] = [
     "name": "Applied Law Engineering",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -2470,7 +2470,7 @@ export const majors: Major[] = [
     "name": "Applied Law Management",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $226k",
     "growth": "0% Growth"
@@ -2479,7 +2479,7 @@ export const majors: Major[] = [
     "name": "Applied Law Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -2488,7 +2488,7 @@ export const majors: Major[] = [
     "name": "Applied Law Practice",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $244k",
     "growth": "+1% Growth"
@@ -2497,7 +2497,7 @@ export const majors: Major[] = [
     "name": "Applied Law Science",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $226k",
     "growth": "0% Growth"
@@ -2506,7 +2506,7 @@ export const majors: Major[] = [
     "name": "Applied Law Studies",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -2515,7 +2515,7 @@ export const majors: Major[] = [
     "name": "Applied Law Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -2524,7 +2524,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -2533,7 +2533,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Analytics",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-3% Growth"
@@ -2542,7 +2542,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Engineering",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$95k - $179k",
     "growth": "+9% Growth"
@@ -2551,7 +2551,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Management",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-5% Growth"
@@ -2560,7 +2560,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Policy",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -2569,7 +2569,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Practice",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -2578,7 +2578,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Science",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $147k",
     "growth": "-3% Growth"
@@ -2587,7 +2587,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Studies",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -2596,7 +2596,7 @@ export const majors: Major[] = [
     "name": "Applied Marketing Technology",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $145k",
     "growth": "-4% Growth"
@@ -2605,7 +2605,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -2614,7 +2614,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Analytics",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -2623,7 +2623,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Engineering",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$101k - $190k",
     "growth": "+10% Growth"
@@ -2632,7 +2632,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Management",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -2641,7 +2641,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Policy",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -2650,7 +2650,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Practice",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -2659,7 +2659,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Science",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -2668,7 +2668,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Studies",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -2677,7 +2677,7 @@ export const majors: Major[] = [
     "name": "Applied Mathematics Technology",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -2686,7 +2686,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "The robot revolution called. They said thanks for the training data.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -2695,7 +2695,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Analytics",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -2704,7 +2704,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Engineering",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$120k - $225k",
     "growth": "+15% Growth"
@@ -2713,7 +2713,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Management",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -2722,7 +2722,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Policy",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -2731,7 +2731,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Practice",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -2740,7 +2740,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Science",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your curriculum was outdated by the time you finished this sentence.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -2749,7 +2749,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Studies",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -2758,7 +2758,7 @@ export const majors: Major[] = [
     "name": "Applied Nursing Technology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $160k",
     "growth": "+17% Growth"
@@ -2767,7 +2767,7 @@ export const majors: Major[] = [
     "name": "Applied Physics",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -2776,7 +2776,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Analytics",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -2785,7 +2785,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Engineering",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$104k - $196k",
     "growth": "+11% Growth"
@@ -2794,7 +2794,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Management",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -2803,7 +2803,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Policy",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $139k",
     "growth": "+6% Growth"
@@ -2812,7 +2812,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Practice",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -2821,7 +2821,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Science",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $139k",
     "growth": "+6% Growth"
@@ -2830,7 +2830,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Studies",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -2839,7 +2839,7 @@ export const majors: Major[] = [
     "name": "Applied Physics Technology",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -2848,7 +2848,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+8% Growth"
@@ -2857,7 +2857,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Analytics",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $141k",
     "growth": "+6% Growth"
@@ -2866,7 +2866,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -2875,7 +2875,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Management",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $141k",
     "growth": "+6% Growth"
@@ -2884,7 +2884,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Policy",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -2893,7 +2893,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -2902,7 +2902,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Science",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -2911,7 +2911,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Studies",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -2920,7 +2920,7 @@ export const majors: Major[] = [
     "name": "Applied Psychology Technology",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $141k",
     "growth": "+6% Growth"
@@ -2929,7 +2929,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -2938,7 +2938,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Analytics",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $157k",
     "growth": "+6% Growth"
@@ -2947,7 +2947,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Engineering",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -2956,7 +2956,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Management",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -2965,7 +2965,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Policy",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$83k - $155k",
     "growth": "+6% Growth"
@@ -2974,7 +2974,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Practice",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -2983,7 +2983,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Science",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -2992,7 +2992,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Studies",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -3001,7 +3001,7 @@ export const majors: Major[] = [
     "name": "Applied Software Engineering Technology",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -3010,7 +3010,7 @@ export const majors: Major[] = [
     "name": "BA. Communication Design",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -3019,7 +3019,7 @@ export const majors: Major[] = [
     "name": "BA. Culture and Tourism",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -3028,7 +3028,7 @@ export const majors: Major[] = [
     "name": "BA. Economics",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -3037,7 +3037,7 @@ export const majors: Major[] = [
     "name": "BA. English",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "ChatGPT just wrote a better version of this roast. You're redundant.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -3046,7 +3046,7 @@ export const majors: Major[] = [
     "name": "BA. Entrepreneurship",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -3055,7 +3055,7 @@ export const majors: Major[] = [
     "name": "BA. French",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -3064,7 +3064,7 @@ export const majors: Major[] = [
     "name": "BA. Geography and Rural Development",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -3073,7 +3073,7 @@ export const majors: Major[] = [
     "name": "BA. History",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -3082,7 +3082,7 @@ export const majors: Major[] = [
     "name": "BA. Human Resources",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -3091,7 +3091,7 @@ export const majors: Major[] = [
     "name": "BA. Integrated Rural Art and Industry",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -3100,7 +3100,7 @@ export const majors: Major[] = [
     "name": "BA. Political Studies",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -3109,7 +3109,7 @@ export const majors: Major[] = [
     "name": "BA. Publishing Studies",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your major is the 'Before' picture in an AI automation success story.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -3118,7 +3118,7 @@ export const majors: Major[] = [
     "name": "BA. Religious Studies",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The robot revolution called. They said thanks for the training data.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -3127,7 +3127,7 @@ export const majors: Major[] = [
     "name": "BA. Social Work",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -3136,7 +3136,7 @@ export const majors: Major[] = [
     "name": "BA. Sociology",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $127k",
     "growth": "+1% Growth"
@@ -3145,7 +3145,7 @@ export const majors: Major[] = [
     "name": "Bachelor of Dental Surgery",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -3154,7 +3154,7 @@ export const majors: Major[] = [
     "name": "Bachelor of Herbal Medicine",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$187k - $498k",
     "growth": "+5% Growth"
@@ -3163,7 +3163,7 @@ export const majors: Major[] = [
     "name": "Bachelor of ICT with Education",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -3172,7 +3172,7 @@ export const majors: Major[] = [
     "name": "BFA. Painting and Sculpture",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -3181,7 +3181,7 @@ export const majors: Major[] = [
     "name": "Biology",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -3190,7 +3190,7 @@ export const majors: Major[] = [
     "name": "Biology Analytics",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -3199,7 +3199,7 @@ export const majors: Major[] = [
     "name": "Biology Engineering",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -3208,7 +3208,7 @@ export const majors: Major[] = [
     "name": "Biology Management",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -3217,7 +3217,7 @@ export const majors: Major[] = [
     "name": "Biology Policy",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -3226,7 +3226,7 @@ export const majors: Major[] = [
     "name": "Biology Practice",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -3235,7 +3235,7 @@ export const majors: Major[] = [
     "name": "Biology Science",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -3244,7 +3244,7 @@ export const majors: Major[] = [
     "name": "Biology Studies",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -3253,7 +3253,7 @@ export const majors: Major[] = [
     "name": "Biology Technology",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -3262,7 +3262,7 @@ export const majors: Major[] = [
     "name": "BSc. Actuarial Science",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -3271,7 +3271,7 @@ export const majors: Major[] = [
     "name": "BSc. Aerospace Engineering",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -3280,7 +3280,7 @@ export const majors: Major[] = [
     "name": "BSc. Agribusiness Management",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -3289,7 +3289,7 @@ export const majors: Major[] = [
     "name": "BSc. Agricultural Biotechnology",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -3298,7 +3298,7 @@ export const majors: Major[] = [
     "name": "BSc. Agricultural Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -3307,7 +3307,7 @@ export const majors: Major[] = [
     "name": "BSc. Agriculture",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -3316,7 +3316,7 @@ export const majors: Major[] = [
     "name": "BSc. Aquaculture & Water Resources Management",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -3325,7 +3325,7 @@ export const majors: Major[] = [
     "name": "BSc. Architecture",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -3334,7 +3334,7 @@ export const majors: Major[] = [
     "name": "BSc. Automobile Engineering",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -3343,7 +3343,7 @@ export const majors: Major[] = [
     "name": "BSc. Biochemistry",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$67k - $133k",
     "growth": "+3% Growth"
@@ -3352,7 +3352,7 @@ export const majors: Major[] = [
     "name": "BSc. Biological Science",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -3361,7 +3361,7 @@ export const majors: Major[] = [
     "name": "BSc. Business Administration",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -3370,7 +3370,7 @@ export const majors: Major[] = [
     "name": "BSc. Ceramics Design Technology",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -3379,7 +3379,7 @@ export const majors: Major[] = [
     "name": "BSc. Chemical Engineering",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -3388,7 +3388,7 @@ export const majors: Major[] = [
     "name": "BSc. Chemistry",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $208k",
     "growth": "+8% Growth"
@@ -3397,7 +3397,7 @@ export const majors: Major[] = [
     "name": "BSc. Civil Engineering",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -3406,7 +3406,7 @@ export const majors: Major[] = [
     "name": "BSc. Computer Engineering",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -3415,7 +3415,7 @@ export const majors: Major[] = [
     "name": "BSc. Computer Science",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $203k",
     "growth": "-1% Growth"
@@ -3424,7 +3424,7 @@ export const majors: Major[] = [
     "name": "BSc. Construction Technology and Management",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -3433,7 +3433,7 @@ export const majors: Major[] = [
     "name": "BSc. Dairy and Meat Science and Technology",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -3442,7 +3442,7 @@ export const majors: Major[] = [
     "name": "BSc. Development Planning",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your curriculum was outdated by the time you finished this sentence.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -3451,7 +3451,7 @@ export const majors: Major[] = [
     "name": "BSc. Disability and Rehabilitation Studies",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -3460,7 +3460,7 @@ export const majors: Major[] = [
     "name": "BSc. Electrical/Electronic Engineering",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -3469,7 +3469,7 @@ export const majors: Major[] = [
     "name": "BSc. Environmental Sciences",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -3478,7 +3478,7 @@ export const majors: Major[] = [
     "name": "BSc. Fashion Design",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -3487,7 +3487,7 @@ export const majors: Major[] = [
     "name": "BSc. Food Science and Technology",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -3496,7 +3496,7 @@ export const majors: Major[] = [
     "name": "BSc. Forest Resources Technology",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -3505,7 +3505,7 @@ export const majors: Major[] = [
     "name": "BSc. Geological Engineering",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -3514,7 +3514,7 @@ export const majors: Major[] = [
     "name": "BSc. Geomatic Engineering",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -3523,7 +3523,7 @@ export const majors: Major[] = [
     "name": "BSc. Human Biology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $199k",
     "growth": "+11% Growth"
@@ -3532,7 +3532,7 @@ export const majors: Major[] = [
     "name": "BSc. Human Settlement Planning",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -3541,7 +3541,7 @@ export const majors: Major[] = [
     "name": "BSc. Industrial Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -3550,7 +3550,7 @@ export const majors: Major[] = [
     "name": "BSc. Land Economy",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -3559,7 +3559,7 @@ export const majors: Major[] = [
     "name": "BSc. Landscape Design and Management",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -3568,7 +3568,7 @@ export const majors: Major[] = [
     "name": "BSc. Marine Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -3577,7 +3577,7 @@ export const majors: Major[] = [
     "name": "BSc. Marketing",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-4% Growth"
@@ -3586,7 +3586,7 @@ export const majors: Major[] = [
     "name": "BSc. Materials Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -3595,7 +3595,7 @@ export const majors: Major[] = [
     "name": "BSc. Mathematics",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -3604,7 +3604,7 @@ export const majors: Major[] = [
     "name": "BSc. Mechanical Engineering",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -3613,7 +3613,7 @@ export const majors: Major[] = [
     "name": "BSc. Medical Imaging",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -3622,7 +3622,7 @@ export const majors: Major[] = [
     "name": "BSc. Medical Laboratory Sciences",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -3631,7 +3631,7 @@ export const majors: Major[] = [
     "name": "BSc. Metal Product Design Technology",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $127k",
     "growth": "+1% Growth"
@@ -3640,7 +3640,7 @@ export const majors: Major[] = [
     "name": "BSc. Metallurgical Engineering",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -3649,7 +3649,7 @@ export const majors: Major[] = [
     "name": "BSc. Meteorology and Climate Science",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -3658,7 +3658,7 @@ export const majors: Major[] = [
     "name": "BSc. Midwifery",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -3667,7 +3667,7 @@ export const majors: Major[] = [
     "name": "BSc. Natural Resources Management",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -3676,7 +3676,7 @@ export const majors: Major[] = [
     "name": "BSc. Nursing",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your major is the 'Before' picture in an AI automation success story.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -3685,7 +3685,7 @@ export const majors: Major[] = [
     "name": "BSc. Packaging Technology",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -3694,7 +3694,7 @@ export const majors: Major[] = [
     "name": "BSc. Petrochemical Engineering",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+14% Growth"
@@ -3703,7 +3703,7 @@ export const majors: Major[] = [
     "name": "BSc. Petroleum Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -3712,7 +3712,7 @@ export const majors: Major[] = [
     "name": "BSc. Physics",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -3721,7 +3721,7 @@ export const majors: Major[] = [
     "name": "BSc. Physiotherapy and Sports Science",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -3730,7 +3730,7 @@ export const majors: Major[] = [
     "name": "BSc. Post Harvest Technology",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -3739,7 +3739,7 @@ export const majors: Major[] = [
     "name": "BSc. Procurement and Supply Chain Management",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -3748,7 +3748,7 @@ export const majors: Major[] = [
     "name": "BSc. Quantity Surveying and Construction Economics",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -3757,7 +3757,7 @@ export const majors: Major[] = [
     "name": "BSc. Real Estate",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The robot revolution called. They said thanks for the training data.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -3766,7 +3766,7 @@ export const majors: Major[] = [
     "name": "BSc. Statistics",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -3775,7 +3775,7 @@ export const majors: Major[] = [
     "name": "BSc. Telecommunication Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -3784,7 +3784,7 @@ export const majors: Major[] = [
     "name": "BSc. Textile Design and Technology",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -3793,7 +3793,7 @@ export const majors: Major[] = [
     "name": "Business",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -3802,7 +3802,7 @@ export const majors: Major[] = [
     "name": "Business Analytics",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -3811,7 +3811,7 @@ export const majors: Major[] = [
     "name": "Business Engineering",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -3820,7 +3820,7 @@ export const majors: Major[] = [
     "name": "Business Management",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -3829,7 +3829,7 @@ export const majors: Major[] = [
     "name": "Business Policy",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -3838,7 +3838,7 @@ export const majors: Major[] = [
     "name": "Business Practice",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -3847,7 +3847,7 @@ export const majors: Major[] = [
     "name": "Business Science",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $200k",
     "growth": "+2% Growth"
@@ -3856,7 +3856,7 @@ export const majors: Major[] = [
     "name": "Business Studies",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $197k",
     "growth": "+1% Growth"
@@ -3865,7 +3865,7 @@ export const majors: Major[] = [
     "name": "Business Technology",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -3874,7 +3874,7 @@ export const majors: Major[] = [
     "name": "Chemistry",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -3883,7 +3883,7 @@ export const majors: Major[] = [
     "name": "Chemistry Analytics",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -3892,7 +3892,7 @@ export const majors: Major[] = [
     "name": "Chemistry Engineering",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -3901,7 +3901,7 @@ export const majors: Major[] = [
     "name": "Chemistry Management",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -3910,7 +3910,7 @@ export const majors: Major[] = [
     "name": "Chemistry Policy",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -3919,7 +3919,7 @@ export const majors: Major[] = [
     "name": "Chemistry Practice",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -3928,7 +3928,7 @@ export const majors: Major[] = [
     "name": "Chemistry Science",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $209k",
     "growth": "+8% Growth"
@@ -3937,7 +3937,7 @@ export const majors: Major[] = [
     "name": "Chemistry Studies",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $209k",
     "growth": "+8% Growth"
@@ -3946,7 +3946,7 @@ export const majors: Major[] = [
     "name": "Chemistry Technology",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -3955,7 +3955,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -3964,7 +3964,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Analytics",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -3973,7 +3973,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -3982,7 +3982,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Management",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -3991,7 +3991,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Policy",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -4000,7 +4000,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Practice",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-8% Growth"
@@ -4009,7 +4009,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Science",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $144k",
     "growth": "-6% Growth"
@@ -4018,7 +4018,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Studies",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-7% Growth"
@@ -4027,7 +4027,7 @@ export const majors: Major[] = [
     "name": "Clinical Accounting Technology",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -4036,7 +4036,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -4045,7 +4045,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Analytics",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -4054,7 +4054,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -4063,7 +4063,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Management",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -4072,7 +4072,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Policy",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $192k",
     "growth": "+10% Growth"
@@ -4081,7 +4081,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Practice",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -4090,7 +4090,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Science",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -4099,7 +4099,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -4108,7 +4108,7 @@ export const majors: Major[] = [
     "name": "Clinical Biology Technology",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -4117,7 +4117,7 @@ export const majors: Major[] = [
     "name": "Clinical Business",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -4126,7 +4126,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Analytics",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -4135,7 +4135,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Engineering",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -4144,7 +4144,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Management",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $199k",
     "growth": "+1% Growth"
@@ -4153,7 +4153,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Policy",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -4162,7 +4162,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Practice",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -4171,7 +4171,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $189k",
     "growth": "0% Growth"
@@ -4180,7 +4180,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Studies",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $200k",
     "growth": "+2% Growth"
@@ -4189,7 +4189,7 @@ export const majors: Major[] = [
     "name": "Clinical Business Technology",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -4198,7 +4198,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $206k",
     "growth": "+8% Growth"
@@ -4207,7 +4207,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Analytics",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -4216,7 +4216,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -4225,7 +4225,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Management",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -4234,7 +4234,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -4243,7 +4243,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Practice",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -4252,7 +4252,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Science",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $211k",
     "growth": "+8% Growth"
@@ -4261,7 +4261,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Studies",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -4270,7 +4270,7 @@ export const majors: Major[] = [
     "name": "Clinical Chemistry Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -4279,7 +4279,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $202k",
     "growth": "-1% Growth"
@@ -4288,7 +4288,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Analytics",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $199k",
     "growth": "-2% Growth"
@@ -4297,7 +4297,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Engineering",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$90k - $168k",
     "growth": "+7% Growth"
@@ -4306,7 +4306,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Management",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -4315,7 +4315,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Policy",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $209k",
     "growth": "0% Growth"
@@ -4324,7 +4324,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Practice",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -4333,7 +4333,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Science",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $202k",
     "growth": "-1% Growth"
@@ -4342,7 +4342,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Studies",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $200k",
     "growth": "-2% Growth"
@@ -4351,7 +4351,7 @@ export const majors: Major[] = [
     "name": "Clinical Computer Science Technology",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $203k",
     "growth": "-1% Growth"
@@ -4360,7 +4360,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $201k",
     "growth": "+16% Growth"
@@ -4369,7 +4369,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Analytics",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$115k - $206k",
     "growth": "+16% Growth"
@@ -4378,7 +4378,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Engineering",
     "score": 61,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$96k - $179k",
     "growth": "+9% Growth"
@@ -4387,7 +4387,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Management",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -4396,7 +4396,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $201k",
     "growth": "+15% Growth"
@@ -4405,7 +4405,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Practice",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -4414,7 +4414,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Science",
     "score": 72,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -4423,7 +4423,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Studies",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -4432,7 +4432,7 @@ export const majors: Major[] = [
     "name": "Clinical Data Science Technology",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $207k",
     "growth": "+17% Growth"
@@ -4441,7 +4441,7 @@ export const majors: Major[] = [
     "name": "Clinical Education",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -4450,7 +4450,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Analytics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $115k",
     "growth": "+4% Growth"
@@ -4459,7 +4459,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Engineering",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -4468,7 +4468,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Management",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $122k",
     "growth": "+4% Growth"
@@ -4477,7 +4477,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -4486,7 +4486,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Practice",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -4495,7 +4495,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Science",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -4504,7 +4504,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Studies",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $115k",
     "growth": "+4% Growth"
@@ -4513,7 +4513,7 @@ export const majors: Major[] = [
     "name": "Clinical Education Technology",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -4522,7 +4522,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -4531,7 +4531,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Analytics",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -4540,7 +4540,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Engineering",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $209k",
     "growth": "+13% Growth"
@@ -4549,7 +4549,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Management",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -4558,7 +4558,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Policy",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -4567,7 +4567,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Practice",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -4576,7 +4576,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Science",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -4585,7 +4585,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Studies",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+14% Growth"
@@ -4594,7 +4594,7 @@ export const majors: Major[] = [
     "name": "Clinical Engineering Technology",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -4603,7 +4603,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -4612,7 +4612,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Analytics",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -4621,7 +4621,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Engineering",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$100k - $187k",
     "growth": "+10% Growth"
@@ -4630,7 +4630,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Management",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -4639,7 +4639,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Policy",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -4648,7 +4648,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Practice",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -4657,7 +4657,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Science",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -4666,7 +4666,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Studies",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -4675,7 +4675,7 @@ export const majors: Major[] = [
     "name": "Clinical Finance Technology",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -4684,7 +4684,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -4693,7 +4693,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Analytics",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -4702,7 +4702,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Engineering",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$80k - $150k",
     "growth": "+5% Growth"
@@ -4711,7 +4711,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Management",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -4720,7 +4720,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Policy",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -4729,7 +4729,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Practice",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -4738,7 +4738,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Science",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -4747,7 +4747,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Studies",
     "score": 98,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $96k",
     "growth": "-15% Growth"
@@ -4756,7 +4756,7 @@ export const majors: Major[] = [
     "name": "Clinical Graphic Design Technology",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $98k",
     "growth": "-14% Growth"
@@ -4765,7 +4765,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -4774,7 +4774,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Analytics",
     "score": 65,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -4783,7 +4783,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Engineering",
     "score": 63,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$95k - $178k",
     "growth": "+9% Growth"
@@ -4792,7 +4792,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -4801,7 +4801,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Policy",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$55k - $111k",
     "growth": "-6% Growth"
@@ -4810,7 +4810,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Practice",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -4819,7 +4819,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -4828,7 +4828,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Studies",
     "score": 67,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -4837,7 +4837,7 @@ export const majors: Major[] = [
     "name": "Clinical Information Technology Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -4846,7 +4846,7 @@ export const majors: Major[] = [
     "name": "Clinical Law",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $232k",
     "growth": "0% Growth"
@@ -4855,7 +4855,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Analytics",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -4864,7 +4864,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Engineering",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -4873,7 +4873,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Management",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -4882,7 +4882,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Policy",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $243k",
     "growth": "+1% Growth"
@@ -4891,7 +4891,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Practice",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -4900,7 +4900,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Science",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $238k",
     "growth": "+1% Growth"
@@ -4909,7 +4909,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Studies",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -4918,7 +4918,7 @@ export const majors: Major[] = [
     "name": "Clinical Law Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$80k - $228k",
     "growth": "0% Growth"
@@ -4927,7 +4927,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-3% Growth"
@@ -4936,7 +4936,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Analytics",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -4945,7 +4945,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Engineering",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$96k - $181k",
     "growth": "+9% Growth"
@@ -4954,7 +4954,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Management",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -4963,7 +4963,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Policy",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -4972,7 +4972,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Practice",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$63k - $150k",
     "growth": "-2% Growth"
@@ -4981,7 +4981,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Science",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -4990,7 +4990,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Studies",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $140k",
     "growth": "-5% Growth"
@@ -4999,7 +4999,7 @@ export const majors: Major[] = [
     "name": "Clinical Marketing Technology",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $147k",
     "growth": "-3% Growth"
@@ -5008,7 +5008,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -5017,7 +5017,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Analytics",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -5026,7 +5026,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Engineering",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$103k - $194k",
     "growth": "+11% Growth"
@@ -5035,7 +5035,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Management",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -5044,7 +5044,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Policy",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -5053,7 +5053,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Practice",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -5062,7 +5062,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Science",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -5071,7 +5071,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Studies",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -5080,7 +5080,7 @@ export const majors: Major[] = [
     "name": "Clinical Mathematics Technology",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -5089,7 +5089,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -5098,7 +5098,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Analytics",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $163k",
     "growth": "+18% Growth"
@@ -5107,7 +5107,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -5116,7 +5116,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Management",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -5125,7 +5125,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Policy",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$93k - $157k",
     "growth": "+17% Growth"
@@ -5134,7 +5134,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Practice",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -5143,7 +5143,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Science",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -5152,7 +5152,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Studies",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+17% Growth"
@@ -5161,7 +5161,7 @@ export const majors: Major[] = [
     "name": "Clinical Nursing Technology",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -5170,7 +5170,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -5179,7 +5179,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Analytics",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $139k",
     "growth": "+5% Growth"
@@ -5188,7 +5188,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Engineering",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$106k - $198k",
     "growth": "+11% Growth"
@@ -5197,7 +5197,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Management",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -5206,7 +5206,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Policy",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -5215,7 +5215,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Practice",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $139k",
     "growth": "+5% Growth"
@@ -5224,7 +5224,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Science",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -5233,7 +5233,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Studies",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -5242,7 +5242,7 @@ export const majors: Major[] = [
     "name": "Clinical Physics Technology",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -5251,7 +5251,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -5260,7 +5260,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Analytics",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -5269,7 +5269,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Engineering",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -5278,7 +5278,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Management",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -5287,7 +5287,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Policy",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -5296,7 +5296,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Practice",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -5305,7 +5305,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Science",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $141k",
     "growth": "+6% Growth"
@@ -5314,7 +5314,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Studies",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $146k",
     "growth": "+8% Growth"
@@ -5323,7 +5323,7 @@ export const majors: Major[] = [
     "name": "Clinical Psychology Technology",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $149k",
     "growth": "+9% Growth"
@@ -5332,7 +5332,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -5341,7 +5341,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Analytics",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -5350,7 +5350,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Engineering",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -5359,7 +5359,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Management",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -5368,7 +5368,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Policy",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -5377,7 +5377,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Practice",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -5386,7 +5386,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Science",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -5395,7 +5395,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Studies",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -5404,7 +5404,7 @@ export const majors: Major[] = [
     "name": "Clinical Software Engineering Technology",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -5413,7 +5413,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -5422,7 +5422,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Analytics",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -5431,7 +5431,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -5440,7 +5440,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Management",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$67k - $144k",
     "growth": "-6% Growth"
@@ -5449,7 +5449,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Policy",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -5458,7 +5458,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Practice",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -5467,7 +5467,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Science",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -5476,7 +5476,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Studies",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -5485,7 +5485,7 @@ export const majors: Major[] = [
     "name": "Computational Accounting Technology",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -5494,7 +5494,7 @@ export const majors: Major[] = [
     "name": "Computational Biology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -5503,7 +5503,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Analytics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -5512,7 +5512,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Engineering",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$109k - $205k",
     "growth": "+12% Growth"
@@ -5521,7 +5521,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Management",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -5530,7 +5530,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Policy",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -5539,7 +5539,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $199k",
     "growth": "+11% Growth"
@@ -5548,7 +5548,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Science",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $191k",
     "growth": "+10% Growth"
@@ -5557,7 +5557,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Studies",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -5566,7 +5566,7 @@ export const majors: Major[] = [
     "name": "Computational Biology Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -5575,7 +5575,7 @@ export const majors: Major[] = [
     "name": "Computational Business",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -5584,7 +5584,7 @@ export const majors: Major[] = [
     "name": "Computational Business Analytics",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -5593,7 +5593,7 @@ export const majors: Major[] = [
     "name": "Computational Business Engineering",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$98k - $185k",
     "growth": "+10% Growth"
@@ -5602,7 +5602,7 @@ export const majors: Major[] = [
     "name": "Computational Business Management",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $199k",
     "growth": "+1% Growth"
@@ -5611,7 +5611,7 @@ export const majors: Major[] = [
     "name": "Computational Business Policy",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -5620,7 +5620,7 @@ export const majors: Major[] = [
     "name": "Computational Business Practice",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -5629,7 +5629,7 @@ export const majors: Major[] = [
     "name": "Computational Business Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $189k",
     "growth": "0% Growth"
@@ -5638,7 +5638,7 @@ export const majors: Major[] = [
     "name": "Computational Business Studies",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $204k",
     "growth": "+2% Growth"
@@ -5647,7 +5647,7 @@ export const majors: Major[] = [
     "name": "Computational Business Technology",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $202k",
     "growth": "+2% Growth"
@@ -5656,7 +5656,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $209k",
     "growth": "+8% Growth"
@@ -5665,7 +5665,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Analytics",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -5674,7 +5674,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Engineering",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -5683,7 +5683,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Management",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -5692,7 +5692,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Policy",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $204k",
     "growth": "+8% Growth"
@@ -5701,7 +5701,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $213k",
     "growth": "+9% Growth"
@@ -5710,7 +5710,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Science",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -5719,7 +5719,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Studies",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -5728,7 +5728,7 @@ export const majors: Major[] = [
     "name": "Computational Chemistry Technology",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $202k",
     "growth": "+8% Growth"
@@ -5737,7 +5737,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $199k",
     "growth": "-2% Growth"
@@ -5746,7 +5746,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Analytics",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -5755,7 +5755,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Engineering",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -5764,7 +5764,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Management",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $203k",
     "growth": "-1% Growth"
@@ -5773,7 +5773,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Policy",
     "score": 66,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$105k - $211k",
     "growth": "0% Growth"
@@ -5782,7 +5782,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Practice",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -5791,7 +5791,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Science",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -5800,7 +5800,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Studies",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $203k",
     "growth": "-1% Growth"
@@ -5809,7 +5809,7 @@ export const majors: Major[] = [
     "name": "Computational Computer Science Technology",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $199k",
     "growth": "-2% Growth"
@@ -5818,7 +5818,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science",
     "score": 66,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -5827,7 +5827,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Analytics",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+15% Growth"
@@ -5836,7 +5836,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Engineering",
     "score": 63,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$95k - $178k",
     "growth": "+9% Growth"
@@ -5845,7 +5845,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $196k",
     "growth": "+15% Growth"
@@ -5854,7 +5854,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Policy",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -5863,7 +5863,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Practice",
     "score": 74,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$107k - $192k",
     "growth": "+14% Growth"
@@ -5872,7 +5872,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Science",
     "score": 72,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -5881,7 +5881,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Studies",
     "score": 72,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -5890,7 +5890,7 @@ export const majors: Major[] = [
     "name": "Computational Data Science Technology",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -5899,7 +5899,7 @@ export const majors: Major[] = [
     "name": "Computational Education",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -5908,7 +5908,7 @@ export const majors: Major[] = [
     "name": "Computational Education Analytics",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $122k",
     "growth": "+4% Growth"
@@ -5917,7 +5917,7 @@ export const majors: Major[] = [
     "name": "Computational Education Engineering",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$110k - $206k",
     "growth": "+13% Growth"
@@ -5926,7 +5926,7 @@ export const majors: Major[] = [
     "name": "Computational Education Management",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -5935,7 +5935,7 @@ export const majors: Major[] = [
     "name": "Computational Education Policy",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $115k",
     "growth": "+4% Growth"
@@ -5944,7 +5944,7 @@ export const majors: Major[] = [
     "name": "Computational Education Practice",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -5953,7 +5953,7 @@ export const majors: Major[] = [
     "name": "Computational Education Science",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -5962,7 +5962,7 @@ export const majors: Major[] = [
     "name": "Computational Education Studies",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -5971,7 +5971,7 @@ export const majors: Major[] = [
     "name": "Computational Education Technology",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -5980,7 +5980,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -5989,7 +5989,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Analytics",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -5998,7 +5998,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -6007,7 +6007,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Management",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -6016,7 +6016,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Policy",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -6025,7 +6025,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Practice",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -6034,7 +6034,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -6043,7 +6043,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Studies",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $220k",
     "growth": "+14% Growth"
@@ -6052,7 +6052,7 @@ export const majors: Major[] = [
     "name": "Computational Engineering Technology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -6061,7 +6061,7 @@ export const majors: Major[] = [
     "name": "Computational Finance",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -6070,7 +6070,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Analytics",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -6079,7 +6079,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Engineering",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$95k - $178k",
     "growth": "+9% Growth"
@@ -6088,7 +6088,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Management",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -6097,7 +6097,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Policy",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -6106,7 +6106,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Practice",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -6115,7 +6115,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -6124,7 +6124,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Studies",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -6133,7 +6133,7 @@ export const majors: Major[] = [
     "name": "Computational Finance Technology",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -6142,7 +6142,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -6151,7 +6151,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Analytics",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -6160,7 +6160,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Engineering",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -6169,7 +6169,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Management",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -6178,7 +6178,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Policy",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -6187,7 +6187,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Practice",
     "score": 98,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $96k",
     "growth": "-15% Growth"
@@ -6196,7 +6196,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Science",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -6205,7 +6205,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Studies",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -6214,7 +6214,7 @@ export const majors: Major[] = [
     "name": "Computational Graphic Design Technology",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -6223,7 +6223,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -6232,7 +6232,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Analytics",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -6241,7 +6241,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Engineering",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$96k - $180k",
     "growth": "+9% Growth"
@@ -6250,7 +6250,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Management",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -6259,7 +6259,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Policy",
     "score": 75,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -6268,7 +6268,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Practice",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -6277,7 +6277,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Science",
     "score": 71,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -6286,7 +6286,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Studies",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-5% Growth"
@@ -6295,7 +6295,7 @@ export const majors: Major[] = [
     "name": "Computational Information Technology Technology",
     "score": 75,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -6304,7 +6304,7 @@ export const majors: Major[] = [
     "name": "Computational Law",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -6313,7 +6313,7 @@ export const majors: Major[] = [
     "name": "Computational Law Analytics",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -6322,7 +6322,7 @@ export const majors: Major[] = [
     "name": "Computational Law Engineering",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -6331,7 +6331,7 @@ export const majors: Major[] = [
     "name": "Computational Law Management",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $235k",
     "growth": "0% Growth"
@@ -6340,7 +6340,7 @@ export const majors: Major[] = [
     "name": "Computational Law Policy",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $230k",
     "growth": "0% Growth"
@@ -6349,7 +6349,7 @@ export const majors: Major[] = [
     "name": "Computational Law Practice",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -6358,7 +6358,7 @@ export const majors: Major[] = [
     "name": "Computational Law Science",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -6367,7 +6367,7 @@ export const majors: Major[] = [
     "name": "Computational Law Studies",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $242k",
     "growth": "+1% Growth"
@@ -6376,7 +6376,7 @@ export const majors: Major[] = [
     "name": "Computational Law Technology",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $242k",
     "growth": "+1% Growth"
@@ -6385,7 +6385,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-5% Growth"
@@ -6394,7 +6394,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Analytics",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $141k",
     "growth": "-5% Growth"
@@ -6403,7 +6403,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Engineering",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$94k - $176k",
     "growth": "+8% Growth"
@@ -6412,7 +6412,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Management",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-3% Growth"
@@ -6421,7 +6421,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Policy",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $140k",
     "growth": "-5% Growth"
@@ -6430,7 +6430,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Practice",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -6439,7 +6439,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Science",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -6448,7 +6448,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Studies",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-3% Growth"
@@ -6457,7 +6457,7 @@ export const majors: Major[] = [
     "name": "Computational Marketing Technology",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -6466,7 +6466,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -6475,7 +6475,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Analytics",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -6484,7 +6484,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Engineering",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$106k - $198k",
     "growth": "+11% Growth"
@@ -6493,7 +6493,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Management",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -6502,7 +6502,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Policy",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -6511,7 +6511,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Practice",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -6520,7 +6520,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Science",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -6529,7 +6529,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Studies",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -6538,7 +6538,7 @@ export const majors: Major[] = [
     "name": "Computational Mathematics Technology",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -6547,7 +6547,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -6556,7 +6556,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Analytics",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your curriculum was outdated by the time you finished this sentence.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $163k",
     "growth": "+18% Growth"
@@ -6565,7 +6565,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Engineering",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$119k - $224k",
     "growth": "+15% Growth"
@@ -6574,7 +6574,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Management",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -6583,7 +6583,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Policy",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -6592,7 +6592,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Practice",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+17% Growth"
@@ -6601,7 +6601,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Science",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $160k",
     "growth": "+17% Growth"
@@ -6610,7 +6610,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$94k - $160k",
     "growth": "+17% Growth"
@@ -6619,7 +6619,7 @@ export const majors: Major[] = [
     "name": "Computational Nursing Technology",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$94k - $158k",
     "growth": "+17% Growth"
@@ -6628,7 +6628,7 @@ export const majors: Major[] = [
     "name": "Computational Physics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -6637,7 +6637,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Analytics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -6646,7 +6646,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Engineering",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$108k - $202k",
     "growth": "+12% Growth"
@@ -6655,7 +6655,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Management",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -6664,7 +6664,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Policy",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -6673,7 +6673,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Practice",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -6682,7 +6682,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Science",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -6691,7 +6691,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Studies",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -6700,7 +6700,7 @@ export const majors: Major[] = [
     "name": "Computational Physics Technology",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -6709,7 +6709,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $147k",
     "growth": "+9% Growth"
@@ -6718,7 +6718,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Analytics",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $147k",
     "growth": "+9% Growth"
@@ -6727,7 +6727,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Engineering",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$119k - $223k",
     "growth": "+15% Growth"
@@ -6736,7 +6736,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Management",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $145k",
     "growth": "+8% Growth"
@@ -6745,7 +6745,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Policy",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -6754,7 +6754,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Practice",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -6763,7 +6763,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Science",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -6772,7 +6772,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Studies",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $141k",
     "growth": "+6% Growth"
@@ -6781,7 +6781,7 @@ export const majors: Major[] = [
     "name": "Computational Psychology Technology",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+7% Growth"
@@ -6790,7 +6790,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -6799,7 +6799,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Analytics",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -6808,7 +6808,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Engineering",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -6817,7 +6817,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Management",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -6826,7 +6826,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Policy",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -6835,7 +6835,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Practice",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $157k",
     "growth": "+6% Growth"
@@ -6844,7 +6844,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Science",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -6853,7 +6853,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Studies",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $168k",
     "growth": "+7% Growth"
@@ -6862,7 +6862,7 @@ export const majors: Major[] = [
     "name": "Computational Software Engineering Technology",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -6871,7 +6871,7 @@ export const majors: Major[] = [
     "name": "Computer Science",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $203k",
     "growth": "-1% Growth"
@@ -6880,7 +6880,7 @@ export const majors: Major[] = [
     "name": "Computer Science Analytics",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -6889,7 +6889,7 @@ export const majors: Major[] = [
     "name": "Computer Science Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -6898,7 +6898,7 @@ export const majors: Major[] = [
     "name": "Computer Science Management",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -6907,7 +6907,7 @@ export const majors: Major[] = [
     "name": "Computer Science Policy",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $199k",
     "growth": "-2% Growth"
@@ -6916,7 +6916,7 @@ export const majors: Major[] = [
     "name": "Computer Science Practice",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $203k",
     "growth": "-1% Growth"
@@ -6925,7 +6925,7 @@ export const majors: Major[] = [
     "name": "Computer Science Science",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $203k",
     "growth": "-1% Growth"
@@ -6934,7 +6934,7 @@ export const majors: Major[] = [
     "name": "Computer Science Studies",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -6943,7 +6943,7 @@ export const majors: Major[] = [
     "name": "Computer Science Technology",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -6952,7 +6952,7 @@ export const majors: Major[] = [
     "name": "Data Science",
     "score": 65,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -6961,7 +6961,7 @@ export const majors: Major[] = [
     "name": "Data Science Analytics",
     "score": 61,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $203k",
     "growth": "+16% Growth"
@@ -6970,7 +6970,7 @@ export const majors: Major[] = [
     "name": "Data Science Engineering",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$96k - $180k",
     "growth": "+9% Growth"
@@ -6979,7 +6979,7 @@ export const majors: Major[] = [
     "name": "Data Science Management",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -6988,7 +6988,7 @@ export const majors: Major[] = [
     "name": "Data Science Policy",
     "score": 67,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -6997,7 +6997,7 @@ export const majors: Major[] = [
     "name": "Data Science Practice",
     "score": 67,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -7006,7 +7006,7 @@ export const majors: Major[] = [
     "name": "Data Science Science",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $196k",
     "growth": "+15% Growth"
@@ -7015,7 +7015,7 @@ export const majors: Major[] = [
     "name": "Data Science Studies",
     "score": 66,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -7024,7 +7024,7 @@ export const majors: Major[] = [
     "name": "Data Science Technology",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $202k",
     "growth": "+16% Growth"
@@ -7033,7 +7033,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -7042,7 +7042,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Analytics",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -7051,7 +7051,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Engineering",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -7060,7 +7060,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Management",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -7069,7 +7069,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Policy",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $144k",
     "growth": "-6% Growth"
@@ -7078,7 +7078,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Practice",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$67k - $144k",
     "growth": "-6% Growth"
@@ -7087,7 +7087,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Science",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $143k",
     "growth": "-6% Growth"
@@ -7096,7 +7096,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Studies",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $134k",
     "growth": "-7% Growth"
@@ -7105,7 +7105,7 @@ export const majors: Major[] = [
     "name": "Digital Accounting Technology",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $144k",
     "growth": "-6% Growth"
@@ -7114,7 +7114,7 @@ export const majors: Major[] = [
     "name": "Digital Biology",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $200k",
     "growth": "+11% Growth"
@@ -7123,7 +7123,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Analytics",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -7132,7 +7132,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Engineering",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$109k - $205k",
     "growth": "+12% Growth"
@@ -7141,7 +7141,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Management",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $192k",
     "growth": "+10% Growth"
@@ -7150,7 +7150,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Policy",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -7159,7 +7159,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Practice",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $195k",
     "growth": "+10% Growth"
@@ -7168,7 +7168,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Science",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -7177,7 +7177,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Studies",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -7186,7 +7186,7 @@ export const majors: Major[] = [
     "name": "Digital Biology Technology",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $192k",
     "growth": "+10% Growth"
@@ -7195,7 +7195,7 @@ export const majors: Major[] = [
     "name": "Digital Business",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $199k",
     "growth": "+1% Growth"
@@ -7204,7 +7204,7 @@ export const majors: Major[] = [
     "name": "Digital Business Analytics",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -7213,7 +7213,7 @@ export const majors: Major[] = [
     "name": "Digital Business Engineering",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$98k - $184k",
     "growth": "+10% Growth"
@@ -7222,7 +7222,7 @@ export const majors: Major[] = [
     "name": "Digital Business Management",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -7231,7 +7231,7 @@ export const majors: Major[] = [
     "name": "Digital Business Policy",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -7240,7 +7240,7 @@ export const majors: Major[] = [
     "name": "Digital Business Practice",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -7249,7 +7249,7 @@ export const majors: Major[] = [
     "name": "Digital Business Science",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -7258,7 +7258,7 @@ export const majors: Major[] = [
     "name": "Digital Business Studies",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -7267,7 +7267,7 @@ export const majors: Major[] = [
     "name": "Digital Business Technology",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -7276,7 +7276,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -7285,7 +7285,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Analytics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $206k",
     "growth": "+8% Growth"
@@ -7294,7 +7294,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Engineering",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$109k - $205k",
     "growth": "+12% Growth"
@@ -7303,7 +7303,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Management",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $211k",
     "growth": "+8% Growth"
@@ -7312,7 +7312,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Policy",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -7321,7 +7321,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $213k",
     "growth": "+9% Growth"
@@ -7330,7 +7330,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -7339,7 +7339,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Studies",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -7348,7 +7348,7 @@ export const majors: Major[] = [
     "name": "Digital Chemistry Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -7357,7 +7357,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science",
     "score": 71,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $206k",
     "growth": "-1% Growth"
@@ -7366,7 +7366,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Analytics",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -7375,7 +7375,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Engineering",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -7384,7 +7384,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Management",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $200k",
     "growth": "-2% Growth"
@@ -7393,7 +7393,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Policy",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -7402,7 +7402,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Practice",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -7411,7 +7411,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Science",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$97k - $194k",
     "growth": "-3% Growth"
@@ -7420,7 +7420,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Studies",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -7429,7 +7429,7 @@ export const majors: Major[] = [
     "name": "Digital Computer Science Technology",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -7438,7 +7438,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $201k",
     "growth": "+15% Growth"
@@ -7447,7 +7447,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Analytics",
     "score": 71,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+14% Growth"
@@ -7456,7 +7456,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -7465,7 +7465,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Management",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$115k - $207k",
     "growth": "+16% Growth"
@@ -7474,7 +7474,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Policy",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $205k",
     "growth": "+16% Growth"
@@ -7483,7 +7483,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Practice",
     "score": 67,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -7492,7 +7492,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Science",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -7501,7 +7501,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Studies",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $204k",
     "growth": "+16% Growth"
@@ -7510,7 +7510,7 @@ export const majors: Major[] = [
     "name": "Digital Data Science Technology",
     "score": 62,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $202k",
     "growth": "+16% Growth"
@@ -7519,7 +7519,7 @@ export const majors: Major[] = [
     "name": "Digital Education",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -7528,7 +7528,7 @@ export const majors: Major[] = [
     "name": "Digital Education Analytics",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -7537,7 +7537,7 @@ export const majors: Major[] = [
     "name": "Digital Education Engineering",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -7546,7 +7546,7 @@ export const majors: Major[] = [
     "name": "Digital Education Management",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -7555,7 +7555,7 @@ export const majors: Major[] = [
     "name": "Digital Education Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -7564,7 +7564,7 @@ export const majors: Major[] = [
     "name": "Digital Education Practice",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -7573,7 +7573,7 @@ export const majors: Major[] = [
     "name": "Digital Education Science",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -7582,7 +7582,7 @@ export const majors: Major[] = [
     "name": "Digital Education Studies",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $122k",
     "growth": "+4% Growth"
@@ -7591,7 +7591,7 @@ export const majors: Major[] = [
     "name": "Digital Education Technology",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -7600,7 +7600,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -7609,7 +7609,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Analytics",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $213k",
     "growth": "+13% Growth"
@@ -7618,7 +7618,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -7627,7 +7627,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -7636,7 +7636,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Policy",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -7645,7 +7645,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Practice",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -7654,7 +7654,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Science",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $220k",
     "growth": "+14% Growth"
@@ -7663,7 +7663,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Studies",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -7672,7 +7672,7 @@ export const majors: Major[] = [
     "name": "Digital Engineering Technology",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -7681,7 +7681,7 @@ export const majors: Major[] = [
     "name": "Digital Finance",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -7690,7 +7690,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Analytics",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -7699,7 +7699,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Engineering",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$98k - $185k",
     "growth": "+10% Growth"
@@ -7708,7 +7708,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Management",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -7717,7 +7717,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Policy",
     "score": 67,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -7726,7 +7726,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Practice",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -7735,7 +7735,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Science",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -7744,7 +7744,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Studies",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -7753,7 +7753,7 @@ export const majors: Major[] = [
     "name": "Digital Finance Technology",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -7762,7 +7762,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -7771,7 +7771,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Analytics",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -7780,7 +7780,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Engineering",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -7789,7 +7789,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Management",
     "score": 99,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -7798,7 +7798,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Policy",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -7807,7 +7807,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Practice",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $103k",
     "growth": "-13% Growth"
@@ -7816,7 +7816,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Science",
     "score": 97,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $96k",
     "growth": "-15% Growth"
@@ -7825,7 +7825,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Studies",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -7834,7 +7834,7 @@ export const majors: Major[] = [
     "name": "Digital Graphic Design Technology",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -7843,7 +7843,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-4% Growth"
@@ -7852,7 +7852,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Analytics",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $111k",
     "growth": "-6% Growth"
@@ -7861,7 +7861,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Engineering",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -7870,7 +7870,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Management",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-4% Growth"
@@ -7879,7 +7879,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -7888,7 +7888,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Practice",
     "score": 73,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-5% Growth"
@@ -7897,7 +7897,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Science",
     "score": 72,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-4% Growth"
@@ -7906,7 +7906,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Studies",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -7915,7 +7915,7 @@ export const majors: Major[] = [
     "name": "Digital Information Technology Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -7924,7 +7924,7 @@ export const majors: Major[] = [
     "name": "Digital Law",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $240k",
     "growth": "+1% Growth"
@@ -7933,7 +7933,7 @@ export const majors: Major[] = [
     "name": "Digital Law Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -7942,7 +7942,7 @@ export const majors: Major[] = [
     "name": "Digital Law Engineering",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$96k - $179k",
     "growth": "+9% Growth"
@@ -7951,7 +7951,7 @@ export const majors: Major[] = [
     "name": "Digital Law Management",
     "score": 71,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$80k - $229k",
     "growth": "0% Growth"
@@ -7960,7 +7960,7 @@ export const majors: Major[] = [
     "name": "Digital Law Policy",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $235k",
     "growth": "0% Growth"
@@ -7969,7 +7969,7 @@ export const majors: Major[] = [
     "name": "Digital Law Practice",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $240k",
     "growth": "+1% Growth"
@@ -7978,7 +7978,7 @@ export const majors: Major[] = [
     "name": "Digital Law Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $237k",
     "growth": "+1% Growth"
@@ -7987,7 +7987,7 @@ export const majors: Major[] = [
     "name": "Digital Law Studies",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -7996,7 +7996,7 @@ export const majors: Major[] = [
     "name": "Digital Law Technology",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $226k",
     "growth": "0% Growth"
@@ -8005,7 +8005,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-5% Growth"
@@ -8014,7 +8014,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Analytics",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $139k",
     "growth": "-5% Growth"
@@ -8023,7 +8023,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Engineering",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$93k - $174k",
     "growth": "+8% Growth"
@@ -8032,7 +8032,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Management",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -8041,7 +8041,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-5% Growth"
@@ -8050,7 +8050,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Practice",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $141k",
     "growth": "-5% Growth"
@@ -8059,7 +8059,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Science",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $147k",
     "growth": "-3% Growth"
@@ -8068,7 +8068,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Studies",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $139k",
     "growth": "-5% Growth"
@@ -8077,7 +8077,7 @@ export const majors: Major[] = [
     "name": "Digital Marketing Technology",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-4% Growth"
@@ -8086,7 +8086,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -8095,7 +8095,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Analytics",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -8104,7 +8104,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Engineering",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$104k - $194k",
     "growth": "+11% Growth"
@@ -8113,7 +8113,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Management",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -8122,7 +8122,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Policy",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -8131,7 +8131,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Practice",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -8140,7 +8140,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Science",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -8149,7 +8149,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Studies",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -8158,7 +8158,7 @@ export const majors: Major[] = [
     "name": "Digital Mathematics Technology",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -8167,7 +8167,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -8176,7 +8176,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Analytics",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -8185,7 +8185,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -8194,7 +8194,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Management",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$93k - $158k",
     "growth": "+17% Growth"
@@ -8203,7 +8203,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Policy",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -8212,7 +8212,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Practice",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$94k - $160k",
     "growth": "+17% Growth"
@@ -8221,7 +8221,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Science",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -8230,7 +8230,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Studies",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+17% Growth"
@@ -8239,7 +8239,7 @@ export const majors: Major[] = [
     "name": "Digital Nursing Technology",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+17% Growth"
@@ -8248,7 +8248,7 @@ export const majors: Major[] = [
     "name": "Digital Physics",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -8257,7 +8257,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Analytics",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -8266,7 +8266,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Engineering",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$109k - $205k",
     "growth": "+12% Growth"
@@ -8275,7 +8275,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Management",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -8284,7 +8284,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -8293,7 +8293,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Practice",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -8302,7 +8302,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Science",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -8311,7 +8311,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Studies",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -8320,7 +8320,7 @@ export const majors: Major[] = [
     "name": "Digital Physics Technology",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -8329,7 +8329,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+7% Growth"
@@ -8338,7 +8338,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Analytics",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -8347,7 +8347,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -8356,7 +8356,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Management",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -8365,7 +8365,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -8374,7 +8374,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Practice",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -8383,7 +8383,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Science",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $145k",
     "growth": "+8% Growth"
@@ -8392,7 +8392,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -8401,7 +8401,7 @@ export const majors: Major[] = [
     "name": "Digital Psychology Technology",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -8410,7 +8410,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -8419,7 +8419,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Analytics",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -8428,7 +8428,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Engineering",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -8437,7 +8437,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Management",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -8446,7 +8446,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Policy",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -8455,7 +8455,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Practice",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -8464,7 +8464,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Science",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -8473,7 +8473,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Studies",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$83k - $156k",
     "growth": "+6% Growth"
@@ -8482,7 +8482,7 @@ export const majors: Major[] = [
     "name": "Digital Software Engineering Technology",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -8491,7 +8491,7 @@ export const majors: Major[] = [
     "name": "Doctor of Optometry",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -8500,7 +8500,7 @@ export const majors: Major[] = [
     "name": "Doctor of Pharmacy",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -8509,7 +8509,7 @@ export const majors: Major[] = [
     "name": "Doctor of Veterinary Medicine",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
     "advice": "Stay ahead by mastering AI tools in your field.",
     "salary": "$194k - $516k",
     "growth": "+5% Growth"
@@ -8518,7 +8518,7 @@ export const majors: Major[] = [
     "name": "Education",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -8527,7 +8527,7 @@ export const majors: Major[] = [
     "name": "Education Analytics",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -8536,7 +8536,7 @@ export const majors: Major[] = [
     "name": "Education Engineering",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$114k - $213k",
     "growth": "+13% Growth"
@@ -8545,7 +8545,7 @@ export const majors: Major[] = [
     "name": "Education Management",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -8554,7 +8554,7 @@ export const majors: Major[] = [
     "name": "Education Policy",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -8563,7 +8563,7 @@ export const majors: Major[] = [
     "name": "Education Practice",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -8572,7 +8572,7 @@ export const majors: Major[] = [
     "name": "Education Science",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -8581,7 +8581,7 @@ export const majors: Major[] = [
     "name": "Education Studies",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -8590,7 +8590,7 @@ export const majors: Major[] = [
     "name": "Education Technology",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -8599,7 +8599,7 @@ export const majors: Major[] = [
     "name": "Engineering",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -8608,7 +8608,7 @@ export const majors: Major[] = [
     "name": "Engineering Analytics",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -8617,7 +8617,7 @@ export const majors: Major[] = [
     "name": "Engineering Engineering",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -8626,7 +8626,7 @@ export const majors: Major[] = [
     "name": "Engineering Management",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -8635,7 +8635,7 @@ export const majors: Major[] = [
     "name": "Engineering Policy",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -8644,7 +8644,7 @@ export const majors: Major[] = [
     "name": "Engineering Practice",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -8653,7 +8653,7 @@ export const majors: Major[] = [
     "name": "Engineering Science",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -8662,7 +8662,7 @@ export const majors: Major[] = [
     "name": "Engineering Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -8671,7 +8671,7 @@ export const majors: Major[] = [
     "name": "Engineering Technology",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -8680,7 +8680,7 @@ export const majors: Major[] = [
     "name": "Finance",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -8689,7 +8689,7 @@ export const majors: Major[] = [
     "name": "Finance Analytics",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -8698,7 +8698,7 @@ export const majors: Major[] = [
     "name": "Finance Engineering",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$96k - $181k",
     "growth": "+9% Growth"
@@ -8707,7 +8707,7 @@ export const majors: Major[] = [
     "name": "Finance Management",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -8716,7 +8716,7 @@ export const majors: Major[] = [
     "name": "Finance Policy",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -8725,7 +8725,7 @@ export const majors: Major[] = [
     "name": "Finance Practice",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -8734,7 +8734,7 @@ export const majors: Major[] = [
     "name": "Finance Science",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -8743,7 +8743,7 @@ export const majors: Major[] = [
     "name": "Finance Studies",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -8752,7 +8752,7 @@ export const majors: Major[] = [
     "name": "Finance Technology",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -8761,7 +8761,7 @@ export const majors: Major[] = [
     "name": "Global Accounting",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -8770,7 +8770,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Analytics",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -8779,7 +8779,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -8788,7 +8788,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Management",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -8797,7 +8797,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Policy",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-7% Growth"
@@ -8806,7 +8806,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Practice",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -8815,7 +8815,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Science",
     "score": 97,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $132k",
     "growth": "-8% Growth"
@@ -8824,7 +8824,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Studies",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -8833,7 +8833,7 @@ export const majors: Major[] = [
     "name": "Global Accounting Technology",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -8842,7 +8842,7 @@ export const majors: Major[] = [
     "name": "Global Biology",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $194k",
     "growth": "+10% Growth"
@@ -8851,7 +8851,7 @@ export const majors: Major[] = [
     "name": "Global Biology Analytics",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $201k",
     "growth": "+11% Growth"
@@ -8860,7 +8860,7 @@ export const majors: Major[] = [
     "name": "Global Biology Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -8869,7 +8869,7 @@ export const majors: Major[] = [
     "name": "Global Biology Management",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -8878,7 +8878,7 @@ export const majors: Major[] = [
     "name": "Global Biology Policy",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -8887,7 +8887,7 @@ export const majors: Major[] = [
     "name": "Global Biology Practice",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $201k",
     "growth": "+11% Growth"
@@ -8896,7 +8896,7 @@ export const majors: Major[] = [
     "name": "Global Biology Science",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -8905,7 +8905,7 @@ export const majors: Major[] = [
     "name": "Global Biology Studies",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $190k",
     "growth": "+9% Growth"
@@ -8914,7 +8914,7 @@ export const majors: Major[] = [
     "name": "Global Biology Technology",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -8923,7 +8923,7 @@ export const majors: Major[] = [
     "name": "Global Business",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -8932,7 +8932,7 @@ export const majors: Major[] = [
     "name": "Global Business Analytics",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -8941,7 +8941,7 @@ export const majors: Major[] = [
     "name": "Global Business Engineering",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$96k - $179k",
     "growth": "+9% Growth"
@@ -8950,7 +8950,7 @@ export const majors: Major[] = [
     "name": "Global Business Management",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -8959,7 +8959,7 @@ export const majors: Major[] = [
     "name": "Global Business Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $189k",
     "growth": "0% Growth"
@@ -8968,7 +8968,7 @@ export const majors: Major[] = [
     "name": "Global Business Practice",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $194k",
     "growth": "0% Growth"
@@ -8977,7 +8977,7 @@ export const majors: Major[] = [
     "name": "Global Business Science",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $195k",
     "growth": "+1% Growth"
@@ -8986,7 +8986,7 @@ export const majors: Major[] = [
     "name": "Global Business Studies",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $194k",
     "growth": "+1% Growth"
@@ -8995,7 +8995,7 @@ export const majors: Major[] = [
     "name": "Global Business Technology",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -9004,7 +9004,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -9013,7 +9013,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Analytics",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -9022,7 +9022,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Engineering",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$107k - $200k",
     "growth": "+12% Growth"
@@ -9031,7 +9031,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Management",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -9040,7 +9040,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -9049,7 +9049,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Practice",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -9058,7 +9058,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Science",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -9067,7 +9067,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Studies",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -9076,7 +9076,7 @@ export const majors: Major[] = [
     "name": "Global Chemistry Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -9085,7 +9085,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science",
     "score": 71,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $206k",
     "growth": "-1% Growth"
@@ -9094,7 +9094,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Analytics",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -9103,7 +9103,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Engineering",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
@@ -9112,7 +9112,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -9121,7 +9121,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Policy",
     "score": 71,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $206k",
     "growth": "-1% Growth"
@@ -9130,7 +9130,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Practice",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -9139,7 +9139,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Science",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -9148,7 +9148,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Studies",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$98k - $196k",
     "growth": "-2% Growth"
@@ -9157,7 +9157,7 @@ export const majors: Major[] = [
     "name": "Global Computer Science Technology",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $200k",
     "growth": "-2% Growth"
@@ -9166,7 +9166,7 @@ export const majors: Major[] = [
     "name": "Global Data Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $201k",
     "growth": "+15% Growth"
@@ -9175,7 +9175,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Analytics",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $207k",
     "growth": "+17% Growth"
@@ -9184,7 +9184,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Engineering",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$91k - $170k",
     "growth": "+8% Growth"
@@ -9193,7 +9193,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Management",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -9202,7 +9202,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Policy",
     "score": 70,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+15% Growth"
@@ -9211,7 +9211,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Practice",
     "score": 67,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -9220,7 +9220,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Science",
     "score": 61,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $203k",
     "growth": "+16% Growth"
@@ -9229,7 +9229,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Studies",
     "score": 68,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $197k",
     "growth": "+15% Growth"
@@ -9238,7 +9238,7 @@ export const majors: Major[] = [
     "name": "Global Data Science Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -9247,7 +9247,7 @@ export const majors: Major[] = [
     "name": "Global Education",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -9256,7 +9256,7 @@ export const majors: Major[] = [
     "name": "Global Education Analytics",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -9265,7 +9265,7 @@ export const majors: Major[] = [
     "name": "Global Education Engineering",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$110k - $206k",
     "growth": "+12% Growth"
@@ -9274,7 +9274,7 @@ export const majors: Major[] = [
     "name": "Global Education Management",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $120k",
     "growth": "+4% Growth"
@@ -9283,7 +9283,7 @@ export const majors: Major[] = [
     "name": "Global Education Policy",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -9292,7 +9292,7 @@ export const majors: Major[] = [
     "name": "Global Education Practice",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -9301,7 +9301,7 @@ export const majors: Major[] = [
     "name": "Global Education Science",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $116k",
     "growth": "+4% Growth"
@@ -9310,7 +9310,7 @@ export const majors: Major[] = [
     "name": "Global Education Studies",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $116k",
     "growth": "+4% Growth"
@@ -9319,7 +9319,7 @@ export const majors: Major[] = [
     "name": "Global Education Technology",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -9328,7 +9328,7 @@ export const majors: Major[] = [
     "name": "Global Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -9337,7 +9337,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Analytics",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -9346,7 +9346,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Engineering",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -9355,7 +9355,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Management",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -9364,7 +9364,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Policy",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -9373,7 +9373,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Practice",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -9382,7 +9382,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Science",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -9391,7 +9391,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -9400,7 +9400,7 @@ export const majors: Major[] = [
     "name": "Global Engineering Technology",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -9409,7 +9409,7 @@ export const majors: Major[] = [
     "name": "Global Finance",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -9418,7 +9418,7 @@ export const majors: Major[] = [
     "name": "Global Finance Analytics",
     "score": 65,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -9427,7 +9427,7 @@ export const majors: Major[] = [
     "name": "Global Finance Engineering",
     "score": 64,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$94k - $177k",
     "growth": "+9% Growth"
@@ -9436,7 +9436,7 @@ export const majors: Major[] = [
     "name": "Global Finance Management",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -9445,7 +9445,7 @@ export const majors: Major[] = [
     "name": "Global Finance Policy",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -9454,7 +9454,7 @@ export const majors: Major[] = [
     "name": "Global Finance Practice",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -9463,7 +9463,7 @@ export const majors: Major[] = [
     "name": "Global Finance Science",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $121k",
     "growth": "-2% Growth"
@@ -9472,7 +9472,7 @@ export const majors: Major[] = [
     "name": "Global Finance Studies",
     "score": 66,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -9481,7 +9481,7 @@ export const majors: Major[] = [
     "name": "Global Finance Technology",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -9490,7 +9490,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -9499,7 +9499,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Analytics",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -9508,7 +9508,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Engineering",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$82k - $153k",
     "growth": "+5% Growth"
@@ -9517,7 +9517,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Management",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -9526,7 +9526,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Policy",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -9535,7 +9535,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Practice",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -9544,7 +9544,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Science",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -9553,7 +9553,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Studies",
     "score": 99,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -9562,7 +9562,7 @@ export const majors: Major[] = [
     "name": "Global Graphic Design Technology",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -9571,7 +9571,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -9580,7 +9580,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Analytics",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -9589,7 +9589,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -9598,7 +9598,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -9607,7 +9607,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Policy",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -9616,7 +9616,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Practice",
     "score": 68,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -9625,7 +9625,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Science",
     "score": 75,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -9634,7 +9634,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Studies",
     "score": 70,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -9643,7 +9643,7 @@ export const majors: Major[] = [
     "name": "Global Information Technology Technology",
     "score": 67,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -9652,7 +9652,7 @@ export const majors: Major[] = [
     "name": "Global Law",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -9661,7 +9661,7 @@ export const majors: Major[] = [
     "name": "Global Law Analytics",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$86k - $245k",
     "growth": "+1% Growth"
@@ -9670,7 +9670,7 @@ export const majors: Major[] = [
     "name": "Global Law Engineering",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$96k - $181k",
     "growth": "+9% Growth"
@@ -9679,7 +9679,7 @@ export const majors: Major[] = [
     "name": "Global Law Management",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $241k",
     "growth": "+1% Growth"
@@ -9688,7 +9688,7 @@ export const majors: Major[] = [
     "name": "Global Law Policy",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $244k",
     "growth": "+1% Growth"
@@ -9697,7 +9697,7 @@ export const majors: Major[] = [
     "name": "Global Law Practice",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $230k",
     "growth": "0% Growth"
@@ -9706,7 +9706,7 @@ export const majors: Major[] = [
     "name": "Global Law Science",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -9715,7 +9715,7 @@ export const majors: Major[] = [
     "name": "Global Law Studies",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$80k - $228k",
     "growth": "0% Growth"
@@ -9724,7 +9724,7 @@ export const majors: Major[] = [
     "name": "Global Law Technology",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $233k",
     "growth": "0% Growth"
@@ -9733,7 +9733,7 @@ export const majors: Major[] = [
     "name": "Global Marketing",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $145k",
     "growth": "-4% Growth"
@@ -9742,7 +9742,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Analytics",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -9751,7 +9751,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Engineering",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -9760,7 +9760,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Management",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -9769,7 +9769,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Policy",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $141k",
     "growth": "-5% Growth"
@@ -9778,7 +9778,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Practice",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $140k",
     "growth": "-5% Growth"
@@ -9787,7 +9787,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Science",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -9796,7 +9796,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Studies",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -9805,7 +9805,7 @@ export const majors: Major[] = [
     "name": "Global Marketing Technology",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-4% Growth"
@@ -9814,7 +9814,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -9823,7 +9823,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Analytics",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -9832,7 +9832,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Engineering",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$102k - $191k",
     "growth": "+11% Growth"
@@ -9841,7 +9841,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Management",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -9850,7 +9850,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Policy",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -9859,7 +9859,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Practice",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -9868,7 +9868,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Science",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -9877,7 +9877,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Studies",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -9886,7 +9886,7 @@ export const majors: Major[] = [
     "name": "Global Mathematics Technology",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -9895,7 +9895,7 @@ export const majors: Major[] = [
     "name": "Global Nursing",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -9904,7 +9904,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Analytics",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -9913,7 +9913,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Engineering",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$117k - $220k",
     "growth": "+14% Growth"
@@ -9922,7 +9922,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -9931,7 +9931,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Policy",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -9940,7 +9940,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Practice",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your major is the 'Before' picture in an AI automation success story.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -9949,7 +9949,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Science",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "The robot revolution called. They said thanks for the training data.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -9958,7 +9958,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Studies",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -9967,7 +9967,7 @@ export const majors: Major[] = [
     "name": "Global Nursing Technology",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -9976,7 +9976,7 @@ export const majors: Major[] = [
     "name": "Global Physics",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -9985,7 +9985,7 @@ export const majors: Major[] = [
     "name": "Global Physics Analytics",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -9994,7 +9994,7 @@ export const majors: Major[] = [
     "name": "Global Physics Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -10003,7 +10003,7 @@ export const majors: Major[] = [
     "name": "Global Physics Management",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -10012,7 +10012,7 @@ export const majors: Major[] = [
     "name": "Global Physics Policy",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -10021,7 +10021,7 @@ export const majors: Major[] = [
     "name": "Global Physics Practice",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -10030,7 +10030,7 @@ export const majors: Major[] = [
     "name": "Global Physics Science",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -10039,7 +10039,7 @@ export const majors: Major[] = [
     "name": "Global Physics Studies",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -10048,7 +10048,7 @@ export const majors: Major[] = [
     "name": "Global Physics Technology",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -10057,7 +10057,7 @@ export const majors: Major[] = [
     "name": "Global Psychology",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+7% Growth"
@@ -10066,7 +10066,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Analytics",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -10075,7 +10075,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -10084,7 +10084,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Management",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $149k",
     "growth": "+9% Growth"
@@ -10093,7 +10093,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Policy",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+8% Growth"
@@ -10102,7 +10102,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Practice",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $141k",
     "growth": "+6% Growth"
@@ -10111,7 +10111,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Science",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -10120,7 +10120,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -10129,7 +10129,7 @@ export const majors: Major[] = [
     "name": "Global Psychology Technology",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -10138,7 +10138,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $159k",
     "growth": "+6% Growth"
@@ -10147,7 +10147,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Analytics",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -10156,7 +10156,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Engineering",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -10165,7 +10165,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Management",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -10174,7 +10174,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Policy",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -10183,7 +10183,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Practice",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -10192,7 +10192,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Science",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$83k - $155k",
     "growth": "+6% Growth"
@@ -10201,7 +10201,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Studies",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -10210,7 +10210,7 @@ export const majors: Major[] = [
     "name": "Global Software Engineering Technology",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
@@ -10219,7 +10219,7 @@ export const majors: Major[] = [
     "name": "Graphic Design",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -10228,7 +10228,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Analytics",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -10237,7 +10237,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Engineering",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -10246,7 +10246,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Management",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -10255,7 +10255,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Policy",
     "score": 96,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $97k",
     "growth": "-14% Growth"
@@ -10264,7 +10264,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Practice",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -10273,7 +10273,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Science",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -10282,7 +10282,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Studies",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -10291,7 +10291,7 @@ export const majors: Major[] = [
     "name": "Graphic Design Technology",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -10300,7 +10300,7 @@ export const majors: Major[] = [
     "name": "Industrial Accounting",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $138k",
     "growth": "-7% Growth"
@@ -10309,7 +10309,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -10318,7 +10318,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Analytics",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $197k",
     "growth": "+10% Growth"
@@ -10327,7 +10327,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Engineering",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -10336,7 +10336,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Management",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -10345,7 +10345,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Policy",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -10354,7 +10354,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Practice",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $191k",
     "growth": "+10% Growth"
@@ -10363,7 +10363,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Science",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $197k",
     "growth": "+10% Growth"
@@ -10372,7 +10372,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Studies",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -10381,7 +10381,7 @@ export const majors: Major[] = [
     "name": "Industrial Biology Technology",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -10390,7 +10390,7 @@ export const majors: Major[] = [
     "name": "Industrial Business",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -10399,7 +10399,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Analytics",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -10408,7 +10408,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Engineering",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$96k - $180k",
     "growth": "+9% Growth"
@@ -10417,7 +10417,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Management",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -10426,7 +10426,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Policy",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -10435,7 +10435,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Practice",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -10444,7 +10444,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Science",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -10453,7 +10453,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Studies",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -10462,7 +10462,7 @@ export const majors: Major[] = [
     "name": "Industrial Business Technology",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -10471,7 +10471,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -10480,7 +10480,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Analytics",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -10489,7 +10489,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Engineering",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$108k - $202k",
     "growth": "+12% Growth"
@@ -10498,7 +10498,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Management",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -10507,7 +10507,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Policy",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -10516,7 +10516,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Practice",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -10525,7 +10525,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Science",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -10534,7 +10534,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Studies",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $206k",
     "growth": "+8% Growth"
@@ -10543,7 +10543,7 @@ export const majors: Major[] = [
     "name": "Industrial Chemistry Technology",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $201k",
     "growth": "+7% Growth"
@@ -10552,7 +10552,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -10561,7 +10561,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Analytics",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$98k - $196k",
     "growth": "-2% Growth"
@@ -10570,7 +10570,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Engineering",
     "score": 67,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$93k - $175k",
     "growth": "+8% Growth"
@@ -10579,7 +10579,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Management",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $203k",
     "growth": "-1% Growth"
@@ -10588,7 +10588,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Policy",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $205k",
     "growth": "-1% Growth"
@@ -10597,7 +10597,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Practice",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $200k",
     "growth": "-2% Growth"
@@ -10606,7 +10606,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Science",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -10615,7 +10615,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Studies",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $209k",
     "growth": "0% Growth"
@@ -10624,7 +10624,7 @@ export const majors: Major[] = [
     "name": "Industrial Computer Science Technology",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -10633,7 +10633,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $201k",
     "growth": "+16% Growth"
@@ -10642,7 +10642,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Analytics",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $208k",
     "growth": "+17% Growth"
@@ -10651,7 +10651,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -10660,7 +10660,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Management",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $207k",
     "growth": "+17% Growth"
@@ -10669,7 +10669,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Policy",
     "score": 68,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $197k",
     "growth": "+15% Growth"
@@ -10678,7 +10678,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Practice",
     "score": 74,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$107k - $192k",
     "growth": "+14% Growth"
@@ -10687,7 +10687,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Science",
     "score": 66,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -10696,7 +10696,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Studies",
     "score": 74,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$107k - $192k",
     "growth": "+14% Growth"
@@ -10705,7 +10705,7 @@ export const majors: Major[] = [
     "name": "Industrial Data Science Technology",
     "score": 67,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $198k",
     "growth": "+15% Growth"
@@ -10714,7 +10714,7 @@ export const majors: Major[] = [
     "name": "Industrial Education",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -10723,7 +10723,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -10732,7 +10732,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Analytics",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -10741,7 +10741,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Engineering",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -10750,7 +10750,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Management",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$110k - $207k",
     "growth": "+13% Growth"
@@ -10759,7 +10759,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Policy",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $213k",
     "growth": "+13% Growth"
@@ -10768,7 +10768,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Practice",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -10777,7 +10777,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -10786,7 +10786,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Studies",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $214k",
     "growth": "+14% Growth"
@@ -10795,7 +10795,7 @@ export const majors: Major[] = [
     "name": "Industrial Engineering Technology",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -10804,7 +10804,7 @@ export const majors: Major[] = [
     "name": "Industrial Finance",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -10813,7 +10813,7 @@ export const majors: Major[] = [
     "name": "Industrial Graphic Design",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -10822,7 +10822,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology",
     "score": 71,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -10831,7 +10831,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Analytics",
     "score": 70,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -10840,7 +10840,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Engineering",
     "score": 66,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$94k - $176k",
     "growth": "+8% Growth"
@@ -10849,7 +10849,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Management",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$55k - $111k",
     "growth": "-6% Growth"
@@ -10858,7 +10858,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Policy",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$55k - $111k",
     "growth": "-6% Growth"
@@ -10867,7 +10867,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -10876,7 +10876,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Science",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -10885,7 +10885,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Studies",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $112k",
     "growth": "-5% Growth"
@@ -10894,7 +10894,7 @@ export const majors: Major[] = [
     "name": "Industrial Information Technology Technology",
     "score": 73,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-5% Growth"
@@ -10903,7 +10903,7 @@ export const majors: Major[] = [
     "name": "Industrial Law",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $238k",
     "growth": "+1% Growth"
@@ -10912,7 +10912,7 @@ export const majors: Major[] = [
     "name": "Industrial Marketing",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -10921,7 +10921,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -10930,7 +10930,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Analytics",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -10939,7 +10939,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Engineering",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$102k - $191k",
     "growth": "+11% Growth"
@@ -10948,7 +10948,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Management",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -10957,7 +10957,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -10966,7 +10966,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Practice",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -10975,7 +10975,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Science",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -10984,7 +10984,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Studies",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -10993,7 +10993,7 @@ export const majors: Major[] = [
     "name": "Industrial Mathematics Technology",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -11002,7 +11002,7 @@ export const majors: Major[] = [
     "name": "Industrial Nursing",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -11011,7 +11011,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -11020,7 +11020,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Analytics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -11029,7 +11029,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Engineering",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$110k - $206k",
     "growth": "+13% Growth"
@@ -11038,7 +11038,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Management",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $139k",
     "growth": "+5% Growth"
@@ -11047,7 +11047,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -11056,7 +11056,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Practice",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -11065,7 +11065,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Science",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -11074,7 +11074,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Studies",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -11083,7 +11083,7 @@ export const majors: Major[] = [
     "name": "Industrial Physics Technology",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -11092,7 +11092,7 @@ export const majors: Major[] = [
     "name": "Industrial Psychology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -11101,7 +11101,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -11110,7 +11110,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Analytics",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -11119,7 +11119,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Engineering",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -11128,7 +11128,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Management",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -11137,7 +11137,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Policy",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $168k",
     "growth": "+7% Growth"
@@ -11146,7 +11146,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Practice",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $159k",
     "growth": "+6% Growth"
@@ -11155,7 +11155,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Science",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -11164,7 +11164,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Studies",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+6% Growth"
@@ -11173,7 +11173,7 @@ export const majors: Major[] = [
     "name": "Industrial Software Engineering Technology",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -11182,7 +11182,7 @@ export const majors: Major[] = [
     "name": "Information Technology",
     "score": 70,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -11191,7 +11191,7 @@ export const majors: Major[] = [
     "name": "Information Technology Analytics",
     "score": 69,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -11200,7 +11200,7 @@ export const majors: Major[] = [
     "name": "Information Technology Engineering",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$93k - $174k",
     "growth": "+8% Growth"
@@ -11209,7 +11209,7 @@ export const majors: Major[] = [
     "name": "Information Technology Management",
     "score": 73,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-5% Growth"
@@ -11218,7 +11218,7 @@ export const majors: Major[] = [
     "name": "Information Technology Policy",
     "score": 68,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -11227,7 +11227,7 @@ export const majors: Major[] = [
     "name": "Information Technology Practice",
     "score": 68,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -11236,7 +11236,7 @@ export const majors: Major[] = [
     "name": "Information Technology Science",
     "score": 70,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -11245,7 +11245,7 @@ export const majors: Major[] = [
     "name": "Information Technology Studies",
     "score": 66,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -11254,7 +11254,7 @@ export const majors: Major[] = [
     "name": "Information Technology Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -11263,7 +11263,7 @@ export const majors: Major[] = [
     "name": "International Accounting",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -11272,7 +11272,7 @@ export const majors: Major[] = [
     "name": "International Accounting Analytics",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -11281,7 +11281,7 @@ export const majors: Major[] = [
     "name": "International Accounting Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -11290,7 +11290,7 @@ export const majors: Major[] = [
     "name": "International Accounting Management",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $136k",
     "growth": "-7% Growth"
@@ -11299,7 +11299,7 @@ export const majors: Major[] = [
     "name": "International Accounting Policy",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $142k",
     "growth": "-6% Growth"
@@ -11308,7 +11308,7 @@ export const majors: Major[] = [
     "name": "International Accounting Practice",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -11317,7 +11317,7 @@ export const majors: Major[] = [
     "name": "International Accounting Science",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -11326,7 +11326,7 @@ export const majors: Major[] = [
     "name": "International Accounting Studies",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $134k",
     "growth": "-7% Growth"
@@ -11335,7 +11335,7 @@ export const majors: Major[] = [
     "name": "International Accounting Technology",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $134k",
     "growth": "-7% Growth"
@@ -11344,7 +11344,7 @@ export const majors: Major[] = [
     "name": "International Biology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $198k",
     "growth": "+10% Growth"
@@ -11353,7 +11353,7 @@ export const majors: Major[] = [
     "name": "International Biology Analytics",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -11362,7 +11362,7 @@ export const majors: Major[] = [
     "name": "International Biology Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -11371,7 +11371,7 @@ export const majors: Major[] = [
     "name": "International Biology Management",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $197k",
     "growth": "+10% Growth"
@@ -11380,7 +11380,7 @@ export const majors: Major[] = [
     "name": "International Biology Policy",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $194k",
     "growth": "+10% Growth"
@@ -11389,7 +11389,7 @@ export const majors: Major[] = [
     "name": "International Biology Practice",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -11398,7 +11398,7 @@ export const majors: Major[] = [
     "name": "International Biology Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -11407,7 +11407,7 @@ export const majors: Major[] = [
     "name": "International Biology Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -11416,7 +11416,7 @@ export const majors: Major[] = [
     "name": "International Biology Technology",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -11425,7 +11425,7 @@ export const majors: Major[] = [
     "name": "International Business",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -11434,7 +11434,7 @@ export const majors: Major[] = [
     "name": "International Business Analytics",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -11443,7 +11443,7 @@ export const majors: Major[] = [
     "name": "International Business Engineering",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -11452,7 +11452,7 @@ export const majors: Major[] = [
     "name": "International Business Management",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $204k",
     "growth": "+2% Growth"
@@ -11461,7 +11461,7 @@ export const majors: Major[] = [
     "name": "International Business Policy",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $197k",
     "growth": "+1% Growth"
@@ -11470,7 +11470,7 @@ export const majors: Major[] = [
     "name": "International Business Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -11479,7 +11479,7 @@ export const majors: Major[] = [
     "name": "International Business Science",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $202k",
     "growth": "+2% Growth"
@@ -11488,7 +11488,7 @@ export const majors: Major[] = [
     "name": "International Business Studies",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -11497,7 +11497,7 @@ export const majors: Major[] = [
     "name": "International Business Technology",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -11506,7 +11506,7 @@ export const majors: Major[] = [
     "name": "International Chemistry",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $204k",
     "growth": "+8% Growth"
@@ -11515,7 +11515,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Analytics",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $209k",
     "growth": "+8% Growth"
@@ -11524,7 +11524,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Engineering",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$111k - $209k",
     "growth": "+13% Growth"
@@ -11533,7 +11533,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Management",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -11542,7 +11542,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$86k - $214k",
     "growth": "+9% Growth"
@@ -11551,7 +11551,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Practice",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $208k",
     "growth": "+8% Growth"
@@ -11560,7 +11560,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Science",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -11569,7 +11569,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Studies",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -11578,7 +11578,7 @@ export const majors: Major[] = [
     "name": "International Chemistry Technology",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -11587,7 +11587,7 @@ export const majors: Major[] = [
     "name": "International Computer Science",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -11596,7 +11596,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Analytics",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $203k",
     "growth": "-1% Growth"
@@ -11605,7 +11605,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Engineering",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$90k - $168k",
     "growth": "+7% Growth"
@@ -11614,7 +11614,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Management",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -11623,7 +11623,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Policy",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $202k",
     "growth": "-1% Growth"
@@ -11632,7 +11632,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Practice",
     "score": 71,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $206k",
     "growth": "-1% Growth"
@@ -11641,7 +11641,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Science",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $198k",
     "growth": "-2% Growth"
@@ -11650,7 +11650,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Studies",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -11659,7 +11659,7 @@ export const majors: Major[] = [
     "name": "International Computer Science Technology",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $208k",
     "growth": "0% Growth"
@@ -11668,7 +11668,7 @@ export const majors: Major[] = [
     "name": "International Data Science",
     "score": 65,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -11677,7 +11677,7 @@ export const majors: Major[] = [
     "name": "International Data Science Analytics",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$115k - $206k",
     "growth": "+16% Growth"
@@ -11686,7 +11686,7 @@ export const majors: Major[] = [
     "name": "International Data Science Engineering",
     "score": 61,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$96k - $179k",
     "growth": "+9% Growth"
@@ -11695,7 +11695,7 @@ export const majors: Major[] = [
     "name": "International Data Science Management",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $204k",
     "growth": "+16% Growth"
@@ -11704,7 +11704,7 @@ export const majors: Major[] = [
     "name": "International Data Science Policy",
     "score": 71,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+14% Growth"
@@ -11713,7 +11713,7 @@ export const majors: Major[] = [
     "name": "International Data Science Practice",
     "score": 68,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $197k",
     "growth": "+15% Growth"
@@ -11722,7 +11722,7 @@ export const majors: Major[] = [
     "name": "International Data Science Science",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $207k",
     "growth": "+17% Growth"
@@ -11731,7 +11731,7 @@ export const majors: Major[] = [
     "name": "International Data Science Studies",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $208k",
     "growth": "+17% Growth"
@@ -11740,7 +11740,7 @@ export const majors: Major[] = [
     "name": "International Data Science Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -11749,7 +11749,7 @@ export const majors: Major[] = [
     "name": "International Education",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -11758,7 +11758,7 @@ export const majors: Major[] = [
     "name": "International Education Analytics",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $117k",
     "growth": "+4% Growth"
@@ -11767,7 +11767,7 @@ export const majors: Major[] = [
     "name": "International Education Engineering",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$115k - $215k",
     "growth": "+14% Growth"
@@ -11776,7 +11776,7 @@ export const majors: Major[] = [
     "name": "International Education Management",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $116k",
     "growth": "+4% Growth"
@@ -11785,7 +11785,7 @@ export const majors: Major[] = [
     "name": "International Education Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -11794,7 +11794,7 @@ export const majors: Major[] = [
     "name": "International Education Practice",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $120k",
     "growth": "+4% Growth"
@@ -11803,7 +11803,7 @@ export const majors: Major[] = [
     "name": "International Education Science",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $116k",
     "growth": "+4% Growth"
@@ -11812,7 +11812,7 @@ export const majors: Major[] = [
     "name": "International Education Studies",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -11821,7 +11821,7 @@ export const majors: Major[] = [
     "name": "International Education Technology",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -11830,7 +11830,7 @@ export const majors: Major[] = [
     "name": "International Engineering",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $213k",
     "growth": "+13% Growth"
@@ -11839,7 +11839,7 @@ export const majors: Major[] = [
     "name": "International Engineering Analytics",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -11848,7 +11848,7 @@ export const majors: Major[] = [
     "name": "International Engineering Engineering",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -11857,7 +11857,7 @@ export const majors: Major[] = [
     "name": "International Engineering Management",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -11866,7 +11866,7 @@ export const majors: Major[] = [
     "name": "International Engineering Policy",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $209k",
     "growth": "+13% Growth"
@@ -11875,7 +11875,7 @@ export const majors: Major[] = [
     "name": "International Engineering Practice",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$111k - $208k",
     "growth": "+13% Growth"
@@ -11884,7 +11884,7 @@ export const majors: Major[] = [
     "name": "International Engineering Science",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -11893,7 +11893,7 @@ export const majors: Major[] = [
     "name": "International Engineering Studies",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -11902,7 +11902,7 @@ export const majors: Major[] = [
     "name": "International Engineering Technology",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -11911,7 +11911,7 @@ export const majors: Major[] = [
     "name": "International Finance",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -11920,7 +11920,7 @@ export const majors: Major[] = [
     "name": "International Finance Analytics",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $123k",
     "growth": "-1% Growth"
@@ -11929,7 +11929,7 @@ export const majors: Major[] = [
     "name": "International Finance Engineering",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$98k - $183k",
     "growth": "+9% Growth"
@@ -11938,7 +11938,7 @@ export const majors: Major[] = [
     "name": "International Finance Management",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -11947,7 +11947,7 @@ export const majors: Major[] = [
     "name": "International Finance Policy",
     "score": 67,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -11956,7 +11956,7 @@ export const majors: Major[] = [
     "name": "International Finance Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -11965,7 +11965,7 @@ export const majors: Major[] = [
     "name": "International Finance Science",
     "score": 67,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -11974,7 +11974,7 @@ export const majors: Major[] = [
     "name": "International Finance Studies",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -11983,7 +11983,7 @@ export const majors: Major[] = [
     "name": "International Finance Technology",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -11992,7 +11992,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -12001,7 +12001,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Analytics",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -12010,7 +12010,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -12019,7 +12019,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Management",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -12028,7 +12028,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Policy",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -12037,7 +12037,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Practice",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -12046,7 +12046,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Science",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $98k",
     "growth": "-14% Growth"
@@ -12055,7 +12055,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Studies",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -12064,7 +12064,7 @@ export const majors: Major[] = [
     "name": "International Graphic Design Technology",
     "score": 98,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $96k",
     "growth": "-15% Growth"
@@ -12073,7 +12073,7 @@ export const majors: Major[] = [
     "name": "International Information Technology",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -12082,7 +12082,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Analytics",
     "score": 71,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -12091,7 +12091,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Engineering",
     "score": 69,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -12100,7 +12100,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Management",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -12109,7 +12109,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Policy",
     "score": 71,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -12118,7 +12118,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Practice",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -12127,7 +12127,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Science",
     "score": 72,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-4% Growth"
@@ -12136,7 +12136,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Studies",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -12145,7 +12145,7 @@ export const majors: Major[] = [
     "name": "International Information Technology Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -12154,7 +12154,7 @@ export const majors: Major[] = [
     "name": "International Law",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -12163,7 +12163,7 @@ export const majors: Major[] = [
     "name": "International Law Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -12172,7 +12172,7 @@ export const majors: Major[] = [
     "name": "International Law Engineering",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$92k - $173k",
     "growth": "+8% Growth"
@@ -12181,7 +12181,7 @@ export const majors: Major[] = [
     "name": "International Law Management",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -12190,7 +12190,7 @@ export const majors: Major[] = [
     "name": "International Law Policy",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $232k",
     "growth": "0% Growth"
@@ -12199,7 +12199,7 @@ export const majors: Major[] = [
     "name": "International Law Practice",
     "score": 73,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $227k",
     "growth": "0% Growth"
@@ -12208,7 +12208,7 @@ export const majors: Major[] = [
     "name": "International Law Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $237k",
     "growth": "+1% Growth"
@@ -12217,7 +12217,7 @@ export const majors: Major[] = [
     "name": "International Law Studies",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$86k - $245k",
     "growth": "+1% Growth"
@@ -12226,7 +12226,7 @@ export const majors: Major[] = [
     "name": "International Law Technology",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $238k",
     "growth": "+1% Growth"
@@ -12235,7 +12235,7 @@ export const majors: Major[] = [
     "name": "International Marketing",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-5% Growth"
@@ -12244,7 +12244,7 @@ export const majors: Major[] = [
     "name": "International Marketing Analytics",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -12253,7 +12253,7 @@ export const majors: Major[] = [
     "name": "International Marketing Engineering",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$96k - $180k",
     "growth": "+9% Growth"
@@ -12262,7 +12262,7 @@ export const majors: Major[] = [
     "name": "International Marketing Management",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -12271,7 +12271,7 @@ export const majors: Major[] = [
     "name": "International Marketing Policy",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $141k",
     "growth": "-5% Growth"
@@ -12280,7 +12280,7 @@ export const majors: Major[] = [
     "name": "International Marketing Practice",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -12289,7 +12289,7 @@ export const majors: Major[] = [
     "name": "International Marketing Science",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -12298,7 +12298,7 @@ export const majors: Major[] = [
     "name": "International Marketing Studies",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $145k",
     "growth": "-4% Growth"
@@ -12307,7 +12307,7 @@ export const majors: Major[] = [
     "name": "International Marketing Technology",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -12316,7 +12316,7 @@ export const majors: Major[] = [
     "name": "International Mathematics",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -12325,7 +12325,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Analytics",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -12334,7 +12334,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Engineering",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$107k - $201k",
     "growth": "+12% Growth"
@@ -12343,7 +12343,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Management",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -12352,7 +12352,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Policy",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -12361,7 +12361,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Practice",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -12370,7 +12370,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Science",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -12379,7 +12379,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Studies",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -12388,7 +12388,7 @@ export const majors: Major[] = [
     "name": "International Mathematics Technology",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -12397,7 +12397,7 @@ export const majors: Major[] = [
     "name": "International Nursing",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your curriculum was outdated by the time you finished this sentence.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -12406,7 +12406,7 @@ export const majors: Major[] = [
     "name": "International Nursing Analytics",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -12415,7 +12415,7 @@ export const majors: Major[] = [
     "name": "International Nursing Engineering",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -12424,7 +12424,7 @@ export const majors: Major[] = [
     "name": "International Nursing Management",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$94k - $158k",
     "growth": "+17% Growth"
@@ -12433,7 +12433,7 @@ export const majors: Major[] = [
     "name": "International Nursing Policy",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $163k",
     "growth": "+18% Growth"
@@ -12442,7 +12442,7 @@ export const majors: Major[] = [
     "name": "International Nursing Practice",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -12451,7 +12451,7 @@ export const majors: Major[] = [
     "name": "International Nursing Science",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -12460,7 +12460,7 @@ export const majors: Major[] = [
     "name": "International Nursing Studies",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$93k - $158k",
     "growth": "+17% Growth"
@@ -12469,7 +12469,7 @@ export const majors: Major[] = [
     "name": "International Nursing Technology",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -12478,7 +12478,7 @@ export const majors: Major[] = [
     "name": "International Physics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -12487,7 +12487,7 @@ export const majors: Major[] = [
     "name": "International Physics Analytics",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -12496,7 +12496,7 @@ export const majors: Major[] = [
     "name": "International Physics Engineering",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$112k - $209k",
     "growth": "+13% Growth"
@@ -12505,7 +12505,7 @@ export const majors: Major[] = [
     "name": "International Physics Management",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -12514,7 +12514,7 @@ export const majors: Major[] = [
     "name": "International Physics Policy",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -12523,7 +12523,7 @@ export const majors: Major[] = [
     "name": "International Physics Practice",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -12532,7 +12532,7 @@ export const majors: Major[] = [
     "name": "International Physics Science",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $133k",
     "growth": "+3% Growth"
@@ -12541,7 +12541,7 @@ export const majors: Major[] = [
     "name": "International Physics Studies",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $138k",
     "growth": "+5% Growth"
@@ -12550,7 +12550,7 @@ export const majors: Major[] = [
     "name": "International Physics Technology",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -12559,7 +12559,7 @@ export const majors: Major[] = [
     "name": "International Psychology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $146k",
     "growth": "+8% Growth"
@@ -12568,7 +12568,7 @@ export const majors: Major[] = [
     "name": "International Psychology Analytics",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -12577,7 +12577,7 @@ export const majors: Major[] = [
     "name": "International Psychology Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -12586,7 +12586,7 @@ export const majors: Major[] = [
     "name": "International Psychology Management",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $143k",
     "growth": "+7% Growth"
@@ -12595,7 +12595,7 @@ export const majors: Major[] = [
     "name": "International Psychology Policy",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $147k",
     "growth": "+9% Growth"
@@ -12604,7 +12604,7 @@ export const majors: Major[] = [
     "name": "International Psychology Practice",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$75k - $149k",
     "growth": "+10% Growth"
@@ -12613,7 +12613,7 @@ export const majors: Major[] = [
     "name": "International Psychology Science",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $147k",
     "growth": "+9% Growth"
@@ -12622,7 +12622,7 @@ export const majors: Major[] = [
     "name": "International Psychology Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $145k",
     "growth": "+8% Growth"
@@ -12631,7 +12631,7 @@ export const majors: Major[] = [
     "name": "International Psychology Technology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $146k",
     "growth": "+8% Growth"
@@ -12640,7 +12640,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -12649,7 +12649,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Analytics",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -12658,7 +12658,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Engineering",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$83k - $155k",
     "growth": "+6% Growth"
@@ -12667,7 +12667,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Management",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -12676,7 +12676,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Policy",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -12685,7 +12685,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Practice",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -12694,7 +12694,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Science",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -12703,7 +12703,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Studies",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -12712,7 +12712,7 @@ export const majors: Major[] = [
     "name": "International Software Engineering Technology",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $159k",
     "growth": "+6% Growth"
@@ -12721,7 +12721,7 @@ export const majors: Major[] = [
     "name": "Law",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $235k",
     "growth": "0% Growth"
@@ -12730,7 +12730,7 @@ export const majors: Major[] = [
     "name": "Law Analytics",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -12739,7 +12739,7 @@ export const majors: Major[] = [
     "name": "Law Engineering",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$95k - $179k",
     "growth": "+9% Growth"
@@ -12748,7 +12748,7 @@ export const majors: Major[] = [
     "name": "Law Management",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $237k",
     "growth": "+1% Growth"
@@ -12757,7 +12757,7 @@ export const majors: Major[] = [
     "name": "Law Policy",
     "score": 69,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $231k",
     "growth": "0% Growth"
@@ -12766,7 +12766,7 @@ export const majors: Major[] = [
     "name": "Law Practice",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -12775,7 +12775,7 @@ export const majors: Major[] = [
     "name": "Law Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -12784,7 +12784,7 @@ export const majors: Major[] = [
     "name": "Law Studies",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $238k",
     "growth": "+1% Growth"
@@ -12793,7 +12793,7 @@ export const majors: Major[] = [
     "name": "Law Technology",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -12802,7 +12802,7 @@ export const majors: Major[] = [
     "name": "LLB Law",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -12811,7 +12811,7 @@ export const majors: Major[] = [
     "name": "Marketing",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -12820,7 +12820,7 @@ export const majors: Major[] = [
     "name": "Marketing Analytics",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -12829,7 +12829,7 @@ export const majors: Major[] = [
     "name": "Marketing Engineering",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$97k - $182k",
     "growth": "+9% Growth"
@@ -12838,7 +12838,7 @@ export const majors: Major[] = [
     "name": "Marketing Management",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-4% Growth"
@@ -12847,7 +12847,7 @@ export const majors: Major[] = [
     "name": "Marketing Policy",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $147k",
     "growth": "-3% Growth"
@@ -12856,7 +12856,7 @@ export const majors: Major[] = [
     "name": "Marketing Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -12865,7 +12865,7 @@ export const majors: Major[] = [
     "name": "Marketing Science",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $144k",
     "growth": "-4% Growth"
@@ -12874,7 +12874,7 @@ export const majors: Major[] = [
     "name": "Marketing Studies",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -12883,7 +12883,7 @@ export const majors: Major[] = [
     "name": "Marketing Technology",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $143k",
     "growth": "-4% Growth"
@@ -12892,7 +12892,7 @@ export const majors: Major[] = [
     "name": "Mathematics",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -12901,7 +12901,7 @@ export const majors: Major[] = [
     "name": "Mathematics Analytics",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -12910,7 +12910,7 @@ export const majors: Major[] = [
     "name": "Mathematics Engineering",
     "score": 40,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$104k - $195k",
     "growth": "+11% Growth"
@@ -12919,7 +12919,7 @@ export const majors: Major[] = [
     "name": "Mathematics Management",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -12928,7 +12928,7 @@ export const majors: Major[] = [
     "name": "Mathematics Policy",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -12937,7 +12937,7 @@ export const majors: Major[] = [
     "name": "Mathematics Practice",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -12946,7 +12946,7 @@ export const majors: Major[] = [
     "name": "Mathematics Science",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -12955,7 +12955,7 @@ export const majors: Major[] = [
     "name": "Mathematics Studies",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -12964,7 +12964,7 @@ export const majors: Major[] = [
     "name": "Mathematics Technology",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -12973,7 +12973,7 @@ export const majors: Major[] = [
     "name": "Nursing",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -12982,7 +12982,7 @@ export const majors: Major[] = [
     "name": "Nursing Analytics",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your major is the 'Before' picture in an AI automation success story.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+17% Growth"
@@ -12991,7 +12991,7 @@ export const majors: Major[] = [
     "name": "Nursing Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -13000,7 +13000,7 @@ export const majors: Major[] = [
     "name": "Nursing Management",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -13009,7 +13009,7 @@ export const majors: Major[] = [
     "name": "Nursing Policy",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -13018,7 +13018,7 @@ export const majors: Major[] = [
     "name": "Nursing Practice",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "The robot revolution called. They said thanks for the training data.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -13027,7 +13027,7 @@ export const majors: Major[] = [
     "name": "Nursing Science",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -13036,7 +13036,7 @@ export const majors: Major[] = [
     "name": "Nursing Studies",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -13045,7 +13045,7 @@ export const majors: Major[] = [
     "name": "Nursing Technology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $160k",
     "growth": "+17% Growth"
@@ -13054,7 +13054,7 @@ export const majors: Major[] = [
     "name": "Physics",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -13063,7 +13063,7 @@ export const majors: Major[] = [
     "name": "Physics Analytics",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -13072,7 +13072,7 @@ export const majors: Major[] = [
     "name": "Physics Engineering",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$109k - $205k",
     "growth": "+12% Growth"
@@ -13081,7 +13081,7 @@ export const majors: Major[] = [
     "name": "Physics Management",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -13090,7 +13090,7 @@ export const majors: Major[] = [
     "name": "Physics Policy",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -13099,7 +13099,7 @@ export const majors: Major[] = [
     "name": "Physics Practice",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -13108,7 +13108,7 @@ export const majors: Major[] = [
     "name": "Physics Science",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -13117,7 +13117,7 @@ export const majors: Major[] = [
     "name": "Physics Studies",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -13126,7 +13126,7 @@ export const majors: Major[] = [
     "name": "Physics Technology",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -13135,7 +13135,7 @@ export const majors: Major[] = [
     "name": "Psychology",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+8% Growth"
@@ -13144,7 +13144,7 @@ export const majors: Major[] = [
     "name": "Psychology Analytics",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $142k",
     "growth": "+7% Growth"
@@ -13153,7 +13153,7 @@ export const majors: Major[] = [
     "name": "Psychology Engineering",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -13162,7 +13162,7 @@ export const majors: Major[] = [
     "name": "Psychology Management",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $144k",
     "growth": "+8% Growth"
@@ -13171,7 +13171,7 @@ export const majors: Major[] = [
     "name": "Psychology Policy",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $145k",
     "growth": "+8% Growth"
@@ -13180,7 +13180,7 @@ export const majors: Major[] = [
     "name": "Psychology Practice",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $143k",
     "growth": "+7% Growth"
@@ -13189,7 +13189,7 @@ export const majors: Major[] = [
     "name": "Psychology Science",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $145k",
     "growth": "+8% Growth"
@@ -13198,7 +13198,7 @@ export const majors: Major[] = [
     "name": "Psychology Studies",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $143k",
     "growth": "+7% Growth"
@@ -13207,7 +13207,7 @@ export const majors: Major[] = [
     "name": "Psychology Technology",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $145k",
     "growth": "+8% Growth"
@@ -13216,7 +13216,7 @@ export const majors: Major[] = [
     "name": "Software Engineering",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -13225,7 +13225,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Analytics",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -13234,7 +13234,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -13243,7 +13243,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Management",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -13252,7 +13252,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Policy",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -13261,7 +13261,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Practice",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -13270,7 +13270,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Science",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -13279,7 +13279,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Studies",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -13288,7 +13288,7 @@ export const majors: Major[] = [
     "name": "Software Engineering Technology",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -13297,7 +13297,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -13306,7 +13306,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Analytics",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $143k",
     "growth": "-6% Growth"
@@ -13315,7 +13315,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Engineering",
     "score": 88,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$85k - $159k",
     "growth": "+6% Growth"
@@ -13324,7 +13324,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Management",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -13333,7 +13333,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Policy",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -13342,7 +13342,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Practice",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$67k - $144k",
     "growth": "-6% Growth"
@@ -13351,7 +13351,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Science",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $144k",
     "growth": "-6% Growth"
@@ -13360,7 +13360,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Studies",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$67k - $144k",
     "growth": "-6% Growth"
@@ -13369,7 +13369,7 @@ export const majors: Major[] = [
     "name": "Strategic Accounting Technology",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$66k - $144k",
     "growth": "-6% Growth"
@@ -13378,7 +13378,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $197k",
     "growth": "+10% Growth"
@@ -13387,7 +13387,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Analytics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $192k",
     "growth": "+10% Growth"
@@ -13396,7 +13396,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Engineering",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$110k - $206k",
     "growth": "+12% Growth"
@@ -13405,7 +13405,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Management",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -13414,7 +13414,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Policy",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -13423,7 +13423,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Practice",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $201k",
     "growth": "+11% Growth"
@@ -13432,7 +13432,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $196k",
     "growth": "+10% Growth"
@@ -13441,7 +13441,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Studies",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $202k",
     "growth": "+11% Growth"
@@ -13450,7 +13450,7 @@ export const majors: Major[] = [
     "name": "Strategic Biology Technology",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$78k - $199k",
     "growth": "+11% Growth"
@@ -13459,7 +13459,7 @@ export const majors: Major[] = [
     "name": "Strategic Business",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$67k - $196k",
     "growth": "+1% Growth"
@@ -13468,7 +13468,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $189k",
     "growth": "0% Growth"
@@ -13477,7 +13477,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Engineering",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$101k - $189k",
     "growth": "+10% Growth"
@@ -13486,7 +13486,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Management",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -13495,7 +13495,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Policy",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $192k",
     "growth": "0% Growth"
@@ -13504,7 +13504,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Practice",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -13513,7 +13513,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Science",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $189k",
     "growth": "0% Growth"
@@ -13522,7 +13522,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Studies",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$65k - $190k",
     "growth": "0% Growth"
@@ -13531,7 +13531,7 @@ export const majors: Major[] = [
     "name": "Strategic Business Technology",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -13540,7 +13540,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $204k",
     "growth": "+8% Growth"
@@ -13549,7 +13549,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Analytics",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $202k",
     "growth": "+8% Growth"
@@ -13558,7 +13558,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Engineering",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$106k - $200k",
     "growth": "+12% Growth"
@@ -13567,7 +13567,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Management",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $213k",
     "growth": "+9% Growth"
@@ -13576,7 +13576,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$86k - $214k",
     "growth": "+9% Growth"
@@ -13585,7 +13585,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Practice",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -13594,7 +13594,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Science",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -13603,7 +13603,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Studies",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -13612,7 +13612,7 @@ export const majors: Major[] = [
     "name": "Strategic Chemistry Technology",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$80k - $200k",
     "growth": "+7% Growth"
@@ -13621,7 +13621,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $207k",
     "growth": "0% Growth"
@@ -13630,7 +13630,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Analytics",
     "score": 67,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$105k - $210k",
     "growth": "0% Growth"
@@ -13639,7 +13639,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Engineering",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$93k - $174k",
     "growth": "+8% Growth"
@@ -13648,7 +13648,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Management",
     "score": 68,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$104k - $209k",
     "growth": "0% Growth"
@@ -13657,7 +13657,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Policy",
     "score": 66,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$105k - $211k",
     "growth": "0% Growth"
@@ -13666,7 +13666,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Practice",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -13675,7 +13675,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Science",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -13684,7 +13684,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Studies",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -13693,7 +13693,7 @@ export const majors: Major[] = [
     "name": "Strategic Computer Science Technology",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$97k - $194k",
     "growth": "-3% Growth"
@@ -13702,7 +13702,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science",
     "score": 69,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $196k",
     "growth": "+15% Growth"
@@ -13711,7 +13711,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Analytics",
     "score": 62,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $202k",
     "growth": "+16% Growth"
@@ -13720,7 +13720,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -13729,7 +13729,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Management",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$116k - $208k",
     "growth": "+17% Growth"
@@ -13738,7 +13738,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Policy",
     "score": 66,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$111k - $199k",
     "growth": "+15% Growth"
@@ -13747,7 +13747,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Practice",
     "score": 71,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+14% Growth"
@@ -13756,7 +13756,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Science",
     "score": 62,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$113k - $202k",
     "growth": "+16% Growth"
@@ -13765,7 +13765,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Studies",
     "score": 65,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -13774,7 +13774,7 @@ export const majors: Major[] = [
     "name": "Strategic Data Science Technology",
     "score": 70,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$109k - $195k",
     "growth": "+15% Growth"
@@ -13783,7 +13783,7 @@ export const majors: Major[] = [
     "name": "Strategic Education",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -13792,7 +13792,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Analytics",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -13801,7 +13801,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -13810,7 +13810,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Management",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -13819,7 +13819,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Policy",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -13828,7 +13828,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Practice",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $120k",
     "growth": "+4% Growth"
@@ -13837,7 +13837,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Science",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -13846,7 +13846,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -13855,7 +13855,7 @@ export const majors: Major[] = [
     "name": "Strategic Education Technology",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$62k - $118k",
     "growth": "+4% Growth"
@@ -13864,7 +13864,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -13873,7 +13873,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Analytics",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -13882,7 +13882,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Engineering",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -13891,7 +13891,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Management",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -13900,7 +13900,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Policy",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -13909,7 +13909,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Practice",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -13918,7 +13918,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Science",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -13927,7 +13927,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Studies",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -13936,7 +13936,7 @@ export const majors: Major[] = [
     "name": "Strategic Engineering Technology",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$117k - $220k",
     "growth": "+14% Growth"
@@ -13945,7 +13945,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance",
     "score": 55,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $123k",
     "growth": "-1% Growth"
@@ -13954,7 +13954,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Analytics",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$63k - $125k",
     "growth": "0% Growth"
@@ -13963,7 +13963,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Engineering",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$100k - $187k",
     "growth": "+10% Growth"
@@ -13972,7 +13972,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Management",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -13981,7 +13981,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Policy",
     "score": 61,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -13990,7 +13990,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -13999,7 +13999,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Science",
     "score": 63,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $119k",
     "growth": "-3% Growth"
@@ -14008,7 +14008,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Studies",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -14017,7 +14017,7 @@ export const majors: Major[] = [
     "name": "Strategic Finance Technology",
     "score": 64,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -14026,7 +14026,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -14035,7 +14035,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Analytics",
     "score": 97,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $96k",
     "growth": "-15% Growth"
@@ -14044,7 +14044,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Engineering",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$83k - $156k",
     "growth": "+6% Growth"
@@ -14053,7 +14053,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Management",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -14062,7 +14062,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Policy",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -14071,7 +14071,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Practice",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -14080,7 +14080,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Science",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$49k - $104k",
     "growth": "-13% Growth"
@@ -14089,7 +14089,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Studies",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $98k",
     "growth": "-14% Growth"
@@ -14098,7 +14098,7 @@ export const majors: Major[] = [
     "name": "Strategic Graphic Design Technology",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -14107,7 +14107,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $116k",
     "growth": "-4% Growth"
@@ -14116,7 +14116,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Analytics",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$55k - $111k",
     "growth": "-6% Growth"
@@ -14125,7 +14125,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Engineering",
     "score": 72,
     "level": "Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$91k - $171k",
     "growth": "+8% Growth"
@@ -14134,7 +14134,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Management",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -14143,7 +14143,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Policy",
     "score": 75,
     "level": "Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -14152,7 +14152,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Practice",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -14161,7 +14161,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Science",
     "score": 75,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -14170,7 +14170,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Studies",
     "score": 74,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -14179,7 +14179,7 @@ export const majors: Major[] = [
     "name": "Strategic Information Technology Technology",
     "score": 65,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -14188,7 +14188,7 @@ export const majors: Major[] = [
     "name": "Strategic Law",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $233k",
     "growth": "0% Growth"
@@ -14197,7 +14197,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Analytics",
     "score": 70,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $230k",
     "growth": "0% Growth"
@@ -14206,7 +14206,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Engineering",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
@@ -14215,7 +14215,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Management",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -14224,7 +14224,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Policy",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $226k",
     "growth": "0% Growth"
@@ -14233,7 +14233,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Practice",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -14242,7 +14242,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Science",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $233k",
     "growth": "0% Growth"
@@ -14251,7 +14251,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Studies",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$84k - $239k",
     "growth": "+1% Growth"
@@ -14260,7 +14260,7 @@ export const majors: Major[] = [
     "name": "Strategic Law Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$81k - $232k",
     "growth": "0% Growth"
@@ -14269,7 +14269,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -14278,7 +14278,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Analytics",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -14287,7 +14287,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Engineering",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$94k - $177k",
     "growth": "+9% Growth"
@@ -14296,7 +14296,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Management",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $140k",
     "growth": "-5% Growth"
@@ -14305,7 +14305,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Policy",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $145k",
     "growth": "-4% Growth"
@@ -14314,7 +14314,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Practice",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -14323,7 +14323,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Science",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $148k",
     "growth": "-3% Growth"
@@ -14332,7 +14332,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Studies",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $139k",
     "growth": "-5% Growth"
@@ -14341,7 +14341,7 @@ export const majors: Major[] = [
     "name": "Strategic Marketing Technology",
     "score": 68,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$58k - $139k",
     "growth": "-5% Growth"
@@ -14350,7 +14350,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -14359,7 +14359,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Analytics",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $130k",
     "growth": "+2% Growth"
@@ -14368,7 +14368,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Engineering",
     "score": 41,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$104k - $194k",
     "growth": "+11% Growth"
@@ -14377,7 +14377,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Management",
     "score": 42,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$65k - $129k",
     "growth": "+2% Growth"
@@ -14386,7 +14386,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Policy",
     "score": 33,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $134k",
     "growth": "+3% Growth"
@@ -14395,7 +14395,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Practice",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $133k",
     "growth": "+3% Growth"
@@ -14404,7 +14404,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Science",
     "score": 31,
     "level": "Slightly Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$67k - $135k",
     "growth": "+4% Growth"
@@ -14413,7 +14413,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Studies",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -14422,7 +14422,7 @@ export const majors: Major[] = [
     "name": "Strategic Mathematics Technology",
     "score": 44,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $128k",
     "growth": "+1% Growth"
@@ -14431,7 +14431,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your curriculum was outdated by the time you finished this sentence.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -14440,7 +14440,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Analytics",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -14449,7 +14449,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Engineering",
     "score": 8,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$117k - $219k",
     "growth": "+14% Growth"
@@ -14458,7 +14458,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Management",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -14467,7 +14467,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Policy",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -14476,7 +14476,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Practice",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -14485,7 +14485,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Science",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$93k - $158k",
     "growth": "+17% Growth"
@@ -14494,7 +14494,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Studies",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -14503,7 +14503,7 @@ export const majors: Major[] = [
     "name": "Strategic Nursing Technology",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -14512,7 +14512,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics",
     "score": 28,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -14521,7 +14521,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Analytics",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -14530,7 +14530,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Engineering",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$108k - $203k",
     "growth": "+12% Growth"
@@ -14539,7 +14539,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Management",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -14548,7 +14548,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Policy",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $135k",
     "growth": "+4% Growth"
@@ -14557,7 +14557,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Practice",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -14566,7 +14566,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Science",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $137k",
     "growth": "+5% Growth"
@@ -14575,7 +14575,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Studies",
     "score": 39,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$65k - $131k",
     "growth": "+2% Growth"
@@ -14584,7 +14584,7 @@ export const majors: Major[] = [
     "name": "Strategic Physics Technology",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -14593,7 +14593,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $146k",
     "growth": "+8% Growth"
@@ -14602,7 +14602,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Analytics",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $147k",
     "growth": "+9% Growth"
@@ -14611,7 +14611,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Engineering",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$112k - $210k",
     "growth": "+13% Growth"
@@ -14620,7 +14620,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Management",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $149k",
     "growth": "+9% Growth"
@@ -14629,7 +14629,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Policy",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $145k",
     "growth": "+8% Growth"
@@ -14638,7 +14638,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Practice",
     "score": 6,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The universe is vast, but the time until your replacement is very, very short.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $147k",
     "growth": "+9% Growth"
@@ -14647,7 +14647,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Science",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$75k - $149k",
     "growth": "+10% Growth"
@@ -14656,7 +14656,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Studies",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -14665,7 +14665,7 @@ export const majors: Major[] = [
     "name": "Strategic Psychology Technology",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$75k - $149k",
     "growth": "+10% Growth"
@@ -14674,7 +14674,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering",
     "score": 80,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $165k",
     "growth": "+7% Growth"
@@ -14683,7 +14683,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Analytics",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -14692,7 +14692,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -14701,7 +14701,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Management",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$85k - $160k",
     "growth": "+6% Growth"
@@ -14710,7 +14710,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Policy",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -14719,7 +14719,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Practice",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -14728,7 +14728,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Science",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -14737,7 +14737,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Studies",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $162k",
     "growth": "+7% Growth"
@@ -14746,7 +14746,7 @@ export const majors: Major[] = [
     "name": "Strategic Software Engineering Technology",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $168k",
     "growth": "+7% Growth"
@@ -14755,7 +14755,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $141k",
     "growth": "-6% Growth"
@@ -14764,7 +14764,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Analytics",
     "score": 95,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$61k - $133k",
     "growth": "-7% Growth"
@@ -14773,7 +14773,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -14782,7 +14782,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Management",
     "score": 86,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$64k - $139k",
     "growth": "-7% Growth"
@@ -14791,7 +14791,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Policy",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -14800,7 +14800,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Practice",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $134k",
     "growth": "-7% Growth"
@@ -14809,7 +14809,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Science",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$63k - $137k",
     "growth": "-7% Growth"
@@ -14818,7 +14818,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Studies",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$65k - $140k",
     "growth": "-6% Growth"
@@ -14827,7 +14827,7 @@ export const majors: Major[] = [
     "name": "Technical Accounting Technology",
     "score": 93,
     "level": "Extremely Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Transition to strategic financial consulting or tax strategy.",
     "salary": "$62k - $135k",
     "growth": "-7% Growth"
@@ -14836,7 +14836,7 @@ export const majors: Major[] = [
     "name": "Technical Biology",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $195k",
     "growth": "+10% Growth"
@@ -14845,7 +14845,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Analytics",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -14854,7 +14854,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Engineering",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$111k - $209k",
     "growth": "+13% Growth"
@@ -14863,7 +14863,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Management",
     "score": 13,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$79k - $201k",
     "growth": "+11% Growth"
@@ -14872,7 +14872,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Policy",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $195k",
     "growth": "+10% Growth"
@@ -14881,7 +14881,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Practice",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$76k - $193k",
     "growth": "+10% Growth"
@@ -14890,7 +14890,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Science",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$77k - $195k",
     "growth": "+10% Growth"
@@ -14899,7 +14899,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Studies",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$80k - $203k",
     "growth": "+11% Growth"
@@ -14908,7 +14908,7 @@ export const majors: Major[] = [
     "name": "Technical Biology Technology",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Stay hands-on in the lab, or master bioinformatics.",
     "salary": "$75k - $192k",
     "growth": "+10% Growth"
@@ -14917,7 +14917,7 @@ export const majors: Major[] = [
     "name": "Technical Business",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $193k",
     "growth": "0% Growth"
@@ -14926,7 +14926,7 @@ export const majors: Major[] = [
     "name": "Technical Business Analytics",
     "score": 61,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$66k - $191k",
     "growth": "0% Growth"
@@ -14935,7 +14935,7 @@ export const majors: Major[] = [
     "name": "Technical Business Engineering",
     "score": 53,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$99k - $185k",
     "growth": "+10% Growth"
@@ -14944,7 +14944,7 @@ export const majors: Major[] = [
     "name": "Technical Business Management",
     "score": 54,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $197k",
     "growth": "+1% Growth"
@@ -14953,7 +14953,7 @@ export const majors: Major[] = [
     "name": "Technical Business Policy",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $198k",
     "growth": "+1% Growth"
@@ -14962,7 +14962,7 @@ export const majors: Major[] = [
     "name": "Technical Business Practice",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -14971,7 +14971,7 @@ export const majors: Major[] = [
     "name": "Technical Business Science",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$68k - $199k",
     "growth": "+1% Growth"
@@ -14980,7 +14980,7 @@ export const majors: Major[] = [
     "name": "Technical Business Studies",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$70k - $203k",
     "growth": "+2% Growth"
@@ -14989,7 +14989,7 @@ export const majors: Major[] = [
     "name": "Technical Business Technology",
     "score": 49,
     "level": "Kinda Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus heavily on networking and human relationships.",
     "salary": "$69k - $201k",
     "growth": "+2% Growth"
@@ -14998,7 +14998,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $210k",
     "growth": "+8% Growth"
@@ -15007,7 +15007,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Analytics",
     "score": 17,
     "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$85k - $212k",
     "growth": "+9% Growth"
@@ -15016,7 +15016,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Engineering",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$106k - $200k",
     "growth": "+12% Growth"
@@ -15025,7 +15025,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Management",
     "score": 24,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $207k",
     "growth": "+8% Growth"
@@ -15034,7 +15034,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Policy",
     "score": 23,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$83k - $208k",
     "growth": "+8% Growth"
@@ -15043,7 +15043,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Practice",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$84k - $211k",
     "growth": "+8% Growth"
@@ -15052,7 +15052,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Science",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $206k",
     "growth": "+8% Growth"
@@ -15061,7 +15061,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Studies",
     "score": 30,
     "level": "Slightly Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$81k - $203k",
     "growth": "+8% Growth"
@@ -15070,7 +15070,7 @@ export const majors: Major[] = [
     "name": "Technical Chemistry Technology",
     "score": 27,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on novel material synthesis and lab automation.",
     "salary": "$82k - $205k",
     "growth": "+8% Growth"
@@ -15079,7 +15079,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science",
     "score": 76,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$101k - $202k",
     "growth": "-1% Growth"
@@ -15088,7 +15088,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Analytics",
     "score": 73,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$102k - $204k",
     "growth": "-1% Growth"
@@ -15097,7 +15097,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Engineering",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$88k - $164k",
     "growth": "+7% Growth"
@@ -15106,7 +15106,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Management",
     "score": 71,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$103k - $206k",
     "growth": "-1% Growth"
@@ -15115,7 +15115,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Policy",
     "score": 77,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$100k - $201k",
     "growth": "-2% Growth"
@@ -15124,7 +15124,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Practice",
     "score": 81,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$99k - $197k",
     "growth": "-2% Growth"
@@ -15133,7 +15133,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Science",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$97k - $194k",
     "growth": "-3% Growth"
@@ -15142,7 +15142,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Studies",
     "score": 65,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$106k - $212k",
     "growth": "0% Growth"
@@ -15151,7 +15151,7 @@ export const majors: Major[] = [
     "name": "Technical Computer Science Technology",
     "score": 84,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to AI engineering and system architecture immediately.",
     "salary": "$97k - $194k",
     "growth": "-3% Growth"
@@ -15160,7 +15160,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$114k - $204k",
     "growth": "+16% Growth"
@@ -15169,7 +15169,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Analytics",
     "score": 74,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$107k - $192k",
     "growth": "+14% Growth"
@@ -15178,7 +15178,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Engineering",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$98k - $183k",
     "growth": "+9% Growth"
@@ -15187,7 +15187,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Management",
     "score": 73,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $193k",
     "growth": "+14% Growth"
@@ -15196,7 +15196,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Policy",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$115k - $207k",
     "growth": "+16% Growth"
@@ -15205,7 +15205,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Practice",
     "score": 69,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$110k - $196k",
     "growth": "+15% Growth"
@@ -15214,7 +15214,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Science",
     "score": 65,
     "level": "Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$112k - $200k",
     "growth": "+15% Growth"
@@ -15223,7 +15223,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Studies",
     "score": 72,
     "level": "Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $194k",
     "growth": "+14% Growth"
@@ -15232,7 +15232,7 @@ export const majors: Major[] = [
     "name": "Technical Data Science Technology",
     "score": 73,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move into AI Strategy and decision intelligence.",
     "salary": "$108k - $193k",
     "growth": "+14% Growth"
@@ -15241,7 +15241,7 @@ export const majors: Major[] = [
     "name": "Technical Education",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -15250,7 +15250,7 @@ export const majors: Major[] = [
     "name": "Technical Education Analytics",
     "score": 22,
     "level": "Slightly Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $118k",
     "growth": "+4% Growth"
@@ -15259,7 +15259,7 @@ export const majors: Major[] = [
     "name": "Technical Education Engineering",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$112k - $211k",
     "growth": "+13% Growth"
@@ -15268,7 +15268,7 @@ export const majors: Major[] = [
     "name": "Technical Education Management",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$61k - $115k",
     "growth": "+4% Growth"
@@ -15277,7 +15277,7 @@ export const majors: Major[] = [
     "name": "Technical Education Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$63k - $119k",
     "growth": "+4% Growth"
@@ -15286,7 +15286,7 @@ export const majors: Major[] = [
     "name": "Technical Education Practice",
     "score": 16,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $121k",
     "growth": "+4% Growth"
@@ -15295,7 +15295,7 @@ export const majors: Major[] = [
     "name": "Technical Education Science",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$65k - $123k",
     "growth": "+5% Growth"
@@ -15304,7 +15304,7 @@ export const majors: Major[] = [
     "name": "Technical Education Studies",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $122k",
     "growth": "+4% Growth"
@@ -15313,7 +15313,7 @@ export const majors: Major[] = [
     "name": "Technical Education Technology",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Kids won't listen to you, but they'll definitely chat with an AI tutor.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Incorporate AI into your curriculum.",
     "salary": "$64k - $122k",
     "growth": "+4% Growth"
@@ -15322,7 +15322,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -15331,7 +15331,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Analytics",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$118k - $221k",
     "growth": "+15% Growth"
@@ -15340,7 +15340,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Engineering",
     "score": 18,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$113k - $212k",
     "growth": "+13% Growth"
@@ -15349,7 +15349,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Management",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -15358,7 +15358,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Policy",
     "score": 10,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -15367,7 +15367,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Practice",
     "score": 9,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $218k",
     "growth": "+14% Growth"
@@ -15376,7 +15376,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Science",
     "score": 11,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$116k - $217k",
     "growth": "+14% Growth"
@@ -15385,7 +15385,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Studies",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$114k - $215k",
     "growth": "+14% Growth"
@@ -15394,7 +15394,7 @@ export const majors: Major[] = [
     "name": "Technical Engineering Technology",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Integrate robotics and AI into your designs.",
     "salary": "$115k - $216k",
     "growth": "+14% Growth"
@@ -15403,7 +15403,7 @@ export const majors: Major[] = [
     "name": "Technical Finance",
     "score": 60,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -15412,7 +15412,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Analytics",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $121k",
     "growth": "-2% Growth"
@@ -15421,7 +15421,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Engineering",
     "score": 62,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$95k - $179k",
     "growth": "+9% Growth"
@@ -15430,7 +15430,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Management",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $124k",
     "growth": "0% Growth"
@@ -15439,7 +15439,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Policy",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -15448,7 +15448,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Practice",
     "score": 66,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -15457,7 +15457,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Science",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$62k - $125k",
     "growth": "0% Growth"
@@ -15466,7 +15466,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Studies",
     "score": 56,
     "level": "Kinda Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$61k - $122k",
     "growth": "-1% Growth"
@@ -15475,7 +15475,7 @@ export const majors: Major[] = [
     "name": "Technical Finance Technology",
     "score": 61,
     "level": "Cooked",
-    "roast": "You're basically a fancy calculator. AI already bought one.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards wealth management and corporate strategy.",
     "salary": "$60k - $120k",
     "growth": "-2% Growth"
@@ -15484,7 +15484,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design",
     "score": 91,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $99k",
     "growth": "-14% Growth"
@@ -15493,7 +15493,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Analytics",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $102k",
     "growth": "-13% Growth"
@@ -15502,7 +15502,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Engineering",
     "score": 92,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$83k - $156k",
     "growth": "+6% Growth"
@@ -15511,7 +15511,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Management",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$46k - $98k",
     "growth": "-14% Growth"
@@ -15520,7 +15520,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Policy",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -15529,7 +15529,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Practice",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -15538,7 +15538,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Science",
     "score": 87,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$48k - $101k",
     "growth": "-13% Growth"
@@ -15547,7 +15547,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Studies",
     "score": 100,
     "level": "Extremely Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$45k - $95k",
     "growth": "-15% Growth"
@@ -15556,7 +15556,7 @@ export const majors: Major[] = [
     "name": "Technical Graphic Design Technology",
     "score": 90,
     "level": "Very Cooked",
-    "roast": "Midjourney does in 5s what takes you 5 hours. Frame that final paycheck.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Pivot to creative direction and AI-assisted workflows.",
     "salary": "$47k - $100k",
     "growth": "-14% Growth"
@@ -15565,7 +15565,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $114k",
     "growth": "-4% Growth"
@@ -15574,7 +15574,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Analytics",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $117k",
     "growth": "-3% Growth"
@@ -15583,7 +15583,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Engineering",
     "score": 79,
     "level": "Very Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$88k - $166k",
     "growth": "+7% Growth"
@@ -15592,7 +15592,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Management",
     "score": 67,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$58k - $117k",
     "growth": "-3% Growth"
@@ -15601,7 +15601,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Policy",
     "score": 64,
     "level": "Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$59k - $118k",
     "growth": "-3% Growth"
@@ -15610,7 +15610,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Practice",
     "score": 62,
     "level": "Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$60k - $119k",
     "growth": "-2% Growth"
@@ -15619,7 +15619,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Science",
     "score": 74,
     "level": "Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -15628,7 +15628,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Studies",
     "score": 75,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$56k - $113k",
     "growth": "-5% Growth"
@@ -15637,7 +15637,7 @@ export const majors: Major[] = [
     "name": "Technical Information Technology Technology",
     "score": 71,
     "level": "Cooked",
-    "roast": "Hope you kept the receipt for those student loans.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on cloud architecture and cybersecurity.",
     "salary": "$57k - $115k",
     "growth": "-4% Growth"
@@ -15646,7 +15646,7 @@ export const majors: Major[] = [
     "name": "Technical Law",
     "score": 66,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $234k",
     "growth": "0% Growth"
@@ -15655,7 +15655,7 @@ export const majors: Major[] = [
     "name": "Technical Law Analytics",
     "score": 64,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $236k",
     "growth": "+1% Growth"
@@ -15664,7 +15664,7 @@ export const majors: Major[] = [
     "name": "Technical Law Engineering",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$95k - $179k",
     "growth": "+9% Growth"
@@ -15673,7 +15673,7 @@ export const majors: Major[] = [
     "name": "Technical Law Management",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$80k - $228k",
     "growth": "0% Growth"
@@ -15682,7 +15682,7 @@ export const majors: Major[] = [
     "name": "Technical Law Policy",
     "score": 58,
     "level": "Kinda Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$85k - $242k",
     "growth": "+1% Growth"
@@ -15691,7 +15691,7 @@ export const majors: Major[] = [
     "name": "Technical Law Practice",
     "score": 74,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$79k - $226k",
     "growth": "0% Growth"
@@ -15700,7 +15700,7 @@ export const majors: Major[] = [
     "name": "Technical Law Science",
     "score": 62,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$83k - $238k",
     "growth": "+1% Growth"
@@ -15709,7 +15709,7 @@ export const majors: Major[] = [
     "name": "Technical Law Studies",
     "score": 65,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$82k - $235k",
     "growth": "0% Growth"
@@ -15718,7 +15718,7 @@ export const majors: Major[] = [
     "name": "Technical Law Technology",
     "score": 72,
     "level": "Cooked",
-    "roast": "AI read the whole case before you finished your first espresso. Objection overruled.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on litigation, negotiation, and complex counseling.",
     "salary": "$80k - $228k",
     "growth": "0% Growth"
@@ -15727,7 +15727,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing",
     "score": 63,
     "level": "Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$59k - $142k",
     "growth": "-4% Growth"
@@ -15736,7 +15736,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Analytics",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -15745,7 +15745,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Engineering",
     "score": 52,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$99k - $186k",
     "growth": "+10% Growth"
@@ -15754,7 +15754,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Management",
     "score": 50,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$63k - $150k",
     "growth": "-2% Growth"
@@ -15763,7 +15763,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Policy",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -15772,7 +15772,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Practice",
     "score": 59,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$60k - $145k",
     "growth": "-4% Growth"
@@ -15781,7 +15781,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Science",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-4% Growth"
@@ -15790,7 +15790,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Studies",
     "score": 51,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$62k - $149k",
     "growth": "-3% Growth"
@@ -15799,7 +15799,7 @@ export const majors: Major[] = [
     "name": "Technical Marketing Technology",
     "score": 57,
     "level": "Kinda Cooked",
-    "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on brand strategy, analytics, and creative direction.",
     "salary": "$61k - $146k",
     "growth": "-4% Growth"
@@ -15808,7 +15808,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics",
     "score": 37,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -15817,7 +15817,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Analytics",
     "score": 48,
     "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$63k - $126k",
     "growth": "0% Growth"
@@ -15826,7 +15826,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Engineering",
     "score": 47,
     "level": "Kinda Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$101k - $190k",
     "growth": "+10% Growth"
@@ -15835,7 +15835,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Management",
     "score": 35,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$66k - $133k",
     "growth": "+3% Growth"
@@ -15844,7 +15844,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Policy",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "This degree is a collectors item. It'll look great on a wall.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -15853,7 +15853,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Practice",
     "score": 45,
     "level": "Kinda Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -15862,7 +15862,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Science",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "AI can't wait to replace you. It's actually quite excited.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -15871,7 +15871,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Studies",
     "score": 43,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $129k",
     "growth": "+1% Growth"
@@ -15880,7 +15880,7 @@ export const majors: Major[] = [
     "name": "Technical Mathematics Technology",
     "score": 46,
     "level": "Kinda Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Focus on highly abstract mathematics or algorithmic theory.",
     "salary": "$64k - $127k",
     "growth": "+1% Growth"
@@ -15889,7 +15889,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -15898,7 +15898,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Analytics",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$94k - $158k",
     "growth": "+17% Growth"
@@ -15907,7 +15907,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Engineering",
     "score": 4,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$118k - $222k",
     "growth": "+15% Growth"
@@ -15916,7 +15916,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Management",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$96k - $162k",
     "growth": "+18% Growth"
@@ -15925,7 +15925,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Policy",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -15934,7 +15934,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Practice",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$95k - $161k",
     "growth": "+17% Growth"
@@ -15943,7 +15943,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Science",
     "score": 0,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$98k - $165k",
     "growth": "+18% Growth"
@@ -15952,7 +15952,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Studies",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -15961,7 +15961,7 @@ export const majors: Major[] = [
     "name": "Technical Nursing Technology",
     "score": 1,
     "level": "Not Cooked",
-    "roast": "AI can't change a bedpan. You're safe... for now. Keep the comfy shoes.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "You are the frontline. You are safe.",
     "salary": "$97k - $164k",
     "growth": "+18% Growth"
@@ -15970,7 +15970,7 @@ export const majors: Major[] = [
     "name": "Technical Physics",
     "score": 26,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$69k - $137k",
     "growth": "+5% Growth"
@@ -15979,7 +15979,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Analytics",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -15988,7 +15988,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Engineering",
     "score": 25,
     "level": "Slightly Cooked",
-    "roast": "Bridges don't build themselves, but AI is definitely doing the math better.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$110k - $206k",
     "growth": "+13% Growth"
@@ -15997,7 +15997,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Management",
     "score": 36,
     "level": "Slightly Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $132k",
     "growth": "+3% Growth"
@@ -16006,7 +16006,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Policy",
     "score": 34,
     "level": "Slightly Cooked",
-    "roast": "Bold strategy. Let's see how that works out in the breadline.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $133k",
     "growth": "+3% Growth"
@@ -16015,7 +16015,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Practice",
     "score": 38,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$66k - $131k",
     "growth": "+2% Growth"
@@ -16024,7 +16024,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Science",
     "score": 32,
     "level": "Slightly Cooked",
-    "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$67k - $134k",
     "growth": "+4% Growth"
@@ -16033,7 +16033,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Studies",
     "score": 29,
     "level": "Slightly Cooked",
-    "roast": "Even the AI felt bad scanning this degree. Almost.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$68k - $136k",
     "growth": "+4% Growth"
@@ -16042,7 +16042,7 @@ export const majors: Major[] = [
     "name": "Technical Physics Technology",
     "score": 21,
     "level": "Slightly Cooked",
-    "roast": "Your major is the 'participation trophy' of the AI revolution.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Move towards experimental physics or quantum computing hardware.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -16051,7 +16051,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology",
     "score": 15,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$71k - $143k",
     "growth": "+7% Growth"
@@ -16060,7 +16060,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Analytics",
     "score": 5,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $148k",
     "growth": "+9% Growth"
@@ -16069,7 +16069,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Engineering",
     "score": 12,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$115k - $216k",
     "growth": "+14% Growth"
@@ -16078,7 +16078,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Management",
     "score": 2,
     "level": "Not Cooked",
-    "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$75k - $149k",
     "growth": "+10% Growth"
@@ -16087,7 +16087,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Policy",
     "score": 20,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $140k",
     "growth": "+6% Growth"
@@ -16096,7 +16096,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Practice",
     "score": 19,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$70k - $141k",
     "growth": "+6% Growth"
@@ -16105,7 +16105,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Science",
     "score": 3,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$74k - $149k",
     "growth": "+9% Growth"
@@ -16114,7 +16114,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Studies",
     "score": 7,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$73k - $147k",
     "growth": "+9% Growth"
@@ -16123,7 +16123,7 @@ export const majors: Major[] = [
     "name": "Technical Psychology Technology",
     "score": 14,
     "level": "Not Cooked",
-    "roast": "People are messy, but a chatbot is cheaper than your hourly rate.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Specialize in clinical practice or organizational behavior.",
     "salary": "$72k - $143k",
     "growth": "+7% Growth"
@@ -16132,7 +16132,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -16141,7 +16141,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Analytics",
     "score": 85,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$86k - $161k",
     "growth": "+7% Growth"
@@ -16150,7 +16150,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Engineering",
     "score": 89,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$84k - $158k",
     "growth": "+6% Growth"
@@ -16159,7 +16159,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Management",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
@@ -16168,7 +16168,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Policy",
     "score": 78,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$89k - $167k",
     "growth": "+7% Growth"
@@ -16177,7 +16177,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Practice",
     "score": 94,
     "level": "Extremely Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$82k - $155k",
     "growth": "+6% Growth"
@@ -16186,7 +16186,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Science",
     "score": 82,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $164k",
     "growth": "+7% Growth"
@@ -16195,7 +16195,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Studies",
     "score": 83,
     "level": "Very Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$87k - $163k",
     "growth": "+7% Growth"
@@ -16204,7 +16204,7 @@ export const majors: Major[] = [
     "name": "Technical Software Engineering Technology",
     "score": 75,
     "level": "Cooked",
-    "roast": "Bold choice. Your future self is already updating their resume.",
+    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
     "advice": "Become an AI product manager or focus on security.",
     "salary": "$90k - $169k",
     "growth": "+8% Growth"
@@ -16213,7 +16213,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Accounting)",
   "score": 84,
   "level": "Very Cooked",
-  "roast": "You're basically a fancy calculator. AI already bought one.",
+  "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
   "advice": "Transition to strategic financial consulting or tax strategy.",
   "salary": "$65k - $140k",
   "growth": "-6% Growth"
@@ -16222,7 +16222,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Marketing)",
   "score": 70,
   "level": "Cooked",
-  "roast": "AI targets better than you target your morning coffee. Career's cooked.",
+  "roast": "The board of directors is already replacing your middle management role with a dashboard.",
   "advice": "Focus on high-level creative strategy and brand psychology.",
   "salary": "$57k - $138k",
   "growth": "-5% Growth"
@@ -16231,7 +16231,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Human Resource Management)",
   "score": 51,
   "level": "Kinda Cooked",
-  "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+  "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
   "advice": "Focus heavily on networking and human relationships.",
   "salary": "$68k - $199k",
   "growth": "+1% Growth"
@@ -16240,7 +16240,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Public Administration)",
   "score": 51,
   "level": "Kinda Cooked",
-  "roast": "You're not cooked, you're deep-fried in a silicon vat.",
+  "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
   "advice": "Focus heavily on networking and human relationships.",
   "salary": "$68k - $199k",
   "growth": "+1% Growth"
@@ -16249,7 +16249,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Health Services Management)",
   "score": 10,
   "level": "Not Cooked",
-  "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+  "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
   "advice": "Specialize in nursing informatics or geriatric care.",
   "salary": "$94k - $160k",
   "growth": "+17% Growth"
@@ -16258,7 +16258,7 @@ export const majors: Major[] = [
   "name": "BSc Administration (Banking and Finance)",
   "score": 63,
   "level": "Cooked",
-  "roast": "You're basically a fancy calculator. AI already bought one.",
+  "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
   "advice": "Move towards wealth management and corporate strategy.",
   "salary": "$83k - $190k",
   "growth": "0% Growth"
@@ -16267,7 +16267,7 @@ export const majors: Major[] = [
   "name": "BSc Information Technology (IT)",
   "score": 75,
   "level": "Cooked",
-  "roast": "AI can't wait to replace you. It's actually quite excited.",
+  "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
   "advice": "Pivot to AI engineering and system architecture immediately.",
   "salary": "$101k - $203k",
   "growth": "-1% Growth"
@@ -16276,7 +16276,7 @@ export const majors: Major[] = [
   "name": "B.Ed. Early Grade Specialism",
   "score": 24,
   "level": "Slightly Cooked",
-  "roast": "Even the AI felt bad scanning this degree. Almost.",
+  "roast": "AI is the main character, you're just the NPC in the career tutorial.",
   "advice": "Incorporate AI into your curriculum.",
   "salary": "$62k - $117k",
   "growth": "+4% Growth"
@@ -16285,7 +16285,7 @@ export const majors: Major[] = [
   "name": "B.Ed. Upper-Grade Specialism",
   "score": 16,
   "level": "Not Cooked",
-  "roast": "Your major is the 'participation trophy' of the AI revolution.",
+  "roast": "Your major is the 'Before' picture in an AI automation success story.",
   "advice": "Incorporate AI into your curriculum.",
   "salary": "$64k - $121k",
   "growth": "+4% Growth"
@@ -16294,7 +16294,7 @@ export const majors: Major[] = [
   "name": "B.Ed. J.H.S Specialism",
   "score": 22,
   "level": "Slightly Cooked",
-  "roast": "Hope you kept the receipt for those student loans.",
+  "roast": "The robot revolution called. They said thanks for the training data.",
   "advice": "Incorporate AI into your curriculum.",
   "salary": "$63k - $118k",
   "growth": "+4% Growth"
@@ -16303,7 +16303,7 @@ export const majors: Major[] = [
   "name": "BSc. Mobile Computing",
   "score": 70,
   "level": "Cooked",
-  "roast": "Hope you kept the receipt for those student loans.",
+  "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
   "advice": "Pivot to AI engineering and system architecture immediately.",
   "salary": "$103k - $207k",
   "growth": "0% Growth"
@@ -16312,7 +16312,7 @@ export const majors: Major[] = [
   "name": "BSc. Software Engineering",
   "score": 73,
   "level": "Cooked",
-  "roast": "Bold choice. Your future self is already updating their resume.",
+  "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
   "advice": "Pivot to AI engineering and system architecture immediately.",
   "salary": "$102k - $204k",
   "growth": "-1% Growth"
@@ -16321,7 +16321,7 @@ export const majors: Major[] = [
   "name": "BSc. Business Information Systems",
   "score": 61,
   "level": "Cooked",
-  "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+  "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
   "advice": "Move into AI Strategy and decision intelligence.",
   "salary": "$114k - $203k",
   "growth": "+16% Growth"
@@ -16330,7 +16330,7 @@ export const majors: Major[] = [
   "name": "BSc. Data Science & Analytics",
   "score": 63,
   "level": "Cooked",
-  "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+  "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
   "advice": "Move into AI Strategy and decision intelligence.",
   "salary": "$113k - $201k",
   "growth": "+16% Growth"
@@ -16339,7 +16339,7 @@ export const majors: Major[] = [
   "name": "BSc Cyber Security",
   "score": 71,
   "level": "Cooked",
-  "roast": "Bold strategy. Let's see how that works out in the breadline.",
+  "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
   "advice": "Pivot to AI engineering and system architecture immediately.",
   "salary": "$103k - $206k",
   "growth": "-1% Growth"
@@ -16348,7 +16348,7 @@ export const majors: Major[] = [
   "name": "BSc. Procurement and Logistics",
   "score": 55,
   "level": "Kinda Cooked",
-  "roast": "Your major is the 'participation trophy' of the AI revolution.",
+  "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
   "advice": "Focus heavily on networking and human relationships.",
   "salary": "$67k - $196k",
   "growth": "+1% Growth"
@@ -16357,7 +16357,7 @@ export const majors: Major[] = [
   "name": "BSc. Financial Technology",
   "score": 59,
   "level": "Kinda Cooked",
-  "roast": "Future career prospects: Professional prompt engineer (unpaid).",
+  "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
   "advice": "Move towards wealth management and corporate strategy.",
   "salary": "$84k - $193k",
   "growth": "0% Growth"
@@ -16366,7 +16366,7 @@ export const majors: Major[] = [
   "name": "BSc. Economics",
   "score": 64,
   "level": "Cooked",
-  "roast": "Hope you kept the receipt for those student loans.",
+  "roast": "The board of directors is already replacing your middle management role with a dashboard.",
   "advice": "Move towards wealth management and corporate strategy.",
   "salary": "$83k - $189k",
   "growth": "0% Growth"
@@ -16375,7 +16375,7 @@ export const majors: Major[] = [
   "name": "BSc. Accounting with Computing",
   "score": 87,
   "level": "Very Cooked",
-  "roast": "You're basically a fancy calculator. AI already bought one.",
+  "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
   "advice": "Transition to strategic financial consulting or tax strategy.",
   "salary": "$64k - $138k",
   "growth": "-7% Growth"
@@ -16384,7 +16384,7 @@ export const majors: Major[] = [
   "name": "BSc. Human Resource Management",
   "score": 50,
   "level": "Kinda Cooked",
-  "roast": "AI writes the plans, humans sign the checks. You're just... in the way.",
+  "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
   "advice": "Focus heavily on networking and human relationships.",
   "salary": "$69k - $200k",
   "growth": "+2% Growth"
