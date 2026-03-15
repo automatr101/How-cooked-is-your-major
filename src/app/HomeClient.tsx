@@ -12,7 +12,6 @@ import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 
 import { Hero } from "@/components/hero";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 
@@ -134,7 +133,6 @@ export default function HomeClient() {
 
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
-      <ThemeToggle />
       {/* Interactive Hero */}
       <Hero />
       <LiveTicker />
