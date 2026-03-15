@@ -245,61 +245,57 @@ export default function HomeClient() {
                   <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-2 sm:pt-4 flex-1 flex flex-col min-h-0">
+                <div className="relative pt-6 sm:pt-8 flex-1 flex flex-col min-h-0">
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-2 sm:mb-4">
-                      <div className="max-w-[75%] sm:max-w-[80%]">
-                          <p className="text-[7px] sm:text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-[14px] xs:text-[18px] sm:text-2xl md:text-3xl font-black text-foreground leading-[1] sm:leading-[0.85] tracking-tighter uppercase break-words line-clamp-3 mb-1">{selectedMajor.name}</h2>
+                      <div className="max-w-[75%]">
+                          <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-[11px] sm:text-xl md:text-3xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                       </div>
-                      <div className={cn(
-                          "p-1 sm:p-3 rounded-xl sm:rounded-2xl bg-foreground text-background shrink-0",
-                      )}>
-                          <Sparkles className="w-4 h-4 sm:w-8 sm:h-8 fill-current" />
+                      <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">
+                          <Sparkles className="w-3 h-3 sm:w-7 sm:h-7 fill-current" />
                       </div>
                   </div>
 
                   {/* Split Dashboard Area */}
-                  <div className="grid grid-cols-2 gap-4 mb-2 sm:mb-4 pt-2 sm:pt-4 border-t border-foreground/5">
-                    <div className="space-y-1">
-                      <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
-                      <div className="relative inline-flex items-baseline gap-1">
+                  <div className="grid grid-cols-2 gap-2 mb-1.5 sm:mb-4 pt-1.5 sm:pt-4 border-t border-foreground/10">
+                    <div className="space-y-0.5">
+                      <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">AI RISK LEVEL</p>
+                      <div className="relative inline-flex items-baseline gap-0.5">
                         <span className={cn(
-                            "text-4xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[5px_5px_0px_rgba(0,0,0,0.1)]",
+                            "text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter leading-none",
                             selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
                         </span>
-                        <span className="text-sm sm:text-xl font-black opacity-30 select-none">%</span>
+                        <span className="text-xs sm:text-lg font-black opacity-30 select-none">%</span>
                       </div>
                     </div>
                     
-                    <div className="space-y-1 flex flex-col items-start pl-4 border-l border-foreground/5">
-                      <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
-                      <div className="flex flex-col">
-                          <span className={cn(
-                              "text-lg sm:text-2xl md:text-3xl font-black tracking-tighter uppercase leading-none italic",
-                              selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : "text-foreground"
-                          )}>
-                              {selectedMajor.level}
-                          </span>
-                      </div>
+                    <div className="space-y-0.5 flex flex-col items-start pl-2 sm:pl-4 border-l border-foreground/10">
+                      <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SURVIVAL STATUS</p>
+                      <span className={cn(
+                          "text-[11px] sm:text-xl md:text-3xl font-black tracking-tighter uppercase leading-tight italic",
+                          selectedMajor.score > 75 ? "text-destructive" : "text-foreground"
+                      )}>
+                          {selectedMajor.level}
+                      </span>
                     </div>
                   </div>
 
                   {/* Market Stats Dashboard */}
-                  <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-3 sm:mb-4 pt-2 sm:pt-4 border-t border-foreground/5">
-                    <div className="space-y-1">
-                      <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
-                      <p className="text-base sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-6 mb-1.5 sm:mb-4 pt-1.5 sm:pt-4 border-t border-foreground/10">
+                    <div className="space-y-0.5">
+                      <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SALARY RANGE</p>
+                      <p className="text-[10px] sm:text-base font-black tabular-nums tracking-tighter text-foreground">
                         {selectedMajor.salary}
                       </p>
                     </div>
                     
-                    <div className="space-y-1 pl-4 border-l border-foreground/5">
-                      <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
+                    <div className="space-y-0.5 pl-2 sm:pl-4 border-l border-foreground/10">
+                      <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">MARKET GROWTH</p>
                       <p className={cn(
-                        "text-base sm:text-xl font-black tabular-nums tracking-tighter",
+                        "text-[10px] sm:text-base font-black tabular-nums tracking-tighter",
                         selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
                       )}>
                         {selectedMajor.growth}
@@ -307,23 +303,23 @@ export default function HomeClient() {
                     </div>
                   </div>
 
-                   {/* Roast Verdict Area */}
-                  <div className="flex flex-col items-center justify-center py-1 sm:py-3 border-t-2 border-dashed border-foreground/10 min-h-[60px] sm:min-h-[100px] overflow-hidden">
-                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-0.5 sm:mb-1.5 text-center">AI ROAST VERDICT</h3>
-                    <p className="text-[9px] sm:text-[11px] md:text-[13px] font-black italic text-foreground leading-tight tracking-tight text-center px-4 w-full line-clamp-4">
-                        "{selectedMajor.roast}"
+                  {/* Roast Verdict Area */}
+                  <div className="flex-1 flex flex-col items-center justify-center py-1.5 sm:py-4 border-t-2 border-dashed border-foreground/10 overflow-hidden">
+                    <h3 className="text-[5px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-0.5 sm:mb-2 text-center">AI ROAST VERDICT</h3>
+                    <p className="text-[8px] sm:text-xs md:text-sm font-black italic text-foreground leading-tight tracking-tight text-center w-full line-clamp-4">
+                        &ldquo;{selectedMajor.roast}&rdquo;
                     </p>
                   </div>
 
                   {/* Card Footer */}
-                  <div className="pt-2 sm:pt-8 mt-1 sm:mt-6 border-t border-foreground/5 flex justify-between items-end">
+                  <div className="pt-1.5 sm:pt-6 mt-1 sm:mt-4 border-t border-foreground/10 flex justify-between items-end">
                     <div>
-                      <p className="text-[5px] sm:text-[7px] font-black text-muted-foreground uppercase mb-0.5">DATA VERIFIED BY</p>
-                      <p className="text-[7px] sm:text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
+                      <p className="text-[4px] sm:text-[6px] font-black text-muted-foreground uppercase mb-0.5">DATA VERIFIED BY</p>
+                      <p className="text-[6px] sm:text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[5px] sm:text-[7px] font-black text-muted-foreground uppercase mb-0.5">SCAN TO CHECK YOURS</p>
-                      <p className="text-[7px] sm:text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
+                      <p className="text-[4px] sm:text-[6px] font-black text-muted-foreground uppercase mb-0.5">SCAN TO CHECK YOURS</p>
+                      <p className="text-[6px] sm:text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
                     </div>
                   </div>
                 </div>
