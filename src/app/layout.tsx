@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "How Cooked Is Your Major? | AI Risk Scan",
@@ -51,7 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20`}
       >
         <ThemeProvider
           attribute="class"
@@ -59,6 +60,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
           <SpeedInsights />
         </ThemeProvider>
