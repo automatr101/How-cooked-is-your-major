@@ -247,32 +247,32 @@ export default function HomeClient() {
                   <span className="text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-2 sm:pt-6 flex-1 flex flex-col min-h-0">
+                <div className="relative pt-2 sm:pt-4 flex-1 flex flex-col min-h-0">
                   {/* Top Header Area */}
-                  <div className="flex justify-between items-start mb-2 sm:mb-8">
+                  <div className="flex justify-between items-start mb-2 sm:mb-4">
                       <div className="max-w-[75%] sm:max-w-[80%]">
-                          <p className="text-[7px] sm:text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-[14px] xs:text-[18px] sm:text-4xl md:text-5xl font-black text-foreground leading-[1] sm:leading-[0.9] tracking-tighter uppercase break-words line-clamp-3 mb-2">{selectedMajor.name}</h2>
+                          <p className="text-[7px] sm:text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-[14px] xs:text-[18px] sm:text-2xl md:text-3xl font-black text-foreground leading-[1] sm:leading-[0.85] tracking-tighter uppercase break-words line-clamp-3 mb-1">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
-                          "p-1 sm:p-4 rounded-xl sm:rounded-2xl bg-foreground text-background shrink-0",
+                          "p-1 sm:p-3 rounded-xl sm:rounded-2xl bg-foreground text-background shrink-0",
                       )}>
-                          <Sparkles className="w-4 h-4 sm:w-10 sm:h-10 fill-current" />
+                          <Sparkles className="w-4 h-4 sm:w-8 sm:h-8 fill-current" />
                       </div>
                   </div>
 
                   {/* Split Dashboard Area */}
-                  <div className="grid grid-cols-2 gap-4 mb-2 sm:mb-6 pt-2 sm:pt-6 border-t border-foreground/5">
+                  <div className="grid grid-cols-2 gap-4 mb-2 sm:mb-4 pt-2 sm:pt-4 border-t border-foreground/5">
                     <div className="space-y-1">
                       <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-1">
                         <span className={cn(
-                            "text-4xl sm:text-7xl md:text-8xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[5px_5px_0px_rgba(0,0,0,0.1)]",
+                            "text-4xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[5px_5px_0px_rgba(0,0,0,0.1)]",
                             selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
                         </span>
-                        <span className="text-sm sm:text-2xl font-black opacity-30 select-none">%</span>
+                        <span className="text-sm sm:text-xl font-black opacity-30 select-none">%</span>
                       </div>
                     </div>
                     
@@ -280,7 +280,7 @@ export default function HomeClient() {
                       <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
                       <div className="flex flex-col">
                           <span className={cn(
-                              "text-lg sm:text-3xl md:text-4xl font-black tracking-tighter uppercase leading-none italic",
+                              "text-lg sm:text-2xl md:text-3xl font-black tracking-tighter uppercase leading-none italic",
                               selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : "text-foreground"
                           )}>
                               {selectedMajor.level}
@@ -290,10 +290,10 @@ export default function HomeClient() {
                   </div>
 
                   {/* Market Stats Dashboard */}
-                  <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-3 sm:mb-8 pt-2 sm:pt-6 border-t border-foreground/5">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-3 sm:mb-4 pt-2 sm:pt-4 border-t border-foreground/5">
                     <div className="space-y-1">
                       <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
-                      <p className="text-base sm:text-2xl font-black tabular-nums tracking-tighter text-foreground">
+                      <p className="text-base sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
                         {selectedMajor.salary}
                       </p>
                     </div>
@@ -301,7 +301,7 @@ export default function HomeClient() {
                     <div className="space-y-1 pl-4 border-l border-foreground/5">
                       <p className="text-[7px] sm:text-[8px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
                       <p className={cn(
-                        "text-base sm:text-2xl font-black tabular-nums tracking-tighter",
+                        "text-base sm:text-xl font-black tabular-nums tracking-tighter",
                         selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
                       )}>
                         {selectedMajor.growth}
@@ -310,9 +310,9 @@ export default function HomeClient() {
                   </div>
 
                    {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col justify-center py-4 sm:py-8 border-t-2 border-dashed border-foreground/10 min-h-0">
-                    <h3 className="text-[7px] sm:text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-2 sm:mb-4">AI ROAST VERDICT</h3>
-                    <p className="text-base sm:text-3xl md:text-4xl font-black italic text-foreground leading-tight tracking-tight line-clamp-4">
+                  <div className="flex-1 flex flex-col justify-center py-4 sm:py-6 border-t-2 border-dashed border-foreground/10 min-h-0">
+                    <h3 className="text-[7px] sm:text-[9px] font-black text-muted-foreground uppercase tracking-widest mb-2 sm:mb-3">AI ROAST VERDICT</h3>
+                    <p className="text-base sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight line-clamp-4">
                         "{selectedMajor.roast}"
                     </p>
                   </div>
