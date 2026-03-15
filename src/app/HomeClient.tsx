@@ -239,7 +239,7 @@ export default function HomeClient() {
               className="rounded-[26px] sm:rounded-[32px]"
             >
               <div ref={cardRef} className={cn(
-                  "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between aspect-[4/5] overflow-hidden text-foreground w-full",
+                  "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between sm:aspect-[4/5] overflow-hidden text-foreground w-full",
                   resolvedTheme === "dark" ? "dark" : ""
               )}>
                 {/* Branding on Card */}
@@ -248,7 +248,7 @@ export default function HomeClient() {
                   <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
                 </div>
 
-                <div className="relative pt-6 sm:pt-8 flex-1 flex flex-col min-h-0">
+                <div className="relative pt-6 sm:pt-8 sm:flex-1 flex flex-col sm:min-h-0">
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-2 sm:mb-4">
                       <div className="max-w-[75%]">
@@ -307,9 +307,9 @@ export default function HomeClient() {
                   </div>
 
                   {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col items-center justify-center py-1.5 sm:py-4 border-t-2 border-dashed border-foreground/10 overflow-hidden">
-                    <h3 className="text-[5px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-0.5 sm:mb-2 text-center">AI ROAST VERDICT</h3>
-                    <p className="text-[8px] sm:text-xs md:text-sm font-black italic text-foreground leading-tight tracking-tight text-center w-full line-clamp-4">
+                  <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-4 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0">
+                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4">
                         &ldquo;{selectedMajor.roast}&rdquo;
                     </p>
                   </div>
