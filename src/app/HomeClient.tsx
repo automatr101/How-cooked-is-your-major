@@ -213,9 +213,24 @@ export default function HomeClient() {
           >
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <div ref={cardRef} className="p-1 sm:p-2 bg-background rounded-[40px]">
-              <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col justify-between aspect-[4/5] overflow-visible",
-              )}>
+              <div 
+                className={cn(
+                  "relative rounded-[32px] border-4 border-foreground p-4 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col justify-between aspect-[4/5] overflow-visible text-slate-950",
+                )}
+                style={{
+                  backgroundColor: selectedMajor.score > 66 ? '#ffebee' : selectedMajor.score > 33 ? '#fff8e1' : '#e8f5e9'
+                }}
+              >
+                {/* Status Bar at Top */}
+                <div 
+                  className="absolute top-0 left-0 right-0 h-[6px] w-full"
+                  style={{
+                    backgroundColor: selectedMajor.score > 66 ? '#f44336' : selectedMajor.score > 33 ? '#ff9800' : '#4caf50',
+                    borderTopLeftRadius: '28px',
+                    borderTopRightRadius: '28px'
+                  }}
+                />
+
                 {/* Branding on Card */}
                 <div className="absolute top-6 left-8 flex items-center gap-2 opacity-30">
                   <BrainCircuit className="w-3 h-3" />
@@ -226,8 +241,8 @@ export default function HomeClient() {
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-3 sm:mb-6">
                       <div className="max-w-[80%]">
-                          <p className="text-[6px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground leading-[0.9] tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
+                          <p className="text-[6px] sm:text-[8px] font-black uppercase tracking-[0.4em] opacity-60 mb-1">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black leading-[0.9] tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
                           "p-1 sm:p-3 rounded-lg sm:xl bg-foreground text-background shrink-0",
@@ -237,9 +252,9 @@ export default function HomeClient() {
                   </div>
 
                   {/* Split Dashboard Area */}
-                  <div className="grid grid-cols-2 gap-4 mb-4 pt-4 border-t border-foreground/5">
+                  <div className="grid grid-cols-2 gap-4 mb-4 pt-4 border-t border-slate-950/10">
                     <div className="space-y-1">
-                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">AI RISK LEVEL</p>
+                      <p className="text-[7px] font-black opacity-60 tracking-[0.3em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-1">
                         <span className={cn(
                             "text-5xl sm:text-6xl md:text-7xl font-black tabular-nums tracking-tighter leading-none filter drop-shadow-[4px_4px_0px_rgba(0,0,0,0.1)]",
@@ -249,14 +264,17 @@ export default function HomeClient() {
                         </span>
                         <span className="text-xl font-black opacity-30 select-none">%</span>
                       </div>
+                      <p className="text-[6px] sm:text-[11px] font-medium text-muted-foreground/60 leading-none mt-1">
+                        Based on automation risk, job growth & AI overlap
+                      </p>
                     </div>
                     
-                    <div className="space-y-1 flex flex-col items-start pl-4 border-l border-foreground/5">
-                      <p className="text-[7px] font-black text-muted-foreground tracking-[0.3em]">SURVIVAL STATUS</p>
+                    <div className="space-y-1 flex flex-col items-start pl-4 border-l border-slate-950/10">
+                      <p className="text-[7px] font-black opacity-60 tracking-[0.3em]">SURVIVAL STATUS</p>
                       <div className="flex flex-col gap-1">
                           <span className={cn(
                               "text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase leading-none italic",
-                              selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : "text-foreground"
+                              selectedMajor.score > 75 ? "text-destructive text-shadow-glow" : ""
                           )}>
                               {selectedMajor.level}
                           </span>
@@ -265,16 +283,16 @@ export default function HomeClient() {
                   </div>
 
                   {/* Market Stats Dashboard */}
-                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-6 pt-2 sm:pt-4 border-t border-foreground/5">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-6 pt-2 sm:pt-4 border-t border-slate-950/10">
                     <div className="space-y-0.5 sm:space-y-1">
-                      <p className="text-[6px] sm:text-[7px] font-black text-muted-foreground tracking-[0.3em]">SALARY RANGE</p>
-                      <p className="text-base sm:text-xl font-black tabular-nums tracking-tighter text-foreground">
+                      <p className="text-[6px] sm:text-[7px] font-black opacity-60 tracking-[0.3em]">SALARY RANGE</p>
+                      <p className="text-base sm:text-xl font-black tabular-nums tracking-tighter">
                         {selectedMajor.salary}
                       </p>
                     </div>
                     
-                    <div className="space-y-0.5 sm:space-y-1 pl-2 sm:pl-4 border-l border-foreground/5">
-                      <p className="text-[6px] sm:text-[7px] font-black text-muted-foreground tracking-[0.3em]">MARKET GROWTH</p>
+                    <div className="space-y-0.5 sm:space-y-1 pl-2 sm:pl-4 border-l border-slate-950/10">
+                      <p className="text-[6px] sm:text-[7px] font-black opacity-60 tracking-[0.3em]">MARKET GROWTH</p>
                       <p className={cn(
                         "text-base sm:text-xl font-black tabular-nums tracking-tighter",
                         selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
@@ -284,21 +302,21 @@ export default function HomeClient() {
                     </div>
                   </div>
                        {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col justify-center py-2 sm:py-4 border-t-2 border-dashed border-foreground/10">
-                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-3">AI ROAST VERDICT</h3>
-                    <p className="text-lg sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight line-clamp-4">
+                  <div className="flex-1 flex flex-col justify-center py-2 sm:py-4 border-t-2 border-dashed border-slate-950/10">
+                    <h3 className="text-[6px] sm:text-[8px] font-black opacity-60 uppercase tracking-widest mb-1 sm:mb-3">AI ROAST VERDICT</h3>
+                    <p className="text-lg sm:text-2xl md:text-3xl font-black italic leading-tight tracking-tight line-clamp-4">
                         "{selectedMajor.roast}"
                     </p>
                   </div>
 
                   {/* Card Footer */}
-                  <div className="pt-6 mt-4 border-t border-foreground/5 flex justify-between items-end">
+                  <div className="pt-6 mt-4 border-t border-slate-950/10 flex justify-between items-end">
                     <div>
-                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">DATA VERIFIED BY</p>
+                      <p className="text-[7px] font-black opacity-40 uppercase mb-1">DATA VERIFIED BY</p>
                       <p className="text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[7px] font-black text-muted-foreground uppercase mb-1">SCAN TO CHECK YOURS</p>
+                      <p className="text-[7px] font-black opacity-40 uppercase mb-1">SCAN TO CHECK YOURS</p>
                       <p className="text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
                     </div>
                   </div>
