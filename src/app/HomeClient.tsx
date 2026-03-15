@@ -235,11 +235,11 @@ export default function HomeClient() {
           >
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <div ref={cardRef} className={cn(
-                "p-1 sm:p-2 bg-background rounded-[40px]",
+                "p-1 bg-background rounded-[40px] w-full max-w-[400px] mx-auto",
                 resolvedTheme === "dark" ? "dark" : ""
             )}>
               <div className={cn(
-                  "relative rounded-[32px] border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between aspect-[4/5] overflow-visible text-foreground",
+                  "relative rounded-[32px] border-4 border-foreground bg-card p-6 sm:p-8 md:p-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between min-h-[500px] aspect-[4/5] overflow-hidden text-foreground",
               )}>
                 {/* Branding on Card */}
                 <div className="absolute top-6 left-8 flex items-center gap-2 opacity-30">
@@ -249,10 +249,10 @@ export default function HomeClient() {
 
                 <div className="relative pt-4 flex-1 flex flex-col min-h-0">
                   {/* Top Header Area */}
-                  <div className="flex justify-between items-start mb-3 sm:mb-6">
-                      <div className="max-w-[80%]">
-                          <p className="text-[6px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground leading-[0.9] tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
+                  <div className="flex justify-between items-start mb-4 sm:mb-6">
+                      <div className="max-w-[75%]">
+                          <p className="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.4em] text-muted-foreground mb-1">Verification ID: #882-{selectedMajor.score}</p>
+                          <h2 className="text-lg xs:text-xl sm:text-3xl md:text-5xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-3 mb-2">{selectedMajor.name}</h2>
                       </div>
                       <div className={cn(
                           "p-1 sm:p-3 rounded-lg sm:xl bg-foreground text-background shrink-0",
@@ -308,10 +308,10 @@ export default function HomeClient() {
                       </p>
                     </div>
                   </div>
-                       {/* Roast Verdict Area */}
-                  <div className="flex-1 flex flex-col justify-center py-2 sm:py-4 border-t-2 border-dashed border-foreground/10">
-                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-3">AI ROAST VERDICT</h3>
-                    <p className="text-lg sm:text-2xl md:text-3xl font-black italic text-foreground leading-tight tracking-tight line-clamp-4">
+                   {/* Roast Verdict Area */}
+                  <div className="flex-1 flex flex-col justify-center py-4 border-t-2 border-dashed border-foreground/10 min-h-0">
+                    <h3 className="text-[7px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-2 sm:mb-3">AI ROAST VERDICT</h3>
+                    <p className="text-base sm:text-2xl md:text-3xl font-black italic text-foreground leading-snug tracking-tight line-clamp-4">
                         "{selectedMajor.roast}"
                     </p>
                   </div>
