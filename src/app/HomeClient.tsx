@@ -10,6 +10,8 @@ import RetroGrid from "@/components/ui/retro-grid";
 import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
@@ -232,12 +234,13 @@ export default function HomeClient() {
             id="result"
           >
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
-            <div ref={cardRef} className={cn(
-                "p-1 bg-background rounded-[40px] w-full max-w-[400px] mx-auto",
-                resolvedTheme === "dark" ? "dark" : ""
-            )}>
-              <div className={cn(
-                  "relative rounded-[24px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between aspect-[4/5] overflow-hidden text-foreground w-full",
+            <BackgroundGradient
+              containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
+              className="rounded-[26px] sm:rounded-[32px]"
+            >
+              <div ref={cardRef} className={cn(
+                  "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between aspect-[4/5] overflow-hidden text-foreground w-full",
+                  resolvedTheme === "dark" ? "dark" : ""
               )}>
                 {/* Branding on Card */}
                 <div className="absolute top-3 left-4 sm:top-6 sm:left-8 flex items-center gap-2 opacity-30">
@@ -324,7 +327,7 @@ export default function HomeClient() {
                   </div>
                 </div>
               </div>
-            </div>
+            </BackgroundGradient>
 
             <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
 
