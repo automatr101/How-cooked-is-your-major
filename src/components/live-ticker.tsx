@@ -24,7 +24,7 @@ export function LiveTicker() {
   const tickerContent = scans.map((s, i) => (
     <span key={i} className="inline-flex items-center gap-2">
       <span className="text-primary font-bold">{s.major}</span>
-      <span className="text-muted-foreground/60">rated</span>
+      <span className="text-muted-foreground/60 mx-1">rated</span>
       <span className={s.score > 70 ? "text-destructive" : "text-emerald-500"}>
         {s.score}% cooked
       </span>

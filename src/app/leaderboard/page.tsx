@@ -14,8 +14,10 @@ export default function LeaderboardPage() {
   const leaderboardData = useMemo(() => {
     return majors.map(m => ({
       ...m,
-      // Deterministic "scan count" based on the name hash for a realistic feel
-      scanCount: m.name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % 5000 + 120
+      // Re-engineered scan count: ranges from 100 to 9,000 with more realistic, irregular gaps
+      scanCount: Math.floor(
+        ((m.name.split('').reduce((acc, char) => (acc * 31 + char.charCodeAt(0)) % 10000, 0) / 10000) * 8900) + 100
+      )
     }));
   }, []);
 
