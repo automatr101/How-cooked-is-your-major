@@ -18,8 +18,20 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "How Cooked Is Your Major? | AI Risk Scan",
-  description: "Check if AI is coming for your degree. Get roasted and survival advice.",
+  title: {
+    default: "How Cooked Is Your Major? | AI Risk Scan",
+    template: "%s | How Cooked Is Your Major?",
+  },
+  description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+  metadataBase: new URL("https://how-cooked-is-your-major.vercel.app"),
+  openGraph: {
+    siteName: "How Cooked Is Your Major?",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
