@@ -82,7 +82,7 @@ export default function HomeClient() {
     const emoji = selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : '🍳';
     
     // Create a dynamic URL with params to trigger dynamic OG image
-    const baseUrl = "https://cooked-major.vercel.app";
+    const baseUrl = "https://how-cooked-is-your-major.vercel.app";
     const shareUrl = `${baseUrl}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`;
     
     const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${shareUrl}`;

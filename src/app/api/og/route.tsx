@@ -7,13 +7,14 @@ export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
 
-    const major = searchParams.get('major') || 'Unknown Major';
+    const major = searchParams.get('major') || 'Your Major';
     const score = searchParams.get('score') || '0';
-    const level = searchParams.get('level') || 'Fine';
-    
-    // Determine color based on score
+    const level = searchParams.get('level') || 'Unknown';
+
     const nScore = parseInt(score);
-    const color = nScore > 80 ? '#ef4444' : nScore > 60 ? '#f97316' : '#10b981';
+    const scoreColor = nScore > 80 ? '#ef4444' : nScore > 60 ? '#f97316' : nScore > 33 ? '#eab308' : '#22c55e';
+    const bgGlow = nScore > 80 ? '#ef444420' : nScore > 60 ? '#f9731620' : nScore > 33 ? '#eab30820' : '#22c55e20';
+    const statusEmoji = nScore > 80 ? '💀' : nScore > 60 ? '🔥' : nScore > 33 ? '🍳' : '✅';
 
     return new ImageResponse(
       (
@@ -23,56 +24,110 @@ export async function GET(req: NextRequest) {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#0a0a0a',
-            backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%)',
+            alignItems: 'flex-start',
+            justifyContent: 'space-between',
+            backgroundColor: '#080808',
+            padding: '64px 80px',
             fontFamily: 'sans-serif',
-            padding: '40px',
+            position: 'relative',
           }}
         >
-          {/* Logo / Title Area */}
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
-            <div style={{ padding: '8px 16px', borderRadius: '50px', backgroundColor: '#171717', border: '1px solid #262626', color: '#10b981', fontSize: '12px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.3em' }}>
-                Intelligence Vector V.04
+          {/* Background glow accent */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '500px',
+              height: '500px',
+              borderRadius: '9999px',
+              backgroundColor: bgGlow,
+              filter: 'blur(120px)',
+            }}
+          />
+
+          {/* Top bar */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '9999px', backgroundColor: scoreColor }} />
+              <span style={{ fontSize: '13px', color: '#555', fontWeight: 900, letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+                MAJORLABS INTELLIGENCE
+              </span>
+            </div>
+            <span style={{ fontSize: '13px', color: '#333', fontWeight: 900, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+              how-cooked-is-your-major.vercel.app
+            </span>
+          </div>
+
+          {/* Main content */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', flex: 1, justifyContent: 'center', paddingTop: '40px' }}>
+            <div style={{ fontSize: '13px', color: '#555', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.4em' }}>
+              VERIFICATION ID: #882-{score} · AI Scan Report
+            </div>
+            <div style={{
+              fontSize: major.length > 25 ? '60px' : '72px',
+              fontWeight: 900,
+              color: '#ffffff',
+              lineHeight: 0.9,
+              textTransform: 'uppercase',
+              letterSpacing: '-0.03em',
+              maxWidth: '750px',
+            }}>
+              {major}
+            </div>
+
+            {/* Score row */}
+            <div style={{ display: 'flex', alignItems: 'flex-end', gap: '40px', marginTop: '20px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <span style={{ fontSize: '12px', color: '#444', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.3em' }}>
+                  AI RISK SCORE
+                </span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+                  <span style={{ fontSize: '130px', fontWeight: 900, color: scoreColor, lineHeight: 1 }}>
+                    {score}
+                  </span>
+                  <span style={{ fontSize: '40px', fontWeight: 900, color: '#333', lineHeight: 1 }}>%</span>
+                </div>
+              </div>
+
+              <div style={{ width: '2px', height: '80px', backgroundColor: '#222', marginBottom: '24px' }} />
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>
+                <span style={{ fontSize: '12px', color: '#444', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.3em' }}>
+                  SURVIVAL STATUS
+                </span>
+                <span style={{
+                  fontSize: '44px',
+                  fontWeight: 900,
+                  color: scoreColor,
+                  textTransform: 'uppercase',
+                  fontStyle: 'italic',
+                  letterSpacing: '-0.02em',
+                }}>
+                  {statusEmoji} {level}
+                </span>
+              </div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#171717', padding: '60px', borderRadius: '48px', border: '2px solid #262626', width: '800px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
-             <div style={{ fontSize: '24px', color: '#737373', fontWeight: 700, marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                Major Analysis For:
-             </div>
-             <div style={{ fontSize: '64px', color: '#ffffff', fontWeight: 900, marginBottom: '40px', textAlign: 'center' }}>
-                {major}
-             </div>
-
-             <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div style={{ fontSize: '100px', color: color, fontWeight: 900, lineHeight: 1 }}>
-                        {score}%
-                    </div>
-                    <div style={{ fontSize: '20px', color: '#737373', fontWeight: 700, textTransform: 'uppercase' }}>
-                        AI Risk Score
-                    </div>
-                </div>
-
-                <div style={{ width: '2px', height: '100px', backgroundColor: '#262626' }} />
-
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div style={{ fontSize: '40px', color: '#ffffff', fontWeight: 900, textTransform: 'uppercase', fontStyle: 'italic' }}>
-                        {level}
-                    </div>
-                    <div style={{ fontSize: '20px', color: '#737373', fontWeight: 700, textTransform: 'uppercase' }}>
-                        Survival Status
-                    </div>
-                </div>
-             </div>
-          </div>
-
-          <div style={{ marginTop: '40px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-             <div style={{ fontSize: '14px', color: '#404040', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em' }}>
-                © 2026 MAJORLABS INTELLIGENCE
-             </div>
+          {/* Footer CTA */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+            <span style={{ fontSize: '16px', color: '#404040', fontWeight: 700 }}>
+              Check yours →
+            </span>
+            <div style={{
+              padding: '12px 28px',
+              borderRadius: '9999px',
+              backgroundColor: '#181818',
+              border: `1px solid ${scoreColor}40`,
+              color: scoreColor,
+              fontSize: '14px',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+              letterSpacing: '0.2em',
+            }}>
+              SCAN YOUR MAJOR FREE
+            </div>
           </div>
         </div>
       ),
@@ -81,8 +136,9 @@ export async function GET(req: NextRequest) {
         height: 630,
       }
     );
-  } catch (e: any) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : 'Unknown error';
+    console.log(message);
     return new Response(`Failed to generate the image`, {
       status: 500,
     });

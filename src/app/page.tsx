@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import HomeClient from './HomeClient';
 
+const SITE_URL = 'https://how-cooked-is-your-major.vercel.app';
+
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
@@ -12,9 +14,9 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const level = params.level as string;
 
   if (major && score) {
-    const title = `I'm ${score}% Cooked (${major})`;
+    const title = `${major} is ${level} — ${score}% AI Risk`;
     const description = `Survival Status: ${level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
-    const ogUrl = `https://cooked-major.vercel.app/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}`;
+    const ogUrl = `${SITE_URL}/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}`;
 
     return {
       title,
@@ -22,13 +24,14 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       openGraph: {
         title,
         description,
-        url: 'https://cooked-major.vercel.app',
+        url: `${SITE_URL}?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}`,
         siteName: 'How Cooked Is Your Major?',
         images: [
           {
             url: ogUrl,
             width: 1200,
             height: 630,
+            alt: `${major} — ${score}% AI Risk`,
           },
         ],
         locale: 'en_US',
@@ -44,24 +47,43 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
         'google-adsense-account': 'ca-pub-6100632094350229',
       },
       alternates: {
-        canonical: 'https://cooked-major.vercel.app',
+        canonical: SITE_URL,
       },
     };
   }
 
+  // Default metadata (homepage, no major selected)
+  const defaultOgUrl = `${SITE_URL}/api/og`;
   return {
     title: "How Cooked Is Your Major? | AI Risk Scan",
-    description: "Check if AI is coming for your degree. Get roasted and survival advice.",
+    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
     openGraph: {
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Get roasted and survival advice.",
-      images: ['/og-image.png'], // You can add a default one later
+      description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+      url: SITE_URL,
+      siteName: 'How Cooked Is Your Major?',
+      images: [
+        {
+          url: defaultOgUrl,
+          width: 1200,
+          height: 630,
+          alt: 'How Cooked Is Your Major?',
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Get roasted and survival advice.",
-      images: ['/og-image.png'],
+      description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+      images: [defaultOgUrl],
+    },
+    other: {
+      'google-adsense-account': 'ca-pub-6100632094350229',
+    },
+    alternates: {
+      canonical: SITE_URL,
     },
   };
 }
@@ -72,11 +94,11 @@ export default function Page() {
     "@type": "WebApplication",
     "name": "How Cooked Is Your Major?",
     "description": "Find out how cooked your major is before graduation. AI risk assessment for students.",
-    "url": "https://cooked-major.vercel.app",
+    "url": SITE_URL,
     "applicationCategory": "EducationalApplication",
     "genre": "Education",
     "browserRequirements": "Requires JavaScript",
-    "softwareVersion": "1.0.4",
+    "softwareVersion": "1.0.5",
   };
 
   return (
