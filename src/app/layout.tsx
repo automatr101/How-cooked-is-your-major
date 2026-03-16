@@ -18,20 +18,30 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: {
-    default: "How Cooked Is Your Major? | AI Risk Scan",
-    template: "%s | How Cooked Is Your Major?",
-  },
+  title: "How Cooked Is Your Major? | AI Risk Scan",
   description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
   metadataBase: new URL("https://how-cooked-is-your-major.vercel.app"),
   openGraph: {
+    url: "https://how-cooked-is-your-major.vercel.app/",
+    title: "How Cooked Is Your Major? | AI Risk Scan",
+    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+    images: [{ url: "/api/og?v=1" }],
     siteName: "How Cooked Is Your Major?",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "How Cooked Is Your Major? | AI Risk Scan",
+    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+    images: ["/api/og?v=1"],
+    site: "@cookedlabs_cto",
+    creator: "@cookedlabs_cto",
   },
+  other: {
+    "twitter:domain": "how-cooked-is-your-major.vercel.app",
+    "twitter:url": "https://how-cooked-is-your-major.vercel.app/",
+  }
 };
 
 export default function RootLayout({
