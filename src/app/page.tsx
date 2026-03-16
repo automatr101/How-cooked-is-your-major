@@ -16,7 +16,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   if (major && score) {
     const title = `${major} is ${level} — ${score}% AI Risk`;
     const description = `Survival Status: ${level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
-    const ogUrl = `${SITE_URL}/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}`;
+    // Add v=1 to force re-crawl
+    const ogUrl = `${SITE_URL}/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}&v=1`;
 
     return {
       title,
@@ -42,6 +43,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
         title,
         description,
         images: [ogUrl],
+        site: '@cookedlabs_cto',
+        creator: '@cookedlabs_cto',
       },
       other: {
         'google-adsense-account': 'ca-pub-6100632094350229',
@@ -53,7 +56,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   }
 
   // Default metadata (homepage, no major selected)
-  const defaultOgUrl = `${SITE_URL}/api/og`;
+  const defaultOgUrl = `${SITE_URL}/api/og?v=1`;
   return {
     title: "How Cooked Is Your Major? | AI Risk Scan",
     description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
@@ -78,6 +81,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       title: "How Cooked Is Your Major? | AI Risk Scan",
       description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
       images: [defaultOgUrl],
+      site: '@cookedlabs_cto',
+      creator: '@cookedlabs_cto',
     },
     other: {
       'google-adsense-account': 'ca-pub-6100632094350229',
