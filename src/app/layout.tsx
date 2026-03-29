@@ -65,10 +65,10 @@ export default function RootLayout({
             gtag('config', 'G-F4BCS70GXP');
           `}
         </Script>
-        <meta name="google-adsense-account" content="ca-pub-6100632094350229" />
+        <meta name="google-adsense-account" content="ca-pub-9378010048800128" />
         <Script 
           async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6100632094350229"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9378010048800128"
           crossOrigin="anonymous" 
           strategy="lazyOnload"
         />
