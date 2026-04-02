@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
-import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap } from "lucide-react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
+import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2, VolumeX } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { majors, Major, getLevelColor } from "@/lib/data";
@@ -11,13 +11,21 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-
+import { playResultSound, replayLastSound, toggleMute, getIsMuted, getResultReactionLevel } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 
 import { toPng } from "html-to-image";
+
+// Reaction animation class based on score
+function getReactionClass(score: number): string {
+  if (score > 80) return "reaction-ultra-cooked";
+  if (score > 60) return "reaction-cooked";
+  if (score <= 40) return "reaction-safe";
+  return "";
+}
 
 export default function HomeClient() {
   const [query, setQuery] = useState("");
@@ -26,71 +34,94 @@ export default function HomeClient() {
   const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
   const [isScanning, setIsScanning] = useState(false);
   const [showComparisonSearch, setShowComparisonSearch] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [reactionClass, setReactionClass] = useState("");
   const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLDivElement>(null);
+
+  // Trigger sound + reaction animation
+  const triggerSoundReaction = useCallback((score: number) => {
+    const cls = getReactionClass(score);
+    // Remove then re-add class to re-trigger animation
+    setReactionClass("");
+    setTimeout(() => {
+      // Delay for drama
+      const delay = Math.floor(Math.random() * 400) + 300; // 300–700ms
+      setTimeout(() => {
+        playResultSound(score);
+        if (cls) {
+          setReactionClass(cls);
+          // Clear after animation completes
+          setTimeout(() => setReactionClass(""), 1200);
+        }
+      }, delay);
+    }, 50);
+  }, []);
 
   // Auto-select from URL params on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const majorName = params.get("major");
-      if (majorName && !selectedMajor) {
+      if (majorName) {
         const found = majors.find(m => m.name === majorName);
         if (found) {
-            setSelectedMajor(found);
-            setTimeout(() => {
-                document.getElementById("result")?.scrollIntoView({ behavior: 'smooth' });
-            }, 500);
+          setSelectedMajor(found);
+          triggerSoundReaction(found.score);
+          setTimeout(() => {
+            document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
+          }, 500);
         }
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleDownload = async () => {
     if (cardRef.current === null) return;
     try {
-      const dataUrl = await toPng(cardRef.current, { 
-        cacheBust: true, 
-        backgroundColor: 'transparent',
-        pixelRatio: 2, // Better quality for high-res screens
+      const dataUrl = await toPng(cardRef.current, {
+        cacheBust: true,
+        backgroundColor: "transparent",
+        pixelRatio: 2,
       });
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.download = `cooked-${selectedMajor?.name.toLowerCase()}.png`;
       link.href = dataUrl;
       link.click();
     } catch (err) {
-      console.error('oops, something went wrong!', err);
+      console.error("oops, something went wrong!", err);
     }
   };
 
   const handleSelect = (major: Major) => {
     setQuery("");
     setIsScanning(true);
-    // Dramatic delay for the scan
     setTimeout(() => {
       setSelectedMajor(major);
       setIsScanning(false);
-      // Scroll to result after a tiny beat
+      triggerSoundReaction(major.score);
       setTimeout(() => {
-        document.getElementById("result")?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }, 2000);
   };
 
-  const handleShare = (platform: 'x' | 'wa') => {
+  const handleToggleMute = () => {
+    const nowMuted = toggleMute();
+    setIsMuted(nowMuted);
+  };
+
+  const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
-    const emoji = selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : '🍳';
-    
-    // Create a dynamic URL with params to trigger dynamic OG image
+    const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
     const baseUrl = "https://how-cooked-is-your-major.vercel.app";
     const shareUrl = `${baseUrl}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`;
-    
     const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${shareUrl}`;
-    
-    if (platform === 'x') {
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+    if (platform === "x") {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
     } else {
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
     }
   };
 
@@ -132,17 +163,28 @@ export default function HomeClient() {
       .map(item => item.major);
   }, [comparisonQuery]);
 
-
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
       {/* Interactive Hero */}
       <Hero />
       <LiveTicker />
 
+      {/* Mute Toggle — fixed top-right */}
+      <button
+        onClick={handleToggleMute}
+        title={isMuted ? "Unmute sounds" : "Mute sounds"}
+        className="fixed top-4 right-4 z-[200] p-2.5 rounded-full bg-card/80 border border-border backdrop-blur-xl shadow-lg hover:scale-110 active:scale-95 transition-all"
+      >
+        {isMuted
+          ? <VolumeX className="w-4 h-4 text-muted-foreground" />
+          : <Volume2 className="w-4 h-4 text-primary" />
+        }
+      </button>
+
       {/* Scanning Overlay */}
       <AnimatePresence>
         {isScanning && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -154,16 +196,16 @@ export default function HomeClient() {
                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse -z-10" />
               </div>
               <div className="space-y-2">
-                  <h2 className="text-3xl font-black tracking-tighter uppercase italic">Scanning Your Future...</h2>
-                  <p className="text-muted-foreground font-mono text-sm uppercase tracking-widest">Running Simulation v4.0.2...</p>
+                <h2 className="text-3xl font-black tracking-tighter uppercase italic">Scanning Your Future...</h2>
+                <p className="text-muted-foreground font-mono text-sm uppercase tracking-widest">Running Simulation v4.0.2...</p>
               </div>
               <div className="w-full h-1 bg-muted rounded-full overflow-hidden">
-                  <motion.div 
-                      initial={{ width: "0%" }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 2, ease: "easeInOut" }}
-                      className="h-full bg-primary"
-                  />
+                <motion.div
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="h-full bg-primary"
+                />
               </div>
               <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.3em]">Analyzing market trends & AI growth models</p>
             </div>
@@ -207,13 +249,13 @@ export default function HomeClient() {
                 >
                   <span className="text-foreground/80 group-hover/item:text-foreground font-bold transition-colors">{major.name}</span>
                   <div className="flex items-center gap-3">
-                      <span className={cn(
-                          "text-xs font-black px-2 py-1 rounded-md bg-background border border-border", 
-                          major.score > 70 ? "text-destructive" : "text-emerald-600 dark:text-emerald-400"
-                      )}>
-                          {major.score}%
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover/item:translate-x-1 group-hover/item:text-primary transition-all" />
+                    <span className={cn(
+                      "text-xs font-black px-2 py-1 rounded-md bg-background border border-border",
+                      major.score > 70 ? "text-destructive" : "text-emerald-600 dark:text-emerald-400"
+                    )}>
+                      {major.score}%
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover/item:translate-x-1 group-hover/item:text-primary transition-all" />
                   </div>
                 </button>
               ))}
@@ -238,10 +280,14 @@ export default function HomeClient() {
               containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
               className="rounded-[26px] sm:rounded-[32px]"
             >
-              <div ref={cardRef} className={cn(
+              <div
+                ref={cardRef}
+                className={cn(
                   "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between sm:aspect-[4/5] overflow-hidden text-foreground w-full",
-                  resolvedTheme === "dark" ? "dark" : ""
-              )}>
+                  resolvedTheme === "dark" ? "dark" : "",
+                  reactionClass
+                )}
+              >
                 {/* Branding on Card */}
                 <div className="absolute top-3 left-4 sm:top-6 sm:left-8 flex items-center gap-2 opacity-30">
                   <BrainCircuit className="w-2 h-2 sm:w-3 sm:h-3" />
@@ -251,13 +297,13 @@ export default function HomeClient() {
                 <div className="relative pt-6 sm:pt-8 sm:flex-1 flex flex-col sm:min-h-0">
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-2 sm:mb-4">
-                      <div className="max-w-[75%]">
-                          <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
-                          <h2 className="text-[11px] sm:text-xl md:text-3xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
-                      </div>
-                      <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">
-                          <Sparkles className="w-3 h-3 sm:w-7 sm:h-7 fill-current" />
-                      </div>
+                    <div className="max-w-[75%]">
+                      <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
+                      <h2 className="text-[11px] sm:text-xl md:text-3xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
+                    </div>
+                    <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">
+                      <Sparkles className="w-3 h-3 sm:w-7 sm:h-7 fill-current" />
+                    </div>
                   </div>
 
                   {/* Split Dashboard Area */}
@@ -266,22 +312,22 @@ export default function HomeClient() {
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-0.5">
                         <span className={cn(
-                            "text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter leading-none",
-                            selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
+                          "text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter leading-none",
+                          selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
                         </span>
                         <span className="text-xs sm:text-lg font-black opacity-30 select-none">%</span>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-0.5 flex flex-col items-start pl-2 sm:pl-4 border-l border-foreground/10">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SURVIVAL STATUS</p>
                       <span className={cn(
-                          "text-[11px] sm:text-xl md:text-3xl font-black tracking-tighter uppercase leading-tight italic",
-                          selectedMajor.score > 75 ? "text-destructive" : "text-foreground"
+                        "text-[11px] sm:text-xl md:text-3xl font-black tracking-tighter uppercase leading-tight italic",
+                        selectedMajor.score > 75 ? "text-destructive" : "text-foreground"
                       )}>
-                          {selectedMajor.level}
+                        {selectedMajor.level}
                       </span>
                     </div>
                   </div>
@@ -294,12 +340,12 @@ export default function HomeClient() {
                         {selectedMajor.salary}
                       </p>
                     </div>
-                    
+
                     <div className="space-y-0.5 pl-2 sm:pl-4 border-l border-foreground/10">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">MARKET GROWTH</p>
                       <p className={cn(
                         "text-[10px] sm:text-base font-black tabular-nums tracking-tighter",
-                        selectedMajor.growth.includes('-') ? "text-destructive" : "text-emerald-500"
+                        selectedMajor.growth.includes("-") ? "text-destructive" : "text-emerald-500"
                       )}>
                         {selectedMajor.growth}
                       </p>
@@ -310,7 +356,7 @@ export default function HomeClient() {
                   <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-4 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0">
                     <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
                     <p className="text-[10px] sm:text-xs md:text-sm font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4">
-                        &ldquo;{selectedMajor.roast}&rdquo;
+                      &ldquo;{selectedMajor.roast}&rdquo;
                     </p>
                   </div>
 
@@ -328,6 +374,17 @@ export default function HomeClient() {
                 </div>
               </div>
             </BackgroundGradient>
+
+            {/* 🔊 Replay Sound Button */}
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={replayLastSound}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/80 backdrop-blur text-sm font-black text-muted-foreground hover:text-foreground hover:border-primary/40 hover:scale-105 active:scale-95 transition-all shadow"
+              >
+                <Volume2 className="w-4 h-4" />
+                🔊 Replay Sound
+              </button>
+            </div>
 
             <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
 
@@ -356,7 +413,7 @@ export default function HomeClient() {
                       onChange={(e) => setComparisonQuery(e.target.value)}
                     />
                   </div>
-                  
+
                   <AnimatePresence>
                     {filteredComparisonMajors.length > 0 && (
                       <motion.div
@@ -372,6 +429,7 @@ export default function HomeClient() {
                               setComparedMajor(m);
                               setShowComparisonSearch(false);
                               setComparisonQuery("");
+                              triggerSoundReaction(m.score);
                             }}
                             className="w-full flex items-center justify-between px-6 py-4 hover:bg-muted rounded-xl text-left transition-all"
                           >
@@ -391,10 +449,8 @@ export default function HomeClient() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"
                 >
-                  {/* Side-by-Side Cards */}
                   {[selectedMajor, comparedMajor].map((m, idx) => {
                     const isMoreAtRisk = idx === 0 ? selectedMajor.score > comparedMajor.score : comparedMajor.score > selectedMajor.score;
-                    const isSafer = !isMoreAtRisk;
                     return (
                       <div key={m.name} className={cn(
                         "relative rounded-3xl p-6 bg-card border-4",
@@ -426,7 +482,7 @@ export default function HomeClient() {
                       </div>
                     );
                   })}
-                  
+
                   <button
                     onClick={() => setComparedMajor(null)}
                     className="md:col-span-2 py-4 text-[10px] font-black uppercase text-muted-foreground hover:text-foreground transition-colors"
@@ -440,14 +496,14 @@ export default function HomeClient() {
             {/* Actions for User */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 px-4">
               <button
-                onClick={() => handleShare('x')}
+                onClick={() => handleShare("x")}
                 className="py-4 rounded-2xl bg-sky-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
                 <Twitter className="w-4 h-4 fill-current" />
                 SHARE ON X
               </button>
               <button
-                onClick={() => handleShare('wa')}
+                onClick={() => handleShare("wa")}
                 className="py-4 rounded-2xl bg-emerald-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -462,7 +518,7 @@ export default function HomeClient() {
               </button>
               <button
                 onClick={() => {
-                  const emoji = selectedMajor.score > 80 ? '💀' : selectedMajor.score > 60 ? '🔥' : '🍳';
+                  const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
                   const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: cooked-major.vercel.app`;
                   navigator.clipboard.writeText(text);
                   alert("Text copied! Ready to post 🫡");
@@ -479,7 +535,7 @@ export default function HomeClient() {
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-12 text-center text-muted-foreground text-xs font-bold uppercase tracking-[0.3em] opacity-50">
-          &copy; 2026 Copyright. by MajorLabs
+        &copy; 2026 Copyright. by MajorLabs
       </footer>
     </main>
   );
