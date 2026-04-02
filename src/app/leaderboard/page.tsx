@@ -1,14 +1,20 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Trophy, Flame, Shield, Search, Zap, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major, getLevelColor } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { playLeaderboardSound } from "@/lib/sounds";
 
 export default function LeaderboardPage() {
   const [sortBy, setSortBy] = useState<"scanned" | "cooked">("scanned");
+
+  // Play Among Us Dead Body sound when leaderboard opens
+  useEffect(() => {
+    playLeaderboardSound();
+  }, []);
 
   // Create a leaderboard with mock scan counts for initial display
   const leaderboardData = useMemo(() => {

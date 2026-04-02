@@ -11,7 +11,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { playResultSound, replayLastSound, toggleMute, getIsMuted, getResultReactionLevel } from "@/lib/sounds";
+import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionClass, playSiteLoadSound, playReturnSound } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
@@ -19,13 +19,7 @@ import { Recommendations } from "@/components/recommendations";
 
 import { toPng } from "html-to-image";
 
-// Reaction animation class based on score
-function getReactionClass(score: number): string {
-  if (score > 80) return "reaction-ultra-cooked";
-  if (score > 60) return "reaction-cooked";
-  if (score <= 40) return "reaction-safe";
-  return "";
-}
+
 
 export default function HomeClient() {
   const [query, setQuery] = useState("");
@@ -52,6 +46,22 @@ export default function HomeClient() {
         setTimeout(() => setReactionClass(""), 1200);
       });
     }
+  }, []);
+
+  // Play Discord Join sound when site first loads
+  useEffect(() => {
+    playSiteLoadSound();
+  }, []);
+
+  // Play Discord notification when user returns to the tab (retention boost)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        playReturnSound();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
   }, []);
 
   // Auto-select from URL params on mount

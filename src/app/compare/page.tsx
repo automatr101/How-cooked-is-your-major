@@ -1,17 +1,23 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Search, ArrowRight, BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { playCompareSound } from "@/lib/sounds";
 
 export default function ComparePage() {
   const [query1, setQuery1] = useState("");
   const [query2, setQuery2] = useState("");
   const [major1, setMajor1] = useState<Major | null>(null);
   const [major2, setMajor2] = useState<Major | null>(null);
+
+  // Play Among Us Role Reveal sound when compare page opens
+  useEffect(() => {
+    playCompareSound();
+  }, []);
 
   const filter = (query: string) => {
     if (!query) return [];
