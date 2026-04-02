@@ -44,18 +44,14 @@ export default function HomeClient() {
     const cls = getReactionClass(score);
     // Remove then re-add class to re-trigger animation
     setReactionClass("");
-    setTimeout(() => {
-      // Delay for drama
-      const delay = Math.floor(Math.random() * 400) + 300; // 300–700ms
-      setTimeout(() => {
-        playResultSound(score);
-        if (cls) {
-          setReactionClass(cls);
-          // Clear after animation completes
-          setTimeout(() => setReactionClass(""), 1200);
-        }
-      }, delay);
-    }, 50);
+    // Play sound instantly — the 2s scan animation already provides the drama
+    playResultSound(score);
+    if (cls) {
+      requestAnimationFrame(() => {
+        setReactionClass(cls);
+        setTimeout(() => setReactionClass(""), 1200);
+      });
+    }
   }, []);
 
   // Auto-select from URL params on mount
