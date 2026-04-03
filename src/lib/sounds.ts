@@ -1,10 +1,47 @@
 // ═══════════════════════════════════════════════
 // 🔊 Sound Reaction System — sounds.ts
-// All sound logic lives here. Clean & modular.
+// Mobile-first: handles iOS/Android autoplay restrictions
 // ═══════════════════════════════════════════════
 
-let currentAudio: HTMLAudioElement | null = null;
 let isMuted = false;
+let audioUnlocked = false;
+let currentAudio: HTMLAudioElement | null = null;
+let pendingAudio: HTMLAudioElement | null = null;
+
+// AudioContext for bulletproof mobile unlock
+let audioCtx: AudioContext | null = null;
+
+function getAudioContext(): AudioContext {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+  }
+  return audioCtx;
+}
+
+// ── Unlock audio on first user gesture ─────────
+// Call this from a click/touch handler to unlock
+// mobile audio playback for all future sounds
+export function unlockAudio() {
+  if (audioUnlocked) return;
+  try {
+    const ctx = getAudioContext();
+    if (ctx.state === "suspended") {
+      ctx.resume();
+    }
+    // Play a silent buffer to fully unlock
+    const buffer = ctx.createBuffer(1, 1, 22050);
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(ctx.destination);
+    source.start(0);
+
+    // Also unlock HTMLAudioElement path
+    const silent = new Audio("data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAAAAAAAAAABhk1a4vAAAAAAAAAAAAAAAAAAAA==");
+    silent.play().catch(() => {});
+
+    audioUnlocked = true;
+  } catch {}
+}
 
 // ── Mute controls ──────────────────────────────
 export const toggleMute = () => {
@@ -17,7 +54,7 @@ export const toggleMute = () => {
 
 export const getIsMuted = () => isMuted;
 
-// ── Core playback (stops previous sound first) ─
+// ── Core playback ──────────────────────────────
 function playSound(src: string) {
   if (isMuted) return;
   if (currentAudio) {
@@ -38,12 +75,48 @@ function vibrate(pattern: number | number[]) {
 }
 
 // ═══════════════════════════════════════════════
-// RESULT SOUNDS (after scan completes)
-//   safe/mid (score ≤ 60)  → crowd-clap
-//   slightly cooked (61-80) → prowler-meme
-//   very cooked (> 80)      → shotgun-fahh
+// PRE-LOAD for mobile: call during user gesture (click),
+// then call playPending() after setTimeout
+// ═══════════════════════════════════════════════
+export function preloadResultSound(score: number) {
+  let src = "";
+  if (score <= 60) {
+    src = "/sounds/crowd-clap.mp3";
+  } else if (score <= 80) {
+    src = "/sounds/prowler-meme.wav";
+  } else {
+    src = "/sounds/shotgun-fahh.mp3";
+  }
+  pendingAudio = new Audio(src);
+  pendingAudio.load(); // Primes the audio during the gesture window
+}
+
+export function playPendingSound(score: number) {
+  if (isMuted) return;
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+  if (pendingAudio) {
+    currentAudio = pendingAudio;
+    pendingAudio = null;
+    currentAudio.play().catch(() => {});
+  } else {
+    // Fallback if preload wasn't called
+    playResultSound(score);
+  }
+  // Vibration
+  if (score > 80) vibrate([200, 100, 200, 100, 400]);
+  else if (score > 60) vibrate([100, 50, 100]);
+  else vibrate([50, 50, 50]);
+}
+
+// ═══════════════════════════════════════════════
+// RESULT SOUNDS (direct play — works when called
+// directly from a click handler with no delay)
 // ═══════════════════════════════════════════════
 export const playResultSound = (score: number) => {
+  if (isMuted) return;
   if (score <= 60) {
     playSound("/sounds/crowd-clap.mp3");
     vibrate([50, 50, 50]);
@@ -60,28 +133,20 @@ export const playResultSound = (score: number) => {
 // PAGE SOUNDS
 // ═══════════════════════════════════════════════
 
-/** Plays when site first loads (Discord join chime) */
-export const playSiteLoadSound = () => {
-  playSound("/sounds/discord-join.mp3");
-};
+/** Discord join chime — site first loads (after audio unlock) */
+export const playSiteLoadSound = () => playSound("/sounds/discord-join.mp3");
 
-/** Plays when the leaderboard page opens (Among Us dead body) */
-export const playLeaderboardSound = () => {
-  playSound("/sounds/among-us-dead.mp3");
-};
+/** Among Us dead body — leaderboard page */
+export const playLeaderboardSound = () => playSound("/sounds/among-us-dead.mp3");
 
-/** Plays when the compare page opens (Among Us role reveal) */
-export const playCompareSound = () => {
-  playSound("/sounds/among-us-role.mp3");
-};
+/** Among Us role reveal — compare page */
+export const playCompareSound = () => playSound("/sounds/among-us-role.mp3");
 
-/** Plays when user returns to the tab (Discord notification — retention boost) */
-export const playReturnSound = () => {
-  playSound("/sounds/discord-notification.mp3");
-};
+/** Discord notification — user returns to tab */
+export const playReturnSound = () => playSound("/sounds/discord-notification.mp3");
 
 // ═══════════════════════════════════════════════
-// REPLAY (re-plays the last sound that was triggered)
+// REPLAY
 // ═══════════════════════════════════════════════
 export const replayLastSound = () => {
   if (currentAudio && !isMuted) {
@@ -92,9 +157,6 @@ export const replayLastSound = () => {
 
 // ═══════════════════════════════════════════════
 // REACTION CLASS (visual effect on the card)
-//   ultra cooked → shake
-//   cooked       → red flash
-//   safe/mid     → green glow
 // ═══════════════════════════════════════════════
 export function getReactionClass(score: number): string {
   if (score > 80) return "reaction-ultra-cooked";

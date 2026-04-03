@@ -11,7 +11,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionClass, playSiteLoadSound, playReturnSound } from "@/lib/sounds";
+import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionClass, playSiteLoadSound, playReturnSound, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
@@ -48,9 +48,24 @@ export default function HomeClient() {
     }
   }, []);
 
-  // Play Discord Join sound when site first loads
+  // Unlock audio on first user interaction (iOS/Android requirement)
+  // Then play site-load sound once unlocked
   useEffect(() => {
-    playSiteLoadSound();
+    let played = false;
+    const handleFirstInteraction = () => {
+      if (played) return;
+      played = true;
+      unlockAudio();
+      playSiteLoadSound();
+      document.removeEventListener("touchstart", handleFirstInteraction);
+      document.removeEventListener("click", handleFirstInteraction);
+    };
+    document.addEventListener("touchstart", handleFirstInteraction, { once: true });
+    document.addEventListener("click", handleFirstInteraction, { once: true });
+    return () => {
+      document.removeEventListener("touchstart", handleFirstInteraction);
+      document.removeEventListener("click", handleFirstInteraction);
+    };
   }, []);
 
   // Play Discord notification when user returns to the tab (retention boost)
@@ -103,10 +118,21 @@ export default function HomeClient() {
   const handleSelect = (major: Major) => {
     setQuery("");
     setIsScanning(true);
+    // Preload the sound NOW during the click gesture (mobile needs this)
+    preloadResultSound(major.score);
     setTimeout(() => {
       setSelectedMajor(major);
       setIsScanning(false);
-      triggerSoundReaction(major.score);
+      // Play the preloaded sound — works on iOS/Android
+      playPendingSound(major.score);
+      const cls = getReactionClass(major.score);
+      if (cls) {
+        setReactionClass("");
+        requestAnimationFrame(() => {
+          setReactionClass(cls);
+          setTimeout(() => setReactionClass(""), 1200);
+        });
+      }
       setTimeout(() => {
         document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
       }, 100);
