@@ -47,7 +47,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
         creator: '@cookedlabs_cto',
       },
       other: {
-        'google-adsense-account': 'ca-pub-6100632094350229',
+        'google-adsense-account': 'ca-pub-9378010048800128',
       },
       alternates: {
         canonical: SITE_URL,
@@ -85,7 +85,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
       creator: '@cookedlabs_cto',
     },
     other: {
-      'google-adsense-account': 'ca-pub-6100632094350229',
+      'google-adsense-account': 'ca-pub-9378010048800128',
     },
     alternates: {
       canonical: SITE_URL,

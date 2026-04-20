@@ -566,8 +566,15 @@ export default function HomeClient() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="mt-auto pt-24 pb-12 text-center text-muted-foreground text-xs font-bold uppercase tracking-[0.3em] opacity-50">
-        &copy; 2026 Copyright. by MajorLabs
+      <footer className="mt-auto pt-24 pb-12 text-center space-y-3 opacity-60">
+        <p className="text-muted-foreground text-xs font-bold uppercase tracking-[0.3em]">
+          &copy; 2026 MajorLabs Intelligence
+        </p>
+        <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+          <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+          <span className="opacity-30">·</span>
+          <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">@cookedlabs_cto</a>
+        </div>
       </footer>
     </main>
   );

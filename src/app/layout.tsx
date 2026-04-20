@@ -52,6 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-9378010048800128" />
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-F4BCS70GXP"
           strategy="afterInteractive"
@@ -61,16 +63,17 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-F4BCS70GXP');
           `}
         </Script>
-        <meta name="google-adsense-account" content="ca-pub-9378010048800128" />
-        <script 
-          async 
+        {/* Google AdSense */}
+        <Script
+          id="google-adsense"
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9378010048800128"
-          crossOrigin="anonymous" 
-        ></script>
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20`}

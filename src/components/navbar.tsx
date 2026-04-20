@@ -33,6 +33,12 @@ export function Navbar() {
             >
               Compare
             </Link>
+            <Link 
+              href="/privacy"
+              className="hidden sm:block px-4 sm:px-6 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all whitespace-nowrap"
+            >
+              Privacy
+            </Link>
           </div>
           <ThemeToggle />
         </div>
