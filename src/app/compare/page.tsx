@@ -2,10 +2,11 @@
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { Search, ArrowRight, BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
+import { BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { MajorSearch } from "@/components/major-search";
 
 export default function ComparePage() {
   const [query1, setQuery1] = useState("");
@@ -41,7 +42,7 @@ export default function ComparePage() {
         return { major, score };
       })
       .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score)
+      .sort((a, b) => b.score - a.score || a.major.name.length - b.major.name.length)
       .slice(0, 5)
       .map(item => item.major);
   };
@@ -72,7 +73,7 @@ export default function ComparePage() {
         </div>
 
         {/* Search Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 relative max-w-3xl mx-auto w-full">
            {/* Center Icon */}
            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden md:flex w-12 h-12 rounded-full bg-background border border-border items-center justify-center">
               <GitCompare className="w-6 h-6 text-primary" />
@@ -81,63 +82,45 @@ export default function ComparePage() {
            {/* Slot 1 */}
            <div className="space-y-4">
               <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">PRIMARY MAJOR</p>
-              <div className="relative group">
-                <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden focus-within:border-primary/50 transition-all shadow-xl">
-                  <Search className="w-5 h-5 ml-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    className="w-full bg-transparent border-none text-lg text-foreground px-4 py-5 focus:outline-none font-bold"
-                    placeholder="Search major..."
-                    value={major1 ? major1.name : query1}
-                    onChange={(e) => {
-                        setQuery1(e.target.value);
-                        if (major1) setMajor1(null);
-                    }}
-                  />
-                </div>
-                <AnimatePresence>
-                  {filtered1.length > 0 && (
-                    <motion.div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl overflow-hidden z-50 shadow-2xl">
-                      {filtered1.map(m => (
-                        <button key={m.name} onClick={() => {setMajor1(m); setQuery1("")}} className="w-full p-4 hover:bg-muted text-left font-bold text-sm">
-                          {m.name}
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <MajorSearch
+                compact
+                label="Primary major"
+                placeholder="Search major..."
+                beamDuration={3.1}
+                value={major1 ? major1.name : query1}
+                selected={!!major1}
+                results={filtered1}
+                onChange={(v) => {
+                  setQuery1(v);
+                  if (major1) setMajor1(null);
+                }}
+                onSelect={(m) => {
+                  setMajor1(m);
+                  setQuery1("");
+                }}
+              />
            </div>
 
            {/* Slot 2 */}
            <div className="space-y-4">
               <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">COMPARISON MAJOR</p>
-              <div className="relative group">
-                <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden focus-within:border-primary/50 transition-all shadow-xl">
-                  <Search className="w-5 h-5 ml-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    className="w-full bg-transparent border-none text-lg text-foreground px-4 py-5 focus:outline-none font-bold"
-                    placeholder="Search major..."
-                    value={major2 ? major2.name : query2}
-                    onChange={(e) => {
-                        setQuery2(e.target.value);
-                        if (major2) setMajor2(null);
-                    }}
-                  />
-                </div>
-                <AnimatePresence>
-                  {filtered2.length > 0 && (
-                    <motion.div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl overflow-hidden z-50 shadow-2xl">
-                      {filtered2.map(m => (
-                        <button key={m.name} onClick={() => {setMajor2(m); setQuery2("")}} className="w-full p-4 hover:bg-muted text-left font-bold text-sm">
-                          {m.name}
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <MajorSearch
+                compact
+                label="Comparison major"
+                placeholder="Search major..."
+                beamDuration={3.6}
+                value={major2 ? major2.name : query2}
+                selected={!!major2}
+                results={filtered2}
+                onChange={(v) => {
+                  setQuery2(v);
+                  if (major2) setMajor2(null);
+                }}
+                onSelect={(m) => {
+                  setMajor2(m);
+                  setQuery2("");
+                }}
+              />
            </div>
         </div>
 

@@ -14,15 +14,37 @@ interface MajorSearchProps {
   /** Matching majors, already filtered and ranked by the parent. */
   results: Major[];
   onSelect: (major: Major) => void;
+  /**
+   * The text in the box is a finished choice (for example a picked major's name), not a search in
+   * progress: no list and no "no match" message until the visitor edits it.
+   */
+  selected?: boolean;
+  placeholder?: string;
+  /** The box's accessible name. */
+  label?: string;
+  /** A smaller box and rows, for pages with two search boxes side by side. */
+  compact?: boolean;
+  /** Seconds per lap of the glow. Give side-by-side boxes different values so they don't pulse together. */
+  beamDuration?: number;
 }
 
-// The home page search box, as an accessible combobox:
+// The search box used on the home page and the Compare page, as an accessible combobox:
 //   - type to filter, ArrowUp/ArrowDown to move through the matches, Enter to pick
 //     (the top match if none is highlighted), Escape to close (again to clear)
 //   - screen readers announce the matches; an empty search says so instead of showing nothing
 //   - a travelling glow (border-beam) runs along the bottom edge; it stops for visitors who
 //     prefer reduced motion, and follows the light/dark theme
-export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchProps) {
+export function MajorSearch({
+  value,
+  onChange,
+  results,
+  onSelect,
+  selected = false,
+  placeholder = "Search 1,800+ courses...",
+  label = "Search majors",
+  compact = false,
+  beamDuration = 3.1,
+}: MajorSearchProps) {
   const id = useId();
   const listId = `${id}-list`;
   const optionId = (i: number) => `${id}-option-${i}`;
@@ -35,8 +57,8 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
   const { resolvedTheme } = useTheme();
 
   const query = value.trim();
-  const showList = open && results.length > 0;
-  const showEmpty = open && query.length > 0 && results.length === 0;
+  const showList = open && !selected && results.length > 0;
+  const showEmpty = open && !selected && query.length > 0 && results.length === 0;
   // The list can shrink while typing, so never point past its end.
   const active = highlight < results.length ? highlight : -1;
 
@@ -106,18 +128,18 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
         <BorderBeam
           size="line"
           colorVariant="colorful"
-          duration={3.1}
+          duration={beamDuration}
           borderRadius={16}
           theme={resolvedTheme === "light" ? "light" : "dark"}
           active={!reduceMotion}
         >
           <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden backdrop-blur-2xl transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5 shadow-xl">
-            <Search aria-hidden className="w-6 h-6 ml-6 shrink-0 text-muted-foreground transition-colors group-focus-within:text-primary" />
+            <Search aria-hidden className={cn(compact ? "w-4 h-4 ml-4" : "w-5 h-5 ml-5", "shrink-0 text-muted-foreground transition-colors group-focus-within:text-primary")} />
             <input
               ref={inputRef}
               type="text"
               role="combobox"
-              aria-label="Search majors"
+              aria-label={label}
               aria-expanded={showList}
               aria-controls={listId}
               aria-autocomplete="list"
@@ -126,16 +148,19 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
               autoCorrect="off"
               spellCheck={false}
               enterKeyHint="search"
-              className="w-full min-w-0 bg-transparent border-none text-xl text-foreground placeholder-muted-foreground/50 px-6 py-6 focus:outline-none focus:ring-0 font-bold tracking-tight"
-              placeholder="Search 1,800+ courses..."
+              className={cn(
+                "w-full min-w-0 bg-transparent border-none text-foreground placeholder-muted-foreground/50 focus:outline-none focus:ring-0 font-bold tracking-tight",
+                compact ? "text-base px-3 py-3.5" : "text-lg px-4 py-4"
+              )}
+              placeholder={placeholder}
               value={value}
               onChange={(e) => {
                 onChange(e.target.value);
                 setOpen(true);
                 setHighlight(-1);
               }}
-              onFocus={() => value.trim() && setOpen(true)}
-              onClick={() => value.trim() && setOpen(true)}
+              onFocus={() => !selected && value.trim() && setOpen(true)}
+              onClick={() => !selected && value.trim() && setOpen(true)}
               onBlur={() => setOpen(false)}
               onKeyDown={onKeyDown}
             />
@@ -151,7 +176,10 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
                   setHighlight(-1);
                   inputRef.current?.focus();
                 }}
-                className="mr-4 grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                className={cn(
+                  "grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
+                  compact ? "mr-3" : "mr-4"
+                )}
               >
                 <X aria-hidden className="h-5 w-5" />
               </button>
@@ -162,7 +190,7 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
 
       {/* Screen readers: how many matches there are */}
       <div role="status" aria-live="polite" className="sr-only">
-        {query.length === 0 ? "" : results.length > 0 ? `${results.length} matching majors. Use the up and down arrow keys, then Enter.` : "No majors found."}
+        {query.length === 0 || selected ? "" : results.length > 0 ? `${results.length} matching majors. Use the up and down arrow keys, then Enter.` : "No majors found."}
       </div>
 
       <AnimatePresence>
@@ -171,7 +199,10 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
             initial={{ opacity: 0, y: 10, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            className="absolute top-full left-0 right-0 mt-4 bg-card/80 backdrop-blur-3xl border border-border rounded-2xl overflow-hidden shadow-2xl z-50 p-2"
+            className={cn(
+              "absolute top-full left-0 right-0 bg-card/80 backdrop-blur-3xl border border-border overflow-hidden shadow-2xl z-50",
+              compact ? "mt-2 rounded-xl p-1.5" : "mt-4 rounded-2xl p-2"
+            )}
           >
             {showList ? (
               <div id={listId} role="listbox" aria-label="Matching majors">
@@ -186,7 +217,8 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
                     onMouseEnter={() => setHighlight(i)}
                     onClick={() => choose(major)}
                     className={cn(
-                      "w-full flex items-center justify-between px-6 py-4 rounded-xl text-left cursor-pointer transition-all group/item",
+                      "w-full flex items-center justify-between text-left cursor-pointer transition-all group/item",
+                      compact ? "px-4 py-3 rounded-lg text-sm" : "px-6 py-4 rounded-xl",
                       i === active ? "bg-muted" : "hover:bg-muted"
                     )}
                   >
@@ -214,7 +246,7 @@ export function MajorSearch({ value, onChange, results, onSelect }: MajorSearchP
                 ))}
               </div>
             ) : (
-              <p className="px-6 py-5 text-sm font-bold text-muted-foreground">
+              <p className={cn("text-sm font-bold text-muted-foreground", compact ? "px-4 py-4" : "px-6 py-5")}>
                 No majors match &ldquo;{shownQuery}&rdquo;. Try fewer letters, or one word like &ldquo;nursing&rdquo;.
               </p>
             )}
