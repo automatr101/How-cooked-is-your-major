@@ -16,8 +16,7 @@ import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionCl
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
-
-import { toPng } from "html-to-image";
+import { notifyVisit, notifyScan } from "@/lib/notify";
 
 
 
@@ -68,6 +67,11 @@ export default function HomeClient() {
     };
   }, []);
 
+  // Telegram visit alert (once per session; the server decides whether to send it)
+  useEffect(() => {
+    notifyVisit();
+  }, []);
+
   // Play Discord notification when user returns to the tab (retention boost)
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -101,6 +105,7 @@ export default function HomeClient() {
   const handleDownload = async () => {
     if (cardRef.current === null) return;
     try {
+      const { toPng } = await import("html-to-image"); // only loaded when someone saves a card
       const dataUrl = await toPng(cardRef.current, {
         cacheBust: true,
         backgroundColor: "transparent",
@@ -118,6 +123,7 @@ export default function HomeClient() {
   const handleSelect = (major: Major) => {
     setQuery("");
     setIsScanning(true);
+    notifyScan(major.name);
     // Preload the sound NOW during the click gesture (mobile needs this)
     preloadResultSound(major.score);
     setTimeout(() => {

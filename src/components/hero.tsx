@@ -2,12 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
-import { GLSLHills } from "@/components/ui/glsl-hills";
+import dynamic from "next/dynamic";
 import { Plus, BrainCircuit, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button"; 
 import { ShineBorder } from "@/components/ui/hero-designali";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
+
+// Three.js is ~140 KB gzipped and purely decorative, so load it after the hero text is interactive.
+const GLSLHills = dynamic(
+  () => import("@/components/ui/glsl-hills").then((m) => m.GLSLHills),
+  { ssr: false }
+);
 
 export const Hero = () => {
   const talkAbout = [

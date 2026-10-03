@@ -24,6 +24,10 @@ const GLSLHills = ({
   useEffect(() => {
     if (!canvasRef.current) return;
 
+    // Half the mesh density on small screens: ~4x fewer vertices for the shader to process
+    const segments = window.innerWidth < 768 ? Math.round(planeSize / 2) : planeSize;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Plane class
     class Plane {
       uniforms: { [key: string]: THREE.IUniform };
@@ -40,7 +44,7 @@ const GLSLHills = ({
 
       createMesh() {
         return new THREE.Mesh(
-          new THREE.PlaneGeometry(planeSize, planeSize, planeSize, planeSize),
+          new THREE.PlaneGeometry(planeSize, planeSize, segments, segments),
           new THREE.RawShaderMaterial({
             uniforms: this.uniforms,
             vertexShader: `
@@ -187,12 +191,29 @@ const GLSLHills = ({
       renderer.setSize(width, height);
     };
 
-    let requestID: number;
+    let requestID = 0;
+    let running = false;
     const renderLoop = () => {
       plane.render(clock.getDelta());
       renderer.render(scene, camera);
       requestID = requestAnimationFrame(renderLoop);
     };
+    const start = () => {
+      if (running || reduceMotion) return;
+      running = true;
+      clock.getDelta(); // drop the time spent paused so the animation doesn't jump
+      renderLoop();
+    };
+    const stop = () => {
+      running = false;
+      cancelAnimationFrame(requestID);
+    };
+
+    // Only animate while the hills are actually on screen
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) start();
+      else stop();
+    });
 
     const init = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -202,14 +223,16 @@ const GLSLHills = ({
       scene.add(plane.mesh);
       window.addEventListener('resize', resize);
       resize();
-      renderLoop();
+      renderer.render(scene, camera); // static first frame (also the only frame under reduced motion)
+      if (containerRef.current) observer.observe(containerRef.current);
     };
 
     init();
 
     return () => {
       window.removeEventListener('resize', resize);
-      cancelAnimationFrame(requestID);
+      observer.disconnect();
+      stop();
       renderer.dispose();
     };
   }, [cameraZ, planeSize, speed]);
