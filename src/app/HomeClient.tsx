@@ -197,10 +197,15 @@ export default function HomeClient() {
     return `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\n${quote}Major: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${link}`;
   };
 
+  // The link to this result. Pasting it anywhere that makes link previews shows the result card.
+  const resultLink = () =>
+    selectedMajor
+      ? `${SITE_URL}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`
+      : SITE_URL;
+
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
-    const baseUrl = SITE_URL;
-    const shareUrl = `${baseUrl}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`;
+    const shareUrl = resultLink();
     let text = buildShareText(shareUrl);
     // X counts every link as 23 characters and allows 280. Drop the roast if it would not fit.
     if (platform === "x" && text.length - shareUrl.length + 23 > 270) text = buildShareText(shareUrl, false);
@@ -393,9 +398,8 @@ export default function HomeClient() {
                     </div>
                   </div>
 
-                  {/* Roast Verdict Area */}
+                  {/* The roast, quoted */}
                   <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-3 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0 max-sm:min-h-[4.5rem]">
-                    <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
                     {/* A new key on every roll makes the text fade/slide in. Quick and subtle. */}
                     <motion.p
                       key={roast?.n ?? "initial"}
@@ -578,7 +582,7 @@ export default function HomeClient() {
               </button>
               <button
                 onClick={() => {
-                  const text = buildShareText(SITE_HOST);
+                  const text = buildShareText(resultLink());
                   navigator.clipboard
                     .writeText(text)
                     .then(() => {
