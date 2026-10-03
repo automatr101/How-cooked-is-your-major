@@ -3,7 +3,34 @@
 // Mobile-first: handles iOS/Android autoplay restrictions
 // ═══════════════════════════════════════════════
 
+import { useSyncExternalStore } from "react";
+
+const MUTE_KEY = "cm_muted";
+
+// No sound plays longer than this. prowler-meme.wav is ~11 seconds, which feels endless,
+// so everything is cut off with a short fade after MAX_PLAY_MS.
+const MAX_PLAY_MS = 4000;
+const FADE_MS = 400;
+
+// Mute is remembered in localStorage so it survives refreshes and new visits.
+// It is read lazily on first use because this module also loads on the server.
 let isMuted = false;
+let mutedLoaded = false;
+const muteListeners = new Set<() => void>();
+
+function loadMuted() {
+  if (mutedLoaded || typeof window === "undefined") return;
+  mutedLoaded = true;
+  try {
+    isMuted = localStorage.getItem(MUTE_KEY) === "1";
+  } catch {}
+}
+
+const muted = () => {
+  loadMuted();
+  return isMuted;
+};
+
 let audioUnlocked = false;
 let currentAudio: HTMLAudioElement | null = null;
 let pendingAudio: HTMLAudioElement | null = null;
@@ -44,25 +71,92 @@ export function unlockAudio() {
 }
 
 // ── Mute controls ──────────────────────────────
+export const getIsMuted = () => muted();
+
+const notifyMuteListeners = () => muteListeners.forEach((l) => l());
+
 export const toggleMute = () => {
+  loadMuted();
   isMuted = !isMuted;
-  if (isMuted && currentAudio) {
-    currentAudio.pause();
-  }
+  try {
+    localStorage.setItem(MUTE_KEY, isMuted ? "1" : "0");
+  } catch {}
+  if (isMuted) stopAllSounds();
+  notifyMuteListeners();
   return isMuted;
 };
 
-export const getIsMuted = () => isMuted;
+const subscribeMuted = (cb: () => void) => {
+  muteListeners.add(cb);
+  // keep other open tabs in sync
+  const onStorage = (e: StorageEvent) => {
+    if (e.key !== MUTE_KEY) return;
+    isMuted = e.newValue === "1";
+    if (isMuted) stopAllSounds();
+    notifyMuteListeners();
+  };
+  window.addEventListener("storage", onStorage);
+  return () => {
+    muteListeners.delete(cb);
+    window.removeEventListener("storage", onStorage);
+  };
+};
+
+/** React hook: the saved mute state. Renders as "not muted" on the server, then updates. */
+export function useMuted(): boolean {
+  return useSyncExternalStore(subscribeMuted, getIsMuted, () => false);
+}
 
 // ── Core playback ──────────────────────────────
+let stopTimer: ReturnType<typeof setTimeout> | null = null;
+let fadeTimer: ReturnType<typeof setInterval> | null = null;
+
+function clearTimers() {
+  if (stopTimer) clearTimeout(stopTimer);
+  if (fadeTimer) clearInterval(fadeTimer);
+  stopTimer = fadeTimer = null;
+}
+
+/** Stop whatever is playing right now (used on mute, tab switch and leaving the page). */
+export function stopAllSounds() {
+  clearTimers();
+  for (const audio of [currentAudio, pendingAudio]) {
+    if (!audio) continue;
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
+
+// Play from the start at full volume, then fade out and stop after MAX_PLAY_MS.
+function startPlayback(audio: HTMLAudioElement) {
+  clearTimers();
+  audio.volume = 1;
+  audio.currentTime = 0;
+  audio.play().catch(() => {});
+  stopTimer = setTimeout(() => {
+    if (audio !== currentAudio || audio.paused) return;
+    const steps = 8;
+    let step = 0;
+    fadeTimer = setInterval(() => {
+      step++;
+      audio.volume = Math.max(0, 1 - step / steps);
+      if (step >= steps) {
+        clearTimers();
+        audio.pause();
+        audio.volume = 1;
+      }
+    }, FADE_MS / steps);
+  }, MAX_PLAY_MS - FADE_MS);
+}
+
 function playSound(src: string) {
-  if (isMuted) return;
+  if (muted()) return;
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
   currentAudio = new Audio(src);
-  currentAudio.play().catch(() => {});
+  startPlayback(currentAudio);
 }
 
 // ── Vibrate helper ─────────────────────────────
@@ -92,7 +186,7 @@ export function preloadResultSound(score: number) {
 }
 
 export function playPendingSound(score: number) {
-  if (isMuted) return;
+  if (muted()) return;
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
@@ -100,7 +194,7 @@ export function playPendingSound(score: number) {
   if (pendingAudio) {
     currentAudio = pendingAudio;
     pendingAudio = null;
-    currentAudio.play().catch(() => {});
+    startPlayback(currentAudio);
   } else {
     // Fallback if preload wasn't called
     playResultSound(score);
@@ -116,7 +210,7 @@ export function playPendingSound(score: number) {
 // directly from a click handler with no delay)
 // ═══════════════════════════════════════════════
 export const playResultSound = (score: number) => {
-  if (isMuted) return;
+  if (muted()) return;
   if (score <= 60) {
     playSound("/sounds/crowd-clap.mp3");
     vibrate([50, 50, 50]);
@@ -129,29 +223,15 @@ export const playResultSound = (score: number) => {
   }
 };
 
-// ═══════════════════════════════════════════════
-// PAGE SOUNDS
-// ═══════════════════════════════════════════════
-
-/** Discord join chime — site first loads (after audio unlock) */
-export const playSiteLoadSound = () => playSound("/sounds/discord-join.mp3");
-
-/** Among Us dead body — leaderboard page */
-export const playLeaderboardSound = () => playSound("/sounds/among-us-dead.mp3");
-
-/** Among Us role reveal — compare page */
-export const playCompareSound = () => playSound("/sounds/among-us-role.mp3");
-
-/** Discord notification — user returns to tab */
-export const playReturnSound = () => playSound("/sounds/discord-notification.mp3");
+// Sounds only play in response to something the visitor just did (scanning a major, or
+// pressing Replay). Nothing plays on page load, tab switches or navigation.
 
 // ═══════════════════════════════════════════════
 // REPLAY
 // ═══════════════════════════════════════════════
 export const replayLastSound = () => {
-  if (currentAudio && !isMuted) {
-    currentAudio.currentTime = 0;
-    currentAudio.play().catch(() => {});
+  if (currentAudio && !muted()) {
+    startPlayback(currentAudio);
   }
 };
 
