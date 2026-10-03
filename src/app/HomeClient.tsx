@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2, VolumeX } from "lucide-react";
+import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { majors, Major, getLevelColor } from "@/lib/data";
@@ -11,7 +11,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionClass, playSiteLoadSound, playReturnSound, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
+import { playResultSound, replayLastSound, getReactionClass, playSiteLoadSound, playReturnSound, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
@@ -27,7 +27,6 @@ export default function HomeClient() {
   const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
   const [isScanning, setIsScanning] = useState(false);
   const [showComparisonSearch, setShowComparisonSearch] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
   const [reactionClass, setReactionClass] = useState("");
   const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -145,11 +144,6 @@ export default function HomeClient() {
     }, 2000);
   };
 
-  const handleToggleMute = () => {
-    const nowMuted = toggleMute();
-    setIsMuted(nowMuted);
-  };
-
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
     const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
@@ -206,18 +200,6 @@ export default function HomeClient() {
       {/* Interactive Hero */}
       <Hero />
       <LiveTicker />
-
-      {/* Mute Toggle — fixed top-right */}
-      <button
-        onClick={handleToggleMute}
-        title={isMuted ? "Unmute sounds" : "Mute sounds"}
-        className="fixed top-4 right-4 z-[200] p-2.5 rounded-full bg-card/80 border border-border backdrop-blur-xl shadow-lg hover:scale-110 active:scale-95 transition-all"
-      >
-        {isMuted
-          ? <VolumeX className="w-4 h-4 text-muted-foreground" />
-          : <Volume2 className="w-4 h-4 text-primary" />
-        }
-      </button>
 
       {/* Scanning Overlay */}
       <AnimatePresence>
