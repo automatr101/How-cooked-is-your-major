@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         {/* Header */}
         <div className="space-y-3">
           <p className="text-xs font-black uppercase tracking-[0.3em] text-muted-foreground">
-            Last updated: April 20, 2026
+            Last updated: October 3, 2026
           </p>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tighter uppercase italic leading-none">
             Privacy Policy
@@ -56,6 +56,9 @@ export default function PrivacyPage() {
           </ul>
           <p className="text-muted-foreground leading-relaxed">
             This data is collected through third-party analytics tools (see Section 4) and is used solely to understand how users interact with the Site and improve our service.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Reviews and alerts:</strong> If you leave a star rating or written review, we receive it as a private message through Telegram, along with your country, device type, browser and the major you scanned. We do not publish reviews on the Site. Reviews are free text, so please do not include personal details such as your name, email address or phone number. We also receive a short alert through Telegram when someone scans a major, containing the major, country, device type, browser and referring website. These alerts and reviews never include your IP address.
           </p>
         </section>
 

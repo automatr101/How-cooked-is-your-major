@@ -17,6 +17,7 @@ import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
+import { ReviewBox } from "@/components/review-box";
 
 
 
@@ -570,6 +571,9 @@ export default function HomeClient() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Reviews go to Telegram; the scanned major (if any) is attached as context */}
+      <ReviewBox majorName={selectedMajor?.name} />
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-12 text-center space-y-3 opacity-60">
