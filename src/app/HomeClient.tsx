@@ -11,12 +11,13 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { playResultSound, replayLastSound, toggleMute, getIsMuted, getReactionClass, playSiteLoadSound, playReturnSound, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
+import { playResultSound, replayLastSound, toggleMute, useMuted, stopAllSounds, getReactionClass, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
+import { ReviewBox } from "@/components/review-box";
 
 
 
@@ -27,18 +28,17 @@ export default function HomeClient() {
   const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
   const [isScanning, setIsScanning] = useState(false);
   const [showComparisonSearch, setShowComparisonSearch] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const isMuted = useMuted(); // saved in localStorage, so it survives refreshes
   const [reactionClass, setReactionClass] = useState("");
   const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Trigger sound + reaction animation
-  const triggerSoundReaction = useCallback((score: number) => {
+  // Trigger the reaction animation, and the result sound unless `withSound` is false
+  const triggerSoundReaction = useCallback((score: number, withSound = true) => {
     const cls = getReactionClass(score);
     // Remove then re-add class to re-trigger animation
     setReactionClass("");
-    // Play sound instantly — the 2s scan animation already provides the drama
-    playResultSound(score);
+    if (withSound) playResultSound(score);
     if (cls) {
       requestAnimationFrame(() => {
         setReactionClass(cls);
@@ -47,15 +47,14 @@ export default function HomeClient() {
     }
   }, []);
 
-  // Unlock audio on first user interaction (iOS/Android requirement)
-  // Then play site-load sound once unlocked
+  // Unlock audio on first user interaction (iOS/Android requirement).
+  // This only primes the audio system with a silent clip; it makes no noise.
   useEffect(() => {
-    let played = false;
+    let unlocked = false;
     const handleFirstInteraction = () => {
-      if (played) return;
-      played = true;
+      if (unlocked) return;
+      unlocked = true;
       unlockAudio();
-      playSiteLoadSound();
       document.removeEventListener("touchstart", handleFirstInteraction);
       document.removeEventListener("click", handleFirstInteraction);
     };
@@ -72,15 +71,16 @@ export default function HomeClient() {
     notifyVisit();
   }, []);
 
-  // Play Discord notification when user returns to the tab (retention boost)
+  // Silence anything still playing when the visitor switches tabs or leaves the page
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        playReturnSound();
-      }
+      if (document.visibilityState === "hidden") stopAllSounds();
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      stopAllSounds();
+    };
   }, []);
 
   // Auto-select from URL params on mount
@@ -92,7 +92,7 @@ export default function HomeClient() {
         const found = majors.find(m => m.name === majorName);
         if (found) {
           setSelectedMajor(found);
-          triggerSoundReaction(found.score);
+          triggerSoundReaction(found.score, false); // opened from a shared link: no sound on arrival
           setTimeout(() => {
             document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
           }, 500);
@@ -146,8 +146,7 @@ export default function HomeClient() {
   };
 
   const handleToggleMute = () => {
-    const nowMuted = toggleMute();
-    setIsMuted(nowMuted);
+    toggleMute(); // updates the saved state; useMuted() re-renders the button
   };
 
   const handleShare = (platform: "x" | "wa") => {
@@ -570,6 +569,9 @@ export default function HomeClient() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Reviews go to Telegram; the scanned major (if any) is attached as context */}
+      <ReviewBox majorName={selectedMajor?.name} />
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-12 text-center space-y-3 opacity-60">
