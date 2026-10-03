@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "telegram:setup": "node scripts/telegram-setup.mjs",
-    "roast:check": "node scripts/check-roasts.mjs"
+    "roast:check": "node scripts/check-roasts.mjs",
+    "sound:check": "node scripts/check-sounds.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
