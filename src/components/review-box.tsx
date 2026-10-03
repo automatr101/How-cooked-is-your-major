@@ -10,8 +10,7 @@ const MAX_COMMENT = 500;
 const STORAGE_KEY = "cm_reviewed";
 const SNOOZE_KEY = "cm_review_snooze"; // when to ask again after "Maybe later" (ms timestamp)
 const SNOOZE_MS = 3 * 24 * 60 * 60 * 1000;
-const FIRST_DELAY_MS = 20000; // browsing without a result: ask after this long
-const RESULT_DELAY_MS = 8000; // after a result is shown: ask this long later
+const RESULT_DELAY_MS = 8000; // how long after a result is shown before we ask
 
 type Status = "idle" | "sending" | "sent" | "error" | "limited";
 
@@ -56,8 +55,8 @@ function snooze() {
   } catch {}
 }
 
-// A small rating card that slides in a few seconds after the visitor arrives (sooner once a result is
-// showing), the way apps ask for a rating. It never blocks the page. "Maybe later" or the X hides it for
+// A small rating card that slides in a few seconds after the visitor sees their result, the way apps ask
+// for a rating. It is never shown on the landing page before a scan. It never blocks the page. "Maybe later" or the X hides it for
 // three days; sending a review hides it for good. Reviews go to /api/review (which forwards them to Telegram).
 export function ReviewPopup({ majorName, hasResult }: { majorName?: string; hasResult: boolean }) {
   const reduceMotion = useReducedMotion();
@@ -70,12 +69,12 @@ export function ReviewPopup({ majorName, hasResult }: { majorName?: string; hasR
   const [hp, setHp] = useState(""); // honeypot: real visitors never see or fill this
   const [status, setStatus] = useState<Status>("idle");
 
-  // Start the timer; a result appearing restarts it with the shorter delay.
+  // Start the timer once a result is showing. No result, no popup.
   useEffect(() => {
-    if (closed || open || reviewed) return;
+    if (!hasResult || closed || open || reviewed) return;
     const id = setTimeout(() => {
       if (!getReviewed() && !snoozed()) setOpen(true);
-    }, hasResult ? RESULT_DELAY_MS : FIRST_DELAY_MS);
+    }, RESULT_DELAY_MS);
     return () => clearTimeout(id);
   }, [hasResult, closed, open, reviewed]);
 
