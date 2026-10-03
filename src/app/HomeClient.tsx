@@ -19,6 +19,7 @@ import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { ReviewBox } from "@/components/review-box";
 import { MajorSearch } from "@/components/major-search";
+import { SITE_HOST, SITE_URL } from "@/lib/site";
 
 
 
@@ -192,7 +193,7 @@ export default function HomeClient() {
 
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
-    const baseUrl = "https://how-cooked-is-your-major.vercel.app";
+    const baseUrl = SITE_URL;
     const shareUrl = `${baseUrl}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`;
     let text = buildShareText(shareUrl);
     // X counts every link as 23 characters and allows 280. Drop the roast if it would not fit.
@@ -322,7 +323,7 @@ export default function HomeClient() {
                 {/* Branding on Card */}
                 <div className="absolute top-3 left-4 sm:top-6 sm:left-8 flex items-center gap-2 opacity-30">
                   <BrainCircuit className="w-2 h-2 sm:w-3 sm:h-3" />
-                  <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">cooked-major.vercel.app</span>
+                  <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">{SITE_HOST}</span>
                 </div>
 
                 <div className="relative pt-6 sm:pt-8 sm:flex-1 flex flex-col sm:min-h-0">
@@ -407,7 +408,7 @@ export default function HomeClient() {
                     </div>
                     <div className="text-right">
                       <p className="text-[4px] sm:text-[6px] font-black text-muted-foreground uppercase mb-0.5">SCAN TO CHECK YOURS</p>
-                      <p className="text-[6px] sm:text-[10px] font-black">COOKED-MAJOR.VERCEL.APP</p>
+                      <p className="text-[6px] sm:text-[10px] font-black">{SITE_HOST.toUpperCase()}</p>
                     </div>
                   </div>
                 </div>
@@ -567,7 +568,7 @@ export default function HomeClient() {
               </button>
               <button
                 onClick={() => {
-                  const text = buildShareText("cooked-major.vercel.app");
+                  const text = buildShareText(SITE_HOST);
                   navigator.clipboard.writeText(text);
                   alert("Text copied! Ready to post 🫡");
                 }}
