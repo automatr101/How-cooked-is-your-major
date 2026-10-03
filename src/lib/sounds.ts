@@ -4,12 +4,13 @@
 // ═══════════════════════════════════════════════
 
 import { useSyncExternalStore } from "react";
+import { pickResultSound, soundUrl } from "./sound-pools";
 
 const MUTE_KEY = "cm_muted";
 
-// No sound plays longer than this. prowler-meme.wav is ~11 seconds, which feels endless,
-// so everything is cut off with a short fade after MAX_PLAY_MS.
-const MAX_PLAY_MS = 4000;
+// No sound plays longer than this, so a future long clip can't make noise for ages. The meme sounds
+// are all 5 seconds or shorter and end on their own; anything longer is faded out after MAX_PLAY_MS.
+const MAX_PLAY_MS = 5200;
 const FADE_MS = 400;
 
 // Mute is remembered in localStorage so it survives refreshes and new visits.
@@ -40,7 +41,9 @@ let audioCtx: AudioContext | null = null;
 
 function getAudioContext(): AudioContext {
   if (!audioCtx) {
-    audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+    // Older iOS Safari only has the prefixed name
+    const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    audioCtx = new Ctx();
   }
   return audioCtx;
 }
@@ -172,16 +175,18 @@ function vibrate(pattern: number | number[]) {
 // PRE-LOAD for mobile: call during user gesture (click),
 // then call playPending() after setTimeout
 // ═══════════════════════════════════════════════
+// The result sounds played so far this visit, newest first, so the same one doesn't repeat.
+const recentSounds: string[] = [];
+function chooseResultSound(score: number): string {
+  const name = pickResultSound(score, recentSounds);
+  recentSounds.unshift(name);
+  recentSounds.length = Math.min(recentSounds.length, 6);
+  return soundUrl(name);
+}
+
 export function preloadResultSound(score: number) {
-  let src = "";
-  if (score <= 60) {
-    src = "/sounds/crowd-clap.mp3";
-  } else if (score <= 80) {
-    src = "/sounds/prowler-meme.wav";
-  } else {
-    src = "/sounds/shotgun-fahh.mp3";
-  }
-  pendingAudio = new Audio(src);
+  // Choose the sound now (during the click) so the one that was loaded is the one that plays.
+  pendingAudio = new Audio(chooseResultSound(score));
   pendingAudio.load(); // Primes the audio during the gesture window
 }
 
@@ -211,16 +216,10 @@ export function playPendingSound(score: number) {
 // ═══════════════════════════════════════════════
 export const playResultSound = (score: number) => {
   if (muted()) return;
-  if (score <= 60) {
-    playSound("/sounds/crowd-clap.mp3");
-    vibrate([50, 50, 50]);
-  } else if (score <= 80) {
-    playSound("/sounds/prowler-meme.wav");
-    vibrate([100, 50, 100]);
-  } else {
-    playSound("/sounds/shotgun-fahh.mp3");
-    vibrate([200, 100, 200, 100, 400]);
-  }
+  playSound(chooseResultSound(score));
+  if (score > 80) vibrate([200, 100, 200, 100, 400]);
+  else if (score > 60) vibrate([100, 50, 100]);
+  else vibrate([50, 50, 50]);
 };
 
 // Sounds only play in response to something the visitor just did (scanning a major, or
