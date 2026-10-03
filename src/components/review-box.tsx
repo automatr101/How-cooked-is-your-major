@@ -1,11 +1,17 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
-import { Star } from "lucide-react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { Star, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SuccessIcon } from "@/components/ui/animated-state-icons";
 
 const MAX_COMMENT = 500;
 const STORAGE_KEY = "cm_reviewed";
+const SNOOZE_KEY = "cm_review_snooze"; // when to ask again after "Maybe later" (ms timestamp)
+const SNOOZE_MS = 3 * 24 * 60 * 60 * 1000;
+const FIRST_DELAY_MS = 20000; // browsing without a result: ask after this long
+const RESULT_DELAY_MS = 8000; // after a result is shown: ask this long later
 
 type Status = "idle" | "sending" | "sent" | "error" | "limited";
 
@@ -37,15 +43,71 @@ function setReviewed(value: boolean) {
   listeners.forEach((l) => l());
 }
 
-// Star rating plus an optional comment, sent to /api/review (which forwards it to Telegram).
-export function ReviewBox({ majorName }: { majorName?: string }) {
+function snoozed(): boolean {
+  try {
+    return Date.now() < Number(localStorage.getItem(SNOOZE_KEY) ?? 0);
+  } catch {
+    return false;
+  }
+}
+function snooze() {
+  try {
+    localStorage.setItem(SNOOZE_KEY, String(Date.now() + SNOOZE_MS));
+  } catch {}
+}
+
+// A small rating card that slides in a few seconds after the visitor arrives (sooner once a result is
+// showing), the way apps ask for a rating. It never blocks the page. "Maybe later" or the X hides it for
+// three days; sending a review hides it for good. Reviews go to /api/review (which forwards them to Telegram).
+export function ReviewPopup({ majorName, hasResult }: { majorName?: string; hasResult: boolean }) {
+  const reduceMotion = useReducedMotion();
+  const reviewed = useSyncExternalStore(subscribe, getReviewed, getServerReviewed);
+  const [open, setOpen] = useState(false);
+  const [closed, setClosed] = useState(false); // closed during this visit: don't show again until reload
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [comment, setComment] = useState("");
   const [hp, setHp] = useState(""); // honeypot: real visitors never see or fill this
   const [status, setStatus] = useState<Status>("idle");
-  const reviewed = useSyncExternalStore(subscribe, getReviewed, getServerReviewed);
-  const sent = status === "sent" || reviewed; // thank instead of asking again
+
+  // Start the timer; a result appearing restarts it with the shorter delay.
+  useEffect(() => {
+    if (closed || open || reviewed) return;
+    const id = setTimeout(() => {
+      if (!getReviewed() && !snoozed()) setOpen(true);
+    }, hasResult ? RESULT_DELAY_MS : FIRST_DELAY_MS);
+    return () => clearTimeout(id);
+  }, [hasResult, closed, open, reviewed]);
+
+  const dismiss = () => {
+    if (status !== "sent") snooze();
+    setOpen(false);
+    setClosed(true);
+  };
+
+  // Escape closes it (it isn't a blocking dialog, so this works wherever focus is)
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (status !== "sent") snooze();
+        setOpen(false);
+        setClosed(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, status]);
+
+  // After a successful send, show the thanks for a moment and then tuck the card away
+  useEffect(() => {
+    if (status !== "sent") return;
+    const id = setTimeout(() => {
+      setOpen(false);
+      setClosed(true);
+    }, 3000);
+    return () => clearTimeout(id);
+  }, [status]);
 
   const shown = hover || rating;
 
@@ -80,117 +142,128 @@ export function ReviewBox({ majorName }: { majorName?: string }) {
     }
   };
 
-  const again = () => {
-    setReviewed(false);
-    setRating(0);
-    setComment("");
-    setStatus("idle");
-  };
-
   return (
-    <section aria-labelledby="review-title" className="w-full max-w-2xl px-6 mt-24">
-      <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 space-y-6">
-        <div className="space-y-2">
-          <h2 id="review-title" className="text-2xl sm:text-3xl font-black tracking-tighter uppercase italic leading-none">
-            Rate your experience
-          </h2>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Was the scan useful? Leave a rating, and a few words if you like. Please don&apos;t include personal details.
-          </p>
-        </div>
+    <AnimatePresence>
+      {open && (
+        <motion.section
+          role="dialog"
+          aria-labelledby="review-title"
+          initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
+          animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="fixed inset-x-4 bottom-4 z-[90] sm:left-auto sm:right-6 sm:bottom-6 sm:w-[360px] rounded-3xl border border-border bg-card/95 p-5 shadow-2xl backdrop-blur-xl"
+        >
+          <button
+            type="button"
+            onClick={dismiss}
+            aria-label="Close"
+            className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+          >
+            <X className="h-4 w-4" />
+          </button>
 
-        {sent ? (
-          <div role="status" className="space-y-3">
-            <p className="text-lg font-bold">Thanks for the review! 🙌</p>
-            <button
-              type="button"
-              onClick={again}
-              className="text-xs font-black uppercase tracking-widest text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
-            >
-              Write another
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={submit} className="space-y-5">
-            <div
-              role="radiogroup"
-              aria-label="Rating out of 5 stars"
-              className="flex items-center gap-1"
-              onMouseLeave={() => setHover(0)}
-            >
-              {[1, 2, 3, 4, 5].map((n) => (
-                <button
-                  key={n}
-                  type="button"
-                  role="radio"
-                  aria-checked={rating === n}
-                  aria-label={`${n} star${n > 1 ? "s" : ""}`}
-                  tabIndex={rating === n || (rating === 0 && n === 1) ? 0 : -1}
-                  onClick={() => setRating(n)}
-                  onMouseEnter={() => setHover(n)}
-                  onKeyDown={(e) => onStarKeyDown(e, n)}
-                  className="rounded-lg p-1 transition-transform hover:scale-110 active:scale-95 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
-                >
-                  <Star
-                    aria-hidden
-                    className={cn(
-                      "h-9 w-9 transition-colors motion-reduce:transition-none",
-                      n <= shown ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"
-                    )}
-                  />
-                </button>
-              ))}
+          {status === "sent" ? (
+            <div role="status" className="flex items-center gap-3 py-2 pr-6">
+              <SuccessIcon active size={40} className="shrink-0 text-emerald-500" />
+              <p className="text-base font-black tracking-tight">Thanks for the review!</p>
             </div>
+          ) : (
+            <form onSubmit={submit} className="space-y-4">
+              <div className="space-y-1 pr-8">
+                <h2 id="review-title" className="text-lg font-black tracking-tighter uppercase italic leading-tight">
+                  Enjoying the scan?
+                </h2>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Rate it. A few words are optional, and please leave out personal details.
+                </p>
+              </div>
 
-            <div className="space-y-2">
-              <label htmlFor="review-comment" className="text-[10px] font-black uppercase tracking-[0.25em] text-muted-foreground">
-                Tell us more (optional)
-              </label>
-              <textarea
-                id="review-comment"
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-                maxLength={MAX_COMMENT}
-                rows={3}
-                placeholder="What was good, what was off?"
-                className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
-              />
-              <p className="text-right text-[10px] font-bold text-muted-foreground/60" aria-hidden>
-                {comment.length}/{MAX_COMMENT}
-              </p>
-            </div>
-
-            {/* Honeypot */}
-            <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
-              <label>
-                Leave this empty
-                <input tabIndex={-1} autoComplete="off" name="hp" value={hp} onChange={(e) => setHp(e.target.value)} />
-              </label>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4">
-              <button
-                type="submit"
-                disabled={rating === 0 || status === "sending"}
-                className="rounded-full bg-primary px-7 py-3 text-xs font-black uppercase tracking-widest text-primary-foreground transition active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              <div
+                role="radiogroup"
+                aria-label="Rating out of 5 stars"
+                className="flex items-center gap-0.5"
+                onMouseLeave={() => setHover(0)}
               >
-                {status === "sending" ? "Sending…" : "Send review"}
-              </button>
-              {rating === 0 && <span className="text-xs text-muted-foreground">Pick a star rating to send.</span>}
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    role="radio"
+                    aria-checked={rating === n}
+                    aria-label={`${n} star${n > 1 ? "s" : ""}`}
+                    tabIndex={rating === n || (rating === 0 && n === 1) ? 0 : -1}
+                    onClick={() => setRating(n)}
+                    onMouseEnter={() => setHover(n)}
+                    onKeyDown={(e) => onStarKeyDown(e, n)}
+                    className="rounded-lg p-1 transition-transform hover:scale-110 active:scale-95 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                  >
+                    <Star
+                      aria-hidden
+                      className={cn(
+                        "h-8 w-8 transition-colors motion-reduce:transition-none",
+                        n <= shown ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"
+                      )}
+                    />
+                  </button>
+                ))}
+              </div>
+
+              {rating > 0 && (
+                <div className="space-y-1">
+                  <label htmlFor="review-comment" className="sr-only">
+                    Tell us more (optional)
+                  </label>
+                  <textarea
+                    id="review-comment"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                    maxLength={MAX_COMMENT}
+                    rows={2}
+                    placeholder="What was good, what was off? (optional)"
+                    className="w-full resize-none rounded-2xl border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                  />
+                </div>
+              )}
+
+              {/* Honeypot */}
+              <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                <label>
+                  Leave this empty
+                  <input tabIndex={-1} autoComplete="off" name="hp" value={hp} onChange={(e) => setHp(e.target.value)} />
+                </label>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  type="submit"
+                  disabled={rating === 0 || status === "sending"}
+                  className="rounded-full bg-primary px-5 py-2.5 text-xs font-black uppercase tracking-widest text-primary-foreground transition active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+                >
+                  {status === "sending" ? "Sending…" : "Send"}
+                </button>
+                <button
+                  type="button"
+                  onClick={dismiss}
+                  className="text-xs font-black uppercase tracking-widest text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
+                >
+                  Maybe later
+                </button>
+              </div>
               {status === "error" && (
-                <span role="alert" className="text-xs font-bold text-destructive">
+                <p role="alert" className="text-xs font-bold text-destructive">
                   Couldn&apos;t send that. Please try again.
-                </span>
+                </p>
               )}
               {status === "limited" && (
-                <span role="alert" className="text-xs font-bold text-destructive">
+                <p role="alert" className="text-xs font-bold text-destructive">
                   You&apos;ve sent a few reviews already. Please try again later.
-                </span>
+                </p>
               )}
-            </div>
-          </form>
-        )}
-      </div>
-    </section>
+            </form>
+          )}
+        </motion.section>
+      )}
+    </AnimatePresence>
   );
 }

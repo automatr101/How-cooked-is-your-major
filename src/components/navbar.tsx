@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BrainCircuit, Menu, Volume2, VolumeX, X } from "lucide-react";
+import { BrainCircuit } from "lucide-react";
+import { MenuCloseIcon, VolumeIcon } from "@/components/ui/animated-state-icons";
 import { ThemeToggle } from "./theme-toggle";
 import { toggleMute, useMuted } from "@/lib/sounds";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,7 @@ const LINKS = [
   { href: "/", label: "Home" },
   { href: "/leaderboard", label: "Leaderboard" },
   { href: "/compare", label: "Compare" },
+  { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
 ];
 
@@ -46,7 +48,7 @@ function MuteButton({ muted, onToggle }: { muted: boolean; onToggle: () => void 
       title={muted ? "Unmute sounds" : "Mute sounds"}
       className={ICON_BUTTON}
     >
-      {muted ? <VolumeX className="h-4 w-4 text-white/60" /> : <Volume2 className="h-4 w-4" />}
+      <VolumeIcon active={muted} size={24} className={muted ? "text-white/60" : undefined} />
     </button>
   );
 }
@@ -164,18 +166,7 @@ export function Navbar() {
               aria-label={open ? "Close menu" : "Open menu"}
               className={cn(ICON_BUTTON, "relative md:hidden")}
             >
-              <Menu
-                className={cn(
-                  "absolute inset-0 m-auto h-5 w-5 transition duration-300 motion-reduce:transition-none",
-                  open ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
-                )}
-              />
-              <X
-                className={cn(
-                  "absolute inset-0 m-auto h-5 w-5 transition duration-300 motion-reduce:transition-none",
-                  open ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
-                )}
-              />
+              <MenuCloseIcon active={open} size={28} className="absolute inset-0 m-auto" />
             </button>
           </div>
         </div>

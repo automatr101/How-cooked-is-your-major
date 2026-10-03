@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { Search, Info, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
+import { Search, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { majors, Major, getLevelColor } from "@/lib/data";
@@ -17,14 +17,18 @@ import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
-import { ReviewBox } from "@/components/review-box";
+import { ReviewPopup } from "@/components/review-box";
 import { MajorSearch } from "@/components/major-search";
+import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
 
 
 
 export default function HomeClient() {
   const [query, setQuery] = useState("");
+  // Brief "done" states for the Save card and Copy text buttons (their icons animate to a checkmark).
+  const [saved, setSaved] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [comparisonQuery, setComparisonQuery] = useState("");
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
   const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
@@ -150,6 +154,8 @@ export default function HomeClient() {
       link.download = `cooked-${selectedMajor?.name.toLowerCase()}.png`;
       link.href = dataUrl;
       link.click();
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
     } catch (err) {
       console.error("oops, something went wrong!", err);
     }
@@ -284,7 +290,7 @@ export default function HomeClient() {
       </AnimatePresence>
 
       {/* Search Section */}
-      <div id="search" className="w-full max-w-2xl mt-16 relative z-30 px-6">
+      <div id="search" className="w-full max-w-xl mt-16 relative z-30 px-6">
         <MajorSearch
           value={query}
           onChange={(value) => {
@@ -304,9 +310,12 @@ export default function HomeClient() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 30 }}
-            className="w-full max-w-2xl mt-16 z-20 relative px-4"
+            className="w-full max-w-2xl lg:max-w-5xl mt-16 z-20 relative px-4"
             id="result"
           >
+            {/* Laptops and desktops: the card and its tips on the left, compare and share on the right. Phones stack them. */}
+            <div className="lg:grid lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-12 lg:items-start lg:justify-center">
+            <div className="min-w-0">
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <BackgroundGradient
               containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
@@ -436,10 +445,11 @@ export default function HomeClient() {
               </button>
             </div>
 
-            <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
+            </div>
 
+            <div className="min-w-0 lg:sticky lg:top-24">
             {/* Comparison Section */}
-            <div className="mt-12 w-full">
+            <div className="mt-12 lg:mt-0 w-full">
               {!showComparisonSearch && !comparedMajor && (
                 <button
                   onClick={() => setShowComparisonSearch(true)}
@@ -497,7 +507,7 @@ export default function HomeClient() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-8 lg:mt-0"
                 >
                   {[selectedMajor, comparedMajor].map((m, idx) => {
                     const isMoreAtRisk = idx === 0 ? selectedMajor.score > comparedMajor.score : comparedMajor.score > selectedMajor.score;
@@ -535,7 +545,7 @@ export default function HomeClient() {
 
                   <button
                     onClick={() => setComparedMajor(null)}
-                    className="md:col-span-2 py-4 text-[10px] font-black uppercase text-muted-foreground hover:text-foreground transition-colors"
+                    className="md:col-span-2 lg:col-span-1 py-4 text-[10px] font-black uppercase text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Clear Comparison
                   </button>
@@ -544,7 +554,7 @@ export default function HomeClient() {
             </div>
 
             {/* Actions for User */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-8 px-4 lg:px-0">
               <button
                 onClick={() => handleShare("x")}
                 className="py-4 rounded-2xl bg-sky-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
@@ -563,27 +573,38 @@ export default function HomeClient() {
                 onClick={handleDownload}
                 className="py-4 rounded-2xl bg-foreground text-background font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
-                <Info className="w-4 h-4" />
-                SAVE CARD
+                <DownloadDoneIcon active={saved} size={24} className="-ml-1" />
+                {saved ? "SAVED" : "SAVE CARD"}
               </button>
               <button
                 onClick={() => {
                   const text = buildShareText(SITE_HOST);
-                  navigator.clipboard.writeText(text);
-                  alert("Text copied! Ready to post 🫡");
+                  navigator.clipboard
+                    .writeText(text)
+                    .then(() => {
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 2000);
+                    })
+                    .catch(() => alert("Couldn't copy. Select the text and copy it by hand."));
                 }}
                 className="py-4 rounded-2xl bg-muted border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
               >
-                <Sparkles className="w-4 h-4 fill-current" />
-                COPY TEXT
+                <CopiedIcon active={copied} size={24} className="-ml-1" />
+                <span aria-live="polite">{copied ? "COPIED!" : "COPY TEXT"}</span>
               </button>
+            </div>
+
+            <div className="mt-8">
+              <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
+            </div>
+            </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Reviews go to Telegram; the scanned major (if any) is attached as context */}
-      <ReviewBox majorName={selectedMajor?.name} />
+      {/* The rating popup appears after a few seconds. Reviews go to Telegram; the scanned major (if any) is attached as context */}
+      <ReviewPopup majorName={selectedMajor?.name} hasResult={!!selectedMajor} />
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-12 text-center space-y-3 opacity-60">
@@ -592,6 +613,8 @@ export default function HomeClient() {
         </p>
         <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
           <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+          <span className="opacity-30">·</span>
+          <a href="/contact" className="hover:text-foreground transition-colors">Contact</a>
           <span className="opacity-30">·</span>
           <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">@cookedlabs_cto</a>
         </div>
