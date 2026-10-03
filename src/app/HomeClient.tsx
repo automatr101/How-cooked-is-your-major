@@ -315,23 +315,23 @@ export default function HomeClient() {
               <div
                 ref={cardRef}
                 className={cn(
-                  "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between sm:aspect-[4/5] overflow-hidden text-foreground w-full",
+                  "relative rounded-[26px] sm:rounded-[32px] border-2 sm:border-4 border-foreground bg-card p-4 sm:p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] sm:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] flex flex-col justify-between sm:aspect-[4/5] overflow-clip text-foreground w-full",
                   resolvedTheme === "dark" ? "dark" : "",
                   reactionClass
                 )}
               >
                 {/* Branding on Card */}
-                <div className="absolute top-3 left-4 sm:top-6 sm:left-8 flex items-center gap-2 opacity-30">
+                <div className="absolute top-3 left-4 sm:top-5 sm:left-6 flex items-center gap-2 opacity-30">
                   <BrainCircuit className="w-2 h-2 sm:w-3 sm:h-3" />
                   <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest">{SITE_HOST}</span>
                 </div>
 
-                <div className="relative pt-6 sm:pt-8 sm:flex-1 flex flex-col sm:min-h-0">
+                <div className="relative pt-6 sm:flex-1 flex flex-col">
                   {/* Top Header Area */}
-                  <div className="flex justify-between items-start mb-2 sm:mb-4">
+                  <div className="flex justify-between items-start mb-2 sm:mb-3">
                     <div className="max-w-[75%]">
                       <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
-                      <h2 className="text-[11px] sm:text-xl md:text-3xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
+                      <h2 className="text-[11px] sm:text-xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                     </div>
                     <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">
                       <Sparkles className="w-3 h-3 sm:w-7 sm:h-7 fill-current" />
@@ -339,12 +339,12 @@ export default function HomeClient() {
                   </div>
 
                   {/* Split Dashboard Area */}
-                  <div className="grid grid-cols-2 gap-2 mb-1.5 sm:mb-4 pt-1.5 sm:pt-4 border-t border-foreground/10">
+                  <div className="grid grid-cols-2 gap-2 mb-1.5 sm:mb-3 pt-1.5 sm:pt-3 border-t border-foreground/10">
                     <div className="space-y-0.5">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">AI RISK LEVEL</p>
                       <div className="relative inline-flex items-baseline gap-0.5">
                         <span className={cn(
-                          "text-3xl sm:text-5xl md:text-7xl font-black tabular-nums tracking-tighter leading-none",
+                          "text-3xl sm:text-5xl font-black tabular-nums tracking-tighter leading-none",
                           selectedMajor.score > 80 ? "text-destructive" : selectedMajor.score > 40 ? "text-orange-500" : "text-emerald-500"
                         )}>
                           <AnimatedNumber value={selectedMajor.score} />
@@ -356,7 +356,7 @@ export default function HomeClient() {
                     <div className="space-y-0.5 flex flex-col items-start pl-2 sm:pl-4 border-l border-foreground/10">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SURVIVAL STATUS</p>
                       <span className={cn(
-                        "text-[11px] sm:text-xl md:text-3xl font-black tracking-tighter uppercase leading-tight italic",
+                        "text-[11px] sm:text-xl font-black tracking-tighter uppercase leading-tight italic",
                         selectedMajor.score > 75 ? "text-destructive" : "text-foreground"
                       )}>
                         {selectedMajor.level}
@@ -365,7 +365,7 @@ export default function HomeClient() {
                   </div>
 
                   {/* Market Stats Dashboard */}
-                  <div className="grid grid-cols-2 gap-2 sm:gap-6 mb-1.5 sm:mb-4 pt-1.5 sm:pt-4 border-t border-foreground/10">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-6 mb-1.5 sm:mb-3 pt-1.5 sm:pt-3 border-t border-foreground/10">
                     <div className="space-y-0.5">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SALARY RANGE</p>
                       <p className="text-[10px] sm:text-base font-black tabular-nums tracking-tighter text-foreground">
@@ -385,7 +385,7 @@ export default function HomeClient() {
                   </div>
 
                   {/* Roast Verdict Area */}
-                  <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-4 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0 max-sm:min-h-[4.5rem]">
+                  <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-3 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0 max-sm:min-h-[4.5rem]">
                     <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
                     {/* A new key on every roll makes the text fade/slide in. Quick and subtle. */}
                     <motion.p
@@ -394,21 +394,21 @@ export default function HomeClient() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.22, ease: "easeOut" }}
                       aria-live="polite"
-                      className="text-[10px] sm:text-xs md:text-sm font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4"
+                      className="text-[10px] sm:text-xs font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4"
                     >
                       &ldquo;{roast?.text ?? selectedMajor.roast}&rdquo;
                     </motion.p>
                   </div>
 
                   {/* Card Footer */}
-                  <div className="pt-1.5 sm:pt-6 mt-1 sm:mt-4 border-t border-foreground/10 flex justify-between items-end">
+                  <div className="pt-1.5 sm:pt-4 mt-1 sm:mt-3 border-t border-foreground/10 flex justify-between items-end">
                     <div>
                       <p className="text-[4px] sm:text-[6px] font-black text-muted-foreground uppercase mb-0.5">DATA VERIFIED BY</p>
                       <p className="text-[6px] sm:text-[10px] font-black">MAJORLABS INTELLIGENCE</p>
                     </div>
                     <div className="text-right">
                       <p className="text-[4px] sm:text-[6px] font-black text-muted-foreground uppercase mb-0.5">SCAN TO CHECK YOURS</p>
-                      <p className="text-[6px] sm:text-[10px] font-black">{SITE_HOST.toUpperCase()}</p>
+                      <p className="text-[6px] sm:text-[8px] font-black whitespace-nowrap">{SITE_HOST.toUpperCase()}</p>
                     </div>
                   </div>
                 </div>
