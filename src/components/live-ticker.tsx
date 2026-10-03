@@ -21,8 +21,8 @@ export function LiveTicker() {
   // In a real app, you'd fetch the latest 10-15 scans from Supabase here
   // For now, we'll use our placeholders to ensure it looks alive immediately
 
-  const tickerContent = scans.map((s, i) => (
-    <span key={i} className="inline-flex items-center gap-2">
+  const renderItems = (copy: number) => scans.map((s, i) => (
+    <span key={`${copy}-${i}`} className="inline-flex items-center gap-2">
       <span className="text-primary font-bold">{s.major}</span>
       <span className="text-muted-foreground/60 mx-1">rated</span>
       <span className={s.score > 70 ? "text-destructive" : "text-emerald-500"}>
@@ -51,7 +51,7 @@ export function LiveTicker() {
             className="flex items-center gap-4 text-[12px] font-medium"
           >
             {/* Double the content for seamless loop */}
-            {[...tickerContent, ...tickerContent]}
+            {[...renderItems(0), ...renderItems(1)]}
           </motion.div>
         </div>
       </div>

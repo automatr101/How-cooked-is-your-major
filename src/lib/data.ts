@@ -8,16388 +8,1846 @@ export type Major = {
   growth: string;
 }
 
-export const majors: Major[] = [
-  {
-    "name": "Accounting",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Accounting Analytics",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Accounting Engineering",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Accounting Management",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Accounting Policy",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Accounting Practice",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Accounting Science",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Accounting Studies",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Accounting Technology",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Advanced Accounting",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Advanced Accounting Analytics",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Advanced Accounting Engineering",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Accounting Management",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $142k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Advanced Accounting Policy",
-    "score": 97,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $132k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Advanced Accounting Practice",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Advanced Accounting Science",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Advanced Accounting Studies",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $142k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Advanced Accounting Technology",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Advanced Biology",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Biology Analytics",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Biology Engineering",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$111k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Biology Management",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Biology Policy",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Advanced Biology Practice",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Biology Science",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $201k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Advanced Biology Studies",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Advanced Biology Technology",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Advanced Business",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $194k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Business Analytics",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Business Engineering",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$102k - $191k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Business Management",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $200k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Business Policy",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Business Practice",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Business Science",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Business Studies",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Business Technology",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Chemistry",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Analytics",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $201k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Engineering",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$106k - $200k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Management",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $202k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Policy",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Practice",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Science",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $204k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Studies",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Chemistry Technology",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Computer Science",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Analytics",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $200k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Engineering",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Policy",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Practice",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$105k - $211k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Science",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Studies",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Computer Science Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Data Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $201k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Advanced Data Science Analytics",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$107k - $192k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Data Science Engineering",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Advanced Data Science Management",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $201k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Advanced Data Science Policy",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Advanced Data Science Practice",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Advanced Data Science Science",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Advanced Data Science Studies",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $208k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Advanced Data Science Technology",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Advanced Education",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Analytics",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Engineering",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$110k - $206k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Education Management",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Policy",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $115k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Practice",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Science",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Studies",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Education Technology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Engineering",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $213k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Engineering Analytics",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Engineering Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Engineering Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Advanced Engineering Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Engineering Practice",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $216k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Engineering Science",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Engineering Studies",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Engineering Technology",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Advanced Finance",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Advanced Finance Analytics",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Finance Engineering",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$98k - $185k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Advanced Finance Management",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Advanced Finance Policy",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Finance Practice",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Advanced Finance Science",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Advanced Finance Studies",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Finance Technology",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Analytics",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Engineering",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$80k - $150k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Management",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Policy",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Practice",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Science",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Studies",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Advanced Graphic Design Technology",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $104k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Advanced Information Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Engineering",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$96k - $180k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Management",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Policy",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Practice",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Science",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Studies",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Information Technology Technology",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Law",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Law Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Law Engineering",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$95k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Advanced Law Management",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Law Policy",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $227k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Law Practice",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $244k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Law Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Law Studies",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $232k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Law Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Advanced Marketing",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Advanced Marketing Analytics",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Advanced Marketing Engineering",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$94k - $177k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Advanced Marketing Management",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Advanced Marketing Policy",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Advanced Marketing Practice",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Advanced Marketing Science",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Advanced Marketing Studies",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Advanced Marketing Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $139k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Advanced Mathematics",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Analytics",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Engineering",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$108k - $202k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Management",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Policy",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Practice",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Science",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Studies",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Mathematics Technology",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Advanced Nursing",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Advanced Nursing Analytics",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Advanced Nursing Engineering",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Nursing Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Advanced Nursing Policy",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Advanced Nursing Practice",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Advanced Nursing Science",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Advanced Nursing Studies",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Your major is the 'Before' picture in an AI automation success story.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Advanced Nursing Technology",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Advanced Physics",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Physics Analytics",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Advanced Physics Engineering",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$105k - $197k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Advanced Physics Management",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Advanced Physics Policy",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Physics Practice",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Advanced Physics Science",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Advanced Physics Studies",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $139k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Physics Technology",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Advanced Psychology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Psychology Analytics",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Psychology Engineering",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$117k - $220k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Advanced Psychology Management",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Psychology Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Psychology Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Psychology Science",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Psychology Studies",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Psychology Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Analytics",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Engineering",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Management",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Policy",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Practice",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Science",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Studies",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$83k - $156k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Advanced Software Engineering Technology",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Accounting",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Applied Accounting Analytics",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Applied Accounting Engineering",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$82k - $154k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Accounting Management",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Applied Accounting Policy",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $142k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Applied Accounting Practice",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Applied Accounting Science",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Applied Accounting Studies",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$67k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Applied Accounting Technology",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Applied Biology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Applied Biology Analytics",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $199k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Applied Biology Engineering",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Applied Biology Management",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Biology Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Applied Biology Practice",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Applied Biology Science",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Applied Biology Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Applied Biology Technology",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Applied Business",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $194k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Business Analytics",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $199k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Business Engineering",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$96k - $181k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Business Management",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Business Policy",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Business Practice",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Business Science",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Business Studies",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Business Technology",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $201k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Chemistry",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $204k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Analytics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Engineering",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$108k - $202k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Applied Chemistry Management",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $207k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Policy",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Practice",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Science",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $207k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Chemistry Studies",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $213k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Chemistry Technology",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Computer Science",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Computer Science Analytics",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $199k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Computer Science Engineering",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$94k - $176k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Computer Science Management",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$106k - $212k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Computer Science Policy",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Computer Science Practice",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Computer Science Science",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$106k - $212k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Computer Science Studies",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Computer Science Technology",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Data Science",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $196k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Data Science Analytics",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $197k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Data Science Engineering",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$98k - $183k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Data Science Management",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Data Science Policy",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Data Science Practice",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $203k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Applied Data Science Science",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $203k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Applied Data Science Studies",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Data Science Technology",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Education",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Analytics",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Engineering",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Applied Education Management",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Policy",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Practice",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Science",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Studies",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Education Technology",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Engineering Analytics",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Engineering Engineering",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Engineering Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Engineering Policy",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Applied Engineering Practice",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Engineering Science",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Engineering Studies",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Engineering Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Applied Finance",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Finance Analytics",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Applied Finance Engineering",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$100k - $187k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Applied Finance Management",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Finance Policy",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Finance Practice",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Finance Science",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Applied Finance Studies",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Finance Technology",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Applied Graphic Design",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Analytics",
-    "score": 98,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Engineering",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$82k - $154k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Management",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Policy",
-    "score": 97,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Practice",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Science",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Studies",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Applied Graphic Design Technology",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Applied Information Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Information Technology Analytics",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Applied Information Technology Engineering",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$93k - $174k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Information Technology Management",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Information Technology Policy",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Applied Information Technology Practice",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Applied Information Technology Science",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Information Technology Studies",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Applied Information Technology Technology",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Law",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $233k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Law Analytics",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $227k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Law Engineering",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Law Management",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $226k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Law Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Law Practice",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $244k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Law Science",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $226k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Law Studies",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Law Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Marketing",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Marketing Analytics",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Marketing Engineering",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$95k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Marketing Management",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Applied Marketing Policy",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Marketing Practice",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Marketing Science",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $147k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Applied Marketing Studies",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Marketing Technology",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Applied Mathematics",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Applied Mathematics Analytics",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Applied Mathematics Engineering",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$101k - $190k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Applied Mathematics Management",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Mathematics Policy",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Applied Mathematics Practice",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Mathematics Science",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Mathematics Studies",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Mathematics Technology",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Applied Nursing",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "The robot revolution called. They said thanks for the training data.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Analytics",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Engineering",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$120k - $225k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Applied Nursing Management",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Policy",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Practice",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Science",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Your curriculum was outdated by the time you finished this sentence.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Studies",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Applied Nursing Technology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Applied Physics",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Applied Physics Analytics",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Physics Engineering",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$104k - $196k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Applied Physics Management",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Physics Policy",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $139k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Physics Practice",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Applied Physics Science",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $139k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Physics Studies",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Applied Physics Technology",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Applied Psychology",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Applied Psychology Analytics",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Psychology Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Applied Psychology Management",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Psychology Policy",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Psychology Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Psychology Science",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Psychology Studies",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Applied Psychology Technology",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Software Engineering",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Analytics",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $157k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Engineering",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Management",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Policy",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$83k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Practice",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Science",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Studies",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Applied Software Engineering Technology",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "BA. Communication Design",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BA. Culture and Tourism",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BA. Economics",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BA. English",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BA. Entrepreneurship",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BA. French",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BA. Geography and Rural Development",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BA. History",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "BA. Human Resources",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "BA. Integrated Rural Art and Industry",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BA. Political Studies",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BA. Publishing Studies",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "Your major is the 'Before' picture in an AI automation success story.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BA. Religious Studies",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "The robot revolution called. They said thanks for the training data.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BA. Social Work",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BA. Sociology",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Bachelor of Dental Surgery",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Bachelor of Herbal Medicine",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$187k - $498k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Bachelor of ICT with Education",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "BFA. Painting and Sculpture",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Biology",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Analytics",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Engineering",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Biology Management",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Biology Policy",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Practice",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Science",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Studies",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Biology Technology",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "BSc. Actuarial Science",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Aerospace Engineering",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Agribusiness Management",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Agricultural Biotechnology",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "BSc. Agricultural Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Agriculture",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Aquaculture & Water Resources Management",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Architecture",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Automobile Engineering",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Biochemistry",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$67k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "BSc. Biological Science",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Business Administration",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Ceramics Design Technology",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Chemical Engineering",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Chemistry",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $208k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "BSc. Civil Engineering",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Computer Engineering",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Computer Science",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Construction Technology and Management",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Dairy and Meat Science and Technology",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Development Planning",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "Your curriculum was outdated by the time you finished this sentence.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Disability and Rehabilitation Studies",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Electrical/Electronic Engineering",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Environmental Sciences",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Fashion Design",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Food Science and Technology",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Forest Resources Technology",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Geological Engineering",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Geomatic Engineering",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Human Biology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $199k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "BSc. Human Settlement Planning",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "BSc. Industrial Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Land Economy",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Landscape Design and Management",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Marine Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Marketing",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "BSc. Materials Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Mathematics",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "BSc. Mechanical Engineering",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Medical Imaging",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Medical Laboratory Sciences",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Metal Product Design Technology",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Metallurgical Engineering",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Meteorology and Climate Science",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Midwifery",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Natural Resources Management",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Nursing",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Your major is the 'Before' picture in an AI automation success story.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "BSc. Packaging Technology",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "BSc. Petrochemical Engineering",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "BSc. Petroleum Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Physics",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Physiotherapy and Sports Science",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "BSc. Post Harvest Technology",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Procurement and Supply Chain Management",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "BSc. Quantity Surveying and Construction Economics",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Real Estate",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "The robot revolution called. They said thanks for the training data.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "BSc. Statistics",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "BSc. Telecommunication Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "BSc. Textile Design and Technology",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Business",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Business Analytics",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Business Engineering",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Business Management",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Business Policy",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Business Practice",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Business Science",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $200k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Business Studies",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $197k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Business Technology",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Chemistry",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Analytics",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Engineering",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Chemistry Management",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Policy",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Practice",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Science",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Studies",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Chemistry Technology",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Accounting",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Clinical Accounting Analytics",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Clinical Accounting Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Accounting Management",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Clinical Accounting Policy",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Clinical Accounting Practice",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Clinical Accounting Science",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Clinical Accounting Studies",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Clinical Accounting Technology",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Clinical Biology",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Clinical Biology Analytics",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Clinical Biology Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Biology Management",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Biology Policy",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $192k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Biology Practice",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Biology Science",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Biology Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Biology Technology",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Business",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Business Analytics",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Clinical Business Engineering",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Business Management",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $199k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Business Policy",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Business Practice",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Business Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $189k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Business Studies",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $200k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Clinical Business Technology",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Clinical Chemistry",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Analytics",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Management",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Practice",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Science",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $211k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Studies",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Chemistry Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Computer Science",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $202k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Analytics",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $199k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Engineering",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$90k - $168k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Management",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Policy",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $209k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Practice",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Science",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $202k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Studies",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $200k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Computer Science Technology",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Data Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $201k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Clinical Data Science Analytics",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$115k - $206k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Clinical Data Science Engineering",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$96k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Data Science Management",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Clinical Data Science Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $201k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Clinical Data Science Practice",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Clinical Data Science Science",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Data Science Studies",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Clinical Data Science Technology",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $207k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Clinical Education",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Analytics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $115k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Engineering",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Education Management",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Practice",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Science",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Studies",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $115k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Education Technology",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Engineering Analytics",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Engineering Engineering",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Engineering Management",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Engineering Policy",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Engineering Practice",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Engineering Science",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Engineering Studies",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Engineering Technology",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Finance",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Finance Analytics",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Finance Engineering",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$100k - $187k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Clinical Finance Management",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Finance Policy",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Finance Practice",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Finance Science",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Finance Studies",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Finance Technology",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Analytics",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Engineering",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$80k - $150k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Management",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Policy",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Practice",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Science",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Studies",
-    "score": 98,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Clinical Graphic Design Technology",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Clinical Information Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Analytics",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Engineering",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$95k - $178k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Policy",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$55k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Practice",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Studies",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Information Technology Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Law",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $232k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Law Analytics",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Law Engineering",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Law Management",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Law Policy",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $243k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Law Practice",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Law Science",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $238k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Law Studies",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Law Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$80k - $228k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Marketing",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Marketing Analytics",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Marketing Engineering",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$96k - $181k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Marketing Management",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Marketing Policy",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Clinical Marketing Practice",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$63k - $150k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Clinical Marketing Science",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Clinical Marketing Studies",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Clinical Marketing Technology",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $147k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Analytics",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Engineering",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$103k - $194k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Management",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Policy",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Practice",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Science",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Studies",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Clinical Mathematics Technology",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Nursing",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Clinical Nursing Analytics",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Clinical Nursing Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Clinical Nursing Management",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Clinical Nursing Policy",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$93k - $157k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Clinical Nursing Practice",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Clinical Nursing Science",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Clinical Nursing Studies",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Clinical Nursing Technology",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Clinical Physics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Physics Analytics",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $139k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Clinical Physics Engineering",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$106k - $198k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Clinical Physics Management",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Clinical Physics Policy",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Clinical Physics Practice",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $139k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Clinical Physics Science",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Clinical Physics Studies",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Clinical Physics Technology",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Clinical Psychology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Psychology Analytics",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Psychology Engineering",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Clinical Psychology Management",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Psychology Policy",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Psychology Practice",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Psychology Science",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Clinical Psychology Studies",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $146k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Clinical Psychology Technology",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $149k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Analytics",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Engineering",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Management",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Policy",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Practice",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Science",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Studies",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Clinical Software Engineering Technology",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Accounting",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Computational Accounting Analytics",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Computational Accounting Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Computational Accounting Management",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$67k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Computational Accounting Policy",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Computational Accounting Practice",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Computational Accounting Science",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Computational Accounting Studies",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Computational Accounting Technology",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Computational Biology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Computational Biology Analytics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Biology Engineering",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$109k - $205k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Computational Biology Management",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Computational Biology Policy",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Computational Biology Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $199k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Computational Biology Science",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $191k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Computational Biology Studies",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Computational Biology Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Computational Business",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Business Analytics",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Business Engineering",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$98k - $185k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Computational Business Management",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $199k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Business Policy",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Business Practice",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Business Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $189k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Business Studies",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $204k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Computational Business Technology",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Computational Chemistry",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Chemistry Analytics",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Chemistry Engineering",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Computational Chemistry Management",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Chemistry Policy",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $204k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Chemistry Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $213k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Chemistry Science",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Chemistry Studies",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Chemistry Technology",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $202k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Computer Science",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $199k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Computational Computer Science Analytics",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Computer Science Engineering",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Computer Science Management",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Computer Science Policy",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$105k - $211k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Computer Science Practice",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Computer Science Science",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Computer Science Studies",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Computer Science Technology",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $199k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Computational Data Science",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Computational Data Science Analytics",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Computational Data Science Engineering",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$95k - $178k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Data Science Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $196k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Computational Data Science Policy",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Data Science Practice",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$107k - $192k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Data Science Science",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Data Science Studies",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Data Science Technology",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Computational Education",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Analytics",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Engineering",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$110k - $206k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Computational Education Management",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Policy",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $115k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Practice",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Science",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Computational Education Studies",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Education Technology",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Computational Engineering",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Engineering Analytics",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Engineering Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Engineering Management",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Engineering Policy",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Computational Engineering Practice",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Computational Engineering Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Computational Engineering Studies",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $220k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Engineering Technology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Computational Finance",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Finance Analytics",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Computational Finance Engineering",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$95k - $178k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Finance Management",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Finance Policy",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Finance Practice",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Finance Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Finance Studies",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computational Finance Technology",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Graphic Design",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Analytics",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Engineering",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Management",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Policy",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Practice",
-    "score": 98,
-    "level": "Extremely Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Science",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Studies",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Computational Graphic Design Technology",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Computational Information Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Information Technology Analytics",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Information Technology Engineering",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$96k - $180k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Information Technology Management",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Information Technology Policy",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Information Technology Practice",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Information Technology Science",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Computational Information Technology Studies",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Information Technology Technology",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Law",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Law Analytics",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Law Engineering",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Law Management",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $235k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Law Policy",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $230k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Law Practice",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Law Science",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computational Law Studies",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $242k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Law Technology",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $242k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Marketing",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Marketing Analytics",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $141k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Marketing Engineering",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$94k - $176k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Marketing Management",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Marketing Policy",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Computational Marketing Practice",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Marketing Science",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Marketing Studies",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Computational Marketing Technology",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Computational Mathematics",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Mathematics Analytics",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Mathematics Engineering",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$106k - $198k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Computational Mathematics Management",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Mathematics Policy",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Mathematics Practice",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Mathematics Science",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Mathematics Studies",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Computational Mathematics Technology",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Nursing",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Computational Nursing Analytics",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "Your curriculum was outdated by the time you finished this sentence.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Computational Nursing Engineering",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$119k - $224k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Computational Nursing Management",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Computational Nursing Policy",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Computational Nursing Practice",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Computational Nursing Science",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Computational Nursing Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$94k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Computational Nursing Technology",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$94k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Computational Physics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Computational Physics Analytics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Computational Physics Engineering",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$108k - $202k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Computational Physics Management",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Physics Policy",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Computational Physics Practice",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Computational Physics Science",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Physics Studies",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Physics Technology",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Computational Psychology",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Psychology Analytics",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Psychology Engineering",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$119k - $223k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Computational Psychology Management",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computational Psychology Policy",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Psychology Practice",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Psychology Science",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Computational Psychology Studies",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Computational Psychology Technology",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Analytics",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Engineering",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Management",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Policy",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Practice",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $157k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Science",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Studies",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $168k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computational Software Engineering Technology",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Computer Science",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computer Science Analytics",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computer Science Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Computer Science Management",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Computer Science Policy",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $199k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Computer Science Practice",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computer Science Science",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Computer Science Studies",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Computer Science Technology",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Data Science",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Analytics",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $203k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Data Science Engineering",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$96k - $180k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Data Science Management",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Policy",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Practice",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Science",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $196k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Studies",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Data Science Technology",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $202k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Digital Accounting",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Accounting Analytics",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Digital Accounting Engineering",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Accounting Management",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Accounting Policy",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Accounting Practice",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$67k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Accounting Science",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $143k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Accounting Studies",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $134k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Digital Accounting Technology",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Biology",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $200k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Digital Biology Analytics",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Biology Engineering",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$109k - $205k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Digital Biology Management",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $192k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Biology Policy",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Biology Practice",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Biology Science",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Biology Studies",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Biology Technology",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $192k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Business",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $199k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Business Analytics",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Business Engineering",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$98k - $184k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Business Management",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Business Policy",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Business Practice",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Business Science",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Business Studies",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Business Technology",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Chemistry",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Analytics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Engineering",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$109k - $205k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Digital Chemistry Management",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $211k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Policy",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $213k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Chemistry Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Studies",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Chemistry Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Computer Science",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $206k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Digital Computer Science Analytics",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Computer Science Engineering",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Computer Science Management",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $200k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Computer Science Policy",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Computer Science Practice",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Digital Computer Science Science",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$97k - $194k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Digital Computer Science Studies",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Computer Science Technology",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Data Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $201k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Digital Data Science Analytics",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Digital Data Science Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Data Science Management",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$115k - $207k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Digital Data Science Policy",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $205k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Digital Data Science Practice",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Digital Data Science Science",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Digital Data Science Studies",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $204k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Digital Data Science Technology",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $202k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Digital Education",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Analytics",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Engineering",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Education Management",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Practice",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Science",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Studies",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Education Technology",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Engineering",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Engineering Analytics",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $213k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Engineering Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Engineering Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Digital Engineering Policy",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Engineering Practice",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Digital Engineering Science",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $220k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Digital Engineering Studies",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Engineering Technology",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Digital Finance",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Digital Finance Analytics",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Digital Finance Engineering",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$98k - $185k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Digital Finance Management",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Finance Policy",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Digital Finance Practice",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Finance Science",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Finance Studies",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Finance Technology",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Digital Graphic Design",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Analytics",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Engineering",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Management",
-    "score": 99,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Policy",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Practice",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $103k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Science",
-    "score": 97,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Studies",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Digital Graphic Design Technology",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Digital Information Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Information Technology Analytics",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Digital Information Technology Engineering",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Information Technology Management",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Information Technology Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Digital Information Technology Practice",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Information Technology Science",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Information Technology Studies",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Information Technology Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Law",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $240k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Law Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Law Engineering",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$96k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Law Management",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$80k - $229k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Law Policy",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $235k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Law Practice",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $240k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Law Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $237k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Law Studies",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Digital Law Technology",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $226k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Digital Marketing",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Marketing Analytics",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $139k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Marketing Engineering",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$93k - $174k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Marketing Management",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Marketing Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Marketing Practice",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $141k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Marketing Science",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $147k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Digital Marketing Studies",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $139k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Digital Marketing Technology",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Digital Mathematics",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Digital Mathematics Analytics",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Digital Mathematics Engineering",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$104k - $194k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Digital Mathematics Management",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Mathematics Policy",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Digital Mathematics Practice",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Mathematics Science",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Mathematics Studies",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Mathematics Technology",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Nursing",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Digital Nursing Analytics",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Digital Nursing Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Digital Nursing Management",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$93k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Digital Nursing Policy",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Digital Nursing Practice",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$94k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Digital Nursing Science",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Digital Nursing Studies",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Digital Nursing Technology",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Digital Physics",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Physics Analytics",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Digital Physics Engineering",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$109k - $205k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Digital Physics Management",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Physics Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Digital Physics Practice",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Digital Physics Science",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Physics Studies",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Digital Physics Technology",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Digital Psychology",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Psychology Analytics",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Psychology Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Digital Psychology Management",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Psychology Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Psychology Practice",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Digital Psychology Science",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Digital Psychology Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Psychology Technology",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Analytics",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Engineering",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Management",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Policy",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Practice",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Science",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Studies",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$83k - $156k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Digital Software Engineering Technology",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Doctor of Optometry",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're a biological data-entry clerk for a machine that thinks faster than you can blink.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Doctor of Pharmacy",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Healthcare hero? More like healthcare's last human bottleneck. AI is Coming.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Doctor of Veterinary Medicine",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.",
-    "advice": "Stay ahead by mastering AI tools in your field.",
-    "salary": "$194k - $516k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Education",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Analytics",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Engineering",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$114k - $213k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Education Management",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Policy",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Practice",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Science",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Studies",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Education Technology",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Engineering",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Engineering Analytics",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Engineering Engineering",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Engineering Management",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Engineering Policy",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Engineering Practice",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Engineering Science",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Engineering Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Engineering Technology",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Finance",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Finance Analytics",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Finance Engineering",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$96k - $181k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Finance Management",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Finance Policy",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Finance Practice",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Finance Science",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Finance Studies",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Finance Technology",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Global Accounting",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Global Accounting Analytics",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Global Accounting Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Accounting Management",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Global Accounting Policy",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Global Accounting Practice",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Global Accounting Science",
-    "score": 97,
-    "level": "Extremely Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $132k",
-    "growth": "-8% Growth"
-  },
-  {
-    "name": "Global Accounting Studies",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Global Accounting Technology",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Global Biology",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $194k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Global Biology Analytics",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $201k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Global Biology Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Biology Management",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Global Biology Policy",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Biology Practice",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $201k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Global Biology Science",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Global Biology Studies",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $190k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Biology Technology",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Global Business",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Business Analytics",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Business Engineering",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$96k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Business Management",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Global Business Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $189k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Business Practice",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $194k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Business Science",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $195k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Business Studies",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $194k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Business Technology",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Chemistry",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Chemistry Analytics",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Chemistry Engineering",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$107k - $200k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Global Chemistry Management",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Chemistry Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Chemistry Practice",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Chemistry Science",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Chemistry Studies",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Chemistry Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Computer Science",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $206k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Global Computer Science Analytics",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Computer Science Engineering",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$90k - $169k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Computer Science Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Computer Science Policy",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $206k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Global Computer Science Practice",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Computer Science Science",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Computer Science Studies",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$98k - $196k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Computer Science Technology",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $200k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Data Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $201k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Data Science Analytics",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $207k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Global Data Science Engineering",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$91k - $170k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Data Science Management",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Data Science Policy",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Data Science Practice",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Data Science Science",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $203k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Global Data Science Studies",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $197k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Data Science Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Education",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Education Analytics",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Education Engineering",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$110k - $206k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Global Education Management",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Education Policy",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Education Practice",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Education Science",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Education Studies",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Education Technology",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Engineering Analytics",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Engineering Engineering",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Engineering Management",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Engineering Policy",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Global Engineering Practice",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Engineering Science",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Engineering Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Engineering Technology",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Finance",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Finance Analytics",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Finance Engineering",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$94k - $177k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Finance Management",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Finance Policy",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Global Finance Practice",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Finance Science",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Global Finance Studies",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Finance Technology",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Graphic Design",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Global Graphic Design Analytics",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Global Graphic Design Engineering",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$82k - $153k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Graphic Design Management",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Global Graphic Design Policy",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Global Graphic Design Practice",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Global Graphic Design Science",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Global Graphic Design Studies",
-    "score": 99,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Global Graphic Design Technology",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Global Information Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Information Technology Analytics",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Information Technology Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Information Technology Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Information Technology Policy",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Global Information Technology Practice",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Information Technology Science",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Global Information Technology Studies",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Information Technology Technology",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Law",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Law Analytics",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$86k - $245k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Law Engineering",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$96k - $181k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Law Management",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $241k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Law Policy",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $244k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Law Practice",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $230k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Law Science",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Law Studies",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$80k - $228k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Law Technology",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $233k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Marketing",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Marketing Analytics",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Marketing Engineering",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Marketing Management",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Marketing Policy",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $141k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Global Marketing Practice",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Global Marketing Science",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Marketing Studies",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Global Marketing Technology",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Global Mathematics",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Global Mathematics Analytics",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Global Mathematics Engineering",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$102k - $191k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Global Mathematics Management",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Global Mathematics Policy",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Global Mathematics Practice",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Mathematics Science",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Mathematics Studies",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Global Mathematics Technology",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Global Nursing",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Global Nursing Analytics",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Engineering",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$117k - $220k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Global Nursing Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Policy",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Practice",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Your major is the 'Before' picture in an AI automation success story.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Science",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "The robot revolution called. They said thanks for the training data.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Studies",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Nursing Technology",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Global Physics",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Physics Analytics",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Physics Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Physics Management",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Physics Policy",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Physics Practice",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Physics Science",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Global Physics Studies",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Physics Technology",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Global Psychology",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Psychology Analytics",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Psychology Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Global Psychology Management",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $149k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Global Psychology Policy",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Global Psychology Practice",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Psychology Science",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Psychology Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Psychology Technology",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Software Engineering",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $159k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Software Engineering Analytics",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Software Engineering Engineering",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Software Engineering Management",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Software Engineering Policy",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Software Engineering Practice",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Global Software Engineering Science",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$83k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Software Engineering Studies",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Global Software Engineering Technology",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $169k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Graphic Design",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Graphic Design Analytics",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Graphic Design Engineering",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Graphic Design Management",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Graphic Design Policy",
-    "score": 96,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $97k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Graphic Design Practice",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Graphic Design Science",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Graphic Design Studies",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Graphic Design Technology",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Industrial Accounting",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $138k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Industrial Biology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Analytics",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Engineering",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Biology Management",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Policy",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Practice",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $191k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Science",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Studies",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Industrial Biology Technology",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Industrial Business",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Industrial Business Analytics",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Business Engineering",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$96k - $180k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Industrial Business Management",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Business Policy",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Business Practice",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Industrial Business Science",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Industrial Business Studies",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Business Technology",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Industrial Chemistry",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Analytics",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Engineering",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$108k - $202k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Management",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Policy",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Practice",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Science",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Studies",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Chemistry Technology",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $201k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Computer Science",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Analytics",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$98k - $196k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Engineering",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$93k - $175k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Management",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Policy",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $205k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Practice",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $200k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Science",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Studies",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $209k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Computer Science Technology",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Industrial Data Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $201k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Industrial Data Science Analytics",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $208k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Industrial Data Science Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Data Science Management",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $207k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Industrial Data Science Policy",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $197k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Industrial Data Science Practice",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$107k - $192k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Data Science Science",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Industrial Data Science Studies",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$107k - $192k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Data Science Technology",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $198k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Industrial Education",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Industrial Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Engineering Analytics",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Engineering Engineering",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Engineering Management",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$110k - $207k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Engineering Policy",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $213k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Engineering Practice",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Engineering Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Engineering Studies",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $214k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Engineering Technology",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Industrial Finance",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Industrial Graphic Design",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Industrial Information Technology",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Analytics",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Engineering",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$94k - $176k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Management",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$55k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Policy",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$55k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Science",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Studies",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $112k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Industrial Information Technology Technology",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Industrial Law",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $238k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Industrial Marketing",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Industrial Mathematics",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Analytics",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Engineering",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$102k - $191k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Management",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Practice",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Science",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Studies",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Industrial Mathematics Technology",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Nursing",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Industrial Physics",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Physics Analytics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Industrial Physics Engineering",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$110k - $206k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Industrial Physics Management",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $139k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Industrial Physics Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Industrial Physics Practice",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Physics Science",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Industrial Physics Studies",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Industrial Physics Technology",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Industrial Psychology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Analytics",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Engineering",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Management",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Policy",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $168k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Practice",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $159k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Science",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Studies",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Industrial Software Engineering Technology",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Information Technology",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Information Technology Analytics",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Information Technology Engineering",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$93k - $174k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Information Technology Management",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Information Technology Policy",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Information Technology Practice",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Information Technology Science",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Information Technology Studies",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Information Technology Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Accounting",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "International Accounting Analytics",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Accounting Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "International Accounting Management",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $136k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Accounting Policy",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $142k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "International Accounting Practice",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Accounting Science",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Accounting Studies",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $134k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Accounting Technology",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $134k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "International Biology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $198k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Biology Analytics",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "International Biology Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Biology Management",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Biology Policy",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $194k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Biology Practice",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Biology Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Biology Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "International Biology Technology",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Business",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Business Analytics",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Business Engineering",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Business Management",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $204k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Business Policy",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $197k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Business Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Business Science",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $202k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Business Studies",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Business Technology",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Chemistry",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $204k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Chemistry Analytics",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $209k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Chemistry Engineering",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$111k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Chemistry Management",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Chemistry Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$86k - $214k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Chemistry Practice",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $208k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Chemistry Science",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Chemistry Studies",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Chemistry Technology",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Computer Science",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Computer Science Analytics",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $203k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Computer Science Engineering",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$90k - $168k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Computer Science Management",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Computer Science Policy",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $202k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Computer Science Practice",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $206k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Computer Science Science",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $198k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Computer Science Studies",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Computer Science Technology",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $208k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Data Science",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "International Data Science Analytics",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$115k - $206k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "International Data Science Engineering",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$96k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Data Science Management",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $204k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "International Data Science Policy",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Data Science Practice",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $197k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "International Data Science Science",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $207k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Data Science Studies",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $208k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Data Science Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "International Education",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Analytics",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $117k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Engineering",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$115k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Education Management",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Practice",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Science",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $116k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Studies",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Education Technology",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Engineering",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $213k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Engineering Analytics",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Engineering Engineering",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Engineering Management",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Engineering Policy",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Engineering Practice",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$111k - $208k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Engineering Science",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Engineering Studies",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Engineering Technology",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Finance",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Finance Analytics",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Finance Engineering",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$98k - $183k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Finance Management",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Finance Policy",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Finance Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Finance Science",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Finance Studies",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Finance Technology",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "International Graphic Design",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "International Graphic Design Analytics",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "International Graphic Design Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "International Graphic Design Management",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "International Graphic Design Policy",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "International Graphic Design Practice",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "International Graphic Design Science",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "International Graphic Design Studies",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "International Graphic Design Technology",
-    "score": 98,
-    "level": "Extremely Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "International Information Technology",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "International Information Technology Analytics",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Information Technology Engineering",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Information Technology Management",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Information Technology Policy",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Information Technology Practice",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "International Information Technology Science",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Information Technology Studies",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Information Technology Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Law",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Law Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Law Engineering",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$92k - $173k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Law Management",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Law Policy",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $232k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Law Practice",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $227k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Law Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $237k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Law Studies",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$86k - $245k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Law Technology",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $238k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "International Marketing",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "International Marketing Analytics",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Marketing Engineering",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$96k - $180k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Marketing Management",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Marketing Policy",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $141k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "International Marketing Practice",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Marketing Science",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Marketing Studies",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "International Marketing Technology",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "International Mathematics",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Mathematics Analytics",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "International Mathematics Engineering",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$107k - $201k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "International Mathematics Management",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "International Mathematics Policy",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Mathematics Practice",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Mathematics Science",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Mathematics Studies",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Mathematics Technology",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Nursing",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Your curriculum was outdated by the time you finished this sentence.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Nursing Analytics",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "International Nursing Engineering",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Nursing Management",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$94k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Nursing Policy",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $163k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "International Nursing Practice",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "International Nursing Science",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "International Nursing Studies",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$93k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Nursing Technology",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "International Physics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "International Physics Analytics",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "International Physics Engineering",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$112k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "International Physics Management",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "International Physics Policy",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "International Physics Practice",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "International Physics Science",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "International Physics Studies",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $138k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "International Physics Technology",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "International Psychology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $146k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Psychology Analytics",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Psychology Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "International Psychology Management",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Psychology Policy",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Psychology Practice",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$75k - $149k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "International Psychology Science",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "International Psychology Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Psychology Technology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $146k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "International Software Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Analytics",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Engineering",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$83k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "International Software Engineering Management",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Policy",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "International Software Engineering Practice",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Science",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Studies",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "International Software Engineering Technology",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $159k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Law",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $235k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Law Analytics",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Law Engineering",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$95k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Law Management",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $237k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Law Policy",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $231k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Law Practice",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Law Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Law Studies",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $238k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Law Technology",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "LLB Law",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Marketing",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Analytics",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Engineering",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$97k - $182k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Marketing Management",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Policy",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $147k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Marketing Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Science",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $144k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Studies",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Marketing Technology",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $143k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Mathematics",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Mathematics Analytics",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Mathematics Engineering",
-    "score": 40,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$104k - $195k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Mathematics Management",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Mathematics Policy",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Mathematics Practice",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Mathematics Science",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Mathematics Studies",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Mathematics Technology",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Nursing",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Analytics",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "Your major is the 'Before' picture in an AI automation success story.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Nursing Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Nursing Management",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Policy",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Practice",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "The robot revolution called. They said thanks for the training data.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Science",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Studies",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Nursing Technology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $160k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Physics",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Analytics",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Engineering",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$109k - $205k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Physics Management",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Policy",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Practice",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Science",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Physics Studies",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Physics Technology",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Psychology",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Psychology Analytics",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $142k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Psychology Engineering",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Psychology Management",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $144k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Psychology Policy",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Psychology Practice",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Psychology Science",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Psychology Studies",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Psychology Technology",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Software Engineering",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Analytics",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Management",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Policy",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Software Engineering Practice",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Science",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Studies",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Software Engineering Technology",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Accounting",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Analytics",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $143k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Engineering",
-    "score": 88,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$85k - $159k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Management",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Strategic Accounting Policy",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Strategic Accounting Practice",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$67k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Science",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Studies",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$67k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Accounting Technology",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$66k - $144k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Biology",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $197k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Biology Analytics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $192k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Biology Engineering",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$110k - $206k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Strategic Biology Management",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Biology Policy",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Biology Practice",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $201k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Biology Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $196k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Biology Studies",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $202k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Biology Technology",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$78k - $199k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Business",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$67k - $196k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Strategic Business Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $189k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Engineering",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$101k - $189k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Business Management",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Policy",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $192k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Practice",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Science",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $189k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Studies",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$65k - $190k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Business Technology",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Strategic Chemistry",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $204k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Analytics",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $202k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Engineering",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$106k - $200k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Management",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $213k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$86k - $214k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Practice",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Science",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Studies",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Chemistry Technology",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$80k - $200k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Computer Science",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $207k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Analytics",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$105k - $210k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Engineering",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$93k - $174k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Management",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$104k - $209k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Policy",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$105k - $211k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Practice",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Science",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Studies",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Computer Science Technology",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$97k - $194k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Data Science",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $196k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Strategic Data Science Analytics",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $202k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Strategic Data Science Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Data Science Management",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$116k - $208k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Strategic Data Science Policy",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$111k - $199k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Strategic Data Science Practice",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Data Science Science",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$113k - $202k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Strategic Data Science Studies",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Strategic Data Science Technology",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$109k - $195k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Strategic Education",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Analytics",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Education Management",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Policy",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Practice",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Social science is great until the algorithm predicts social behavior better than you can.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $120k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Science",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "You're studying the human condition. The AI is busy making the human condition obsolete. Deep.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Education Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT already summarized the history of western civilization. Do you want fries with that summary?",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Strategic Education Technology",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$62k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Engineering",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Engineering Analytics",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Engineering Engineering",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Engineering Management",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Strategic Engineering Policy",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Strategic Engineering Practice",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Strategic Engineering Science",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Engineering Studies",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Strategic Engineering Technology",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$117k - $220k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Finance",
-    "score": 55,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $123k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Strategic Finance Analytics",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$63k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Finance Engineering",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$100k - $187k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Finance Management",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Strategic Finance Policy",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Finance Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Finance Science",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $119k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Finance Studies",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Finance Technology",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Analytics",
-    "score": 97,
-    "level": "Extremely Cooked",
-    "roast": "Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $96k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Engineering",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$83k - $156k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Management",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Policy",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "AI can hallucinate better art than you can create sober. Career status: sketch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Practice",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Science",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$49k - $104k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Studies",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Strategic Graphic Design Technology",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Strategic Information Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $116k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Analytics",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$55k - $111k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Engineering",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$91k - $171k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Management",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Policy",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Practice",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Science",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Studies",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Information Technology Technology",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Law",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $233k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Law Analytics",
-    "score": 70,
-    "level": "Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $230k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Law Engineering",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$90k - $169k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Law Management",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Strategic Law Policy",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Legal jargon is AI's native language. You're just a slow translator.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $226k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Law Practice",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Objection! The AI is 100% more efficient than you. Sustained.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Law Science",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "AI can read 10,000 contracts in a second. You're just a human highlighter at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $233k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Law Studies",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$84k - $239k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Strategic Law Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$81k - $232k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Strategic Marketing",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Strategic Marketing Analytics",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Marketing Engineering",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$94k - $177k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Marketing Management",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $140k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Marketing Policy",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Strategic Marketing Practice",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Marketing Science",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $148k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Strategic Marketing Studies",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $139k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Marketing Technology",
-    "score": 68,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$58k - $139k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Strategic Mathematics",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Analytics",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $130k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Engineering",
-    "score": 41,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$104k - $194k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Management",
-    "score": 42,
-    "level": "Kinda Cooked",
-    "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$65k - $129k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Policy",
-    "score": 33,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $134k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Practice",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Science",
-    "score": 31,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$67k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Studies",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Strategic Mathematics Technology",
-    "score": 44,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $128k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Strategic Nursing",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "Your curriculum was outdated by the time you finished this sentence.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Analytics",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Engineering",
-    "score": 8,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$117k - $219k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Strategic Nursing Management",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Policy",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Justice is blind, and your career prospects are currently in a dark room.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Practice",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You really thought this degree was a safe bet? The algorithm finds that hilarious.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Science",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "This degree is a collector's item. Not useful, but definitely expensive.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$93k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Strategic Nursing Studies",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You're not cooked, you're deep-fried with a side of student debt.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Nursing Technology",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Strategic Physics",
-    "score": 28,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Physics Analytics",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Strategic Physics Engineering",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$108k - $203k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Strategic Physics Management",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Physics Policy",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $135k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Strategic Physics Practice",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Physics Science",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Strategic Physics Studies",
-    "score": 39,
-    "level": "Slightly Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$65k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Strategic Physics Technology",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Strategic Psychology",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $146k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Psychology Analytics",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "You're just a glorified lab assistant for an algorithm that already solved the data.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Psychology Engineering",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$112k - $210k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Strategic Psychology Management",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $149k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Psychology Policy",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Formula for your career: 4 years of debt + AI automation = Career 404.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $145k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Strategic Psychology Practice",
-    "score": 6,
-    "level": "Not Cooked",
-    "roast": "The universe is vast, but the time until your replacement is very, very short.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Strategic Psychology Science",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$75k - $149k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Psychology Studies",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "The AI just simulated 10,000 experiments while you were still sterilizing your beakers.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Psychology Technology",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$75k - $149k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering",
-    "score": 80,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $165k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Analytics",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Management",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$85k - $160k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Policy",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Practice",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Science",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Studies",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $162k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Strategic Software Engineering Technology",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $168k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Accounting",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $141k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Technical Accounting Analytics",
-    "score": 95,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$61k - $133k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Accounting Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Accounting Management",
-    "score": 86,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$64k - $139k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Accounting Policy",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Accounting Practice",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $134k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Accounting Science",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$63k - $137k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Accounting Studies",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$65k - $140k",
-    "growth": "-6% Growth"
-  },
-  {
-    "name": "Technical Accounting Technology",
-    "score": 93,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Transition to strategic financial consulting or tax strategy.",
-    "salary": "$62k - $135k",
-    "growth": "-7% Growth"
-  },
-  {
-    "name": "Technical Biology",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Biology Analytics",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Technical Biology Engineering",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$111k - $209k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Technical Biology Management",
-    "score": 13,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$79k - $201k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Technical Biology Policy",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Biology Practice",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$76k - $193k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Biology Science",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$77k - $195k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Biology Studies",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$80k - $203k",
-    "growth": "+11% Growth"
-  },
-  {
-    "name": "Technical Biology Technology",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Stay hands-on in the lab, or master bioinformatics.",
-    "salary": "$75k - $192k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Business",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $193k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Business Analytics",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$66k - $191k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Business Engineering",
-    "score": 53,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$99k - $185k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Business Management",
-    "score": 54,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $197k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Business Policy",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $198k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Business Practice",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Technical Business Science",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$68k - $199k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Business Studies",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$70k - $203k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Technical Business Technology",
-    "score": 49,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus heavily on networking and human relationships.",
-    "salary": "$69k - $201k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Technical Chemistry",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $210k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Analytics",
-    "score": 17,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$85k - $212k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Chemistry Engineering",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$106k - $200k",
-    "growth": "+12% Growth"
-  },
-  {
-    "name": "Technical Chemistry Management",
-    "score": 24,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $207k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Policy",
-    "score": 23,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$83k - $208k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Practice",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$84k - $211k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Science",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $206k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Studies",
-    "score": 30,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$81k - $203k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Chemistry Technology",
-    "score": 27,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on novel material synthesis and lab automation.",
-    "salary": "$82k - $205k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Computer Science",
-    "score": 76,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$101k - $202k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Technical Computer Science Analytics",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$102k - $204k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Technical Computer Science Engineering",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$88k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Computer Science Management",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$103k - $206k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Technical Computer Science Policy",
-    "score": 77,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$100k - $201k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Computer Science Practice",
-    "score": 81,
-    "level": "Very Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$99k - $197k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Computer Science Science",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$97k - $194k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Computer Science Studies",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$106k - $212k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Computer Science Technology",
-    "score": 84,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to AI engineering and system architecture immediately.",
-    "salary": "$97k - $194k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Data Science",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$114k - $204k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Technical Data Science Analytics",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$107k - $192k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Data Science Engineering",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$98k - $183k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Data Science Management",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $193k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Data Science Policy",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$115k - $207k",
-    "growth": "+16% Growth"
-  },
-  {
-    "name": "Technical Data Science Practice",
-    "score": 69,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$110k - $196k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Technical Data Science Science",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$112k - $200k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Technical Data Science Studies",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $194k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Data Science Technology",
-    "score": 73,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move into AI Strategy and decision intelligence.",
-    "salary": "$108k - $193k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Education",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Analytics",
-    "score": 22,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $118k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Engineering",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$112k - $211k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Technical Education Management",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$61k - $115k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$63k - $119k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Practice",
-    "score": 16,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $121k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Science",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$65k - $123k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Technical Education Studies",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Education Technology",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Incorporate AI into your curriculum.",
-    "salary": "$64k - $122k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Engineering",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Analytics",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$118k - $221k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Technical Engineering Engineering",
-    "score": 18,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$113k - $212k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Technical Engineering Management",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Policy",
-    "score": 10,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Practice",
-    "score": 9,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $218k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Science",
-    "score": 11,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$116k - $217k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Studies",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$114k - $215k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Engineering Technology",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Integrate robotics and AI into your designs.",
-    "salary": "$115k - $216k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Finance",
-    "score": 60,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Finance Analytics",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $121k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Finance Engineering",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$95k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Finance Management",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $124k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Finance Policy",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Technical Finance Practice",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Finance Science",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$62k - $125k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Finance Studies",
-    "score": 56,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$61k - $122k",
-    "growth": "-1% Growth"
-  },
-  {
-    "name": "Technical Finance Technology",
-    "score": 61,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards wealth management and corporate strategy.",
-    "salary": "$60k - $120k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Graphic Design",
-    "score": 91,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $99k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Analytics",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $102k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Engineering",
-    "score": 92,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$83k - $156k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Management",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$46k - $98k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Policy",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Practice",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Science",
-    "score": 87,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$48k - $101k",
-    "growth": "-13% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Studies",
-    "score": 100,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$45k - $95k",
-    "growth": "-15% Growth"
-  },
-  {
-    "name": "Technical Graphic Design Technology",
-    "score": 90,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Pivot to creative direction and AI-assisted workflows.",
-    "salary": "$47k - $100k",
-    "growth": "-14% Growth"
-  },
-  {
-    "name": "Technical Information Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $114k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Information Technology Analytics",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Information Technology Engineering",
-    "score": 79,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$88k - $166k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Information Technology Management",
-    "score": 67,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$58k - $117k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Information Technology Policy",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$59k - $118k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Information Technology Practice",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$60k - $119k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Information Technology Science",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Technical Information Technology Studies",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$56k - $113k",
-    "growth": "-5% Growth"
-  },
-  {
-    "name": "Technical Information Technology Technology",
-    "score": 71,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on cloud architecture and cybersecurity.",
-    "salary": "$57k - $115k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Law",
-    "score": 66,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $234k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Law Analytics",
-    "score": 64,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $236k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Law Engineering",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$95k - $179k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Law Management",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$80k - $228k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Law Policy",
-    "score": 58,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$85k - $242k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Law Practice",
-    "score": 74,
-    "level": "Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$79k - $226k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Law Science",
-    "score": 62,
-    "level": "Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$83k - $238k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Law Studies",
-    "score": 65,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$82k - $235k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Law Technology",
-    "score": 72,
-    "level": "Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on litigation, negotiation, and complex counseling.",
-    "salary": "$80k - $228k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Marketing",
-    "score": 63,
-    "level": "Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$59k - $142k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Marketing Analytics",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Marketing Engineering",
-    "score": 52,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$99k - $186k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Marketing Management",
-    "score": 50,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$63k - $150k",
-    "growth": "-2% Growth"
-  },
-  {
-    "name": "Technical Marketing Policy",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Marketing Practice",
-    "score": 59,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$60k - $145k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Marketing Science",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Marketing Studies",
-    "score": 51,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$62k - $149k",
-    "growth": "-3% Growth"
-  },
-  {
-    "name": "Technical Marketing Technology",
-    "score": 57,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on brand strategy, analytics, and creative direction.",
-    "salary": "$61k - $146k",
-    "growth": "-4% Growth"
-  },
-  {
-    "name": "Technical Mathematics",
-    "score": 37,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Technical Mathematics Analytics",
-    "score": 48,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$63k - $126k",
-    "growth": "0% Growth"
-  },
-  {
-    "name": "Technical Mathematics Engineering",
-    "score": 47,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$101k - $190k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Mathematics Management",
-    "score": 35,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$66k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Technical Mathematics Policy",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Mathematics Practice",
-    "score": 45,
-    "level": "Kinda Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Mathematics Science",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Mathematics Studies",
-    "score": 43,
-    "level": "Kinda Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $129k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Mathematics Technology",
-    "score": 46,
-    "level": "Kinda Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Focus on highly abstract mathematics or algorithmic theory.",
-    "salary": "$64k - $127k",
-    "growth": "+1% Growth"
-  },
-  {
-    "name": "Technical Nursing",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Nursing Analytics",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$94k - $158k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Technical Nursing Engineering",
-    "score": 4,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$118k - $222k",
-    "growth": "+15% Growth"
-  },
-  {
-    "name": "Technical Nursing Management",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$96k - $162k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Nursing Policy",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Nursing Practice",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$95k - $161k",
-    "growth": "+17% Growth"
-  },
-  {
-    "name": "Technical Nursing Science",
-    "score": 0,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$98k - $165k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Nursing Studies",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Nursing Technology",
-    "score": 1,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "You are the frontline. You are safe.",
-    "salary": "$97k - $164k",
-    "growth": "+18% Growth"
-  },
-  {
-    "name": "Technical Physics",
-    "score": 26,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$69k - $137k",
-    "growth": "+5% Growth"
-  },
-  {
-    "name": "Technical Physics Analytics",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Physics Engineering",
-    "score": 25,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$110k - $206k",
-    "growth": "+13% Growth"
-  },
-  {
-    "name": "Technical Physics Management",
-    "score": 36,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $132k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Technical Physics Policy",
-    "score": 34,
-    "level": "Slightly Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $133k",
-    "growth": "+3% Growth"
-  },
-  {
-    "name": "Technical Physics Practice",
-    "score": 38,
-    "level": "Slightly Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$66k - $131k",
-    "growth": "+2% Growth"
-  },
-  {
-    "name": "Technical Physics Science",
-    "score": 32,
-    "level": "Slightly Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$67k - $134k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Physics Studies",
-    "score": 29,
-    "level": "Slightly Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$68k - $136k",
-    "growth": "+4% Growth"
-  },
-  {
-    "name": "Technical Physics Technology",
-    "score": 21,
-    "level": "Slightly Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Move towards experimental physics or quantum computing hardware.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Psychology",
-    "score": 15,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$71k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Psychology Analytics",
-    "score": 5,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $148k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Psychology Engineering",
-    "score": 12,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$115k - $216k",
-    "growth": "+14% Growth"
-  },
-  {
-    "name": "Technical Psychology Management",
-    "score": 2,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$75k - $149k",
-    "growth": "+10% Growth"
-  },
-  {
-    "name": "Technical Psychology Policy",
-    "score": 20,
-    "level": "Not Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $140k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Psychology Practice",
-    "score": 19,
-    "level": "Not Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$70k - $141k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Psychology Science",
-    "score": 3,
-    "level": "Not Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$74k - $149k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Psychology Studies",
-    "score": 7,
-    "level": "Not Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$73k - $147k",
-    "growth": "+9% Growth"
-  },
-  {
-    "name": "Technical Psychology Technology",
-    "score": 14,
-    "level": "Not Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Specialize in clinical practice or organizational behavior.",
-    "salary": "$72k - $143k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Software Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Analytics",
-    "score": 85,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$86k - $161k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Engineering",
-    "score": 89,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$84k - $158k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Management",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $169k",
-    "growth": "+8% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Policy",
-    "score": 78,
-    "level": "Very Cooked",
-    "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$89k - $167k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Practice",
-    "score": 94,
-    "level": "Extremely Cooked",
-    "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$82k - $155k",
-    "growth": "+6% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Science",
-    "score": 82,
-    "level": "Very Cooked",
-    "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $164k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Studies",
-    "score": 83,
-    "level": "Very Cooked",
-    "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$87k - $163k",
-    "growth": "+7% Growth"
-  },
-  {
-    "name": "Technical Software Engineering Technology",
-    "score": 75,
-    "level": "Cooked",
-    "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-    "advice": "Become an AI product manager or focus on security.",
-    "salary": "$90k - $169k",
-    "growth": "+8% Growth"
-  },
-  {
-  "name": "BSc Administration (Accounting)",
-  "score": 84,
-  "level": "Very Cooked",
-  "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-  "advice": "Transition to strategic financial consulting or tax strategy.",
-  "salary": "$65k - $140k",
-  "growth": "-6% Growth"
-},
-  {
-  "name": "BSc Administration (Marketing)",
-  "score": 70,
-  "level": "Cooked",
-  "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-  "advice": "Focus on high-level creative strategy and brand psychology.",
-  "salary": "$57k - $138k",
-  "growth": "-5% Growth"
-},
-  {
-  "name": "BSc Administration (Human Resource Management)",
-  "score": 51,
-  "level": "Kinda Cooked",
-  "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-  "advice": "Focus heavily on networking and human relationships.",
-  "salary": "$68k - $199k",
-  "growth": "+1% Growth"
-},
-  {
-  "name": "BSc Administration (Public Administration)",
-  "score": 51,
-  "level": "Kinda Cooked",
-  "roast": "AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.",
-  "advice": "Focus heavily on networking and human relationships.",
-  "salary": "$68k - $199k",
-  "growth": "+1% Growth"
-},
-  {
-  "name": "BSc Administration (Health Services Management)",
-  "score": 10,
-  "level": "Not Cooked",
-  "roast": "ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.",
-  "advice": "Specialize in nursing informatics or geriatric care.",
-  "salary": "$94k - $160k",
-  "growth": "+17% Growth"
-},
-  {
-  "name": "BSc Administration (Banking and Finance)",
-  "score": 63,
-  "level": "Cooked",
-  "roast": "You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.",
-  "advice": "Move towards wealth management and corporate strategy.",
-  "salary": "$83k - $190k",
-  "growth": "0% Growth"
-},
-  {
-  "name": "BSc Information Technology (IT)",
-  "score": 75,
-  "level": "Cooked",
-  "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-  "advice": "Pivot to AI engineering and system architecture immediately.",
-  "salary": "$101k - $203k",
-  "growth": "-1% Growth"
-},
-  {
-  "name": "B.Ed. Early Grade Specialism",
-  "score": 24,
-  "level": "Slightly Cooked",
-  "roast": "AI is the main character, you're just the NPC in the career tutorial.",
-  "advice": "Incorporate AI into your curriculum.",
-  "salary": "$62k - $117k",
-  "growth": "+4% Growth"
-},
-  {
-  "name": "B.Ed. Upper-Grade Specialism",
-  "score": 16,
-  "level": "Not Cooked",
-  "roast": "Your major is the 'Before' picture in an AI automation success story.",
-  "advice": "Incorporate AI into your curriculum.",
-  "salary": "$64k - $121k",
-  "growth": "+4% Growth"
-},
-  {
-  "name": "B.Ed. J.H.S Specialism",
-  "score": 22,
-  "level": "Slightly Cooked",
-  "roast": "The robot revolution called. They said thanks for the training data.",
-  "advice": "Incorporate AI into your curriculum.",
-  "salary": "$63k - $118k",
-  "growth": "+4% Growth"
-},
-  {
-  "name": "BSc. Mobile Computing",
-  "score": 70,
-  "level": "Cooked",
-  "roast": "Bless your heart. You really thought human 'intuition' mattered in 2026.",
-  "advice": "Pivot to AI engineering and system architecture immediately.",
-  "salary": "$103k - $207k",
-  "growth": "0% Growth"
-},
-  {
-  "name": "BSc. Software Engineering",
-  "score": 73,
-  "level": "Cooked",
-  "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-  "advice": "Pivot to AI engineering and system architecture immediately.",
-  "salary": "$102k - $204k",
-  "growth": "-1% Growth"
-},
-  {
-  "name": "BSc. Business Information Systems",
-  "score": 61,
-  "level": "Cooked",
-  "roast": "Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.",
-  "advice": "Move into AI Strategy and decision intelligence.",
-  "salary": "$114k - $203k",
-  "growth": "+16% Growth"
-},
-  {
-  "name": "BSc. Data Science & Analytics",
-  "score": 63,
-  "level": "Cooked",
-  "roast": "Copilot writes your code while you're still trying to center a div. You're a professional debugger now.",
-  "advice": "Move into AI Strategy and decision intelligence.",
-  "salary": "$113k - $201k",
-  "growth": "+16% Growth"
-},
-  {
-  "name": "BSc Cyber Security",
-  "score": 71,
-  "level": "Cooked",
-  "roast": "ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.",
-  "advice": "Pivot to AI engineering and system architecture immediately.",
-  "salary": "$103k - $206k",
-  "growth": "-1% Growth"
-},
-  {
-  "name": "BSc. Procurement and Logistics",
-  "score": 55,
-  "level": "Kinda Cooked",
-  "roast": "You're at a knife fight, and the AI is bringing a literal nuke.",
-  "advice": "Focus heavily on networking and human relationships.",
-  "salary": "$67k - $196k",
-  "growth": "+1% Growth"
-},
-  {
-  "name": "BSc. Financial Technology",
-  "score": 59,
-  "level": "Kinda Cooked",
-  "roast": "You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.",
-  "advice": "Move towards wealth management and corporate strategy.",
-  "salary": "$84k - $193k",
-  "growth": "0% Growth"
-},
-  {
-  "name": "BSc. Economics",
-  "score": 64,
-  "level": "Cooked",
-  "roast": "The board of directors is already replacing your middle management role with a dashboard.",
-  "advice": "Move towards wealth management and corporate strategy.",
-  "salary": "$83k - $189k",
-  "growth": "0% Growth"
-},
-  {
-  "name": "BSc. Accounting with Computing",
-  "score": 87,
-  "level": "Very Cooked",
-  "roast": "Silicon Valley's favorite hobby is replacing you with a 50-line Python script.",
-  "advice": "Transition to strategic financial consulting or tax strategy.",
-  "salary": "$64k - $138k",
-  "growth": "-7% Growth"
-},
-  {
-  "name": "BSc. Human Resource Management",
-  "score": 50,
-  "level": "Kinda Cooked",
-  "roast": "You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?",
-  "advice": "Focus heavily on networking and human relationships.",
-  "salary": "$69k - $200k",
-  "growth": "+2% Growth"
-},
+// Repeated strings are stored once and referenced by index to keep the client bundle small.
+const LEVELS = ["Very Cooked","Extremely Cooked","Slightly Cooked","Not Cooked","Kinda Cooked","Cooked"];
+const ROASTS = ["AI writes the business plans, you're just there to pretend you're 'essential' during the layoffs.","ChatGPT summarized your 4-year degree into a 2-minute Loom video. CEO mindset, intern reality.","Copilot writes your code while you're still trying to center a div. You're a professional debugger now.","You spent 4 years learning to network while AI spent 4 seconds learning to dominate your market.","The board of directors is already replacing your middle management role with a dashboard.","You're a professional meeting attendee. AI is a professional profit-generator. Guess who wins?","ChatGPT just finished your Senior Project in 4 seconds. Your keyboard is just a fidget spinner at this point.","You're basically a glorified prompt engineer who's too proud to admit the AI is better at logic than you.","Silicon Valley's favorite hobby is replacing you with a 50-line Python script.","The AI just simulated 10,000 experiments while you were still sterilizing your beakers.","You're just a glorified lab assistant for an algorithm that already solved the data.","Your future boss is an API key. Hope you enjoy fetching coffee for a server rack.","Formula for your career: 4 years of debt + AI automation = Career 404.","The universe is vast, but the time until your replacement is very, very short.","Data science is in your name, but the AI is the one doing the actual science. You're just the messenger.","ChatGPT already summarized the history of western civilization. Do you want fries with that summary?","You're learning why the Roman Empire fell, while your industry is falling to a chatbot. Poetic.","AI can read 10,000 contracts in a second. You're just a human highlighter at this point.","A masterpiece of 100,000 words? AI wrote it in the time it took you to think of a title.","Social science is great until the algorithm predicts social behavior better than you can.","You're studying the human condition. The AI is busy making the human condition obsolete. Deep.","Midjourney just drew a masterpiece while you were still looking for your brushes. Ouch.","Your 'artistic soul' is being outclassed by a GPU running on a budget. Go off, I guess.","Graphic design is your passion? Too bad prompting is AI's obsession. You're a filter-tweaker now.","AI can hallucinate better art than you can create sober. Career status: sketch.","You're competing with a machine that doesn't need sleep, inspiration, or a soul. Good luck.","The judge is a computer, the lawyer is a bot. You're just the one paying the student loans.","Justice is blind, and your career prospects are currently in a dark room.","Legal jargon is AI's native language. You're just a slow translator.","Objection! The AI is 100% more efficient than you. Sustained.","You really thought this degree was a safe bet? The algorithm finds that hilarious.","This degree is a collector's item. Not useful, but definitely expensive.","You're not cooked, you're deep-fried with a side of student debt.","AI is the main character, you're just the NPC in the career tutorial.","Your major is the 'Before' picture in an AI automation success story.","The robot revolution called. They said thanks for the training data.","Bless your heart. You really thought human 'intuition' mattered in 2026.","You're at a knife fight, and the AI is bringing a literal nuke.","Your curriculum was outdated by the time you finished this sentence.","If wishful thinking was a skill, you'd be a CEO. Too bad it's just a cope.","WebMD is already gaslighting your patients. You're just there to sign the insurance forms AI already approved.","A robot is doing surgery with 0.001mm precision while your hands are still shaking from too much caffeine.","Diagnosis: You're about to be replaced by an algorithm that actually remembers the patient's name.","You're a biological data-entry clerk for a machine that thinks faster than you can blink.","Healthcare hero? More like healthcare's last human bottleneck. AI is Coming."];
+const ADVICE = ["Transition to strategic financial consulting or tax strategy.","Stay hands-on in the lab, or master bioinformatics.","Focus heavily on networking and human relationships.","Focus on novel material synthesis and lab automation.","Pivot to AI engineering and system architecture immediately.","Move into AI Strategy and decision intelligence.","Incorporate AI into your curriculum.","Integrate robotics and AI into your designs.","Move towards wealth management and corporate strategy.","Pivot to creative direction and AI-assisted workflows.","Focus on cloud architecture and cybersecurity.","Focus on litigation, negotiation, and complex counseling.","Focus on brand strategy, analytics, and creative direction.","Focus on highly abstract mathematics or algorithmic theory.","You are the frontline. You are safe.","Move towards experimental physics or quantum computing hardware.","Specialize in clinical practice or organizational behavior.","Become an AI product manager or focus on security.","Stay ahead by mastering AI tools in your field.","Focus on high-level creative strategy and brand psychology.","Specialize in nursing informatics or geriatric care."];
+const SALARIES = ["$64k - $138k","$63k - $137k","$85k - $160k","$64k - $139k","$65k - $141k","$63k - $136k","$86k - $161k","$66k - $142k","$61k - $132k","$65k - $142k","$61k - $133k","$76k - $195k","$111k - $209k","$77k - $197k","$75k - $190k","$77k - $196k","$79k - $201k","$79k - $202k","$79k - $200k","$67k - $194k","$66k - $193k","$102k - $191k","$69k - $200k","$67k - $196k","$68k - $198k","$70k - $203k","$84k - $209k","$80k - $201k","$106k - $200k","$81k - $202k","$83k - $209k","$81k - $203k","$82k - $204k","$82k - $206k","$102k - $203k","$100k - $200k","$92k - $173k","$104k - $208k","$103k - $205k","$105k - $211k","$113k - $201k","$107k - $192k","$97k - $182k","$114k - $205k","$112k - $200k","$116k - $208k","$63k - $119k","$61k - $116k","$110k - $206k","$65k - $122k","$61k - $115k","$64k - $121k","$63k - $120k","$114k - $213k","$114k - $214k","$116k - $218k","$118k - $221k","$115k - $216k","$113k - $212k","$112k - $210k","$60k - $121k","$63k - $126k","$98k - $185k","$59k - $119k","$62k - $123k","$60k - $120k","$63k - $125k","$47k - $98k","$46k - $97k","$80k - $150k","$49k - $103k","$46k - $98k","$47k - $100k","$49k - $104k","$59k - $117k","$59k - $118k","$96k - $180k","$56k - $113k","$58k - $116k","$58k - $117k","$81k - $231k","$83k - $236k","$95k - $179k","$84k - $239k","$79k - $227k","$85k - $244k","$81k - $232k","$82k - $234k","$61k - $146k","$58k - $140k","$94k - $177k","$61k - $145k","$59k - $142k","$59k - $140k","$60k - $145k","$58k - $139k","$65k - $131k","$66k - $131k","$108k - $202k","$64k - $128k","$65k - $130k","$95k - $161k","$96k - $163k","$117k - $219k","$96k - $162k","$95k - $160k","$97k - $163k","$98k - $165k","$67k - $134k","$105k - $197k","$69k - $138k","$68k - $136k","$68k - $137k","$70k - $139k","$68k - $135k","$71k - $142k","$70k - $140k","$117k - $220k","$71k - $143k","$72k - $144k","$82k - $155k","$86k - $162k","$83k - $156k","$82k - $154k","$67k - $144k","$78k - $198k","$78k - $199k","$110k - $207k","$78k - $200k","$80k - $203k","$68k - $199k","$96k - $181k","$70k - $202k","$66k - $191k","$65k - $190k","$69k - $201k","$83k - $207k","$83k - $206k","$85k - $213k","$80k - $200k","$100k - $201k","$99k - $199k","$94k - $176k","$106k - $212k","$99k - $198k","$103k - $207k","$99k - $197k","$110k - $196k","$110k - $197k","$98k - $183k","$109k - $195k","$111k - $199k","$114k - $203k","$111k - $198k","$62k - $118k","$62k - $117k","$112k - $209k","$115k - $215k","$61k - $122k","$100k - $187k","$62k - $125k","$62k - $124k","$45k - $96k","$46k - $96k","$47k - $99k","$45k - $95k","$60k - $119k","$93k - $174k","$56k - $112k","$56k - $111k","$57k - $114k","$82k - $233k","$79k - $226k","$60k - $144k","$61k - $147k","$66k - $132k","$67k - $135k","$101k - $190k","$64k - $127k","$64k - $129k","$97k - $164k","$120k - $225k","$104k - $196k","$70k - $141k","$74k - $148k","$71k - $141k","$88k - $165k","$84k - $157k","$89k - $167k","$83k - $155k","$88k - $164k","$87k - $164k","$87k - $163k","$65k - $129k","$63k - $127k","$61k - $123k","$187k - $498k","$76k - $193k","$61k - $121k","$111k - $208k","$67k - $133k","$67k - $195k","$83k - $208k","$116k - $217k","$114k - $215k","$112k - $211k","$68k - $197k","$82k - $205k","$65k - $140k","$62k - $135k","$66k - $144k","$75k - $192k","$65k - $189k","$85k - $212k","$84k - $211k","$101k - $202k","$90k - $168k","$104k - $209k","$102k - $204k","$115k - $206k","$96k - $179k","$112k - $201k","$108k - $194k","$116k - $207k","$64k - $122k","$48k - $101k","$95k - $178k","$55k - $111k","$85k - $243k","$83k - $238k","$80k - $228k","$62k - $148k","$62k - $149k","$60k - $143k","$63k - $150k","$103k - $194k","$66k - $133k","$93k - $157k","$69k - $139k","$106k - $198k","$73k - $146k","$74k - $149k","$88k - $166k","$84k - $158k","$109k - $205k","$75k - $191k","$70k - $204k","$69k - $202k","$84k - $210k","$101k - $203k","$63k - $118k","$65k - $123k","$48k - $102k","$57k - $115k","$82k - $235k","$81k - $230k","$85k - $242k","$59k - $141k","$119k - $224k","$94k - $160k","$94k - $158k","$69k - $137k","$73k - $147k","$119k - $223k","$72k - $145k","$91k - $171k","$113k - $202k","$66k - $143k","$62k - $134k","$77k - $195k","$98k - $184k","$66k - $192k","$103k - $206k","$97k - $194k","$115k - $207k","$114k - $204k","$84k - $240k","$80k - $229k","$83k - $237k","$104k - $194k","$93k - $158k","$194k - $516k","$76k - $194k","$107k - $200k","$90k - $169k","$98k - $196k","$91k - $170k","$64k - $120k","$62k - $116k","$82k - $153k","$86k - $245k","$84k - $241k","$85k - $159k","$78k - $197k","$93k - $175k","$86k - $214k","$107k - $201k","$72k - $143k","$75k - $149k","$73k - $145k","$104k - $195k","$101k - $189k","$105k - $210k","$108k - $203k","$74k - $147k","$99k - $185k","$108k - $193k","$99k - $186k","$118k - $222k","$57k - $138k","$83k - $190k","$84k - $193k","$83k - $189k"];
+const GROWTHS = ["-7% Growth","+6% Growth","-6% Growth","+7% Growth","-8% Growth","+10% Growth","+13% Growth","+9% Growth","+11% Growth","+1% Growth","0% Growth","+2% Growth","+8% Growth","+12% Growth","-1% Growth","-2% Growth","+16% Growth","+14% Growth","+15% Growth","+17% Growth","+4% Growth","-3% Growth","-14% Growth","+5% Growth","-13% Growth","-5% Growth","-4% Growth","+18% Growth","+3% Growth","-15% Growth"];
+
+// [name, score, level, roast, advice, salary, growth]
+const ROWS: [string, number, number, number, number, number, number][] = [
+  ["Accounting",88,0,0,0,0,0],
+  ["Accounting Analytics",90,0,1,0,1,0],
+  ["Accounting Engineering",87,0,2,0,2,1],
+  ["Accounting Management",86,0,3,0,3,0],
+  ["Accounting Policy",89,0,4,0,1,0],
+  ["Accounting Practice",83,0,5,0,4,2],
+  ["Accounting Science",90,0,0,0,1,0],
+  ["Accounting Studies",83,0,1,0,4,2],
+  ["Accounting Technology",91,1,6,0,5,0],
+  ["Advanced Accounting",91,1,3,0,5,0],
+  ["Advanced Accounting Analytics",83,0,4,0,4,2],
+  ["Advanced Accounting Engineering",85,0,7,0,6,3],
+  ["Advanced Accounting Management",81,0,5,0,7,2],
+  ["Advanced Accounting Policy",97,1,0,0,8,4],
+  ["Advanced Accounting Practice",87,0,1,0,0,0],
+  ["Advanced Accounting Science",87,0,3,0,0,0],
+  ["Advanced Accounting Studies",82,0,4,0,9,2],
+  ["Advanced Accounting Technology",96,1,8,0,10,4],
+  ["Advanced Biology",22,2,9,1,11,5],
+  ["Advanced Biology Analytics",22,2,10,1,11,5],
+  ["Advanced Biology Engineering",22,2,11,1,12,6],
+  ["Advanced Biology Management",19,3,5,1,13,5],
+  ["Advanced Biology Policy",29,2,12,1,14,7],
+  ["Advanced Biology Practice",20,3,13,1,15,5],
+  ["Advanced Biology Science",13,3,14,1,16,8],
+  ["Advanced Biology Studies",12,3,9,1,17,8],
+  ["Advanced Biology Technology",14,3,2,1,18,8],
+  ["Advanced Business",57,4,0,2,19,9],
+  ["Advanced Business Analytics",59,4,1,2,20,10],
+  ["Advanced Business Engineering",46,4,6,2,21,5],
+  ["Advanced Business Management",50,4,3,2,22,11],
+  ["Advanced Business Policy",59,4,4,2,20,10],
+  ["Advanced Business Practice",55,4,5,2,23,9],
+  ["Advanced Business Science",53,4,0,2,24,9],
+  ["Advanced Business Studies",52,4,1,2,24,9],
+  ["Advanced Business Technology",46,4,7,2,25,11],
+  ["Advanced Chemistry",21,2,10,3,26,12],
+  ["Advanced Chemistry Analytics",32,2,12,3,27,3],
+  ["Advanced Chemistry Engineering",34,2,8,3,28,13],
+  ["Advanced Chemistry Management",31,2,3,3,29,12],
+  ["Advanced Chemistry Policy",22,2,13,3,30,12],
+  ["Advanced Chemistry Practice",30,2,14,3,31,12],
+  ["Advanced Chemistry Science",28,2,9,3,32,12],
+  ["Advanced Chemistry Studies",22,2,10,3,30,12],
+  ["Advanced Chemistry Technology",26,2,11,3,33,12],
+  ["Advanced Computer Science",74,5,2,4,34,14],
+  ["Advanced Computer Science Analytics",78,0,6,4,35,15],
+  ["Advanced Computer Science Engineering",70,5,7,4,36,12],
+  ["Advanced Computer Science Management",69,5,8,4,37,10],
+  ["Advanced Computer Science Policy",72,5,11,4,38,14],
+  ["Advanced Computer Science Practice",66,5,2,4,39,10],
+  ["Advanced Computer Science Science",72,5,6,4,38,14],
+  ["Advanced Computer Science Studies",72,5,7,4,38,14],
+  ["Advanced Computer Science Technology",72,5,8,4,38,14],
+  ["Advanced Data Science",63,5,11,5,40,16],
+  ["Advanced Data Science Analytics",74,5,2,5,41,17],
+  ["Advanced Data Science Engineering",58,4,6,5,42,7],
+  ["Advanced Data Science Management",63,5,7,5,40,16],
+  ["Advanced Data Science Policy",59,4,8,5,43,16],
+  ["Advanced Data Science Practice",65,5,11,5,44,18],
+  ["Advanced Data Science Science",59,4,2,5,43,16],
+  ["Advanced Data Science Studies",55,4,6,5,45,19],
+  ["Advanced Data Science Technology",59,4,7,5,43,16],
+  ["Advanced Education",20,3,15,6,46,20],
+  ["Advanced Education Analytics",28,2,16,6,47,20],
+  ["Advanced Education Engineering",25,2,8,6,48,6],
+  ["Advanced Education Management",13,3,4,6,49,20],
+  ["Advanced Education Policy",29,2,17,6,50,20],
+  ["Advanced Education Practice",15,3,18,6,51,20],
+  ["Advanced Education Science",18,3,19,6,52,20],
+  ["Advanced Education Studies",28,2,20,6,47,20],
+  ["Advanced Education Technology",16,3,11,6,51,20],
+  ["Advanced Engineering",16,3,2,7,53,6],
+  ["Advanced Engineering Analytics",15,3,6,7,54,17],
+  ["Advanced Engineering Engineering",10,3,7,7,55,17],
+  ["Advanced Engineering Management",5,3,8,7,56,18],
+  ["Advanced Engineering Policy",15,3,11,7,54,17],
+  ["Advanced Engineering Practice",12,3,2,7,57,17],
+  ["Advanced Engineering Science",17,3,6,7,58,6],
+  ["Advanced Engineering Studies",18,3,7,7,58,6],
+  ["Advanced Engineering Technology",20,3,8,7,59,6],
+  ["Advanced Finance",59,4,5,8,60,15],
+  ["Advanced Finance Analytics",48,4,0,8,61,10],
+  ["Advanced Finance Engineering",54,4,11,8,62,5],
+  ["Advanced Finance Management",59,4,1,8,60,15],
+  ["Advanced Finance Policy",63,5,3,8,63,21],
+  ["Advanced Finance Practice",54,4,4,8,64,14],
+  ["Advanced Finance Science",60,4,5,8,65,15],
+  ["Advanced Finance Studies",49,4,0,8,66,10],
+  ["Advanced Finance Technology",50,4,2,8,66,10],
+  ["Advanced Graphic Design",93,1,21,9,67,22],
+  ["Advanced Graphic Design Analytics",96,1,22,9,68,22],
+  ["Advanced Graphic Design Engineering",100,1,6,9,69,23],
+  ["Advanced Graphic Design Management",84,0,1,9,70,24],
+  ["Advanced Graphic Design Policy",83,0,23,9,70,24],
+  ["Advanced Graphic Design Practice",94,1,24,9,71,22],
+  ["Advanced Graphic Design Science",89,0,25,9,72,22],
+  ["Advanced Graphic Design Studies",90,0,21,9,72,22],
+  ["Advanced Graphic Design Technology",82,0,7,9,73,24],
+  ["Advanced Information Technology",66,5,8,10,74,21],
+  ["Advanced Information Technology Analytics",64,5,11,10,75,21],
+  ["Advanced Information Technology Engineering",60,4,2,10,76,7],
+  ["Advanced Information Technology Management",74,5,6,10,77,25],
+  ["Advanced Information Technology Policy",68,5,7,10,78,26],
+  ["Advanced Information Technology Practice",65,5,8,10,75,21],
+  ["Advanced Information Technology Science",67,5,11,10,79,21],
+  ["Advanced Information Technology Studies",63,5,2,10,63,21],
+  ["Advanced Information Technology Technology",63,5,6,10,63,21],
+  ["Advanced Law",69,5,26,11,80,10],
+  ["Advanced Law Analytics",64,5,27,11,81,9],
+  ["Advanced Law Engineering",62,5,7,11,82,7],
+  ["Advanced Law Management",61,5,3,11,83,9],
+  ["Advanced Law Policy",73,5,28,11,84,10],
+  ["Advanced Law Practice",56,4,29,11,85,9],
+  ["Advanced Law Science",64,5,17,11,81,9],
+  ["Advanced Law Studies",68,5,26,11,86,10],
+  ["Advanced Law Technology",66,5,8,11,87,10],
+  ["Advanced Marketing",56,4,4,12,88,21],
+  ["Advanced Marketing Analytics",67,5,5,12,89,25],
+  ["Advanced Marketing Engineering",64,5,11,12,90,7],
+  ["Advanced Marketing Management",58,4,0,12,91,26],
+  ["Advanced Marketing Policy",63,5,1,12,92,26],
+  ["Advanced Marketing Practice",66,5,3,12,93,25],
+  ["Advanced Marketing Science",59,4,4,12,94,26],
+  ["Advanced Marketing Studies",63,5,5,12,92,26],
+  ["Advanced Marketing Technology",68,5,2,12,95,25],
+  ["Advanced Mathematics",39,2,12,13,96,11],
+  ["Advanced Mathematics Analytics",38,2,13,13,97,11],
+  ["Advanced Mathematics Engineering",31,2,6,13,98,13],
+  ["Advanced Mathematics Management",44,4,0,13,99,9],
+  ["Advanced Mathematics Policy",44,4,14,13,99,9],
+  ["Advanced Mathematics Practice",44,4,9,13,99,9],
+  ["Advanced Mathematics Science",39,2,10,13,96,11],
+  ["Advanced Mathematics Studies",40,2,12,13,100,11],
+  ["Advanced Mathematics Technology",41,4,7,13,100,11],
+  ["Advanced Nursing",8,3,30,14,101,19],
+  ["Advanced Nursing Analytics",4,3,31,14,102,27],
+  ["Advanced Nursing Engineering",8,3,8,14,103,17],
+  ["Advanced Nursing Management",5,3,1,14,104,27],
+  ["Advanced Nursing Policy",7,3,27,14,101,19],
+  ["Advanced Nursing Practice",9,3,32,14,105,19],
+  ["Advanced Nursing Science",3,3,33,14,106,27],
+  ["Advanced Nursing Studies",5,3,34,14,104,27],
+  ["Advanced Nursing Technology",0,3,11,14,107,27],
+  ["Advanced Physics",32,2,13,15,108,20],
+  ["Advanced Physics Analytics",33,2,14,15,108,28],
+  ["Advanced Physics Engineering",37,2,2,15,109,8],
+  ["Advanced Physics Management",25,2,3,15,110,23],
+  ["Advanced Physics Policy",29,2,9,15,111,20],
+  ["Advanced Physics Practice",27,2,10,15,112,23],
+  ["Advanced Physics Science",27,2,12,15,112,23],
+  ["Advanced Physics Studies",22,2,13,15,113,1],
+  ["Advanced Physics Technology",30,2,6,15,114,20],
+  ["Advanced Psychology",16,3,14,16,115,3],
+  ["Advanced Psychology Analytics",20,3,9,16,116,1],
+  ["Advanced Psychology Engineering",7,3,7,16,117,17],
+  ["Advanced Psychology Management",21,2,4,16,116,1],
+  ["Advanced Psychology Policy",15,3,10,16,118,3],
+  ["Advanced Psychology Practice",16,3,12,16,115,3],
+  ["Advanced Psychology Science",21,2,13,16,116,1],
+  ["Advanced Psychology Studies",13,3,14,16,119,3],
+  ["Advanced Psychology Technology",17,3,8,16,115,3],
+  ["Advanced Software Engineering",87,0,11,17,2,1],
+  ["Advanced Software Engineering Analytics",85,0,2,17,6,3],
+  ["Advanced Software Engineering Engineering",94,1,6,17,120,1],
+  ["Advanced Software Engineering Management",94,1,7,17,120,1],
+  ["Advanced Software Engineering Policy",84,0,8,17,121,3],
+  ["Advanced Software Engineering Practice",85,0,11,17,6,3],
+  ["Advanced Software Engineering Science",86,0,2,17,6,1],
+  ["Advanced Software Engineering Studies",92,1,6,17,122,1],
+  ["Advanced Software Engineering Technology",94,1,7,17,120,1],
+  ["Applied Accounting",88,0,5,0,0,0],
+  ["Applied Accounting Analytics",91,1,0,0,5,0],
+  ["Applied Accounting Engineering",95,1,8,0,123,1],
+  ["Applied Accounting Management",96,1,1,0,10,4],
+  ["Applied Accounting Policy",81,0,3,0,7,2],
+  ["Applied Accounting Practice",90,0,4,0,1,0],
+  ["Applied Accounting Science",96,1,5,0,10,4],
+  ["Applied Accounting Studies",78,0,0,0,124,2],
+  ["Applied Accounting Technology",83,0,11,0,4,2],
+  ["Applied Biology",17,3,9,1,125,5],
+  ["Applied Biology Analytics",16,3,10,1,126,8],
+  ["Applied Biology Engineering",24,2,2,1,127,6],
+  ["Applied Biology Management",29,2,1,1,14,7],
+  ["Applied Biology Policy",15,3,12,1,128,8],
+  ["Applied Biology Practice",11,3,13,1,17,8],
+  ["Applied Biology Science",22,2,14,1,11,5],
+  ["Applied Biology Studies",17,3,9,1,125,5],
+  ["Applied Biology Technology",10,3,6,1,129,8],
+  ["Applied Business",58,4,3,2,19,10],
+  ["Applied Business Analytics",51,4,4,2,130,9],
+  ["Applied Business Engineering",59,4,7,2,131,7],
+  ["Applied Business Management",55,4,5,2,23,9],
+  ["Applied Business Policy",47,4,0,2,132,11],
+  ["Applied Business Practice",55,4,1,2,23,9],
+  ["Applied Business Science",61,5,3,2,133,10],
+  ["Applied Business Studies",62,5,4,2,134,10],
+  ["Applied Business Technology",49,4,8,2,135,11],
+  ["Applied Chemistry",28,2,10,3,32,12],
+  ["Applied Chemistry Analytics",29,2,12,3,31,12],
+  ["Applied Chemistry Engineering",31,2,11,3,98,13],
+  ["Applied Chemistry Management",24,2,5,3,136,12],
+  ["Applied Chemistry Policy",25,2,13,3,137,12],
+  ["Applied Chemistry Practice",22,2,14,3,30,12],
+  ["Applied Chemistry Science",24,2,9,3,136,12],
+  ["Applied Chemistry Studies",16,3,10,3,138,7],
+  ["Applied Chemistry Technology",33,2,2,3,139,3],
+  ["Applied Computer Science",77,0,6,4,140,15],
+  ["Applied Computer Science Analytics",79,0,7,4,141,15],
+  ["Applied Computer Science Engineering",65,5,8,4,142,7],
+  ["Applied Computer Science Management",65,5,11,4,143,10],
+  ["Applied Computer Science Policy",80,0,2,4,144,15],
+  ["Applied Computer Science Practice",70,5,6,4,145,10],
+  ["Applied Computer Science Science",65,5,7,4,143,10],
+  ["Applied Computer Science Studies",69,5,8,4,37,10],
+  ["Applied Computer Science Technology",81,0,11,4,146,15],
+  ["Applied Data Science",69,5,2,5,147,18],
+  ["Applied Data Science Analytics",68,5,6,5,148,18],
+  ["Applied Data Science Engineering",56,4,7,5,149,7],
+  ["Applied Data Science Management",70,5,8,5,150,18],
+  ["Applied Data Science Policy",66,5,11,5,151,18],
+  ["Applied Data Science Practice",61,5,2,5,152,16],
+  ["Applied Data Science Science",61,5,6,5,152,16],
+  ["Applied Data Science Studies",67,5,7,5,153,18],
+  ["Applied Data Science Technology",67,5,8,5,153,18],
+  ["Applied Education",19,3,15,6,46,20],
+  ["Applied Education Analytics",21,2,16,6,46,20],
+  ["Applied Education Engineering",17,3,11,6,58,6],
+  ["Applied Education Management",27,2,0,6,47,20],
+  ["Applied Education Policy",23,2,28,6,154,20],
+  ["Applied Education Practice",28,2,18,6,47,20],
+  ["Applied Education Science",16,3,19,6,51,20],
+  ["Applied Education Studies",24,2,20,6,155,20],
+  ["Applied Education Technology",13,3,2,6,49,20],
+  ["Applied Engineering",10,3,6,7,55,17],
+  ["Applied Engineering Analytics",15,3,7,7,54,17],
+  ["Applied Engineering Engineering",5,3,8,7,56,18],
+  ["Applied Engineering Management",5,3,11,7,56,18],
+  ["Applied Engineering Policy",21,2,2,7,156,6],
+  ["Applied Engineering Practice",6,3,6,7,56,17],
+  ["Applied Engineering Science",10,3,7,7,55,17],
+  ["Applied Engineering Studies",13,3,8,7,157,17],
+  ["Applied Engineering Technology",17,3,11,7,58,6],
+  ["Applied Finance",59,4,1,8,60,15],
+  ["Applied Finance Analytics",57,4,3,8,158,14],
+  ["Applied Finance Engineering",51,4,2,8,159,5],
+  ["Applied Finance Management",51,4,4,8,160,10],
+  ["Applied Finance Policy",52,4,5,8,161,10],
+  ["Applied Finance Practice",50,4,0,8,66,10],
+  ["Applied Finance Science",53,4,1,8,64,14],
+  ["Applied Finance Studies",66,5,3,8,74,21],
+  ["Applied Finance Technology",56,4,6,8,158,14],
+  ["Applied Graphic Design",94,1,22,9,71,22],
+  ["Applied Graphic Design Analytics",98,1,23,9,162,29],
+  ["Applied Graphic Design Engineering",95,1,7,9,123,1],
+  ["Applied Graphic Design Management",83,0,4,9,70,24],
+  ["Applied Graphic Design Policy",97,1,24,9,163,29],
+  ["Applied Graphic Design Practice",91,1,25,9,164,22],
+  ["Applied Graphic Design Science",93,1,21,9,67,22],
+  ["Applied Graphic Design Studies",100,1,22,9,165,29],
+  ["Applied Graphic Design Technology",83,0,8,9,70,24],
+  ["Applied Information Technology",65,5,11,10,75,21],
+  ["Applied Information Technology Analytics",62,5,2,10,166,15],
+  ["Applied Information Technology Engineering",68,5,6,10,167,12],
+  ["Applied Information Technology Management",65,5,7,10,75,21],
+  ["Applied Information Technology Policy",76,0,8,10,168,25],
+  ["Applied Information Technology Practice",78,0,11,10,169,2],
+  ["Applied Information Technology Science",68,5,2,10,78,26],
+  ["Applied Information Technology Studies",73,5,6,10,170,25],
+  ["Applied Information Technology Technology",64,5,7,10,75,21],
+  ["Applied Law",67,5,29,11,171,10],
+  ["Applied Law Analytics",73,5,17,11,84,10],
+  ["Applied Law Engineering",70,5,8,11,36,12],
+  ["Applied Law Management",74,5,5,11,172,10],
+  ["Applied Law Policy",64,5,26,11,81,9],
+  ["Applied Law Practice",56,4,27,11,85,9],
+  ["Applied Law Science",74,5,28,11,172,10],
+  ["Applied Law Studies",69,5,29,11,80,10],
+  ["Applied Law Technology",66,5,11,11,87,10],
+  ["Applied Marketing",60,4,0,12,173,26],
+  ["Applied Marketing Analytics",56,4,1,12,88,21],
+  ["Applied Marketing Engineering",62,5,2,12,82,7],
+  ["Applied Marketing Management",64,5,3,12,92,25],
+  ["Applied Marketing Policy",58,4,4,12,91,26],
+  ["Applied Marketing Practice",60,4,5,12,173,26],
+  ["Applied Marketing Science",55,4,0,12,174,21],
+  ["Applied Marketing Studies",58,4,1,12,91,26],
+  ["Applied Marketing Technology",59,4,6,12,94,26],
+  ["Applied Mathematics",36,2,12,13,175,28],
+  ["Applied Mathematics Analytics",31,2,13,13,176,20],
+  ["Applied Mathematics Engineering",47,4,7,13,177,5],
+  ["Applied Mathematics Management",38,2,3,13,97,11],
+  ["Applied Mathematics Policy",48,4,14,13,61,10],
+  ["Applied Mathematics Practice",38,2,9,13,97,11],
+  ["Applied Mathematics Science",45,4,10,13,178,9],
+  ["Applied Mathematics Studies",40,2,12,13,100,11],
+  ["Applied Mathematics Technology",43,4,8,13,179,9],
+  ["Applied Nursing",2,3,35,14,180,27],
+  ["Applied Nursing Analytics",2,3,36,14,180,27],
+  ["Applied Nursing Engineering",0,3,11,14,181,18],
+  ["Applied Nursing Management",0,3,4,14,107,27],
+  ["Applied Nursing Policy",4,3,17,14,102,27],
+  ["Applied Nursing Practice",1,3,37,14,180,27],
+  ["Applied Nursing Science",0,3,38,14,107,27],
+  ["Applied Nursing Studies",1,3,39,14,180,27],
+  ["Applied Nursing Technology",9,3,2,14,105,19],
+  ["Applied Physics",25,2,13,15,110,23],
+  ["Applied Physics Analytics",20,3,14,15,116,1],
+  ["Applied Physics Engineering",39,2,6,15,182,8],
+  ["Applied Physics Management",21,2,5,15,116,1],
+  ["Applied Physics Policy",22,2,9,15,113,1],
+  ["Applied Physics Practice",39,2,10,15,96,11],
+  ["Applied Physics Science",22,2,12,15,113,1],
+  ["Applied Physics Studies",24,2,13,15,110,23],
+  ["Applied Physics Technology",25,2,7,15,110,23],
+  ["Applied Psychology",12,3,14,16,119,12],
+  ["Applied Psychology Analytics",19,3,9,16,183,1],
+  ["Applied Psychology Engineering",13,3,8,16,157,17],
+  ["Applied Psychology Management",19,3,0,16,183,1],
+  ["Applied Psychology Policy",17,3,10,16,115,3],
+  ["Applied Psychology Practice",16,3,12,16,115,3],
+  ["Applied Psychology Science",5,3,13,16,184,7],
+  ["Applied Psychology Studies",5,3,14,16,184,7],
+  ["Applied Psychology Technology",18,3,11,16,185,1],
+  ["Applied Software Engineering",80,0,2,17,186,3],
+  ["Applied Software Engineering Analytics",91,1,6,17,187,1],
+  ["Applied Software Engineering Engineering",77,0,7,17,188,3],
+  ["Applied Software Engineering Management",87,0,8,17,2,1],
+  ["Applied Software Engineering Policy",93,1,11,17,189,1],
+  ["Applied Software Engineering Practice",81,0,2,17,190,3],
+  ["Applied Software Engineering Science",82,0,6,17,191,3],
+  ["Applied Software Engineering Studies",83,0,7,17,192,3],
+  ["Applied Software Engineering Technology",80,0,8,17,186,3],
+  ["BA. Communication Design",57,4,23,18,158,14],
+  ["BA. Culture and Tourism",50,4,15,18,66,10],
+  ["BA. Economics",42,4,1,18,193,11],
+  ["BA. English",51,4,16,18,160,10],
+  ["BA. Entrepreneurship",44,4,30,18,99,9],
+  ["BA. French",52,4,31,18,161,10],
+  ["BA. Geography and Rural Development",43,4,32,18,179,9],
+  ["BA. History",59,4,18,18,60,15],
+  ["BA. Human Resources",59,4,33,18,60,15],
+  ["BA. Integrated Rural Art and Industry",45,4,24,18,178,9],
+  ["BA. Political Studies",42,4,11,18,193,11],
+  ["BA. Publishing Studies",48,4,34,18,61,10],
+  ["BA. Religious Studies",51,4,35,18,160,10],
+  ["BA. Social Work",44,4,19,18,99,9],
+  ["BA. Sociology",47,4,36,18,194,9],
+  ["Bachelor of Dental Surgery",55,4,40,18,195,14],
+  ["Bachelor of Herbal Medicine",51,4,41,18,196,23],
+  ["Bachelor of ICT with Education",18,3,2,6,52,20],
+  ["BFA. Painting and Sculpture",48,4,6,18,61,10],
+  ["Biology",20,3,9,1,15,5],
+  ["Biology Analytics",24,2,10,1,197,5],
+  ["Biology Engineering",17,3,7,1,58,6],
+  ["Biology Management",15,3,3,1,128,8],
+  ["Biology Policy",22,2,12,1,11,5],
+  ["Biology Practice",19,3,13,1,13,5],
+  ["Biology Science",19,3,14,1,13,5],
+  ["Biology Studies",24,2,9,1,197,5],
+  ["Biology Technology",22,2,8,1,11,5],
+  ["BSc. Actuarial Science",49,4,37,18,66,10],
+  ["BSc. Aerospace Engineering",8,3,11,7,103,17],
+  ["BSc. Agribusiness Management",54,4,4,2,64,14],
+  ["BSc. Agricultural Biotechnology",58,4,2,18,198,15],
+  ["BSc. Agricultural Engineering",20,3,6,7,59,6],
+  ["BSc. Agriculture",55,4,20,18,195,14],
+  ["BSc. Aquaculture & Water Resources Management",57,4,5,18,158,14],
+  ["BSc. Architecture",55,4,7,18,195,14],
+  ["BSc. Automobile Engineering",23,2,8,7,199,6],
+  ["BSc. Biochemistry",34,2,10,3,200,28],
+  ["BSc. Biological Science",49,4,12,18,66,10],
+  ["BSc. Business Administration",56,4,0,2,201,9],
+  ["BSc. Ceramics Design Technology",42,4,11,18,193,11],
+  ["BSc. Chemical Engineering",24,2,2,7,127,6],
+  ["BSc. Chemistry",23,2,13,3,202,12],
+  ["BSc. Civil Engineering",15,3,6,7,54,17],
+  ["BSc. Computer Engineering",11,3,7,7,203,17],
+  ["BSc. Computer Science",74,5,8,4,34,14],
+  ["BSc. Construction Technology and Management",44,4,11,18,99,9],
+  ["BSc. Dairy and Meat Science and Technology",50,4,2,18,66,10],
+  ["BSc. Development Planning",45,4,38,18,178,9],
+  ["BSc. Disability and Rehabilitation Studies",41,4,6,18,100,11],
+  ["BSc. Electrical/Electronic Engineering",14,3,7,7,204,17],
+  ["BSc. Environmental Sciences",51,4,39,18,160,10],
+  ["BSc. Fashion Design",52,4,25,18,161,10],
+  ["BSc. Food Science and Technology",41,4,8,18,100,11],
+  ["BSc. Forest Resources Technology",43,4,11,18,179,9],
+  ["BSc. Geological Engineering",15,3,2,7,54,17],
+  ["BSc. Geomatic Engineering",8,3,6,7,103,17],
+  ["BSc. Human Biology",16,3,14,1,126,8],
+  ["BSc. Human Settlement Planning",59,4,30,18,60,15],
+  ["BSc. Industrial Engineering",18,3,7,7,58,6],
+  ["BSc. Land Economy",52,4,31,18,161,10],
+  ["BSc. Landscape Design and Management",46,4,1,18,178,9],
+  ["BSc. Marine Engineering",13,3,8,7,157,17],
+  ["BSc. Marketing",57,4,3,12,88,26],
+  ["BSc. Materials Engineering",9,3,11,7,55,17],
+  ["BSc. Mathematics",32,2,9,13,108,20],
+  ["BSc. Mechanical Engineering",19,3,2,7,205,6],
+  ["BSc. Medical Imaging",56,4,42,18,158,14],
+  ["BSc. Medical Laboratory Sciences",51,4,43,18,160,10],
+  ["BSc. Metal Product Design Technology",47,4,6,18,194,9],
+  ["BSc. Metallurgical Engineering",11,3,7,7,203,17],
+  ["BSc. Meteorology and Climate Science",42,4,32,18,193,11],
+  ["BSc. Midwifery",55,4,33,18,195,14],
+  ["BSc. Natural Resources Management",57,4,4,18,158,14],
+  ["BSc. Nursing",0,3,34,14,107,27],
+  ["BSc. Packaging Technology",58,4,8,18,198,15],
+  ["BSc. Petrochemical Engineering",6,3,11,7,56,17],
+  ["BSc. Petroleum Engineering",18,3,2,7,58,6],
+  ["BSc. Physics",39,2,10,15,96,11],
+  ["BSc. Physiotherapy and Sports Science",55,4,44,18,195,14],
+  ["BSc. Post Harvest Technology",49,4,6,18,66,10],
+  ["BSc. Procurement and Supply Chain Management",45,4,7,18,178,9],
+  ["BSc. Quantity Surveying and Construction Economics",41,4,8,18,100,11],
+  ["BSc. Real Estate",42,4,35,18,193,11],
+  ["BSc. Statistics",51,4,36,18,160,10],
+  ["BSc. Telecommunication Engineering",20,3,11,7,59,6],
+  ["BSc. Textile Design and Technology",56,4,2,18,158,14],
+  ["Business",55,4,5,2,23,9],
+  ["Business Analytics",59,4,0,2,20,10],
+  ["Business Engineering",58,4,6,2,42,7],
+  ["Business Management",52,4,1,2,24,9],
+  ["Business Policy",56,4,3,2,201,9],
+  ["Business Practice",59,4,4,2,20,10],
+  ["Business Science",50,4,5,2,22,11],
+  ["Business Studies",54,4,0,2,206,9],
+  ["Business Technology",55,4,7,2,23,9],
+  ["Chemistry",25,2,12,3,137,12],
+  ["Chemistry Analytics",27,2,13,3,207,12],
+  ["Chemistry Engineering",23,2,8,3,199,6],
+  ["Chemistry Management",22,2,1,3,30,12],
+  ["Chemistry Policy",25,2,14,3,137,12],
+  ["Chemistry Practice",29,2,9,3,31,12],
+  ["Chemistry Science",21,2,10,3,26,12],
+  ["Chemistry Studies",21,2,12,3,26,12],
+  ["Chemistry Technology",29,2,11,3,31,12],
+  ["Clinical Accounting",89,0,3,0,1,0],
+  ["Clinical Accounting Analytics",85,0,4,0,208,2],
+  ["Clinical Accounting Engineering",81,0,2,0,190,3],
+  ["Clinical Accounting Management",92,1,5,0,209,0],
+  ["Clinical Accounting Policy",86,0,0,0,3,0],
+  ["Clinical Accounting Practice",96,1,1,0,10,4],
+  ["Clinical Accounting Science",79,0,3,0,210,2],
+  ["Clinical Accounting Studies",95,1,4,0,10,0],
+  ["Clinical Accounting Technology",86,0,6,0,3,0],
+  ["Clinical Biology",15,3,40,1,128,8],
+  ["Clinical Biology Analytics",15,3,41,1,128,8],
+  ["Clinical Biology Engineering",18,3,7,1,58,6],
+  ["Clinical Biology Management",20,3,5,1,15,5],
+  ["Clinical Biology Policy",26,2,42,1,211,5],
+  ["Clinical Biology Practice",25,2,43,1,197,5],
+  ["Clinical Biology Science",17,3,44,1,125,5],
+  ["Clinical Biology Studies",17,3,40,1,125,5],
+  ["Clinical Biology Technology",19,3,8,1,13,5],
+  ["Clinical Business",53,4,0,2,24,9],
+  ["Clinical Business Analytics",47,4,1,2,132,11],
+  ["Clinical Business Engineering",58,4,11,2,42,7],
+  ["Clinical Business Management",51,4,3,2,130,9],
+  ["Clinical Business Policy",55,4,4,2,23,9],
+  ["Clinical Business Practice",59,4,5,2,20,10],
+  ["Clinical Business Science",64,5,0,2,212,10],
+  ["Clinical Business Studies",50,4,1,2,22,11],
+  ["Clinical Business Technology",47,4,2,2,132,11],
+  ["Clinical Chemistry",26,2,41,3,33,12],
+  ["Clinical Chemistry Analytics",25,2,42,3,137,12],
+  ["Clinical Chemistry Engineering",18,3,6,3,58,6],
+  ["Clinical Chemistry Management",17,3,3,3,213,7],
+  ["Clinical Chemistry Policy",30,2,43,3,31,12],
+  ["Clinical Chemistry Practice",34,2,44,3,139,3],
+  ["Clinical Chemistry Science",19,3,40,3,214,12],
+  ["Clinical Chemistry Studies",22,2,41,3,30,12],
+  ["Clinical Chemistry Technology",17,3,7,3,213,7],
+  ["Clinical Computer Science",76,0,8,4,215,14],
+  ["Clinical Computer Science Analytics",79,0,11,4,141,15],
+  ["Clinical Computer Science Engineering",76,0,2,4,216,3],
+  ["Clinical Computer Science Management",81,0,6,4,146,15],
+  ["Clinical Computer Science Policy",68,5,7,4,217,10],
+  ["Clinical Computer Science Practice",73,5,8,4,218,14],
+  ["Clinical Computer Science Science",76,0,11,4,215,14],
+  ["Clinical Computer Science Studies",78,0,2,4,35,15],
+  ["Clinical Computer Science Technology",74,5,6,4,34,14],
+  ["Clinical Data Science",63,5,7,5,40,16],
+  ["Clinical Data Science Analytics",58,4,8,5,219,16],
+  ["Clinical Data Science Engineering",61,5,11,5,220,7],
+  ["Clinical Data Science Management",59,4,2,5,43,16],
+  ["Clinical Data Science Policy",64,5,6,5,221,18],
+  ["Clinical Data Science Practice",59,4,7,5,43,16],
+  ["Clinical Data Science Science",72,5,8,5,222,17],
+  ["Clinical Data Science Studies",59,4,11,5,43,16],
+  ["Clinical Data Science Technology",56,4,2,5,223,19],
+  ["Clinical Education",21,2,42,6,46,20],
+  ["Clinical Education Analytics",29,2,43,6,50,20],
+  ["Clinical Education Engineering",19,3,6,6,205,6],
+  ["Clinical Education Management",14,3,4,6,224,20],
+  ["Clinical Education Policy",20,3,44,6,46,20],
+  ["Clinical Education Practice",28,2,40,6,47,20],
+  ["Clinical Education Science",18,3,41,6,52,20],
+  ["Clinical Education Studies",29,2,42,6,50,20],
+  ["Clinical Education Technology",28,2,7,6,47,20],
+  ["Clinical Engineering",13,3,8,7,157,17],
+  ["Clinical Engineering Analytics",11,3,11,7,203,17],
+  ["Clinical Engineering Engineering",22,2,2,7,12,6],
+  ["Clinical Engineering Management",14,3,6,7,204,17],
+  ["Clinical Engineering Policy",23,2,7,7,199,6],
+  ["Clinical Engineering Practice",23,2,8,7,199,6],
+  ["Clinical Engineering Science",23,2,11,7,199,6],
+  ["Clinical Engineering Studies",6,3,2,7,56,17],
+  ["Clinical Engineering Technology",19,3,6,7,205,6],
+  ["Clinical Finance",60,4,5,8,65,15],
+  ["Clinical Finance Analytics",62,5,0,8,166,15],
+  ["Clinical Finance Engineering",51,4,7,8,159,5],
+  ["Clinical Finance Management",50,4,1,8,66,10],
+  ["Clinical Finance Policy",63,5,3,8,63,21],
+  ["Clinical Finance Practice",55,4,4,8,195,14],
+  ["Clinical Finance Science",60,4,5,8,65,15],
+  ["Clinical Finance Studies",52,4,0,8,161,10],
+  ["Clinical Finance Technology",56,4,8,8,158,14],
+  ["Clinical Graphic Design",88,0,21,9,225,24],
+  ["Clinical Graphic Design Analytics",90,0,22,9,72,22],
+  ["Clinical Graphic Design Engineering",100,1,11,9,69,23],
+  ["Clinical Graphic Design Management",89,0,1,9,72,22],
+  ["Clinical Graphic Design Policy",100,1,23,9,165,29],
+  ["Clinical Graphic Design Practice",96,1,24,9,68,22],
+  ["Clinical Graphic Design Science",100,1,25,9,165,29],
+  ["Clinical Graphic Design Studies",98,1,21,9,162,29],
+  ["Clinical Graphic Design Technology",93,1,2,9,67,22],
+  ["Clinical Information Technology",65,5,6,10,75,21],
+  ["Clinical Information Technology Analytics",65,5,7,10,75,21],
+  ["Clinical Information Technology Engineering",63,5,8,10,226,7],
+  ["Clinical Information Technology Management",69,5,11,10,78,26],
+  ["Clinical Information Technology Policy",79,0,2,10,227,2],
+  ["Clinical Information Technology Practice",65,5,6,10,75,21],
+  ["Clinical Information Technology Science",64,5,7,10,75,21],
+  ["Clinical Information Technology Studies",67,5,8,10,79,21],
+  ["Clinical Information Technology Technology",65,5,11,10,75,21],
+  ["Clinical Law",68,5,43,11,86,10],
+  ["Clinical Law Analytics",69,5,44,11,80,10],
+  ["Clinical Law Engineering",58,4,2,11,42,7],
+  ["Clinical Law Management",64,5,3,11,81,9],
+  ["Clinical Law Policy",57,4,40,11,228,9],
+  ["Clinical Law Practice",61,5,41,11,83,9],
+  ["Clinical Law Science",62,5,42,11,229,9],
+  ["Clinical Law Studies",69,5,43,11,80,10],
+  ["Clinical Law Technology",72,5,6,11,230,10],
+  ["Clinical Marketing",56,4,4,12,88,21],
+  ["Clinical Marketing Analytics",54,4,5,12,231,21],
+  ["Clinical Marketing Engineering",59,4,7,12,131,7],
+  ["Clinical Marketing Management",52,4,0,12,232,21],
+  ["Clinical Marketing Policy",62,5,1,12,233,26],
+  ["Clinical Marketing Practice",50,4,3,12,234,15],
+  ["Clinical Marketing Science",61,5,4,12,233,26],
+  ["Clinical Marketing Studies",67,5,5,12,89,25],
+  ["Clinical Marketing Technology",55,4,8,12,174,21],
+  ["Clinical Mathematics",37,2,44,13,175,28],
+  ["Clinical Mathematics Analytics",37,2,40,13,175,28],
+  ["Clinical Mathematics Engineering",42,4,11,13,235,8],
+  ["Clinical Mathematics Management",33,2,0,13,108,28],
+  ["Clinical Mathematics Policy",48,4,41,13,61,10],
+  ["Clinical Mathematics Practice",35,2,42,13,236,28],
+  ["Clinical Mathematics Science",37,2,43,13,175,28],
+  ["Clinical Mathematics Studies",43,4,44,13,179,9],
+  ["Clinical Mathematics Technology",35,2,2,13,236,28],
+  ["Clinical Nursing",2,3,40,14,180,27],
+  ["Clinical Nursing Analytics",3,3,41,14,106,27],
+  ["Clinical Nursing Engineering",10,3,6,14,55,17],
+  ["Clinical Nursing Management",0,3,1,14,107,27],
+  ["Clinical Nursing Policy",14,3,42,14,237,19],
+  ["Clinical Nursing Practice",0,3,43,14,107,27],
+  ["Clinical Nursing Science",7,3,44,14,101,19],
+  ["Clinical Nursing Studies",6,3,40,14,104,19],
+  ["Clinical Nursing Technology",4,3,7,14,102,27],
+  ["Clinical Physics",29,2,41,15,111,20],
+  ["Clinical Physics Analytics",23,2,42,15,238,23],
+  ["Clinical Physics Engineering",36,2,8,15,239,8],
+  ["Clinical Physics Management",30,2,3,15,114,20],
+  ["Clinical Physics Policy",36,2,43,15,175,28],
+  ["Clinical Physics Practice",23,2,44,15,238,23],
+  ["Clinical Physics Science",25,2,40,15,110,23],
+  ["Clinical Physics Studies",38,2,41,15,97,11],
+  ["Clinical Physics Technology",39,2,11,15,96,11],
+  ["Clinical Psychology",16,3,42,16,115,3],
+  ["Clinical Psychology Analytics",5,3,43,16,184,7],
+  ["Clinical Psychology Engineering",19,3,2,16,205,6],
+  ["Clinical Psychology Management",4,3,4,16,184,7],
+  ["Clinical Psychology Policy",4,3,44,16,184,7],
+  ["Clinical Psychology Practice",4,3,40,16,184,7],
+  ["Clinical Psychology Science",19,3,41,16,183,1],
+  ["Clinical Psychology Studies",9,3,42,16,240,12],
+  ["Clinical Psychology Technology",3,3,6,16,241,7],
+  ["Clinical Software Engineering",80,0,7,17,186,3],
+  ["Clinical Software Engineering Analytics",78,0,8,17,188,3],
+  ["Clinical Software Engineering Engineering",83,0,11,17,192,3],
+  ["Clinical Software Engineering Management",79,0,2,17,242,3],
+  ["Clinical Software Engineering Policy",82,0,6,17,191,3],
+  ["Clinical Software Engineering Practice",81,0,7,17,190,3],
+  ["Clinical Software Engineering Science",79,0,8,17,242,3],
+  ["Clinical Software Engineering Studies",79,0,11,17,242,3],
+  ["Clinical Software Engineering Technology",83,0,2,17,192,3],
+  ["Computational Accounting",86,0,5,0,3,0],
+  ["Computational Accounting Analytics",92,1,0,0,209,0],
+  ["Computational Accounting Engineering",89,0,6,0,243,1],
+  ["Computational Accounting Management",78,0,1,0,124,2],
+  ["Computational Accounting Policy",91,1,3,0,5,0],
+  ["Computational Accounting Practice",85,0,4,0,208,2],
+  ["Computational Accounting Science",85,0,5,0,208,2],
+  ["Computational Accounting Studies",93,1,0,0,209,0],
+  ["Computational Accounting Technology",83,0,7,0,4,2],
+  ["Computational Biology",17,3,13,1,125,5],
+  ["Computational Biology Analytics",29,2,14,1,14,7],
+  ["Computational Biology Engineering",27,2,8,1,244,13],
+  ["Computational Biology Management",12,3,1,1,17,8],
+  ["Computational Biology Policy",17,3,9,1,125,5],
+  ["Computational Biology Practice",16,3,10,1,126,8],
+  ["Computational Biology Science",27,2,12,1,245,5],
+  ["Computational Biology Studies",15,3,13,1,128,8],
+  ["Computational Biology Technology",17,3,11,1,125,5],
+  ["Computational Business",53,4,3,2,24,9],
+  ["Computational Business Analytics",53,4,4,2,24,9],
+  ["Computational Business Engineering",54,4,2,2,62,5],
+  ["Computational Business Management",51,4,5,2,130,9],
+  ["Computational Business Policy",62,5,0,2,134,10],
+  ["Computational Business Practice",56,4,1,2,201,9],
+  ["Computational Business Science",64,5,3,2,212,10],
+  ["Computational Business Studies",45,4,4,2,246,11],
+  ["Computational Business Technology",48,4,6,2,247,11],
+  ["Computational Chemistry",21,2,14,3,26,12],
+  ["Computational Chemistry Analytics",33,2,9,3,139,3],
+  ["Computational Chemistry Engineering",24,2,7,3,127,6],
+  ["Computational Chemistry Management",20,3,5,3,248,12],
+  ["Computational Chemistry Policy",28,2,10,3,32,12],
+  ["Computational Chemistry Practice",16,3,12,3,138,7],
+  ["Computational Chemistry Science",29,2,13,3,31,12],
+  ["Computational Chemistry Studies",27,2,14,3,207,12],
+  ["Computational Chemistry Technology",31,2,8,3,29,12],
+  ["Computational Computer Science",79,0,11,4,141,15],
+  ["Computational Computer Science Analytics",72,5,2,4,38,14],
+  ["Computational Computer Science Engineering",79,0,6,4,242,3],
+  ["Computational Computer Science Management",75,5,7,4,249,14],
+  ["Computational Computer Science Policy",66,5,8,4,39,10],
+  ["Computational Computer Science Practice",69,5,11,4,37,10],
+  ["Computational Computer Science Science",70,5,2,4,145,10],
+  ["Computational Computer Science Studies",74,5,6,4,34,14],
+  ["Computational Computer Science Technology",79,0,7,4,141,15],
+  ["Computational Data Science",66,5,8,5,151,18],
+  ["Computational Data Science Analytics",70,5,11,5,150,18],
+  ["Computational Data Science Engineering",63,5,2,5,226,7],
+  ["Computational Data Science Management",69,5,6,5,147,18],
+  ["Computational Data Science Policy",72,5,7,5,222,17],
+  ["Computational Data Science Practice",74,5,8,5,41,17],
+  ["Computational Data Science Science",72,5,11,5,222,17],
+  ["Computational Data Science Studies",72,5,2,5,222,17],
+  ["Computational Data Science Technology",59,4,6,5,43,16],
+  ["Computational Education",22,2,15,6,250,20],
+  ["Computational Education Analytics",14,3,16,6,224,20],
+  ["Computational Education Engineering",25,2,7,6,48,6],
+  ["Computational Education Management",25,2,0,6,155,20],
+  ["Computational Education Policy",29,2,26,6,50,20],
+  ["Computational Education Practice",22,2,18,6,250,20],
+  ["Computational Education Science",11,3,19,6,251,23],
+  ["Computational Education Studies",19,3,20,6,46,20],
+  ["Computational Education Technology",11,3,8,6,251,23],
+  ["Computational Engineering",14,3,11,7,204,17],
+  ["Computational Engineering Analytics",9,3,2,7,55,17],
+  ["Computational Engineering Engineering",9,3,6,7,55,17],
+  ["Computational Engineering Management",11,3,7,7,203,17],
+  ["Computational Engineering Policy",21,2,8,7,156,6],
+  ["Computational Engineering Practice",20,3,11,7,59,6],
+  ["Computational Engineering Science",20,3,2,7,59,6],
+  ["Computational Engineering Studies",7,3,6,7,117,17],
+  ["Computational Engineering Technology",9,3,7,7,55,17],
+  ["Computational Finance",57,4,1,8,158,14],
+  ["Computational Finance Analytics",62,5,3,8,166,15],
+  ["Computational Finance Engineering",63,5,8,8,226,7],
+  ["Computational Finance Management",63,5,4,8,63,21],
+  ["Computational Finance Policy",54,4,5,8,64,14],
+  ["Computational Finance Practice",51,4,0,8,160,10],
+  ["Computational Finance Science",63,5,1,8,63,21],
+  ["Computational Finance Studies",55,4,3,8,195,14],
+  ["Computational Finance Technology",52,4,11,8,161,10],
+  ["Computational Graphic Design",94,1,22,9,71,22],
+  ["Computational Graphic Design Analytics",92,1,23,9,164,22],
+  ["Computational Graphic Design Engineering",82,0,2,9,191,3],
+  ["Computational Graphic Design Management",87,0,4,9,225,24],
+  ["Computational Graphic Design Policy",96,1,24,9,68,22],
+  ["Computational Graphic Design Practice",98,1,25,9,162,29],
+  ["Computational Graphic Design Science",92,1,21,9,164,22],
+  ["Computational Graphic Design Studies",86,0,22,9,252,24],
+  ["Computational Graphic Design Technology",86,0,6,9,252,24],
+  ["Computational Information Technology",65,5,7,10,75,21],
+  ["Computational Information Technology Analytics",76,0,8,10,168,25],
+  ["Computational Information Technology Engineering",60,4,11,10,76,7],
+  ["Computational Information Technology Management",74,5,2,10,77,25],
+  ["Computational Information Technology Policy",75,5,6,10,77,25],
+  ["Computational Information Technology Practice",66,5,7,10,74,21],
+  ["Computational Information Technology Science",71,5,8,10,253,26],
+  ["Computational Information Technology Studies",73,5,11,10,170,25],
+  ["Computational Information Technology Technology",75,5,2,10,77,25],
+  ["Computational Law",64,5,27,11,81,9],
+  ["Computational Law Analytics",61,5,28,11,83,9],
+  ["Computational Law Engineering",57,4,6,11,42,7],
+  ["Computational Law Management",65,5,5,11,254,10],
+  ["Computational Law Policy",70,5,29,11,255,10],
+  ["Computational Law Practice",61,5,17,11,83,9],
+  ["Computational Law Science",69,5,26,11,80,10],
+  ["Computational Law Studies",58,4,27,11,256,9],
+  ["Computational Law Technology",58,4,7,11,256,9],
+  ["Computational Marketing",64,5,0,12,92,25],
+  ["Computational Marketing Analytics",65,5,1,12,257,25],
+  ["Computational Marketing Engineering",66,5,8,12,142,12],
+  ["Computational Marketing Management",56,4,3,12,88,21],
+  ["Computational Marketing Policy",66,5,4,12,93,25],
+  ["Computational Marketing Practice",52,4,5,12,232,21],
+  ["Computational Marketing Science",53,4,0,12,231,21],
+  ["Computational Marketing Studies",56,4,1,12,88,21],
+  ["Computational Marketing Technology",58,4,11,12,91,26],
+  ["Computational Mathematics",37,2,9,13,175,28],
+  ["Computational Mathematics Analytics",32,2,10,13,108,20],
+  ["Computational Mathematics Engineering",36,2,2,13,239,8],
+  ["Computational Mathematics Management",33,2,3,13,108,28],
+  ["Computational Mathematics Policy",35,2,12,13,236,28],
+  ["Computational Mathematics Practice",44,4,13,13,99,9],
+  ["Computational Mathematics Science",43,4,14,13,179,9],
+  ["Computational Mathematics Studies",43,4,9,13,179,9],
+  ["Computational Mathematics Technology",37,2,6,13,175,28],
+  ["Computational Nursing",5,3,37,14,104,27],
+  ["Computational Nursing Analytics",3,3,38,14,106,27],
+  ["Computational Nursing Engineering",2,3,7,14,258,18],
+  ["Computational Nursing Management",0,3,4,14,107,27],
+  ["Computational Nursing Policy",2,3,28,14,180,27],
+  ["Computational Nursing Practice",6,3,39,14,104,19],
+  ["Computational Nursing Science",9,3,30,14,105,19],
+  ["Computational Nursing Studies",10,3,31,14,259,19],
+  ["Computational Nursing Technology",12,3,8,14,260,19],
+  ["Computational Physics",26,2,10,15,261,23],
+  ["Computational Physics Analytics",26,2,12,15,261,23],
+  ["Computational Physics Engineering",31,2,11,15,98,13],
+  ["Computational Physics Management",30,2,5,15,114,20],
+  ["Computational Physics Policy",31,2,13,15,176,20],
+  ["Computational Physics Practice",27,2,14,15,112,23],
+  ["Computational Physics Science",33,2,9,15,108,28],
+  ["Computational Physics Studies",35,2,10,15,236,28],
+  ["Computational Physics Technology",35,2,2,15,236,28],
+  ["Computational Psychology",7,3,12,16,262,7],
+  ["Computational Psychology Analytics",7,3,13,16,262,7],
+  ["Computational Psychology Engineering",3,3,6,16,263,18],
+  ["Computational Psychology Management",11,3,0,16,264,12],
+  ["Computational Psychology Policy",17,3,14,16,115,3],
+  ["Computational Psychology Practice",4,3,9,16,184,7],
+  ["Computational Psychology Science",5,3,10,16,184,7],
+  ["Computational Psychology Studies",19,3,12,16,183,1],
+  ["Computational Psychology Technology",13,3,7,16,119,3],
+  ["Computational Software Engineering",87,0,8,17,2,1],
+  ["Computational Software Engineering Analytics",79,0,11,17,242,3],
+  ["Computational Software Engineering Engineering",83,0,2,17,192,3],
+  ["Computational Software Engineering Management",85,0,6,17,6,3],
+  ["Computational Software Engineering Policy",78,0,7,17,188,3],
+  ["Computational Software Engineering Practice",91,1,8,17,187,1],
+  ["Computational Software Engineering Science",90,0,11,17,243,1],
+  ["Computational Software Engineering Studies",76,0,2,17,216,3],
+  ["Computational Software Engineering Technology",79,0,6,17,242,3],
+  ["Computer Science",75,5,7,4,249,14],
+  ["Computer Science Analytics",73,5,8,4,218,14],
+  ["Computer Science Engineering",72,5,11,4,265,12],
+  ["Computer Science Management",77,0,2,4,140,15],
+  ["Computer Science Policy",79,0,6,4,141,15],
+  ["Computer Science Practice",74,5,7,4,34,14],
+  ["Computer Science Science",75,5,8,4,249,14],
+  ["Computer Science Studies",70,5,11,4,145,10],
+  ["Computer Science Technology",73,5,2,4,218,14],
+  ["Data Science",65,5,6,5,44,18],
+  ["Data Science Analytics",61,5,7,5,152,16],
+  ["Data Science Engineering",60,4,8,5,76,7],
+  ["Data Science Management",65,5,11,5,44,18],
+  ["Data Science Policy",67,5,2,5,153,18],
+  ["Data Science Practice",67,5,6,5,153,18],
+  ["Data Science Science",69,5,7,5,147,18],
+  ["Data Science Studies",66,5,8,5,151,18],
+  ["Data Science Technology",62,5,11,5,266,16],
+  ["Digital Accounting",83,0,2,0,4,2],
+  ["Digital Accounting Analytics",86,0,6,0,3,0],
+  ["Digital Accounting Engineering",84,0,7,0,121,3],
+  ["Digital Accounting Management",85,0,8,0,208,2],
+  ["Digital Accounting Policy",79,0,11,0,210,2],
+  ["Digital Accounting Practice",78,0,2,0,124,2],
+  ["Digital Accounting Science",80,0,6,0,267,2],
+  ["Digital Accounting Studies",94,1,7,0,268,0],
+  ["Digital Accounting Technology",79,0,8,0,210,2],
+  ["Digital Biology",15,3,11,1,128,8],
+  ["Digital Biology Analytics",20,3,2,1,15,5],
+  ["Digital Biology Engineering",27,2,6,1,244,13],
+  ["Digital Biology Management",26,2,7,1,211,5],
+  ["Digital Biology Policy",22,2,8,1,11,5],
+  ["Digital Biology Practice",21,2,11,1,269,5],
+  ["Digital Biology Science",19,3,2,1,13,5],
+  ["Digital Biology Studies",28,2,6,1,14,7],
+  ["Digital Biology Technology",26,2,7,1,211,5],
+  ["Digital Business",51,4,8,2,130,9],
+  ["Digital Business Analytics",46,4,11,2,25,11],
+  ["Digital Business Engineering",55,4,2,2,270,5],
+  ["Digital Business Management",60,4,6,2,271,10],
+  ["Digital Business Policy",60,4,7,2,271,10],
+  ["Digital Business Practice",61,5,8,2,133,10],
+  ["Digital Business Science",60,4,11,2,271,10],
+  ["Digital Business Studies",56,4,2,2,201,9],
+  ["Digital Business Technology",46,4,6,2,25,11],
+  ["Digital Chemistry",20,3,7,3,248,12],
+  ["Digital Chemistry Analytics",26,2,8,3,33,12],
+  ["Digital Chemistry Engineering",27,2,11,3,244,13],
+  ["Digital Chemistry Management",19,3,2,3,214,12],
+  ["Digital Chemistry Policy",27,2,6,3,207,12],
+  ["Digital Chemistry Practice",16,3,7,3,138,7],
+  ["Digital Chemistry Science",20,3,8,3,248,12],
+  ["Digital Chemistry Studies",22,2,11,3,30,12],
+  ["Digital Chemistry Technology",17,3,2,3,213,7],
+  ["Digital Computer Science",71,5,6,4,272,14],
+  ["Digital Computer Science Analytics",81,0,7,4,146,15],
+  ["Digital Computer Science Engineering",70,5,8,4,36,12],
+  ["Digital Computer Science Management",78,0,11,4,35,15],
+  ["Digital Computer Science Policy",81,0,2,4,146,15],
+  ["Digital Computer Science Practice",73,5,6,4,218,14],
+  ["Digital Computer Science Science",84,0,7,4,273,21],
+  ["Digital Computer Science Studies",80,0,8,4,144,15],
+  ["Digital Computer Science Technology",77,0,11,4,140,15],
+  ["Digital Data Science",64,5,2,5,221,18],
+  ["Digital Data Science Analytics",71,5,6,5,150,17],
+  ["Digital Data Science Engineering",72,5,7,5,265,12],
+  ["Digital Data Science Management",57,4,8,5,274,16],
+  ["Digital Data Science Policy",59,4,11,5,43,16],
+  ["Digital Data Science Practice",67,5,2,5,153,18],
+  ["Digital Data Science Science",67,5,6,5,153,18],
+  ["Digital Data Science Studies",60,4,7,5,275,16],
+  ["Digital Data Science Technology",62,5,8,5,266,16],
+  ["Digital Education",23,2,11,6,154,20],
+  ["Digital Education Analytics",25,2,2,6,155,20],
+  ["Digital Education Engineering",24,2,6,6,127,6],
+  ["Digital Education Management",15,3,7,6,51,20],
+  ["Digital Education Policy",20,3,8,6,46,20],
+  ["Digital Education Practice",15,3,11,6,51,20],
+  ["Digital Education Science",18,3,2,6,52,20],
+  ["Digital Education Studies",14,3,6,6,224,20],
+  ["Digital Education Technology",22,2,7,6,250,20],
+  ["Digital Engineering",17,3,8,7,58,6],
+  ["Digital Engineering Analytics",16,3,11,7,53,6],
+  ["Digital Engineering Engineering",20,3,2,7,59,6],
+  ["Digital Engineering Management",5,3,6,7,56,18],
+  ["Digital Engineering Policy",23,2,7,7,199,6],
+  ["Digital Engineering Practice",15,3,8,7,54,17],
+  ["Digital Engineering Science",7,3,11,7,117,17],
+  ["Digital Engineering Studies",21,2,2,7,156,6],
+  ["Digital Engineering Technology",19,3,6,7,205,6],
+  ["Digital Finance",55,4,7,8,195,14],
+  ["Digital Finance Analytics",53,4,8,8,64,14],
+  ["Digital Finance Engineering",54,4,11,8,62,5],
+  ["Digital Finance Management",52,4,2,8,161,10],
+  ["Digital Finance Policy",67,5,6,8,79,21],
+  ["Digital Finance Practice",48,4,7,8,61,10],
+  ["Digital Finance Science",49,4,8,8,66,10],
+  ["Digital Finance Studies",50,4,11,8,66,10],
+  ["Digital Finance Technology",58,4,2,8,198,15],
+  ["Digital Graphic Design",95,1,6,9,68,22],
+  ["Digital Graphic Design Analytics",95,1,7,9,68,22],
+  ["Digital Graphic Design Engineering",83,0,8,9,192,3],
+  ["Digital Graphic Design Management",99,1,11,9,165,29],
+  ["Digital Graphic Design Policy",84,0,2,9,70,24],
+  ["Digital Graphic Design Practice",84,0,6,9,70,24],
+  ["Digital Graphic Design Science",97,1,7,9,163,29],
+  ["Digital Graphic Design Studies",85,0,8,9,252,24],
+  ["Digital Graphic Design Technology",88,0,11,9,225,24],
+  ["Digital Information Technology",72,5,2,10,170,26],
+  ["Digital Information Technology Analytics",78,0,6,10,169,2],
+  ["Digital Information Technology Engineering",69,5,7,10,36,12],
+  ["Digital Information Technology Management",72,5,8,10,170,26],
+  ["Digital Information Technology Policy",64,5,11,10,75,21],
+  ["Digital Information Technology Practice",73,5,2,10,170,25],
+  ["Digital Information Technology Science",72,5,6,10,170,26],
+  ["Digital Information Technology Studies",76,0,7,10,168,25],
+  ["Digital Information Technology Technology",68,5,8,10,78,26],
+  ["Digital Law",60,4,11,11,276,9],
+  ["Digital Law Analytics",64,5,2,11,81,9],
+  ["Digital Law Engineering",61,5,6,11,220,7],
+  ["Digital Law Management",71,5,7,11,277,10],
+  ["Digital Law Policy",65,5,8,11,254,10],
+  ["Digital Law Practice",60,4,11,11,276,9],
+  ["Digital Law Science",63,5,2,11,278,9],
+  ["Digital Law Studies",64,5,6,11,81,9],
+  ["Digital Law Technology",74,5,7,11,172,10],
+  ["Digital Marketing",64,5,8,12,92,25],
+  ["Digital Marketing Analytics",68,5,11,12,95,25],
+  ["Digital Marketing Engineering",68,5,2,12,167,12],
+  ["Digital Marketing Management",62,5,6,12,233,26],
+  ["Digital Marketing Policy",64,5,7,12,92,25],
+  ["Digital Marketing Practice",65,5,8,12,257,25],
+  ["Digital Marketing Science",55,4,11,12,174,21],
+  ["Digital Marketing Studies",68,5,2,12,95,25],
+  ["Digital Marketing Technology",57,4,6,12,88,26],
+  ["Digital Mathematics",36,2,7,13,175,28],
+  ["Digital Mathematics Analytics",35,2,8,13,236,28],
+  ["Digital Mathematics Engineering",41,4,11,13,279,8],
+  ["Digital Mathematics Management",32,2,2,13,108,20],
+  ["Digital Mathematics Policy",33,2,6,13,108,28],
+  ["Digital Mathematics Practice",31,2,7,13,176,20],
+  ["Digital Mathematics Science",42,4,8,13,193,11],
+  ["Digital Mathematics Studies",40,2,11,13,100,11],
+  ["Digital Mathematics Technology",32,2,2,13,108,20],
+  ["Digital Nursing",2,3,6,14,180,27],
+  ["Digital Nursing Analytics",1,3,7,14,180,27],
+  ["Digital Nursing Engineering",9,3,8,14,55,17],
+  ["Digital Nursing Management",13,3,11,14,280,19],
+  ["Digital Nursing Policy",0,3,2,14,107,27],
+  ["Digital Nursing Practice",10,3,6,14,259,19],
+  ["Digital Nursing Science",4,3,7,14,102,27],
+  ["Digital Nursing Studies",6,3,8,14,104,19],
+  ["Digital Nursing Technology",6,3,11,14,104,19],
+  ["Digital Physics",31,2,2,15,176,20],
+  ["Digital Physics Analytics",27,2,6,15,112,23],
+  ["Digital Physics Engineering",27,2,7,15,244,13],
+  ["Digital Physics Management",38,2,8,15,97,11],
+  ["Digital Physics Policy",30,2,11,15,114,20],
+  ["Digital Physics Practice",36,2,2,15,175,28],
+  ["Digital Physics Science",39,2,6,15,96,11],
+  ["Digital Physics Studies",36,2,7,15,175,28],
+  ["Digital Physics Technology",39,2,8,15,96,11],
+  ["Digital Psychology",13,3,11,16,119,3],
+  ["Digital Psychology Analytics",4,3,2,16,184,7],
+  ["Digital Psychology Engineering",9,3,6,16,55,17],
+  ["Digital Psychology Management",17,3,7,16,115,3],
+  ["Digital Psychology Policy",20,3,8,16,116,1],
+  ["Digital Psychology Practice",5,3,11,16,184,7],
+  ["Digital Psychology Science",11,3,2,16,264,12],
+  ["Digital Psychology Studies",17,3,6,16,115,3],
+  ["Digital Psychology Technology",20,3,7,16,116,1],
+  ["Digital Software Engineering",81,0,8,17,190,3],
+  ["Digital Software Engineering Analytics",94,1,11,17,120,1],
+  ["Digital Software Engineering Engineering",87,0,2,17,2,1],
+  ["Digital Software Engineering Management",94,1,6,17,120,1],
+  ["Digital Software Engineering Policy",83,0,7,17,192,3],
+  ["Digital Software Engineering Practice",94,1,8,17,120,1],
+  ["Digital Software Engineering Science",79,0,11,17,242,3],
+  ["Digital Software Engineering Studies",92,1,2,17,122,1],
+  ["Digital Software Engineering Technology",90,0,6,17,243,1],
+  ["Doctor of Optometry",51,4,43,18,160,10],
+  ["Doctor of Pharmacy",55,4,44,18,195,14],
+  ["Doctor of Veterinary Medicine",42,4,40,18,281,23],
+  ["Education",20,3,15,6,46,20],
+  ["Education Analytics",22,2,16,6,250,20],
+  ["Education Engineering",16,3,7,6,53,6],
+  ["Education Management",16,3,1,6,51,20],
+  ["Education Policy",19,3,29,6,46,20],
+  ["Education Practice",19,3,18,6,46,20],
+  ["Education Science",23,2,19,6,154,20],
+  ["Education Studies",23,2,20,6,154,20],
+  ["Education Technology",18,3,8,6,52,20],
+  ["Engineering",15,3,11,7,54,17],
+  ["Engineering Analytics",18,3,2,7,58,6],
+  ["Engineering Engineering",11,3,6,7,203,17],
+  ["Engineering Management",14,3,7,7,204,17],
+  ["Engineering Policy",19,3,8,7,205,6],
+  ["Engineering Practice",17,3,11,7,58,6],
+  ["Engineering Science",17,3,2,7,58,6],
+  ["Engineering Studies",10,3,6,7,55,17],
+  ["Engineering Technology",14,3,7,7,204,17],
+  ["Finance",58,4,3,8,198,15],
+  ["Finance Analytics",58,4,4,8,198,15],
+  ["Finance Engineering",59,4,8,8,131,7],
+  ["Finance Management",56,4,5,8,158,14],
+  ["Finance Policy",62,5,0,8,166,15],
+  ["Finance Practice",57,4,1,8,158,14],
+  ["Finance Science",55,4,3,8,195,14],
+  ["Finance Studies",53,4,4,8,64,14],
+  ["Finance Technology",53,4,11,8,64,14],
+  ["Global Accounting",86,0,5,0,3,0],
+  ["Global Accounting Analytics",91,1,0,0,5,0],
+  ["Global Accounting Engineering",89,0,2,0,243,1],
+  ["Global Accounting Management",85,0,1,0,208,2],
+  ["Global Accounting Policy",95,1,3,0,10,0],
+  ["Global Accounting Practice",88,0,4,0,0,0],
+  ["Global Accounting Science",97,1,5,0,8,4],
+  ["Global Accounting Studies",87,0,0,0,0,0],
+  ["Global Accounting Technology",83,0,6,0,4,2],
+  ["Global Biology",23,2,13,1,282,5],
+  ["Global Biology Analytics",13,3,14,1,16,8],
+  ["Global Biology Engineering",13,3,7,1,157,17],
+  ["Global Biology Management",20,3,1,1,15,5],
+  ["Global Biology Policy",28,2,9,1,14,7],
+  ["Global Biology Practice",13,3,10,1,16,8],
+  ["Global Biology Science",24,2,12,1,197,5],
+  ["Global Biology Studies",28,2,13,1,14,7],
+  ["Global Biology Technology",10,3,8,1,129,8],
+  ["Global Business",56,4,3,2,201,9],
+  ["Global Business Analytics",53,4,4,2,24,9],
+  ["Global Business Engineering",61,5,11,2,220,7],
+  ["Global Business Management",46,4,5,2,25,11],
+  ["Global Business Policy",64,5,0,2,212,10],
+  ["Global Business Practice",58,4,1,2,19,10],
+  ["Global Business Science",56,4,3,2,201,9],
+  ["Global Business Studies",57,4,4,2,19,9],
+  ["Global Business Technology",61,5,2,2,133,10],
+  ["Global Chemistry",29,2,14,3,31,12],
+  ["Global Chemistry Analytics",17,3,9,3,213,7],
+  ["Global Chemistry Engineering",33,2,6,3,283,13],
+  ["Global Chemistry Management",25,2,5,3,137,12],
+  ["Global Chemistry Policy",30,2,10,3,31,12],
+  ["Global Chemistry Practice",34,2,12,3,139,3],
+  ["Global Chemistry Science",22,2,13,3,30,12],
+  ["Global Chemistry Studies",27,2,14,3,207,12],
+  ["Global Chemistry Technology",17,3,7,3,213,7],
+  ["Global Computer Science",71,5,8,4,272,14],
+  ["Global Computer Science Analytics",80,0,11,4,144,15],
+  ["Global Computer Science Engineering",74,5,2,4,284,12],
+  ["Global Computer Science Management",69,5,6,4,37,10],
+  ["Global Computer Science Policy",71,5,7,4,272,14],
+  ["Global Computer Science Practice",80,0,8,4,144,15],
+  ["Global Computer Science Science",81,0,11,4,146,15],
+  ["Global Computer Science Studies",82,0,2,4,285,15],
+  ["Global Computer Science Technology",78,0,6,4,35,15],
+  ["Global Data Science",64,5,7,5,221,18],
+  ["Global Data Science Analytics",56,4,8,5,223,19],
+  ["Global Data Science Engineering",73,5,11,5,286,12],
+  ["Global Data Science Management",66,5,2,5,151,18],
+  ["Global Data Science Policy",70,5,6,5,150,18],
+  ["Global Data Science Practice",67,5,7,5,153,18],
+  ["Global Data Science Science",61,5,8,5,152,16],
+  ["Global Data Science Studies",68,5,11,5,148,18],
+  ["Global Data Science Technology",72,5,2,5,222,17],
+  ["Global Education",24,2,15,6,155,20],
+  ["Global Education Analytics",11,3,16,6,251,23],
+  ["Global Education Engineering",26,2,6,6,48,13],
+  ["Global Education Management",17,3,0,6,287,20],
+  ["Global Education Policy",24,2,17,6,155,20],
+  ["Global Education Practice",10,3,18,6,251,23],
+  ["Global Education Science",26,2,19,6,288,20],
+  ["Global Education Studies",26,2,20,6,288,20],
+  ["Global Education Technology",15,3,7,6,51,20],
+  ["Global Engineering",13,3,8,7,157,17],
+  ["Global Engineering Analytics",21,2,11,7,156,6],
+  ["Global Engineering Engineering",24,2,2,7,127,6],
+  ["Global Engineering Management",8,3,6,7,103,17],
+  ["Global Engineering Policy",5,3,7,7,56,18],
+  ["Global Engineering Practice",18,3,8,7,58,6],
+  ["Global Engineering Science",13,3,11,7,157,17],
+  ["Global Engineering Studies",17,3,2,7,58,6],
+  ["Global Engineering Technology",15,3,6,7,54,17],
+  ["Global Finance",60,4,1,8,65,15],
+  ["Global Finance Analytics",65,5,3,8,75,21],
+  ["Global Finance Engineering",64,5,7,8,90,7],
+  ["Global Finance Management",59,4,4,8,60,15],
+  ["Global Finance Policy",53,4,5,8,64,14],
+  ["Global Finance Practice",58,4,0,8,198,15],
+  ["Global Finance Science",59,4,1,8,60,15],
+  ["Global Finance Studies",66,5,3,8,74,21],
+  ["Global Finance Technology",52,4,8,8,161,10],
+  ["Global Graphic Design",96,1,23,9,68,22],
+  ["Global Graphic Design Analytics",90,0,24,9,72,22],
+  ["Global Graphic Design Engineering",96,1,11,9,289,23],
+  ["Global Graphic Design Management",89,0,4,9,72,22],
+  ["Global Graphic Design Policy",100,1,25,9,165,29],
+  ["Global Graphic Design Practice",89,0,21,9,72,22],
+  ["Global Graphic Design Science",91,1,22,9,164,22],
+  ["Global Graphic Design Studies",99,1,23,9,165,29],
+  ["Global Graphic Design Technology",86,0,2,9,252,24],
+  ["Global Information Technology",66,5,6,10,74,21],
+  ["Global Information Technology Analytics",70,5,7,10,253,26],
+  ["Global Information Technology Engineering",72,5,8,10,265,12],
+  ["Global Information Technology Management",69,5,11,10,78,26],
+  ["Global Information Technology Policy",77,0,2,10,168,25],
+  ["Global Information Technology Practice",68,5,6,10,78,26],
+  ["Global Information Technology Science",75,5,7,10,77,25],
+  ["Global Information Technology Studies",70,5,8,10,253,26],
+  ["Global Information Technology Technology",67,5,11,10,79,21],
+  ["Global Law",61,5,26,11,83,9],
+  ["Global Law Analytics",55,4,27,11,290,9],
+  ["Global Law Engineering",59,4,2,11,131,7],
+  ["Global Law Management",59,4,5,11,291,9],
+  ["Global Law Policy",56,4,28,11,85,9],
+  ["Global Law Practice",70,5,29,11,255,10],
+  ["Global Law Science",69,5,17,11,80,10],
+  ["Global Law Studies",72,5,26,11,230,10],
+  ["Global Law Technology",67,5,6,11,171,10],
+  ["Global Marketing",59,4,0,12,94,26],
+  ["Global Marketing Analytics",62,5,1,12,233,26],
+  ["Global Marketing Engineering",69,5,7,12,36,12],
+  ["Global Marketing Management",53,4,3,12,231,21],
+  ["Global Marketing Policy",65,5,4,12,257,25],
+  ["Global Marketing Practice",67,5,5,12,89,25],
+  ["Global Marketing Science",51,4,0,12,232,21],
+  ["Global Marketing Studies",53,4,1,12,231,21],
+  ["Global Marketing Technology",63,5,8,12,92,26],
+  ["Global Mathematics",43,4,9,13,179,9],
+  ["Global Mathematics Analytics",49,4,10,13,66,10],
+  ["Global Mathematics Engineering",45,4,11,13,21,8],
+  ["Global Mathematics Management",35,2,3,13,236,28],
+  ["Global Mathematics Policy",36,2,12,13,175,28],
+  ["Global Mathematics Practice",31,2,13,13,176,20],
+  ["Global Mathematics Science",30,2,14,13,114,20],
+  ["Global Mathematics Studies",38,2,9,13,97,11],
+  ["Global Mathematics Technology",36,2,2,13,175,28],
+  ["Global Nursing",8,3,32,14,101,19],
+  ["Global Nursing Analytics",2,3,33,14,180,27],
+  ["Global Nursing Engineering",7,3,6,14,117,17],
+  ["Global Nursing Management",5,3,4,14,104,27],
+  ["Global Nursing Policy",0,3,27,14,107,27],
+  ["Global Nursing Practice",0,3,34,14,107,27],
+  ["Global Nursing Science",0,3,35,14,107,27],
+  ["Global Nursing Studies",0,3,36,14,107,27],
+  ["Global Nursing Technology",1,3,7,14,180,27],
+  ["Global Physics",25,2,10,15,110,23],
+  ["Global Physics Analytics",24,2,12,15,110,23],
+  ["Global Physics Engineering",20,3,8,15,59,6],
+  ["Global Physics Management",28,2,5,15,111,20],
+  ["Global Physics Policy",26,2,13,15,261,23],
+  ["Global Physics Practice",26,2,14,15,261,23],
+  ["Global Physics Science",25,2,9,15,110,23],
+  ["Global Physics Studies",32,2,10,15,108,20],
+  ["Global Physics Technology",32,2,11,15,108,20],
+  ["Global Psychology",13,3,12,16,119,3],
+  ["Global Psychology Analytics",4,3,13,16,184,7],
+  ["Global Psychology Engineering",18,3,2,16,58,6],
+  ["Global Psychology Management",3,3,0,16,241,7],
+  ["Global Psychology Policy",12,3,14,16,119,12],
+  ["Global Psychology Practice",18,3,9,16,185,1],
+  ["Global Psychology Science",17,3,10,16,115,3],
+  ["Global Psychology Studies",17,3,12,16,115,3],
+  ["Global Psychology Technology",20,3,6,16,116,1],
+  ["Global Software Engineering",88,0,7,17,292,1],
+  ["Global Software Engineering Analytics",81,0,8,17,190,3],
+  ["Global Software Engineering Engineering",82,0,11,17,191,3],
+  ["Global Software Engineering Management",84,0,2,17,121,3],
+  ["Global Software Engineering Policy",87,0,6,17,2,1],
+  ["Global Software Engineering Practice",77,0,7,17,188,3],
+  ["Global Software Engineering Science",93,1,8,17,189,1],
+  ["Global Software Engineering Studies",94,1,11,17,120,1],
+  ["Global Software Engineering Technology",75,5,2,17,284,12],
+  ["Graphic Design",92,1,24,9,164,22],
+  ["Graphic Design Analytics",90,0,25,9,72,22],
+  ["Graphic Design Engineering",94,1,6,9,120,1],
+  ["Graphic Design Management",88,0,1,9,225,24],
+  ["Graphic Design Policy",96,1,21,9,68,22],
+  ["Graphic Design Practice",88,0,22,9,225,24],
+  ["Graphic Design Science",90,0,23,9,72,22],
+  ["Graphic Design Studies",90,0,24,9,72,22],
+  ["Graphic Design Technology",87,0,7,9,225,24],
+  ["Industrial Accounting",87,0,3,0,0,0],
+  ["Industrial Biology",17,3,13,1,125,5],
+  ["Industrial Biology Analytics",18,3,14,1,293,5],
+  ["Industrial Biology Engineering",19,3,8,1,205,6],
+  ["Industrial Biology Management",24,2,4,1,197,5],
+  ["Industrial Biology Policy",19,3,9,1,13,5],
+  ["Industrial Biology Practice",27,2,10,1,245,5],
+  ["Industrial Biology Science",19,3,12,1,13,5],
+  ["Industrial Biology Studies",20,3,13,1,15,5],
+  ["Industrial Biology Technology",12,3,11,1,17,8],
+  ["Industrial Business",52,4,5,2,24,9],
+  ["Industrial Business Analytics",61,5,0,2,133,10],
+  ["Industrial Business Engineering",60,4,2,2,76,7],
+  ["Industrial Business Management",62,5,1,2,134,10],
+  ["Industrial Business Policy",61,5,3,2,133,10],
+  ["Industrial Business Practice",47,4,4,2,132,11],
+  ["Industrial Business Science",47,4,5,2,132,11],
+  ["Industrial Business Studies",60,4,0,2,271,10],
+  ["Industrial Business Technology",52,4,6,2,24,9],
+  ["Industrial Chemistry",22,2,14,3,30,12],
+  ["Industrial Chemistry Analytics",17,3,9,3,213,7],
+  ["Industrial Chemistry Engineering",31,2,7,3,98,13],
+  ["Industrial Chemistry Management",29,2,1,3,31,12],
+  ["Industrial Chemistry Policy",29,2,10,3,31,12],
+  ["Industrial Chemistry Practice",20,3,12,3,248,12],
+  ["Industrial Chemistry Science",33,2,13,3,139,3],
+  ["Industrial Chemistry Studies",25,2,14,3,137,12],
+  ["Industrial Chemistry Technology",32,2,8,3,27,3],
+  ["Industrial Computer Science",70,5,11,4,145,10],
+  ["Industrial Computer Science Analytics",82,0,2,4,285,15],
+  ["Industrial Computer Science Engineering",67,5,6,4,294,12],
+  ["Industrial Computer Science Management",75,5,7,4,249,14],
+  ["Industrial Computer Science Policy",72,5,8,4,38,14],
+  ["Industrial Computer Science Practice",78,0,11,4,35,15],
+  ["Industrial Computer Science Science",70,5,2,4,145,10],
+  ["Industrial Computer Science Studies",68,5,6,4,217,10],
+  ["Industrial Computer Science Technology",77,0,7,4,140,15],
+  ["Industrial Data Science",63,5,8,5,40,16],
+  ["Industrial Data Science Analytics",55,4,11,5,45,19],
+  ["Industrial Data Science Engineering",72,5,2,5,265,12],
+  ["Industrial Data Science Management",56,4,6,5,223,19],
+  ["Industrial Data Science Policy",68,5,7,5,148,18],
+  ["Industrial Data Science Practice",74,5,8,5,41,17],
+  ["Industrial Data Science Science",66,5,11,5,151,18],
+  ["Industrial Data Science Studies",74,5,2,5,41,17],
+  ["Industrial Data Science Technology",67,5,6,5,153,18],
+  ["Industrial Education",15,3,15,6,51,20],
+  ["Industrial Engineering",10,3,7,7,55,17],
+  ["Industrial Engineering Analytics",18,3,8,7,58,6],
+  ["Industrial Engineering Engineering",21,2,11,7,156,6],
+  ["Industrial Engineering Management",24,2,2,7,127,6],
+  ["Industrial Engineering Policy",16,3,6,7,53,6],
+  ["Industrial Engineering Practice",13,3,7,7,157,17],
+  ["Industrial Engineering Science",20,3,8,7,59,6],
+  ["Industrial Engineering Studies",15,3,11,7,54,17],
+  ["Industrial Engineering Technology",8,3,2,7,103,17],
+  ["Industrial Finance",53,4,3,8,64,14],
+  ["Industrial Graphic Design",88,0,25,9,225,24],
+  ["Industrial Information Technology",71,5,6,10,253,26],
+  ["Industrial Information Technology Analytics",70,5,7,10,253,26],
+  ["Industrial Information Technology Engineering",66,5,8,10,142,12],
+  ["Industrial Information Technology Management",79,0,11,10,227,2],
+  ["Industrial Information Technology Policy",79,0,2,10,227,2],
+  ["Industrial Information Technology Practice",62,5,6,10,166,15],
+  ["Industrial Information Technology Science",77,0,7,10,168,25],
+  ["Industrial Information Technology Studies",76,0,8,10,168,25],
+  ["Industrial Information Technology Technology",73,5,11,10,170,25],
+  ["Industrial Law",62,5,28,11,229,9],
+  ["Industrial Marketing",60,4,4,12,173,26],
+  ["Industrial Mathematics",44,4,9,13,99,9],
+  ["Industrial Mathematics Analytics",42,4,10,13,193,11],
+  ["Industrial Mathematics Engineering",45,4,2,13,21,8],
+  ["Industrial Mathematics Management",35,2,5,13,236,28],
+  ["Industrial Mathematics Policy",30,2,12,13,114,20],
+  ["Industrial Mathematics Practice",49,4,13,13,66,10],
+  ["Industrial Mathematics Science",33,2,14,13,108,28],
+  ["Industrial Mathematics Studies",32,2,9,13,108,20],
+  ["Industrial Mathematics Technology",35,2,6,13,236,28],
+  ["Industrial Nursing",4,3,37,14,102,27],
+  ["Industrial Physics",33,2,10,15,108,28],
+  ["Industrial Physics Analytics",29,2,12,15,111,20],
+  ["Industrial Physics Engineering",25,2,7,15,48,6],
+  ["Industrial Physics Management",23,2,0,15,238,23],
+  ["Industrial Physics Policy",30,2,13,15,114,20],
+  ["Industrial Physics Practice",36,2,14,15,175,28],
+  ["Industrial Physics Science",37,2,9,15,175,28],
+  ["Industrial Physics Studies",25,2,10,15,110,23],
+  ["Industrial Physics Technology",39,2,8,15,96,11],
+  ["Industrial Psychology",16,3,12,16,115,3],
+  ["Industrial Software Engineering",84,0,11,17,121,3],
+  ["Industrial Software Engineering Analytics",81,0,2,17,190,3],
+  ["Industrial Software Engineering Engineering",90,0,6,17,243,1],
+  ["Industrial Software Engineering Management",79,0,7,17,242,3],
+  ["Industrial Software Engineering Policy",76,0,8,17,216,3],
+  ["Industrial Software Engineering Practice",88,0,11,17,292,1],
+  ["Industrial Software Engineering Science",84,0,2,17,121,3],
+  ["Industrial Software Engineering Studies",86,0,6,17,6,1],
+  ["Industrial Software Engineering Technology",80,0,7,17,186,3],
+  ["Information Technology",70,5,8,10,253,26],
+  ["Information Technology Analytics",69,5,11,10,78,26],
+  ["Information Technology Engineering",68,5,2,10,167,12],
+  ["Information Technology Management",73,5,6,10,170,25],
+  ["Information Technology Policy",68,5,7,10,78,26],
+  ["Information Technology Practice",68,5,8,10,78,26],
+  ["Information Technology Science",70,5,11,10,253,26],
+  ["Information Technology Studies",66,5,2,10,74,21],
+  ["Information Technology Technology",68,5,6,10,78,26],
+  ["International Accounting",85,0,1,0,208,2],
+  ["International Accounting Analytics",92,1,3,0,209,0],
+  ["International Accounting Engineering",89,0,7,0,243,1],
+  ["International Accounting Management",91,1,4,0,5,0],
+  ["International Accounting Policy",81,0,5,0,7,2],
+  ["International Accounting Practice",89,0,0,0,1,0],
+  ["International Accounting Science",92,1,1,0,209,0],
+  ["International Accounting Studies",94,1,3,0,268,0],
+  ["International Accounting Technology",94,1,8,0,268,0],
+  ["International Biology",17,3,13,1,125,5],
+  ["International Biology Analytics",10,3,14,1,129,8],
+  ["International Biology Engineering",20,3,11,1,59,6],
+  ["International Biology Management",18,3,4,1,293,5],
+  ["International Biology Policy",23,2,9,1,282,5],
+  ["International Biology Practice",20,3,10,1,15,5],
+  ["International Biology Science",20,3,12,1,15,5],
+  ["International Biology Studies",10,3,13,1,129,8],
+  ["International Biology Technology",24,2,2,1,197,5],
+  ["International Business",53,4,5,2,24,9],
+  ["International Business Analytics",60,4,0,2,271,10],
+  ["International Business Engineering",57,4,6,2,42,7],
+  ["International Business Management",45,4,1,2,246,11],
+  ["International Business Policy",54,4,3,2,206,9],
+  ["International Business Practice",62,5,4,2,134,10],
+  ["International Business Science",47,4,5,2,132,11],
+  ["International Business Studies",46,4,0,2,25,11],
+  ["International Business Technology",52,4,7,2,24,9],
+  ["International Chemistry",28,2,14,3,32,12],
+  ["International Chemistry Analytics",22,2,9,3,30,12],
+  ["International Chemistry Engineering",22,2,8,3,12,6],
+  ["International Chemistry Management",33,2,1,3,139,3],
+  ["International Chemistry Policy",15,3,10,3,295,7],
+  ["International Chemistry Practice",23,2,12,3,202,12],
+  ["International Chemistry Science",34,2,13,3,139,3],
+  ["International Chemistry Studies",17,3,14,3,213,7],
+  ["International Chemistry Technology",17,3,11,3,213,7],
+  ["International Computer Science",73,5,2,4,218,14],
+  ["International Computer Science Analytics",75,5,6,4,249,14],
+  ["International Computer Science Engineering",76,0,7,4,216,3],
+  ["International Computer Science Management",80,0,8,4,144,15],
+  ["International Computer Science Policy",76,0,11,4,215,14],
+  ["International Computer Science Practice",71,5,2,4,272,14],
+  ["International Computer Science Science",80,0,6,4,144,15],
+  ["International Computer Science Studies",69,5,7,4,37,10],
+  ["International Computer Science Technology",69,5,8,4,37,10],
+  ["International Data Science",65,5,11,5,44,18],
+  ["International Data Science Analytics",58,4,2,5,219,16],
+  ["International Data Science Engineering",61,5,6,5,220,7],
+  ["International Data Science Management",60,4,7,5,275,16],
+  ["International Data Science Policy",71,5,8,5,150,17],
+  ["International Data Science Practice",68,5,11,5,148,18],
+  ["International Data Science Science",56,4,2,5,223,19],
+  ["International Data Science Studies",55,4,6,5,45,19],
+  ["International Data Science Technology",65,5,7,5,44,18],
+  ["International Education",19,3,16,6,46,20],
+  ["International Education Analytics",24,2,18,6,155,20],
+  ["International Education Engineering",13,3,8,6,157,17],
+  ["International Education Management",26,2,3,6,288,20],
+  ["International Education Policy",20,3,29,6,46,20],
+  ["International Education Practice",17,3,19,6,287,20],
+  ["International Education Science",27,2,20,6,47,20],
+  ["International Education Studies",15,3,15,6,51,20],
+  ["International Education Technology",22,2,11,6,250,20],
+  ["International Engineering",16,3,2,7,53,6],
+  ["International Engineering Analytics",8,3,6,7,103,17],
+  ["International Engineering Engineering",14,3,7,7,204,17],
+  ["International Engineering Management",11,3,8,7,203,17],
+  ["International Engineering Policy",22,2,11,7,12,6],
+  ["International Engineering Practice",23,2,2,7,199,6],
+  ["International Engineering Science",17,3,6,7,58,6],
+  ["International Engineering Studies",9,3,7,7,55,17],
+  ["International Engineering Technology",18,3,8,7,58,6],
+  ["International Finance",58,4,4,8,198,15],
+  ["International Finance Analytics",54,4,5,8,64,14],
+  ["International Finance Engineering",56,4,11,8,149,7],
+  ["International Finance Management",63,5,0,8,63,21],
+  ["International Finance Policy",67,5,1,8,79,21],
+  ["International Finance Practice",62,5,3,8,166,15],
+  ["International Finance Science",67,5,4,8,79,21],
+  ["International Finance Studies",55,4,5,8,195,14],
+  ["International Finance Technology",57,4,2,8,158,14],
+  ["International Graphic Design",94,1,21,9,71,22],
+  ["International Graphic Design Analytics",100,1,22,9,165,29],
+  ["International Graphic Design Engineering",89,0,6,9,243,1],
+  ["International Graphic Design Management",94,1,0,9,71,22],
+  ["International Graphic Design Policy",100,1,23,9,165,29],
+  ["International Graphic Design Practice",91,1,24,9,164,22],
+  ["International Graphic Design Science",93,1,25,9,67,22],
+  ["International Graphic Design Studies",100,1,21,9,165,29],
+  ["International Graphic Design Technology",98,1,7,9,162,29],
+  ["International Information Technology",74,5,8,10,77,25],
+  ["International Information Technology Analytics",71,5,11,10,253,26],
+  ["International Information Technology Engineering",69,5,2,10,36,12],
+  ["International Information Technology Management",62,5,6,10,166,15],
+  ["International Information Technology Policy",71,5,7,10,253,26],
+  ["International Information Technology Practice",60,4,8,10,65,15],
+  ["International Information Technology Science",72,5,11,10,170,26],
+  ["International Information Technology Studies",70,5,2,10,253,26],
+  ["International Information Technology Technology",66,5,6,10,74,21],
+  ["International Law",66,5,17,11,87,10],
+  ["International Law Analytics",64,5,26,11,81,9],
+  ["International Law Engineering",70,5,7,11,36,12],
+  ["International Law Management",69,5,1,11,80,10],
+  ["International Law Policy",68,5,27,11,86,10],
+  ["International Law Practice",73,5,28,11,84,10],
+  ["International Law Science",63,5,29,11,278,9],
+  ["International Law Studies",55,4,17,11,290,9],
+  ["International Law Technology",62,5,8,11,229,9],
+  ["International Marketing",64,5,3,12,92,25],
+  ["International Marketing Analytics",61,5,4,12,233,26],
+  ["International Marketing Engineering",60,4,11,12,76,7],
+  ["International Marketing Management",60,4,5,12,173,26],
+  ["International Marketing Policy",65,5,0,12,257,25],
+  ["International Marketing Practice",54,4,1,12,231,21],
+  ["International Marketing Science",51,4,3,12,232,21],
+  ["International Marketing Studies",59,4,4,12,94,26],
+  ["International Marketing Technology",52,4,2,12,232,21],
+  ["International Mathematics",41,4,9,13,100,11],
+  ["International Mathematics Analytics",33,2,10,13,108,28],
+  ["International Mathematics Engineering",32,2,6,13,296,13],
+  ["International Mathematics Management",49,4,5,13,66,10],
+  ["International Mathematics Policy",32,2,12,13,108,20],
+  ["International Mathematics Practice",40,2,13,13,100,11],
+  ["International Mathematics Science",31,2,14,13,176,20],
+  ["International Mathematics Studies",38,2,9,13,97,11],
+  ["International Mathematics Technology",32,2,7,13,108,20],
+  ["International Nursing",8,3,38,14,101,19],
+  ["International Nursing Analytics",1,3,39,14,180,27],
+  ["International Nursing Engineering",11,3,8,14,203,17],
+  ["International Nursing Management",12,3,0,14,260,19],
+  ["International Nursing Policy",4,3,26,14,102,27],
+  ["International Nursing Practice",0,3,30,14,107,27],
+  ["International Nursing Science",1,3,31,14,180,27],
+  ["International Nursing Studies",13,3,32,14,280,19],
+  ["International Nursing Technology",7,3,11,14,101,19],
+  ["International Physics",26,2,10,15,261,23],
+  ["International Physics Analytics",27,2,12,15,112,23],
+  ["International Physics Engineering",21,2,2,15,156,6],
+  ["International Physics Management",31,2,1,15,176,20],
+  ["International Physics Policy",25,2,13,15,110,23],
+  ["International Physics Practice",37,2,14,15,175,28],
+  ["International Physics Science",34,2,9,15,200,28],
+  ["International Physics Studies",24,2,10,15,110,23],
+  ["International Physics Technology",39,2,6,15,96,11],
+  ["International Psychology",9,3,12,16,240,12],
+  ["International Psychology Analytics",16,3,13,16,115,3],
+  ["International Psychology Engineering",9,3,7,16,55,17],
+  ["International Psychology Management",14,3,3,16,297,3],
+  ["International Psychology Policy",7,3,14,16,262,7],
+  ["International Psychology Practice",2,3,9,16,298,5],
+  ["International Psychology Science",7,3,10,16,262,7],
+  ["International Psychology Studies",10,3,12,16,299,12],
+  ["International Psychology Technology",9,3,8,16,240,12],
+  ["International Software Engineering",81,0,11,17,190,3],
+  ["International Software Engineering Analytics",78,0,2,17,188,3],
+  ["International Software Engineering Engineering",93,1,6,17,189,1],
+  ["International Software Engineering Management",84,0,7,17,121,3],
+  ["International Software Engineering Policy",89,0,8,17,243,1],
+  ["International Software Engineering Practice",85,0,11,17,6,3],
+  ["International Software Engineering Science",80,0,2,17,186,3],
+  ["International Software Engineering Studies",84,0,6,17,121,3],
+  ["International Software Engineering Technology",88,0,7,17,292,1],
+  ["Law",65,5,27,11,254,10],
+  ["Law Analytics",66,5,28,11,87,10],
+  ["Law Engineering",62,5,8,11,82,7],
+  ["Law Management",63,5,4,11,278,9],
+  ["Law Policy",69,5,29,11,80,10],
+  ["Law Practice",64,5,17,11,81,9],
+  ["Law Science",64,5,26,11,81,9],
+  ["Law Studies",62,5,27,11,229,9],
+  ["Law Technology",66,5,11,11,87,10],
+  ["LLB Law",64,5,28,11,81,9],
+  ["Marketing",60,4,5,12,173,26],
+  ["Marketing Analytics",58,4,0,12,91,26],
+  ["Marketing Engineering",57,4,2,12,42,7],
+  ["Marketing Management",57,4,1,12,88,26],
+  ["Marketing Policy",55,4,3,12,174,21],
+  ["Marketing Practice",62,5,4,12,233,26],
+  ["Marketing Science",60,4,5,12,173,26],
+  ["Marketing Studies",61,5,0,12,233,26],
+  ["Marketing Technology",61,5,6,12,233,26],
+  ["Mathematics",40,2,13,13,100,11],
+  ["Mathematics Analytics",40,2,14,13,100,11],
+  ["Mathematics Engineering",40,2,7,13,300,8],
+  ["Mathematics Management",36,2,1,13,175,28],
+  ["Mathematics Policy",39,2,9,13,96,11],
+  ["Mathematics Practice",38,2,10,13,97,11],
+  ["Mathematics Science",43,4,12,13,179,9],
+  ["Mathematics Studies",38,2,13,13,97,11],
+  ["Mathematics Technology",39,2,8,13,96,11],
+  ["Nursing",5,3,33,14,104,27],
+  ["Nursing Analytics",6,3,34,14,104,19],
+  ["Nursing Engineering",9,3,11,14,55,17],
+  ["Nursing Management",0,3,3,14,107,27],
+  ["Nursing Policy",0,3,29,14,107,27],
+  ["Nursing Practice",0,3,35,14,107,27],
+  ["Nursing Science",5,3,36,14,104,27],
+  ["Nursing Studies",1,3,37,14,180,27],
+  ["Nursing Technology",9,3,2,14,105,19],
+  ["Physics",30,2,14,15,114,20],
+  ["Physics Analytics",32,2,9,15,108,20],
+  ["Physics Engineering",27,2,6,15,244,13],
+  ["Physics Management",30,2,4,15,114,20],
+  ["Physics Policy",32,2,10,15,108,20],
+  ["Physics Practice",31,2,12,15,176,20],
+  ["Physics Science",33,2,13,15,108,28],
+  ["Physics Studies",28,2,14,15,111,20],
+  ["Physics Technology",32,2,7,15,108,20],
+  ["Psychology",12,3,9,16,119,12],
+  ["Psychology Analytics",16,3,10,16,115,3],
+  ["Psychology Engineering",9,3,8,16,55,17],
+  ["Psychology Management",12,3,5,16,119,12],
+  ["Psychology Policy",11,3,12,16,264,12],
+  ["Psychology Practice",15,3,13,16,118,3],
+  ["Psychology Science",11,3,14,16,264,12],
+  ["Psychology Studies",15,3,9,16,118,3],
+  ["Psychology Technology",11,3,11,16,264,12],
+  ["Software Engineering",85,0,2,17,6,3],
+  ["Software Engineering Analytics",81,0,6,17,190,3],
+  ["Software Engineering Engineering",81,0,7,17,190,3],
+  ["Software Engineering Management",83,0,8,17,192,3],
+  ["Software Engineering Policy",87,0,11,17,2,1],
+  ["Software Engineering Practice",81,0,2,17,190,3],
+  ["Software Engineering Science",83,0,6,17,192,3],
+  ["Software Engineering Studies",82,0,7,17,191,3],
+  ["Software Engineering Technology",89,0,8,17,243,1],
+  ["Strategic Accounting",83,0,0,0,4,2],
+  ["Strategic Accounting Analytics",80,0,1,0,267,2],
+  ["Strategic Accounting Engineering",88,0,11,0,292,1],
+  ["Strategic Accounting Management",93,1,3,0,209,0],
+  ["Strategic Accounting Policy",93,1,4,0,209,0],
+  ["Strategic Accounting Practice",78,0,5,0,124,2],
+  ["Strategic Accounting Science",79,0,0,0,210,2],
+  ["Strategic Accounting Studies",78,0,1,0,124,2],
+  ["Strategic Accounting Technology",79,0,2,0,210,2],
+  ["Strategic Biology",18,3,10,1,293,5],
+  ["Strategic Biology Analytics",26,2,12,1,211,5],
+  ["Strategic Biology Engineering",26,2,6,1,48,13],
+  ["Strategic Biology Management",10,3,3,1,129,8],
+  ["Strategic Biology Policy",11,3,13,1,17,8],
+  ["Strategic Biology Practice",13,3,14,1,16,8],
+  ["Strategic Biology Science",20,3,9,1,15,5],
+  ["Strategic Biology Studies",11,3,10,1,17,8],
+  ["Strategic Biology Technology",16,3,7,1,126,8],
+  ["Strategic Business",55,4,4,2,23,9],
+  ["Strategic Business Analytics",64,5,5,2,212,10],
+  ["Strategic Business Engineering",48,4,8,2,301,5],
+  ["Strategic Business Management",63,5,0,2,134,10],
+  ["Strategic Business Policy",60,4,1,2,271,10],
+  ["Strategic Business Practice",61,5,3,2,133,10],
+  ["Strategic Business Science",64,5,4,2,212,10],
+  ["Strategic Business Studies",62,5,5,2,134,10],
+  ["Strategic Business Technology",53,4,11,2,24,9],
+  ["Strategic Chemistry",28,2,12,3,32,12],
+  ["Strategic Chemistry Analytics",31,2,13,3,29,12],
+  ["Strategic Chemistry Engineering",34,2,2,3,28,13],
+  ["Strategic Chemistry Management",16,3,0,3,138,7],
+  ["Strategic Chemistry Policy",15,3,14,3,295,7],
+  ["Strategic Chemistry Practice",27,2,9,3,207,12],
+  ["Strategic Chemistry Science",20,3,10,3,248,12],
+  ["Strategic Chemistry Studies",30,2,12,3,31,12],
+  ["Strategic Chemistry Technology",33,2,6,3,139,3],
+  ["Strategic Computer Science",70,5,7,4,145,10],
+  ["Strategic Computer Science Analytics",67,5,8,4,302,10],
+  ["Strategic Computer Science Engineering",68,5,11,4,167,12],
+  ["Strategic Computer Science Management",68,5,2,4,217,10],
+  ["Strategic Computer Science Policy",66,5,6,4,39,10],
+  ["Strategic Computer Science Practice",77,0,7,4,140,15],
+  ["Strategic Computer Science Science",81,0,8,4,146,15],
+  ["Strategic Computer Science Studies",81,0,11,4,146,15],
+  ["Strategic Computer Science Technology",84,0,2,4,273,21],
+  ["Strategic Data Science",69,5,6,5,147,18],
+  ["Strategic Data Science Analytics",62,5,7,5,266,16],
+  ["Strategic Data Science Engineering",72,5,8,5,265,12],
+  ["Strategic Data Science Management",55,4,11,5,45,19],
+  ["Strategic Data Science Policy",66,5,2,5,151,18],
+  ["Strategic Data Science Practice",71,5,6,5,150,17],
+  ["Strategic Data Science Science",62,5,7,5,266,16],
+  ["Strategic Data Science Studies",65,5,8,5,44,18],
+  ["Strategic Data Science Technology",70,5,11,5,150,18],
+  ["Strategic Education",23,2,16,6,154,20],
+  ["Strategic Education Analytics",21,2,18,6,46,20],
+  ["Strategic Education Engineering",10,3,2,6,55,17],
+  ["Strategic Education Management",20,3,1,6,46,20],
+  ["Strategic Education Policy",15,3,17,6,51,20],
+  ["Strategic Education Practice",18,3,19,6,52,20],
+  ["Strategic Education Science",16,3,20,6,51,20],
+  ["Strategic Education Studies",10,3,15,6,251,23],
+  ["Strategic Education Technology",23,2,6,6,154,20],
+  ["Strategic Engineering",14,3,7,7,204,17],
+  ["Strategic Engineering Analytics",11,3,8,7,203,17],
+  ["Strategic Engineering Engineering",8,3,11,7,103,17],
+  ["Strategic Engineering Management",17,3,2,7,58,6],
+  ["Strategic Engineering Policy",5,3,6,7,56,18],
+  ["Strategic Engineering Practice",17,3,7,7,58,6],
+  ["Strategic Engineering Science",8,3,8,7,103,17],
+  ["Strategic Engineering Studies",20,3,11,7,59,6],
+  ["Strategic Engineering Technology",7,3,2,7,117,17],
+  ["Strategic Finance",55,4,3,8,195,14],
+  ["Strategic Finance Analytics",50,4,4,8,66,10],
+  ["Strategic Finance Engineering",51,4,6,8,159,5],
+  ["Strategic Finance Management",57,4,5,8,158,14],
+  ["Strategic Finance Policy",61,5,0,8,65,15],
+  ["Strategic Finance Practice",62,5,1,8,166,15],
+  ["Strategic Finance Science",63,5,3,8,63,21],
+  ["Strategic Finance Studies",51,4,4,8,160,10],
+  ["Strategic Finance Technology",64,5,7,8,75,21],
+  ["Strategic Graphic Design",90,0,22,9,72,22],
+  ["Strategic Graphic Design Analytics",97,1,23,9,163,29],
+  ["Strategic Graphic Design Engineering",92,1,8,9,122,1],
+  ["Strategic Graphic Design Management",87,0,5,9,225,24],
+  ["Strategic Graphic Design Policy",92,1,24,9,164,22],
+  ["Strategic Graphic Design Practice",85,0,25,9,252,24],
+  ["Strategic Graphic Design Science",82,0,21,9,73,24],
+  ["Strategic Graphic Design Studies",93,1,22,9,67,22],
+  ["Strategic Graphic Design Technology",90,0,11,9,72,22],
+  ["Strategic Information Technology",68,5,2,10,78,26],
+  ["Strategic Information Technology Analytics",79,0,6,10,227,2],
+  ["Strategic Information Technology Engineering",72,5,7,10,265,12],
+  ["Strategic Information Technology Management",60,4,8,10,65,15],
+  ["Strategic Information Technology Policy",75,5,11,10,77,25],
+  ["Strategic Information Technology Practice",75,5,2,10,77,25],
+  ["Strategic Information Technology Science",75,5,6,10,77,25],
+  ["Strategic Information Technology Studies",74,5,7,10,77,25],
+  ["Strategic Information Technology Technology",65,5,8,10,75,21],
+  ["Strategic Law",67,5,26,11,171,10],
+  ["Strategic Law Analytics",70,5,27,11,255,10],
+  ["Strategic Law Engineering",74,5,11,11,284,12],
+  ["Strategic Law Management",61,5,0,11,83,9],
+  ["Strategic Law Policy",74,5,28,11,172,10],
+  ["Strategic Law Practice",66,5,29,11,87,10],
+  ["Strategic Law Science",67,5,17,11,171,10],
+  ["Strategic Law Studies",61,5,26,11,83,9],
+  ["Strategic Law Technology",68,5,2,11,86,10],
+  ["Strategic Marketing",58,4,1,12,91,26],
+  ["Strategic Marketing Analytics",51,4,3,12,232,21],
+  ["Strategic Marketing Engineering",64,5,6,12,90,7],
+  ["Strategic Marketing Management",66,5,4,12,93,25],
+  ["Strategic Marketing Policy",58,4,5,12,91,26],
+  ["Strategic Marketing Practice",52,4,0,12,232,21],
+  ["Strategic Marketing Science",54,4,1,12,231,21],
+  ["Strategic Marketing Studies",68,5,3,12,95,25],
+  ["Strategic Marketing Technology",68,5,7,12,95,25],
+  ["Strategic Mathematics",41,4,13,13,100,11],
+  ["Strategic Mathematics Analytics",41,4,14,13,100,11],
+  ["Strategic Mathematics Engineering",41,4,8,13,279,8],
+  ["Strategic Mathematics Management",42,4,4,13,193,11],
+  ["Strategic Mathematics Policy",33,2,9,13,108,28],
+  ["Strategic Mathematics Practice",34,2,10,13,200,28],
+  ["Strategic Mathematics Science",31,2,12,13,176,20],
+  ["Strategic Mathematics Studies",35,2,13,13,236,28],
+  ["Strategic Mathematics Technology",44,4,11,13,99,9],
+  ["Strategic Nursing",1,3,38,14,180,27],
+  ["Strategic Nursing Analytics",0,3,39,14,107,27],
+  ["Strategic Nursing Engineering",8,3,2,14,103,17],
+  ["Strategic Nursing Management",2,3,5,14,180,27],
+  ["Strategic Nursing Policy",5,3,27,14,104,27],
+  ["Strategic Nursing Practice",0,3,30,14,107,27],
+  ["Strategic Nursing Science",13,3,31,14,280,19],
+  ["Strategic Nursing Studies",0,3,32,14,107,27],
+  ["Strategic Nursing Technology",0,3,6,14,107,27],
+  ["Strategic Physics",28,2,14,15,111,20],
+  ["Strategic Physics Analytics",35,2,9,15,236,28],
+  ["Strategic Physics Engineering",30,2,7,15,303,13],
+  ["Strategic Physics Management",20,3,0,15,116,1],
+  ["Strategic Physics Policy",30,2,10,15,114,20],
+  ["Strategic Physics Practice",21,2,12,15,116,1],
+  ["Strategic Physics Science",27,2,13,15,112,23],
+  ["Strategic Physics Studies",39,2,14,15,96,11],
+  ["Strategic Physics Technology",37,2,8,15,175,28],
+  ["Strategic Psychology",9,3,9,16,240,12],
+  ["Strategic Psychology Analytics",6,3,10,16,304,7],
+  ["Strategic Psychology Engineering",20,3,11,16,59,6],
+  ["Strategic Psychology Management",3,3,1,16,241,7],
+  ["Strategic Psychology Policy",10,3,12,16,299,12],
+  ["Strategic Psychology Practice",6,3,13,16,304,7],
+  ["Strategic Psychology Science",2,3,14,16,298,5],
+  ["Strategic Psychology Studies",20,3,9,16,116,1],
+  ["Strategic Psychology Technology",2,3,2,16,298,5],
+  ["Strategic Software Engineering",80,0,6,17,186,3],
+  ["Strategic Software Engineering Analytics",82,0,7,17,191,3],
+  ["Strategic Software Engineering Engineering",81,0,8,17,190,3],
+  ["Strategic Software Engineering Management",87,0,11,17,2,1],
+  ["Strategic Software Engineering Policy",81,0,2,17,190,3],
+  ["Strategic Software Engineering Practice",85,0,6,17,6,3],
+  ["Strategic Software Engineering Science",81,0,7,17,190,3],
+  ["Strategic Software Engineering Studies",84,0,8,17,121,3],
+  ["Strategic Software Engineering Technology",76,0,11,17,216,3],
+  ["Technical Accounting",83,0,2,0,4,2],
+  ["Technical Accounting Analytics",95,1,6,0,10,0],
+  ["Technical Accounting Engineering",81,0,7,0,190,3],
+  ["Technical Accounting Management",86,0,8,0,3,0],
+  ["Technical Accounting Policy",89,0,11,0,1,0],
+  ["Technical Accounting Practice",94,1,2,0,268,0],
+  ["Technical Accounting Science",90,0,6,0,1,0],
+  ["Technical Accounting Studies",84,0,7,0,208,2],
+  ["Technical Accounting Technology",93,1,8,0,209,0],
+  ["Technical Biology",22,2,11,1,11,5],
+  ["Technical Biology Analytics",10,3,2,1,129,8],
+  ["Technical Biology Engineering",22,2,6,1,12,6],
+  ["Technical Biology Management",13,3,7,1,16,8],
+  ["Technical Biology Policy",21,2,8,1,269,5],
+  ["Technical Biology Practice",25,2,11,1,197,5],
+  ["Technical Biology Science",21,2,2,1,269,5],
+  ["Technical Biology Studies",10,3,6,1,129,8],
+  ["Technical Biology Technology",26,2,7,1,211,5],
+  ["Technical Business",59,4,8,2,20,10],
+  ["Technical Business Analytics",61,5,11,2,133,10],
+  ["Technical Business Engineering",53,4,2,2,305,5],
+  ["Technical Business Management",54,4,6,2,206,9],
+  ["Technical Business Policy",52,4,7,2,24,9],
+  ["Technical Business Practice",46,4,8,2,25,11],
+  ["Technical Business Science",51,4,11,2,130,9],
+  ["Technical Business Studies",46,4,2,2,25,11],
+  ["Technical Business Technology",49,4,6,2,135,11],
+  ["Technical Chemistry",20,3,7,3,248,12],
+  ["Technical Chemistry Analytics",17,3,8,3,213,7],
+  ["Technical Chemistry Engineering",34,2,11,3,28,13],
+  ["Technical Chemistry Management",24,2,2,3,136,12],
+  ["Technical Chemistry Policy",23,2,6,3,202,12],
+  ["Technical Chemistry Practice",19,3,7,3,214,12],
+  ["Technical Chemistry Science",26,2,8,3,33,12],
+  ["Technical Chemistry Studies",30,2,11,3,31,12],
+  ["Technical Chemistry Technology",27,2,2,3,207,12],
+  ["Technical Computer Science",76,0,6,4,215,14],
+  ["Technical Computer Science Analytics",73,5,7,4,218,14],
+  ["Technical Computer Science Engineering",81,0,8,4,190,3],
+  ["Technical Computer Science Management",71,5,11,4,272,14],
+  ["Technical Computer Science Policy",77,0,2,4,140,15],
+  ["Technical Computer Science Practice",81,0,6,4,146,15],
+  ["Technical Computer Science Science",84,0,7,4,273,21],
+  ["Technical Computer Science Studies",65,5,8,4,143,10],
+  ["Technical Computer Science Technology",84,0,11,4,273,21],
+  ["Technical Data Science",60,4,2,5,275,16],
+  ["Technical Data Science Analytics",74,5,6,5,41,17],
+  ["Technical Data Science Engineering",56,4,7,5,149,7],
+  ["Technical Data Science Management",73,5,8,5,306,17],
+  ["Technical Data Science Policy",57,4,11,5,274,16],
+  ["Technical Data Science Practice",69,5,2,5,147,18],
+  ["Technical Data Science Science",65,5,6,5,44,18],
+  ["Technical Data Science Studies",72,5,7,5,222,17],
+  ["Technical Data Science Technology",73,5,8,5,306,17],
+  ["Technical Education",16,3,11,6,51,20],
+  ["Technical Education Analytics",22,2,2,6,250,20],
+  ["Technical Education Engineering",19,3,6,6,205,6],
+  ["Technical Education Management",29,2,7,6,50,20],
+  ["Technical Education Policy",20,3,8,6,46,20],
+  ["Technical Education Practice",16,3,11,6,51,20],
+  ["Technical Education Science",10,3,2,6,251,23],
+  ["Technical Education Studies",14,3,6,6,224,20],
+  ["Technical Education Technology",14,3,7,6,224,20],
+  ["Technical Engineering",10,3,8,7,55,17],
+  ["Technical Engineering Analytics",5,3,11,7,56,18],
+  ["Technical Engineering Engineering",18,3,2,7,58,6],
+  ["Technical Engineering Management",14,3,6,7,204,17],
+  ["Technical Engineering Policy",10,3,7,7,55,17],
+  ["Technical Engineering Practice",9,3,8,7,55,17],
+  ["Technical Engineering Science",11,3,11,7,203,17],
+  ["Technical Engineering Studies",14,3,2,7,204,17],
+  ["Technical Engineering Technology",12,3,6,7,57,17],
+  ["Technical Finance",60,4,7,8,65,15],
+  ["Technical Finance Analytics",58,4,8,8,198,15],
+  ["Technical Finance Engineering",62,5,11,8,82,7],
+  ["Technical Finance Management",52,4,2,8,161,10],
+  ["Technical Finance Policy",57,4,6,8,158,14],
+  ["Technical Finance Practice",66,5,7,8,74,21],
+  ["Technical Finance Science",51,4,8,8,160,10],
+  ["Technical Finance Studies",56,4,11,8,158,14],
+  ["Technical Finance Technology",61,5,2,8,65,15],
+  ["Technical Graphic Design",91,1,6,9,164,22],
+  ["Technical Graphic Design Analytics",85,0,7,9,252,24],
+  ["Technical Graphic Design Engineering",92,1,8,9,122,1],
+  ["Technical Graphic Design Management",94,1,11,9,71,22],
+  ["Technical Graphic Design Policy",100,1,2,9,165,29],
+  ["Technical Graphic Design Practice",100,1,6,9,165,29],
+  ["Technical Graphic Design Science",87,0,7,9,225,24],
+  ["Technical Graphic Design Studies",100,1,8,9,165,29],
+  ["Technical Graphic Design Technology",90,0,11,9,72,22],
+  ["Technical Information Technology",72,5,2,10,170,26],
+  ["Technical Information Technology Analytics",66,5,6,10,74,21],
+  ["Technical Information Technology Engineering",79,0,7,10,242,3],
+  ["Technical Information Technology Management",67,5,8,10,79,21],
+  ["Technical Information Technology Policy",64,5,11,10,75,21],
+  ["Technical Information Technology Practice",62,5,2,10,166,15],
+  ["Technical Information Technology Science",74,5,6,10,77,25],
+  ["Technical Information Technology Studies",75,5,7,10,77,25],
+  ["Technical Information Technology Technology",71,5,8,10,253,26],
+  ["Technical Law",66,5,11,11,87,10],
+  ["Technical Law Analytics",64,5,2,11,81,9],
+  ["Technical Law Engineering",62,5,6,11,82,7],
+  ["Technical Law Management",72,5,7,11,230,10],
+  ["Technical Law Policy",58,4,8,11,256,9],
+  ["Technical Law Practice",74,5,11,11,172,10],
+  ["Technical Law Science",62,5,2,11,229,9],
+  ["Technical Law Studies",65,5,6,11,254,10],
+  ["Technical Law Technology",72,5,7,11,230,10],
+  ["Technical Marketing",63,5,8,12,92,26],
+  ["Technical Marketing Analytics",51,4,11,12,232,21],
+  ["Technical Marketing Engineering",52,4,2,12,307,5],
+  ["Technical Marketing Management",50,4,6,12,234,15],
+  ["Technical Marketing Policy",51,4,7,12,232,21],
+  ["Technical Marketing Practice",59,4,8,12,94,26],
+  ["Technical Marketing Science",57,4,11,12,88,26],
+  ["Technical Marketing Studies",51,4,2,12,232,21],
+  ["Technical Marketing Technology",57,4,6,12,88,26],
+  ["Technical Mathematics",37,2,7,13,175,28],
+  ["Technical Mathematics Analytics",48,4,8,13,61,10],
+  ["Technical Mathematics Engineering",47,4,11,13,177,5],
+  ["Technical Mathematics Management",35,2,2,13,236,28],
+  ["Technical Mathematics Policy",45,4,6,13,178,9],
+  ["Technical Mathematics Practice",45,4,7,13,178,9],
+  ["Technical Mathematics Science",46,4,8,13,178,9],
+  ["Technical Mathematics Studies",43,4,11,13,179,9],
+  ["Technical Mathematics Technology",46,4,2,13,178,9],
+  ["Technical Nursing",5,3,6,14,104,27],
+  ["Technical Nursing Analytics",12,3,7,14,260,19],
+  ["Technical Nursing Engineering",4,3,8,14,308,18],
+  ["Technical Nursing Management",5,3,11,14,104,27],
+  ["Technical Nursing Policy",0,3,2,14,107,27],
+  ["Technical Nursing Practice",7,3,6,14,101,19],
+  ["Technical Nursing Science",0,3,7,14,107,27],
+  ["Technical Nursing Studies",2,3,8,14,180,27],
+  ["Technical Nursing Technology",1,3,11,14,180,27],
+  ["Technical Physics",26,2,2,15,261,23],
+  ["Technical Physics Analytics",29,2,6,15,111,20],
+  ["Technical Physics Engineering",25,2,7,15,48,6],
+  ["Technical Physics Management",36,2,8,15,175,28],
+  ["Technical Physics Policy",34,2,11,15,200,28],
+  ["Technical Physics Practice",38,2,2,15,97,11],
+  ["Technical Physics Science",32,2,6,15,108,20],
+  ["Technical Physics Studies",29,2,7,15,111,20],
+  ["Technical Physics Technology",21,2,8,15,116,1],
+  ["Technical Psychology",15,3,11,16,118,3],
+  ["Technical Psychology Analytics",5,3,2,16,184,7],
+  ["Technical Psychology Engineering",12,3,6,16,57,17],
+  ["Technical Psychology Management",2,3,7,16,298,5],
+  ["Technical Psychology Policy",20,3,8,16,116,1],
+  ["Technical Psychology Practice",19,3,11,16,183,1],
+  ["Technical Psychology Science",3,3,2,16,241,7],
+  ["Technical Psychology Studies",7,3,6,16,262,7],
+  ["Technical Psychology Technology",14,3,7,16,297,3],
+  ["Technical Software Engineering",89,0,8,17,243,1],
+  ["Technical Software Engineering Analytics",85,0,11,17,6,3],
+  ["Technical Software Engineering Engineering",89,0,2,17,243,1],
+  ["Technical Software Engineering Management",75,5,6,17,284,12],
+  ["Technical Software Engineering Policy",78,0,7,17,188,3],
+  ["Technical Software Engineering Practice",94,1,8,17,120,1],
+  ["Technical Software Engineering Science",82,0,11,17,191,3],
+  ["Technical Software Engineering Studies",83,0,2,17,192,3],
+  ["Technical Software Engineering Technology",75,5,6,17,284,12],
+  ["BSc Administration (Accounting)",84,0,3,0,208,2],
+  ["BSc Administration (Marketing)",70,5,4,19,309,25],
+  ["BSc Administration (Human Resource Management)",51,4,5,2,130,9],
+  ["BSc Administration (Public Administration)",51,4,0,2,130,9],
+  ["BSc Administration (Health Services Management)",10,3,1,20,259,19],
+  ["BSc Administration (Banking and Finance)",63,5,3,8,310,10],
+  ["BSc Information Technology (IT)",75,5,7,4,249,14],
+  ["B.Ed. Early Grade Specialism",24,2,33,6,155,20],
+  ["B.Ed. Upper-Grade Specialism",16,3,34,6,51,20],
+  ["B.Ed. J.H.S Specialism",22,2,35,6,250,20],
+  ["BSc. Mobile Computing",70,5,36,4,145,10],
+  ["BSc. Software Engineering",73,5,8,4,218,14],
+  ["BSc. Business Information Systems",61,5,11,5,152,16],
+  ["BSc. Data Science & Analytics",63,5,2,5,40,16],
+  ["BSc Cyber Security",71,5,6,4,272,14],
+  ["BSc. Procurement and Logistics",55,4,37,2,23,9],
+  ["BSc. Financial Technology",59,4,7,8,311,10],
+  ["BSc. Economics",64,5,4,8,312,10],
+  ["BSc. Accounting with Computing",87,0,8,0,0,0],
+  ["BSc. Human Resource Management",50,4,5,2,22,11],
 ];
+
+export const majors: Major[] = ROWS.map(([name, score, l, r, a, s, g]) => ({
+  name,
+  score,
+  level: LEVELS[l],
+  roast: ROASTS[r],
+  advice: ADVICE[a],
+  salary: SALARIES[s],
+  growth: GROWTHS[g],
+}));
 
 export function getLevelColor(level: string) {
   switch (level) {
