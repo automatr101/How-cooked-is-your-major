@@ -33,6 +33,39 @@ export default function HomeClient() {
   const { resolvedTheme } = useTheme();
   const cardRef = useRef<HTMLDivElement>(null);
 
+  // The roast text shown on the card. `n` changes on every roll so the text re-animates.
+  const [roast, setRoast] = useState<{ text: string; n: number } | null>(null);
+
+  // The roast engine (a few hundred lines of content) is loaded on demand: it starts loading when
+  // a scan starts, so it is ready by the time the 2-second scan animation ends.
+  const roastEngine = useRef<Promise<typeof import("@/lib/roast")> | null>(null);
+  const loadRoastEngine = useCallback(() => {
+    roastEngine.current ??= import("@/lib/roast").catch((err) => {
+      roastEngine.current = null; // allow a retry next time
+      throw err;
+    });
+    return roastEngine.current;
+  }, []);
+
+  // Rolls a roast for a major. If the engine ever fails to load, falls back to the roast stored in the data.
+  const nextRoast = useCallback(
+    async (major: Major): Promise<string> => {
+      try {
+        const { rollRoast } = await loadRoastEngine();
+        return rollRoast({ name: major.name, score: major.score }).text;
+      } catch {
+        return major.roast;
+      }
+    },
+    [loadRoastEngine]
+  );
+
+  // "Roast Me Again": a new roast for the same result. Nothing else on the page changes.
+  const rollAgain = () => {
+    if (!selectedMajor) return;
+    nextRoast(selectedMajor).then((text) => setRoast({ text, n: Date.now() }));
+  };
+
   // Trigger the reaction animation, and the result sound unless `withSound` is false
   const triggerSoundReaction = useCallback((score: number, withSound = true) => {
     const cls = getReactionClass(score);
@@ -92,6 +125,7 @@ export default function HomeClient() {
         const found = majors.find(m => m.name === majorName);
         if (found) {
           setSelectedMajor(found);
+          nextRoast(found).then((text) => setRoast({ text, n: Date.now() }));
           triggerSoundReaction(found.score, false); // opened from a shared link: no sound on arrival
           setTimeout(() => {
             document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
@@ -126,7 +160,10 @@ export default function HomeClient() {
     notifyScan(major.name);
     // Preload the sound NOW during the click gesture (mobile needs this)
     preloadResultSound(major.score);
-    setTimeout(() => {
+    loadRoastEngine().catch(() => {}); // warm up the roast engine while the scan animation runs
+    setTimeout(async () => {
+      const text = await nextRoast(major); // already loaded by now, so this resolves immediately
+      setRoast({ text, n: Date.now() });
       setSelectedMajor(major);
       setIsScanning(false);
       // Play the preloaded sound — works on iOS/Android
@@ -145,12 +182,21 @@ export default function HomeClient() {
     }, 2000);
   };
 
+  // The text that gets shared or copied. It includes the current roast when there is one.
+  const buildShareText = (link: string, withRoast = true) => {
+    if (!selectedMajor) return "";
+    const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
+    const quote = withRoast && roast ? `"${roast.text}"\n\n` : "";
+    return `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\n${quote}Major: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${link}`;
+  };
+
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
-    const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
     const baseUrl = "https://how-cooked-is-your-major.vercel.app";
     const shareUrl = `${baseUrl}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`;
-    const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${shareUrl}`;
+    let text = buildShareText(shareUrl);
+    // X counts every link as 23 characters and allows 280. Drop the roast if it would not fit.
+    if (platform === "x" && text.length - shareUrl.length + 23 > 270) text = buildShareText(shareUrl, false);
     if (platform === "x") {
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
     } else {
@@ -338,11 +384,19 @@ export default function HomeClient() {
                   </div>
 
                   {/* Roast Verdict Area */}
-                  <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-4 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0">
+                  <div className="sm:flex-1 flex flex-col items-center justify-center py-2.5 sm:py-4 border-t-2 border-dashed border-foreground/10 mt-2 sm:mt-0 max-sm:min-h-[4.5rem]">
                     <h3 className="text-[6px] sm:text-[8px] font-black text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 text-center">AI ROAST VERDICT</h3>
-                    <p className="text-[10px] sm:text-xs md:text-sm font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4">
-                      &ldquo;{selectedMajor.roast}&rdquo;
-                    </p>
+                    {/* A new key on every roll makes the text fade/slide in. Quick and subtle. */}
+                    <motion.p
+                      key={roast?.n ?? "initial"}
+                      initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.22, ease: "easeOut" }}
+                      aria-live="polite"
+                      className="text-[10px] sm:text-xs md:text-sm font-black italic text-foreground leading-snug tracking-tight text-center w-full sm:line-clamp-4"
+                    >
+                      &ldquo;{roast?.text ?? selectedMajor.roast}&rdquo;
+                    </motion.p>
                   </div>
 
                   {/* Card Footer */}
@@ -359,6 +413,16 @@ export default function HomeClient() {
                 </div>
               </div>
             </BackgroundGradient>
+
+            {/* 🔥 Roast Me Again: a new roast for the same result (no rescan, no reload, no sound) */}
+            <div className="flex justify-center mt-5">
+              <button
+                onClick={rollAgain}
+                className="px-8 py-4 rounded-full bg-primary text-primary-foreground text-sm sm:text-base font-black uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                🔥 Roast Me Again
+              </button>
+            </div>
 
             {/* 🔊 Replay Sound Button */}
             <div className="flex justify-center mt-4">
@@ -503,8 +567,7 @@ export default function HomeClient() {
               </button>
               <button
                 onClick={() => {
-                  const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
-                  const text = `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\nMajor: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: cooked-major.vercel.app`;
+                  const text = buildShareText("cooked-major.vercel.app");
                   navigator.clipboard.writeText(text);
                   alert("Text copied! Ready to post 🫡");
                 }}
