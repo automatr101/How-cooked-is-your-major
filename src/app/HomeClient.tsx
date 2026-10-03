@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { Search, Info, Twitter, MessageCircle, ArrowRight, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
+import { Search, Info, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { majors, Major, getLevelColor } from "@/lib/data";
@@ -18,6 +18,7 @@ import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { ReviewBox } from "@/components/review-box";
+import { MajorSearch } from "@/components/major-search";
 
 
 
@@ -171,7 +172,9 @@ export default function HomeClient() {
         return { major, score };
       })
       .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score)
+      // Equally good matches: shorter names first, so "comp" suggests "Computer Science" before
+      // "Computational Accounting Analytics". (Enter picks the top match.)
+      .sort((a, b) => b.score - a.score || a.major.name.length - b.major.name.length)
       .slice(0, 10)
       .map(item => item.major);
   }, [query]);
@@ -235,53 +238,15 @@ export default function HomeClient() {
 
       {/* Search Section */}
       <div id="search" className="w-full max-w-2xl mt-16 relative z-30 px-6">
-        <div className="relative group">
-          <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-1000" />
-          <div className="relative flex items-center bg-card border border-border rounded-2xl overflow-hidden backdrop-blur-2xl transition-all focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5 shadow-xl">
-            <Search className="w-6 h-6 ml-6 text-muted-foreground transition-colors group-focus-within:text-primary" />
-            <input
-              type="text"
-              className="w-full bg-transparent border-none text-xl text-foreground placeholder-muted-foreground/50 px-6 py-6 focus:outline-none focus:ring-0 font-bold tracking-tight"
-              placeholder="Search 1,800+ courses..."
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                if (selectedMajor) setSelectedMajor(null);
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Autocomplete Suggestions */}
-        <AnimatePresence>
-          {filteredMajors.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              className="absolute top-full left-0 right-0 mt-4 bg-card/80 backdrop-blur-3xl border border-border rounded-2xl overflow-hidden shadow-2xl z-50 p-2"
-            >
-              {filteredMajors.map((major) => (
-                <button
-                  key={major.name}
-                  onClick={() => handleSelect(major)}
-                  className="w-full flex items-center justify-between px-6 py-4 hover:bg-muted rounded-xl text-left transition-all group/item"
-                >
-                  <span className="text-foreground/80 group-hover/item:text-foreground font-bold transition-colors">{major.name}</span>
-                  <div className="flex items-center gap-3">
-                    <span className={cn(
-                      "text-xs font-black px-2 py-1 rounded-md bg-background border border-border",
-                      major.score > 70 ? "text-destructive" : "text-emerald-600 dark:text-emerald-400"
-                    )}>
-                      {major.score}%
-                    </span>
-                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover/item:translate-x-1 group-hover/item:text-primary transition-all" />
-                  </div>
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <MajorSearch
+          value={query}
+          onChange={(value) => {
+            setQuery(value);
+            if (selectedMajor) setSelectedMajor(null);
+          }}
+          results={filteredMajors}
+          onSelect={handleSelect}
+        />
       </div>
 
       {/* Result Section */}
