@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Search, ArrowRight, BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,6 +12,20 @@ export default function ComparePage() {
   const [query2, setQuery2] = useState("");
   const [major1, setMajor1] = useState<Major | null>(null);
   const [major2, setMajor2] = useState<Major | null>(null);
+
+  // Roasts come from the roast engine, loaded on demand. One roast per picked major, rolled once
+  // when it is picked. Until it arrives (or if it fails to load) the roast stored in the data shows.
+  const [roasts, setRoasts] = useState<Record<string, string>>({});
+  useEffect(() => {
+    for (const m of [major1, major2]) {
+      if (!m) continue;
+      import("@/lib/roast")
+        .then(({ rollRoast }) => {
+          setRoasts((prev) => (prev[m.name] ? prev : { ...prev, [m.name]: rollRoast({ name: m.name, score: m.score }).text }));
+        })
+        .catch(() => {});
+    }
+  }, [major1, major2]);
 
   const filter = (query: string) => {
     if (!query) return [];
@@ -182,7 +196,7 @@ export default function ComparePage() {
                        </div>
                        <div>
                           <p className="text-[10px] font-black text-muted-foreground tracking-widest mb-2 uppercase">AI ROAST</p>
-                          <p className="text-xl font-black italic text-foreground leading-tight">"{m.roast}"</p>
+                          <p className="text-xl font-black italic text-foreground leading-tight">&ldquo;{roasts[m.name] ?? m.roast}&rdquo;</p>
                        </div>
                     </div>
                   </div>
