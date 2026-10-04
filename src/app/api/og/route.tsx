@@ -62,7 +62,7 @@ export async function GET(req: NextRequest) {
           {/* Main content */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', flex: 1, justifyContent: 'center', paddingTop: '40px' }}>
             <div style={{ fontSize: '13px', color: '#555', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.4em' }}>
-              VERIFICATION ID: #882-{score} · AI Scan Report
+              {`VERIFICATION ID: #882-${score} · AI Scan Report`}
             </div>
             <div style={{
               fontSize: major.length > 25 ? '60px' : '72px',
@@ -104,7 +104,7 @@ export async function GET(req: NextRequest) {
                   fontStyle: 'italic',
                   letterSpacing: '-0.02em',
                 }}>
-                  {statusEmoji} {level}
+                  {`${statusEmoji} ${level}`}
                 </span>
               </div>
             </div>
