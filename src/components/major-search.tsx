@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { BorderBeam } from "@/components/ui/border-beam-search";
 import type { Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 interface MajorSearchProps {
   value: string;
@@ -57,6 +58,19 @@ export function MajorSearch({
   const { resolvedTheme } = useTheme();
 
   const query = value.trim();
+  // GA4 `search` event: after the visitor pauses typing, once per distinct term. Picking a result clears
+  // or locks the box, so the chosen major's name is never reported as a search.
+  const lastSearched = useRef("");
+  useEffect(() => {
+    const term = value.trim().toLowerCase();
+    if (selected || term.length < 2 || term === lastSearched.current) return;
+    const id = setTimeout(() => {
+      lastSearched.current = term;
+      track("search", { search_term: term.slice(0, 60) });
+    }, 1000);
+    return () => clearTimeout(id);
+  }, [value, selected]);
+
   const showList = open && !selected && results.length > 0;
   const showEmpty = open && !selected && query.length > 0 && results.length === 0;
   // The list can shrink while typing, so never point past its end.

@@ -6,6 +6,7 @@ import { BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { majors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 import { MajorSearch } from "@/components/major-search";
 
 export default function ComparePage() {
@@ -26,6 +27,11 @@ export default function ComparePage() {
         })
         .catch(() => {});
     }
+  }, [major1, major2]);
+
+  // One event each time a pair is complete
+  useEffect(() => {
+    if (major1 && major2) track("compare_major", { major_1: major1.name, major_2: major2.name, where: "compare_page" });
   }, [major1, major2]);
 
   const filter = (query: string) => {

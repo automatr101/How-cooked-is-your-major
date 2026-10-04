@@ -17,6 +17,7 @@ import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
+import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
 import { MajorSearch } from "@/components/major-search";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
@@ -54,12 +55,13 @@ export default function HomeClient() {
 
   // Rolls a roast for a major. If the engine ever fails to load, falls back to the roast stored in the data.
   const nextRoast = useCallback(
-    async (major: Major): Promise<string> => {
+    async (major: Major): Promise<{ text: string; type: string }> => {
       try {
         const { rollRoast } = await loadRoastEngine();
-        return rollRoast({ name: major.name, score: major.score }).text;
+        const r = rollRoast({ name: major.name, score: major.score });
+        return { text: r.text, type: r.category };
       } catch {
-        return major.roast;
+        return { text: major.roast, type: "stored" };
       }
     },
     [loadRoastEngine]
@@ -68,7 +70,10 @@ export default function HomeClient() {
   // "Roast Me Again": a new roast for the same result. Nothing else on the page changes.
   const rollAgain = () => {
     if (!selectedMajor) return;
-    nextRoast(selectedMajor).then((text) => setRoast({ text, n: Date.now() }));
+    nextRoast(selectedMajor).then((r) => {
+      setRoast({ text: r.text, n: Date.now() });
+      track("roast_regenerated", { major_name: selectedMajor.name });
+    });
   };
 
   // Trigger the reaction animation, and the result sound unless `withSound` is false
@@ -130,7 +135,13 @@ export default function HomeClient() {
         const found = majors.find(m => m.name === majorName);
         if (found) {
           setSelectedMajor(found);
-          nextRoast(found).then((text) => setRoast({ text, n: Date.now() }));
+          nextRoast(found).then((r) => {
+            setRoast({ text: r.text, n: Date.now() });
+            track("roast_generated", { major_name: found.name, cooked_score: found.score, roast_type: r.type });
+          });
+          track("major_result_view", { ...majorParams(found), source: "link" });
+          // The visitor came from a link someone shared from this site (it carries our share campaign tag)
+          if (params.get("utm_campaign") === "major_share") track("shared_link_visit", { major_slug: slugify(found.name), via: params.get("utm_source") ?? "" });
           triggerSoundReaction(found.score, false); // opened from a shared link: no sound on arrival
           setTimeout(() => {
             document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
@@ -154,6 +165,11 @@ export default function HomeClient() {
       link.download = `cooked-${selectedMajor?.name.toLowerCase()}.png`;
       link.href = dataUrl;
       link.click();
+      if (selectedMajor) {
+        track("share_card_generated", { major_name: selectedMajor.name, cooked_score: selectedMajor.score });
+        track("share_card_downloaded", { major_name: selectedMajor.name, cooked_score: selectedMajor.score });
+        trackShare("download", selectedMajor.name);
+      }
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
     } catch (err) {
@@ -165,14 +181,17 @@ export default function HomeClient() {
     setQuery("");
     setIsScanning(true);
     notifyScan(major.name);
+    track("major_scan", majorParams(major));
     // Preload the sound NOW during the click gesture (mobile needs this)
     preloadResultSound(major.score);
     loadRoastEngine().catch(() => {}); // warm up the roast engine while the scan animation runs
     setTimeout(async () => {
-      const text = await nextRoast(major); // already loaded by now, so this resolves immediately
-      setRoast({ text, n: Date.now() });
+      const r = await nextRoast(major); // already loaded by now, so this resolves immediately
+      setRoast({ text: r.text, n: Date.now() });
       setSelectedMajor(major);
       setIsScanning(false);
+      track("major_result_view", { ...majorParams(major), source: "scan" });
+      track("roast_generated", { major_name: major.name, cooked_score: major.score, roast_type: r.type });
       // Play the preloaded sound — works on iOS/Android
       playPendingSound(major.score);
       const cls = getReactionClass(major.score);
@@ -198,17 +217,21 @@ export default function HomeClient() {
   };
 
   // The link to this result. Pasting it anywhere that makes link previews shows the result card.
-  const resultLink = () =>
+  // `from` tags links we hand out (not the page's own URL) so GA4 can show which shares bring visitors.
+  const resultLink = (from?: { source: string; medium: string }) =>
     selectedMajor
-      ? `${SITE_URL}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}`
+      ? `${SITE_URL}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}${
+          from ? `&utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share` : ""
+        }`
       : SITE_URL;
 
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
-    const shareUrl = resultLink();
+    const shareUrl = resultLink(platform === "x" ? { source: "x", medium: "social" } : { source: "whatsapp", medium: "referral" });
     let text = buildShareText(shareUrl);
     // X counts every link as 23 characters and allows 280. Drop the roast if it would not fit.
     if (platform === "x" && text.length - shareUrl.length + 23 > 270) text = buildShareText(shareUrl, false);
+    trackShare(platform === "x" ? "twitter" : "whatsapp", selectedMajor.name);
     if (platform === "x") {
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
     } else {
@@ -491,6 +514,7 @@ export default function HomeClient() {
                             key={m.name}
                             onClick={() => {
                               setComparedMajor(m);
+                              track("compare_major", { major_1: selectedMajor.name, major_2: m.name, where: "result" });
                               setShowComparisonSearch(false);
                               setComparisonQuery("");
                               triggerSoundReaction(m.score);
@@ -582,10 +606,11 @@ export default function HomeClient() {
               </button>
               <button
                 onClick={() => {
-                  const text = buildShareText(resultLink());
+                  const text = buildShareText(resultLink({ source: "copy_link", medium: "referral" }));
                   navigator.clipboard
                     .writeText(text)
                     .then(() => {
+                      if (selectedMajor) trackShare("copy_link", selectedMajor.name);
                       setCopied(true);
                       setTimeout(() => setCopied(false), 2000);
                     })
