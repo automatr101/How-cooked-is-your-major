@@ -5,8 +5,32 @@ import type { Major } from "@/lib/data";
 import { analyze } from "@/lib/roast/names";
 import { PLAN_COPY, planTypeFor, type PlanType } from "@/lib/premium";
 import { slugify } from "@/lib/analytics";
-import { EMPLOYABILITY, GROUPS, type Pair } from "./content";
+import { EMPLOYABILITY, GROUPS, type GroupContent, type Pair } from "./content";
+import type { GeneratedPlan } from "./generated-schema";
+import generatedPlans from "./generated/plans.json";
 import type { Plan } from "./types";
+
+// Plans written ahead of time by scripts/generate-plans.mjs (checked by generated-schema.ts before they are
+// saved). A major with an entry gets its own paths, skills, tools and projects; a major without one keeps the
+// hand-written content for its field. Nothing is generated while a visitor waits.
+const GENERATED = generatedPlans as unknown as Record<string, GeneratedPlan | undefined>;
+
+const pairs = (list: { title: string; why: string }[]): Pair[] => list.map((i) => [i.title, i.why]);
+
+function withGenerated(base: GroupContent, gen: GeneratedPlan): GroupContent {
+  return {
+    ...base,
+    atRisk: gen.atRisk,
+    staysHuman: gen.staysHuman,
+    strongPaths: pairs(gen.strongPaths),
+    vulnerablePaths: pairs(gen.vulnerablePaths),
+    skills: pairs(gen.skills),
+    tools: pairs(gen.aiTools),
+    projects: pairs(gen.projects),
+    internship: gen.internship,
+    positioning: gen.positioning,
+  };
+}
 
 const toItems = (pairs: Pair[]) => pairs.map(([title, why]) => ({ title, why }));
 
@@ -128,8 +152,9 @@ const FRAMES: Record<PlanType, Frame> = {
 export function buildPlan(major: Major): Plan {
   const planType = planTypeFor(major.score);
   const info = analyze(major.name);
-  const g = GROUPS[info.group ?? "general"];
   const slug = slugify(major.name);
+  const gen = GENERATED[slug];
+  const g = gen ? withGenerated(GROUPS[info.group ?? "general"], gen) : GROUPS[info.group ?? "general"];
   const jobs = info.disc?.pools.jobs?.[0] ?? null;
 
   const v: V = {
@@ -154,12 +179,13 @@ export function buildPlan(major: Major): Plan {
 
   // A discipline can add the specific jobs most exposed to the vulnerable list
   const vulnerable = toItems(g.vulnerablePaths);
-  if (jobs && planType !== "advantage") {
+  if (!gen && jobs && planType !== "advantage") {
     vulnerable.unshift({ title: `Entry-level ${jobs}`, why: "The most routine part of this work is where AI is already being used first, so fewer junior openings are likely." });
   }
 
   return {
     planType,
+    source: gen ? "generated" : "template",
     planName: PLAN_COPY[planType].name,
     major: { name: major.name, slug, score: major.score, level: major.level, salary: major.salary, growth: major.growth },
     overview: frame.overview(v),
