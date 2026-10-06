@@ -9,7 +9,11 @@
     "lint": "eslint",
     "telegram:setup": "node scripts/telegram-setup.mjs",
     "roast:check": "node scripts/check-roasts.mjs",
-    "sound:check": "node scripts/check-sounds.mjs"
+    "sound:check": "node scripts/check-sounds.mjs",
+    "plans:models": "node scripts/generate-plans.mjs --list-models",
+    "plans:pilot": "node scripts/generate-plans.mjs --pilot",
+    "plans:generate": "node scripts/generate-plans.mjs",
+    "plans:check": "node scripts/generate-plans.mjs --check"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

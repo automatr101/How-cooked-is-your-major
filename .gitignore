@@ -42,3 +42,6 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# plan-content pilot output (scripts/generate-plans.mjs)
+.plan-pilot/

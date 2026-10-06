@@ -4,6 +4,8 @@ import type { PlanType } from "@/lib/premium";
 
 export interface Plan {
   planType: PlanType;
+  /** Where the career paths, skills, tools and projects came from. Not shown to the buyer. */
+  source: "generated" | "template";
   planName: string;
   major: { name: string; slug: string; score: number; level: string; salary: string; growth: string };
   overview: string;
