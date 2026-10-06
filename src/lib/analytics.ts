@@ -3,7 +3,8 @@
 // Rules for what goes in `params`: major names, scores, levels and share methods only. Never a name,
 // email, phone number, address or anything else about a person. Search text is cut to 60 characters.
 
-type Params = Record<string, string | number>;
+// GA4 ecommerce events carry an `items` list, so a value may also be a list of small objects.
+type Params = Record<string, string | number | boolean | Array<Record<string, string | number>>>;
 
 declare global {
   interface Window {

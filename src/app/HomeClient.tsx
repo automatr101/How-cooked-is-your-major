@@ -20,6 +20,7 @@ import { notifyVisit, notifyScan } from "@/lib/notify";
 import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
 import { MajorSearch } from "@/components/major-search";
+import { PremiumOffer } from "@/components/premium/premium-offer";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
 
@@ -626,6 +627,9 @@ export default function HomeClient() {
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
             </div>
+
+            {/* The paid career plan. Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
+            <PremiumOffer major={selectedMajor} />
             </div>
             </div>
           </motion.div>
