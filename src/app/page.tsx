@@ -17,7 +17,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     const title = `${major} is ${level} — ${score}% AI Risk`;
     const description = `Survival Status: ${level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
     // Add v=1 to force re-crawl
-    const ogUrl = `${SITE_URL}/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}&v=2`;
+    const ogUrl = `${SITE_URL}/api/og?major=${encodeURIComponent(major)}&score=${score}&level=${encodeURIComponent(level)}&v=3`;
 
     return {
       title,
@@ -56,7 +56,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   }
 
   // Default metadata (homepage, no major selected)
-  const defaultOgUrl = `${SITE_URL}/api/og?v=2`;
+  const defaultOgUrl = `${SITE_URL}/api/og?v=3`;
   return {
     title: "How Cooked Is Your Major? | AI Risk Scan",
     description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
