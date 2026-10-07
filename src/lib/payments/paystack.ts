@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
@@ -31,6 +32,14 @@ function key(): string {
   return k;
 }
 
+// Which key is configured, without revealing it: its type and a short one-way fingerprint. Only ever shown to the
+// owner (the gated checkout error), so a wrong key (live instead of test, another business) is visible at a glance.
+function keyHint(): string {
+  const k = process.env.PAYSTACK_SECRET_KEY?.trim() ?? "";
+  const kind = k.startsWith("sk_live_") ? "live" : k.startsWith("sk_test_") ? "test" : "unknown";
+  return `${kind} key #${createHash("sha256").update(k).digest("hex").slice(0, 6)}`;
+}
+
 async function call(path: string, init?: RequestInit) {
   const res = await fetch(`${API}${path}`, {
     ...init,
@@ -61,7 +70,7 @@ export const paystackProvider: PaymentProvider = {
     const url = body?.data?.authorization_url;
     if (!ok || body?.status !== true || typeof url !== "string") {
       // Paystack's own error text (e.g. "Currency not supported by merchant") holds no secrets and is what you need to fix it.
-      const why = `Paystack refused (HTTP ${httpStatus}, ${currency}): ${String(body?.message ?? "no message").slice(0, 200)}`;
+      const why = `Paystack refused (HTTP ${httpStatus}, ${currency}, ${keyHint()}): ${String(body?.message ?? "no message").slice(0, 200)}`;
       console.error(`[paystack] ${why}`);
       throw new SafeError(why);
     }
