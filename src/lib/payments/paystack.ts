@@ -61,7 +61,8 @@ export const paystackProvider: PaymentProvider = {
         if (d.reference !== reference) return { status: "failed", reason: "reference_mismatch" };
         if (meta.product !== PRODUCT_ID || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
         if (d.currency !== PRICE_CURRENCY || Number(d.amount) !== PRICE_MINOR) return { status: "failed", reason: "wrong_amount" };
-        return { status: "success", transactionId: String(d.id ?? reference) };
+        const email = (d.customer as { email?: unknown } | undefined)?.email;
+        return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined };
       }
       case "abandoned":
         return { status: "cancelled" };

@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { findMajor, getProvider, REFERENCE_PATTERN } from "@/lib/payments";
 import { grantEntitlement } from "@/lib/payments/entitlement";
 import { guard, json, readBody } from "@/lib/payments/http";
-import { PRICE_CURRENCY, PRICE_VALUE, PRODUCT_NAME } from "@/lib/premium";
+import { registerPurchase } from "@/lib/payments/purchases";
+import { statusOf, storeEnabled } from "@/lib/payments/store";
+import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_VALUE, PRODUCT_NAME } from "@/lib/premium";
 
 // Step 2: ask the provider whether the payment really happened. This is the ONLY place that grants the
 // unlock cookie, and it does so only when the provider (not the browser) says "success" for this exact
@@ -24,6 +26,16 @@ export async function POST(req: NextRequest) {
   try {
     const result = await provider.verify({ reference, majorSlug: major.slug, proof });
     if (result.status !== "success") return json({ status: result.status, reason: result.reason ?? null });
+
+    // Live mode with a database: a payment that was refunded no longer unlocks anything, and a verified one is recorded
+    if (PAYMENTS_MODE === "live" && storeEnabled()) {
+      try {
+        if ((await statusOf(reference)) === "refunded") return json({ status: "failed", reason: "refunded" });
+      } catch {
+        console.error("[checkout] could not check the refund status"); // a database problem must not block a paying customer
+      }
+      await registerPurchase({ reference, major, paystackId: result.transactionId, email: result.customerEmail });
+    }
 
     const out = NextResponse.json(
       { status: "success", transactionId: result.transactionId ?? reference, value: PRICE_VALUE, currency: PRICE_CURRENCY, itemName: PRODUCT_NAME },

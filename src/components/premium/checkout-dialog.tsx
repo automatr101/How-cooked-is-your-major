@@ -66,7 +66,8 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
   // "Already paid?" (live mode): a buyer who paid but never got back to the site enters the payment reference from their receipt
   const [restoring, setRestoring] = useState(false);
   const [restoreRef, setRestoreRef] = useState("");
-  const [restoreError, setRestoreError] = useState(false);
+  const [restoreError, setRestoreError] = useState("");
+  const [restoreBusy, setRestoreBusy] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closedRef = useRef(false); // so closing never counts twice, and a late response cannot reopen things
   const finished = step.name === "success";
@@ -127,13 +128,34 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
     }
   };
 
-  // Restore a plan that was already paid for: the server asks Paystack about this exact payment before unlocking anything
-  const restore = () => {
-    const ref = restoreRef.trim().toLowerCase();
-    if (!/^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref)) return setRestoreError(true);
-    setRestoreError(false);
-    closedRef.current = false;
-    setStep({ name: "processing", reference: ref });
+  // Restore a plan that was already paid for. Either the payment reference (checked with Paystack, like a normal
+  // payment) or the email used to pay (looked up on the server). Nothing unlocks unless the server confirms it.
+  const restore = async () => {
+    const value = restoreRef.trim();
+    if (/^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/i.test(value)) {
+      setRestoreError("");
+      closedRef.current = false;
+      return setStep({ name: "processing", reference: value.toLowerCase() });
+    }
+    if (!EMAIL.test(value)) return setRestoreError("Enter your payment reference (it starts with cm-) or the email you paid with.");
+    setRestoreError("");
+    setRestoreBusy(true);
+    try {
+      const { ok, status, data } = await post("/api/checkout/restore", { major: major.name, email: value });
+      if (ok && data.status === "success") {
+        trackPaid(major, planType, String(data.transactionId));
+        closedRef.current = false;
+        const ready = await onPaid();
+        return setStep(ready ? { name: "success" } : { name: "error", message: "We found your payment but could not load the plan. Please try again." });
+      }
+      if (status === 429) return setRestoreError("Too many tries. Please wait a while, or use your payment reference.");
+      if (status === 503) return setRestoreError("Restoring by email is not available right now. Use your payment reference instead.");
+      setRestoreError("We could not find a paid plan for that email and this major. Check the email, or use your payment reference.");
+    } catch {
+      setRestoreError("Network problem. Check your connection and try again.");
+    } finally {
+      setRestoreBusy(false);
+    }
   };
 
   // 2. test mode: choose what the fake payment does
@@ -311,35 +333,36 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
                   ) : (
                     <div className="space-y-2">
                       <label htmlFor="restore-ref" className="text-[10px] font-black uppercase tracking-[0.25em] text-muted-foreground">
-                        Payment reference from your receipt
+                        Payment reference, or the email you paid with
                       </label>
                       <input
                         id="restore-ref"
                         value={restoreRef}
                         onChange={(e) => {
                           setRestoreRef(e.target.value);
-                          setRestoreError(false);
+                          setRestoreError("");
                         }}
                         onKeyDown={(e) => e.key === "Enter" && restore()}
-                        placeholder="cm-xxxxxxxx-xxxxxxxxxxxx"
+                        placeholder="you@example.com or cm-xxxxxxxx-xxxxxxxxxxxx"
                         autoComplete="off"
                         spellCheck={false}
-                        aria-invalid={restoreError}
-                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        aria-invalid={!!restoreError}
+                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
                       />
                       {restoreError ? (
-                        <p role="alert" className="text-xs font-bold text-destructive">That does not look like one of our references. It starts with cm-.</p>
+                        <p role="alert" className="text-xs font-bold text-destructive">{restoreError}</p>
                       ) : (
                         <p className="text-[11px] leading-relaxed text-muted-foreground">
-                          Only for this major, and only if the payment went through. We check it with Paystack before unlocking.
+                          Only for this major, and only if the payment went through. We check it before unlocking.
                         </p>
                       )}
                       <button
                         type="button"
                         onClick={restore}
-                        className="w-full rounded-full border border-border px-6 py-3 text-xs font-black uppercase tracking-widest text-foreground transition hover:bg-muted active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                        disabled={restoreBusy || !restoreRef.trim()}
+                        className="w-full rounded-full border border-border px-6 py-3 text-xs font-black uppercase tracking-widest text-foreground transition hover:bg-muted active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                       >
-                        Restore my plan
+                        {restoreBusy ? "Checking..." : "Restore my plan"}
                       </button>
                     </div>
                   )}

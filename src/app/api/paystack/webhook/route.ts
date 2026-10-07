@@ -2,7 +2,9 @@ import { NextRequest } from "next/server";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { findMajor, REFERENCE_PATTERN } from "@/lib/payments";
 import { paystackProvider } from "@/lib/payments/paystack";
-import { PAYMENTS_MODE, PLAN_COPY, PRICE_CURRENCY, PRICE_LABEL, planTypeFor } from "@/lib/premium";
+import { PAYMENTS_MODE } from "@/lib/premium";
+import { registerPurchase } from "@/lib/payments/purchases";
+import { markRefunded, storeEnabled } from "@/lib/payments/store";
 import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 
 // Paystack calls this address on its own when something happens to a payment. In the Paystack dashboard
@@ -80,13 +82,9 @@ export async function POST(req: NextRequest) {
 
     seen.add(reference);
     if (result.status === "success") {
-      const plan = PLAN_COPY[planTypeFor(major.score)].name;
-      await alert([
-        "💰 <b>New purchase</b>",
-        `📚 ${escapeHtml(major.name)} (${major.score}%) · ${escapeHtml(plan)}`,
-        `💵 ${PRICE_LABEL} ${PRICE_CURRENCY}`,
-        `🧾 ${escapeHtml(reference)}`,
-      ]);
+      // Records the purchase (with a fingerprint of the email, never the email) and sends the "New purchase"
+      // alert, unless the buyer's browser got there first, in which case it was already done.
+      await registerPurchase({ reference, major, paystackId: result.transactionId, email: result.customerEmail });
     } else {
       await alert([
         "⚠️ <b>Payment did not pass the check</b>",
@@ -100,7 +98,17 @@ export async function POST(req: NextRequest) {
 
   if (event.event === "refund.processed") {
     const ref = typeof data.transaction_reference === "string" ? data.transaction_reference : "";
-    if (REFERENCE_PATTERN.test(ref)) await alert(["↩️ <b>Refund processed</b>", `🧾 ${escapeHtml(ref)}`]);
+    if (REFERENCE_PATTERN.test(ref)) {
+      let changed = true;
+      if (storeEnabled()) {
+        try {
+          changed = await markRefunded(ref); // a refunded purchase can no longer be restored
+        } catch {
+          console.error("[paystack-webhook] could not mark a refund");
+        }
+      }
+      if (changed) await alert(["↩️ <b>Refund processed</b>", `🧾 ${escapeHtml(ref)}`]);
+    }
     return ok();
   }
 
