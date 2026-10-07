@@ -1,5 +1,5 @@
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
-import type { InitializeInput, InitializeResult, PaymentProvider, VerifyInput, VerifyResult } from "./types";
+import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
 // the server), the visitor pays on Paystack's page, comes back, and the server asks Paystack whether
@@ -19,14 +19,15 @@ export function charge(): { currency: string; amount: number } {
   if (currency === PRICE_CURRENCY) return { currency, amount: PRICE_MINOR };
   const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR?.trim());
   if (!Number.isInteger(amount) || amount <= 0) {
-    throw new Error(`PAYSTACK_AMOUNT_MINOR must be set when PAYSTACK_CURRENCY is ${currency}`);
+    throw new SafeError(`PAYSTACK_AMOUNT_MINOR must be a whole number when PAYSTACK_CURRENCY is ${currency}`);
   }
   return { currency, amount };
 }
 
 function key(): string {
-  const k = process.env.PAYSTACK_SECRET_KEY;
-  if (!k) throw new Error("PAYSTACK_SECRET_KEY is not set");
+  const k = process.env.PAYSTACK_SECRET_KEY?.trim(); // a pasted key often carries a stray space or newline
+  if (!k) throw new SafeError("PAYSTACK_SECRET_KEY is not set");
+  if (!/^sk_(test|live)_[A-Za-z0-9]+$/.test(k)) throw new SafeError("PAYSTACK_SECRET_KEY does not look like a Paystack secret key");
   return k;
 }
 
@@ -60,8 +61,9 @@ export const paystackProvider: PaymentProvider = {
     const url = body?.data?.authorization_url;
     if (!ok || body?.status !== true || typeof url !== "string") {
       // Paystack's own error text (e.g. "Currency not supported by merchant") holds no secrets and is what you need to fix it.
-      console.error(`[paystack] initialize refused: HTTP ${httpStatus}, currency ${currency}, message: ${String(body?.message ?? "none").slice(0, 200)}`);
-      throw new Error("Paystack could not start the payment");
+      const why = `Paystack refused (HTTP ${httpStatus}, ${currency}): ${String(body?.message ?? "no message").slice(0, 200)}`;
+      console.error(`[paystack] ${why}`);
+      throw new SafeError(why);
     }
     return { reference, authorizationUrl: url };
   },
