@@ -43,7 +43,7 @@ export async function registerPurchase(input: {
   if (isNew && telegramEnabled()) {
     await sendTelegram(
       [
-        "💰 <b>New purchase</b>",
+        process.env.PAYSTACK_SECRET_KEY?.startsWith("sk_test_") ? "🧪 <b>TEST purchase</b> (test key, no real money)" : "💰 <b>New purchase</b>",
         `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
         `💵 ${PRICE_LABEL} ${PRICE_CURRENCY}`,
         `🧾 ${escapeHtml(input.reference)}`,
