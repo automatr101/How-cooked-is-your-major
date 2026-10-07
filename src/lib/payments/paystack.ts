@@ -15,9 +15,9 @@ const API = process.env.PAYSTACK_API_BASE ?? "https://api.paystack.co";
 // PAYSTACK_AMOUNT_MINOR (the amount in the smallest unit, e.g. pesewas). The amount is always chosen by
 // you: the code never converts currencies or guesses an exchange rate.
 export function charge(): { currency: string; amount: number } {
-  const currency = (process.env.PAYSTACK_CURRENCY || PRICE_CURRENCY).toUpperCase();
+  const currency = (process.env.PAYSTACK_CURRENCY?.trim() || PRICE_CURRENCY).toUpperCase();
   if (currency === PRICE_CURRENCY) return { currency, amount: PRICE_MINOR };
-  const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR);
+  const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR?.trim());
   if (!Number.isInteger(amount) || amount <= 0) {
     throw new Error(`PAYSTACK_AMOUNT_MINOR must be set when PAYSTACK_CURRENCY is ${currency}`);
   }
@@ -45,7 +45,7 @@ export const paystackProvider: PaymentProvider = {
 
   async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
     const { currency, amount } = charge();
-    const { ok, body } = await call("/transaction/initialize", {
+    const { ok, httpStatus, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
         email,
@@ -58,7 +58,11 @@ export const paystackProvider: PaymentProvider = {
       }),
     });
     const url = body?.data?.authorization_url;
-    if (!ok || body?.status !== true || typeof url !== "string") throw new Error("Paystack could not start the payment");
+    if (!ok || body?.status !== true || typeof url !== "string") {
+      // Paystack's own error text (e.g. "Currency not supported by merchant") holds no secrets and is what you need to fix it.
+      console.error(`[paystack] initialize refused: HTTP ${httpStatus}, currency ${currency}, message: ${String(body?.message ?? "none").slice(0, 200)}`);
+      throw new Error("Paystack could not start the payment");
+    }
     return { reference, authorizationUrl: url };
   },
 
