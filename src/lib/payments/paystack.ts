@@ -10,6 +10,20 @@ import type { InitializeInput, InitializeResult, PaymentProvider, VerifyInput, V
 
 const API = process.env.PAYSTACK_API_BASE ?? "https://api.paystack.co";
 
+// What is actually charged. By default it is the display price in USD. A Paystack account that cannot take
+// USD (a new Ghana account, for example, may only allow GHS) sets PAYSTACK_CURRENCY and
+// PAYSTACK_AMOUNT_MINOR (the amount in the smallest unit, e.g. pesewas). The amount is always chosen by
+// you: the code never converts currencies or guesses an exchange rate.
+export function charge(): { currency: string; amount: number } {
+  const currency = (process.env.PAYSTACK_CURRENCY || PRICE_CURRENCY).toUpperCase();
+  if (currency === PRICE_CURRENCY) return { currency, amount: PRICE_MINOR };
+  const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR);
+  if (!Number.isInteger(amount) || amount <= 0) {
+    throw new Error(`PAYSTACK_AMOUNT_MINOR must be set when PAYSTACK_CURRENCY is ${currency}`);
+  }
+  return { currency, amount };
+}
+
 function key(): string {
   const k = process.env.PAYSTACK_SECRET_KEY;
   if (!k) throw new Error("PAYSTACK_SECRET_KEY is not set");
@@ -30,12 +44,13 @@ export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
   async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
+    const { currency, amount } = charge();
     const { ok, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
         email,
-        amount: PRICE_MINOR,
-        currency: PRICE_CURRENCY,
+        amount,
+        currency,
         reference,
         callback_url: callbackUrl,
         // Read back at verify time. Set here, on the server, so the browser cannot change it.
@@ -60,7 +75,8 @@ export const paystackProvider: PaymentProvider = {
         // The transaction is real and paid. Make sure it is the one we created, for this major and price.
         if (d.reference !== reference) return { status: "failed", reason: "reference_mismatch" };
         if (meta.product !== PRODUCT_ID || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
-        if (d.currency !== PRICE_CURRENCY || Number(d.amount) !== PRICE_MINOR) return { status: "failed", reason: "wrong_amount" };
+        const expected = charge();
+        if (d.currency !== expected.currency || Number(d.amount) !== expected.amount) return { status: "failed", reason: "wrong_amount" };
         const email = (d.customer as { email?: unknown } | undefined)?.email;
         return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined };
       }
