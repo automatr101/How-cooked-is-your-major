@@ -217,12 +217,13 @@ export default function HomeClient() {
     return `I'm ${selectedMajor.level.toUpperCase()} ${emoji}\n\n${quote}Major: ${selectedMajor.name}\nAI Risk: ${selectedMajor.score}%\n\nCheck yours: ${link}`;
   };
 
-  // The link to this result. Pasting it anywhere that makes link previews shows the result card.
-  // `from` tags links we hand out (not the page's own URL) so GA4 can show which shares bring visitors.
+  // The link to share. It points at the small pre-built page /share/<major> (see app/share), so link previews
+  // load fast and reliably; people who open it are sent straight on to their result. `from` tags links we hand
+  // out (not the page's own URL) so GA4 can show which shares bring visitors.
   const resultLink = (from?: { source: string; medium: string }) =>
     selectedMajor
-      ? `${SITE_URL}?major=${encodeURIComponent(selectedMajor.name)}&score=${selectedMajor.score}&level=${encodeURIComponent(selectedMajor.level)}${
-          from ? `&utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share` : ""
+      ? `${SITE_URL}/share/${slugify(selectedMajor.name)}${
+          from ? `?utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share` : ""
         }`
       : SITE_URL;
 
