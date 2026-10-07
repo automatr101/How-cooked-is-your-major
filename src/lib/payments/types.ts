@@ -29,6 +29,8 @@ export interface VerifyInput {
 export interface VerifyResult {
   status: PaymentStatus;
   transactionId?: string;
+  /** The payer's email as Paystack has it. Used only to make a keyed fingerprint; never stored or logged as is. */
+  customerEmail?: string;
   /** Short machine-readable reason when the payment did not succeed. */
   reason?: string;
 }

@@ -63,6 +63,11 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
+  // "Already paid?" (live mode): a buyer who paid but never got back to the site enters the payment reference from their receipt
+  const [restoring, setRestoring] = useState(false);
+  const [restoreRef, setRestoreRef] = useState("");
+  const [restoreError, setRestoreError] = useState("");
+  const [restoreBusy, setRestoreBusy] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closedRef = useRef(false); // so closing never counts twice, and a late response cannot reopen things
   const finished = step.name === "success";
@@ -120,6 +125,36 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
     } catch {
       trackPaymentFailed(major, planType, "network");
       setStep({ name: "error", message: "Network problem. Check your connection and try again." });
+    }
+  };
+
+  // Restore a plan that was already paid for. Either the payment reference (checked with Paystack, like a normal
+  // payment) or the email used to pay (looked up on the server). Nothing unlocks unless the server confirms it.
+  const restore = async () => {
+    const value = restoreRef.trim();
+    if (/^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/i.test(value)) {
+      setRestoreError("");
+      closedRef.current = false;
+      return setStep({ name: "processing", reference: value.toLowerCase() });
+    }
+    if (!EMAIL.test(value)) return setRestoreError("Enter your payment reference (it starts with cm-) or the email you paid with.");
+    setRestoreError("");
+    setRestoreBusy(true);
+    try {
+      const { ok, status, data } = await post("/api/checkout/restore", { major: major.name, email: value });
+      if (ok && data.status === "success") {
+        trackPaid(major, planType, String(data.transactionId));
+        closedRef.current = false;
+        const ready = await onPaid();
+        return setStep(ready ? { name: "success" } : { name: "error", message: "We found your payment but could not load the plan. Please try again." });
+      }
+      if (status === 429) return setRestoreError("Too many tries. Please wait a while, or use your payment reference.");
+      if (status === 503) return setRestoreError("Restoring by email is not available right now. Use your payment reference instead.");
+      setRestoreError("We could not find a paid plan for that email and this major. Check the email, or use your payment reference.");
+    } catch {
+      setRestoreError("Network problem. Check your connection and try again.");
+    } finally {
+      setRestoreBusy(false);
     }
   };
 
@@ -285,6 +320,54 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
               <p className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
                 <Lock className="h-3 w-3" /> One payment. No subscription. Your free score and sharing stay free.
               </p>
+              {PAYMENTS_MODE === "live" && (
+                <div className="border-t border-border/30 pt-4">
+                  {!restoring ? (
+                    <button
+                      type="button"
+                      onClick={() => setRestoring(true)}
+                      className="w-full text-center text-xs font-black uppercase tracking-widest text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
+                    >
+                      Already paid? Restore your plan
+                    </button>
+                  ) : (
+                    <div className="space-y-2">
+                      <label htmlFor="restore-ref" className="text-[10px] font-black uppercase tracking-[0.25em] text-muted-foreground">
+                        Payment reference, or the email you paid with
+                      </label>
+                      <input
+                        id="restore-ref"
+                        value={restoreRef}
+                        onChange={(e) => {
+                          setRestoreRef(e.target.value);
+                          setRestoreError("");
+                        }}
+                        onKeyDown={(e) => e.key === "Enter" && restore()}
+                        placeholder="you@example.com or cm-xxxxxxxx-xxxxxxxxxxxx"
+                        autoComplete="off"
+                        spellCheck={false}
+                        aria-invalid={!!restoreError}
+                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                      />
+                      {restoreError ? (
+                        <p role="alert" className="text-xs font-bold text-destructive">{restoreError}</p>
+                      ) : (
+                        <p className="text-[11px] leading-relaxed text-muted-foreground">
+                          Only for this major, and only if the payment went through. We check it before unlocking.
+                        </p>
+                      )}
+                      <button
+                        type="button"
+                        onClick={restore}
+                        disabled={restoreBusy || !restoreRef.trim()}
+                        className="w-full rounded-full border border-border px-6 py-3 text-xs font-black uppercase tracking-widest text-foreground transition hover:bg-muted active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                      >
+                        {restoreBusy ? "Checking..." : "Restore my plan"}
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
