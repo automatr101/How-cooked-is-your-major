@@ -113,7 +113,9 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
       const { ok, data } = await post("/api/checkout/initialize", { major: major.name, email: email.trim() });
       if (!ok || !data.reference) {
         trackPaymentFailed(major, planType, data?.error ?? "could_not_start");
-        return setStep({ name: "error", message: "We could not start the payment. Please try again in a moment." });
+        // `detail` only exists while the private gate is on (the owner testing), never for real visitors.
+        const why = typeof data?.detail === "string" ? ` [${data.detail}]` : "";
+        return setStep({ name: "error", message: `We could not start the payment. Please try again in a moment.${why}` });
       }
       trackCheckoutStarted(major, planType);
       if (data.authorizationUrl) {

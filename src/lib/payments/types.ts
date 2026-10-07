@@ -35,6 +35,9 @@ export interface VerifyResult {
   reason?: string;
 }
 
+/** An error whose message is safe to show the site owner (never contains keys or customer data). */
+export class SafeError extends Error {}
+
 export interface PaymentProvider {
   id: "mock" | "paystack";
   initialize(input: InitializeInput): Promise<InitializeResult>;
