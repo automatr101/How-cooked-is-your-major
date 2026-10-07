@@ -63,6 +63,10 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
+  // "Already paid?" (live mode): a buyer who paid but never got back to the site enters the payment reference from their receipt
+  const [restoring, setRestoring] = useState(false);
+  const [restoreRef, setRestoreRef] = useState("");
+  const [restoreError, setRestoreError] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closedRef = useRef(false); // so closing never counts twice, and a late response cannot reopen things
   const finished = step.name === "success";
@@ -121,6 +125,15 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
       trackPaymentFailed(major, planType, "network");
       setStep({ name: "error", message: "Network problem. Check your connection and try again." });
     }
+  };
+
+  // Restore a plan that was already paid for: the server asks Paystack about this exact payment before unlocking anything
+  const restore = () => {
+    const ref = restoreRef.trim().toLowerCase();
+    if (!/^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref)) return setRestoreError(true);
+    setRestoreError(false);
+    closedRef.current = false;
+    setStep({ name: "processing", reference: ref });
   };
 
   // 2. test mode: choose what the fake payment does
@@ -285,6 +298,53 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
               <p className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
                 <Lock className="h-3 w-3" /> One payment. No subscription. Your free score and sharing stay free.
               </p>
+              {PAYMENTS_MODE === "live" && (
+                <div className="border-t border-border/30 pt-4">
+                  {!restoring ? (
+                    <button
+                      type="button"
+                      onClick={() => setRestoring(true)}
+                      className="w-full text-center text-xs font-black uppercase tracking-widest text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
+                    >
+                      Already paid? Restore your plan
+                    </button>
+                  ) : (
+                    <div className="space-y-2">
+                      <label htmlFor="restore-ref" className="text-[10px] font-black uppercase tracking-[0.25em] text-muted-foreground">
+                        Payment reference from your receipt
+                      </label>
+                      <input
+                        id="restore-ref"
+                        value={restoreRef}
+                        onChange={(e) => {
+                          setRestoreRef(e.target.value);
+                          setRestoreError(false);
+                        }}
+                        onKeyDown={(e) => e.key === "Enter" && restore()}
+                        placeholder="cm-xxxxxxxx-xxxxxxxxxxxx"
+                        autoComplete="off"
+                        spellCheck={false}
+                        aria-invalid={restoreError}
+                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                      />
+                      {restoreError ? (
+                        <p role="alert" className="text-xs font-bold text-destructive">That does not look like one of our references. It starts with cm-.</p>
+                      ) : (
+                        <p className="text-[11px] leading-relaxed text-muted-foreground">
+                          Only for this major, and only if the payment went through. We check it with Paystack before unlocking.
+                        </p>
+                      )}
+                      <button
+                        type="button"
+                        onClick={restore}
+                        className="w-full rounded-full border border-border px-6 py-3 text-xs font-black uppercase tracking-widest text-foreground transition hover:bg-muted active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                      >
+                        Restore my plan
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
