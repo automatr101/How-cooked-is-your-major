@@ -14,8 +14,8 @@ const API = process.env.PAYSTACK_API_BASE ?? "https://api.paystack.co";
 // USD (a new Ghana account, for example, may only allow GHS) sets PAYSTACK_CURRENCY and
 // PAYSTACK_AMOUNT_MINOR (the amount in the smallest unit, e.g. pesewas). The amount is always chosen by
 // you: the code never converts currencies or guesses an exchange rate.
-function charge(): { currency: string; amount: number } {
-  const currency = (process.env.PAYSTACK_CURRENCY ?? PRICE_CURRENCY).toUpperCase();
+export function charge(): { currency: string; amount: number } {
+  const currency = (process.env.PAYSTACK_CURRENCY || PRICE_CURRENCY).toUpperCase();
   if (currency === PRICE_CURRENCY) return { currency, amount: PRICE_MINOR };
   const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR);
   if (!Number.isInteger(amount) || amount <= 0) {
