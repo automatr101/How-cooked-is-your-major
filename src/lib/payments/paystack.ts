@@ -50,6 +50,12 @@ async function call(path: string, init?: RequestInit) {
   return { ok: res.ok, httpStatus: res.status, body };
 }
 
+/** Paystack's own words for why a payment did not go through ("Insufficient Funds", "Declined"...), kept short. */
+function gatewayNote(data: Record<string, unknown>): string | undefined {
+  const note = data.gateway_response;
+  return typeof note === "string" && note.trim() ? note.trim().slice(0, 80) : undefined;
+}
+
 export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
@@ -96,10 +102,10 @@ export const paystackProvider: PaymentProvider = {
         return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined };
       }
       case "abandoned":
-        return { status: "cancelled" };
+        return { status: "cancelled", detail: gatewayNote(d) };
       case "failed":
       case "reversed":
-        return { status: "failed", reason: "payment_declined" };
+        return { status: "failed", reason: "payment_declined", detail: gatewayNote(d) };
       default:
         return { status: "pending" }; // ongoing, pending, processing, queued
     }

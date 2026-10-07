@@ -33,6 +33,8 @@ export interface VerifyResult {
   customerEmail?: string;
   /** Short machine-readable reason when the payment did not succeed. */
   reason?: string;
+  /** The provider's own wording for a decline (e.g. "Insufficient Funds"). For the owner's alert only; never sent to the browser. */
+  detail?: string;
 }
 
 /** An error whose message is safe to show the site owner (never contains keys or customer data). */
