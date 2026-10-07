@@ -48,6 +48,18 @@ export function trackOfferClicked(m: Subject, planType: PlanType) {
   track("premium_cta_clicked", { ...base(m, planType), price: PRICE_VALUE });
 }
 
+/** Lets the server (and so the Telegram bot) know someone clicked Unlock. Sends only the major's name; never blocks the UI. */
+export function notifyUnlockClicked(m: Subject) {
+  try {
+    void fetch("/api/checkout/event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: "unlock_clicked", major: m.name }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch {}
+}
+
 export function trackCheckoutStarted(m: Subject, planType: PlanType) {
   track("checkout_started", { ...base(m, planType), price: PRICE_VALUE, currency: PRICE_CURRENCY });
 }

@@ -6,7 +6,7 @@ import { Check, Lock } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { slugify } from "@/lib/analytics";
 import { PAYMENTS_MODE, PLAN_COPY, PRICE_LABEL, planTypeFor } from "@/lib/premium";
-import { setGated, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
+import { notifyUnlockClicked, setGated, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
@@ -207,6 +207,7 @@ function Offer({ major }: { major: Major }) {
             type="button"
             onClick={() => {
               trackOfferClicked(major, planType);
+              notifyUnlockClicked(major);
               setOpen(true);
             }}
             className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"

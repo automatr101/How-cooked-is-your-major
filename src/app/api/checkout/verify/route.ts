@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findMajor, getProvider, REFERENCE_PATTERN } from "@/lib/payments";
 import { grantEntitlement } from "@/lib/payments/entitlement";
+import { funnelAlert } from "@/lib/payments/alerts";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { registerPurchase } from "@/lib/payments/purchases";
 import { statusOf, storeEnabled } from "@/lib/payments/store";
@@ -25,7 +26,14 @@ export async function POST(req: NextRequest) {
 
   try {
     const result = await provider.verify({ reference, majorSlug: major.slug, proof });
-    if (result.status !== "success") return json({ status: result.status, reason: result.reason ?? null });
+    if (result.status !== "success") {
+      // A buyer who came back without a completed payment. "Pending" is skipped: it is checked again every few seconds.
+      if (result.status === "failed" || result.status === "cancelled") {
+        const why = [result.reason, result.detail].filter(Boolean).join(" · ");
+        funnelAlert(req, "not_completed", major, [`Status: ${result.status}${why ? ` · ${why}` : ""}`, `🧾 ${reference}`], `${reference}:${result.status}`);
+      }
+      return json({ status: result.status, reason: result.reason ?? null });
+    }
 
     // Live mode with a database: a payment that was refunded no longer unlocks anything, and a verified one is recorded
     if (PAYMENTS_MODE === "live" && storeEnabled()) {
