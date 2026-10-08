@@ -45,7 +45,10 @@ function readResume(majorName: string): string | undefined {
 
 // Asks the server once per page load whether THIS visitor may see the offer: payments on, and if the private gate is
 // closed, the browser must carry the gate cookie. Anything unclear means "hide it".
-let statusRequest: Promise<{ enabled: boolean; gated: boolean }> | null = null;
+// `unlocked` = the majors this browser's (year-long) unlock cookie covers, so a buyer who comes back, even after
+// closing the app, sees their plan straight away instead of the buy button.
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[] };
+let statusRequest: Promise<Status> | null = null;
 function fetchStatus() {
   statusRequest ??= fetch("/api/payments/status", { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : { enabled: false, gated: false }))
@@ -54,7 +57,7 @@ function fetchStatus() {
 }
 
 export function PremiumOffer({ major }: { major: Major }) {
-  const [status, setStatus] = useState<{ enabled: boolean; gated: boolean } | null>(null);
+  const [status, setStatus] = useState<Status | null>(null);
   useEffect(() => {
     if (PAYMENTS_MODE === "off") return;
     let live = true;
@@ -69,10 +72,10 @@ export function PremiumOffer({ major }: { major: Major }) {
     };
   }, []);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} />;
 }
 
-function Offer({ major }: { major: Major }) {
+function Offer({ major, unlocked }: { major: Major; unlocked: string[] }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const slug = slugify(major.name);
@@ -118,12 +121,13 @@ function Offer({ major }: { major: Major }) {
     return () => io.disconnect();
   }, [major, planType, plan]);
 
-  // Back to the result during the same session: show the plan again if this browser already paid for it
+  // Back to the result later (even after closing the browser): show the plan again if this browser already paid for it.
+  // The server says which majors the cookie covers; the plan itself is still only served if the unlock is valid.
   useEffect(() => {
-    if (!unlockedSlugs().includes(slug)) return;
+    if (!unlocked.includes(slug) && !unlockedSlugs().includes(slug)) return;
     const id = setTimeout(loadPlan, 0);
     return () => clearTimeout(id);
-  }, [slug, loadPlan]);
+  }, [slug, loadPlan, unlocked]);
 
   // Returning from the payment page: tidy the address so a reload does not start a second check
   useEffect(() => {

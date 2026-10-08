@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { renderToBuffer } from "@react-pdf/renderer";
 import { findMajor } from "@/lib/payments";
-import { hasEntitlement } from "@/lib/payments/entitlement";
+import { mayRead } from "@/lib/payments/access";
 import { guard, json } from "@/lib/payments/http";
 import { buildPlan } from "@/lib/plan/generate";
 import { PlanPdf } from "@/lib/pdf/plan-pdf";
@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
 
   const major = findMajor(req.nextUrl.searchParams.get("major"));
   if (!major) return json({ error: "unknown_major" }, 400);
-  if (!hasEntitlement(req, major.slug)) return json({ error: "payment_required" }, 403);
+  if (!(await mayRead(req, major.slug))) return json({ error: "payment_required" }, 403);
 
   const plan = buildPlan(major);
   const document = <PlanPdf plan={plan} />; // built outside the try: a layout error surfaces from renderToBuffer below
