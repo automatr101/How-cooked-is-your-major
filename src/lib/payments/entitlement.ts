@@ -1,12 +1,14 @@
 import type { NextRequest, NextResponse } from "next/server";
 import { sign, verifySignature } from "./signing";
 
-// Server-only. "This browser has paid for these majors", remembered in a signed cookie that lasts for the
-// browser session (no account needed). The cookie can only be created by /api/checkout/verify after the
-// provider confirmed the payment, and it cannot be edited because it is signed.
+// Server-only. "This browser has paid for these majors", remembered in a signed cookie that stays on the browser
+// for a year (no account needed), so a buyer who closes the app and comes back still has their plan. The cookie
+// can only be created by /api/checkout/verify (or /api/checkout/restore) after the provider confirmed the payment,
+// and it cannot be edited because it is signed. A refunded payment is checked separately (see access.ts).
 
 const COOKIE = "cm_entitlement";
 const MAX_ITEMS = 25;
+const ONE_YEAR_SECONDS = 365 * 24 * 60 * 60;
 
 interface Item {
   s: string; // major slug
@@ -35,6 +37,16 @@ export function hasEntitlement(req: NextRequest, majorSlug: string): boolean {
   return decode(req.cookies.get(COOKIE)?.value).some((i) => i.s === majorSlug);
 }
 
+/** The payment reference this browser's cookie holds for a major, if any. */
+export function entitlementReference(req: NextRequest, majorSlug: string): string | null {
+  return decode(req.cookies.get(COOKIE)?.value).find((i) => i.s === majorSlug)?.r ?? null;
+}
+
+/** Every major this browser's cookie says it has paid for. */
+export function entitledSlugs(req: NextRequest): string[] {
+  return decode(req.cookies.get(COOKIE)?.value).map((i) => i.s);
+}
+
 /** Adds a verified purchase to the cookie on `res` (keeps earlier ones). */
 export function grantEntitlement(req: NextRequest, res: NextResponse, majorSlug: string, reference: string): void {
   const items = decode(req.cookies.get(COOKIE)?.value).filter((i) => i.s !== majorSlug);
@@ -44,6 +56,6 @@ export function grantEntitlement(req: NextRequest, res: NextResponse, majorSlug:
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
-    // no maxAge: it is a session cookie, gone when the browser is closed
+    maxAge: ONE_YEAR_SECONDS, // survives closing the browser; a refund is caught by access.ts, not by waiting for expiry
   });
 }
