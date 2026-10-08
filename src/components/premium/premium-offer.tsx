@@ -4,9 +4,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import type { Major } from "@/lib/data";
-import { slugify } from "@/lib/analytics";
+import { markInternal, slugify } from "@/lib/analytics";
 import { PAYMENTS_MODE, PLAN_COPY, PRICE_LABEL, planTypeFor } from "@/lib/premium";
-import { trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
+import { notifyUnlockClicked, setGated, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
@@ -43,8 +43,32 @@ function readResume(majorName: string): string | undefined {
   return p.get("cm_checkout") === "1" && p.get("major") === majorName && ref && /^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref) ? ref : undefined;
 }
 
+// Asks the server once per page load whether THIS visitor may see the offer: payments on, and if the private gate is
+// closed, the browser must carry the gate cookie. Anything unclear means "hide it".
+let statusRequest: Promise<{ enabled: boolean; gated: boolean }> | null = null;
+function fetchStatus() {
+  statusRequest ??= fetch("/api/payments/status", { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : { enabled: false, gated: false }))
+    .catch(() => ({ enabled: false, gated: false }));
+  return statusRequest;
+}
+
 export function PremiumOffer({ major }: { major: Major }) {
-  if (PAYMENTS_MODE === "off") return null;
+  const [status, setStatus] = useState<{ enabled: boolean; gated: boolean } | null>(null);
+  useEffect(() => {
+    if (PAYMENTS_MODE === "off") return;
+    let live = true;
+    fetchStatus().then((s) => {
+      setGated(s.gated);
+      // Only the owner gets past the private gate, so this browser's visits are tests: keep them out of the real numbers
+      if (s.gated && s.enabled) markInternal();
+      if (live) setStatus(s);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+  if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
   return <Offer key={major.name} major={major} />;
 }
 
@@ -185,6 +209,7 @@ function Offer({ major }: { major: Major }) {
             type="button"
             onClick={() => {
               trackOfferClicked(major, planType);
+              notifyUnlockClicked(major);
               setOpen(true);
             }}
             className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"

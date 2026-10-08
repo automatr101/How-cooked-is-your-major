@@ -60,10 +60,32 @@ export default function RootLayout({
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F4BCS70GXP');
+            (function () {
+              var ID = 'G-F4BCS70GXP';
+              var KEY = 'cm_internal';
+              var internal = false;
+              try {
+                // ?cm_internal=1 marks this browser as the owner's: its visits are tagged traffic_type=internal so GA4 can
+                // leave them out. ?cm_internal=0 undoes it. The tag is removed from the address afterwards.
+                var q = new URLSearchParams(location.search);
+                var flag = q.get('cm_internal');
+                if (flag === '1') localStorage.setItem(KEY, '1');
+                if (flag === '0') localStorage.removeItem(KEY);
+                if (flag !== null) {
+                  q.delete('cm_internal');
+                  var rest = q.toString();
+                  history.replaceState(history.state, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+                }
+                internal = localStorage.getItem(KEY) === '1';
+              } catch (e) {}
+              // Nothing is sent from a developer's machine: it would only pollute the real numbers
+              var h = location.hostname;
+              if (h === 'localhost' || h === '127.0.0.1' || h === '[::1]' || /\\.localhost$/.test(h)) window['ga-disable-' + ID] = true;
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function () { window.dataLayer.push(arguments); };
+              window.gtag('js', new Date());
+              window.gtag('config', ID, internal ? { traffic_type: 'internal' } : {});
+            })();
           `}
         </Script>
         {/* Google AdSense */}

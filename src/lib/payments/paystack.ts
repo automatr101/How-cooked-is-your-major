@@ -1,5 +1,6 @@
+import { createHash } from "node:crypto";
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
-import type { InitializeInput, InitializeResult, PaymentProvider, VerifyInput, VerifyResult } from "./types";
+import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
 // the server), the visitor pays on Paystack's page, comes back, and the server asks Paystack whether
@@ -10,10 +11,33 @@ import type { InitializeInput, InitializeResult, PaymentProvider, VerifyInput, V
 
 const API = process.env.PAYSTACK_API_BASE ?? "https://api.paystack.co";
 
+// What is actually charged. By default it is the display price in USD. A Paystack account that cannot take
+// USD (a new Ghana account, for example, may only allow GHS) sets PAYSTACK_CURRENCY and
+// PAYSTACK_AMOUNT_MINOR (the amount in the smallest unit, e.g. pesewas). The amount is always chosen by
+// you: the code never converts currencies or guesses an exchange rate.
+export function charge(): { currency: string; amount: number } {
+  const currency = (process.env.PAYSTACK_CURRENCY?.trim() || PRICE_CURRENCY).toUpperCase();
+  if (currency === PRICE_CURRENCY) return { currency, amount: PRICE_MINOR };
+  const amount = Number(process.env.PAYSTACK_AMOUNT_MINOR?.trim());
+  if (!Number.isInteger(amount) || amount <= 0) {
+    throw new SafeError(`PAYSTACK_AMOUNT_MINOR must be a whole number when PAYSTACK_CURRENCY is ${currency}`);
+  }
+  return { currency, amount };
+}
+
 function key(): string {
-  const k = process.env.PAYSTACK_SECRET_KEY;
-  if (!k) throw new Error("PAYSTACK_SECRET_KEY is not set");
+  const k = process.env.PAYSTACK_SECRET_KEY?.trim(); // a pasted key often carries a stray space or newline
+  if (!k) throw new SafeError("PAYSTACK_SECRET_KEY is not set");
+  if (!/^sk_(test|live)_[A-Za-z0-9]+$/.test(k)) throw new SafeError("PAYSTACK_SECRET_KEY does not look like a Paystack secret key");
   return k;
+}
+
+// Which key is configured, without revealing it: its type and a short one-way fingerprint. Only ever shown to the
+// owner (the gated checkout error), so a wrong key (live instead of test, another business) is visible at a glance.
+function keyHint(): string {
+  const k = process.env.PAYSTACK_SECRET_KEY?.trim() ?? "";
+  const kind = k.startsWith("sk_live_") ? "live" : k.startsWith("sk_test_") ? "test" : "unknown";
+  return `${kind} key #${createHash("sha256").update(k).digest("hex").slice(0, 6)}`;
 }
 
 async function call(path: string, init?: RequestInit) {
@@ -26,16 +50,23 @@ async function call(path: string, init?: RequestInit) {
   return { ok: res.ok, httpStatus: res.status, body };
 }
 
+/** Paystack's own words for why a payment did not go through ("Insufficient Funds", "Declined"...), kept short. */
+function gatewayNote(data: Record<string, unknown>): string | undefined {
+  const note = data.gateway_response;
+  return typeof note === "string" && note.trim() ? note.trim().slice(0, 80) : undefined;
+}
+
 export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
   async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
-    const { ok, body } = await call("/transaction/initialize", {
+    const { currency, amount } = charge();
+    const { ok, httpStatus, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
         email,
-        amount: PRICE_MINOR,
-        currency: PRICE_CURRENCY,
+        amount,
+        currency,
         reference,
         callback_url: callbackUrl,
         // Read back at verify time. Set here, on the server, so the browser cannot change it.
@@ -43,7 +74,12 @@ export const paystackProvider: PaymentProvider = {
       }),
     });
     const url = body?.data?.authorization_url;
-    if (!ok || body?.status !== true || typeof url !== "string") throw new Error("Paystack could not start the payment");
+    if (!ok || body?.status !== true || typeof url !== "string") {
+      // Paystack's own error text (e.g. "Currency not supported by merchant") holds no secrets and is what you need to fix it.
+      const why = `Paystack refused (HTTP ${httpStatus}, ${currency}, ${keyHint()}): ${String(body?.message ?? "no message").slice(0, 200)}`;
+      console.error(`[paystack] ${why}`);
+      throw new SafeError(why);
+    }
     return { reference, authorizationUrl: url };
   },
 
@@ -60,14 +96,16 @@ export const paystackProvider: PaymentProvider = {
         // The transaction is real and paid. Make sure it is the one we created, for this major and price.
         if (d.reference !== reference) return { status: "failed", reason: "reference_mismatch" };
         if (meta.product !== PRODUCT_ID || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
-        if (d.currency !== PRICE_CURRENCY || Number(d.amount) !== PRICE_MINOR) return { status: "failed", reason: "wrong_amount" };
-        return { status: "success", transactionId: String(d.id ?? reference) };
+        const expected = charge();
+        if (d.currency !== expected.currency || Number(d.amount) !== expected.amount) return { status: "failed", reason: "wrong_amount" };
+        const email = (d.customer as { email?: unknown } | undefined)?.email;
+        return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined };
       }
       case "abandoned":
-        return { status: "cancelled" };
+        return { status: "cancelled", detail: gatewayNote(d) };
       case "failed":
       case "reversed":
-        return { status: "failed", reason: "payment_declined" };
+        return { status: "failed", reason: "payment_declined", detail: gatewayNote(d) };
       default:
         return { status: "pending" }; // ongoing, pending, processing, queued
     }

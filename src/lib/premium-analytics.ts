@@ -15,11 +15,19 @@ interface Subject {
   level: string;
 }
 
+// While the private gate is closed (testing before launch), every event says so and the revenue event is sent as
+// test_purchase, so test payments can never count as real revenue in GA4. Set by PremiumOffer from /api/payments/status.
+let gated = false;
+export function setGated(value: boolean) {
+  gated = value;
+}
+const mode = () => (gated ? "gated" : PAYMENTS_MODE);
+
 const base = (m: Subject, planType: PlanType) => ({
   major_name: m.name,
   cooked_score: m.score,
   plan_type: planType,
-  payment_mode: PAYMENTS_MODE,
+  payment_mode: mode(),
 });
 
 /** Once per key for this browser session, so a re-render or a re-verify never double-counts. */
@@ -40,6 +48,18 @@ export function trackOfferClicked(m: Subject, planType: PlanType) {
   track("premium_cta_clicked", { ...base(m, planType), price: PRICE_VALUE });
 }
 
+/** Lets the server (and so the Telegram bot) know someone clicked Unlock. Sends only the major's name; never blocks the UI. */
+export function notifyUnlockClicked(m: Subject) {
+  try {
+    void fetch("/api/checkout/event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: "unlock_clicked", major: m.name }),
+      keepalive: true,
+    }).catch(() => {});
+  } catch {}
+}
+
 export function trackCheckoutStarted(m: Subject, planType: PlanType) {
   track("checkout_started", { ...base(m, planType), price: PRICE_VALUE, currency: PRICE_CURRENCY });
 }
@@ -48,7 +68,7 @@ export function trackCheckoutStarted(m: Subject, planType: PlanType) {
 export function trackPaid(m: Subject, planType: PlanType, transactionId: string) {
   if (!once(`cm_ga_paid:${transactionId}`)) return;
   track("checkout_completed", { ...base(m, planType), price: PRICE_VALUE, currency: PRICE_CURRENCY });
-  track(PAYMENTS_MODE === "live" ? "purchase" : "test_purchase", {
+  track(PAYMENTS_MODE === "live" && !gated ? "purchase" : "test_purchase", {
     transaction_id: transactionId,
     value: PRICE_VALUE,
     currency: PRICE_CURRENCY,
@@ -56,17 +76,17 @@ export function trackPaid(m: Subject, planType: PlanType, transactionId: string)
     major_name: m.name,
     cooked_score: m.score,
     plan_type: planType,
-    payment_mode: PAYMENTS_MODE,
+    payment_mode: mode(),
     items: [{ item_id: PRODUCT_ID, item_name: PRODUCT_NAME, item_variant: planType, price: PRICE_VALUE, quantity: 1 }],
   });
 }
 
 export function trackPaymentFailed(m: Subject, planType: PlanType, reason: string) {
-  track("payment_failed", { major_name: m.name, plan_type: planType, failure_reason: reason, payment_mode: PAYMENTS_MODE });
+  track("payment_failed", { major_name: m.name, plan_type: planType, failure_reason: reason, payment_mode: mode() });
 }
 
 export function trackPaymentCancelled(m: Subject, planType: PlanType) {
-  track("payment_cancelled", { major_name: m.name, plan_type: planType, payment_mode: PAYMENTS_MODE });
+  track("payment_cancelled", { major_name: m.name, plan_type: planType, payment_mode: mode() });
 }
 
 export function trackReportUnlocked(m: Subject, planType: PlanType) {
