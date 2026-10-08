@@ -7,7 +7,7 @@
 // (it would count as real revenue in GA4); it is sent as `test_purchase` instead.
 
 import { track, slugify } from "@/lib/analytics";
-import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_VALUE, PRODUCT_ID, PRODUCT_NAME, type PlanType } from "@/lib/premium";
+import { DEFAULT_PRICE, PAYMENTS_MODE, PRODUCT_ID, PRODUCT_NAME, type PlanType, type Price } from "@/lib/premium";
 
 interface Subject {
   name: string;
@@ -22,6 +22,13 @@ export function setGated(value: boolean) {
   gated = value;
 }
 const mode = () => (gated ? "gated" : PAYMENTS_MODE);
+
+// What a buyer is really charged (the server's Paystack settings, via /api/payments/status), so GA4 revenue and the
+// price on every event match the payment: GHS 46.90 is recorded as 46.9 in GHS, not as $4.99.
+let price: Price = DEFAULT_PRICE;
+export function setPrice(value: Price) {
+  price = value;
+}
 
 const base = (m: Subject, planType: PlanType) => ({
   major_name: m.name,
@@ -45,7 +52,7 @@ export function trackOfferViewed(m: Subject, planType: PlanType) {
 }
 
 export function trackOfferClicked(m: Subject, planType: PlanType) {
-  track("premium_cta_clicked", { ...base(m, planType), price: PRICE_VALUE });
+  track("premium_cta_clicked", { ...base(m, planType), price: price.value, currency: price.currency });
 }
 
 /** Lets the server (and so the Telegram bot) know someone clicked Unlock. Sends only the major's name; never blocks the UI. */
@@ -61,23 +68,23 @@ export function notifyUnlockClicked(m: Subject) {
 }
 
 export function trackCheckoutStarted(m: Subject, planType: PlanType) {
-  track("checkout_started", { ...base(m, planType), price: PRICE_VALUE, currency: PRICE_CURRENCY });
+  track("checkout_started", { ...base(m, planType), price: price.value, currency: price.currency });
 }
 
 /** checkout_completed, plus the purchase event. Sent once per transaction. */
 export function trackPaid(m: Subject, planType: PlanType, transactionId: string) {
   if (!once(`cm_ga_paid:${transactionId}`)) return;
-  track("checkout_completed", { ...base(m, planType), price: PRICE_VALUE, currency: PRICE_CURRENCY });
+  track("checkout_completed", { ...base(m, planType), price: price.value, currency: price.currency });
   track(PAYMENTS_MODE === "live" && !gated ? "purchase" : "test_purchase", {
     transaction_id: transactionId,
-    value: PRICE_VALUE,
-    currency: PRICE_CURRENCY,
+    value: price.value,
+    currency: price.currency,
     item_name: PRODUCT_NAME,
     major_name: m.name,
     cooked_score: m.score,
     plan_type: planType,
     payment_mode: mode(),
-    items: [{ item_id: PRODUCT_ID, item_name: PRODUCT_NAME, item_variant: planType, price: PRICE_VALUE, quantity: 1 }],
+    items: [{ item_id: PRODUCT_ID, item_name: PRODUCT_NAME, item_variant: planType, price: price.value, quantity: 1 }],
   });
 }
 
