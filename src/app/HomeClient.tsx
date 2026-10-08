@@ -650,8 +650,12 @@ export default function HomeClient() {
         <p className="text-muted-foreground text-xs font-bold uppercase tracking-[0.3em]">
           &copy; 2026 MajorLabs Intelligence
         </p>
-        <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
           <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+          <span className="opacity-30">·</span>
+          <a href="/terms" className="hover:text-foreground transition-colors">Terms</a>
+          <span className="opacity-30">·</span>
+          <a href="/refunds" className="hover:text-foreground transition-colors">Refunds</a>
           <span className="opacity-30">·</span>
           <a href="/contact" className="hover:text-foreground transition-colors">Contact</a>
           <span className="opacity-30">·</span>

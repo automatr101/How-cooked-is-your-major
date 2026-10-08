@@ -15,6 +15,8 @@ const LINKS = [
   { href: "/compare", label: "Compare" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/refunds", label: "Refunds" },
 ];
 
 const FOCUS_RING = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70";
