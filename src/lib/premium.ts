@@ -13,10 +13,28 @@ export const PAYMENTS_MODE: PaymentsMode = raw === "test" || raw === "live" ? ra
 
 export const PRODUCT_NAME = "Major Intelligence Career Plan";
 export const PRODUCT_ID = "major-intelligence-career-plan";
+// The DEFAULT price: used by the fake checkout and whenever the Paystack settings are not set. What a buyer is really
+// charged in live mode comes from PAYSTACK_CURRENCY and PAYSTACK_AMOUNT_MINOR on the server (a Ghana Paystack
+// account cannot charge in USD, so production uses GHS), and the page shows exactly that (see /api/payments/status).
 export const PRICE_MINOR = 499; // $4.99 in cents; the server always uses this, never a number from the browser
 export const PRICE_CURRENCY = "USD";
 export const PRICE_VALUE = PRICE_MINOR / 100;
 export const PRICE_LABEL = "$4.99";
+
+export interface Price {
+  currency: string; // "USD", "GHS"...
+  minor: number; // smallest unit: cents, pesewas
+  value: number; // major units, e.g. 46.9
+  label: string; // what the page shows: "$4.99", "GHS 46.90"
+}
+
+/** A price from a currency code and an amount in the smallest unit. */
+export function priceOf(currency: string, minor: number): Price {
+  const value = minor / 100;
+  return { currency, minor, value, label: currency === "USD" ? `$${value.toFixed(2)}` : `${currency} ${value.toFixed(2)}` };
+}
+
+export const DEFAULT_PRICE: Price = { currency: PRICE_CURRENCY, minor: PRICE_MINOR, value: PRICE_VALUE, label: PRICE_LABEL };
 
 export type PlanType = "uncooking" | "future_proof" | "advantage";
 

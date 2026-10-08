@@ -5,8 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { markInternal, slugify } from "@/lib/analytics";
-import { PAYMENTS_MODE, PLAN_COPY, PRICE_LABEL, planTypeFor } from "@/lib/premium";
-import { notifyUnlockClicked, setGated, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
+import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, planTypeFor, type Price } from "@/lib/premium";
+import { notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
@@ -47,7 +47,9 @@ function readResume(majorName: string): string | undefined {
 // closed, the browser must carry the gate cookie. Anything unclear means "hide it".
 // `unlocked` = the majors this browser's (year-long) unlock cookie covers, so a buyer who comes back, even after
 // closing the app, sees their plan straight away instead of the buy button.
-type Status = { enabled: boolean; gated: boolean; unlocked?: string[] };
+// `price` = what a buyer is charged right now, from the server's own payment settings (so the page can never show
+// one price and charge another).
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price };
 let statusRequest: Promise<Status> | null = null;
 function fetchStatus() {
   statusRequest ??= fetch("/api/payments/status", { cache: "no-store" })
@@ -63,6 +65,7 @@ export function PremiumOffer({ major }: { major: Major }) {
     let live = true;
     fetchStatus().then((s) => {
       setGated(s.gated);
+      if (s.price) setPrice(s.price); // GA4 events carry the amount and currency really charged
       // Only the owner gets past the private gate, so this browser's visits are tests: keep them out of the real numbers
       if (s.gated && s.enabled) markInternal();
       if (live) setStatus(s);
@@ -72,10 +75,10 @@ export function PremiumOffer({ major }: { major: Major }) {
     };
   }, []);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} />;
 }
 
-function Offer({ major, unlocked }: { major: Major; unlocked: string[] }) {
+function Offer({ major, unlocked, price }: { major: Major; unlocked: string[]; price: Price }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const slug = slugify(major.name);
@@ -149,6 +152,7 @@ function Offer({ major, unlocked }: { major: Major; unlocked: string[] }) {
         <CheckoutDialog
           major={major}
           planType={planType}
+          price={price}
           resumeReference={resume}
           onPaid={loadPlan}
           onClose={() => setOpen(false)}
@@ -206,7 +210,7 @@ function Offer({ major, unlocked }: { major: Major; unlocked: string[] }) {
 
         <div className="space-y-3 border-t border-border/20 pt-6">
           <p className="flex items-baseline gap-2">
-            <span className="text-4xl font-black tabular-nums tracking-tighter">{PRICE_LABEL}</span>
+            <span className="text-4xl font-black tabular-nums tracking-tighter">{price.label}</span>
             <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time</span>
           </p>
           <button

@@ -3,7 +3,8 @@ import { EMAIL_PATTERN, findMajor } from "@/lib/payments";
 import { grantEntitlement } from "@/lib/payments/entitlement";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { findPaidByEmail, hashEmail, storeEnabled } from "@/lib/payments/store";
-import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_VALUE, PRODUCT_NAME } from "@/lib/premium";
+import { currentPrice } from "@/lib/payments/price";
+import { PAYMENTS_MODE, PRODUCT_NAME } from "@/lib/premium";
 import { cleanText } from "@/lib/clean-text";
 import { rateLimited } from "@/lib/telegram";
 
@@ -47,8 +48,9 @@ export async function POST(req: NextRequest) {
   }
   if (!reference) return json(NOT_FOUND);
 
+  const price = currentPrice();
   const out = NextResponse.json(
-    { status: "success", transactionId: reference, value: PRICE_VALUE, currency: PRICE_CURRENCY, itemName: PRODUCT_NAME },
+    { status: "success", transactionId: reference, value: price.value, currency: price.currency, itemName: PRODUCT_NAME },
     { headers: { "Cache-Control": "no-store" } }
   );
   grantEntitlement(req, out, major.slug, reference);

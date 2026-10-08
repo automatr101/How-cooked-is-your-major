@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Loader2, Lock, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SuccessIcon } from "@/components/ui/animated-state-icons";
-import { PAYMENTS_MODE, PLAN_COPY, PRICE_LABEL, PRODUCT_NAME, type PlanType } from "@/lib/premium";
+import { PAYMENTS_MODE, PLAN_COPY, PRODUCT_NAME, type PlanType, type Price } from "@/lib/premium";
 import { trackCheckoutStarted, trackPaid, trackPaymentCancelled, trackPaymentFailed } from "@/lib/premium-analytics";
 
 // The checkout. In test mode it draws a stand-in for the payment page with buttons for every outcome;
@@ -35,6 +35,8 @@ export interface CheckoutMajor {
 interface Props {
   major: CheckoutMajor;
   planType: PlanType;
+  /** What they are charged, shown in the review step (it comes from the server's payment settings). */
+  price: Price;
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
   /** Called once the payment is confirmed. Must load the plan; the dialog then shows "ready". */
@@ -57,7 +59,7 @@ const FAILURE_TEXT: Record<string, string> = {
   expired: "That payment session expired. Please start again.",
 };
 
-export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClose, onViewPlan }: Props) {
+export function CheckoutDialog({ major, planType, price, resumeReference, onPaid, onClose, onViewPlan }: Props) {
   const reduceMotion = useReducedMotion();
   const copy = PLAN_COPY[planType];
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
@@ -281,7 +283,7 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
                     <p className="text-xs text-muted-foreground">for {major.name}</p>
                   </div>
                   <p className="text-right">
-                    <span className="text-2xl font-black tabular-nums">{PRICE_LABEL}</span>
+                    <span className="text-2xl font-black tabular-nums">{price.label}</span>
                     <span className="block text-[10px] font-black uppercase tracking-widest text-muted-foreground">one-time</span>
                   </p>
                 </div>
@@ -385,7 +387,7 @@ export function CheckoutDialog({ major, planType, resumeReference, onPaid, onClo
                   This stands in for the Paystack page. Pick what the payment should do. In live mode this screen is replaced by Paystack.
                 </p>
               </div>
-              <MockButton onClick={() => chooseMock(step.reference, "success")} tone="good">Pay {PRICE_LABEL} (simulate success)</MockButton>
+              <MockButton onClick={() => chooseMock(step.reference, "success")} tone="good">Pay {price.label} (simulate success)</MockButton>
               <MockButton onClick={() => chooseMock(step.reference, "slow")}>Pay, but confirmation is slow</MockButton>
               <MockButton onClick={() => chooseMock(step.reference, "failed")}>Simulate a failed payment</MockButton>
               <MockButton onClick={() => chooseMock(step.reference, "cancelled")}>Cancel the payment</MockButton>

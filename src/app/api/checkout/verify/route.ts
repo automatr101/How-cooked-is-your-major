@@ -5,7 +5,8 @@ import { funnelAlert } from "@/lib/payments/alerts";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { registerPurchase } from "@/lib/payments/purchases";
 import { statusOf, storeEnabled } from "@/lib/payments/store";
-import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_VALUE, PRODUCT_NAME } from "@/lib/premium";
+import { currentPrice } from "@/lib/payments/price";
+import { PAYMENTS_MODE, PRODUCT_NAME } from "@/lib/premium";
 
 // Step 2: ask the provider whether the payment really happened. This is the ONLY place that grants the
 // unlock cookie, and it does so only when the provider (not the browser) says "success" for this exact
@@ -45,8 +46,9 @@ export async function POST(req: NextRequest) {
       await registerPurchase({ reference, major, paystackId: result.transactionId, email: result.customerEmail });
     }
 
+    const price = currentPrice();
     const out = NextResponse.json(
-      { status: "success", transactionId: result.transactionId ?? reference, value: PRICE_VALUE, currency: PRICE_CURRENCY, itemName: PRODUCT_NAME },
+      { status: "success", transactionId: result.transactionId ?? reference, value: price.value, currency: price.currency, itemName: PRODUCT_NAME },
       { headers: { "Cache-Control": "no-store" } }
     );
     grantEntitlement(req, out, major.slug, reference);
