@@ -100,7 +100,7 @@ const pdfParams = (m: { name: string; slug: string; score: number }, planType: P
   major_slug: m.slug,
   cooked_score: m.score,
   plan_type: planType,
-  payment_mode: PAYMENTS_MODE,
+  payment_mode: mode(), // "gated" while the private gate is on, like every other payment event
 });
 
 /** One per tap. The button is disabled while a PDF is being prepared, so taps never double up. */
