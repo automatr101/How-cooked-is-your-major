@@ -19,6 +19,7 @@ import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
+import { HeardFromPoll } from "@/components/heard-from";
 import { MajorSearch } from "@/components/major-search";
 import { PremiumOffer } from "@/components/premium/premium-offer";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
@@ -140,7 +141,7 @@ export default function HomeClient() {
             setRoast({ text: r.text, n: Date.now() });
             track("roast_generated", { major_name: found.name, cooked_score: found.score, roast_type: r.type });
           });
-          track("major_result_view", { ...majorParams(found), source: "link" });
+          track("major_result_view", { ...majorParams(found), view_source: "link" });
           // The visitor came from a link someone shared from this site (it carries our share campaign tag)
           if (params.get("utm_campaign") === "major_share") track("shared_link_visit", { major_slug: slugify(found.name), via: params.get("utm_source") ?? "" });
           triggerSoundReaction(found.score, false); // opened from a shared link: no sound on arrival
@@ -191,7 +192,7 @@ export default function HomeClient() {
       setRoast({ text: r.text, n: Date.now() });
       setSelectedMajor(major);
       setIsScanning(false);
-      track("major_result_view", { ...majorParams(major), source: "scan" });
+      track("major_result_view", { ...majorParams(major), view_source: "scan" });
       track("roast_generated", { major_name: major.name, cooked_score: major.score, roast_type: r.type });
       // Play the preloaded sound — works on iOS/Android
       playPendingSound(major.score);
@@ -223,7 +224,8 @@ export default function HomeClient() {
   const resultLink = (from?: { source: string; medium: string }) =>
     selectedMajor
       ? `${SITE_URL}/share/${slugify(selectedMajor.name)}${
-          from ? `?utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share` : ""
+          // utm_content = the major, so GA4 can show which majors people share and which ones bring visitors back
+          from ? `?utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share&utm_content=${slugify(selectedMajor.name)}` : ""
         }`
       : SITE_URL;
 
@@ -624,6 +626,9 @@ export default function HomeClient() {
                 <span aria-live="polite">{copied ? "COPIED!" : "COPY TEXT"}</span>
               </button>
             </div>
+
+            {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see */}
+            <HeardFromPoll />
 
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />

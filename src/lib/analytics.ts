@@ -2,6 +2,9 @@
 //
 // Rules for what goes in `params`: major names, scores, levels and share methods only. Never a name,
 // email, phone number, address or anything else about a person. Search text is cut to 60 characters.
+//
+// Never name a parameter source, medium, campaign, term or content: GA4 reads those as TRAFFIC SOURCE fields, so an event
+// parameter called `source` silently rewrites where a session "came from" (it once produced a fake "scan" source).
 
 // GA4 ecommerce events carry an `items` list, so a value may also be a list of small objects.
 type Params = Record<string, string | number | boolean | Array<Record<string, string | number>>>;
@@ -25,14 +28,35 @@ export function slugify(name: string): string {
  * Sends one GA4 event. Never throws. If the GA script has not finished loading yet, the event is queued
  * on dataLayer in the shape gtag.js expects (an `arguments` object) and is sent once it loads.
  */
+const TRAFFIC_SOURCE_FIELDS = ["source", "medium", "campaign", "term", "content", "campaign_id", "gclid"];
+
 export function track(name: string, params: Params = {}): void {
   if (typeof window === "undefined") return;
+  if (process.env.NODE_ENV !== "production") {
+    for (const key of TRAFFIC_SOURCE_FIELDS) {
+      if (key in params) console.warn(`[analytics] "${name}" sends "${key}": GA4 reads that as a traffic source field. Rename the parameter.`);
+    }
+  }
   try {
     if (typeof window.gtag === "function") {
       window.gtag("event", name, params);
     } else {
       queue("event", name, params);
     }
+  } catch {}
+}
+
+/**
+ * Marks this browser as the owner's (testing, the private payments gate): from now on its events carry
+ * traffic_type=internal, which a GA4 data filter can exclude. Also remembered for future visits (see layout.tsx).
+ */
+export function markInternal(): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem("cm_internal", "1");
+  } catch {}
+  try {
+    window.gtag?.("set", { traffic_type: "internal" });
   } catch {}
 }
 

@@ -12,7 +12,8 @@ export async function GET(req: NextRequest) {
   if (!keyMatches(req.nextUrl.searchParams.get("key") ?? "")) return notFound();
 
   const cookie = gateCookie();
-  const res = NextResponse.redirect(new URL("/", req.url));
+  // cm_internal=1 also tells the analytics tag that this browser is the owner's, so test visits stay out of GA4
+  const res = NextResponse.redirect(new URL("/?cm_internal=1", req.url));
   res.cookies.set(cookie.name, cookie.value, {
     httpOnly: true,
     sameSite: "lax",
