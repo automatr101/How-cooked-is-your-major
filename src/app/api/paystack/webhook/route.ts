@@ -4,7 +4,7 @@ import { findMajor, REFERENCE_PATTERN } from "@/lib/payments";
 import { paystackProvider } from "@/lib/payments/paystack";
 import { PAYMENTS_MODE } from "@/lib/premium";
 import { registerPurchase } from "@/lib/payments/purchases";
-import { markRefunded, storeEnabled } from "@/lib/payments/store";
+import { markPaid, markRefunded, storeEnabled } from "@/lib/payments/store";
 import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 
 // Paystack calls this address on its own when something happens to a payment. In the Paystack dashboard
@@ -15,7 +15,8 @@ import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 //   1. Checks the request really came from Paystack (x-paystack-signature, signed with your secret key).
 //   2. On charge.success: asks Paystack again about that exact payment (never trusts the message alone), and
 //      if it is a real, correctly priced payment for one of our plans, sends you a Telegram alert.
-//   3. On a refund: sends you an alert.
+//   3. On a refund: takes plan access away as soon as the refund starts (pending/processing/processed, whichever
+//      arrives first), tells you when it completes, and gives access back if Paystack reports the refund failed.
 // What it does NOT do: unlock anything. The unlock is a cookie in the buyer's own browser, and a message from
 // Paystack's servers has no way to set it. A buyer who paid and closed the tab uses "Restore your plan" in the
 // checkout and enters their payment reference (see components/premium/checkout-dialog.tsx).
@@ -24,6 +25,7 @@ export const runtime = "nodejs";
 
 const MAX_BODY = 64 * 1024;
 const seen = new Set<string>(); // payments already alerted on, per server instance (Paystack may send the same event twice)
+const seenRefund = new Set<string>(); // refund events already handled, same reason
 
 function validSignature(raw: string, header: string | null): boolean {
   const key = process.env.PAYSTACK_SECRET_KEY;
@@ -96,18 +98,45 @@ export async function POST(req: NextRequest) {
     return ok();
   }
 
-  if (event.event === "refund.processed") {
+  // A refund you start in the dashboard is "pending" or "processing" for days before it is "processed". Access is taken
+  // away as soon as the refund STARTS (the first of these events to arrive), not days later; "processed" then only
+  // reports that the money is on its way back. A refund that fails gives access back.
+  if (event.event === "refund.pending" || event.event === "refund.processing" || event.event === "refund.processed") {
     const ref = typeof data.transaction_reference === "string" ? data.transaction_reference : "";
     if (REFERENCE_PATTERN.test(ref)) {
+      const key = `${event.event}:${ref}`;
+      if (seenRefund.has(key)) return ok(); // Paystack may send the same event twice
+      seenRefund.add(key);
+
       let changed = true;
       if (storeEnabled()) {
         try {
-          changed = await markRefunded(ref); // a refunded purchase can no longer be restored
+          changed = await markRefunded(ref); // a refunded purchase no longer unlocks or restores
         } catch {
           console.error("[paystack-webhook] could not mark a refund");
         }
       }
-      if (changed) await alert(["↩️ <b>Refund processed</b>", `🧾 ${escapeHtml(ref)}`]);
+      if (event.event === "refund.processed") {
+        await alert([changed ? "↩️ <b>Refund processed</b>" : "✅ <b>Refund completed</b>", `🧾 ${escapeHtml(ref)}`]);
+      } else if (changed) {
+        await alert(["↩️ <b>Refund started</b> (plan access removed)", `🧾 ${escapeHtml(ref)}`]);
+      }
+    }
+    return ok();
+  }
+
+  if (event.event === "refund.failed") {
+    const ref = typeof data.transaction_reference === "string" ? data.transaction_reference : "";
+    if (REFERENCE_PATTERN.test(ref)) {
+      let restored = true;
+      if (storeEnabled()) {
+        try {
+          restored = await markPaid(ref);
+        } catch {
+          console.error("[paystack-webhook] could not restore a purchase after a failed refund");
+        }
+      }
+      if (restored) await alert(["⚠️ <b>Refund failed</b> (plan access restored)", `🧾 ${escapeHtml(ref)}`, "Check it in the Paystack dashboard."]);
     }
     return ok();
   }

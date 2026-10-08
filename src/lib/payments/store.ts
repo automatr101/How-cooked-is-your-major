@@ -80,6 +80,16 @@ export async function markRefunded(reference: string): Promise<boolean> {
   return rows.length > 0;
 }
 
+/** Puts a refunded purchase back to paid (Paystack reported the refund failed). Returns true if a refunded purchase was changed. */
+export async function markPaid(reference: string): Promise<boolean> {
+  const rows = await call(`?reference=${eq(reference)}&status=eq.refunded`, {
+    method: "PATCH",
+    body: JSON.stringify({ status: "paid", refunded_at: null }),
+    prefer: "return=representation",
+  });
+  return rows.length > 0;
+}
+
 export async function statusOf(reference: string): Promise<"paid" | "refunded" | null> {
   const rows = (await call(`?select=status&reference=${eq(reference)}&limit=1`)) as { status: "paid" | "refunded" }[];
   return rows[0]?.status ?? null;
