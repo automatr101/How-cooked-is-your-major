@@ -3,6 +3,7 @@
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Plan } from "@/lib/plan/types";
+import { PdfBar, usePdfDownload } from "./pdf-download";
 
 // The unlocked report. Plain, long-form and editorial: numbered sections, strong headings, restrained colour.
 
@@ -39,6 +40,7 @@ const Bullets = ({ items, tone }: { items: string[]; tone?: "good" | "risk" }) =
 );
 
 export function PlanReport({ plan }: { plan: Plan }) {
+  const pdf = usePdfDownload(plan);
   return (
     <article aria-label={plan.planName} className="space-y-8 rounded-3xl border border-primary/20 bg-card/60 p-6 backdrop-blur-xl sm:p-8">
       <header className="space-y-3">
@@ -49,6 +51,7 @@ export function PlanReport({ plan }: { plan: Plan }) {
         <p className="text-sm font-bold uppercase tracking-wide text-muted-foreground">
           {plan.major.name} · {plan.major.score}% · {plan.major.level}
         </p>
+        <PdfBar pdf={pdf} />
       </header>
 
       <Section n="01" title="Overview">
@@ -133,6 +136,10 @@ export function PlanReport({ plan }: { plan: Plan }) {
       <Section n="14" title="Where this leaves you">
         <p className="text-sm font-medium leading-relaxed text-foreground/90">{plan.conclusion}</p>
       </Section>
+
+      <div className="border-t border-border/20 pt-8">
+        <PdfBar pdf={pdf} />
+      </div>
     </article>
   );
 }

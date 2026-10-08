@@ -93,3 +93,26 @@ export function trackReportUnlocked(m: Subject, planType: PlanType) {
   if (!once(`cm_ga_unlocked:${slugify(m.name)}`)) return;
   track("report_unlocked", base(m, planType));
 }
+
+// PDF download. major_name, major_slug, cooked_score and plan_type only (plus payment_mode).
+const pdfParams = (m: { name: string; slug: string; score: number }, planType: PlanType) => ({
+  major_name: m.name,
+  major_slug: m.slug,
+  cooked_score: m.score,
+  plan_type: planType,
+  payment_mode: mode(), // "gated" while the private gate is on, like every other payment event
+});
+
+/** One per tap. The button is disabled while a PDF is being prepared, so taps never double up. */
+export function trackPdfClicked(m: { name: string; slug: string; score: number }, planType: PlanType) {
+  track("pdf_download_clicked", pdfParams(m, planType));
+}
+
+/** One per file actually received by the browser. */
+export function trackPdfDownloaded(m: { name: string; slug: string; score: number }, planType: PlanType) {
+  track("pdf_downloaded", pdfParams(m, planType));
+}
+
+export function trackPdfFailed(m: { name: string; slug: string; score: number }, planType: PlanType, reason: string) {
+  track("pdf_download_failed", { ...pdfParams(m, planType), failure_reason: reason });
+}

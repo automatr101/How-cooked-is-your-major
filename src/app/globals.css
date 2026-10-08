@@ -232,3 +232,24 @@
 .reaction-safe {
   animation: reaction-glow 1s ease-in-out;
 }
+
+/* Print / Save as PDF fallback for the paid report (see components/premium/pdf-download.tsx).
+   The report is cloned into #print-root just before printing; only that copy is printed. */
+#print-root { display: none; }
+@media print {
+  body > *:not(#print-root) { display: none !important; }
+  #print-root { display: block !important; position: static; }
+  #print-root article, #print-root article * {
+    background: transparent !important;
+    color: #111 !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+  #print-root article { border: 0 !important; padding: 0 !important; }
+  #print-root section, #print-root li { break-inside: avoid; }
+  #print-root h3 { break-after: avoid; }
+  #print-root .no-print { display: none !important; }
+  @page { margin: 16mm; }
+}
