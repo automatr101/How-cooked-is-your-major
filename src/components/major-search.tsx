@@ -58,18 +58,22 @@ export function MajorSearch({
   const { resolvedTheme } = useTheme();
 
   const query = value.trim();
-  // GA4 `search` event: after the visitor pauses typing, once per distinct term. Picking a result clears
-  // or locks the box, so the chosen major's name is never reported as a search.
-  const lastSearched = useRef("");
+  const searchLocation = compact ? "compare" : "home";
+
+  // GA4 search events. `search` is sent when the visitor PICKS a result (see choose below), so one searched phrase is
+  // one event and it says what they typed and what they chose. `search_no_results` is sent when they pause on a
+  // phrase that matches nothing: those are the majors people look for and we do not have. Search text is cut to 60
+  // characters and never contains anything but what the visitor typed into this box.
+  const lastNoResults = useRef("");
   useEffect(() => {
     const term = value.trim().toLowerCase();
-    if (selected || term.length < 2 || term === lastSearched.current) return;
+    if (selected || term.length < 3 || results.length > 0 || term === lastNoResults.current) return;
     const id = setTimeout(() => {
-      lastSearched.current = term;
-      track("search", { search_term: term.slice(0, 60) });
-    }, 1000);
+      lastNoResults.current = term;
+      track("search_no_results", { search_term: term.slice(0, 60), search_location: searchLocation });
+    }, 1500);
     return () => clearTimeout(id);
-  }, [value, selected]);
+  }, [value, selected, results.length, searchLocation]);
 
   const showList = open && !selected && results.length > 0;
   const showEmpty = open && !selected && query.length > 0 && results.length === 0;
@@ -91,6 +95,10 @@ export function MajorSearch({
   }, [open]);
 
   const choose = (major: Major) => {
+    const term = value.trim().toLowerCase();
+    if (term) {
+      track("search", { search_term: term.slice(0, 60), results_count: results.length, selected_major: major.name, search_location: searchLocation });
+    }
     setOpen(false);
     setHighlight(-1);
     onSelect(major);

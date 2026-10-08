@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import type { Major } from "@/lib/data";
-import { slugify } from "@/lib/analytics";
+import { markInternal, slugify } from "@/lib/analytics";
 import { PAYMENTS_MODE, PLAN_COPY, PRICE_LABEL, planTypeFor } from "@/lib/premium";
 import { notifyUnlockClicked, setGated, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
@@ -60,6 +60,8 @@ export function PremiumOffer({ major }: { major: Major }) {
     let live = true;
     fetchStatus().then((s) => {
       setGated(s.gated);
+      // Only the owner gets past the private gate, so this browser's visits are tests: keep them out of the real numbers
+      if (s.gated && s.enabled) markInternal();
       if (live) setStatus(s);
     });
     return () => {
