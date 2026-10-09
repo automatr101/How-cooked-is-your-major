@@ -310,7 +310,7 @@ export function CheckoutDialog({ major, planType, price, resumeReference, onPaid
                   <p role="alert" className="text-xs font-bold text-destructive">Enter a valid email address.</p>
                 ) : (
                   <p className="text-[11px] leading-relaxed text-muted-foreground">
-                    Given to the payment provider for your receipt only. We do not store it or send it to analytics.
+                    Given to the payment provider for your receipt. We keep only a one-way fingerprint of it (so you can restore your plan) and never the address itself, and we do not send it to analytics.
                   </p>
                 )}
               </div>
@@ -323,6 +323,12 @@ export function CheckoutDialog({ major, planType, price, resumeReference, onPaid
               </button>
               <p className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
                 <Lock className="h-3 w-3" /> One payment. No subscription. Your free score and sharing stay free.
+              </p>
+              <p className="text-center text-[11px] leading-relaxed text-muted-foreground">
+                By paying you agree to the{" "}
+                <a href="/terms" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Terms</a>{" "}
+                and the{" "}
+                <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund Policy</a>.
               </p>
               {PAYMENTS_MODE === "live" && (
                 <div className="border-t border-border/30 pt-4">
