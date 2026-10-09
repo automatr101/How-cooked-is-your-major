@@ -9,6 +9,9 @@ import { sign, verifySignature } from "./signing";
 const COOKIE = "cm_entitlement";
 const MAX_ITEMS = 25;
 const ONE_YEAR_SECONDS = 365 * 24 * 60 * 60;
+// The browser drops the cookie after a year. The server also stops honouring an item once it is older than that (plus
+// a day of slack), so a copy of the cookie that someone kept or passed on does not work forever.
+const LIFETIME_MS = ONE_YEAR_SECONDS * 1000 + 24 * 60 * 60 * 1000;
 
 interface Item {
   s: string; // major slug
@@ -27,7 +30,9 @@ function decode(value: string | undefined): Item[] {
   if (!body || !signature || !verifySignature(body, signature)) return [];
   try {
     const parsed = JSON.parse(Buffer.from(body, "base64url").toString("utf8"));
-    return Array.isArray(parsed?.items) ? (parsed.items as Item[]).filter((i) => typeof i?.s === "string") : [];
+    if (!Array.isArray(parsed?.items)) return [];
+    const now = Date.now();
+    return (parsed.items as Item[]).filter((i) => typeof i?.s === "string" && !(typeof i.t === "number" && now - i.t > LIFETIME_MS));
   } catch {
     return [];
   }

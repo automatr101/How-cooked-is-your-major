@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { cleanText } from "@/lib/clean-text";
+import { crossSite } from "@/lib/same-origin";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 
 // Messages from the contact form, delivered to the Telegram bot (the chat is the inbox; nothing is
@@ -16,6 +17,9 @@ const EMAIL = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/;
 
 export async function POST(req: NextRequest) {
   const done = () => new Response(null, { status: 204 });
+
+  // Only our own contact form posts here: another website must not be able to send messages through a visitor's browser.
+  if (crossSite(req)) return new Response(null, { status: 403 });
 
   const ua = req.headers.get("user-agent") ?? "";
   if (!ua || BOT_UA.test(ua)) return done();

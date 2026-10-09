@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { majors } from "@/lib/data";
 import { cleanText } from "@/lib/clean-text";
+import { crossSite } from "@/lib/same-origin";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 
 // Star ratings and written reviews, delivered to the Telegram bot. Nothing is stored
@@ -14,6 +15,9 @@ const WINDOW_MS = 60 * 60 * 1000;
 
 export async function POST(req: NextRequest) {
   const done = () => new Response(null, { status: 204 });
+
+  // Only our own review box posts here: another website must not be able to send reviews through a visitor's browser.
+  if (crossSite(req)) return new Response(null, { status: 403 });
 
   if (!telegramEnabled()) return done();
 
