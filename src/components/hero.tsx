@@ -5,6 +5,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Plus, BrainCircuit, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button"; 
+import { majors } from "@/lib/data";
 import { ShineBorder } from "@/components/ui/hero-designali";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
@@ -62,32 +63,16 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
-            <div className="flex flex-col items-start gap-2">
-              <div className="flex -space-x-3">
-                {[1,2,3,4].map((i) => (
-                  <div key={i} className="w-12 h-12 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden shadow-xl">
-                    <img src={`https://i.pravatar.cc/150?u=${i+50}`} alt="user" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-1">
-                <span className="text-foreground">2.4M+</span> Majors Scanned
-              </p>
-            </div>
-          </div>
+          {/* A true number, from the data: how many majors have a score */}
+          <p className="pt-6 text-xs font-bold text-muted-foreground uppercase tracking-widest">
+            <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
+          </p>
 
           {/* Plus decorations */}
           <Plus strokeWidth={8} className="text-primary absolute left-0 top-0 h-12 w-12 opacity-20 -translate-x-1/2 -translate-y-1/2" />
           <Plus strokeWidth={8} className="text-secondary absolute right-0 top-0 h-12 w-12 opacity-20 translate-x-1/2 -translate-y-1/2" />
           <Plus strokeWidth={8} className="text-destructive absolute left-0 bottom-0 h-12 w-12 opacity-20 -translate-x-1/2 translate-y-1/2" />
           <Plus strokeWidth={8} className="text-primary absolute right-0 bottom-0 h-12 w-12 opacity-20 translate-x-1/2 translate-y-1/2" />
-
-          {/* Status Bar - Integrated into flow to prevent overlap */}
-          <div className="flex items-center gap-3 pt-6">
-              <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
-              <p className="text-[10px] font-black text-emerald-600 dark:text-emerald-400 tracking-[0.4em] uppercase">Server Status: Optimal</p>
-          </div>
         </div>
       </div>
     </main>
