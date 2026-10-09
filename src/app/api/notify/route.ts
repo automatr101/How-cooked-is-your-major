@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { majors } from "@/lib/data";
+import { crossSite } from "@/lib/same-origin";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 
 // Telegram visit/scan alerts. Silently does nothing until TELEGRAM_BOT_TOKEN and
@@ -24,6 +25,9 @@ function referrerHost(raw: unknown): string {
 
 export async function POST(req: NextRequest) {
   const done = () => new Response(null, { status: 204 });
+
+  // Only our own pages report visits and scans: another website must not be able to fill the alert chat through a visitor.
+  if (crossSite(req)) return new Response(null, { status: 403 });
 
   if (!telegramEnabled()) return done();
 

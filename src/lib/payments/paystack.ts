@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
+import { isPaystackPage } from "./paystack-url";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
@@ -79,6 +80,12 @@ export const paystackProvider: PaymentProvider = {
       const why = `Paystack refused (HTTP ${httpStatus}, ${currency}, ${keyHint()}): ${String(body?.message ?? "no message").slice(0, 200)}`;
       console.error(`[paystack] ${why}`);
       throw new SafeError(why);
+    }
+    // The browser is sent to this address, so it has to be one of Paystack's own pages. (A test server, which only
+    // exists when PAYSTACK_API_BASE points somewhere else, is exempt.)
+    if (!process.env.PAYSTACK_API_BASE && !isPaystackPage(url)) {
+      console.error("[paystack] the checkout address was not a Paystack page");
+      throw new SafeError("Paystack returned a checkout address that is not a Paystack page");
     }
     return { reference, authorizationUrl: url };
   },
