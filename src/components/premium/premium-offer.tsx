@@ -5,11 +5,12 @@ import { AnimatePresence } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { markInternal, slugify } from "@/lib/analytics";
-import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, planTypeFor, type Price } from "@/lib/premium";
-import { notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked } from "@/lib/premium-analytics";
+import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, lockedItems, planTypeFor, type Price } from "@/lib/premium";
+import { notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked, trackStickyCtaClicked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
+import { StickyCta } from "./sticky-cta";
 
 // The paid career plan, shown after the free result. The free score, roast, sharing, compare and
 // leaderboard are not touched by anything here. With NEXT_PUBLIC_PAYMENTS_MODE unset or "off" this renders
@@ -77,10 +78,10 @@ export function PremiumOffer({ major }: { major: Major }) {
     };
   }, []);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} gated={status.gated} />;
 }
 
-function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: string[]; price: Price; approx?: string }) {
+function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; gated: boolean }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const slug = slugify(major.name);
@@ -90,6 +91,8 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
   const [plan, setPlan] = useState<Plan | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const planRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [buttonOnScreen, setButtonOnScreen] = useState(true);
 
   // Fetches the report. The server answers only if this browser's signed unlock cookie covers this major.
   const loadPlan = useCallback(async (): Promise<boolean> => {
@@ -126,6 +129,17 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
     return () => io.disconnect();
   }, [major, planType, plan]);
 
+  // Is the card's own button on screen? It decides whether the bar pinned to the bottom of a phone is shown (below).
+  // It starts as "yes", so the bar never flashes in before this is known. The bottom 88px are left out of the
+  // measurement, so the button only counts as visible once it is clear of where the bar sits.
+  useEffect(() => {
+    const el = buttonRef.current;
+    if (!el || plan) return;
+    const io = new IntersectionObserver((entries) => setButtonOnScreen(entries.some((e) => e.isIntersecting)), { rootMargin: "0px 0px -88px 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [plan]);
+
   // Back to the result later (even after closing the browser): show the plan again if this browser already paid for it.
   // The server says which majors the cookie covers; the plan itself is still only served if the unlock is valid.
   useEffect(() => {
@@ -145,6 +159,17 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
   const viewPlan = () => {
     setOpen(false);
     setTimeout(() => planRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+  };
+
+  // The bar on phones: only while payments are open to the public (not gated), this browser has not already bought the
+  // plan, the checkout is closed, and the card's own button is off-screen. The tap opens the same checkout, and is
+  // counted as its own event (premium_sticky_cta_clicked), not as a click on the card's button.
+  const owned = unlocked.includes(slug) || unlockedSlugs().includes(slug);
+  const showSticky = !gated && !owned && !plan && !open && !buttonOnScreen;
+  const unlockFromBar = () => {
+    trackStickyCtaClicked(major, planType);
+    notifyUnlockClicked(major);
+    setOpen(true);
   };
 
   // The checkout sits outside the card and the report, so it stays on screen while the report loads behind it
@@ -202,7 +227,7 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
               {item}
             </li>
           ))}
-          {copy.locked.map((item) => (
+          {lockedItems(major.name).map((item) => (
             <li key={item} className="flex items-center gap-3 text-sm font-bold text-muted-foreground">
               <Lock aria-hidden className="h-4 w-4 shrink-0" />
               <span className="sr-only">Locked: </span>
@@ -221,6 +246,7 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
             <p className="text-xs leading-relaxed text-muted-foreground">About {approx}. You pay in Ghana cedis, and your bank sets the exact rate.</p>
           )}
           <button
+            ref={buttonRef}
             type="button"
             onClick={() => {
               trackOfferClicked(major, planType);
@@ -239,6 +265,7 @@ function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: str
 
     </div>
     {dialog}
+    <StickyCta show={showSticky} price={price} onClick={unlockFromBar} />
     </>
   );
 }

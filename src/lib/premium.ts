@@ -54,18 +54,28 @@ export interface PlanCopy {
   blurb: string;
   /** Shown to everyone: the first things the plan covers. */
   preview: string[];
-  /** Locked until payment. */
-  locked: string[];
 }
 
-const LOCKED = [
-  "30/60/90 day roadmap",
-  "Projects to build",
-  "Career paths",
-  "Internship strategy",
-  "AI tools to learn",
-  "Skills that increase employability",
-];
+// Longest major name that still reads well inside a list line; a longer one becomes "your major".
+const MAX_NAME_IN_LIST = 34;
+
+/**
+ * What the paid report holds, worded for the major on screen (the offer shows them blurred until the plan is
+ * unlocked). Every line names a real section of the report (roadmap, projects, career paths, internship, AI tools,
+ * employability), so nothing promised is missing. Plain strings only: the list is rendered as text.
+ */
+export function lockedItems(majorName: string): string[] {
+  const name = majorName.trim();
+  const m = name && name.length <= MAX_NAME_IN_LIST ? name : "your major";
+  return [
+    `30/60/90-day roadmap for ${m}`,
+    `Projects to build for ${m}`,
+    `Career paths for ${m}`,
+    `Internship strategy for ${m}`,
+    `AI tools to learn for ${m}`,
+    `Skills that raise ${m} employability`,
+  ];
+}
 
 export const PLAN_COPY: Record<PlanType, PlanCopy> = {
   uncooking: {
@@ -75,7 +85,6 @@ export const PLAN_COPY: Record<PlanType, PlanCopy> = {
     cta: "Get My Uncooking Plan",
     blurb: "The free score tells you how exposed you are. The plan tells you what to do about it, step by step.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
-    locked: LOCKED,
   },
   future_proof: {
     name: "Future-Proof Plan",
@@ -84,7 +93,6 @@ export const PLAN_COPY: Record<PlanType, PlanCopy> = {
     cta: "Get My Future-Proof Plan",
     blurb: "You have room to move. The plan shows where AI will reach you first and how to stay ahead of it.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
-    locked: LOCKED,
   },
   advantage: {
     name: "Career Advantage Plan",
@@ -93,6 +101,5 @@ export const PLAN_COPY: Record<PlanType, PlanCopy> = {
     cta: "Build My Career Advantage",
     blurb: "A strong starting position is not a plan. This turns yours into a lead that lasts.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
-    locked: LOCKED,
   },
 };
