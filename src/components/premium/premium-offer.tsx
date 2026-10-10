@@ -49,7 +49,9 @@ function readResume(majorName: string): string | undefined {
 // closing the app, sees their plan straight away instead of the buy button.
 // `price` = what a buyer is charged right now, from the server's own payment settings (so the page can never show
 // one price and charge another).
-type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price };
+// `approx` = a dollar amount ("US$4.99") the server sends only to visitors outside Ghana, shown beside the cedi price
+// as a guide. It never changes the price or what is charged.
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string };
 let statusRequest: Promise<Status> | null = null;
 function fetchStatus() {
   statusRequest ??= fetch("/api/payments/status", { cache: "no-store" })
@@ -75,10 +77,10 @@ export function PremiumOffer({ major }: { major: Major }) {
     };
   }, []);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} />;
 }
 
-function Offer({ major, unlocked, price }: { major: Major; unlocked: string[]; price: Price }) {
+function Offer({ major, unlocked, price, approx }: { major: Major; unlocked: string[]; price: Price; approx?: string }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const slug = slugify(major.name);
@@ -153,6 +155,7 @@ function Offer({ major, unlocked, price }: { major: Major; unlocked: string[]; p
           major={major}
           planType={planType}
           price={price}
+          approx={approx}
           resumeReference={resume}
           onPaid={loadPlan}
           onClose={() => setOpen(false)}
@@ -213,6 +216,10 @@ function Offer({ major, unlocked, price }: { major: Major; unlocked: string[]; p
             <span className="text-4xl font-black tabular-nums tracking-tighter">{price.label}</span>
             <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time</span>
           </p>
+          {approx && (
+            // Only sent for the cedi price, to visitors outside Ghana: a guide, never the amount charged
+            <p className="text-xs leading-relaxed text-muted-foreground">About {approx}. You pay in Ghana cedis, and your bank sets the exact rate.</p>
+          )}
           <button
             type="button"
             onClick={() => {
