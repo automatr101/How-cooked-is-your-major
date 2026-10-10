@@ -37,6 +37,8 @@ interface Props {
   planType: PlanType;
   /** What they are charged, shown in the review step (it comes from the server's payment settings). */
   price: Price;
+  /** A dollar amount ("US$4.99") for visitors outside Ghana, shown as a guide beside the cedi price. Never what is charged. */
+  approx?: string;
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
   /** Called once the payment is confirmed. Must load the plan; the dialog then shows "ready". */
@@ -59,7 +61,7 @@ const FAILURE_TEXT: Record<string, string> = {
   expired: "That payment session expired. Please start again.",
 };
 
-export function CheckoutDialog({ major, planType, price, resumeReference, onPaid, onClose, onViewPlan }: Props) {
+export function CheckoutDialog({ major, planType, price, approx, resumeReference, onPaid, onClose, onViewPlan }: Props) {
   const reduceMotion = useReducedMotion();
   const copy = PLAN_COPY[planType];
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
@@ -287,6 +289,12 @@ export function CheckoutDialog({ major, planType, price, resumeReference, onPaid
                     <span className="block text-[10px] font-black uppercase tracking-widest text-muted-foreground">one-time</span>
                   </p>
                 </div>
+                {approx && (
+                  // Only sent for the cedi price, to visitors outside Ghana: a guide, never the amount charged
+                  <p className="mt-3 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
+                    About {approx}. You are charged in Ghana cedis (GHS). Your bank converts it at its own rate, so the amount on your statement may differ a little.
+                  </p>
+                )}
               </div>
               <div className="space-y-2">
                 <label htmlFor="checkout-email" className="text-[10px] font-black uppercase tracking-[0.25em] text-muted-foreground">
