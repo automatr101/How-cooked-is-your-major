@@ -13,8 +13,9 @@ import { dollarHint } from "@/lib/price-hint";
 // their plan straight away, even after the browser was closed). The plan itself is still only served by /api/plan.
 // `price` is what a buyer is charged right now, taken from the same settings the charge uses, so the page never
 // shows one price and charges another. `approx` (only for visitors outside the country the price is charged in, by
-// the country Vercel reports for the request) is a dollar amount to show beside it as a guide; it never changes the
-// price, and the answer is never cached, so each visitor gets their own.
+// the country Vercel reports for the request) is a dollar amount the page shows them as the headline price, with the
+// cedi charge stated under it; it never changes the price charged, and the answer is never cached, so each visitor
+// gets their own.
 
 export async function GET(req: NextRequest) {
   if (PAYMENTS_MODE === "off") return json({ enabled: false, gated: false, unlocked: [] });

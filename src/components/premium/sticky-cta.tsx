@@ -6,7 +6,8 @@ import { Lock } from "lucide-react";
 import type { Price } from "@/lib/premium";
 
 // A bar pinned to the bottom of a PHONE screen while the paid offer's own button is off-screen:
-// "Unlock your plan · GHS 46.90". It is only a shortcut to the same checkout; the offer card does the selling.
+// "Unlock your plan · GHS 46.90" ("· US$4.99" for visitors outside Ghana, the same headline price the card shows).
+// It is only a shortcut to the same checkout; the offer card does the selling.
 // Hidden from 768px up (it is not for desktop) and whenever `show` is false (the parent decides: payments off or
 // gated, plan already unlocked, checkout open, offer button on screen).
 //
@@ -14,7 +15,7 @@ import type { Price } from "@/lib/premium";
 // to the bottom (the rating popup, the page footer's padding) can stay clear of it. At desktop widths the bar is
 // display:none, its height is 0, and the variable is 0, so nothing changes there.
 
-export function StickyCta({ show, price, onClick }: { show: boolean; price: Price; onClick: () => void }) {
+export function StickyCta({ show, price, approx, onClick }: { show: boolean; price: Price; approx?: string; onClick: () => void }) {
   const reduceMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -53,7 +54,7 @@ export function StickyCta({ show, price, onClick }: { show: boolean; price: Pric
             className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <Lock aria-hidden className="h-4 w-4 shrink-0" />
-            <span>Unlock your plan · {price.label}</span>
+            <span>Unlock your plan · {approx ?? price.label}</span>
           </button>
         </motion.div>
       )}

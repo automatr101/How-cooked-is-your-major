@@ -37,7 +37,7 @@ interface Props {
   planType: PlanType;
   /** What they are charged, shown in the review step (it comes from the server's payment settings). */
   price: Price;
-  /** A dollar amount ("US$4.99") for visitors outside Ghana, shown as a guide beside the cedi price. Never what is charged. */
+  /** A dollar amount ("US$4.99") for visitors outside Ghana, shown as the headline price with the cedi charge stated under it. Never what is charged. */
   approx?: string;
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
@@ -285,14 +285,14 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
                     <p className="text-xs text-muted-foreground">for {major.name}</p>
                   </div>
                   <p className="text-right">
-                    <span className="text-2xl font-black tabular-nums">{price.label}</span>
+                    <span className="text-2xl font-black tabular-nums">{approx ?? price.label}</span>
                     <span className="block text-[10px] font-black uppercase tracking-widest text-muted-foreground">one-time</span>
                   </p>
                 </div>
                 {approx && (
-                  // Only sent for the cedi price, to visitors outside Ghana: a guide, never the amount charged
+                  // Only sent to visitors outside Ghana: the headline above is the dollar guide, this says what the payment page will show
                   <p className="mt-3 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
-                    About {approx}. You are charged in Ghana cedis (GHS). Your bank converts it at its own rate, so the amount on your statement may differ a little.
+                    You are charged {price.label} (Ghana cedis) on the secure payment page that opens next. Your bank converts it at its own rate, so the amount on your statement may differ a little.
                   </p>
                 )}
               </div>
