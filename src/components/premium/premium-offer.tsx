@@ -48,10 +48,10 @@ function readResume(majorName: string): string | undefined {
 // closed, the browser must carry the gate cookie. Anything unclear means "hide it".
 // `unlocked` = the majors this browser's (year-long) unlock cookie covers, so a buyer who comes back, even after
 // closing the app, sees their plan straight away instead of the buy button.
-// `price` = what a buyer is charged right now, from the server's own payment settings (so the page can never show
-// one price and charge another).
-// `approx` = a dollar amount ("US$4.99") the server sends only to visitors outside Ghana, shown beside the cedi price
-// as a guide. It never changes the price or what is charged.
+// `price` = what a buyer is charged right now, from the server's own payment settings; the charge is always this.
+// `approx` = a dollar amount ("US$4.99") the server sends only to visitors outside Ghana. They see it as the headline
+// price (a guide), with a line under it saying what is really charged in cedis, so nothing is hidden before the
+// payment page. It never changes what is charged.
 type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string };
 let statusRequest: Promise<Status> | null = null;
 function fetchStatus() {
@@ -238,12 +238,14 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
 
         <div className="space-y-3 border-t border-border/20 pt-6">
           <p className="flex items-baseline gap-2">
-            <span className="text-4xl font-black tabular-nums tracking-tighter">{price.label}</span>
+            <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
             <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time</span>
           </p>
           {approx && (
-            // Only sent for the cedi price, to visitors outside Ghana: a guide, never the amount charged
-            <p className="text-xs leading-relaxed text-muted-foreground">About {approx}. You pay in Ghana cedis, and your bank sets the exact rate.</p>
+            // Only sent to visitors outside Ghana: the headline above is the dollar guide, this line says what is really charged
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
+            </p>
           )}
           <button
             ref={buttonRef}
@@ -265,7 +267,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
 
     </div>
     {dialog}
-    <StickyCta show={showSticky} price={price} onClick={unlockFromBar} />
+    <StickyCta show={showSticky} price={price} approx={approx} onClick={unlockFromBar} />
     </>
   );
 }

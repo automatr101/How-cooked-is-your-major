@@ -1,7 +1,7 @@
-// A dollar amount shown next to the cedi price to visitors outside Ghana. It is a guide only: the charge is always the
-// cedi price, and the visitor's bank sets the exact rate. The amount is the old dollar price (PRICE_MINOR in premium.ts),
-// so it does not follow the exchange rate: change it if the cedi price changes a lot. Plain TypeScript with no imports,
-// so it can be tested on its own.
+// A dollar amount shown FIRST, as the headline price, to visitors outside Ghana; the cedi charge is stated right under it.
+// It is a guide only: the charge is always the cedi price, and the visitor's bank sets the exact rate. The amount is the
+// old dollar price (PRICE_MINOR in premium.ts), so it does not follow the exchange rate: change it, or the cedi price
+// (PAYSTACK_AMOUNT_MINOR), when the two drift apart. Plain TypeScript with no imports, so it can be tested on its own.
 
 // The country each charged currency belongs to. A visitor from there pays in their own money and needs no hint.
 const HOME_COUNTRY: Record<string, string> = { GHS: "GH" };
