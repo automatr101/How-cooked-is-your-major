@@ -19,6 +19,19 @@ const GLSLHills = dynamic(
 // Cartoon avatars from the public-domain (CC0) "Notionists" set by Zoish, generated once and kept in /public/avatars.
 const AVATARS = ["/avatars/avatar-1.svg", "/avatars/avatar-2.svg", "/avatars/avatar-3.svg", "/avatars/avatar-4.svg", "/avatars/avatar-5.svg"];
 
+// The hero sentence is typed out one letter at a time, so its length (and the number of lines it wraps to) keeps
+// changing. On phones that made the card grow and shrink by a line and nudged the whole page up and down. Every
+// course name is also laid out, invisible, in the same grid cell as the live sentence, so the cell is always as big
+// as the biggest of them and nothing moves while the typing runs.
+const SENTENCE_CLASS = "col-start-1 row-start-1 text-xl md:text-2xl text-muted-foreground font-medium";
+
+const sentence = (typed: React.ReactNode) => (
+  <>
+    Find out how <span className="text-foreground font-black italic">cooked</span> your major is before graduation. <br className="hidden md:block" />
+    Analyzing <span className="text-foreground font-black underline decoration-primary/50 underline-offset-8">{typed}</span> with cold, hard AI logic.
+  </>
+);
+
 export const Hero = () => {
   const talkAbout = [
     "Computer Science",
@@ -57,12 +70,15 @@ export const Hero = () => {
           <div className="relative group max-w-2xl">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative bg-card/60 border border-border px-8 py-10 rounded-3xl backdrop-blur-2xl">
-              <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Find out how <span className="text-foreground font-black italic">cooked</span> your major is before graduation. <br className="hidden md:block" />
-                Analyzing <span className="text-foreground font-black underline decoration-primary/50 underline-offset-8">
-                  <TypeWriter strings={talkAbout} />
-                </span> with cold, hard AI logic.
-              </p>
+              <div className="grid">
+                <p className={SENTENCE_CLASS}>{sentence(<TypeWriter strings={talkAbout} />)}</p>
+                {/* Invisible copies that only reserve room (see above); the "|" stands in for the typing cursor */}
+                {talkAbout.map((name) => (
+                  <p key={name} aria-hidden="true" className={cn(SENTENCE_CLASS, "invisible select-none")}>
+                    {sentence(`${name}|`)}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
 
