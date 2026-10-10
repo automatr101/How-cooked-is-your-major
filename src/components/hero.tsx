@@ -16,6 +16,9 @@ const GLSLHills = dynamic(
   { ssr: false }
 );
 
+// Cartoon avatars from the public-domain (CC0) "Notionists" set by Zoish, generated once and kept in /public/avatars.
+const AVATARS = ["/avatars/avatar-1.svg", "/avatars/avatar-2.svg", "/avatars/avatar-3.svg", "/avatars/avatar-4.svg", "/avatars/avatar-5.svg"];
+
 export const Hero = () => {
   const talkAbout = [
     "Computer Science",
@@ -63,10 +66,22 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* A true number, from the data: how many majors have a score */}
-          <p className="pt-6 text-xs font-bold text-muted-foreground uppercase tracking-widest">
-            <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
-          </p>
+          {/* Illustrated avatars (public domain, shipped with the site) are decoration, not photos of users; the number is a true one, from the data */}
+          <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
+            <div className="flex flex-col items-start gap-2">
+              <div className="flex -space-x-3" aria-hidden="true">
+                {AVATARS.map((src) => (
+                  <div key={src} className="w-12 h-12 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden shadow-xl">
+                    {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVGs, nothing to optimise */}
+                    <img src={src} alt="" width={48} height={48} decoding="async" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-1">
+                <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
+              </p>
+            </div>
+          </div>
 
           {/* Plus decorations */}
           <Plus strokeWidth={8} className="text-primary absolute left-0 top-0 h-12 w-12 opacity-20 -translate-x-1/2 -translate-y-1/2" />
