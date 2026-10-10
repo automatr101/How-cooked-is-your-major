@@ -1,6 +1,8 @@
 // GA4 events for the paid plan funnel. Uses the shared track() from analytics.ts.
 //   major_scan -> major_result_view -> premium_cta_viewed -> premium_cta_clicked -> checkout_started
 //   -> purchase -> report_unlocked      (plus payment_failed and payment_cancelled)
+// The bar pinned to the bottom of a phone screen has its own click event, premium_sticky_cta_clicked, so that
+// premium_cta_clicked keeps meaning "the offer card's own button" and viewed-vs-clicked stays comparable over time.
 //
 // Never send an email, a name or anything else about a person. Every event also carries payment_mode so
 // test runs can be told apart from real ones. In test mode the revenue event is NOT called `purchase`
@@ -53,6 +55,11 @@ export function trackOfferViewed(m: Subject, planType: PlanType) {
 
 export function trackOfferClicked(m: Subject, planType: PlanType) {
   track("premium_cta_clicked", { ...base(m, planType), price: price.value, currency: price.currency });
+}
+
+/** The sticky bar on phones was tapped (it opens the checkout directly). Not counted as premium_cta_clicked on purpose. */
+export function trackStickyCtaClicked(m: Subject, planType: PlanType) {
+  track("premium_sticky_cta_clicked", { ...base(m, planType), price: price.value, currency: price.currency });
 }
 
 /** Lets the server (and so the Telegram bot) know someone clicked Unlock. Sends only the major's name; never blocks the UI. */

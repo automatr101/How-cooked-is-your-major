@@ -465,14 +465,14 @@ export default function HomeClient() {
               </button>
             </div>
 
-            {/* 🔊 Replay Sound Button */}
-            <div className="flex justify-center mt-4">
+            {/* Replay Sound: a small, quiet text button, so it does not compete with the buttons that matter */}
+            <div className="flex justify-center mt-2">
               <button
                 onClick={replayLastSound}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/80 backdrop-blur text-sm font-black text-muted-foreground hover:text-foreground hover:border-primary/40 hover:scale-105 active:scale-95 transition-all shadow"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
-                <Volume2 className="w-4 h-4" />
-                🔊 Replay Sound
+                <Volume2 className="w-3.5 h-3.5" />
+                Replay Sound
               </button>
             </div>
 
@@ -627,15 +627,17 @@ export default function HomeClient() {
               </button>
             </div>
 
-            {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see */}
-            <HeardFromPoll />
+            {/* The paid career plan, directly under the share buttons so it is seen without a long scroll.
+                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
+            <PremiumOffer major={selectedMajor} />
 
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
             </div>
 
-            {/* The paid career plan. Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
-            <PremiumOffer major={selectedMajor} />
+            {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see.
+                Kept below the offer so nothing sits between the share buttons and the offer. */}
+            <HeardFromPoll />
             </div>
             </div>
           </motion.div>
@@ -646,7 +648,7 @@ export default function HomeClient() {
       <ReviewPopup majorName={selectedMajor?.name} hasResult={!!selectedMajor} />
 
       {/* Footer */}
-      <footer className="mt-auto pt-24 pb-12 text-center space-y-3 opacity-60">
+      <footer className="mt-auto pt-24 pb-[calc(3rem_+_var(--sticky-cta-h,0px))] text-center space-y-3 opacity-60">
         <p className="text-muted-foreground text-xs font-bold uppercase tracking-[0.3em]">
           &copy; 2026 MajorLabs Intelligence
         </p>

@@ -151,7 +151,7 @@ export function ReviewPopup({ majorName, hasResult }: { majorName?: string; hasR
           animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
           exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed inset-x-4 bottom-4 z-[90] sm:left-auto sm:right-6 sm:bottom-6 sm:w-[360px] rounded-3xl border border-border bg-card/95 p-5 shadow-2xl backdrop-blur-xl"
+          className="fixed inset-x-4 bottom-[calc(1rem_+_var(--sticky-cta-h,0px))] z-[90] sm:left-auto sm:right-6 sm:bottom-[calc(1.5rem_+_var(--sticky-cta-h,0px))] sm:w-[360px] rounded-3xl border border-border bg-card/95 p-5 shadow-2xl backdrop-blur-xl transition-[bottom] duration-200 motion-reduce:transition-none"
         >
           <button
             type="button"
