@@ -229,8 +229,8 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
     <div ref={cardRef} id="premium-offer" className="relative mt-8 overflow-hidden rounded-3xl border border-primary/25 bg-card/60 p-6 backdrop-blur-xl sm:p-8">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-60 w-60 rounded-full bg-primary/10 blur-3xl" />
 
-      <div className="relative space-y-6">
-        <div className="space-y-3">
+      <div className="offer-grid relative space-y-6">
+        <div className="offer-head space-y-3">
           <div className="flex items-center justify-between gap-3">
             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">{copy.eyebrow}</p>
             {PAYMENTS_MODE === "test" && (
@@ -244,7 +244,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
         </div>
 
         {/* What is inside, short: three lines, every number counted from the plan the buyer actually gets for this major */}
-        <ul className="space-y-1.5">
+        <ul className="offer-list space-y-1.5">
           {insideList(preview, copy.preview).map((item) => (
             <li key={item} className="flex items-start gap-3 text-sm font-bold">
               <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
@@ -253,7 +253,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           ))}
         </ul>
 
-        <div className="space-y-3 border-t border-border/20 pt-5">
+        <div className="offer-buy space-y-3 border-t border-border/20 pt-5">
           <p className="flex items-baseline gap-2">
             <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
             <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time, no subscription</span>
@@ -298,7 +298,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
 
         {preview && (
           // The real taste is one tap away instead of making every visitor scroll past it. Native details/summary: no script, works with a keyboard.
-          <details className="group rounded-2xl border border-border/60 bg-background/50 p-4">
+          <details className="offer-peek group rounded-2xl border border-border/60 bg-background/50 p-4">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-black [&::-webkit-details-marker]:hidden">
               <span>Peek inside: 2 real recommendations</span>
               <span aria-hidden className="text-lg leading-none text-muted-foreground transition-transform group-open:rotate-45">+</span>

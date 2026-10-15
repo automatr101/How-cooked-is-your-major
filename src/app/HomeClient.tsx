@@ -357,8 +357,8 @@ export default function HomeClient() {
             id="result"
           >
             {/* Laptops and desktops: the card and its tips on the left, compare and share on the right. Phones stack them. */}
-            <div className="lg:grid lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-12 lg:items-start lg:justify-center">
-            <div className="min-w-0">
+            <div className="grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-x-12 lg:items-start lg:justify-center">
+            <div className="min-w-0 order-1">
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <BackgroundGradient
               containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
@@ -490,14 +490,17 @@ export default function HomeClient() {
               </button>
             </div>
 
-            {/* The paid career plan, right after the roast: the roast is the moment the visitor cares most about their score,
-                so the offer sits directly under it (and under "Roast Me Again") instead of below the share buttons.
-                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
-            <PremiumOffer major={selectedMajor} />
-
             </div>
 
-            <div className="min-w-0 lg:sticky lg:top-24">
+            {/* The paid career plan, right after the roast: the roast is the moment the visitor cares most about their score,
+                so on phones the offer sits directly under it (and under "Roast Me Again"). On laptops and desktops it spans the
+                full width under both columns as a landscape card, instead of being squeezed into the narrow left column.
+                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
+            <div className="min-w-0 order-2 lg:order-3 lg:col-span-2">
+              <PremiumOffer major={selectedMajor} />
+            </div>
+
+            <div className="min-w-0 order-3 lg:order-2 lg:sticky lg:top-24">
             {/* Comparison Section */}
             <div className="mt-12 lg:mt-0 w-full">
               {!showComparisonSearch && !comparedMajor && (
