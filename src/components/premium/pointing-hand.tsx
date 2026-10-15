@@ -12,10 +12,10 @@ export function PointingHand({ className = "" }: { className?: string }) {
     <motion.div
       aria-hidden
       className={`pointer-events-none select-none ${className}`}
-      animate={reduceMotion ? undefined : { y: [0, 8, 0] }}
+      animate={reduceMotion ? undefined : { y: [0, 7, 0] }}
       transition={reduceMotion ? undefined : { duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
     >
-      <svg width="40" height="54" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="32" height="43" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* cuff */}
         <rect x="9" y="1.5" width="30" height="9" rx="3" fill="#fff" stroke="#111" strokeWidth="3" />
         {/* palm */}

@@ -243,23 +243,68 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           <p className="text-sm leading-relaxed text-muted-foreground">{copy.blurb}</p>
         </div>
 
-        {/* What is inside: every number below is counted from the plan the buyer actually gets for this major */}
-        <div>
-          <p className="mb-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">What&apos;s inside</p>
-          <ul className="space-y-2">
-            {insideList(preview, copy.preview).map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm font-bold">
-                <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
-                {item}
-              </li>
-            ))}
-          </ul>
+        {/* What is inside, short: three lines, every number counted from the plan the buyer actually gets for this major */}
+        <ul className="space-y-1.5">
+          {insideList(preview, copy.preview).map((item) => (
+            <li key={item} className="flex items-start gap-3 text-sm font-bold">
+              <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div className="space-y-3 border-t border-border/20 pt-5">
+          <p className="flex items-baseline gap-2">
+            <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
+            <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time, no subscription</span>
+          </p>
+          {approx && (
+            // Only sent to visitors outside Ghana: the headline above is the dollar guide, this line says what is really charged
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
+            </p>
+          )}
+          {/* The glove points at the button below it. The space above the button is always reserved, so it never shifts the page. */}
+          <div className="relative pt-[3.25rem]">
+            <PointingHand className="absolute right-8 top-0" />
+            <button
+              ref={buttonRef}
+              type="button"
+              onClick={() => {
+                trackOfferClicked(major, planType);
+                notifyUnlockClicked(major);
+                setOpen(true);
+              }}
+              className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+            >
+              {copy.cta}
+            </button>
+          </div>
+          <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
+            <p>
+              <span className="font-bold text-foreground">Refunds:</span> charged but no plan, or charged twice? Full refund. Not what we promised? Tell us within 7 days.{" "}
+              <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund policy</a>
+            </p>
+            <p className="flex items-start gap-1.5">
+              <ShieldCheck aria-hidden className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" />
+              <span>
+                <span className="font-bold text-foreground">Secure payment by Paystack.</span> Run by MajorLabs Intelligence ·{" "}
+                <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact</a> ·{" "}
+                <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">@cookedlabs_cto</a>
+              </span>
+            </p>
+          </div>
         </div>
 
         {preview && (
-          <div className="rounded-2xl border border-border/60 bg-background/50 p-4">
-            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
-              A real taste: 2 of {preview.counts.careerPaths} career paths for {major.name.length <= 34 ? major.name : "your major"}
+          // The real taste is one tap away instead of making every visitor scroll past it. Native details/summary: no script, works with a keyboard.
+          <details className="group rounded-2xl border border-border/60 bg-background/50 p-4">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-black [&::-webkit-details-marker]:hidden">
+              <span>Peek inside: 2 real recommendations</span>
+              <span aria-hidden className="text-lg leading-none text-muted-foreground transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p className="mb-3 mt-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
+              2 of {preview.counts.careerPaths} career paths for {major.name.length <= 34 ? major.name : "your major"}
             </p>
             <ul className="space-y-3">
               {preview.visible.map((item) => (
@@ -283,58 +328,8 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
                 </p>
               </div>
             )}
-          </div>
+          </details>
         )}
-
-        <div className="space-y-3 border-t border-border/20 pt-6">
-          <p className="flex items-baseline gap-2">
-            <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
-            <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time</span>
-          </p>
-          {approx && (
-            // Only sent to visitors outside Ghana: the headline above is the dollar guide, this line says what is really charged
-            <p className="text-xs leading-relaxed text-muted-foreground">
-              You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
-            </p>
-          )}
-          {/* The glove points at the button below it. The space above the button is always reserved (pt-[4.25rem]), so it never shifts the page. */}
-          <div className="relative pt-[4.25rem]">
-            <PointingHand className="absolute right-8 top-0" />
-          <button
-            ref={buttonRef}
-            type="button"
-            onClick={() => {
-              trackOfferClicked(major, planType);
-              notifyUnlockClicked(major);
-              setOpen(true);
-            }}
-            className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
-          >
-            {copy.cta}
-          </button>
-          </div>
-          <p className="text-[11px] leading-relaxed text-muted-foreground">
-            One payment, no subscription. Your score, roast, sharing and comparisons always stay free.
-          </p>
-          <div className="space-y-2 border-t border-border/20 pt-4 text-[11px] leading-relaxed text-muted-foreground">
-            <p>
-              <span className="font-bold text-foreground">Refunds:</span> charged but no plan, charged twice, or the plan is for the wrong major? Full refund. Not what we promised? Tell us within 7 days.{" "}
-              <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Read the refund policy</a>.
-            </p>
-            <p className="flex items-start gap-1.5">
-              <ShieldCheck aria-hidden className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" />
-              <span>
-                <span className="font-bold text-foreground">Secure payment by Paystack.</span> We never see or store your card or mobile money details.
-              </span>
-            </p>
-            <p>
-              Run by MajorLabs Intelligence.{" "}
-              <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact us</a>
-              {" "}or find us on X{" "}
-              <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">@cookedlabs_cto</a>.
-            </p>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -350,10 +345,8 @@ export function insideList(preview: PlanPreview | null, fallback: string[]): str
   if (!preview) return fallback;
   const c = preview.counts;
   return [
-    `A 30/60/90-day roadmap (${c.roadmapSteps} steps)`,
-    `${c.careerPaths} career paths to aim for, and ${c.riskyPaths} to be careful with`,
-    `${c.skills} skills to build and ${c.aiTools} AI tools to learn`,
-    `${c.projects} portfolio projects and ${c.internshipTips} internship tips`,
-    "Your AI exposure, task by task, and a PDF you can keep",
+    `A 30/60/90-day roadmap (${c.roadmapSteps} steps) and ${c.projects} portfolio projects`,
+    `${c.careerPaths} career paths to aim for, ${c.skills} skills and ${c.aiTools} AI tools to learn`,
+    "Your AI exposure, task by task, with internship tips and a PDF you can keep",
   ];
 }
