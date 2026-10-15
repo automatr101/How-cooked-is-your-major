@@ -11,6 +11,7 @@ import type { Plan } from "@/lib/plan/types";
 import type { PlanPreview } from "@/lib/plan/preview";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
+import { PointingHand } from "./pointing-hand";
 import { StickyCta } from "./sticky-cta";
 
 // The paid career plan, shown after the free result. The free score, roast, sharing, compare and
@@ -296,6 +297,9 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
               You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
             </p>
           )}
+          {/* The glove points at the button below it. The space above the button is always reserved (pt-[4.25rem]), so it never shifts the page. */}
+          <div className="relative pt-[4.25rem]">
+            <PointingHand className="absolute right-8 top-0" />
           <button
             ref={buttonRef}
             type="button"
@@ -308,6 +312,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           >
             {copy.cta}
           </button>
+          </div>
           <p className="text-[11px] leading-relaxed text-muted-foreground">
             One payment, no subscription. Your score, roast, sharing and comparisons always stay free.
           </p>
