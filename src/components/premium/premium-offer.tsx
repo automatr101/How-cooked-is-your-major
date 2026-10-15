@@ -143,7 +143,9 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           io.disconnect();
         }
       },
-      { threshold: 0.5 }
+      // A share of the card's own area, not half of it: the card is taller than a phone screen once the plan preview is
+      // in it, and half of it can never be on screen at once. 15% is about what half of the old, shorter card was.
+      { threshold: 0.15 }
     );
     io.observe(el);
     return () => io.disconnect();
@@ -339,7 +341,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
 
 
 /** The "what's inside" lines: real counts from the preview when it loaded, otherwise the short list the plan always had. */
-function insideList(preview: PlanPreview | null, fallback: string[]): string[] {
+export function insideList(preview: PlanPreview | null, fallback: string[]): string[] {
   if (!preview) return fallback;
   const c = preview.counts;
   return [

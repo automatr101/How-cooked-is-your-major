@@ -22,6 +22,9 @@ import { ReviewPopup } from "@/components/review-box";
 import { HeardFromPoll } from "@/components/heard-from";
 import { MajorSearch } from "@/components/major-search";
 import { PremiumOffer } from "@/components/premium/premium-offer";
+import { AccuracyPoll } from "@/components/reviews/accuracy-poll";
+import { PlanSample } from "@/components/premium/plan-sample";
+import { ReviewsSection } from "@/components/reviews/reviews-section";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
 
@@ -289,6 +292,14 @@ export default function HomeClient() {
       <Hero />
       <LiveTicker />
 
+      {/* Before a scan only: what the optional plan holds, with a real, labelled sample, then real reviews if there are any */}
+      {!selectedMajor && (
+        <>
+          <PlanSample />
+          <ReviewsSection className="relative z-20 mt-8 w-full max-w-3xl px-6" />
+        </>
+      )}
+
       {/* Scanning Overlay */}
       <AnimatePresence>
         {isScanning && (
@@ -454,6 +465,9 @@ export default function HomeClient() {
                 </div>
               </div>
             </BackgroundGradient>
+
+            {/* One tap: was this score accurate? Stores a real thumb for this major (only shown when the database is set up). */}
+            <AccuracyPoll majorName={selectedMajor.name} />
 
             {/* 🔥 Roast Me Again: a new roast for the same result (no rescan, no reload, no sound) */}
             <div className="flex justify-center mt-5">
@@ -639,6 +653,9 @@ export default function HomeClient() {
             {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see.
                 Kept below the offer so nothing sits between the share buttons and the offer. */}
             <HeardFromPoll />
+
+            {/* Real reviews only: renders nothing until there are approved ones. Labelled by where they came from. */}
+            <ReviewsSection majorSlug={slugify(selectedMajor.name)} className="mt-8" />
             </div>
             </div>
           </motion.div>

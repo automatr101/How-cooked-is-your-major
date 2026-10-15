@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Plan } from "@/lib/plan/types";
 import { PdfBar, usePdfDownload } from "./pdf-download";
+import { PlanReviewForm } from "@/components/reviews/plan-review-form";
 
 // The unlocked report. Plain, long-form and editorial: numbered sections, strong headings, restrained colour.
 
@@ -140,6 +141,9 @@ export function PlanReport({ plan }: { plan: Plan }) {
       <div className="border-t border-border/20 pt-8">
         <PdfBar pdf={pdf} />
       </div>
+
+      {/* After delivery: a verified review (stars, an optional line, and consent before anything is shown) */}
+      <PlanReviewForm majorName={plan.major.name} slug={plan.major.slug} />
     </article>
   );
 }

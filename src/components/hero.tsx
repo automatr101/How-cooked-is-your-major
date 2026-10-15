@@ -96,6 +96,8 @@ export const Hero = () => {
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-1">
                 <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
               </p>
+              {/* Said out loud: these are drawings, not people who used the site */}
+              <p className="text-[10px] font-medium text-muted-foreground/70 pl-1">Illustrated avatars, not real users</p>
             </div>
           </div>
 
