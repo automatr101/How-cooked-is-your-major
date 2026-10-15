@@ -62,16 +62,25 @@ export function trackStickyCtaClicked(m: Subject, planType: PlanType) {
   track("premium_sticky_cta_clicked", { ...base(m, planType), price: price.value, currency: price.currency });
 }
 
-/** Lets the server (and so the Telegram bot) know someone clicked Unlock. Sends only the major's name; never blocks the UI. */
-export function notifyUnlockClicked(m: Subject) {
+export type StepEvent = "paywall_viewed" | "unlock_clicked" | "checkout_opened" | "checkout_problem";
+export type ProblemReason = "redirect_stuck" | "could_not_start" | "network" | "plan_load_failed" | "confirmation_pending";
+
+/** Lets the server (and so the Telegram bot) know about a step only the browser sees. Sends the major's name and, for a
+ *  problem, a reason from a fixed list; never anything about the person; never blocks the UI. */
+export function notifyStep(event: StepEvent, m: Subject, reason?: ProblemReason) {
   try {
     void fetch("/api/checkout/event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ event: "unlock_clicked", major: m.name }),
+      body: JSON.stringify({ event, major: m.name, ...(reason ? { reason } : {}) }),
       keepalive: true,
     }).catch(() => {});
   } catch {}
+}
+
+/** Someone clicked Unlock. */
+export function notifyUnlockClicked(m: Subject) {
+  notifyStep("unlock_clicked", m);
 }
 
 export function trackCheckoutStarted(m: Subject, planType: PlanType) {

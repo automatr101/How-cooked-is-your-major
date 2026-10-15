@@ -6,7 +6,7 @@ import { Loader2, Lock, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SuccessIcon } from "@/components/ui/animated-state-icons";
 import { PAYMENTS_MODE, PLAN_COPY, PRODUCT_NAME, type PlanType, type Price } from "@/lib/premium";
-import { trackCheckoutStarted, trackPaid, trackPaymentCancelled, trackPaymentFailed } from "@/lib/premium-analytics";
+import { notifyStep, trackCheckoutStarted, trackPaid, trackPaymentCancelled, trackPaymentFailed } from "@/lib/premium-analytics";
 
 // The checkout. In test mode it draws a stand-in for the payment page with buttons for every outcome;
 // in live mode it sends the visitor to Paystack and picks them up again when they return. Either way the
@@ -16,8 +16,9 @@ type Step =
   | { name: "review" }
   | { name: "starting" }
   | { name: "mock"; reference: string }
-  | { name: "redirecting" }
+  | { name: "redirecting"; url?: string }
   | { name: "processing"; reference: string; proof?: string }
+  | { name: "load_failed" } // paid and confirmed, but the plan did not load: retry the LOAD, never a second payment
   | { name: "pending"; reference: string; proof?: string }
   | { name: "success" }
   | { name: "failed"; reason: string }
@@ -72,6 +73,7 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
   const [restoreRef, setRestoreRef] = useState("");
   const [restoreError, setRestoreError] = useState("");
   const [restoreBusy, setRestoreBusy] = useState(false);
+  const [stuck, setStuck] = useState(false); // the redirect to the payment page did not happen on its own
   const panelRef = useRef<HTMLDivElement>(null);
   const closedRef = useRef(false); // so closing never counts twice, and a late response cannot reopen things
   const finished = step.name === "success";
@@ -83,12 +85,41 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
     onClose();
   };
 
+  // "Checkout opened" goes to Telegram once (not when the visitor is only coming back from the payment page)
+  useEffect(() => {
+    if (!resumeReference) notifyStep("checkout_opened", major);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // In-app browsers (Instagram, TikTok, Facebook, Telegram) and popup blockers sometimes swallow the jump to the payment
+  // page. If the visitor is still looking at "Taking you to the payment page" after a few seconds, show a plain link that
+  // opens it by hand, and tell Telegram once so a pattern is visible.
+  useEffect(() => {
+    if (step.name !== "redirecting" || !step.url || stuck) return;
+    const id = setTimeout(() => {
+      setStuck(true);
+      notifyStep("checkout_problem", major, "redirect_stuck");
+    }, 6000);
+    return () => clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
+
+  // Back from the payment page with the browser's Back button: the page is restored exactly as it was, frozen on
+  // "Taking you to the payment page". Put the visitor back on the review step instead.
+  useEffect(() => {
+    const onShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setStep((s) => (s.name === "redirecting" ? { name: "review" } : s));
+    };
+    window.addEventListener("pageshow", onShow);
+    return () => window.removeEventListener("pageshow", onShow);
+  }, []);
+
   // Escape closes; focus goes into the dialog and returns afterwards
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
     panelRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && step.name !== "starting" && step.name !== "redirecting") cancelAndClose();
+      if (e.key === "Escape" && step.name !== "starting" && (step.name !== "redirecting" || stuck)) cancelAndClose();
     };
     window.addEventListener("keydown", onKey);
     const overflow = document.body.style.overflow;
@@ -100,6 +131,13 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step.name]);
+
+  // On a phone the keyboard covers the lower half of the sheet. When a field gets focus, wait for the keyboard to open, then
+  // scroll the field into the middle of the sheet so it (and the button under it) stay visible.
+  const keepInView = (e: React.FocusEvent<HTMLInputElement>) => {
+    const el = e.currentTarget;
+    setTimeout(() => el.scrollIntoView({ block: "center", behavior: "smooth" }), 350);
+  };
 
   async function post(path: string, body: unknown) {
     const res = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
@@ -117,19 +155,22 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
       const { ok, data } = await post("/api/checkout/initialize", { major: major.name, email: email.trim() });
       if (!ok || !data.reference) {
         trackPaymentFailed(major, planType, data?.error ?? "could_not_start");
+        notifyStep("checkout_problem", major, "could_not_start");
         // `detail` only exists while the private gate is on (the owner testing), never for real visitors.
         const why = typeof data?.detail === "string" ? ` [${data.detail}]` : "";
         return setStep({ name: "error", message: `We could not start the payment. Please try again in a moment.${why}` });
       }
       trackCheckoutStarted(major, planType);
       if (data.authorizationUrl) {
-        setStep({ name: "redirecting" });
+        setStuck(false);
+        setStep({ name: "redirecting", url: data.authorizationUrl });
         window.location.assign(data.authorizationUrl); // live mode: the payment page, then back to this site
         return;
       }
       setStep({ name: "mock", reference: data.reference }); // test mode: our stand-in payment page
     } catch {
       trackPaymentFailed(major, planType, "network");
+      notifyStep("checkout_problem", major, "network");
       setStep({ name: "error", message: "Network problem. Check your connection and try again." });
     }
   };
@@ -152,7 +193,8 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
         trackPaid(major, planType, String(data.transactionId));
         closedRef.current = false;
         const ready = await onPaid();
-        return setStep(ready ? { name: "success" } : { name: "error", message: "We found your payment but could not load the plan. Please try again." });
+        if (!ready) notifyStep("checkout_problem", major, "plan_load_failed");
+        return setStep(ready ? { name: "success" } : { name: "load_failed" });
       }
       if (status === 429) return setRestoreError("Too many tries. Please wait a while, or use your payment reference.");
       if (status === 503) return setRestoreError("Restoring by email is not available right now. Use your payment reference instead.");
@@ -162,6 +204,26 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
     } finally {
       setRestoreBusy(false);
     }
+  };
+
+  // Paid and confirmed, but the plan would not load (a network blip, a cold server). Retries ONLY the loading. It never goes back to
+  // the review step, because that would start a second payment.
+  const [loadingPlan, setLoadingPlan] = useState(false);
+  const retryLoad = async () => {
+    setLoadingPlan(true);
+    try {
+      const ready = await onPaid();
+      setStep(ready ? { name: "success" } : { name: "load_failed" });
+    } finally {
+      setLoadingPlan(false);
+    }
+  };
+  const [linkCopied, setLinkCopied] = useState(false);
+  const copyLink = (url: string) => {
+    navigator.clipboard
+      ?.writeText(url)
+      .then(() => setLinkCopied(true))
+      .catch(() => {});
   };
 
   // 2. test mode: choose what the fake payment does
@@ -200,7 +262,10 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
             trackPaid(major, planType, String(data.transactionId ?? reference));
             const ready = await onPaid();
             if (cancelled) return;
-            if (!ready) return setStep({ name: "error", message: "Your payment went through, but we could not load the plan. Press Try again, and you will not be charged twice." });
+            if (!ready) {
+              notifyStep("checkout_problem", major, "plan_load_failed");
+              return setStep({ name: "load_failed" });
+            }
             return setStep({ name: "success" });
           }
           if (data.status === "failed") {
@@ -220,7 +285,10 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
         }
         await new Promise((r) => setTimeout(r, POLL_MS));
       }
-      if (!cancelled) setStep({ name: "pending", reference, proof });
+      if (!cancelled) {
+        notifyStep("checkout_problem", major, "confirmation_pending");
+        setStep({ name: "pending", reference, proof });
+      }
     })();
 
     return () => {
@@ -229,7 +297,8 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
-  const busy = step.name === "starting" || step.name === "redirecting" || step.name === "processing";
+  // While the manual link is showing, the visitor can also close the dialog: they are not "busy", they are stuck
+  const busy = step.name === "starting" || (step.name === "redirecting" && !stuck) || step.name === "processing";
 
   return (
     <motion.div
@@ -251,7 +320,7 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
         animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
         exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="relative max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-border bg-card p-6 shadow-2xl focus:outline-none sm:rounded-3xl sm:p-8"
+        className="relative max-h-[92vh] max-h-[92dvh] w-full max-w-md overflow-y-auto overscroll-contain rounded-t-3xl border border-border bg-card p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl focus:outline-none sm:rounded-3xl sm:p-8"
       >
         {!busy && (
           <button
@@ -303,7 +372,13 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
                 <input
                   id="checkout-email"
                   type="email"
+                  inputMode="email"
                   autoComplete="email"
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  enterKeyHint="go"
+                  onFocus={keepInView}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -312,7 +387,7 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
                   onKeyDown={(e) => e.key === "Enter" && start()}
                   placeholder="you@example.com"
                   aria-invalid={emailError}
-                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
                 {emailError ? (
                   <p role="alert" className="text-xs font-bold text-destructive">Enter a valid email address.</p>
@@ -363,9 +438,13 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
                         onKeyDown={(e) => e.key === "Enter" && restore()}
                         placeholder="you@example.com or cm-xxxxxxxx-xxxxxxxxxxxx"
                         autoComplete="off"
+                        autoCapitalize="none"
+                        autoCorrect="off"
+                        enterKeyHint="go"
+                        onFocus={keepInView}
                         spellCheck={false}
                         aria-invalid={!!restoreError}
-                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
                       />
                       {restoreError ? (
                         <p role="alert" className="text-xs font-bold text-destructive">{restoreError}</p>
@@ -391,6 +470,32 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
 
           {(step.name === "starting" || step.name === "redirecting") && (
             <Status icon={<Loader2 className="h-8 w-8 animate-spin text-primary" />} title={step.name === "starting" ? "Starting secure checkout…" : "Taking you to the payment page…"} text="Please do not close this window." />
+          )}
+
+          {step.name === "redirecting" && step.url && stuck && (
+            // Shown only if the automatic jump did not happen within a few seconds (in-app browsers and popup blockers do this)
+            <div className="space-y-2 rounded-2xl border border-amber-400/40 bg-amber-400/10 p-4">
+              <p className="text-sm font-bold">The payment page did not open by itself.</p>
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                This can happen inside Instagram, TikTok or Facebook. Tap the button to open it. If that does nothing, copy the link and paste it into Chrome or Safari: after you pay, come back to this site and your plan will unlock.
+              </p>
+              <a href={step.url} className="block w-full rounded-full bg-primary px-6 py-3.5 text-center text-sm font-black uppercase tracking-widest text-primary-foreground">
+                Open the payment page
+              </a>
+              <button type="button" onClick={() => copyLink(step.url!)} className="w-full rounded-full border border-border px-6 py-3 text-xs font-black uppercase tracking-widest text-foreground">
+                {linkCopied ? "Link copied" : "Copy the payment link"}
+              </button>
+            </div>
+          )}
+
+          {step.name === "load_failed" && (
+            <div className="space-y-5">
+              <Status icon={<Loader2 className="h-8 w-8 text-amber-300" />} title="Payment confirmed" text="Your payment went through, but your plan did not load yet. Tap the button to load it. You will not be charged again." />
+              <div className="flex flex-col gap-2">
+                <PrimaryButton onClick={retryLoad}>{loadingPlan ? "Loading your plan…" : "Load my plan"}</PrimaryButton>
+                <GhostButton onClick={cancelAndClose}>Return to my result</GhostButton>
+              </div>
+            </div>
           )}
 
           {step.name === "mock" && (

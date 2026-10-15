@@ -6,21 +6,26 @@ import { charge } from "./paystack";
 
 // SERVER ONLY. Telegram alerts for the steps BEFORE a purchase, so you can see how far people get:
 //
-//   unlock clicked  ->  payment started  ->  (payment not completed | payment could not start)
+//   paywall viewed -> unlock clicked -> checkout opened -> payment started -> (payment not completed | could not start)
+//   plus "checkout problem on the visitor's side" (a stuck redirect, a network error, a plan that would not load)
 //
 // The purchase itself is announced by purchases.ts, and refunds by the webhook. Nothing here ever carries an email
 // address or an IP address: only the major, the plan, the amount, and the visitor's country, device and browser.
 // Messages are sent after the response has gone out, so Telegram being slow can never slow a checkout down.
 //
-//   TELEGRAM_PAYMENT_ALERTS=off   mutes these step alerts (purchase and refund alerts are not affected)
+//   TELEGRAM_PAYMENT_ALERTS=off   mutes all of these step alerts (purchase and refund alerts are not affected)
+//   TELEGRAM_PAYWALL_VIEWS=off    mutes only "Paywall viewed" (the noisiest one), keeping the rest
 
-export type FunnelStep = "unlock" | "started" | "not_started" | "not_completed";
+export type FunnelStep = "viewed" | "unlock" | "opened" | "started" | "not_started" | "not_completed" | "client_error";
 
 const HEADLINE: Record<FunnelStep, string> = {
+  viewed: "👀 <b>Paywall viewed</b>",
   unlock: "🔓 <b>Unlock clicked</b>",
+  opened: "🧾 <b>Checkout opened</b>",
   started: "💳 <b>Payment started</b> (sent to Paystack)",
   not_started: "⚠️ <b>Payment could not start</b>",
   not_completed: "❌ <b>Payment not completed</b>",
+  client_error: "🚧 <b>Checkout problem on the visitor's side</b>",
 };
 
 const sent = new Set<string>(); // per server instance, best effort: stops the same outcome being announced twice
@@ -45,6 +50,7 @@ export function funnelAlert(
   onceKey?: string
 ): void {
   if (!telegramEnabled() || process.env.TELEGRAM_PAYMENT_ALERTS === "off") return;
+  if (step === "viewed" && process.env.TELEGRAM_PAYWALL_VIEWS === "off") return;
   // A broken setting would otherwise alert on every attempt: at most five of these per ten minutes
   if (step === "not_started" && rateLimited("funnel:not_started", 5, 10 * 60 * 1000)) return;
   if (onceKey) {

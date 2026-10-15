@@ -2,12 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Check, Lock } from "lucide-react";
+import { Check, Lock, ShieldCheck } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { markInternal, slugify } from "@/lib/analytics";
-import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, lockedItems, planTypeFor, type Price } from "@/lib/premium";
-import { notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked, trackStickyCtaClicked } from "@/lib/premium-analytics";
+import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, planTypeFor, type Price } from "@/lib/premium";
+import { notifyStep, notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked, trackStickyCtaClicked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
+import type { PlanPreview } from "@/lib/plan/preview";
 import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
 import { StickyCta } from "./sticky-cta";
@@ -81,6 +82,23 @@ export function PremiumOffer({ major }: { major: Major }) {
   return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} gated={status.gated} />;
 }
 
+// The real preview of the plan for this major (two recommendations and counts), from /api/plan/preview. If it cannot be
+// fetched the card simply falls back to the short list it always had: it never shows made-up placeholders.
+function usePreview(majorName: string): PlanPreview | null {
+  const [preview, setPreview] = useState<PlanPreview | null>(null);
+  useEffect(() => {
+    let live = true;
+    fetch(`/api/plan/preview?major=${encodeURIComponent(majorName)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { preview?: PlanPreview } | null) => live && d?.preview && setPreview(d.preview))
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [majorName]);
+  return preview;
+}
+
 function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; gated: boolean }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
@@ -93,6 +111,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
   const planRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [buttonOnScreen, setButtonOnScreen] = useState(true);
+  const preview = usePreview(major.name);
 
   // Fetches the report. The server answers only if this browser's signed unlock cookie covers this major.
   const loadPlan = useCallback(async (): Promise<boolean> => {
@@ -120,6 +139,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {
           trackOfferViewed(major, planType);
+          if (!gated) notifyStep("paywall_viewed", major); // visits by the owner behind the private gate are not announced
           io.disconnect();
         }
       },
@@ -127,7 +147,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [major, planType, plan]);
+  }, [major, planType, plan, gated]);
 
   // Is the card's own button on screen? It decides whether the bar pinned to the bottom of a phone is shown (below).
   // It starts as "yes", so the bar never flashes in before this is known. The bottom 88px are left out of the
@@ -220,21 +240,48 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           <p className="text-sm leading-relaxed text-muted-foreground">{copy.blurb}</p>
         </div>
 
-        <ul className="space-y-2.5">
-          {copy.preview.map((item) => (
-            <li key={item} className="flex items-center gap-3 text-sm font-bold">
-              <Check aria-hidden className="h-4 w-4 shrink-0 text-emerald-500" />
-              {item}
-            </li>
-          ))}
-          {lockedItems(major.name).map((item) => (
-            <li key={item} className="flex items-center gap-3 text-sm font-bold text-muted-foreground">
-              <Lock aria-hidden className="h-4 w-4 shrink-0" />
-              <span className="sr-only">Locked: </span>
-              <span aria-hidden={false} className="select-none blur-[3.5px]">{item}</span>
-            </li>
-          ))}
-        </ul>
+        {/* What is inside: every number below is counted from the plan the buyer actually gets for this major */}
+        <div>
+          <p className="mb-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">What&apos;s inside</p>
+          <ul className="space-y-2">
+            {insideList(preview, copy.preview).map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm font-bold">
+                <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {preview && (
+          <div className="rounded-2xl border border-border/60 bg-background/50 p-4">
+            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
+              A real taste: 2 of {preview.counts.careerPaths} career paths for {major.name.length <= 34 ? major.name : "your major"}
+            </p>
+            <ul className="space-y-3">
+              {preview.visible.map((item) => (
+                <li key={item.title}>
+                  <p className="text-sm font-black leading-snug">{item.title}</p>
+                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{item.why}</p>
+                </li>
+              ))}
+            </ul>
+            {preview.counts.careerPaths > preview.visible.length && (
+              <div className="mt-3 space-y-2">
+                {Array.from({ length: Math.min(3, preview.counts.careerPaths - preview.visible.length) }).map((_, i) => (
+                  // Placeholder bars, not blurred real text: the locked wording is never sent to the browser
+                  <div key={i} aria-hidden className="flex items-center gap-2">
+                    <Lock className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+                    <div className="h-3 rounded-full bg-muted-foreground/20 blur-[1.5px]" style={{ width: `${84 - i * 17}%` }} />
+                  </div>
+                ))}
+                <p className="text-[11px] font-bold text-muted-foreground">
+                  + {preview.counts.careerPaths - preview.visible.length} more career paths, the skills, tools, projects and the full roadmap unlock after payment.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="space-y-3 border-t border-border/20 pt-6">
           <p className="flex items-baseline gap-2">
@@ -262,6 +309,24 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           <p className="text-[11px] leading-relaxed text-muted-foreground">
             One payment, no subscription. Your score, roast, sharing and comparisons always stay free.
           </p>
+          <div className="space-y-2 border-t border-border/20 pt-4 text-[11px] leading-relaxed text-muted-foreground">
+            <p>
+              <span className="font-bold text-foreground">Refunds:</span> charged but no plan, charged twice, or the plan is for the wrong major? Full refund. Not what we promised? Tell us within 7 days.{" "}
+              <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Read the refund policy</a>.
+            </p>
+            <p className="flex items-start gap-1.5">
+              <ShieldCheck aria-hidden className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" />
+              <span>
+                <span className="font-bold text-foreground">Secure payment by Paystack.</span> We never see or store your card or mobile money details.
+              </span>
+            </p>
+            <p>
+              Run by MajorLabs Intelligence.{" "}
+              <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact us</a>
+              {" "}or find us on X{" "}
+              <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">@cookedlabs_cto</a>.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -270,4 +335,18 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
     <StickyCta show={showSticky} price={price} approx={approx} onClick={unlockFromBar} />
     </>
   );
+}
+
+
+/** The "what's inside" lines: real counts from the preview when it loaded, otherwise the short list the plan always had. */
+function insideList(preview: PlanPreview | null, fallback: string[]): string[] {
+  if (!preview) return fallback;
+  const c = preview.counts;
+  return [
+    `A 30/60/90-day roadmap (${c.roadmapSteps} steps)`,
+    `${c.careerPaths} career paths to aim for, and ${c.riskyPaths} to be careful with`,
+    `${c.skills} skills to build and ${c.aiTools} AI tools to learn`,
+    `${c.projects} portfolio projects and ${c.internshipTips} internship tips`,
+    "Your AI exposure, task by task, and a PDF you can keep",
+  ];
 }

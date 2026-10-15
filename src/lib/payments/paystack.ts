@@ -26,6 +26,19 @@ export function charge(): { currency: string; amount: number } {
   return { currency, amount };
 }
 
+// Which payment options Paystack's page offers. Left unset, Paystack shows every channel enabled on the account (Settings >
+// Preferences > Payment channels). Set PAYSTACK_CHANNELS to a comma list (for example "card,mobile_money") to pin the page
+// to those. Only Paystack's own channel names are accepted; anything else is ignored. A channel that is not enabled on the
+// account is not shown even if it is listed here, so this can narrow the page but cannot add a channel the account lacks.
+const CHANNELS = new Set(["card", "bank", "ussd", "qr", "mobile_money", "bank_transfer", "eft", "apple_pay"]);
+export function channels(): string[] | undefined {
+  const list = (process.env.PAYSTACK_CHANNELS ?? "")
+    .split(",")
+    .map((c) => c.trim().toLowerCase())
+    .filter((c) => CHANNELS.has(c));
+  return list.length ? [...new Set(list)] : undefined;
+}
+
 function key(): string {
   const k = process.env.PAYSTACK_SECRET_KEY?.trim(); // a pasted key often carries a stray space or newline
   if (!k) throw new SafeError("PAYSTACK_SECRET_KEY is not set");
@@ -70,6 +83,7 @@ export const paystackProvider: PaymentProvider = {
         currency,
         reference,
         callback_url: callbackUrl,
+        ...(channels() ? { channels: channels() } : {}),
         // Read back at verify time. Set here, on the server, so the browser cannot change it.
         metadata: { product: PRODUCT_ID, product_name: PRODUCT_NAME, major_slug: majorSlug, major_name: majorName },
       }),

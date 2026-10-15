@@ -476,6 +476,11 @@ export default function HomeClient() {
               </button>
             </div>
 
+            {/* The paid career plan, right after the roast: the roast is the moment the visitor cares most about their score,
+                so the offer sits directly under it (and under "Roast Me Again") instead of below the share buttons.
+                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
+            <PremiumOffer major={selectedMajor} />
+
             </div>
 
             <div className="min-w-0 lg:sticky lg:top-24">
@@ -626,10 +631,6 @@ export default function HomeClient() {
                 <span aria-live="polite">{copied ? "COPIED!" : "COPY TEXT"}</span>
               </button>
             </div>
-
-            {/* The paid career plan, directly under the share buttons so it is seen without a long scroll.
-                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
-            <PremiumOffer major={selectedMajor} />
 
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
