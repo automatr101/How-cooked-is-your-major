@@ -17,9 +17,9 @@ type Step =
   | { name: "starting" }
   | { name: "mock"; reference: string }
   | { name: "redirecting"; url?: string }
-  | { name: "processing"; reference: string; proof?: string }
+  | { name: "processing"; reference: string; proof?: string; session?: string }
   | { name: "load_failed" } // paid and confirmed, but the plan did not load: retry the LOAD, never a second payment
-  | { name: "pending"; reference: string; proof?: string }
+  | { name: "pending"; reference: string; proof?: string; session?: string }
   | { name: "success" }
   | { name: "failed"; reason: string }
   | { name: "cancelled" }
@@ -44,6 +44,8 @@ interface Props {
   launch?: { regular: Price; endsAt: string; regularApprox?: string };
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
+  /** Stripe's Checkout Session id when the visitor comes back from Stripe. */
+  resumeSession?: string;
   /** Called once the payment is confirmed. Must load the plan; the dialog then shows "ready". */
   onPaid: () => Promise<boolean>;
   onClose: () => void;
@@ -64,10 +66,10 @@ const FAILURE_TEXT: Record<string, string> = {
   expired: "That payment session expired. Please start again.",
 };
 
-export function CheckoutDialog({ major, planType, price, approx, launch, resumeReference, onPaid, onClose, onViewPlan }: Props) {
+export function CheckoutDialog({ major, planType, price, approx, launch, resumeReference, resumeSession, onPaid, onClose, onViewPlan }: Props) {
   const reduceMotion = useReducedMotion();
   const copy = PLAN_COPY[planType];
-  const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
+  const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference, session: resumeSession } : { name: "review" });
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
   // "Already paid?" (live mode): a buyer who paid but never got back to the site enters the payment reference from their receipt
@@ -252,13 +254,13 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
     // Test mode waits for the proof before asking; live mode asks straight away.
     if (PAYMENTS_MODE === "test" && !step.proof) return;
     let cancelled = false;
-    const { reference, proof } = step;
+    const { reference, proof, session } = step;
 
     (async () => {
       for (let attempt = 0; attempt < POLL_TRIES; attempt++) {
         if (cancelled) return;
         try {
-          const { data } = await post("/api/checkout/verify", { major: major.name, reference, proof });
+          const { data } = await post("/api/checkout/verify", { major: major.name, reference, proof, session });
           if (cancelled) return;
           if (data.status === "success") {
             trackPaid(major, planType, String(data.transactionId ?? reference));
@@ -280,7 +282,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
             closedRef.current = true;
             return setStep({ name: "cancelled" });
           }
-          if (data.status === "error") return setStep({ name: "pending", reference, proof }); // provider unreachable: not the visitor's fault
+          if (data.status === "error") return setStep({ name: "pending", reference, proof, session }); // provider unreachable: not the visitor's fault
           // "pending": wait and ask again
         } catch {
           if (cancelled) return;
@@ -289,7 +291,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
       }
       if (!cancelled) {
         notifyStep("checkout_problem", major, "confirmation_pending");
-        setStep({ name: "pending", reference, proof });
+        setStep({ name: "pending", reference, proof, session });
       }
     })();
 
@@ -529,7 +531,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
             <div className="space-y-5">
               <Status icon={<Loader2 className="h-8 w-8 text-amber-300" />} title="Still waiting for confirmation" text="We have not heard back from the payment provider yet. Nothing is unlocked until they confirm. If you were charged, you will not be charged again." />
               <div className="flex flex-col gap-2">
-                <PrimaryButton onClick={() => setStep({ name: "processing", reference: step.reference, proof: step.proof })}>Check again</PrimaryButton>
+                <PrimaryButton onClick={() => setStep({ name: "processing", reference: step.reference, proof: step.proof, session: step.session })}>Check again</PrimaryButton>
                 <GhostButton onClick={cancelAndClose}>Return to my result</GhostButton>
               </div>
             </div>

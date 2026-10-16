@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findMajor, getProvider, REFERENCE_PATTERN } from "@/lib/payments";
+import { SESSION_ID, stripeEnabled, stripeProvider } from "@/lib/payments/stripe";
 import { grantEntitlement } from "@/lib/payments/entitlement";
 import { funnelAlert } from "@/lib/payments/alerts";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { registerPurchase } from "@/lib/payments/purchases";
-import { statusOf, storeEnabled } from "@/lib/payments/store";
+import { findPurchase, statusOf, storeEnabled } from "@/lib/payments/store";
 import { currentPrice } from "@/lib/payments/price";
 import { PAYMENTS_MODE, PRODUCT_NAME, priceOf } from "@/lib/premium";
 
@@ -22,11 +23,25 @@ export async function POST(req: NextRequest) {
   const proof = typeof body?.proof === "string" ? body.proof : undefined;
   if (!major || !REFERENCE_PATTERN.test(reference)) return json({ error: "bad_request" }, 400);
 
-  const provider = getProvider();
+  const session = typeof body?.session === "string" && SESSION_ID.test(body.session) ? body.session : undefined;
+  // A buyer coming back from Stripe carries Stripe's session id; everything else is the mode's provider (Paystack, or the fake one)
+  const provider = session ? (stripeEnabled() ? stripeProvider : null) : getProvider();
   if (!provider) return json({ error: "not_available" }, 404);
 
   try {
-    const result = await provider.verify({ reference, majorSlug: major.slug, proof });
+    let result = await provider.verify({ reference, majorSlug: major.slug, proof, session });
+    // "Restore by payment reference" for a Stripe purchase: Stripe cannot find a session from the reference alone, but our own
+    // purchase record (made when the payment was verified) can. Only for a paid, un-refunded purchase of THIS major.
+    if (!session && result.status === "failed" && result.reason === "no_payment_found" && stripeEnabled() && storeEnabled()) {
+      try {
+        const known = await findPurchase(reference);
+        if (known && known.status === "paid" && known.major_slug === major.slug) {
+          result = { status: "success", transactionId: reference, amountMinor: known.amount_minor, currency: known.currency };
+        }
+      } catch {
+        console.error("[checkout] could not look up a purchase by reference");
+      }
+    }
     if (result.status !== "success") {
       // A buyer who came back without a completed payment. "Pending" is skipped: it is checked again every few seconds.
       if (result.status === "failed" || result.status === "cancelled") {
@@ -49,6 +64,7 @@ export async function POST(req: NextRequest) {
         paystackId: result.transactionId,
         email: result.customerEmail,
         paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
+        provider: provider.id === "stripe" || result.currency === "USD" ? "stripe" : "paystack",
       });
     }
 

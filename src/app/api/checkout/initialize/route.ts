@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
-import { EMAIL_PATTERN, findMajor, getProvider, newReference } from "@/lib/payments";
+import { EMAIL_PATTERN, findMajor, getProviderFor, newReference } from "@/lib/payments";
+import { stripeCharge } from "@/lib/payments/stripe";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { cleanText } from "@/lib/clean-text";
 import { funnelAlert } from "@/lib/payments/alerts";
@@ -20,7 +21,8 @@ export async function POST(req: NextRequest) {
   if (!major) return json({ error: "unknown_major" }, 400);
   if (!EMAIL_PATTERN.test(email)) return json({ error: "invalid_email" }, 400);
 
-  const provider = getProvider();
+  // Stripe (US dollars) for visitors outside Ghana when it is switched on, otherwise the mode's provider (Paystack in Ghana)
+  const provider = getProviderFor(req.headers.get("x-vercel-ip-country"));
   if (!provider) return json({ error: "not_available" }, 404);
 
   const reference = newReference();
@@ -29,7 +31,7 @@ export async function POST(req: NextRequest) {
     const callbackUrl =
       `${origin}/?major=${encodeURIComponent(major.name)}&score=${major.score}&level=${encodeURIComponent(major.level)}&cm_checkout=1`;
     const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl });
-    funnelAlert(req, "started", major);
+    funnelAlert(req, "started", major, [], undefined, provider.id === "stripe" ? { ...stripeCharge(), provider: "Stripe" } : undefined);
     return json({ provider: provider.id, reference: result.reference, authorizationUrl: result.authorizationUrl ?? null });
   } catch (err) {
     console.error("[checkout] could not start a payment"); // no details: they may contain keys or the email

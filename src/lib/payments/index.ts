@@ -4,6 +4,7 @@ import { PAYMENTS_MODE } from "@/lib/premium";
 import { slugify } from "@/lib/analytics";
 import { mockProvider } from "./mock";
 import { paystackProvider } from "./paystack";
+import { stripeAudience, stripeEnabled, stripeProvider } from "./stripe";
 import type { PaymentProvider } from "./types";
 
 // The only place that decides which provider is in use. Everything else asks for `getProvider()`.
@@ -13,6 +14,16 @@ export function getProvider(): PaymentProvider | null {
   if (PAYMENTS_MODE === "test") return mockProvider;
   if (PAYMENTS_MODE === "live") return paystackProvider;
   return null;
+}
+
+/**
+ * The provider for THIS visitor when a payment starts: Stripe (US dollars) for visitors outside Ghana when Stripe is switched on,
+ * otherwise whatever the mode says (Paystack in Ghana). Verifying does not use this: a Stripe return carries a session id and
+ * goes to Stripe, everything else goes to getProvider().
+ */
+export function getProviderFor(country: string | null): PaymentProvider | null {
+  if (stripeEnabled() && stripeAudience(country)) return stripeProvider;
+  return getProvider();
 }
 
 /** Looks a major up by its exact name, on the server, so only real majors can be bought. */

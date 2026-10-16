@@ -90,6 +90,12 @@ export async function markPaid(reference: string): Promise<boolean> {
   return rows.length > 0;
 }
 
+/** A recorded purchase by its payment reference: which major it was for and whether it is still paid. */
+export async function findPurchase(reference: string): Promise<{ major_slug: string; status: "paid" | "refunded"; amount_minor: number; currency: string } | null> {
+  const rows = (await call(`?select=major_slug,status,amount_minor,currency&reference=${eq(reference)}&limit=1`)) as { major_slug: string; status: "paid" | "refunded"; amount_minor: number; currency: string }[];
+  return rows[0] ?? null;
+}
+
 export async function statusOf(reference: string): Promise<"paid" | "refunded" | null> {
   const rows = (await call(`?select=status&reference=${eq(reference)}&limit=1`)) as { status: "paid" | "refunded" }[];
   return rows[0]?.status ?? null;

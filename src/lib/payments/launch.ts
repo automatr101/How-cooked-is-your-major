@@ -45,3 +45,27 @@ export function activeLaunch(regularMinor: number, now: Date = new Date()): Laun
   const usd = Number(process.env.LAUNCH_APPROX_USD?.trim());
   return { minor, endsAt, approxUsd: Number.isFinite(usd) && usd > 0 ? usd : null };
 }
+
+// ---- the same launch, for Stripe (USD). The price during the launch is LAUNCH_APPROX_USD (the owner's own figure, e.g. 3.99),
+// shown and charged in dollars to visitors who pay with Stripe. The end time is the same LAUNCH_ENDS_AT. Without
+// LAUNCH_APPROX_USD there is no dollar discount: Stripe buyers then simply pay the normal dollar price.
+
+function readUsdMinor(regularMinor: number): number | null {
+  const usd = Number(process.env.LAUNCH_APPROX_USD?.trim());
+  if (!Number.isFinite(usd) || usd <= 0) return null;
+  const cents = Math.round(usd * 100);
+  return cents > 0 && cents < regularMinor ? cents : null;
+}
+
+/** The configured dollar launch amount in cents, whether or not it is still running (to accept a payment started before the end). */
+export function launchUsdMinor(regularMinor: number): number | null {
+  return readEnd() ? readUsdMinor(regularMinor) : null;
+}
+
+/** The dollar launch, only while it is running right now. */
+export function activeLaunchUsd(regularMinor: number, now: Date = new Date()): { minor: number; endsAt: Date } | null {
+  const minor = readUsdMinor(regularMinor);
+  const endsAt = readEnd();
+  if (minor === null || endsAt === null || endsAt.getTime() <= now.getTime()) return null;
+  return { minor, endsAt };
+}

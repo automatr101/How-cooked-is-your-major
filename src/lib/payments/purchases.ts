@@ -17,6 +17,8 @@ export async function registerPurchase(input: {
   email?: string;
   /** What Paystack says was paid. Falls back to the normal charge when absent. */
   paid?: { amount: number; currency: string };
+  /** Which provider took the payment (default Paystack). Only used for the alert wording. */
+  provider?: "paystack" | "stripe";
 }): Promise<void> {
   const planType = planTypeFor(input.major.score);
   const paid = input.paid ?? charge(); // what was actually paid (the launch price if that is what the buyer paid)
@@ -47,9 +49,9 @@ export async function registerPurchase(input: {
   if (isNew && telegramEnabled()) {
     await sendTelegram(
       [
-        process.env.PAYSTACK_SECRET_KEY?.startsWith("sk_test_") ? "🧪 <b>TEST purchase</b> (test key, no real money)" : "💰 <b>New purchase</b>",
+        (input.provider === "stripe" ? process.env.STRIPE_SECRET_KEY : process.env.PAYSTACK_SECRET_KEY)?.trim().match(/^(sk|rk)_test_/) ? "🧪 <b>TEST purchase</b> (test key, no real money)" : "💰 <b>New purchase</b>",
         `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
-        `💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}`,
+        `💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}${input.provider === "stripe" ? " via Stripe" : ""}`,
         `🧾 ${escapeHtml(input.reference)}`,
       ].join("\n")
     );

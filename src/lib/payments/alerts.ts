@@ -22,7 +22,7 @@ const HEADLINE: Record<FunnelStep, string> = {
   viewed: "👀 <b>Paywall viewed</b>",
   unlock: "🔓 <b>Unlock clicked</b>",
   opened: "🧾 <b>Checkout opened</b>",
-  started: "💳 <b>Payment started</b> (sent to Paystack)",
+  started: "💳 <b>Payment started</b> (sent to the payment page)",
   not_started: "⚠️ <b>Payment could not start</b>",
   not_completed: "❌ <b>Payment not completed</b>",
   client_error: "🚧 <b>Checkout problem on the visitor's side</b>",
@@ -34,7 +34,7 @@ const sent = new Set<string>(); // per server instance, best effort: stops the s
 function modeNote(): string | null {
   const notes: string[] = [];
   if (gateActive()) notes.push("🔒 private test");
-  if (process.env.PAYSTACK_SECRET_KEY?.trim().startsWith("sk_test_")) notes.push("🧪 test key");
+  if (process.env.PAYSTACK_SECRET_KEY?.trim().startsWith("sk_test_") || /^(sk|rk)_test_/.test(process.env.STRIPE_SECRET_KEY?.trim() ?? "")) notes.push("🧪 test key");
   return notes.length ? notes.join(" · ") : null;
 }
 
@@ -47,7 +47,9 @@ export function funnelAlert(
   step: FunnelStep,
   major: { name: string; score: number },
   extra: string[] = [],
-  onceKey?: string
+  onceKey?: string,
+  /** What THIS payment is charged, when it is not the Paystack price (a Stripe payment, in dollars). */
+  paid?: { amount: number; currency: string; provider?: string }
 ): void {
   if (!telegramEnabled() || process.env.TELEGRAM_PAYMENT_ALERTS === "off") return;
   if (step === "viewed" && process.env.TELEGRAM_PAYWALL_VIEWS === "off") return;
@@ -62,8 +64,8 @@ export function funnelAlert(
   const lines = [HEADLINE[step], `📚 ${escapeHtml(major.name)} (${major.score}%) · ${escapeHtml(PLAN_COPY[planTypeFor(major.score)].name)}`];
   if (step === "started" && PAYMENTS_MODE === "live") {
     try {
-      const paid = activeCharge();
-      lines.push(`💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}`);
+      const charged = paid ?? activeCharge();
+      lines.push(`💵 ${(charged.amount / 100).toFixed(2)} ${charged.currency}${paid?.provider ? ` via ${paid.provider}` : ""}`);
     } catch {
       // a bad price setting is reported by the "could not start" alert, not here
     }
