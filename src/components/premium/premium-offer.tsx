@@ -54,8 +54,13 @@ function readResume(majorName: string): string | undefined {
 // `approx` = a dollar amount ("US$4.99") the server sends only to visitors outside Ghana. They see it as the headline
 // price (a guide), with a line under it saying what is really charged in cedis, so nothing is hidden before the
 // payment page. It never changes what is charged.
-type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string };
+export type LaunchInfo = { regular: Price; endsAt: string; regularApprox?: string };
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo };
 let statusRequest: Promise<Status> | null = null;
+function refreshStatus() {
+  statusRequest = null;
+  return fetchStatus();
+}
 function fetchStatus() {
   statusRequest ??= fetch("/api/payments/status", { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : { enabled: false, gated: false }))
@@ -79,8 +84,23 @@ export function PremiumOffer({ major }: { major: Major }) {
       live = false;
     };
   }, []);
+  // When a launch discount ends, ask the server again at that moment (a little after it), so the page drops the discount
+  // by itself instead of showing a price that is no longer charged. Timers cannot be longer than about 24 days: for a
+  // launch further away than that, this simply checks again then.
+  const endsAt = status?.launch?.endsAt;
+  useEffect(() => {
+    if (!endsAt) return;
+    const wait = Math.min(new Date(endsAt).getTime() - Date.now() + 1500, 2_000_000_000);
+    const id = setTimeout(() => {
+      refreshStatus().then((s) => {
+        if (s.price) setPrice(s.price);
+        setStatus(s);
+      });
+    }, Math.max(wait, 0));
+    return () => clearTimeout(id);
+  }, [endsAt]);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} gated={status.gated} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} gated={status.gated} />;
 }
 
 // The real preview of the plan for this major (two recommendations and counts), from /api/plan/preview. If it cannot be
@@ -100,7 +120,7 @@ function usePreview(majorName: string): PlanPreview | null {
   return preview;
 }
 
-function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; gated: boolean }) {
+function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; gated: boolean }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const words = offerCopy(planType, major.name, major.score);
@@ -206,6 +226,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           planType={planType}
           price={price}
           approx={approx}
+          launch={launch}
           resumeReference={resume}
           onPaid={loadPlan}
           onClose={() => setOpen(false)}
@@ -256,7 +277,9 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
         </ul>
 
         <div className="offer-buy space-y-3 border-t border-border/20 pt-5">
-          <p className="flex items-baseline gap-2">
+          {launch && <LaunchBadge launch={launch} />}
+          <p className="flex flex-wrap items-baseline gap-x-2">
+            {launch && <span className="text-lg font-bold tabular-nums text-muted-foreground line-through decoration-2">{launch.regularApprox ?? launch.regular.label}</span>}
             <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
             <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one payment</span>
           </p>
@@ -356,4 +379,32 @@ export function insideList(preview: PlanPreview | null, fallback: string[]): str
     `${c.careerPaths} career paths to aim for, ${c.skills} skills and ${c.aiTools} AI tools to learn`,
     "Your AI exposure, task by task, with internship tips and a PDF you can keep",
   ];
+}
+
+
+/**
+ * "Launch price" with the REAL end: the date and time the server will stop charging it, and how long is left, counted from
+ * the end the server reported. It updates once a minute, and the page asks the server again when the end passes, so it
+ * never shows time that is not really left.
+ */
+function LaunchBadge({ launch }: { launch: LaunchInfo }) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 60_000);
+    return () => clearInterval(id);
+  }, []);
+  const end = new Date(launch.endsAt);
+  const ms = end.getTime() - now;
+  if (ms <= 0) return null;
+  const hours = Math.ceil(ms / 3_600_000);
+  const minutes = Math.max(1, Math.ceil(ms / 60_000));
+  const left =
+    ms < 3_600_000 ? `${minutes} ${minutes === 1 ? "minute" : "minutes"} left` : hours <= 24 ? `${hours} ${hours === 1 ? "hour" : "hours"} left` : `${Math.ceil(hours / 24)} days left`;
+  const when = end.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  return (
+    <p className="inline-flex flex-wrap items-center gap-x-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-primary">
+      <span>Launch price</span>
+      <span className="text-foreground/80">ends {when} · {left}</span>
+    </p>
+  );
 }

@@ -6,7 +6,7 @@ import { guard, json, readBody } from "@/lib/payments/http";
 import { registerPurchase } from "@/lib/payments/purchases";
 import { statusOf, storeEnabled } from "@/lib/payments/store";
 import { currentPrice } from "@/lib/payments/price";
-import { PAYMENTS_MODE, PRODUCT_NAME } from "@/lib/premium";
+import { PAYMENTS_MODE, PRODUCT_NAME, priceOf } from "@/lib/premium";
 
 // Step 2: ask the provider whether the payment really happened. This is the ONLY place that grants the
 // unlock cookie, and it does so only when the provider (not the browser) says "success" for this exact
@@ -43,10 +43,17 @@ export async function POST(req: NextRequest) {
       } catch {
         console.error("[checkout] could not check the refund status"); // a database problem must not block a paying customer
       }
-      await registerPurchase({ reference, major, paystackId: result.transactionId, email: result.customerEmail });
+      await registerPurchase({
+        reference,
+        major,
+        paystackId: result.transactionId,
+        email: result.customerEmail,
+        paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
+      });
     }
 
-    const price = currentPrice();
+    // The revenue figure is what was paid (the launch price if the buyer paid that), not whatever the price is by now
+    const price = result.amountMinor != null && result.currency ? priceOf(result.currency, result.amountMinor) : currentPrice();
     const out = NextResponse.json(
       { status: "success", transactionId: result.transactionId ?? reference, value: price.value, currency: price.currency, itemName: PRODUCT_NAME },
       { headers: { "Cache-Control": "no-store" } }

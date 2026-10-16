@@ -2,7 +2,7 @@ import { after } from "next/server";
 import { PAYMENTS_MODE, PLAN_COPY, planTypeFor } from "@/lib/premium";
 import { escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 import { gateActive } from "./gate";
-import { charge } from "./paystack";
+import { activeCharge } from "./paystack";
 
 // SERVER ONLY. Telegram alerts for the steps BEFORE a purchase, so you can see how far people get:
 //
@@ -62,7 +62,7 @@ export function funnelAlert(
   const lines = [HEADLINE[step], `📚 ${escapeHtml(major.name)} (${major.score}%) · ${escapeHtml(PLAN_COPY[planTypeFor(major.score)].name)}`];
   if (step === "started" && PAYMENTS_MODE === "live") {
     try {
-      const paid = charge();
+      const paid = activeCharge();
       lines.push(`💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}`);
     } catch {
       // a bad price setting is reported by the "could not start" alert, not here

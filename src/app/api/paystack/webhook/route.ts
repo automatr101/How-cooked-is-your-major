@@ -86,7 +86,13 @@ export async function POST(req: NextRequest) {
     if (result.status === "success") {
       // Records the purchase (with a fingerprint of the email, never the email) and sends the "New purchase"
       // alert, unless the buyer's browser got there first, in which case it was already done.
-      await registerPurchase({ reference, major, paystackId: result.transactionId, email: result.customerEmail });
+      await registerPurchase({
+        reference,
+        major,
+        paystackId: result.transactionId,
+        email: result.customerEmail,
+        paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
+      });
     } else {
       await alert([
         "⚠️ <b>Payment did not pass the check</b>",

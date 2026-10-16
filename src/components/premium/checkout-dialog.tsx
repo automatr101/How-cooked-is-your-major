@@ -40,6 +40,8 @@ interface Props {
   price: Price;
   /** A dollar amount ("US$4.99") for visitors outside Ghana, shown as the headline price with the cedi charge stated under it. Never what is charged. */
   approx?: string;
+  /** A running launch discount: what the normal price is and when it ends. Never what is charged (the server decides that). */
+  launch?: { regular: Price; endsAt: string; regularApprox?: string };
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
   /** Called once the payment is confirmed. Must load the plan; the dialog then shows "ready". */
@@ -62,7 +64,7 @@ const FAILURE_TEXT: Record<string, string> = {
   expired: "That payment session expired. Please start again.",
 };
 
-export function CheckoutDialog({ major, planType, price, approx, resumeReference, onPaid, onClose, onViewPlan }: Props) {
+export function CheckoutDialog({ major, planType, price, approx, launch, resumeReference, onPaid, onClose, onViewPlan }: Props) {
   const reduceMotion = useReducedMotion();
   const copy = PLAN_COPY[planType];
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference } : { name: "review" });
@@ -354,10 +356,16 @@ export function CheckoutDialog({ major, planType, price, approx, resumeReference
                     <p className="text-xs text-muted-foreground">for {major.name}</p>
                   </div>
                   <p className="text-right">
+                    {launch && <span className="mr-2 text-base font-bold tabular-nums text-muted-foreground line-through decoration-2">{launch.regularApprox ?? launch.regular.label}</span>}
                     <span className="text-2xl font-black tabular-nums">{approx ?? price.label}</span>
                     <span className="block text-[10px] font-black uppercase tracking-widest text-muted-foreground">one-time</span>
                   </p>
                 </div>
+                {launch && (
+                  <p className="mt-3 border-t border-border/40 pt-3 text-[11px] font-bold leading-relaxed text-primary">
+                    Launch price, until {new Date(launch.endsAt).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. After that the price is {launch.regularApprox ?? launch.regular.label}.
+                  </p>
+                )}
                 {approx && (
                   // Only sent to visitors outside Ghana: the headline above is the dollar guide, this says what the payment page will show
                   <p className="mt-3 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">

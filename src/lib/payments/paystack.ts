@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
 import { isPaystackPage } from "./paystack-url";
+import { activeLaunch, launchMinor } from "./launch";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
@@ -24,6 +25,13 @@ export function charge(): { currency: string; amount: number } {
     throw new SafeError(`PAYSTACK_AMOUNT_MINOR must be a whole number when PAYSTACK_CURRENCY is ${currency}`);
   }
   return { currency, amount };
+}
+
+/** What a payment started RIGHT NOW is charged: the launch price while the launch is running, otherwise the normal price. */
+export function activeCharge(now: Date = new Date()): { currency: string; amount: number } {
+  const regular = charge();
+  const launch = activeLaunch(regular.amount, now);
+  return launch ? { currency: regular.currency, amount: launch.minor } : regular;
 }
 
 // Which payment options Paystack's page offers. Left unset, Paystack shows every channel enabled on the account (Settings >
@@ -74,7 +82,7 @@ export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
   async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
-    const { currency, amount } = charge();
+    const { currency, amount } = activeCharge();
     const { ok, httpStatus, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
@@ -117,10 +125,14 @@ export const paystackProvider: PaymentProvider = {
         // The transaction is real and paid. Make sure it is the one we created, for this major and price.
         if (d.reference !== reference) return { status: "failed", reason: "reference_mismatch" };
         if (meta.product !== PRODUCT_ID || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
+        // The normal price, or the launch price (also after the launch has ended: that payment was started while it ran).
+        // The amount is only ever chosen by our server when the payment starts, so no other amount can be paid here.
         const expected = charge();
-        if (d.currency !== expected.currency || Number(d.amount) !== expected.amount) return { status: "failed", reason: "wrong_amount" };
+        const paidMinor = Number(d.amount);
+        const launched = launchMinor(expected.amount);
+        if (d.currency !== expected.currency || !(paidMinor === expected.amount || (launched !== null && paidMinor === launched))) return { status: "failed", reason: "wrong_amount" };
         const email = (d.customer as { email?: unknown } | undefined)?.email;
-        return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined };
+        return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined, amountMinor: paidMinor, currency: String(d.currency) };
       }
       case "abandoned":
         return { status: "cancelled", detail: gatewayNote(d) };

@@ -15,9 +15,11 @@ export async function registerPurchase(input: {
   major: { name: string; slug: string; score: number };
   paystackId?: string;
   email?: string;
+  /** What Paystack says was paid. Falls back to the normal charge when absent. */
+  paid?: { amount: number; currency: string };
 }): Promise<void> {
   const planType = planTypeFor(input.major.score);
-  const paid = charge(); // what is actually charged (USD $4.99 by default; see PAYSTACK_CURRENCY)
+  const paid = input.paid ?? charge(); // what was actually paid (the launch price if that is what the buyer paid)
   let isNew: boolean;
 
   if (storeEnabled()) {
