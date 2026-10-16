@@ -3,7 +3,7 @@ import { B, ContactBox, Int, LegalPage, P, Section, SITE_URL, UL } from "@/compo
 
 export const metadata: Metadata = {
   title: "Refund Policy | How Cooked Is Your Major?",
-  description: "When and how you can get a refund for the Major Intelligence Career Plan, and how long it takes.",
+  description: "When and how you can get a refund for The Survival Plan, and how long it takes.",
   alternates: {
     canonical: `${SITE_URL}/refunds`,
   },
@@ -16,7 +16,7 @@ export default function RefundsPage() {
       current="/refunds"
       intro={
         <>
-          The Major Intelligence Career Plan is a digital product that is delivered the moment you pay, so it cannot be &ldquo;returned&rdquo; like a physical item. We still want you to be treated fairly: <B>if something goes wrong, we will fix it or refund you.</B> This policy is part of our <Int href="/terms">Terms of Service</Int>.
+          The Survival Plan is a digital product that is delivered the moment you pay, so it cannot be &ldquo;returned&rdquo; like a physical item. We still want you to be treated fairly: <B>if something goes wrong, we will fix it or refund you.</B> This policy is part of our <Int href="/terms">Terms of Service</Int>.
         </>
       }
     >

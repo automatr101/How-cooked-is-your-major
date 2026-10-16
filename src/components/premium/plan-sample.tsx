@@ -35,7 +35,7 @@ export function PlanSample() {
   return (
     <section aria-labelledby="plan-sample-title" className="relative z-20 mt-4 w-full max-w-3xl px-6">
       <div className="rounded-3xl border border-border bg-card/60 p-6 backdrop-blur-xl sm:p-8">
-        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">The optional career plan</p>
+        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">The optional Survival Plan</p>
         <h2 id="plan-sample-title" className="mt-1 text-2xl font-black italic uppercase leading-[0.95] tracking-tighter sm:text-3xl">
           What&apos;s in the plan
         </h2>

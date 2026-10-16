@@ -11,7 +11,7 @@ export type PaymentsMode = "off" | "test" | "live";
 const raw = process.env.NEXT_PUBLIC_PAYMENTS_MODE;
 export const PAYMENTS_MODE: PaymentsMode = raw === "test" || raw === "live" ? raw : "off";
 
-export const PRODUCT_NAME = "Major Intelligence Career Plan";
+export const PRODUCT_NAME = "The Survival Plan";
 export const PRODUCT_ID = "major-intelligence-career-plan";
 // The DEFAULT price: used by the fake checkout and whenever the Paystack settings are not set. What a buyer is really
 // charged in live mode comes from PAYSTACK_CURRENCY and PAYSTACK_AMOUNT_MINOR on the server (a Ghana Paystack
@@ -86,47 +86,47 @@ export function lockedItems(majorName: string): string[] {
 export function offerCopy(planType: PlanType, majorName: string, score: number): { headline: string; blurb: string } {
   const name = majorName.trim();
   const m = name && name.length <= MAX_NAME_IN_LIST ? name : "your major";
-  switch (planType) {
-    case "uncooking":
-      return {
-        headline: `${score}% cooked. Move before it hits.`,
-        blurb: `The free score shows the risk. This plan shows the way out for ${m}: what to learn, what to build and who to reach, one step at a time.`,
-      };
-    case "future_proof":
-      return {
-        headline: `${score}%: room to move. Use it.`,
-        blurb: `See where AI reaches ${m} first, and the 30/60/90-day moves that keep you ahead of it. Doing nothing is the only risky option.`,
-      };
-    default:
-      return {
-        headline: `${score}%: a safe start. Build the lead.`,
-        blurb: `A safe score is a starting point, not a plan. This turns it into an edge for ${m} that lasts.`,
-      };
+  // The words follow the score in three bands (60+, 30-59, under 30). Which plan CONTENT a score gets (planTypeFor) is unchanged.
+  if (score >= 60) {
+    return {
+      headline: `Your major is ${score}% cooked. Here's your 90-day escape plan.`,
+      blurb: `The free score shows the risk. This plan shows the way out for ${m}: what to learn, what to build and who to reach, one step at a time.`,
+    };
   }
+  if (score >= 30) {
+    return {
+      headline: `${score}%: not doomed, not safe. Know what hits first.`,
+      blurb: `See where AI reaches ${m} first, and the 30/60/90-day moves that keep you ahead of it. Doing nothing is the only risky option.`,
+    };
+  }
+  return {
+    headline: `${score}%: you're safe. Future-proof your edge.`,
+    blurb: `A safe score is a starting point, not a plan. This turns it into an edge for ${m} that lasts.`,
+  };
 }
 
 export const PLAN_COPY: Record<PlanType, PlanCopy> = {
   uncooking: {
-    name: "Uncooking Plan",
-    eyebrow: "Your uncooking plan",
+    name: "The Survival Plan",
+    eyebrow: "Your survival plan",
     headline: "You're cooked. Here's how we fix it.",
-    cta: "Get My Uncooking Plan",
+    cta: "Get My Survival Plan",
     blurb: "The free score tells you how exposed you are. The plan tells you what to do about it, step by step.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
   },
   future_proof: {
-    name: "Future-Proof Plan",
-    eyebrow: "Your future-proof plan",
+    name: "The Survival Plan",
+    eyebrow: "Your survival plan",
     headline: "You're not cooked. But don't get comfortable.",
-    cta: "Get My Future-Proof Plan",
+    cta: "Get My Survival Plan",
     blurb: "You have room to move. The plan shows where AI will reach you first and how to stay ahead of it.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
   },
   advantage: {
-    name: "Career Advantage Plan",
-    eyebrow: "Your career advantage plan",
+    name: "The Survival Plan",
+    eyebrow: "Your survival plan",
     headline: "You're safe. Now build your advantage.",
-    cta: "Build My Career Advantage",
+    cta: "Future-Proof My Edge",
     blurb: "A strong starting position is not a plan. This turns yours into a lead that lasts.",
     preview: ["AI exposure analysis", "Career opportunities", "Skills to build"],
   },

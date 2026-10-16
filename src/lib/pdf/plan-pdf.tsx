@@ -127,7 +127,7 @@ export function PlanPdf({ plan }: { plan: Plan }) {
   const topOpp = plan.strongPaths.slice(0, 2).map((p) => p.title);
 
   return (
-    <Document title={`${plan.planName} - ${plan.major.name}`} author="MajorLabs Intelligence" subject="Major Intelligence Career Plan, 2026 Edition" creator="MajorLabs Intelligence">
+    <Document title={`${plan.planName} - ${plan.major.name}`} author="MajorLabs Intelligence" subject="The Survival Plan, 2026 Edition" creator="MajorLabs Intelligence">
       {/* 1. Cover */}
       <Page size="A4" style={s.page}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>

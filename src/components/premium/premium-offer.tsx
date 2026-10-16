@@ -309,7 +309,11 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated }: { ma
                 notifyUnlockClicked(major);
                 setOpen(true);
               }}
-              className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+              className={
+                "w-full rounded-full px-6 py-4 text-sm font-black uppercase tracking-widest transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card " +
+                // Under 30 the visitor is a sharer more than a buyer: the share buttons above are the main action, the plan is the quieter one
+                (major.score < 30 ? "border border-primary/60 bg-transparent text-primary" : "bg-primary text-primary-foreground shadow-xl")
+              }
             >
               {copy.cta}
             </button>

@@ -3,7 +3,7 @@ import { B, ContactBox, Ext, Int, LegalPage, P, Section, SITE_URL, UL } from "@/
 
 export const metadata: Metadata = {
   title: "Terms of Service | How Cooked Is Your Major?",
-  description: "The terms for using How Cooked Is Your Major? and buying the Major Intelligence Career Plan.",
+  description: "The terms for using How Cooked Is Your Major? and buying The Survival Plan.",
   alternates: {
     canonical: `${SITE_URL}/terms`,
   },
@@ -16,7 +16,7 @@ export default function TermsPage() {
       current="/terms"
       intro={
         <>
-          These Terms apply when you use <B>How Cooked Is Your Major?</B> at <Ext href={SITE_URL}>{SITE_URL.replace("https://", "")}</Ext> (the &ldquo;Site&rdquo;), run by MajorLabs Intelligence (&ldquo;we&rdquo;, &ldquo;us&rdquo;), and when you buy the Major Intelligence Career Plan (the &ldquo;Plan&rdquo;). By using the Site or buying the Plan you agree to them. If you do not agree, please do not use the Site.
+          These Terms apply when you use <B>How Cooked Is Your Major?</B> at <Ext href={SITE_URL}>{SITE_URL.replace("https://", "")}</Ext> (the &ldquo;Site&rdquo;), run by MajorLabs Intelligence (&ldquo;we&rdquo;, &ldquo;us&rdquo;), and when you buy the The Survival Plan (the &ldquo;Plan&rdquo;). By using the Site or buying the Plan you agree to them. If you do not agree, please do not use the Site.
         </>
       }
     >
@@ -29,7 +29,7 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section n={2} title="The Paid Career Plan">
+      <Section n={2} title="The Survival Plan (Paid)">
         <UL>
           <li><B>What you get:</B> a written career plan for the major you choose, shown on the Site and available as a PDF download, delivered instantly after a successful payment. It is written for that major and its AI-risk level: it is general guidance for the major, not a personalised assessment of you.</li>
           <li><B>Price and currency:</B> the price is shown at checkout before you pay and is charged in Ghana cedis (GHS) for visitors in Ghana and in US dollars (USD) for visitors elsewhere. If your card or account is in another currency, your bank or provider converts it and may add its own fees or use its own exchange rate, which we do not control. We may change the price at any time; a change applies only to later purchases.</li>
