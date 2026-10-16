@@ -22,6 +22,9 @@ import { ReviewPopup } from "@/components/review-box";
 import { HeardFromPoll } from "@/components/heard-from";
 import { MajorSearch } from "@/components/major-search";
 import { PremiumOffer } from "@/components/premium/premium-offer";
+import { AccuracyPoll } from "@/components/reviews/accuracy-poll";
+import { PlanSample } from "@/components/premium/plan-sample";
+import { ReviewsSection } from "@/components/reviews/reviews-section";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
 
@@ -289,6 +292,14 @@ export default function HomeClient() {
       <Hero />
       <LiveTicker />
 
+      {/* Before a scan only: what the optional plan holds, with a real, labelled sample, then real reviews if there are any */}
+      {!selectedMajor && (
+        <>
+          <PlanSample />
+          <ReviewsSection className="relative z-20 mt-8 w-full max-w-3xl px-6" />
+        </>
+      )}
+
       {/* Scanning Overlay */}
       <AnimatePresence>
         {isScanning && (
@@ -346,8 +357,8 @@ export default function HomeClient() {
             id="result"
           >
             {/* Laptops and desktops: the card and its tips on the left, compare and share on the right. Phones stack them. */}
-            <div className="lg:grid lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-12 lg:items-start lg:justify-center">
-            <div className="min-w-0">
+            <div className="grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-x-12 lg:items-start lg:justify-center">
+            <div className="min-w-0 order-1">
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <BackgroundGradient
               containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
@@ -455,6 +466,9 @@ export default function HomeClient() {
               </div>
             </BackgroundGradient>
 
+            {/* One tap: was this score accurate? Stores a real thumb for this major (only shown when the database is set up). */}
+            <AccuracyPoll majorName={selectedMajor.name} />
+
             {/* 🔥 Roast Me Again: a new roast for the same result (no rescan, no reload, no sound) */}
             <div className="flex justify-center mt-5">
               <button
@@ -478,7 +492,15 @@ export default function HomeClient() {
 
             </div>
 
-            <div className="min-w-0 lg:sticky lg:top-24">
+            {/* The paid career plan, right after the roast: the roast is the moment the visitor cares most about their score,
+                so on phones the offer sits directly under it (and under "Roast Me Again"). On laptops and desktops it spans the
+                full width under both columns as a landscape card, instead of being squeezed into the narrow left column.
+                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
+            <div className="min-w-0 order-2 lg:order-3 lg:col-span-2">
+              <PremiumOffer major={selectedMajor} />
+            </div>
+
+            <div className="min-w-0 order-3 lg:order-2 lg:sticky lg:top-24">
             {/* Comparison Section */}
             <div className="mt-12 lg:mt-0 w-full">
               {!showComparisonSearch && !comparedMajor && (
@@ -627,10 +649,6 @@ export default function HomeClient() {
               </button>
             </div>
 
-            {/* The paid career plan, directly under the share buttons so it is seen without a long scroll.
-                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
-            <PremiumOffer major={selectedMajor} />
-
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
             </div>
@@ -638,6 +656,9 @@ export default function HomeClient() {
             {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see.
                 Kept below the offer so nothing sits between the share buttons and the offer. */}
             <HeardFromPoll />
+
+            {/* Real reviews only: renders nothing until there are approved ones. Labelled by where they came from. */}
+            <ReviewsSection majorSlug={slugify(selectedMajor.name)} className="mt-8" />
             </div>
             </div>
           </motion.div>

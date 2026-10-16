@@ -15,7 +15,7 @@ import type { Price } from "@/lib/premium";
 // to the bottom (the rating popup, the page footer's padding) can stay clear of it. At desktop widths the bar is
 // display:none, its height is 0, and the variable is 0, so nothing changes there.
 
-export function StickyCta({ show, price, approx, onClick }: { show: boolean; price: Price; approx?: string; onClick: () => void }) {
+export function StickyCta({ show, price, approx, label = "Unlock your plan", onClick }: { show: boolean; price: Price; approx?: string; label?: string; onClick: () => void }) {
   const reduceMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -54,7 +54,7 @@ export function StickyCta({ show, price, approx, onClick }: { show: boolean; pri
             className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <Lock aria-hidden className="h-4 w-4 shrink-0" />
-            <span>Unlock your plan · {approx ?? price.label}</span>
+            <span>{label} · {approx ?? price.label}</span>
           </button>
         </motion.div>
       )}

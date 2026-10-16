@@ -31,6 +31,9 @@ export interface VerifyResult {
   transactionId?: string;
   /** The payer's email as Paystack has it. Used only to make a keyed fingerprint; never stored or logged as is. */
   customerEmail?: string;
+  /** What the provider says was actually paid, smallest unit and currency. Used to record the purchase at the price it was paid at. */
+  amountMinor?: number;
+  currency?: string;
   /** Short machine-readable reason when the payment did not succeed. */
   reason?: string;
   /** The provider's own wording for a decline (e.g. "Insufficient Funds"). For the owner's alert only; never sent to the browser. */

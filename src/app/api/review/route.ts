@@ -3,10 +3,13 @@ import { majors } from "@/lib/data";
 import { cleanText } from "@/lib/clean-text";
 import { crossSite } from "@/lib/same-origin";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
+import { slugify } from "@/lib/analytics";
+import { insertReview, reviewsEnabled } from "@/lib/reviews/store";
 
-// Star ratings and written reviews, delivered to the Telegram bot. Nothing is stored
-// on the site: the Telegram chat is the inbox. Silently does nothing until
-// TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are set.
+// Star ratings from the site's rating popup. They are delivered to the Telegram bot AND, when the database is set up,
+// stored in the reviews table as "free scan feedback" (waiting for approval; never quoted on the site, because the
+// popup does not ask permission to show anyone's words, so they only count towards the totals once approved).
+// Silently does nothing until TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are set, or the database is.
 
 const MAX_BODY_BYTES = 4096;
 const MAX_COMMENT_CHARS = 500;
@@ -19,7 +22,7 @@ export async function POST(req: NextRequest) {
   // Only our own review box posts here: another website must not be able to send reviews through a visitor's browser.
   if (crossSite(req)) return new Response(null, { status: 403 });
 
-  if (!telegramEnabled()) return done();
+  if (!telegramEnabled() && !reviewsEnabled()) return done();
 
   const ua = req.headers.get("user-agent") ?? "";
   if (!ua || BOT_UA.test(ua)) return done();
@@ -62,6 +65,25 @@ export async function POST(req: NextRequest) {
     .filter(Boolean)
     .join("\n");
 
-  await sendTelegram(message);
+  // Stored first and never allowed to fail the visitor's request: a database problem must not lose the Telegram alert
+  if (reviewsEnabled()) {
+    try {
+      await insertReview({
+        kind: "free_feedback",
+        major_slug: found ? slugify(found.name) : null,
+        accurate: null,
+        rating,
+        comment: text ? text.slice(0, 300) : null,
+        consent_display: false,
+        display_name: null,
+        country: null,
+        purchase_reference: null,
+        status: "pending",
+      });
+    } catch {
+      console.error("[review] could not save a rating");
+    }
+  }
+  if (telegramEnabled()) await sendTelegram(message);
   return done();
 }
