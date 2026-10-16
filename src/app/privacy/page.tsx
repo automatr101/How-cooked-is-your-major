@@ -32,7 +32,10 @@ export default function PrivacyPage() {
           <B>&ldquo;Where did you hear about us?&rdquo;</B> After a result we may ask where you found the site. You pick one answer from a fixed list; nothing you type is collected. The answer is recorded in our analytics.
         </P>
         <P>
-          <B>Reviews, scan alerts and the contact form.</B> If you leave a star rating or a written review, we receive it as a private message through Telegram, along with your country, device type, browser and the major you scanned. Reviews are free text, so please do not include personal details such as your name, email address or phone number. We do not publish reviews. We also receive a short private alert through Telegram when someone scans a major, containing the major, country, device type, browser and referring website. If you write to us through the contact page, we receive your message and the name and email address you type, as a private message through Telegram, with your country, device type and browser. We use them only to read and reply to you, and we do not publish them. These alerts and messages never include your IP address.
+          <B>Ratings and reviews.</B> If you tap thumbs up or down on &ldquo;Was your score accurate?&rdquo;, we store that vote with the major you scanned. If you leave a star rating in the rating pop-up, we store the rating, any words you typed (up to 300 characters) and the major you scanned. If you bought a plan and review it, we store your stars, any words you typed, and the payment reference of your purchase, so we can mark the review &ldquo;Verified purchase&rdquo; and allow one review per purchase. We do not store your name, email address or IP address with a rating or review. We show your first name or initial, your major and your country next to a review only if you tick the box that allows it. The country is the one our hosting provider detected for your visit, never one you typed. A review is not shown publicly until we have read and approved it. Reviews are free text, so please do not include personal details such as your name, email address or phone number. We also receive a private message through Telegram when a rating or review arrives (for the star pop-up it includes your country, device type and browser).
+        </P>
+        <P>
+          <B>Scan alerts and the contact form.</B> We receive a short private alert through Telegram when someone scans a major, containing the major, country, device type, browser and referring website. If you write to us through the contact page, we receive your message and the name and email address you type, as a private message through Telegram, with your country, device type and browser. We use them only to read and reply to you, and we do not publish them. These alerts and messages never include your IP address.
         </P>
         <P>
           <B>Buying the paid career plan.</B> Payment is handled by our payment provider, <Ext href="https://paystack.com">Paystack</Ext>, on Paystack&apos;s own page. Your card or mobile money details are entered there and go straight to Paystack: we never see or store them. To start a payment we send Paystack the email address you type (used for your receipt) and the major you are buying for. After a successful payment we keep a purchase record containing: the payment reference, the major, the plan type, the amount and currency, Paystack&apos;s transaction number, the date, whether it was refunded, and a one-way cryptographic fingerprint of your email address. We use the fingerprint only so you can restore your plan by entering the email you paid with. We do not store your email address itself in our database, and we do not send it to analytics or to our alerts. Paystack keeps its own record of your payment under its own policy.
@@ -54,7 +57,7 @@ export default function PrivacyPage() {
             <B>Essential:</B> your light or dark theme and your sound on/off choice; and, only if you buy a plan or restore one, a signed unlock cookie (<code>cm_entitlement</code>) that tells the Site this browser has paid for that major. It is HttpOnly and lasts one year, so your plan is still there when you come back. You can delete it at any time; you can then restore your plan with your payment reference or the email you paid with.
           </li>
           <li>
-            <B>Small reminders:</B> whether you already left a rating or chose &ldquo;maybe later&rdquo;, whether you already answered the &ldquo;where did you hear about us&rdquo; question, and, for the current tab only, which plans you opened. They stay in your own browser.
+            <B>Small reminders:</B> whether you already left a rating or chose &ldquo;maybe later&rdquo;, whether you already answered &ldquo;Was your score accurate?&rdquo; for a major, whether you already reviewed a plan, whether you already answered the &ldquo;where did you hear about us&rdquo; question, and, for the current tab only, which plans you opened. They stay in your own browser.
           </li>
           <li>
             <B>Analytics:</B> set by Google Analytics to help us understand how visitors use the Site (see Section 4).
@@ -103,10 +106,10 @@ export default function PrivacyPage() {
         <P>We use these service providers to run the Site. Each handles only what it needs to do its job:</P>
         <UL>
           <li><B>Paystack</B>: processes payments and refunds and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
-          <li><B>Supabase</B>: stores our purchase records (described in Section 1), in a database hosted in the European Union (Ireland).</li>
+          <li><B>Supabase</B>: stores our purchase records and the ratings and reviews described in Section 1, in a database hosted in the European Union (Ireland).</li>
           <li><B>Vercel</B>: hosts the Site and measures its speed and performance.</li>
           <li><B>Google</B>: Analytics and AdSense (Sections 4 and 5).</li>
-          <li><B>Telegram</B>: delivers the private alerts, reviews and contact messages to us.</li>
+          <li><B>Telegram</B>: delivers the private alerts, rating notifications and contact messages to us.</li>
         </UL>
         <P>
           We may also disclose information if the law requires it, or to protect the Site and its users from fraud or abuse. We do not sell your personal data.
@@ -117,20 +120,21 @@ export default function PrivacyPage() {
         <UL>
           <li><B>Analytics:</B> Google Analytics event data is kept for 14 months.</li>
           <li><B>Purchase records:</B> kept for as long as needed to provide your plan, support you, handle refunds and meet financial record-keeping duties.</li>
-          <li><B>Reviews, contact messages and alerts:</B> kept in our private Telegram chat until we delete them.</li>
+          <li><B>Ratings and reviews:</B> kept in our database until we delete them. A review shown on the Site stays there until we remove it or you ask us to.</li>
+          <li><B>Contact messages and alerts:</B> kept in our private Telegram chat until we delete them.</li>
           <li><B>Unlock cookie:</B> one year, or until you delete it.</li>
         </UL>
       </Section>
 
       <Section n={8} title="Your Choices and Rights">
         <P>
-          You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by writing to us through the <Int href="/contact">contact page</Int>. For a purchase, include your payment reference (it starts with &ldquo;cm-&rdquo; and is on your receipt). If we delete a purchase record you will no longer be able to restore that plan, and Paystack and financial records we are required by law to keep will remain. You can also clear your cookies and browser storage at any time, opt out of analytics and personalised ads as described above, or use the Site&apos;s free tools without giving us any personal information.
+          You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by writing to us through the <Int href="/contact">contact page</Int>. For a purchase, include your payment reference (it starts with &ldquo;cm-&rdquo; and is on your receipt). If we delete a purchase record you will no longer be able to restore that plan, and Paystack and financial records we are required by law to keep will remain. You can also ask us to remove a review you left: include your payment reference (for a verified review) or the major and the words you wrote, because we do not store your name, email address or IP address and need something to find it by. You can also clear your cookies and browser storage at any time, opt out of analytics and personalised ads as described above, or use the Site&apos;s free tools without giving us any personal information.
         </P>
       </Section>
 
       <Section n={9} title="Security">
         <P>
-          We take reasonable steps to protect information: the Site is served over HTTPS, payments happen on Paystack&apos;s secured page, the unlock cookie is signed and cannot be edited, the purchase database can only be reached by our server, and we keep your email address out of it. No system is perfectly secure, so we cannot guarantee absolute security.
+          We take reasonable steps to protect information: the Site is served over HTTPS, payments happen on Paystack&apos;s secured page, the unlock cookie is signed and cannot be edited, the purchase and review databases can only be reached by our server, and we keep your email address out of them. No system is perfectly secure, so we cannot guarantee absolute security.
         </P>
       </Section>
 
