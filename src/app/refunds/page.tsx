@@ -30,9 +30,9 @@ export default function RefundsPage() {
         </UL>
       </Section>
 
-      <Section n={2} title="If You Are Not Happy With the Plan">
+      <Section n={2} title="Our 7-Day Guarantee">
         <P>
-          Tell us <B>within 7 days of buying it</B> and say what was wrong. We read every request, and where the Plan clearly did not do what we said it would, we will refund you. Because the Plan is delivered instantly and cannot be handed back, we do not generally refund a purchase only because you changed your mind after reading it, or because the guidance is general advice for a major rather than tailored to you. Any right you have by law to cancel or to a remedy is not affected by this policy.
+          If you do not think the Plan was worth what you paid, tell us <B>within 7 days of buying it</B> and we will refund you in full. No forms, no interrogation: write to us through the <Int href="/contact">contact page</Int> with your payment reference and we will start the refund. This is on top of the cases in Section 1, which are always refunded. The guarantee covers the Plan itself. It does not cover charges for something else, or a purchase we have good reason to think is being abused (for example, repeated purchases and refunds of the same Plan).
         </P>
       </Section>
 

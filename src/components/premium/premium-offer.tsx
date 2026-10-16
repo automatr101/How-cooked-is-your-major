@@ -320,7 +320,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated }: { ma
           </div>
           <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
             <p>
-              <span className="font-bold text-foreground">Buy with confidence:</span> charged but no plan, or charged twice? Full refund. Not what we promised? Tell us within 7 days and we will make it right.{" "}
+              <span className="font-bold text-foreground">7-day guarantee:</span> not worth what you paid? Tell us within 7 days and we refund you in full. No forms. Charged but no plan, or charged twice? Refunded too.{" "}
               <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund policy</a>
             </p>
             <p className="flex items-start gap-1.5">
