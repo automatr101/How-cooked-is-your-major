@@ -77,6 +77,34 @@ export function lockedItems(majorName: string): string[] {
   ];
 }
 
+/**
+ * The words on the offer card, written for THIS visitor: their real score and their major's name. Only things that are
+ * true are said here: the score is theirs, the plan really covers what is named, nothing claims a result, a job or a salary,
+ * and nothing is scarce, counted or time-limited that is not (there is no countdown and no "only N left", because there is
+ * none). The static PLAN_COPY below is what the PDF and the alerts use.
+ */
+export function offerCopy(planType: PlanType, majorName: string, score: number): { headline: string; blurb: string } {
+  const name = majorName.trim();
+  const m = name && name.length <= MAX_NAME_IN_LIST ? name : "your major";
+  switch (planType) {
+    case "uncooking":
+      return {
+        headline: `${score}% cooked. Move before it hits.`,
+        blurb: `The free score shows the risk. This plan shows the way out for ${m}: what to learn, what to build and who to reach, one step at a time.`,
+      };
+    case "future_proof":
+      return {
+        headline: `${score}%: room to move. Use it.`,
+        blurb: `See where AI reaches ${m} first, and the 30/60/90-day moves that keep you ahead of it. Doing nothing is the only risky option.`,
+      };
+    default:
+      return {
+        headline: `${score}%: a safe start. Build the lead.`,
+        blurb: `A safe score is a starting point, not a plan. This turns it into an edge for ${m} that lasts.`,
+      };
+  }
+}
+
 export const PLAN_COPY: Record<PlanType, PlanCopy> = {
   uncooking: {
     name: "Uncooking Plan",

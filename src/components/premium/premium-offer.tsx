@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { Check, Lock, ShieldCheck } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { markInternal, slugify } from "@/lib/analytics";
-import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, planTypeFor, type Price } from "@/lib/premium";
+import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, offerCopy, planTypeFor, type Price } from "@/lib/premium";
 import { notifyStep, notifyUnlockClicked, setGated, setPrice, trackOfferClicked, trackOfferViewed, trackReportUnlocked, trackStickyCtaClicked } from "@/lib/premium-analytics";
 import type { Plan } from "@/lib/plan/types";
 import type { PlanPreview } from "@/lib/plan/preview";
@@ -103,6 +103,8 @@ function usePreview(majorName: string): PlanPreview | null {
 function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; gated: boolean }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
+  const words = offerCopy(planType, major.name, major.score);
+  const shortName = major.name.length <= 34 ? major.name : "your major";
   const slug = slugify(major.name);
 
   const [resume] = useState(() => readResume(major.name));
@@ -239,8 +241,8 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
               </span>
             )}
           </div>
-          <h3 className="text-2xl font-black italic uppercase leading-[0.95] tracking-tighter sm:text-3xl">{copy.headline}</h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">{copy.blurb}</p>
+          <h3 className="text-2xl font-black italic uppercase leading-[0.95] tracking-tighter sm:text-3xl">{words.headline}</h3>
+          <p className="text-sm leading-relaxed text-muted-foreground">{words.blurb}</p>
         </div>
 
         {/* What is inside, short: three lines, every number counted from the plan the buyer actually gets for this major */}
@@ -256,7 +258,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
         <div className="offer-buy space-y-3 border-t border-border/20 pt-5">
           <p className="flex items-baseline gap-2">
             <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
-            <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one-time, no subscription</span>
+            <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one payment</span>
           </p>
           {approx && (
             // Only sent to visitors outside Ghana: the headline above is the dollar guide, this line says what is really charged
@@ -264,6 +266,11 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
               You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
             </p>
           )}
+          <ul className="space-y-1 text-xs font-bold text-foreground/90">
+            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Instant access, no account, no subscription</li>
+            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Built from {shortName}&apos;s own score, pay and growth data</li>
+            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Download it as a PDF and keep it</li>
+          </ul>
           {/* The glove points at the button below it. The space above the button is always reserved, so it never shifts the page. */}
           <div className="relative pt-[3.25rem]">
             <PointingHand className="absolute right-8 top-0" />
@@ -282,7 +289,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           </div>
           <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
             <p>
-              <span className="font-bold text-foreground">Refunds:</span> charged but no plan, or charged twice? Full refund. Not what we promised? Tell us within 7 days.{" "}
+              <span className="font-bold text-foreground">Buy with confidence:</span> charged but no plan, or charged twice? Full refund. Not what we promised? Tell us within 7 days and we will make it right.{" "}
               <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund policy</a>
             </p>
             <p className="flex items-start gap-1.5">
@@ -300,7 +307,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
           // The real taste is one tap away instead of making every visitor scroll past it. Native details/summary: no script, works with a keyboard.
           <details className="offer-peek group rounded-2xl border border-border/60 bg-background/50 p-4">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-black [&::-webkit-details-marker]:hidden">
-              <span>Peek inside: 2 real recommendations</span>
+              <span>See 2 real recommendations from your plan, free</span>
               <span aria-hidden className="text-lg leading-none text-muted-foreground transition-transform group-open:rotate-45">+</span>
             </summary>
             <p className="mb-3 mt-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
@@ -334,7 +341,7 @@ function Offer({ major, unlocked, price, approx, gated }: { major: Major; unlock
 
     </div>
     {dialog}
-    <StickyCta show={showSticky} price={price} approx={approx} onClick={unlockFromBar} />
+    <StickyCta show={showSticky} price={price} approx={approx} label={`Get your ${shortName} plan`} onClick={unlockFromBar} />
     </>
   );
 }
