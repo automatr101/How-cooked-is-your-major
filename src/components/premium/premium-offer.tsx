@@ -309,14 +309,18 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated }: { ma
                 notifyUnlockClicked(major);
                 setOpen(true);
               }}
-              className="w-full rounded-full bg-primary px-6 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+              className={
+                "w-full rounded-full px-6 py-4 text-sm font-black uppercase tracking-widest transition hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-card " +
+                // Under 30 the visitor is a sharer more than a buyer: the share buttons above are the main action, the plan is the quieter one
+                (major.score < 30 ? "border border-primary/60 bg-transparent text-primary" : "bg-primary text-primary-foreground shadow-xl")
+              }
             >
               {copy.cta}
             </button>
           </div>
           <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
             <p>
-              <span className="font-bold text-foreground">Buy with confidence:</span> charged but no plan, or charged twice? Full refund. Not what we promised? Tell us within 7 days and we will make it right.{" "}
+              <span className="font-bold text-foreground">7-day guarantee:</span> not worth what you paid? Tell us within 7 days and we refund you in full. No forms. Charged but no plan, or charged twice? Refunded too.{" "}
               <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund policy</a>
             </p>
             <p className="flex items-start gap-1.5">
