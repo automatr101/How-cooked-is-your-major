@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <B>Scan alerts and the contact form.</B> We receive a short private alert through Telegram when someone scans a major, containing the major, country, device type, browser and referring website. If you write to us through the contact page, we receive your message and the name and email address you type, as a private message through Telegram, with your country, device type and browser. We use them only to read and reply to you, and we do not publish them. These alerts and messages never include your IP address.
         </P>
         <P>
-          <B>Buying the paid career plan.</B> Payment is handled by our payment provider, <Ext href="https://paystack.com">Paystack</Ext>, on Paystack&apos;s own page. Your card or mobile money details are entered there and go straight to Paystack: we never see or store them. To start a payment we send Paystack the email address you type (used for your receipt) and the major you are buying for. After a successful payment we keep a purchase record containing: the payment reference, the major, the plan type, the amount and currency, Paystack&apos;s transaction number, the date, whether it was refunded, and a one-way cryptographic fingerprint of your email address. We use the fingerprint only so you can restore your plan by entering the email you paid with. We do not store your email address itself in our database, and we do not send it to analytics or to our alerts. Paystack keeps its own record of your payment under its own policy.
+          <B>Buying the paid career plan.</B> Payment is handled by our payment providers on their own pages: <Ext href="https://paystack.com">Paystack</Ext> (for visitors in Ghana, in cedis, by card or mobile money) and <Ext href="https://stripe.com">Stripe</Ext> (for visitors elsewhere, in US dollars, by card or the wallets Stripe offers). Your payment details are entered there and go straight to the provider: we never see or store them. To start a payment we send the provider the email address you type (used for your receipt) and the major you are buying for. After a successful payment we keep a purchase record containing: the payment reference, the major, the plan type, the amount and currency, the provider&apos;s transaction number, the date, whether it was refunded, and a one-way cryptographic fingerprint of your email address. We use the fingerprint only so you can restore your plan by entering the email you paid with. We do not store your email address itself in our database, and we do not send it to analytics or to our alerts. Paystack and Stripe each keep their own record of a payment under their own policies.
         </P>
         <P>
           <B>Our private alerts about payments.</B> When someone clicks the unlock button, starts a payment, completes or abandons one, or is refunded, we receive a private Telegram message with the major, the plan, the amount, the payment reference, and your country, device type and browser. It never contains your email address, name or IP address.
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
       <Section n={3} title="How We Use Information">
         <UL>
           <li>To run the Site and deliver the plan you paid for, including letting you restore it and download your PDF</li>
-          <li>To process payments, send you a receipt (through Paystack), and handle refunds and support requests</li>
+          <li>To process payments, send you a receipt (through Paystack or Stripe), and handle refunds and support requests</li>
           <li>To understand how the Site is used, fix problems and improve it</li>
           <li>To show advertising through Google AdSense</li>
           <li>To keep the Site secure and prevent abuse and fraud</li>
@@ -105,7 +105,8 @@ export default function PrivacyPage() {
       <Section n={6} title="Who We Share Information With">
         <P>We use these service providers to run the Site. Each handles only what it needs to do its job:</P>
         <UL>
-          <li><B>Paystack</B>: processes payments and refunds and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
+          <li><B>Paystack</B>: processes payments and refunds for visitors in Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
+          <li><B>Stripe</B>: processes payments and refunds for visitors outside Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
           <li><B>Supabase</B>: stores our purchase records and the ratings and reviews described in Section 1, in a database hosted in the European Union (Ireland).</li>
           <li><B>Vercel</B>: hosts the Site and measures its speed and performance.</li>
           <li><B>Google</B>: Analytics and AdSense (Sections 4 and 5).</li>
@@ -128,13 +129,13 @@ export default function PrivacyPage() {
 
       <Section n={8} title="Your Choices and Rights">
         <P>
-          You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by writing to us through the <Int href="/contact">contact page</Int>. For a purchase, include your payment reference (it starts with &ldquo;cm-&rdquo; and is on your receipt). If we delete a purchase record you will no longer be able to restore that plan, and Paystack and financial records we are required by law to keep will remain. You can also ask us to remove a review you left: include your payment reference (for a verified review) or the major and the words you wrote, because we do not store your name, email address or IP address and need something to find it by. You can also clear your cookies and browser storage at any time, opt out of analytics and personalised ads as described above, or use the Site&apos;s free tools without giving us any personal information.
+          You can ask us what we hold about you, ask us to correct it, or ask us to delete it, by writing to us through the <Int href="/contact">contact page</Int>. For a purchase, include your payment reference (it starts with &ldquo;cm-&rdquo; and is on your receipt). If we delete a purchase record you will no longer be able to restore that plan, and the payment provider&apos;s records and financial records we are required by law to keep will remain. You can also ask us to remove a review you left: include your payment reference (for a verified review) or the major and the words you wrote, because we do not store your name, email address or IP address and need something to find it by. You can also clear your cookies and browser storage at any time, opt out of analytics and personalised ads as described above, or use the Site&apos;s free tools without giving us any personal information.
         </P>
       </Section>
 
       <Section n={9} title="Security">
         <P>
-          We take reasonable steps to protect information: the Site is served over HTTPS, payments happen on Paystack&apos;s secured page, the unlock cookie is signed and cannot be edited, the purchase and review databases can only be reached by our server, and we keep your email address out of them. No system is perfectly secure, so we cannot guarantee absolute security.
+          We take reasonable steps to protect information: the Site is served over HTTPS, payments happen on the payment provider&apos;s secured page, the unlock cookie is signed and cannot be edited, the purchase and review databases can only be reached by our server, and we keep your email address out of them. No system is perfectly secure, so we cannot guarantee absolute security.
         </P>
       </Section>
 

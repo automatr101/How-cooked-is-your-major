@@ -32,7 +32,7 @@ export default function TermsPage() {
       <Section n={2} title="The Paid Career Plan">
         <UL>
           <li><B>What you get:</B> a written career plan for the major you choose, shown on the Site and available as a PDF download, delivered instantly after a successful payment. It is written for that major and its AI-risk level: it is general guidance for the major, not a personalised assessment of you.</li>
-          <li><B>Price and currency:</B> the price is shown at checkout before you pay and is charged in Ghana cedis (GHS). If your card or mobile money account is in another currency, your bank or provider converts it and may add its own fees or use its own exchange rate, which we do not control. We may change the price at any time; a change applies only to later purchases.</li>
+          <li><B>Price and currency:</B> the price is shown at checkout before you pay and is charged in Ghana cedis (GHS) for visitors in Ghana and in US dollars (USD) for visitors elsewhere. If your card or account is in another currency, your bank or provider converts it and may add its own fees or use its own exchange rate, which we do not control. We may change the price at any time; a change applies only to later purchases.</li>
           <li><B>One-time payment:</B> there is no subscription and no automatic renewal.</li>
           <li><B>Your licence:</B> a purchase gives you a personal, non-transferable licence to read and keep the Plan for your own use. Please do not resell, publish, or share it publicly or in bulk.</li>
           <li><B>How access works:</B> your purchase is remembered by a cookie in the browser you paid with. If you use another device or clear your cookies, use &ldquo;Restore your plan&rdquo; in the checkout with your payment reference or the email you paid with. Access ends if the purchase is refunded.</li>
@@ -41,7 +41,7 @@ export default function TermsPage() {
 
       <Section n={3} title="Payments">
         <P>
-          Payments are processed by <Ext href="https://paystack.com">Paystack</Ext>, and your payment details are entered on its page and never reach us. Paystack&apos;s own terms apply to the payment itself. A payment is complete when the Site confirms it with Paystack; if you are charged but your Plan does not appear, use &ldquo;Restore your plan&rdquo; or contact us (see Section 10). Refunds are covered by our <Int href="/refunds">Refund Policy</Int>.
+          Payments are processed by <Ext href="https://paystack.com">Paystack</Ext> (visitors in Ghana) or <Ext href="https://stripe.com">Stripe</Ext> (visitors elsewhere), and your payment details are entered on the provider&apos;s page and never reach us. The provider&apos;s own terms apply to the payment itself. A payment is complete when the Site confirms it with the provider; if you are charged but your Plan does not appear, use &ldquo;Restore your plan&rdquo; or contact us (see Section 10). Refunds are covered by our <Int href="/refunds">Refund Policy</Int>.
         </P>
       </Section>
 
@@ -64,7 +64,7 @@ export default function TermsPage() {
 
       <Section n={6} title="Third-Party Services and Ads">
         <P>
-          The Site shows ads (through Google AdSense) and links to other sites, and uses services such as Paystack and Google Analytics. We do not control them and are not responsible for their content or practices; their own terms and policies apply.
+          The Site shows ads (through Google AdSense) and links to other sites, and uses services such as Paystack, Stripe and Google Analytics. We do not control them and are not responsible for their content or practices; their own terms and policies apply.
         </P>
       </Section>
 

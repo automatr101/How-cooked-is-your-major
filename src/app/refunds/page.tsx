@@ -38,15 +38,15 @@ export default function RefundsPage() {
 
       <Section n={3} title="How to Ask for a Refund">
         <P>
-          Write to us through the <Int href="/contact">contact page</Int> and include your <B>payment reference</B> (it starts with &ldquo;cm-&rdquo; and is on your Paystack receipt) or the email you paid with, and a line about what happened. We aim to reply within 3 business days. Please contact us before disputing the charge with your bank, because we can usually sort it out faster.
+          Write to us through the <Int href="/contact">contact page</Int> and include your <B>payment reference</B> (it starts with &ldquo;cm-&rdquo; and is on your payment receipt) or the email you paid with, and a line about what happened. We aim to reply within 3 business days. Please contact us before disputing the charge with your bank, because we can usually sort it out faster.
         </P>
       </Section>
 
       <Section n={4} title="How Refunds Are Paid">
         <UL>
-          <li>Refunds go back to the same card or mobile money account you paid with, through Paystack. We cannot refund to a different account.</li>
+          <li>Refunds go back to the same card, wallet or mobile money account you paid with, through the provider that took the payment (Paystack or Stripe). We cannot refund to a different account.</li>
           <li>We aim to start an approved refund within 3 business days. After that it depends on your bank or mobile money provider, and can take several business days (often up to 10) to show up.</li>
-          <li>You are refunded the full amount you were charged, in Ghana cedis. If your bank converted the payment to another currency, any difference caused by its exchange rate, and any fee your bank or provider added, is outside our control and is not included.</li>
+          <li>You are refunded the full amount you were charged, in the currency you were charged (Ghana cedis through Paystack, US dollars through Stripe). If your bank converted the payment to another currency, any difference caused by its exchange rate, and any fee your bank or provider added, is outside our control and is not included.</li>
         </UL>
       </Section>
 

@@ -39,11 +39,13 @@ function forgetUnlocked(slug: string) {
 }
 
 /** Returning from the payment page: the address carries ?cm_checkout=1&reference=... for this major. */
-function readResume(majorName: string): string | undefined {
+function readResume(majorName: string): { reference: string; session?: string } | undefined {
   if (typeof window === "undefined") return undefined;
   const p = new URLSearchParams(window.location.search);
   const ref = p.get("reference") ?? p.get("trxref");
-  return p.get("cm_checkout") === "1" && p.get("major") === majorName && ref && /^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref) ? ref : undefined;
+  if (!(p.get("cm_checkout") === "1" && p.get("major") === majorName && ref && /^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref))) return undefined;
+  const sid = p.get("sid"); // Stripe's Checkout Session id, when the buyer paid with Stripe
+  return { reference: ref, session: sid && /^cs_(test|live)_[A-Za-z0-9]{10,200}$/.test(sid) ? sid : undefined };
 }
 
 // Asks the server once per page load whether THIS visitor may see the offer: payments on, and if the private gate is
@@ -55,7 +57,7 @@ function readResume(majorName: string): string | undefined {
 // price (a guide), with a line under it saying what is really charged in cedis, so nothing is hidden before the
 // payment page. It never changes what is charged.
 export type LaunchInfo = { regular: Price; endsAt: string; regularApprox?: string };
-type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo };
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack" };
 let statusRequest: Promise<Status> | null = null;
 function refreshStatus() {
   statusRequest = null;
@@ -100,7 +102,7 @@ export function PremiumOffer({ major }: { major: Major }) {
     return () => clearTimeout(id);
   }, [endsAt]);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} gated={status.gated} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} provider={status.provider} gated={status.gated} />;
 }
 
 // The real preview of the plan for this major (two recommendations and counts), from /api/plan/preview. If it cannot be
@@ -120,7 +122,7 @@ function usePreview(majorName: string): PlanPreview | null {
   return preview;
 }
 
-function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; gated: boolean }) {
+function Offer({ major, unlocked, price, approx, launch, provider, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; gated: boolean }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const words = offerCopy(planType, major.name, major.score);
@@ -129,6 +131,7 @@ function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major
 
   const [resume] = useState(() => readResume(major.name));
   const [open, setOpen] = useState(!!resume);
+  const providerName = provider === "stripe" ? "Stripe" : "Paystack";
   const [plan, setPlan] = useState<Plan | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const planRef = useRef<HTMLDivElement>(null);
@@ -197,7 +200,7 @@ function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major
   useEffect(() => {
     if (!resume) return;
     const url = new URL(window.location.href);
-    ["cm_checkout", "reference", "trxref"].forEach((k) => url.searchParams.delete(k));
+    ["cm_checkout", "reference", "trxref", "sid"].forEach((k) => url.searchParams.delete(k));
     window.history.replaceState(null, "", url);
   }, [resume]);
 
@@ -227,7 +230,8 @@ function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major
           price={price}
           approx={approx}
           launch={launch}
-          resumeReference={resume}
+          resumeReference={resume?.reference}
+          resumeSession={resume?.session}
           onPaid={loadPlan}
           onClose={() => setOpen(false)}
           onViewPlan={viewPlan}
@@ -318,7 +322,7 @@ function Offer({ major, unlocked, price, approx, launch, gated }: { major: Major
             <p className="flex items-start gap-1.5">
               <ShieldCheck aria-hidden className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" />
               <span>
-                <span className="font-bold text-foreground">Secure payment by Paystack.</span> Run by MajorLabs Intelligence ·{" "}
+                <span className="font-bold text-foreground">Secure payment by {providerName}.</span> Run by MajorLabs Intelligence ·{" "}
                 <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact</a> ·{" "}
                 <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">@cookedlabs_cto</a>
               </span>

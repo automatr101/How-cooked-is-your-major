@@ -1,6 +1,7 @@
 import { DEFAULT_PRICE, PAYMENTS_MODE, priceOf, type Price } from "@/lib/premium";
 import { activeCharge, charge } from "./paystack";
-import { activeLaunch } from "./launch";
+import { activeLaunch, activeLaunchUsd } from "./launch";
+import { stripeCharge } from "./stripe";
 
 // SERVER ONLY. What a buyer is charged right now. In live mode that is exactly what the Paystack code asks for
 // (activeCharge: the launch price while a launch is running, otherwise PAYSTACK_CURRENCY and PAYSTACK_AMOUNT_MINOR), so
@@ -40,4 +41,17 @@ export function launchInfo(): { regular: Price; endsAt: string; approxUsd: numbe
   const regular = regularPrice();
   const launch = activeLaunch(regular.minor);
   return launch ? { regular, endsAt: launch.endsAt.toISOString(), approxUsd: launch.approxUsd } : null;
+}
+
+/** What a Stripe buyer is charged right now, in dollars. */
+export function stripePrice(): Price {
+  const c = stripeCharge();
+  return priceOf(c.currency, c.amount);
+}
+
+/** The running launch for a Stripe buyer: the normal dollar price and when it ends. Null when there is no dollar launch. */
+export function stripeLaunchInfo(): { regular: Price; endsAt: string } | null {
+  const regular = priceOf(DEFAULT_PRICE.currency, DEFAULT_PRICE.minor);
+  const launch = activeLaunchUsd(regular.minor);
+  return launch ? { regular, endsAt: launch.endsAt.toISOString() } : null;
 }

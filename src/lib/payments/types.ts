@@ -24,6 +24,8 @@ export interface VerifyInput {
   majorSlug: string;
   /** Test mode only: the server-signed result of the fake checkout. */
   proof?: string;
+  /** Stripe only: the Checkout Session id Stripe sent the buyer back with. */
+  session?: string;
 }
 
 export interface VerifyResult {
@@ -44,7 +46,7 @@ export interface VerifyResult {
 export class SafeError extends Error {}
 
 export interface PaymentProvider {
-  id: "mock" | "paystack";
+  id: "mock" | "paystack" | "stripe";
   initialize(input: InitializeInput): Promise<InitializeResult>;
   verify(input: VerifyInput): Promise<VerifyResult>;
 }
