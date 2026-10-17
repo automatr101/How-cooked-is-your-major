@@ -342,7 +342,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
             <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Download it as a PDF and keep it</li>
           </ul>
           {/* The glove points at the button below it. The space above the button is always reserved, so it never shifts the page. */}
-          <div className="relative pt-[3.25rem]">
+          <div className="relative pt-[4.5rem]">
             <PointingHand className="absolute right-8 top-0" />
             <button
               ref={buttonRef}
