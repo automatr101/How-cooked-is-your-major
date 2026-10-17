@@ -383,7 +383,7 @@ export default function HomeClient() {
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-2 sm:mb-3">
                     <div className="max-w-[75%]">
-                      <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Verification ID: #882-{selectedMajor.score}</p>
+                      <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Scanned {new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</p>
                       <h2 className="text-[11px] sm:text-xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                     </div>
                     <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">

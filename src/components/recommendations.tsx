@@ -9,59 +9,60 @@ interface RecommendationsProps {
 }
 
 export function Recommendations({ score, majorName }: RecommendationsProps) {
+  // Plain, a bit dry, and concrete: what to actually do. Same voice as the roast above it, minus the jokes.
   const getTips = () => {
     if (score >= 67) {
       return [
         {
           icon: <Zap className="text-destructive" />,
-          title: "Learn AI-adjacent skills",
-          text: `Master tools like specialized LLMs and automation workflows to bridge ${majorName} with the AI layer.`
+          title: "Learn the tool that's replacing you",
+          text: `Find the AI tool people in ${majorName} already use at work and get good at it this month. The person who runs it beats the person it replaces.`
         },
         {
           icon: <Target className="text-orange-500" />,
-          title: "Explore pivot careers",
-          text: "Look into high-complexity advisory roles or strategic implementation where human empathy is still mandatory."
+          title: "Find the part a bot can't sign",
+          text: "Look for the work where a human has to be accountable: sign-offs, client calls, anything with a licence or a lawsuit attached."
         },
         {
           icon: <ShieldCheck className="text-emerald-500" />,
-          title: "Double down on Human soft skills",
-          text: "Negotiation, ethics, and physical high-stakes presence are the final frontiers AI can't conquer."
+          title: "Build a thing, not a transcript",
+          text: "One real project, internship or paying client beats another line on your CV. Show people what you can do, not just where you studied."
         }
       ];
     } else if (score >= 34) {
       return [
         {
           icon: <AlertTriangle className="text-orange-500" />,
-          title: "Identify automatable tasks",
-          text: `Audit your daily tasks for ${majorName} and automate them yourself before a machine does it for you.`
+          title: "Audit your week",
+          text: `Write down what a ${majorName} job actually does all day. Anything repetitive is next in line, so learn to automate it before someone else does.`
         },
         {
           icon: <Zap className="text-emerald-500" />,
-          title: "Build tech-complementary skills",
-          text: "Learn enough technical architecture to become the one who manages the AI agents in your field."
+          title: "Be the one who checks the AI",
+          text: "Learn enough of the tech around your field to catch the AI's mistakes. Reviewing the output is a job. Getting reviewed by it isn't."
         },
         {
           icon: <Target className="text-emerald-500" />,
-          title: "Shift to Strategy & Management",
-          text: "Move away from technical execution and focus on high-level decision making and resource orchestration."
+          title: "Aim at decisions",
+          text: "Roles that decide, sell or explain hold up better than roles that only produce. Move toward them early."
         }
       ];
     } else {
       return [
         {
           icon: <TrendingUp className="text-emerald-500" />,
-          title: "Double Down",
-          text: `Your field is expanding. Become a top 1% expert in ${majorName} while the market demand outpaces supply.`
+          title: "You're ahead. Use it.",
+          text: `Demand for ${majorName} is holding up. Spend the head start getting really good, not comfortable.`
         },
         {
           icon: <Zap className="text-emerald-500" />,
-          title: "10x Your Productivity",
-          text: "Adopt AI tools to handle the grunt work, allowing you to focus on the breakthroughs machines can't see."
+          title: "Make AI your intern",
+          text: "Hand it the boring drafts, summaries and spreadsheets. Spend the hours you save on the work only you can do."
         },
         {
           icon: <Lightbulb className="text-orange-500" />,
-          title: "Stay Updated",
-          text: "Low risk today isn't a permanent shield. Re-scan every 6 months to track emerging automation vectors."
+          title: "Check back",
+          text: "A low score today isn't a permanent shield. Scan again in six months. Jobs change faster than degrees."
         }
       ];
     }
