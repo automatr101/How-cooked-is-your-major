@@ -1,5 +1,5 @@
 import { randomBytes } from "node:crypto";
-import { majors, type Major } from "@/lib/data";
+import { canonicalMajor, type Major } from "@/lib/data";
 import { PAYMENTS_MODE } from "@/lib/premium";
 import { slugify } from "@/lib/analytics";
 import { mockProvider } from "./mock";
@@ -29,7 +29,7 @@ export function getProviderFor(country: string | null): PaymentProvider | null {
 /** Looks a major up by its exact name, on the server, so only real majors can be bought. */
 export function findMajor(name: unknown): (Major & { slug: string }) | null {
   if (typeof name !== "string") return null;
-  const m = majors.find((x) => x.name === name);
+  const m = canonicalMajor(name);
   return m ? { ...m, slug: slugify(m.name) } : null;
 }
 

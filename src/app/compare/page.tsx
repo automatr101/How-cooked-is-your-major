@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { realMajors, Major } from "@/lib/data";
+import { searchMajors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { track } from "@/lib/analytics";
 import { MajorSearch } from "@/components/major-search";
@@ -34,24 +34,7 @@ export default function ComparePage() {
     if (major1 && major2) track("compare_major", { major_1: major1.name, major_2: major2.name, where: "compare_page" });
   }, [major1, major2]);
 
-  const filter = (query: string) => {
-    if (!query) return [];
-    const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    return realMajors
-      .map(major => {
-        const name = major.name.toLowerCase();
-        let score = 0;
-        if (name === query.toLowerCase().trim()) score = 100;
-        else if (name.startsWith(query.toLowerCase().trim())) score = 80;
-        else if (name.includes(query.toLowerCase().trim())) score = 60;
-        else if (searchTerms.every(term => name.includes(term))) score = 40;
-        return { major, score };
-      })
-      .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score || a.major.name.length - b.major.name.length)
-      .slice(0, 5)
-      .map(item => item.major);
-  };
+  const filter = (query: string) => searchMajors(query, 5);
 
   const filtered1 = useMemo(() => filter(query1), [query1]);
   const filtered2 = useMemo(() => filter(query2), [query2]);

@@ -1877,4 +1877,59 @@ export function isGeneratedMajor(name: string): boolean {
   return GENERATED_SUFFIX.test(name) && allNames.has(name.replace(GENERATED_SUFFIX, ""));
 }
 
-export const realMajors: Major[] = majors.filter((m) => !isGeneratedMajor(m.name));
+// ---- one score per subject -----------------------------------------------------------------------------------------
+// Some subjects were listed twice with different scores ("Nursing" 5% and "BSc. Nursing" 0%). Each alias below now resolves to
+// ONE canonical entry, so whichever name a visitor types or shares, they see the same score. The canonical entry is the plain
+// name people search for, and its score is the one already shown and promoted. Aliases still find the canonical entry in search,
+// and old links to an alias open the canonical result. (`npm run lint:majors` fails if two live entries share a subject.)
+export const ALIASES: Record<string, string> = {
+  "BSc Administration (Accounting)": "Accounting",
+  "BSc. Chemistry": "Chemistry",
+  "BSc. Computer Science": "Computer Science",
+  "BSc. Industrial Engineering": "Industrial Engineering",
+  "BSc. Marketing": "Marketing",
+  "BSc Administration (Marketing)": "Marketing",
+  "BSc. Mathematics": "Mathematics",
+  "BSc. Nursing": "Nursing",
+  "BSc. Physics": "Physics",
+  "BSc Information Technology (IT)": "Information Technology",
+  "LLB Law": "Law",
+  "BSc. Software Engineering": "Software Engineering",
+  "BA. Economics": "BSc. Economics",
+  "BSc Administration (Human Resource Management)": "BSc. Human Resource Management",
+  "Cyber Security": "BSc Cyber Security",
+  "Cybersecurity": "BSc Cyber Security",
+};
+
+const byName = new Map(majors.map((m) => [m.name, m]));
+
+/** The entry a name stands for: the canonical one when the name is an alias, the entry itself otherwise, or undefined. */
+export function canonicalMajor(name: string): Major | undefined {
+  const target = ALIASES[name];
+  return target ? byName.get(target) : byName.get(name);
+}
+
+export const realMajors: Major[] = majors.filter((m) => !isGeneratedMajor(m.name) && !(m.name in ALIASES));
+
+// Every name search should know: the canonical names plus their aliases (an alias match shows the canonical entry)
+const SEARCH_NAMES: { name: string; major: Major }[] = [
+  ...realMajors.map((m) => ({ name: m.name, major: m })),
+  ...Object.entries(ALIASES).flatMap(([alias, target]) => (byName.get(target) ? [{ name: alias, major: byName.get(target)! }] : [])),
+];
+
+/** Search the real, canonical majors (aliases included). Best matches first; equally good ones shorter-name first. */
+export function searchMajors(query: string, limit = 10): Major[] {
+  const q = query.toLowerCase().trim();
+  if (!q) return [];
+  const terms = q.split(/\s+/);
+  const best = new Map<Major, number>();
+  for (const { name, major } of SEARCH_NAMES) {
+    const n = name.toLowerCase();
+    const score = n === q ? 100 : n.startsWith(q) ? 80 : n.includes(q) ? 60 : terms.every((t) => n.includes(t)) ? 40 : 0;
+    if (score > (best.get(major) ?? 0)) best.set(major, score);
+  }
+  return [...best.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].name.length - b[0].name.length)
+    .slice(0, limit)
+    .map(([m]) => m);
+}

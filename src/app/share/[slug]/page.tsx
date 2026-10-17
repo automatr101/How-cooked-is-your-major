@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { majors } from "@/lib/data";
+import { ALIASES, canonicalMajor, majors } from "@/lib/data";
 import { slugify } from "@/lib/analytics";
 import { SITE_URL } from "@/lib/site";
 import { ShareRedirect } from "./redirect";
@@ -16,7 +16,8 @@ import { ShareRedirect } from "./redirect";
 
 export const dynamicParams = false; // an unknown slug is a plain 404
 
-const bySlug = new Map(majors.map((m) => [slugify(m.name), m]));
+// Old links to an alias ("/share/bsc-nursing") keep working and show the canonical entry
+const bySlug = new Map(majors.map((m) => [slugify(m.name), m.name in ALIASES ? canonicalMajor(m.name)! : m]));
 
 export function generateStaticParams() {
   return [...bySlug.keys()].map((slug) => ({ slug }));

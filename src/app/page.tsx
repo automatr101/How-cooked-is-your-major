@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import HomeClient from './HomeClient';
+import { canonicalMajor } from '@/lib/data';
 
 const SITE_URL = 'https://how-cooked-is-your-major.vercel.app';
 
@@ -9,11 +10,14 @@ type Props = {
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const params = await searchParams;
-  const major = params.major as string;
-  const score = params.score as string;
-  const level = params.level as string;
+  // The title and preview card come from OUR data for that major (an alias resolves to its canonical entry), never from the
+  // score or level typed into the address, so a crafted link cannot show a made-up score. Unknown majors get the default card.
+  const found = typeof params.major === "string" ? canonicalMajor(params.major) : undefined;
+  const major = found?.name ?? "";
+  const score = found ? String(found.score) : "";
+  const level = found?.level ?? "";
 
-  if (major && score) {
+  if (found) {
     const title = `${major} is ${level} — ${score}% AI Risk`;
     const description = `Survival Status: ${level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
     // Add v=1 to force re-crawl
@@ -59,10 +63,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const defaultOgUrl = `${SITE_URL}/api/og?v=3`;
   return {
     title: "How Cooked Is Your Major? | AI Risk Scan",
-    description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
+    description: "Check if AI is coming for your degree. Scan 100+ majors, get roasted, and get survival advice.",
     openGraph: {
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
+      description: "Check if AI is coming for your degree. Scan 100+ majors, get roasted, and get survival advice.",
       url: SITE_URL,
       siteName: 'How Cooked Is Your Major?',
       images: [
@@ -79,7 +83,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     twitter: {
       card: 'summary_large_image',
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
+      description: "Check if AI is coming for your degree. Scan 100+ majors, get roasted, and get survival advice.",
       images: [defaultOgUrl],
       site: '@cookedlabs_cto',
       creator: '@cookedlabs_cto',

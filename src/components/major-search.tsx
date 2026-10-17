@@ -41,7 +41,7 @@ export function MajorSearch({
   results,
   onSelect,
   selected = false,
-  placeholder = "Search 120+ majors...",
+  placeholder = "Search 100+ majors...",
   label = "Search majors",
   compact = false,
   beamDuration = 3.1,
@@ -268,13 +268,61 @@ export function MajorSearch({
                 ))}
               </div>
             ) : (
-              <p className={cn("text-sm font-bold text-muted-foreground", compact ? "px-4 py-4" : "px-6 py-5")}>
-                No majors match &ldquo;{shownQuery}&rdquo;. Try fewer letters, or one word like &ldquo;nursing&rdquo;.
-              </p>
+              <div className={cn(compact ? "px-4 py-4" : "px-6 py-5")}>
+                <p className="text-sm font-bold text-muted-foreground">
+                  {compact
+                    ? <>No majors match &ldquo;{shownQuery}&rdquo;. Try fewer letters, or one word like &ldquo;nursing&rdquo;.</>
+                    : <>&ldquo;{shownQuery}&rdquo; isn&apos;t in our list yet. Try fewer letters, or one word like &ldquo;nursing&rdquo;.</>}
+                </p>
+                {/* We never make up a score for a major we don't have: the visitor can ask for it instead */}
+                {!compact && <RequestMajor query={shownQuery} />}
+              </div>
             )}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+/** "Want it scored?": asks for a major we don't have, with an optional email to be told when it's added. */
+function RequestMajor({ query }: { query: string }) {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState<"idle" | "busy" | "done" | "error">("idle");
+  const [asked, setAsked] = useState("");
+  if (state === "done" && asked === query) {
+    return <p className="mt-3 text-xs font-bold text-emerald-500">Got it. &ldquo;{query}&rdquo; is on the list{email ? ", and we'll email you when it's scored" : ""}.</p>;
+  }
+  const send = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setState("busy");
+    try {
+      const res = await fetch("/api/major-request", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, email: email.trim() }) });
+      setAsked(query);
+      setState(res.ok ? "done" : "error");
+      if (res.ok) track("major_requested", { search_term: query.slice(0, 60), with_email: email.trim() ? 1 : 0 });
+    } catch {
+      setState("error");
+    }
+  };
+  return (
+    <form onSubmit={send} onMouseDown={(e) => e.stopPropagation()} className="mt-3 space-y-2">
+      <p className="text-xs text-muted-foreground">Want it scored? Tell us. Leave an email (optional) and we&apos;ll send you the score once it&apos;s added. One email, nothing else.</p>
+      <div className="flex gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@email.com (optional)"
+          aria-label="Email (optional)"
+          maxLength={120}
+          className="min-w-0 flex-1 rounded-full border border-border bg-background px-4 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+        />
+        <button type="submit" disabled={state === "busy"} className="shrink-0 rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-widest text-primary-foreground disabled:opacity-60">
+          {state === "busy" ? "..." : "Request it"}
+        </button>
+      </div>
+      {state === "error" && <p role="alert" className="text-xs font-bold text-red-400">Couldn&apos;t send that. Check the email and try again.</p>}
+    </form>
   );
 }

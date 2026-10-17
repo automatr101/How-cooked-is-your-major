@@ -10,7 +10,7 @@ import { ShareRedirect } from "./[slug]/redirect";
 // other apps fetch its card fresh instead of showing the one they saved for the home page long ago.
 
 const title = "How Cooked Is Your Major? | AI Risk Scan";
-const description = "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.";
+const description = "Check if AI is coming for your degree. Scan 100+ majors, get roasted, and get survival advice.";
 const image = `${SITE_URL}/api/og?v=3`;
 
 export const metadata: Metadata = {
