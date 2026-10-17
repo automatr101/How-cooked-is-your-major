@@ -19,12 +19,12 @@ import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "How Cooked Is Your Major? | AI Risk Scan",
-  description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+  description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
   metadataBase: new URL("https://how-cooked-is-your-major.vercel.app"),
   openGraph: {
     url: "https://how-cooked-is-your-major.vercel.app/",
     title: "How Cooked Is Your Major? | AI Risk Scan",
-    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+    description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
     images: [{ url: "https://how-cooked-is-your-major.vercel.app/api/og?v=3" }],
     siteName: "How Cooked Is Your Major?",
     locale: "en_US",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "How Cooked Is Your Major? | AI Risk Scan",
-    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+    description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
     images: ["https://how-cooked-is-your-major.vercel.app/api/og?v=3"],
     site: "@cookedlabs_cto",
     creator: "@cookedlabs_cto",

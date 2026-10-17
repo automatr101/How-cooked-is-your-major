@@ -59,10 +59,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const defaultOgUrl = `${SITE_URL}/api/og?v=3`;
   return {
     title: "How Cooked Is Your Major? | AI Risk Scan",
-    description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+    description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
     openGraph: {
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+      description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
       url: SITE_URL,
       siteName: 'How Cooked Is Your Major?',
       images: [
@@ -79,7 +79,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     twitter: {
       card: 'summary_large_image',
       title: "How Cooked Is Your Major? | AI Risk Scan",
-      description: "Check if AI is coming for your degree. Scan 1,800+ majors, get roasted, and get survival advice.",
+      description: "Check if AI is coming for your degree. Scan 120+ majors, get roasted, and get survival advice.",
       images: [defaultOgUrl],
       site: '@cookedlabs_cto',
       creator: '@cookedlabs_cto',
