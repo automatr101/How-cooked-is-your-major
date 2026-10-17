@@ -230,7 +230,7 @@ add("entrylevel", MH, [
 // ───────────────────────────────────────────────────────────────────────────
 
 add("brochose", HX, [
-  "bro looked at 1,800 majors and said 'this one'. confidence.",
+  "bro scrolled the whole list of majors and said 'this one'. confidence.",
   "bro really enrolled in {major} like the job market was going to wait.",
   "generational mistake: choosing {major} and assuming it'd 'just work out'.",
   "bro really thought {major} would be a flex. it's a 'mildly embarrassing' flex.",

@@ -3,19 +3,33 @@
 import { motion } from "framer-motion";
 import { majors } from "@/lib/data";
 
-// A scrolling strip of real scores from our own data. It used to be labelled "Live Scans" and showed made-up
+// A scrolling strip of real scores (24 different majors, so the same one never shows twice on screen; the loop repeats only off-screen) from our own data. It used to be labelled "Live Scans" and showed made-up
 // numbers; it now says what it is: featured majors, with their real scores.
 const FEATURED = [
   "Computer Science",
-  "Mechanical Engineering",
-  "Graphic Design",
   "Nursing",
+  "Graphic Design",
   "Accounting",
-  "Digital Marketing",
+  "Law",
   "Psychology",
   "Data Science",
-  "Architecture",
-  "Law",
+  "Software Engineering",
+  "Marketing",
+  "Finance",
+  "Biology",
+  "BSc. Architecture",
+  "Physics",
+  "BSc. Economics",
+  "Information Technology",
+  "BA. English",
+  "Chemistry",
+  "BSc Cyber Security",
+  "Mathematics",
+  "BA. History",
+  "Education",
+  "Doctor of Pharmacy",
+  "BSc. Statistics",
+  "BSc. Midwifery",
 ];
 
 const items = FEATURED.map((name) => majors.find((m) => m.name === name)).filter((m): m is NonNullable<typeof m> => !!m);

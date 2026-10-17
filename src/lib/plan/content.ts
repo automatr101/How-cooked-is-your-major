@@ -131,7 +131,7 @@ export const GROUPS: Record<GroupId | "general", GroupContent> = {
     staysHuman: ["Negotiation and building trust with clients", "Deciding under uncertainty with incomplete data", "Owning the outcome when something goes wrong", "Reading a room, a market or a person"],
     strongPaths: [
       ["Advisory and client-facing roles", "Trust and judgement are the product, and clients still want a person."],
-      ["Strategy, operations and product", "Deciding what to do with the output is where the value moves."],
+      ["Strategy, operations and product", "The AI drafts it. Someone still has to decide what to do with it."],
       ["Analytics and decision support", "Businesses need people who can ask the right question of the data."],
       ["Sales, partnerships and entrepreneurship", "Relationships and risk-taking are hard to automate."],
     ],
