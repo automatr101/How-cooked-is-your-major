@@ -17,6 +17,7 @@ import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
+import { LeadBox } from "@/components/lead-box";
 import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
 import { HeardFromPoll } from "@/components/heard-from";
@@ -478,6 +479,9 @@ export default function HomeClient() {
                 🔥 Roast Me Again
               </button>
             </div>
+
+            {/* Free extra behind an email: 3 more roasts + the numbers. Only shown when the leads database is set up. */}
+            <LeadBox major={selectedMajor} />
 
             {/* Replay Sound: a small, quiet text button, so it does not compete with the buttons that matter */}
             <div className="flex justify-center mt-2">

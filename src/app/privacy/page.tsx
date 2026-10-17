@@ -23,13 +23,16 @@ export default function PrivacyPage() {
     >
       <Section n={1} title="What We Collect">
         <P>
-          <B>Just visiting.</B> The free tools (searching a major, your score and roast, sharing, comparing, the leaderboard) need no account and ask for no name or email. We receive anonymised usage data automatically, through analytics tools (see Sections 4 and 5): browser type and version, device type, pages visited and features used, referring website, approximate location (country or city level) and date and time of visit.
+          <B>Just visiting.</B> The free tools (searching a major, your score and roast, sharing, comparing, the leaderboard) need no account and ask for no name or email. The only optional exception is the free extended-roast signup described below. We receive anonymised usage data automatically, through analytics tools (see Sections 4 and 5): browser type and version, device type, pages visited and features used, referring website, approximate location (country or city level) and date and time of visit.
         </P>
         <P>
           <B>What you type into the search box.</B> When you pick a result, or when nothing matches, the words you typed (cut to 60 characters) are recorded in our analytics so we can see which majors people look for. Please do not type personal details into the search box.
         </P>
         <P>
           <B>&ldquo;Where did you hear about us?&rdquo;</B> After a result we may ask where you found the site. You pick one answer from a fixed list; nothing you type is collected. The answer is recorded in our analytics.
+        </P>
+        <P>
+          <B>The extended roast and 3 emails (optional).</B> Under your result you can type your email address and tick a box to get an extended roast and your major&apos;s numbers on the page and by email. If you do, we store your email address, the major you scanned and its score, the date and time you agreed, the country your visit came from, and the <code>ref</code> tag of the link you arrived by (if it had one). We then send you three emails (the roast and numbers on day 0, one more fact on day 1, and a note about the paid plan on day 2), each with an unsubscribe link. We do not send your email address to analytics or to our private alerts: the alert says only that someone signed up, for which major. We only email you if you tick the box, and you can unsubscribe at any time; after that we keep your address only so we do not email you again, unless you ask us to delete it.
         </P>
         <P>
           <B>Ratings and reviews.</B> If you tap thumbs up or down on &ldquo;Was your score accurate?&rdquo;, we store that vote with the major you scanned. If you leave a star rating in the rating pop-up, we store the rating, any words you typed (up to 300 characters) and the major you scanned. If you bought a plan and review it, we store your stars, any words you typed, and the payment reference of your purchase, so we can mark the review &ldquo;Verified purchase&rdquo; and allow one review per purchase. We do not store your name, email address or IP address with a rating or review. We show your first name or initial, your major and your country next to a review only if you tick the box that allows it. The country is the one our hosting provider detected for your visit, never one you typed. A review is not shown publicly until we have read and approved it. Reviews are free text, so please do not include personal details such as your name, email address or phone number. We also receive a private message through Telegram when a rating or review arrives (for the star pop-up it includes your country, device type and browser).
@@ -107,7 +110,8 @@ export default function PrivacyPage() {
         <UL>
           <li><B>Paystack</B>: processes payments and refunds for visitors in Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
           <li><B>Stripe</B>: processes payments and refunds for visitors outside Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
-          <li><B>Supabase</B>: stores our purchase records and the ratings and reviews described in Section 1, in a database hosted in the European Union (Ireland).</li>
+          <li><B>Resend</B>: sends the three emails if you signed up for them. It receives your email address and the message.</li>
+          <li><B>Supabase</B>: stores our purchase records, the ratings and reviews and the email signups described in Section 1, in a database hosted in the European Union (Ireland).</li>
           <li><B>Vercel</B>: hosts the Site and measures its speed and performance.</li>
           <li><B>Google</B>: Analytics and AdSense (Sections 4 and 5).</li>
           <li><B>Telegram</B>: delivers the private alerts, rating notifications and contact messages to us.</li>
@@ -121,6 +125,7 @@ export default function PrivacyPage() {
         <UL>
           <li><B>Analytics:</B> Google Analytics event data is kept for 14 months.</li>
           <li><B>Purchase records:</B> kept for as long as needed to provide your plan, support you, handle refunds and meet financial record-keeping duties.</li>
+          <li><B>Email signups:</B> kept until you unsubscribe and then only as a do-not-email record, or until you ask us to delete them.</li>
           <li><B>Ratings and reviews:</B> kept in our database until we delete them. A review shown on the Site stays there until we remove it or you ask us to.</li>
           <li><B>Contact messages and alerts:</B> kept in our private Telegram chat until we delete them.</li>
           <li><B>Unlock cookie:</B> one year, or until you delete it.</li>
