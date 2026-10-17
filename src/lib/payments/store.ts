@@ -103,6 +103,8 @@ export async function statusOf(reference: string): Promise<"paid" | "refunded" |
 
 /** The reference of a paid (not refunded) purchase of this major by this email, if there is one. */
 export async function findPaidByEmail(majorSlug: string, emailHash: string): Promise<string | null> {
-  const rows = (await call(`?select=reference&major_slug=${eq(majorSlug)}&email_hash=${eq(emailHash)}&status=eq.paid&limit=1`)) as { reference: string }[];
+  // A single plan of this major, or a 3-major bundle that includes it (stored as "bundle|a|b|c|")
+  const either = encodeURIComponent(`(major_slug.eq.${majorSlug},major_slug.like.*|${majorSlug}|*)`);
+  const rows = (await call(`?select=reference&or=${either}&email_hash=${eq(emailHash)}&status=eq.paid&limit=1`)) as { reference: string }[];
   return rows[0]?.reference ?? null;
 }

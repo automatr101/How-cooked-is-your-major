@@ -54,8 +54,13 @@ export function entitledSlugs(req: NextRequest): string[] {
 
 /** Adds a verified purchase to the cookie on `res` (keeps earlier ones). */
 export function grantEntitlement(req: NextRequest, res: NextResponse, majorSlug: string, reference: string): void {
-  const items = decode(req.cookies.get(COOKIE)?.value).filter((i) => i.s !== majorSlug);
-  items.push({ s: majorSlug, r: reference, t: Date.now() });
+  grantEntitlements(req, res, [majorSlug], reference);
+}
+
+/** Adds several majors paid by one payment (the 3-major bundle) in one cookie write. */
+export function grantEntitlements(req: NextRequest, res: NextResponse, majorSlugs: string[], reference: string): void {
+  const items = decode(req.cookies.get(COOKIE)?.value).filter((i) => !majorSlugs.includes(i.s));
+  for (const s of majorSlugs) items.push({ s, r: reference, t: Date.now() });
   res.cookies.set(COOKIE, encode(items.slice(-MAX_ITEMS)), {
     httpOnly: true,
     sameSite: "lax",

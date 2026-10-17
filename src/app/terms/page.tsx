@@ -31,7 +31,7 @@ export default function TermsPage() {
 
       <Section n={2} title="The Survival Plan (Paid)">
         <UL>
-          <li><B>What you get:</B> a written career plan for the major you choose, shown on the Site and available as a PDF download, delivered instantly after a successful payment. It is written for that major and its AI-risk level: it is general guidance for the major, not a personalised assessment of you.</li>
+          <li><B>What you get:</B> a written career plan for the major you choose (or for three majors you choose, if you buy the 3-major bundle in one payment), shown on the Site and available as a PDF download, delivered instantly after a successful payment. It is written for that major and its AI-risk level: it is general guidance for the major, not a personalised assessment of you.</li>
           <li><B>Price and currency:</B> the price is shown at checkout before you pay and is charged in Ghana cedis (GHS) for visitors in Ghana and in US dollars (USD) for visitors elsewhere. If your card or account is in another currency, your bank or provider converts it and may add its own fees or use its own exchange rate, which we do not control. We may change the price at any time; a change applies only to later purchases. Sometimes we offer a lower price for a limited time (for example 30% off for 24 hours when you come back to the offer); the offer always shows when it ends, and the price shown at checkout is the price you pay.</li>
           <li><B>One-time payment:</B> there is no subscription and no automatic renewal.</li>
           <li><B>Your licence:</B> a purchase gives you a personal, non-transferable licence to read and keep the Plan for your own use. Please do not resell, publish, or share it publicly or in bulk.</li>

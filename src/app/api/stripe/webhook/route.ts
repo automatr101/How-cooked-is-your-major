@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { findMajor, REFERENCE_PATTERN } from "@/lib/payments";
 import { PAYMENTS_MODE } from "@/lib/premium";
 import { registerPurchase } from "@/lib/payments/purchases";
+import { BUNDLE_PRODUCT_ID, bundleFromMetaSlugs } from "@/lib/payments/bundle";
 import { markPaid, markRefunded, storeEnabled } from "@/lib/payments/store";
 import { referenceOfIntent, SESSION_ID, stripeEnabled, stripeProvider, validStripeSignature } from "@/lib/payments/stripe";
 import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
@@ -54,15 +55,16 @@ export async function POST(req: NextRequest) {
     const reference = typeof obj.client_reference_id === "string" ? obj.client_reference_id : "";
     const meta = (obj.metadata ?? {}) as Record<string, unknown>;
     if (!SESSION_ID.test(id) || !REFERENCE_PATTERN.test(reference)) return ok(); // not one of ours: nothing to do
-    const major = findMajor(meta.major_name);
-    if (!major || major.slug !== meta.major_slug) {
+    const bundle = meta.product === BUNDLE_PRODUCT_ID ? bundleFromMetaSlugs(meta.major_slug) : null;
+    const major = bundle ? bundle[0] : findMajor(meta.major_name);
+    if (!major || (!bundle && major.slug !== meta.major_slug) || (meta.product === BUNDLE_PRODUCT_ID && !bundle)) {
       if (event.id) seen.add(event.id);
       await alert(["⚠️ <b>Stripe payment I could not match to a plan</b>", `🧾 ${escapeHtml(reference)}`, "Check it in the Stripe dashboard."]);
       return ok();
     }
     let result;
     try {
-      result = await stripeProvider.verify({ reference, majorSlug: major.slug, session: id }); // asks Stripe again
+      result = await stripeProvider.verify({ reference, majorSlug: bundle ? String(meta.major_slug) : major.slug, session: id, bundle: !!bundle }); // asks Stripe again
     } catch {
       console.error("[stripe-webhook] could not re-check a payment");
       return new Response(null, { status: 500 }); // not a 2xx, so Stripe tries again later
@@ -76,6 +78,7 @@ export async function POST(req: NextRequest) {
         email: result.customerEmail,
         paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
         provider: "stripe",
+        bundle: bundle ?? undefined,
       });
     } else if (result.status === "failed") {
       await alert(["⚠️ <b>Stripe payment did not pass the check</b>", `📚 ${escapeHtml(major.name)}`, `Reason: ${escapeHtml(result.reason ?? result.status)}`, `🧾 ${escapeHtml(reference)}`]);

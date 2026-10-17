@@ -1,8 +1,9 @@
 import { NextRequest } from "next/server";
 import { EMAIL_PATTERN, findMajor, getProviderFor, newReference } from "@/lib/payments";
 import { stripeCharge } from "@/lib/payments/stripe";
-import { activeCharge } from "@/lib/payments/paystack";
+import { activeCharge, charge } from "@/lib/payments/paystack";
 import { activeComeback } from "@/lib/payments/comeback";
+import { bundleMinor, findBundle } from "@/lib/payments/bundle";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { cleanText } from "@/lib/clean-text";
 import { funnelAlert } from "@/lib/payments/alerts";
@@ -21,6 +22,9 @@ export async function POST(req: NextRequest) {
   const major = findMajor(body?.major);
   const email = cleanText(body?.email, 120);
   if (!major) return json({ error: "unknown_major" }, 400);
+  // The 3-major bundle: three different real majors, the first being the one on screen
+  const bundle = body?.bundle !== undefined ? findBundle(body.bundle) : null;
+  if (body?.bundle !== undefined && (!bundle || bundle[0].slug !== major.slug)) return json({ error: "bad_bundle" }, 400);
   if (!EMAIL_PATTERN.test(email)) return json({ error: "invalid_email" }, 400);
 
   // Stripe (US dollars) for visitors outside Ghana when it is switched on, otherwise the mode's provider (Paystack in Ghana)
@@ -31,12 +35,15 @@ export async function POST(req: NextRequest) {
   try {
     const origin = new URL(req.url).origin;
     const callbackUrl =
-      `${origin}/?major=${encodeURIComponent(major.name)}&score=${major.score}&level=${encodeURIComponent(major.level)}&cm_checkout=1`;
+      `${origin}/?major=${encodeURIComponent(major.name)}&score=${major.score}&level=${encodeURIComponent(major.level)}` +
+      (bundle ? `&cm_bundle=${encodeURIComponent(bundle.map((b) => b.name).join("|"))}` : "") +
+      "&cm_checkout=1";
     // The comeback offer comes from a cookie our server signed; the browser cannot ask for it any other way
     const comeback = !!activeComeback(req);
-    const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl, comeback });
-    const paid = provider.id === "stripe" ? { ...stripeCharge(new Date(), comeback), provider: "Stripe" } : provider.id === "paystack" && comeback ? activeCharge(new Date(), true) : undefined;
-    funnelAlert(req, "started", major, comeback ? ["🔁 comeback offer (30% off)"] : [], undefined, paid);
+    const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl, comeback: bundle ? false : comeback, bundle: bundle ?? undefined });
+    const bundlePaid = bundle ? (provider.id === "stripe" ? { currency: "USD", amount: bundleMinor("USD", 0), provider: "Stripe" } : provider.id === "paystack" ? { currency: charge().currency, amount: bundleMinor(charge().currency, charge().amount) } : undefined) : undefined;
+    const paid = bundle ? bundlePaid : provider.id === "stripe" ? { ...stripeCharge(new Date(), comeback), provider: "Stripe" } : provider.id === "paystack" && comeback ? activeCharge(new Date(), true) : undefined;
+    funnelAlert(req, "started", major, bundle ? [`📦 3-major bundle: ${bundle.map((b) => b.name).join(" + ")}`] : comeback ? ["🔁 comeback offer (30% off)"] : [], undefined, paid);
     return json({ provider: provider.id, reference: result.reference, authorizationUrl: result.authorizationUrl ?? null });
   } catch (err) {
     console.error("[checkout] could not start a payment"); // no details: they may contain keys or the email

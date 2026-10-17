@@ -13,6 +13,8 @@ import { CheckoutDialog } from "./checkout-dialog";
 import { PlanReport } from "./plan-report";
 import { PointingHand } from "./pointing-hand";
 import { StickyCta } from "./sticky-cta";
+import { BundlePicker } from "./bundle-picker";
+import { majors as allMajors } from "@/lib/data";
 
 // The paid career plan, shown after the free result. The free score, roast, sharing, compare and
 // leaderboard are not touched by anything here. With NEXT_PUBLIC_PAYMENTS_MODE unset or "off" this renders
@@ -39,13 +41,16 @@ function forgetUnlocked(slug: string) {
 }
 
 /** Returning from the payment page: the address carries ?cm_checkout=1&reference=... for this major. */
-function readResume(majorName: string): { reference: string; session?: string } | undefined {
+function readResume(majorName: string): { reference: string; session?: string; bundle?: string[] } | undefined {
   if (typeof window === "undefined") return undefined;
   const p = new URLSearchParams(window.location.search);
   const ref = p.get("reference") ?? p.get("trxref");
   if (!(p.get("cm_checkout") === "1" && p.get("major") === majorName && ref && /^cm-[a-z0-9]{6,12}-[a-f0-9]{12}$/.test(ref))) return undefined;
   const sid = p.get("sid"); // Stripe's Checkout Session id, when the buyer paid with Stripe
-  return { reference: ref, session: sid && /^cs_(test|live)_[A-Za-z0-9]{10,200}$/.test(sid) ? sid : undefined };
+  // A 3-major bundle carries its three names (the server checks them again when confirming)
+  const names = p.get("cm_bundle")?.split("|") ?? [];
+  const bundle = names.length === 3 && names[0] === majorName ? names : undefined;
+  return { reference: ref, session: sid && /^cs_(test|live)_[A-Za-z0-9]{10,200}$/.test(sid) ? sid : undefined, bundle };
 }
 
 // Asks the server once per page load whether THIS visitor may see the offer: payments on, and if the private gate is
@@ -82,7 +87,8 @@ function isComebackVisit(): boolean {
     return false;
   }
 }
-type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack" };
+type BundleInfo = { price: Price; approx?: string };
+type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; bundle?: BundleInfo };
 let statusRequest: Promise<Status> | null = null;
 function refreshStatus() {
   statusRequest = null;
@@ -144,7 +150,7 @@ export function PremiumOffer({ major }: { major: Major }) {
       .catch(() => {});
   }, [major.name]);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} provider={status.provider} gated={status.gated} onViewed={onViewed} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} provider={status.provider} gated={status.gated} onViewed={onViewed} bundleInfo={status.bundle} />;
 }
 
 // The real preview of the plan for this major (two recommendations and counts), from /api/plan/preview. If it cannot be
@@ -164,7 +170,7 @@ function usePreview(majorName: string): PlanPreview | null {
   return preview;
 }
 
-function Offer({ major, unlocked, price, approx, launch, provider, gated, onViewed }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; gated: boolean; onViewed?: () => void }) {
+function Offer({ major, unlocked, price, approx, launch, provider, gated, onViewed, bundleInfo }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; gated: boolean; onViewed?: () => void; bundleInfo?: BundleInfo }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const words = offerCopy(planType, major.name, major.score);
@@ -173,6 +179,11 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
 
   const [resume] = useState(() => readResume(major.name));
   const [open, setOpen] = useState(!!resume);
+  // The 3-major bundle: the picker, then the checkout for all three (also when coming back from the payment page)
+  const [picking, setPicking] = useState(false);
+  const [bundleMajors, setBundleMajors] = useState<Major[] | null>(() =>
+    resume?.bundle ? (resume.bundle.map((n) => allMajors.find((m) => m.name === n)).filter(Boolean) as Major[]) : null
+  );
   const providerName = provider === "stripe" ? "Stripe" : "Paystack";
   const [plan, setPlan] = useState<Plan | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -243,7 +254,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
   useEffect(() => {
     if (!resume) return;
     const url = new URL(window.location.href);
-    ["cm_checkout", "reference", "trxref", "sid"].forEach((k) => url.searchParams.delete(k));
+    ["cm_checkout", "reference", "trxref", "sid", "cm_bundle"].forEach((k) => url.searchParams.delete(k));
     window.history.replaceState(null, "", url);
   }, [resume]);
 
@@ -260,6 +271,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
   const unlockFromBar = () => {
     trackStickyCtaClicked(major, planType);
     notifyUnlockClicked(major);
+    setBundleMajors(null);
     setOpen(true);
   };
 
@@ -275,8 +287,12 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
           launch={launch}
           resumeReference={resume?.reference}
           resumeSession={resume?.session}
+          bundle={bundleMajors && bundleMajors.length === 3 ? { majors: bundleMajors, price: bundleInfo?.price, approx: bundleInfo?.approx } : undefined}
           onPaid={loadPlan}
-          onClose={() => setOpen(false)}
+          onClose={() => {
+            setOpen(false);
+            setBundleMajors(null);
+          }}
           onViewPlan={viewPlan}
         />
       )}
@@ -342,7 +358,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
             <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Download it as a PDF and keep it</li>
           </ul>
           {/* The glove points at the button below it. The space above the button is always reserved, so it never shifts the page. */}
-          <div className="relative pt-[3.25rem]">
+          <div className="relative pt-[4.5rem]">
             <PointingHand className="absolute right-8 top-0" />
             <button
               ref={buttonRef}
@@ -350,6 +366,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
               onClick={() => {
                 trackOfferClicked(major, planType);
                 notifyUnlockClicked(major);
+                setBundleMajors(null);
                 setOpen(true);
               }}
               className={
@@ -361,6 +378,24 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
               {copy.cta}
             </button>
           </div>
+          {bundleInfo &&
+            (picking ? (
+              <BundlePicker
+                current={major}
+                priceLabel={bundleInfo.approx ?? bundleInfo.price.label}
+                onCancel={() => setPicking(false)}
+                onContinue={(three) => {
+                  setPicking(false);
+                  setBundleMajors(three);
+                  notifyUnlockClicked(major);
+                  setOpen(true);
+                }}
+              />
+            ) : (
+              <button type="button" onClick={() => setPicking(true)} className="w-full text-center text-xs font-bold text-muted-foreground underline underline-offset-4 hover:text-foreground">
+                Choosing between majors? Get plans for 3 for {bundleInfo.approx ?? bundleInfo.price.label}
+              </button>
+            ))}
           <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
             <p>
               <span className="font-bold text-foreground">7-day guarantee:</span> not worth what you paid? Tell us within 7 days and we refund you in full. No forms. Charged but no plan, or charged twice? Refunded too.{" "}

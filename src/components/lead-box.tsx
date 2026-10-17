@@ -55,6 +55,25 @@ export function LeadBox({ major }: { major: Major }) {
   const [emailed, setEmailed] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Share-to-unlock: any share of this result (X, WhatsApp, saving the card, copying the text) unlocks the same extras, no email
+  useEffect(() => {
+    const onShared = (e: Event) => {
+      const detail = (e as CustomEvent<{ major?: string; method?: string }>).detail;
+      if (detail?.major !== major.name || readCache(slug)) return;
+      fetch("/api/extended", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ major: major.name, via: detail.method }) })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d: { extended?: Extended } | null) => {
+          if (!d?.extended) return;
+          writeCache(slug, d.extended);
+          setExtended(d.extended);
+          track("extended_unlocked_by_share", { item_id: slug, method: detail.method ?? "other" });
+        })
+        .catch(() => {});
+    };
+    window.addEventListener("cm:shared", onShared);
+    return () => window.removeEventListener("cm:shared", onShared);
+  }, [major.name, slug]);
+
   useEffect(() => {
     let live = true;
     setExtended(readCache(slug));
@@ -138,7 +157,7 @@ export function LeadBox({ major }: { major: Major }) {
           </div>
         ))}
       </div>
-      <p className="mt-2 text-xs text-muted-foreground">3 more roasts, your pay range and growth, and the move to make. Unlocks the moment you sign up.</p>
+      <p className="mt-2 text-xs text-muted-foreground">3 more roasts, your pay range and growth, and the move to make. Unlocks the moment you sign up, or when you share your card.</p>
       <form onSubmit={submit} className="mt-4 space-y-3" noValidate>
         <label className="sr-only" htmlFor="lead-email">Email</label>
         <input
