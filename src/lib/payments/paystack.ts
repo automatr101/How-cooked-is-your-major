@@ -3,6 +3,7 @@ import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/pre
 import { isPaystackPage } from "./paystack-url";
 import { activeLaunch, launchMinor } from "./launch";
 import { comebackMinor } from "./comeback";
+import { BUNDLE_PRODUCT_ID, bundleMetaSlugs, bundleMinor } from "./bundle";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
@@ -86,8 +87,10 @@ function gatewayNote(data: Record<string, unknown>): string | undefined {
 export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
-  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback }: InitializeInput): Promise<InitializeResult> {
-    const { currency, amount } = activeCharge(new Date(), comeback);
+  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback, bundle }: InitializeInput): Promise<InitializeResult> {
+    const single = activeCharge(new Date(), comeback);
+    // A bundle is twice the NORMAL single price (no launch or comeback discount on top)
+    const { currency, amount } = bundle ? { currency: single.currency, amount: bundleMinor(single.currency, charge().amount) } : single;
     const { ok, httpStatus, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
@@ -98,7 +101,9 @@ export const paystackProvider: PaymentProvider = {
         callback_url: callbackUrl,
         ...(channels() ? { channels: channels() } : {}),
         // Read back at verify time. Set here, on the server, so the browser cannot change it.
-        metadata: { product: PRODUCT_ID, product_name: PRODUCT_NAME, major_slug: majorSlug, major_name: majorName },
+        metadata: bundle
+          ? { product: BUNDLE_PRODUCT_ID, product_name: `${PRODUCT_NAME} x3`, major_slug: bundleMetaSlugs(bundle), major_name: bundle.map((b) => b.name).join(" + ") }
+          : { product: PRODUCT_ID, product_name: PRODUCT_NAME, major_slug: majorSlug, major_name: majorName },
       }),
     });
     const url = body?.data?.authorization_url;
@@ -117,7 +122,7 @@ export const paystackProvider: PaymentProvider = {
     return { reference, authorizationUrl: url };
   },
 
-  async verify({ reference, majorSlug }: VerifyInput): Promise<VerifyResult> {
+  async verify({ reference, majorSlug, bundle }: VerifyInput): Promise<VerifyResult> {
     const { ok, httpStatus, body } = await call(`/transaction/verify/${encodeURIComponent(reference)}`);
     if (httpStatus === 404) return { status: "failed", reason: "no_payment_found" };
     if (!ok || body?.status !== true || !body.data) throw new Error("Paystack verification failed");
@@ -129,13 +134,13 @@ export const paystackProvider: PaymentProvider = {
       case "success": {
         // The transaction is real and paid. Make sure it is the one we created, for this major and price.
         if (d.reference !== reference) return { status: "failed", reason: "reference_mismatch" };
-        if (meta.product !== PRODUCT_ID || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
+        if (meta.product !== (bundle ? BUNDLE_PRODUCT_ID : PRODUCT_ID) || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
         // The normal price, or the launch price (also after the launch has ended: that payment was started while it ran).
         // The amount is only ever chosen by our server when the payment starts, so no other amount can be paid here.
         const expected = charge();
         const paidMinor = Number(d.amount);
         const launched = launchMinor(expected.amount);
-        const allowed = [expected.amount, comebackMinor(expected.amount), ...(launched !== null ? [launched] : [])];
+        const allowed = bundle ? [bundleMinor(expected.currency, expected.amount)] : [expected.amount, comebackMinor(expected.amount), ...(launched !== null ? [launched] : [])];
         if (d.currency !== expected.currency || !allowed.includes(paidMinor)) return { status: "failed", reason: "wrong_amount" };
         const email = (d.customer as { email?: unknown } | undefined)?.email;
         return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined, amountMinor: paidMinor, currency: String(d.currency) };

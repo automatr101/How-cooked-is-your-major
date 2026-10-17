@@ -13,6 +13,8 @@ export interface InitializeInput {
   callbackUrl: string;
   /** The visitor holds a running comeback offer (30% off, see comeback.ts). Decided by the server from a signed cookie. */
   comeback?: boolean;
+  /** The 3-major bundle (see bundle.ts). When set, majorSlug/majorName describe the first major only. */
+  bundle?: { slug: string; name: string }[];
 }
 
 export interface InitializeResult {
@@ -28,6 +30,8 @@ export interface VerifyInput {
   proof?: string;
   /** Stripe only: the Checkout Session id Stripe sent the buyer back with. */
   session?: string;
+  /** Verifying a 3-major bundle: majorSlug is then the three slugs joined with commas. */
+  bundle?: boolean;
 }
 
 export interface VerifyResult {

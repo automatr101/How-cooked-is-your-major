@@ -3,6 +3,8 @@ import { entitledSlugs } from "@/lib/payments/entitlement";
 import { gateActive, gateAllows } from "@/lib/payments/gate";
 import { currentPrice, launchInfo, regularPriceForPage, stripeLaunchInfo, stripePrice } from "@/lib/payments/price";
 import { activeComeback, comebackMinor } from "@/lib/payments/comeback";
+import { bundleMinor, BUNDLE_USD_MINOR } from "@/lib/payments/bundle";
+import { priceOf } from "@/lib/premium";
 import { stripeAudience, stripeEnabled } from "@/lib/payments/stripe";
 import { json } from "@/lib/payments/http";
 import { DEFAULT_PRICE, PAYMENTS_MODE } from "@/lib/premium";
@@ -43,6 +45,10 @@ export async function GET(req: NextRequest) {
   const usd: { currency: string; value: number } | null = launch ? (approxUsd ? { currency: "USD", value: approxUsd } : null) : DEFAULT_PRICE;
   const approx = price && usd && !useStripe ? dollarHint(price.currency, country, usd) : null;
   const regularApprox = launch && approx ? dollarHint(price!.currency, country, DEFAULT_PRICE) : null;
+  // The 3-major bundle: $9.99 with Stripe, twice the normal single price in the Paystack currency
+  const single = enabled ? regularPriceForPage(useStripe) : null;
+  const bundlePrice = single ? priceOf(single.currency, bundleMinor(single.currency, single.minor)) : null;
+  const bundleApprox = bundlePrice && !useStripe ? dollarHint(bundlePrice.currency, country, { currency: "USD", value: BUNDLE_USD_MINOR / 100 }) : null;
   return json({
     enabled,
     gated: gateActive(),
@@ -50,6 +56,7 @@ export async function GET(req: NextRequest) {
     ...(enabled && PAYMENTS_MODE === "live" ? { provider: useStripe ? "stripe" : "paystack" } : {}),
     ...(price ? { price } : {}),
     ...(approx ? { approx } : {}),
+    ...(bundlePrice ? { bundle: { price: bundlePrice, ...(bundleApprox ? { approx: bundleApprox } : {}) } } : {}),
     ...(launch ? { launch: { regular: launch.regular, endsAt: launch.endsAt, ...(regularApprox ? { regularApprox } : {}), ...("kind" in launch ? { kind: launch.kind } : {}) } } : {}),
   });
 }

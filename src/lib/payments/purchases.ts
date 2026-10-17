@@ -2,6 +2,7 @@ import { PLAN_COPY, planTypeFor } from "@/lib/premium";
 import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 import { charge } from "./paystack";
 import { hashEmail, recordPurchase, storeEnabled } from "./store";
+import { bundleKey } from "./bundle";
 
 // SERVER ONLY. What happens the first time a verified payment is seen. Called from two places that can both be
 // the first to see a payment: the buyer's browser coming back (/api/checkout/verify) and Paystack's own message
@@ -19,6 +20,8 @@ export async function registerPurchase(input: {
   paid?: { amount: number; currency: string };
   /** Which provider took the payment (default Paystack). Only used for the alert wording. */
   provider?: "paystack" | "stripe";
+  /** A 3-major bundle: all three majors (input.major is the first). Stored as one row. */
+  bundle?: { name: string; slug: string; score: number }[];
 }): Promise<void> {
   const planType = planTypeFor(input.major.score);
   const paid = input.paid ?? charge(); // what was actually paid (the launch price if that is what the buyer paid)
@@ -28,7 +31,7 @@ export async function registerPurchase(input: {
     try {
       isNew = await recordPurchase({
         reference: input.reference,
-        major_slug: input.major.slug,
+        major_slug: input.bundle ? bundleKey(input.bundle) : input.major.slug,
         plan_type: planType,
         amount_minor: paid.amount,
         currency: paid.currency,
@@ -50,7 +53,9 @@ export async function registerPurchase(input: {
     await sendTelegram(
       [
         (input.provider === "stripe" ? process.env.STRIPE_SECRET_KEY : process.env.PAYSTACK_SECRET_KEY)?.trim().match(/^(sk|rk)_test_/) ? "🧪 <b>TEST purchase</b> (test key, no real money)" : "💰 <b>New purchase</b>",
-        `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
+        input.bundle
+          ? `📦 3-major bundle: ${input.bundle.map((b) => `${escapeHtml(b.name)} (${b.score}%)`).join(" + ")}`
+          : `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
         `💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}${input.provider === "stripe" ? " via Stripe" : ""}`,
         `🧾 ${escapeHtml(input.reference)}`,
       ].join("\n")

@@ -46,6 +46,8 @@ interface Props {
   resumeReference?: string;
   /** Stripe's Checkout Session id when the visitor comes back from Stripe. */
   resumeSession?: string;
+  /** The 3-major bundle: the three majors (the first is `major`) and its price. One payment unlocks all three. */
+  bundle?: { majors: CheckoutMajor[]; price?: Price; approx?: string };
   /** Called once the payment is confirmed. Must load the plan; the dialog then shows "ready". */
   onPaid: () => Promise<boolean>;
   onClose: () => void;
@@ -66,7 +68,12 @@ const FAILURE_TEXT: Record<string, string> = {
   expired: "That payment session expired. Please start again.",
 };
 
-export function CheckoutDialog({ major, planType, price, approx, launch, resumeReference, resumeSession, onPaid, onClose, onViewPlan }: Props) {
+export function CheckoutDialog({ major, planType, price: singlePrice, approx: singleApprox, launch: singleLaunch, bundle, resumeReference, resumeSession, onPaid, onClose, onViewPlan }: Props) {
+  // A bundle has its own price and never a launch or comeback discount
+  const price = bundle?.price ?? singlePrice;
+  const approx = bundle ? bundle.approx : singleApprox;
+  const launch = bundle ? undefined : singleLaunch;
+  const bundleNames = bundle?.majors.map((m) => m.name);
   const reduceMotion = useReducedMotion();
   const copy = PLAN_COPY[planType];
   const [step, setStep] = useState<Step>(resumeReference ? { name: "processing", reference: resumeReference, session: resumeSession } : { name: "review" });
@@ -156,7 +163,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
     closedRef.current = false; // a new attempt: closing it again counts again
     setStep({ name: "starting" });
     try {
-      const { ok, data } = await post("/api/checkout/initialize", { major: major.name, email: email.trim() });
+      const { ok, data } = await post("/api/checkout/initialize", { major: major.name, email: email.trim(), ...(bundleNames ? { bundle: bundleNames } : {}) });
       if (!ok || !data.reference) {
         trackPaymentFailed(major, planType, data?.error ?? "could_not_start");
         notifyStep("checkout_problem", major, "could_not_start");
@@ -239,7 +246,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
     }
     setStep({ name: "processing", reference });
     try {
-      const { ok, data } = await post("/api/checkout/mock", { major: major.name, reference, outcome });
+      const { ok, data } = await post("/api/checkout/mock", { major: major.name, reference, outcome, ...(bundleNames ? { bundle: bundleNames } : {}) });
       if (!ok || !data.proof) return setStep({ name: "error", message: "The test checkout could not respond. Try again." });
       setStep({ name: "processing", reference, proof: data.proof });
     } catch {
@@ -260,7 +267,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
       for (let attempt = 0; attempt < POLL_TRIES; attempt++) {
         if (cancelled) return;
         try {
-          const { data } = await post("/api/checkout/verify", { major: major.name, reference, proof, session });
+          const { data } = await post("/api/checkout/verify", { major: major.name, reference, proof, session, ...(bundleNames ? { bundle: bundleNames } : {}) });
           if (cancelled) return;
           if (data.status === "success") {
             trackPaid(major, planType, String(data.transactionId ?? reference));
@@ -354,8 +361,8 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
               <div className="rounded-2xl border border-border bg-background/60 p-4">
                 <div className="flex items-baseline justify-between gap-4">
                   <div>
-                    <p className="text-sm font-black uppercase">{copy.name}</p>
-                    <p className="text-xs text-muted-foreground">for {major.name}</p>
+                    <p className="text-sm font-black uppercase">{bundle ? "3 Survival Plans" : copy.name}</p>
+                    <p className="text-xs text-muted-foreground">for {bundleNames ? bundleNames.join(", ") : major.name}</p>
                   </div>
                   <p className="text-right">
                     {launch && <span className="mr-2 text-base font-bold tabular-nums text-muted-foreground line-through decoration-2">{launch.regularApprox ?? launch.regular.label}</span>}
@@ -539,7 +546,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
 
           {step.name === "success" && (
             <div className="space-y-5">
-              <Status icon={<SuccessIcon active size={44} className="text-emerald-500" />} title="Payment confirmed" text={`Your ${copy.name} is ready.`} />
+              <Status icon={<SuccessIcon active size={44} className="text-emerald-500" />} title="Payment confirmed" text={bundle ? `Your 3 plans are ready. The other two open when you scan ${bundleNames!.slice(1).join(" and ")}.` : `Your ${copy.name} is ready.`} />
               <PrimaryButton onClick={onViewPlan}>View my plan</PrimaryButton>
             </div>
           )}

@@ -79,4 +79,8 @@ export type ShareMethod = "twitter" | "whatsapp" | "copy_link" | "native_share" 
 
 export function trackShare(method: ShareMethod, majorName: string): void {
   track("share", { method, content_type: "major_result", item_id: slugify(majorName) });
+  // Share-to-unlock: the extended-roast box listens for this (any share button counts)
+  try {
+    window.dispatchEvent(new CustomEvent("cm:shared", { detail: { major: majorName, method } }));
+  } catch {}
 }

@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findMajor, getProvider, REFERENCE_PATTERN } from "@/lib/payments";
 import { SESSION_ID, stripeEnabled, stripeProvider } from "@/lib/payments/stripe";
-import { grantEntitlement } from "@/lib/payments/entitlement";
+import { grantEntitlement, grantEntitlements } from "@/lib/payments/entitlement";
 import { funnelAlert } from "@/lib/payments/alerts";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { registerPurchase } from "@/lib/payments/purchases";
 import { findPurchase, statusOf, storeEnabled } from "@/lib/payments/store";
 import { currentPrice } from "@/lib/payments/price";
+import { bundleKey, bundleMetaSlugs, coversMajor, findBundle } from "@/lib/payments/bundle";
 import { PAYMENTS_MODE, PRODUCT_NAME, priceOf } from "@/lib/premium";
 
 // Step 2: ask the provider whether the payment really happened. This is the ONLY place that grants the
@@ -22,6 +23,10 @@ export async function POST(req: NextRequest) {
   const reference = typeof body?.reference === "string" ? body.reference : "";
   const proof = typeof body?.proof === "string" ? body.proof : undefined;
   if (!major || !REFERENCE_PATTERN.test(reference)) return json({ error: "bad_request" }, 400);
+  // A 3-major bundle: verified as one payment covering exactly these three majors (the first is the one on screen)
+  const bundle = body?.bundle !== undefined ? findBundle(body.bundle) : null;
+  if (body?.bundle !== undefined && (!bundle || bundle[0].slug !== major.slug)) return json({ error: "bad_request" }, 400);
+  const majorSlug = bundle ? bundleMetaSlugs(bundle) : major.slug;
 
   const session = typeof body?.session === "string" && SESSION_ID.test(body.session) ? body.session : undefined;
   // A buyer coming back from Stripe carries Stripe's session id; everything else is the mode's provider (Paystack, or the fake one)
@@ -29,13 +34,13 @@ export async function POST(req: NextRequest) {
   if (!provider) return json({ error: "not_available" }, 404);
 
   try {
-    let result = await provider.verify({ reference, majorSlug: major.slug, proof, session });
+    let result = await provider.verify({ reference, majorSlug, proof, session, bundle: !!bundle });
     // "Restore by payment reference" for a Stripe purchase: Stripe cannot find a session from the reference alone, but our own
     // purchase record (made when the payment was verified) can. Only for a paid, un-refunded purchase of THIS major.
     if (!session && result.status === "failed" && result.reason === "no_payment_found" && stripeEnabled() && storeEnabled()) {
       try {
         const known = await findPurchase(reference);
-        if (known && known.status === "paid" && known.major_slug === major.slug) {
+        if (known && known.status === "paid" && (bundle ? known.major_slug === bundleKey(bundle) : coversMajor(known.major_slug, major.slug))) {
           result = { status: "success", transactionId: reference, amountMinor: known.amount_minor, currency: known.currency };
         }
       } catch {
@@ -65,6 +70,7 @@ export async function POST(req: NextRequest) {
         email: result.customerEmail,
         paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
         provider: provider.id === "stripe" || result.currency === "USD" ? "stripe" : "paystack",
+        bundle: bundle ?? undefined,
       });
     }
 
@@ -74,7 +80,8 @@ export async function POST(req: NextRequest) {
       { status: "success", transactionId: result.transactionId ?? reference, value: price.value, currency: price.currency, itemName: PRODUCT_NAME },
       { headers: { "Cache-Control": "no-store" } }
     );
-    grantEntitlement(req, out, major.slug, reference);
+    if (bundle) grantEntitlements(req, out, bundle.map((b) => b.slug), reference);
+    else grantEntitlement(req, out, major.slug, reference);
     return out;
   } catch {
     console.error("[checkout] verification could not be completed");
