@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import { entitledSlugs } from "@/lib/payments/entitlement";
 import { gateActive, gateAllows } from "@/lib/payments/gate";
-import { currentPrice, launchInfo, stripeLaunchInfo, stripePrice } from "@/lib/payments/price";
+import { currentPrice, launchInfo, regularPriceForPage, stripeLaunchInfo, stripePrice } from "@/lib/payments/price";
+import { activeComeback, comebackMinor } from "@/lib/payments/comeback";
 import { stripeAudience, stripeEnabled } from "@/lib/payments/stripe";
 import { json } from "@/lib/payments/http";
 import { DEFAULT_PRICE, PAYMENTS_MODE } from "@/lib/premium";
@@ -24,8 +25,18 @@ export async function GET(req: NextRequest) {
   const country = req.headers.get("x-vercel-ip-country");
   // A visitor who will pay with Stripe is charged real US dollars: show exactly that, with no cedi note and no dollar "guide"
   const useStripe = enabled && stripeEnabled() && stripeAudience(country);
-  const price = enabled ? (useStripe ? stripePrice() : currentPrice()) : null;
-  const launch = enabled ? (useStripe ? stripeLaunchInfo() : launchInfo()) : null;
+  // A running comeback offer (signed cookie): 30% off for this visitor until its end. It shows only when it is the lower price.
+  const comeback = enabled ? activeComeback(req) : null;
+  const withoutComeback = enabled ? (useStripe ? stripePrice() : currentPrice()) : null;
+  const price = enabled ? (useStripe ? stripePrice(!!comeback) : currentPrice(!!comeback)) : null;
+  const comebackWins = !!comeback && !!price && !!withoutComeback && price.minor < withoutComeback.minor;
+  const launch = !enabled
+    ? null
+    : comebackWins
+      ? { regular: regularPriceForPage(useStripe), endsAt: comeback!.endsAt.toISOString(), approxUsd: comebackMinor(DEFAULT_PRICE.minor) / 100, kind: "comeback" as const }
+      : useStripe
+        ? stripeLaunchInfo()
+        : launchInfo();
   // During a launch the dollar figure is the owner's own LAUNCH_APPROX_USD; without it, visitors outside Ghana see the cedi
   // price alone (nothing is converted here, and the old $4.99 would be wrong next to a discounted cedi price).
   const approxUsd: number | null = launch && "approxUsd" in launch ? (launch as { approxUsd: number | null }).approxUsd : null;
@@ -39,6 +50,6 @@ export async function GET(req: NextRequest) {
     ...(enabled && PAYMENTS_MODE === "live" ? { provider: useStripe ? "stripe" : "paystack" } : {}),
     ...(price ? { price } : {}),
     ...(approx ? { approx } : {}),
-    ...(launch ? { launch: { regular: launch.regular, endsAt: launch.endsAt, ...(regularApprox ? { regularApprox } : {}) } } : {}),
+    ...(launch ? { launch: { regular: launch.regular, endsAt: launch.endsAt, ...(regularApprox ? { regularApprox } : {}), ...("kind" in launch ? { kind: launch.kind } : {}) } } : {}),
   });
 }

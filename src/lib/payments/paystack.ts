@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
 import { isPaystackPage } from "./paystack-url";
 import { activeLaunch, launchMinor } from "./launch";
+import { comebackMinor } from "./comeback";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // LIVE MODE. Paystack hosted checkout: the server creates the transaction (the secret key never leaves
@@ -27,11 +28,15 @@ export function charge(): { currency: string; amount: number } {
   return { currency, amount };
 }
 
-/** What a payment started RIGHT NOW is charged: the launch price while the launch is running, otherwise the normal price. */
-export function activeCharge(now: Date = new Date()): { currency: string; amount: number } {
+/**
+ * What a payment started RIGHT NOW is charged: the lowest of the normal price, the launch price (while the launch runs) and the
+ * comeback price (when this visitor holds a running comeback offer).
+ */
+export function activeCharge(now: Date = new Date(), comeback = false): { currency: string; amount: number } {
   const regular = charge();
   const launch = activeLaunch(regular.amount, now);
-  return launch ? { currency: regular.currency, amount: launch.minor } : regular;
+  const amount = Math.min(regular.amount, launch ? launch.minor : Infinity, comeback ? comebackMinor(regular.amount) : Infinity);
+  return { currency: regular.currency, amount };
 }
 
 // Which payment options Paystack's page offers. Left unset, Paystack shows every channel enabled on the account (Settings >
@@ -81,8 +86,8 @@ function gatewayNote(data: Record<string, unknown>): string | undefined {
 export const paystackProvider: PaymentProvider = {
   id: "paystack",
 
-  async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
-    const { currency, amount } = activeCharge();
+  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback }: InitializeInput): Promise<InitializeResult> {
+    const { currency, amount } = activeCharge(new Date(), comeback);
     const { ok, httpStatus, body } = await call("/transaction/initialize", {
       method: "POST",
       body: JSON.stringify({
@@ -130,7 +135,8 @@ export const paystackProvider: PaymentProvider = {
         const expected = charge();
         const paidMinor = Number(d.amount);
         const launched = launchMinor(expected.amount);
-        if (d.currency !== expected.currency || !(paidMinor === expected.amount || (launched !== null && paidMinor === launched))) return { status: "failed", reason: "wrong_amount" };
+        const allowed = [expected.amount, comebackMinor(expected.amount), ...(launched !== null ? [launched] : [])];
+        if (d.currency !== expected.currency || !allowed.includes(paidMinor)) return { status: "failed", reason: "wrong_amount" };
         const email = (d.customer as { email?: unknown } | undefined)?.email;
         return { status: "success", transactionId: String(d.id ?? reference), customerEmail: typeof email === "string" ? email : undefined, amountMinor: paidMinor, currency: String(d.currency) };
       }

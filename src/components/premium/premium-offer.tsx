@@ -56,7 +56,32 @@ function readResume(majorName: string): { reference: string; session?: string } 
 // `approx` = a dollar amount ("US$4.99") the server sends only to visitors outside Ghana. They see it as the headline
 // price (a guide), with a line under it saying what is really charged in cedis, so nothing is hidden before the
 // payment page. It never changes what is charged.
-export type LaunchInfo = { regular: Price; endsAt: string; regularApprox?: string };
+export type LaunchInfo = { regular: Price; endsAt: string; regularApprox?: string; kind?: "comeback" };
+
+// The comeback offer (30% off for 24 hours, once): asked for when this browser is back at the paywall on a LATER visit, at
+// least 30 minutes after it first saw it. The server decides whether there is an offer and signs it into a cookie; this only
+// notices the visit. Remembered in this browser only (localStorage), never sent anywhere else.
+const FIRST_SEEN_KEY = "cm_paywall_first_seen";
+const ASKED_KEY = "cm_comeback_asked";
+const SESSION_KEY = "cm_paywall_this_visit";
+const LATER_VISIT_MS = 30 * 60 * 1000;
+
+function isComebackVisit(): boolean {
+  try {
+    const now = Date.now();
+    const thisVisit = sessionStorage.getItem(SESSION_KEY);
+    sessionStorage.setItem(SESSION_KEY, "1");
+    const first = Number(localStorage.getItem(FIRST_SEEN_KEY));
+    if (!first) {
+      localStorage.setItem(FIRST_SEEN_KEY, String(now));
+      return false;
+    }
+    if (thisVisit || localStorage.getItem(ASKED_KEY)) return false;
+    return now - first >= LATER_VISIT_MS;
+  } catch {
+    return false;
+  }
+}
 type Status = { enabled: boolean; gated: boolean; unlocked?: string[]; price?: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack" };
 let statusRequest: Promise<Status> | null = null;
 function refreshStatus() {
@@ -101,8 +126,25 @@ export function PremiumOffer({ major }: { major: Major }) {
     }, Math.max(wait, 0));
     return () => clearTimeout(id);
   }, [endsAt]);
+  // Called once the offer card has really been on screen
+  const onViewed = useCallback(() => {
+    if (!isComebackVisit()) return;
+    try {
+      localStorage.setItem(ASKED_KEY, "1");
+    } catch {}
+    fetch("/api/payments/comeback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ major: major.name }) })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { active?: boolean } | null) => {
+        if (!d?.active) return;
+        refreshStatus().then((s) => {
+          if (s.price) setPrice(s.price);
+          setStatus(s);
+        });
+      })
+      .catch(() => {});
+  }, [major.name]);
   if (PAYMENTS_MODE === "off" || !status?.enabled) return null;
-  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} provider={status.provider} gated={status.gated} />;
+  return <Offer key={major.name} major={major} unlocked={status.unlocked ?? []} price={status.price ?? DEFAULT_PRICE} approx={status.approx} launch={status.launch} provider={status.provider} gated={status.gated} onViewed={onViewed} />;
 }
 
 // The real preview of the plan for this major (two recommendations and counts), from /api/plan/preview. If it cannot be
@@ -122,7 +164,7 @@ function usePreview(majorName: string): PlanPreview | null {
   return preview;
 }
 
-function Offer({ major, unlocked, price, approx, launch, provider, gated }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; gated: boolean }) {
+function Offer({ major, unlocked, price, approx, launch, provider, gated, onViewed }: { major: Major; unlocked: string[]; price: Price; approx?: string; launch?: LaunchInfo; provider?: "stripe" | "paystack"; gated: boolean; onViewed?: () => void }) {
   const planType = planTypeFor(major.score);
   const copy = PLAN_COPY[planType];
   const words = offerCopy(planType, major.name, major.score);
@@ -166,6 +208,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated }: { ma
         if (entries.some((e) => e.isIntersecting)) {
           trackOfferViewed(major, planType);
           if (!gated) notifyStep("paywall_viewed", major); // visits by the owner behind the private gate are not announced
+          onViewed?.();
           io.disconnect();
         }
       },
@@ -175,7 +218,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated }: { ma
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [major, planType, plan, gated]);
+  }, [major, planType, plan, gated, onViewed]);
 
   // Is the card's own button on screen? It decides whether the bar pinned to the bottom of a phone is shown (below).
   // It starts as "yes", so the bar never flashes in before this is known. The bottom 88px are left out of the
@@ -411,7 +454,7 @@ function LaunchBadge({ launch }: { launch: LaunchInfo }) {
   const when = end.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
   return (
     <p className="inline-flex flex-wrap items-center gap-x-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-primary">
-      <span>Launch price</span>
+      <span>{launch.kind === "comeback" ? "You came back: 30% off" : "Launch price"}</span>
       <span className="text-foreground/80">ends {when} · {left}</span>
     </p>
   );

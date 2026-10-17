@@ -11,6 +11,8 @@ export interface InitializeInput {
   email: string;
   /** Where a hosted checkout sends the visitor back to. */
   callbackUrl: string;
+  /** The visitor holds a running comeback offer (30% off, see comeback.ts). Decided by the server from a signed cookie. */
+  comeback?: boolean;
 }
 
 export interface InitializeResult {
