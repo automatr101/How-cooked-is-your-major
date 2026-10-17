@@ -108,7 +108,7 @@ const FRAMES: Record<PlanType, Frame> = {
         `Write down what you want to be known for in ${v.nick}, in one sentence.`,
         `Find three people at the top of your field and read or watch what they have published.`,
       ] },
-      { days: 60, theme: "Create visible leverage", steps: [
+      { days: 60, theme: "Get seen doing the work", steps: [
         `Start a project that shows your depth: ${v.project1}.`,
         `Work on ${v.skill2} and ${v.skill3} through it.`,
         `Document the project in public, with the results and what you learned.`,

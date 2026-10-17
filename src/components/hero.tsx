@@ -5,10 +5,11 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Plus, BrainCircuit, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button"; 
-import { majors } from "@/lib/data";
+import { getLevelColor, majors, realMajors } from "@/lib/data";
 import { ShineBorder } from "@/components/ui/hero-designali";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
+import { FriendsRow } from "@/components/friends-row";
 
 // Three.js is ~140 KB gzipped and purely decorative, so load it after the hero text is interactive.
 const GLSLHills = dynamic(
@@ -16,8 +17,11 @@ const GLSLHills = dynamic(
   { ssr: false }
 );
 
-// Cartoon avatars from the public-domain (CC0) "Notionists" set by Zoish, generated once and kept in /public/avatars.
-const AVATARS = ["/avatars/avatar-1.svg", "/avatars/avatar-2.svg", "/avatars/avatar-3.svg", "/avatars/avatar-4.svg", "/avatars/avatar-5.svg"];
+// A taste of real results instead of faces: four majors straight from the site's own data, so what the visitor sees here is what
+// scanning gives them (nothing invented, nothing that looks like a crowd of users).
+const SAMPLE_MAJORS = ["Nursing", "Law", "Computer Science", "Graphic Design"]
+  .map((name) => majors.find((m) => m.name === name))
+  .filter((m): m is (typeof majors)[number] => !!m);
 
 // The hero sentence is typed out one letter at a time, so its length (and the number of lines it wraps to) keeps
 // changing. On phones that made the card grow and shrink by a line and nudged the whole page up and down. Every
@@ -82,23 +86,20 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Illustrated avatars (public domain, shipped with the site) are decoration, not photos of users; the number is a true one, from the data */}
-          <div className="flex flex-col sm:flex-row items-center gap-8 pt-6">
-            <div className="flex flex-col items-start gap-2">
-              <div className="flex -space-x-3" aria-hidden="true">
-                {AVATARS.map((src) => (
-                  <div key={src} className="w-12 h-12 rounded-full border-2 border-background bg-muted flex items-center justify-center overflow-hidden shadow-xl">
-                    {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVGs, nothing to optimise */}
-                    <img src={src} alt="" width={48} height={48} decoding="async" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest pl-1">
-                <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
-              </p>
-              {/* Said out loud: these are drawings, not people who used the site */}
-              <p className="text-[10px] font-medium text-muted-foreground/70 pl-1">Illustrated avatars, not real users</p>
-            </div>
+          {/* Real scores from the data (tap-free proof of what a scan looks like), and the true number of majors scored */}
+          <div className="flex flex-col items-center gap-3 pt-6">
+            <ul className="flex flex-wrap items-center justify-center gap-2" aria-label="Example scores">
+              {SAMPLE_MAJORS.map((m) => (
+                <li key={m.name} className={cn("flex items-center gap-2 rounded-full border bg-background/40 px-3.5 py-2 backdrop-blur-xl", getLevelColor(m.level).split(" ").slice(1, 2).join(" "))}>
+                  <span className="text-xs font-bold">{m.name}</span>
+                  <span className={cn("text-xs font-black tabular-nums", getLevelColor(m.level).split(" ")[0])}>{m.score}%</span>
+                </li>
+              ))}
+            </ul>
+            <FriendsRow />
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
+              <span className="text-foreground">{realMajors.length.toLocaleString("en-US")}</span> majors scored
+            </p>
           </div>
 
           {/* Plus decorations */}

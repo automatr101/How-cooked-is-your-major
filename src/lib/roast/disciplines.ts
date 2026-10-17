@@ -14,7 +14,7 @@ import { LOW, LM, MH, HX, COOKED } from "./types";
 export const DISCIPLINES: Discipline[] = [  {
     id: "built",
     group: "stem",
-    match: /architect|landscape|settlement|surveying|construction|interior|urban|town planning|land (economy|management)|real estate/,
+    match: /architect|landscape|settlement|surveying|construction|interior|urban|town planning|land (economy|management)|real estate/, // lint-copy-ignore (a pattern for matching major names, not copy)
     pools: {
       people: ["architecture students", "built-environment majors", "studio kids"],
       jobs: ["junior architects", "site engineers", "quantity surveyors"],
@@ -320,10 +320,10 @@ export const DISCIPLINES: Discipline[] = [  {
       jobs: ["business analysts", "marketing assistants", "management trainees"],
       grind: ["group presentations", "networking events with free pizza", "building a deck with 40 slides"],
       tool: ["PowerPoint", "LinkedIn", "Excel"],
-      pain: ["a 'networking event' with free pizza", "a pitch deck nobody asked for", "a group project with 'synergy'"],
+      pain: ["a 'networking event' with free pizza", "a pitch deck nobody asked for", "a group project with 'synergy'"], // lint-copy-ignore (the roast mocks the word)
     },
     roasts: [
-      { text: "business major: 4 years, 11 group projects, 1 PowerPoint with 'synergy' on slide 3." },
+      { text: "business major: 4 years, 11 group projects, 1 PowerPoint with 'synergy' on slide 3." }, // lint-copy-ignore (the roast mocks the word)
       { text: "everyone in your degree is a 'founder' on LinkedIn. nobody is founding anything.", tiers: MH },
       { text: "{ai} wrote your pitch deck. the investor asked who you are and you said 'a visionary'.", tiers: MH },
       { text: "your network is strong. your income is 'in progress'.", tiers: LM },

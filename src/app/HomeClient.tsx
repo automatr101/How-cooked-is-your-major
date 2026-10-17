@@ -4,7 +4,7 @@ import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { Search, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import { majors, Major, getLevelColor } from "@/lib/data";
+import { majors, realMajors, Major, getLevelColor } from "@/lib/data";
 import { AnimatedNumber } from "@/components/ui/animated-number";
 import RetroGrid from "@/components/ui/retro-grid";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -18,6 +18,7 @@ import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { LeadBox } from "@/components/lead-box";
+import { scanId } from "@/lib/scan-id";
 import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
 import { HeardFromPoll } from "@/components/heard-from";
@@ -250,7 +251,7 @@ export default function HomeClient() {
   const filteredMajors = useMemo(() => {
     if (!query) return [];
     const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    return majors
+    return realMajors
       .map(major => {
         const name = major.name.toLowerCase();
         let score = 0;
@@ -271,7 +272,7 @@ export default function HomeClient() {
   const filteredComparisonMajors = useMemo(() => {
     if (!comparisonQuery) return [];
     const searchTerms = comparisonQuery.toLowerCase().trim().split(/\s+/);
-    return majors
+    return realMajors
       .map(major => {
         const name = major.name.toLowerCase();
         let score = 0;
@@ -383,7 +384,7 @@ export default function HomeClient() {
                   {/* Top Header Area */}
                   <div className="flex justify-between items-start mb-2 sm:mb-3">
                     <div className="max-w-[75%]">
-                      <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Scanned {new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</p>
+                      <p className="text-[6px] sm:text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground mb-0.5">Scan ID: {scanId()}</p>
                       <h2 className="text-[11px] sm:text-xl font-black text-foreground leading-tight tracking-tighter uppercase break-words line-clamp-2 sm:line-clamp-3">{selectedMajor.name}</h2>
                     </div>
                     <div className="p-1 sm:p-3 rounded-lg sm:rounded-2xl bg-foreground text-background shrink-0">

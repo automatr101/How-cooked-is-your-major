@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { majors, Major } from "@/lib/data";
+import { realMajors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { track } from "@/lib/analytics";
 import { MajorSearch } from "@/components/major-search";
@@ -37,7 +37,7 @@ export default function ComparePage() {
   const filter = (query: string) => {
     if (!query) return [];
     const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    return majors
+    return realMajors
       .map(major => {
         const name = major.name.toLowerCase();
         let score = 0;
