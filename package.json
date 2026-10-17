@@ -10,7 +10,8 @@
     "telegram:setup": "node scripts/telegram-setup.mjs",
     "roast:check": "node scripts/check-roasts.mjs",
     "sound:check": "node scripts/check-sounds.mjs",
-    "lint:copy": "node scripts/lint-copy.mjs"
+    "lint:copy": "node scripts/lint-copy.mjs",
+    "lint:majors": "node --no-warnings scripts/lint-majors.mts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

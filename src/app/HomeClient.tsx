@@ -4,7 +4,7 @@ import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { Search, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import { majors, realMajors, Major, getLevelColor } from "@/lib/data";
+import { canonicalMajor, searchMajors, Major, getLevelColor } from "@/lib/data";
 import { AnimatedNumber } from "@/components/ui/animated-number";
 import RetroGrid from "@/components/ui/retro-grid";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -139,7 +139,7 @@ export default function HomeClient() {
       const params = new URLSearchParams(window.location.search);
       const majorName = params.get("major");
       if (majorName) {
-        const found = majors.find(m => m.name === majorName);
+        const found = canonicalMajor(majorName); // an alias ("BSc. Nursing") opens its canonical entry
         if (found) {
           setSelectedMajor(found);
           nextRoast(found).then((r) => {
@@ -248,45 +248,8 @@ export default function HomeClient() {
     }
   };
 
-  const filteredMajors = useMemo(() => {
-    if (!query) return [];
-    const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    return realMajors
-      .map(major => {
-        const name = major.name.toLowerCase();
-        let score = 0;
-        if (name === query.toLowerCase().trim()) score = 100;
-        else if (name.startsWith(query.toLowerCase().trim())) score = 80;
-        else if (name.includes(query.toLowerCase().trim())) score = 60;
-        else if (searchTerms.every(term => name.includes(term))) score = 40;
-        return { major, score };
-      })
-      .filter(item => item.score > 0)
-      // Equally good matches: shorter names first, so "comp" suggests "Computer Science" before
-      // "Computational Accounting Analytics". (Enter picks the top match.)
-      .sort((a, b) => b.score - a.score || a.major.name.length - b.major.name.length)
-      .slice(0, 10)
-      .map(item => item.major);
-  }, [query]);
-
-  const filteredComparisonMajors = useMemo(() => {
-    if (!comparisonQuery) return [];
-    const searchTerms = comparisonQuery.toLowerCase().trim().split(/\s+/);
-    return realMajors
-      .map(major => {
-        const name = major.name.toLowerCase();
-        let score = 0;
-        if (name === comparisonQuery.toLowerCase().trim()) score = 100;
-        else if (name.startsWith(comparisonQuery.toLowerCase().trim())) score = 80;
-        else if (name.includes(comparisonQuery.toLowerCase().trim())) score = 60;
-        else if (searchTerms.every(term => name.includes(term))) score = 40;
-        return { major, score };
-      })
-      .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 10)
-      .map(item => item.major);
-  }, [comparisonQuery]);
+  const filteredMajors = useMemo(() => searchMajors(query, 10), [query]);
+  const filteredComparisonMajors = useMemo(() => searchMajors(comparisonQuery, 10), [comparisonQuery]);
 
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">

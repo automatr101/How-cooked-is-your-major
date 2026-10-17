@@ -9,7 +9,7 @@
 // for any of the three majors. The unlock cookie gets one entry per major, all with the same reference.
 
 import { PRODUCT_ID } from "@/lib/premium";
-import { majors as allMajors, type Major } from "@/lib/data";
+import { canonicalMajor, majors as allMajors, type Major } from "@/lib/data";
 import { slugify } from "@/lib/analytics";
 
 export const BUNDLE_SIZE = 3;
@@ -28,7 +28,7 @@ export function findBundle(names: unknown): BundleMajor[] | null {
   if (!Array.isArray(names) || names.length !== BUNDLE_SIZE) return null;
   // Looked up here rather than through ./index, which imports the providers (and they import this file)
   const found = names.map((n) => {
-    const m = typeof n === "string" ? allMajors.find((x) => x.name === n) : undefined;
+    const m = typeof n === "string" ? canonicalMajor(n) : undefined;
     return m ? { ...m, slug: slugify(m.name) } : null;
   });
   if (found.some((m) => !m)) return null;

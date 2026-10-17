@@ -99,7 +99,7 @@ export async function GET(req: NextRequest) {
             {/* left: headline */}
             <div style={{ display: 'flex', flexDirection: 'column', width: 650 }}>
               <div style={{ display: 'flex', marginBottom: 22 }}>
-                {label(hasMajor ? `AI RISK SCAN  ·  ${nScore}/100` : 'AI RISK SCAN  ·  120+ MAJORS')}
+                {label(hasMajor ? `AI RISK SCAN  ·  ${nScore}/100` : 'AI RISK SCAN  ·  100+ MAJORS')}
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 18, rowGap: 14, transform: 'skewX(-8deg)', paddingLeft: 10 }}>
