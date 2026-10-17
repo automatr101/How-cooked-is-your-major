@@ -5,10 +5,11 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Plus, BrainCircuit, Sparkles } from "lucide-react"; 
 import { Button } from "@/components/ui/button"; 
-import { getLevelColor, majors } from "@/lib/data";
+import { getLevelColor, majors, realMajors } from "@/lib/data";
 import { ShineBorder } from "@/components/ui/hero-designali";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
+import { FriendsRow } from "@/components/friends-row";
 
 // Three.js is ~140 KB gzipped and purely decorative, so load it after the hero text is interactive.
 const GLSLHills = dynamic(
@@ -95,8 +96,9 @@ export const Hero = () => {
                 </li>
               ))}
             </ul>
+            <FriendsRow />
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-              <span className="text-foreground">{majors.length.toLocaleString("en-US")}</span> majors scored
+              <span className="text-foreground">{realMajors.length.toLocaleString("en-US")}</span> majors scored
             </p>
           </div>
 

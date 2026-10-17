@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Search, X, Zap } from "lucide-react";
-import { majors } from "@/lib/data";
+import { realMajors } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const PAGE = 10;
@@ -37,9 +37,8 @@ export default function LeaderboardPage() {
   // Ranked by risk score; ties put the shorter name first. The rank stays put while filtering.
   const ranked = useMemo(
     () =>
-      [...majors]
+      [...realMajors]
         .sort((a, b) => b.score - a.score || a.name.length - b.name.length)
-        .slice(0, 100)
         .map((m, i) => ({ ...m, rank: i + 1 })),
     []
   );
@@ -72,7 +71,7 @@ export default function LeaderboardPage() {
               <span className="text-primary underline decoration-destructive decoration-wavy underline-offset-4">Leaderboard</span>
             </h1>
             <p className="text-muted-foreground font-medium text-lg">
-              The <span className="text-foreground font-black">100 most cooked</span> majors, ranked by AI risk score. Tap one to see its full scan.
+              Every major we&apos;ve scored, most cooked first. Tap one to see its full scan.
             </p>
           </div>
 

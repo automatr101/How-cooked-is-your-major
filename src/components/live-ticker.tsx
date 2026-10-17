@@ -3,19 +3,33 @@
 import { motion } from "framer-motion";
 import { majors } from "@/lib/data";
 
-// A scrolling strip of real scores from our own data. It used to be labelled "Live Scans" and showed made-up
+// A scrolling strip of real scores (24 different majors, so the same one never shows twice on screen; the loop repeats only off-screen) from our own data. It used to be labelled "Live Scans" and showed made-up
 // numbers; it now says what it is: featured majors, with their real scores.
 const FEATURED = [
   "Computer Science",
-  "Mechanical Engineering",
-  "Graphic Design",
   "Nursing",
+  "Graphic Design",
   "Accounting",
-  "Digital Marketing",
+  "Law",
   "Psychology",
   "Data Science",
-  "Architecture",
-  "Law",
+  "Software Engineering",
+  "Marketing",
+  "Finance",
+  "Biology",
+  "BSc. Architecture",
+  "Physics",
+  "BSc. Economics",
+  "Information Technology",
+  "BA. English",
+  "Chemistry",
+  "BSc Cyber Security",
+  "Mathematics",
+  "BA. History",
+  "Education",
+  "Doctor of Pharmacy",
+  "BSc. Statistics",
+  "BSc. Midwifery",
 ];
 
 const items = FEATURED.map((name) => majors.find((m) => m.name === name)).filter((m): m is NonNullable<typeof m> => !!m);
@@ -23,7 +37,8 @@ const items = FEATURED.map((name) => majors.find((m) => m.name === name)).filter
 export function LiveTicker() {
   const renderItems = (copy: number) =>
     items.map((s, i) => (
-      <span key={`${copy}-${i}`} className="inline-flex items-center gap-2">
+      // The second copy only makes the loop seamless: hidden from screen readers so every score is read once
+      <span key={`${copy}-${i}`} aria-hidden={copy === 1 ? true : undefined} className="inline-flex items-center gap-2">
         <span className="text-primary font-bold">{s.name}</span>
         <span className="text-muted-foreground/60 mx-1">rated</span>
         <span className={s.score > 70 ? "text-destructive" : "text-emerald-500"}>{s.score}% cooked</span>

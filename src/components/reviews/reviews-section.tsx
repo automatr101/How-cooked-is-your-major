@@ -3,6 +3,8 @@
 import { Star } from "lucide-react";
 import { MIN_RATINGS_FOR_AVERAGE } from "@/lib/reviews/min";
 import { usePublicReviews } from "./use-public-reviews";
+import { FriendQuotes } from "@/components/friends-row";
+import { FRIENDS } from "@/content/friends";
 
 // Real reviews, only when they exist. Renders NOTHING while there is nothing real to show: no heading, no empty state, no
 // placeholder. Each number is a real count of approved submissions, labelled by where it came from. An average appears
@@ -43,9 +45,7 @@ export function ReviewsSection({ majorSlug, className = "" }: { majorSlug?: stri
         <span key="a">
           <b className="text-foreground">{r.free.accuracyPercent}%</b> of {plural(r.free.accurateTotal, "free scan vote", "free scan votes")} said their score was accurate
         </span>
-      ) : (
-        <span key="a">{plural(r.free.accurateTotal, "free scan vote", "free scan votes")} on accuracy so far</span>
-      )
+      ) : null
     );
   }
   if (r.free.ratingCount > 0) {
@@ -60,7 +60,8 @@ export function ReviewsSection({ majorSlug, className = "" }: { majorSlug?: stri
       )
     );
   }
-  if (lines.length === 0 && r.items.length === 0) return null;
+  const hasFriends = FRIENDS.some((f) => f.quote);
+  if (lines.length === 0 && r.items.length === 0 && !hasFriends) return null;
 
   return (
     <section aria-label="Reviews" className={`space-y-4 ${className}`}>
@@ -72,6 +73,7 @@ export function ReviewsSection({ majorSlug, className = "" }: { majorSlug?: stri
           ))}
         </div>
       )}
+      <FriendQuotes />
       {r.items.length > 0 && (
         <ul className="grid gap-3 sm:grid-cols-2">
           {r.items.slice(0, 4).map((it, i) => (

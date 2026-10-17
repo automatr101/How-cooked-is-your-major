@@ -99,7 +99,7 @@ export async function GET(req: NextRequest) {
             {/* left: headline */}
             <div style={{ display: 'flex', flexDirection: 'column', width: 650 }}>
               <div style={{ display: 'flex', marginBottom: 22 }}>
-                {label(hasMajor ? `AI RISK SCAN  ·  VERIFICATION ID #882-${nScore}` : 'AI RISK SCAN  ·  1,800+ MAJORS')}
+                {label(hasMajor ? `AI RISK SCAN  ·  ${nScore}/100` : 'AI RISK SCAN  ·  120+ MAJORS')}
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: 18, rowGap: 14, transform: 'skewX(-8deg)', paddingLeft: 10 }}>
@@ -162,7 +162,7 @@ export async function GET(req: NextRequest) {
               }}
             >
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                {label(hasMajor ? `VERIFICATION ID: #882-${nScore}` : 'VERIFICATION ID: #882-??')}
+                {label(hasMajor ? `AI RISK SCORE: ${nScore}/100` : 'AI RISK SCORE')}
                 <div style={{ display: 'flex', marginTop: 8, fontSize: 24, fontWeight: 900, lineHeight: 1.05, letterSpacing: -0.5, textTransform: 'uppercase' }}>
                   {hasMajor ? (major.length > 38 ? `${major.slice(0, 36)}…` : major) : 'Your major'}
                 </div>
