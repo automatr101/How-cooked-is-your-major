@@ -23,7 +23,8 @@ const items = FEATURED.map((name) => majors.find((m) => m.name === name)).filter
 export function LiveTicker() {
   const renderItems = (copy: number) =>
     items.map((s, i) => (
-      <span key={`${copy}-${i}`} className="inline-flex items-center gap-2">
+      // The second copy only makes the loop seamless: hidden from screen readers so every score is read once
+      <span key={`${copy}-${i}`} aria-hidden={copy === 1 ? true : undefined} className="inline-flex items-center gap-2">
         <span className="text-primary font-bold">{s.name}</span>
         <span className="text-muted-foreground/60 mx-1">rated</span>
         <span className={s.score > 70 ? "text-destructive" : "text-emerald-500"}>{s.score}% cooked</span>
