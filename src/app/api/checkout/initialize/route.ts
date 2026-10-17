@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 import { EMAIL_PATTERN, findMajor, getProviderFor, newReference } from "@/lib/payments";
 import { stripeCharge } from "@/lib/payments/stripe";
+import { activeCharge } from "@/lib/payments/paystack";
+import { activeComeback } from "@/lib/payments/comeback";
 import { guard, json, readBody } from "@/lib/payments/http";
 import { cleanText } from "@/lib/clean-text";
 import { funnelAlert } from "@/lib/payments/alerts";
@@ -30,8 +32,11 @@ export async function POST(req: NextRequest) {
     const origin = new URL(req.url).origin;
     const callbackUrl =
       `${origin}/?major=${encodeURIComponent(major.name)}&score=${major.score}&level=${encodeURIComponent(major.level)}&cm_checkout=1`;
-    const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl });
-    funnelAlert(req, "started", major, [], undefined, provider.id === "stripe" ? { ...stripeCharge(), provider: "Stripe" } : undefined);
+    // The comeback offer comes from a cookie our server signed; the browser cannot ask for it any other way
+    const comeback = !!activeComeback(req);
+    const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl, comeback });
+    const paid = provider.id === "stripe" ? { ...stripeCharge(new Date(), comeback), provider: "Stripe" } : provider.id === "paystack" && comeback ? activeCharge(new Date(), true) : undefined;
+    funnelAlert(req, "started", major, comeback ? ["🔁 comeback offer (30% off)"] : [], undefined, paid);
     return json({ provider: provider.id, reference: result.reference, authorizationUrl: result.authorizationUrl ?? null });
   } catch (err) {
     console.error("[checkout] could not start a payment"); // no details: they may contain keys or the email

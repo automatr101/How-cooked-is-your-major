@@ -1,6 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } from "@/lib/premium";
 import { activeLaunchUsd, launchUsdMinor } from "./launch";
+import { comebackMinor } from "./comeback";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // Stripe Checkout, for visitors OUTSIDE Ghana (or everyone, see STRIPE_AUDIENCE), charged in US dollars. Ghana keeps Paystack
@@ -48,9 +49,9 @@ export function stripeAudience(country: string | null): boolean {
 }
 
 /** What a Stripe payment started RIGHT NOW is charged, in US dollars (the launch dollar price while a launch runs). */
-export function stripeCharge(now: Date = new Date()): { currency: string; amount: number } {
+export function stripeCharge(now: Date = new Date(), comeback = false): { currency: string; amount: number } {
   const launch = activeLaunchUsd(PRICE_MINOR, now);
-  return { currency: PRICE_CURRENCY, amount: launch ? launch.minor : PRICE_MINOR };
+  return { currency: PRICE_CURRENCY, amount: Math.min(PRICE_MINOR, launch ? launch.minor : Infinity, comeback ? comebackMinor(PRICE_MINOR) : Infinity) };
 }
 
 async function call(path: string, init?: RequestInit) {
@@ -75,8 +76,8 @@ const isStripePage = (raw: string): boolean => {
 export const stripeProvider: PaymentProvider = {
   id: "stripe",
 
-  async initialize({ reference, majorSlug, majorName, email, callbackUrl }: InitializeInput): Promise<InitializeResult> {
-    const { currency, amount } = stripeCharge();
+  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback }: InitializeInput): Promise<InitializeResult> {
+    const { currency, amount } = stripeCharge(new Date(), comeback);
     const f = new URLSearchParams();
     f.set("mode", "payment");
     f.set("line_items[0][quantity]", "1");
@@ -134,7 +135,8 @@ export const stripeProvider: PaymentProvider = {
       const paid = Number(body.amount_total);
       const launched = launchUsdMinor(PRICE_MINOR);
       const currency = String(body.currency ?? "").toUpperCase();
-      if (currency !== PRICE_CURRENCY || !(paid === PRICE_MINOR || (launched !== null && paid === launched))) return { status: "failed", reason: "wrong_amount" };
+      const allowed = [PRICE_MINOR, comebackMinor(PRICE_MINOR), ...(launched !== null ? [launched] : [])];
+      if (currency !== PRICE_CURRENCY || !allowed.includes(paid)) return { status: "failed", reason: "wrong_amount" };
       const email = (body.customer_details as { email?: unknown } | null | undefined)?.email ?? body.customer_email;
       const intent = typeof body.payment_intent === "string" ? body.payment_intent : String(body.id);
       return { status: "success", transactionId: intent, customerEmail: typeof email === "string" ? email : undefined, amountMinor: paid, currency };

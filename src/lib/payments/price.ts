@@ -2,6 +2,7 @@ import { DEFAULT_PRICE, PAYMENTS_MODE, priceOf, type Price } from "@/lib/premium
 import { activeCharge, charge } from "./paystack";
 import { activeLaunch, activeLaunchUsd } from "./launch";
 import { stripeCharge } from "./stripe";
+import { comebackMinor } from "./comeback";
 
 // SERVER ONLY. What a buyer is charged right now. In live mode that is exactly what the Paystack code asks for
 // (activeCharge: the launch price while a launch is running, otherwise PAYSTACK_CURRENCY and PAYSTACK_AMOUNT_MINOR), so
@@ -22,18 +23,23 @@ function regularPrice(): Price {
   return DEFAULT_PRICE;
 }
 
-export function currentPrice(): Price {
+export function currentPrice(comeback = false): Price {
   const regular = regularPrice();
   if (PAYMENTS_MODE === "live") {
     try {
-      const paid = activeCharge();
+      const paid = activeCharge(new Date(), comeback);
       return priceOf(paid.currency, paid.amount);
     } catch {
       return regular;
     }
   }
   const launch = activeLaunch(regular.minor);
-  return launch ? priceOf(regular.currency, launch.minor) : regular;
+  return priceOf(regular.currency, Math.min(regular.minor, launch ? launch.minor : Infinity, comeback ? comebackMinor(regular.minor) : Infinity));
+}
+
+/** The normal price (what the comeback offer is 30% off), for the page to strike through. */
+export function regularPriceForPage(stripe: boolean): Price {
+  return stripe ? priceOf(DEFAULT_PRICE.currency, DEFAULT_PRICE.minor) : regularPrice();
 }
 
 /** The running launch, for the page to show: the normal price (struck through) and when it ends. Null when there is none. */
@@ -44,8 +50,8 @@ export function launchInfo(): { regular: Price; endsAt: string; approxUsd: numbe
 }
 
 /** What a Stripe buyer is charged right now, in dollars. */
-export function stripePrice(): Price {
-  const c = stripeCharge();
+export function stripePrice(comeback = false): Price {
+  const c = stripeCharge(new Date(), comeback);
   return priceOf(c.currency, c.amount);
 }
 

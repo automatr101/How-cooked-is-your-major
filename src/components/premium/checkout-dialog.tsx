@@ -41,7 +41,7 @@ interface Props {
   /** A dollar amount ("US$4.99") for visitors outside Ghana, shown as the headline price with the cedi charge stated under it. Never what is charged. */
   approx?: string;
   /** A running launch discount: what the normal price is and when it ends. Never what is charged (the server decides that). */
-  launch?: { regular: Price; endsAt: string; regularApprox?: string };
+  launch?: { regular: Price; endsAt: string; regularApprox?: string; kind?: "comeback" };
   /** Set when the visitor comes back from the payment page: go straight to confirming this payment. */
   resumeReference?: string;
   /** Stripe's Checkout Session id when the visitor comes back from Stripe. */
@@ -365,7 +365,7 @@ export function CheckoutDialog({ major, planType, price, approx, launch, resumeR
                 </div>
                 {launch && (
                   <p className="mt-3 border-t border-border/40 pt-3 text-[11px] font-bold leading-relaxed text-primary">
-                    Launch price, until {new Date(launch.endsAt).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. After that the price is {launch.regularApprox ?? launch.regular.label}.
+                    {launch.kind === "comeback" ? "Your comeback price (30% off)" : "Launch price"}, until {new Date(launch.endsAt).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. After that the price is {launch.regularApprox ?? launch.regular.label}.
                   </p>
                 )}
                 {approx && (
