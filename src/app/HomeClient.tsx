@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { Search, Twitter, MessageCircle, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
+import { XLogo, WhatsAppLogo } from "@/components/brand-icons";
+import { Search, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { canonicalMajor, searchMajors, Major, getLevelColor } from "@/lib/data";
@@ -601,23 +602,24 @@ export default function HomeClient() {
 
             {/* Actions for User */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-8 px-4 lg:px-0">
+              {/* X and WhatsApp in their own official colours and marks, so they read as the real share buttons at a glance */}
               <button
                 onClick={() => handleShare("x")}
-                className="py-4 rounded-2xl bg-sky-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+                className="py-4 rounded-2xl bg-black text-white border border-white/20 font-black text-sm flex items-center justify-center gap-2 hover:bg-neutral-900 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
-                <Twitter className="w-4 h-4 fill-current" />
-                SHARE ON X
+                <XLogo className="w-4 h-4" />
+                POST ON X
               </button>
               <button
                 onClick={() => handleShare("wa")}
-                className="py-4 rounded-2xl bg-emerald-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+                className="py-4 rounded-2xl bg-[#25D366] text-white font-black text-sm flex items-center justify-center gap-2 hover:bg-[#1EBE5A] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppLogo className="w-[18px] h-[18px]" />
                 WHATSAPP
               </button>
               <button
                 onClick={handleDownload}
-                className="py-4 rounded-2xl bg-foreground text-background font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+                className="py-4 rounded-2xl bg-[#FFE0C3] text-[#0C0C0C] font-black text-sm flex items-center justify-center gap-2 hover:bg-[#FFD3AB] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 <DownloadDoneIcon active={saved} size={24} className="-ml-1" />
                 {saved ? "SAVED" : "SAVE CARD"}
@@ -634,7 +636,7 @@ export default function HomeClient() {
                     })
                     .catch(() => alert("Couldn't copy. Select the text and copy it by hand."));
                 }}
-                className="py-4 rounded-2xl bg-muted border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.05] active:scale-95 transition-all shadow-lg"
+                className="py-4 rounded-2xl bg-card border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:bg-muted active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 <CopiedIcon active={copied} size={24} className="-ml-1" />
                 <span aria-live="polite">{copied ? "COPIED!" : "COPY TEXT"}</span>
