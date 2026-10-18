@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/", label: "Home" },
   { href: "/leaderboard", label: "Leaderboard" },
   { href: "/compare", label: "Compare" },
+  { href: "/ambassadors", label: "Ambassadors" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },

@@ -12,16 +12,18 @@ export async function POST(req: NextRequest) {
   if (rateLimited(`admin-login:${clientIp(req)}`, 8, 10 * 60 * 1000)) return notFound();
 
   let key = "";
+  let next = "/admin/reviews";
   try {
     const form = await req.formData();
     key = String(form.get("key") ?? "").slice(0, 200);
+    if (form.get("next") === "/admin/ambassadors") next = "/admin/ambassadors"; // only known admin pages, never a free address
   } catch {
     return notFound();
   }
   if (!keyMatches(key)) return notFound();
 
   const cookie = adminCookie();
-  const res = NextResponse.redirect(new URL("/admin/reviews", req.url), 303);
+  const res = NextResponse.redirect(new URL(next, req.url), 303);
   res.cookies.set(cookie.name, cookie.value, {
     httpOnly: true,
     sameSite: "strict",

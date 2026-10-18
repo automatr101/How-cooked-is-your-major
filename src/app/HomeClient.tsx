@@ -674,6 +674,8 @@ export default function HomeClient() {
           <span className="opacity-30">·</span>
           <a href="/contact" className="hover:text-foreground transition-colors">Contact</a>
           <span className="opacity-30">·</span>
+          <a href="/ambassadors" className="hover:text-foreground transition-colors">Campus ambassadors</a>
+          <span className="opacity-30">·</span>
           <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">@cookedlabs_cto</a>
         </div>
       </footer>
