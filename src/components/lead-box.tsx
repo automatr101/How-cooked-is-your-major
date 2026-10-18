@@ -50,6 +50,7 @@ export function LeadBox({ major }: { major: Major }) {
   const [extended, setExtended] = useState<Extended | null>(null);
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
+  const [alerts, setAlerts] = useState(false);
   const [hp, setHp] = useState("");
   const [busy, setBusy] = useState(false);
   const [emailed, setEmailed] = useState(false);
@@ -98,7 +99,7 @@ export function LeadBox({ major }: { major: Major }) {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, major: major.name, consent: true, ref: readRef(), hp }),
+        body: JSON.stringify({ email, major: major.name, consent: true, score_alerts: alerts, ref: readRef(), hp }),
       });
       const data = (await res.json().catch(() => ({}))) as { extended?: Extended; emailed?: boolean; error?: string };
       if (!res.ok || !data.extended) {
@@ -180,6 +181,10 @@ export function LeadBox({ major }: { major: Major }) {
             Email me my roast and 2 short follow-ups (3 emails in total, one of them about the paid plan). Unsubscribe in any email.{" "}
             <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Privacy</a>
           </span>
+        </label>
+        <label className="flex items-start gap-2.5 text-[11px] leading-relaxed text-muted-foreground">
+          <input type="checkbox" checked={alerts} onChange={(e) => setAlerts(e.target.checked)} className="mt-0.5 h-4 w-4 shrink-0 accent-[#FF6A00]" />
+          <span>Also email me if the score for {major.name} changes (optional, one email per change).</span>
         </label>
         {error && <p role="alert" className="text-xs font-bold text-red-400">{error}</p>}
         <button

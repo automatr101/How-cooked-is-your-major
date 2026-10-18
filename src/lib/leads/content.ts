@@ -35,14 +35,14 @@ export function extendedRoast(major: Major): ExtendedRoast {
 
 const ORANGE = "#FF6A00";
 
-function layout(title: string, bodyHtml: string, unsubscribeUrl: string): string {
+function layout(title: string, bodyHtml: string, unsubscribeUrl: string, reason = "you asked for your extended roast"): string {
   return `<!doctype html><html><body style="margin:0;background:#0C0C0C;color:#F4F4F4;font-family:Inter,Arial,sans-serif">
 <div style="max-width:560px;margin:0 auto;padding:28px 20px">
 <p style="margin:0 0 18px;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:#A6A6A6">How Cooked Is Your Major?</p>
 <h1 style="margin:0 0 16px;font-size:26px;line-height:1.05;text-transform:uppercase;font-weight:900">${title}</h1>
 ${bodyHtml}
 <hr style="border:none;border-top:1px solid #303030;margin:28px 0 14px">
-<p style="margin:0;font-size:11px;line-height:1.6;color:#A6A6A6">You are getting this because you asked for your extended roast on ${escapeHtml(SITE_URL.replace("https://", ""))}. Entertainment, not career advice.
+<p style="margin:0;font-size:11px;line-height:1.6;color:#A6A6A6">You are getting this because ${reason} on ${escapeHtml(SITE_URL.replace("https://", ""))}. Entertainment, not career advice.
 <a href="${escapeHtml(unsubscribeUrl)}" style="color:#A6A6A6">Unsubscribe</a>.</p>
 </div></body></html>`;
 }
@@ -115,3 +115,21 @@ export function day2(major: Major, unsubscribeUrl: string): Email {
 }
 
 export const EMAILS = { 0: day0, 1: day1, 2: day2 } as const;
+
+/** Score-change alert (separate opt-in): the old and the new score, straight from the site's data. Nothing else is claimed. */
+export function scoreChange(major: Major, oldScore: number, unsubscribeUrl: string): Email {
+  const up = major.score > oldScore;
+  const q = new URLSearchParams({ major: major.name, score: String(major.score), level: major.level, utm_source: "email", utm_medium: "email", utm_campaign: "score_change", utm_content: up ? "up" : "down" });
+  const link = `${SITE_URL}/?${q.toString()}`;
+  const line = up ? "More cooked than when you checked. Not a reason to panic, a reason to move." : "Less cooked than when you checked. Enjoy it, then keep moving.";
+  const html = layout(
+    `${escapeHtml(major.name)}: ${oldScore}% &rarr; <span style="color:${ORANGE}">${major.score}%</span>.`,
+    p(`We updated the score for ${escapeHtml(major.name)}. It was <b>${oldScore}/100</b> when you scanned it. It is now <b style="color:${ORANGE}">${major.score}/100 (${escapeHtml(major.level)})</b>.`) +
+      p(escapeHtml(line)) +
+      button(link, "See the new result"),
+    unsubscribeUrl,
+    "you asked to hear when your major&rsquo;s score changes"
+  );
+  const text = [`${major.name}: ${oldScore}% -> ${major.score}% (${major.level}).`, "", `We updated the score for ${major.name}. It was ${oldScore}/100 when you scanned it; it is now ${major.score}/100.`, line, "", link, "", `Unsubscribe: ${unsubscribeUrl}`].join("\n");
+  return { subject: `${major.name} score changed: ${oldScore}% to ${major.score}%`, html, text };
+}
