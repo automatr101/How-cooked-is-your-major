@@ -163,8 +163,8 @@ export function PlanPdf({ plan }: { plan: Plan }) {
         <View style={{ flexDirection: "row", gap: 8, marginBottom: 18 }}>
           <Stat label="Cooked score" value={scoreFormat(plan.major.score)} color={color} />
           <Stat label="Level" value={plan.major.level} color={color} />
-          <Stat label="Typical pay" value={plan.major.salary} />
-          <Stat label="Market growth" value={plan.major.growth} color={plan.major.growth.includes("-") ? C.red : C.green} />
+          <Stat label="Typical pay" value={plan.major.salary || "Not rated yet"} />
+          <Stat label="Market growth" value={plan.major.growth || "Not rated yet"} color={!plan.major.growth ? C.text : plan.major.growth.includes("-") ? C.red : C.green} />
         </View>
         <Label color={C.peach}>Overview</Label>
         <Text style={[s.p, { fontSize: 11.5, color: C.text, lineHeight: 1.6, marginBottom: 18 }]}>{plan.overview}</Text>

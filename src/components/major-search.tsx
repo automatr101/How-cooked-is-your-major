@@ -41,7 +41,7 @@ export function MajorSearch({
   results,
   onSelect,
   selected = false,
-  placeholder = "Search 100+ majors...",
+  placeholder = "Search 200+ majors...",
   label = "Search majors",
   compact = false,
   beamDuration = 3.1,
@@ -286,7 +286,7 @@ export function MajorSearch({
 }
 
 /** "Want it scored?": asks for a major we don't have, with an optional email to be told when it's added. */
-function RequestMajor({ query }: { query: string }) {
+export function RequestMajor({ query }: { query: string }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "busy" | "done" | "error">("idle");
   const [asked, setAsked] = useState("");

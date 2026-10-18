@@ -39,7 +39,7 @@ export function ReviewsSection({ majorSlug, className = "" }: { majorSlug?: stri
       )
     );
   }
-  if (r.free.accurateTotal > 0) {
+  if (r.free.accurateTotal > 0 && r.free.accuracyPercent != null) {
     lines.push(
       r.free.accuracyPercent != null ? (
         <span key="a">

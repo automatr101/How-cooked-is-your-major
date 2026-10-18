@@ -26,8 +26,8 @@ export function extendedRoast(major: Major): ExtendedRoast {
     roasts,
     facts: [
       { label: "AI exposure score", value: `${major.score}/100 (${major.level})` },
-      { label: "Typical pay range", value: major.salary },
-      { label: "Projected role growth", value: major.growth.replace(/ Growth$/i, "") },
+      ...(major.salary ? [{ label: "Typical pay range", value: major.salary }] : []),
+      ...(major.growth ? [{ label: "Projected role growth", value: major.growth.replace(/ Growth$/i, "") }] : []),
     ],
     advice: major.advice,
   };
@@ -84,13 +84,17 @@ export function day1(major: Major, unsubscribeUrl: string): Email {
   const growth = major.growth.replace(/ Growth$/i, "");
   const html = layout(
     "One number to sit with.",
-    p(`${escapeHtml(major.name)} has an AI exposure score of <b style="color:${ORANGE}">${major.score}/100</b>, projected role growth of <b>${escapeHtml(growth)}</b> and a typical pay range of <b>${escapeHtml(major.salary)}</b> on this site&rsquo;s data.`) +
+    p(
+      major.salary && major.growth
+        ? `${escapeHtml(major.name)} has an AI exposure score of <b style="color:${ORANGE}">${major.score}/100</b>, projected role growth of <b>${escapeHtml(growth)}</b> and a typical pay range of <b>${escapeHtml(major.salary)}</b> on this site&rsquo;s data.`
+        : `${escapeHtml(major.name)} has an AI exposure score of <b style="color:${ORANGE}">${major.score}/100</b> on this site&rsquo;s data.`
+    ) +
       p("The wider picture, from the World Economic Forum&rsquo;s Future of Jobs Report 2025 (a projection, not a promise): 170 million roles created and 92 million displaced by 2030, a net gain of 78 million, and nearly 40% of workplace skills expected to change. The jobs do not vanish. The skills they ask for move.") +
       p("The people who do fine are the ones who moved first.") +
       button(siteLink(major, 1), "See where you stand"),
     unsubscribeUrl
   );
-  const text = [`${major.name}: AI exposure ${major.score}/100, projected growth ${growth}, typical pay ${major.salary} (this site's data).`, "", "WEF Future of Jobs Report 2025 (projection): 170M roles created, 92M displaced by 2030, net +78M; nearly 40% of skills expected to change.", "", siteLink(major, 1), "", `Unsubscribe: ${unsubscribeUrl}`].join("\n");
+  const text = [major.salary && major.growth ? `${major.name}: AI exposure ${major.score}/100, projected growth ${growth}, typical pay ${major.salary} (this site's data).` : `${major.name}: AI exposure ${major.score}/100 (this site's data).`, "", "WEF Future of Jobs Report 2025 (projection): 170M roles created, 92M displaced by 2030, net +78M; nearly 40% of skills expected to change.", "", siteLink(major, 1), "", `Unsubscribe: ${unsubscribeUrl}`].join("\n");
   return { subject: `The number behind ${major.name}`, html, text };
 }
 
