@@ -19,7 +19,10 @@ export interface PlanPreview {
     projects: number;
     roadmapSteps: number;
     internshipTips: number;
+    realJobs: number;
   };
+  /** One real job from the plan with its real US pay, shown free as a taste (null when the field has none). */
+  teaserJob: { title: string; pay: string } | null;
 }
 
 export function previewOf(major: Major): PlanPreview {
@@ -35,6 +38,8 @@ export function previewOf(major: Major): PlanPreview {
       projects: plan.projects.length,
       roadmapSteps: plan.roadmap.reduce((n, r) => n + r.steps.length, 0),
       internshipTips: plan.internship.length,
+      realJobs: plan.careers.length,
     },
+    teaserJob: plan.careers[0] ? { title: plan.careers[0].title, pay: plan.careers[0].pay } : null,
   };
 }

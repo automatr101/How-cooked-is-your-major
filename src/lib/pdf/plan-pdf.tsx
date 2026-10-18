@@ -2,7 +2,7 @@
 // version (see lib/plan/generate.ts), so the two always match. Dark, editorial, peach and orange accents,
 // the site's typefaces, and a footer with the page number on every page.
 
-import { Document, Font, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Document, Font, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { PLAN_COPY } from "@/lib/premium";
 import type { Plan } from "@/lib/plan/types";
 import { geist400, geist700, geist900, mono700 } from "./fonts-data";
@@ -63,10 +63,15 @@ function Label({ children, color = C.muted }: { children: string; color?: string
   return <Text style={[s.mono, { fontSize: 7.5, color, marginBottom: 6 }]}>{children}</Text>;
 }
 
-function Item({ title, why }: { title: string; why?: string }) {
+function Item({ title, why, url }: { title: string; why?: string; url?: string }) {
   return (
     <View style={s.card} wrap={false}>
       <Text style={s.h3}>{title}</Text>
+      {url ? (
+        <Link src={url} style={{ fontSize: 8, color: C.peach, marginTop: 2, textDecoration: "none" }}>
+          {url.replace(/^https?:\/\//, "")}
+        </Link>
+      ) : null}
       {why ? <Text style={[s.p, { marginTop: 3 }]}>{why}</Text> : null}
     </View>
   );
@@ -211,6 +216,24 @@ export function PlanPdf({ plan }: { plan: Plan }) {
         <Footer />
       </Page>
 
+      {/* 4b. Real jobs and pay (only when the field has career data) */}
+      {plan.careers?.length > 0 && (
+        <Page size="A4" style={s.page}>
+          <PageHead n="03b" title="Real Jobs & Pay" />
+          {plan.careers.map((c) => (
+            <View key={c.title} style={s.card} wrap={false}>
+              <Text style={s.h3}>{c.title}</Text>
+              <Text style={{ fontWeight: 900, fontSize: 14, color: C.peach, marginTop: 4 }}>{c.pay}</Text>
+              <Text style={[s.p, { marginTop: 2, color: C.muted }]}>{c.outlook}</Text>
+              {c.where ? <Text style={[s.p, { marginTop: 4 }]}>{`Where they work: ${c.where}`}</Text> : null}
+              <Link src={c.url} style={{ fontSize: 8, color: C.peach, marginTop: 4, textDecoration: "none" }}>{c.url.replace(/^https?:\/\//, "")}</Link>
+            </View>
+          ))}
+          <Text style={[s.p, { fontSize: 8.5, color: C.muted, marginTop: 6 }]}>{plan.careersSource}</Text>
+          <Footer />
+        </Page>
+      )}
+
       {/* 5. Skills to Stack + AI tools */}
       <Page size="A4" style={s.page}>
         <PageHead n="04" title="Skills to Stack" />
@@ -221,9 +244,21 @@ export function PlanPdf({ plan }: { plan: Plan }) {
           <Text style={[s.mono, { fontSize: 8, color: C.peach }]}>AI tools to learn</Text>
           <Text style={[s.h2, { fontSize: 18, marginTop: 5, marginBottom: 10 }]}>Your AI toolkit</Text>
           {plan.aiTools.map((p) => (
-            <Item key={p.title} title={p.title} why={p.why} />
+            <Item key={p.title} title={p.title} why={p.why} url={p.url} />
           ))}
         </View>
+        {plan.learn?.length > 0 && (
+          <View style={{ marginTop: 16 }} minPresenceAhead={60}>
+            <Label color={C.peach}>Learn it for free</Label>
+            {plan.learn.map((l) => (
+              <View key={l.url} style={{ marginBottom: 5 }}>
+                <Link src={l.url} style={{ fontSize: 9.5, color: C.peach, textDecoration: "none" }}>{l.title}</Link>
+                <Text style={[s.p, { fontSize: 9 }]}>{l.why}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+
         <Footer />
       </Page>
 
@@ -275,6 +310,14 @@ export function PlanPdf({ plan }: { plan: Plan }) {
           <Label color={C.peach}>Internship and job strategy</Label>
           <Bullets items={plan.internship} color={C.peach} />
         </View>
+        {plan.jobSearch?.length > 0 && (
+          <View style={{ marginTop: 10 }} wrap={false}>
+            <Label color={C.peach}>Open these searches now</Label>
+            {plan.jobSearch.map((j) => (
+              <Link key={j.url} src={j.url} style={{ fontSize: 9.5, color: C.peach, marginBottom: 4, textDecoration: "none" }}>{`→ ${j.title}`}</Link>
+            ))}
+          </View>
+        )}
         <View style={{ marginTop: 10 }}>
           <Label color={C.peach}>How to become more employable</Label>
           <Bullets items={plan.employability} color={C.peach} />

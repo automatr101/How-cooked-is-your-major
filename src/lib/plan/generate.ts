@@ -7,6 +7,8 @@ import { PLAN_COPY, planTypeFor, type PlanType } from "@/lib/premium";
 import { slugify } from "@/lib/analytics";
 import { EMPLOYABILITY, GROUPS, type Pair } from "./content";
 import type { Plan } from "./types";
+import { CAREER_DATA, CAREER_CODES, CAREER_WHERE } from "./careers-data";
+import { jobSearches, LEARN, TOOL_LINKS } from "./links";
 
 const toItems = (pairs: Pair[]) => pairs.map(([title, why]) => ({ title, why }));
 
@@ -44,7 +46,7 @@ interface V {
 
 /** "In our data, X pays ... and shows ..." only when the major has those figures (newer majors do not yet). */
 const payLine = (v: { nick: string; salary: string; growth: string }): string =>
-  v.salary && v.growth ? `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}.` : `We don't have pay and growth figures for ${v.nick} yet.`;
+  v.salary && v.growth ? `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}.` : `We don't have degree-level pay figures for ${v.nick} yet; the real jobs below show what those careers pay.`;
 
 const FRAMES: Record<PlanType, Frame> = {
   uncooking: {
@@ -153,6 +155,15 @@ export function buildPlan(major: Major): Plan {
     jobs,
   };
 
+  // Real occupations for this field (by discipline, else by family), with figures from O*NET
+  const codes = CAREER_CODES[info.disc?.id ?? info.group ?? "general"] ?? CAREER_CODES.general;
+  const careers = codes.flatMap((code) => {
+    const d = CAREER_DATA[code];
+    return d
+      ? [{ title: d.title, pay: d.annual ? `$${d.annual} a year (US median, ${d.year})` : `$${d.hourly} an hour (US median, ${d.year})`, outlook: `${d.growth} job growth, 2025 to 2035`, where: CAREER_WHERE[code] ?? "", url: `https://www.onetonline.org/link/summary/${code}` }]
+      : [];
+  });
+
   const frame = FRAMES[planType];
   const exposure = exposureLabel(major.score);
 
@@ -178,7 +189,11 @@ export function buildPlan(major: Major): Plan {
     strongPaths: toItems(g.strongPaths),
     vulnerablePaths: vulnerable.slice(0, 4),
     skills: toItems(g.skills),
-    aiTools: toItems(g.tools),
+    aiTools: g.tools.map(([title, why]) => ({ title, why, ...(TOOL_LINKS[title] ? { url: TOOL_LINKS[title] } : {}) })),
+    careers,
+    careersSource: "Pay is the US median annual wage and outlook is the projected US job growth to 2035, both from O*NET OnLine (U.S. Department of Labor, BLS data). Pay in Ghana and other countries is different, often much lower. Use these to compare roles, not as a promise of any salary.",
+    learn: LEARN[(info.group ?? "general") as keyof typeof LEARN] ?? LEARN.general,
+    jobSearch: careers.length ? jobSearches(careers[0].title) : jobSearches(info.nick),
     projects: toItems(g.projects),
     internship: g.internship,
     positioning: g.positioning,

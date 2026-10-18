@@ -13,7 +13,15 @@ export interface Plan {
   strongPaths: { title: string; why: string }[];
   vulnerablePaths: { title: string; why: string }[];
   skills: { title: string; why: string }[];
-  aiTools: { title: string; why: string }[];
+  aiTools: { title: string; why: string; url?: string }[];
+  /** Real occupations this major leads to, with US median pay and outlook from O*NET (U.S. Department of Labor). */
+  careers: { title: string; pay: string; outlook: string; where: string; url: string }[];
+  /** Where the career figures come from, shown with them. */
+  careersSource: string;
+  /** Free places to learn, with links. */
+  learn: { title: string; url: string; why: string }[];
+  /** Job searches already filled in for the first career. */
+  jobSearch: { title: string; url: string }[];
   projects: { title: string; why: string }[];
   internship: string[];
   positioning: string[];

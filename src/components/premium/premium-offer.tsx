@@ -461,9 +461,10 @@ export function insideList(preview: PlanPreview | null, fallback: string[]): str
   if (!preview) return fallback;
   const c = preview.counts;
   return [
+    ...(c.realJobs ? [`${c.realJobs} real jobs with their actual pay${preview.teaserJob ? ` (e.g. ${preview.teaserJob.title}: ${preview.teaserJob.pay})` : ""}`] : []),
     `A 30/60/90-day roadmap (${c.roadmapSteps} steps) and ${c.projects} portfolio projects`,
-    `${c.careerPaths} career paths to aim for, ${c.skills} skills and ${c.aiTools} AI tools to learn`,
-    "Your AI exposure, task by task, with internship tips and a PDF you can keep",
+    `${c.skills} skills and ${c.aiTools} AI tools to learn, with links, plus free courses and ready-made job searches`,
+    "Your AI exposure, task by task, and a PDF you can keep",
   ];
 }
 
