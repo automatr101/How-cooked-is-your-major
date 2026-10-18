@@ -1,8 +1,8 @@
 import { timingSafeEqual } from "node:crypto";
 import { NextRequest } from "next/server";
-import { dueLeads, leadsEnabled, markSent, type Day, type LeadRow } from "@/lib/leads/store";
+import { dueLeads, leadsEnabled, markAlerted, markSent, scoreAlertLeads, type Day, type LeadRow } from "@/lib/leads/store";
 import { emailEnabled, sendEmail } from "@/lib/leads/email";
-import { EMAILS } from "@/lib/leads/content";
+import { EMAILS, scoreChange } from "@/lib/leads/content";
 import { majorBySlug } from "@/lib/leads/majors";
 import { SITE_URL } from "@/lib/site";
 
@@ -56,5 +56,27 @@ export async function GET(req: NextRequest) {
       }
     }
   }
-  return Response.json({ sent, failed });
+  // Score-change alerts (separate opt-in): a lead whose major's score is no longer the one we last told them gets one email
+  let scoreChanges = 0;
+  try {
+    for (const lead of await scoreAlertLeads()) {
+      if (scoreChanges >= PER_DAY_LIMIT) break;
+      const major = majorBySlug(lead.major_slug);
+      const told = lead.alerted_score ?? lead.score;
+      if (!major || major.score === told) continue;
+      try {
+        const unsubscribeUrl = `${SITE_URL}/unsubscribe?t=${lead.unsubscribe_token}`;
+        if (await sendEmail({ to: lead.email, ...scoreChange(major, told, unsubscribeUrl), unsubscribeUrl })) {
+          await markAlerted(lead.id, major.score);
+          scoreChanges++;
+        } else failed++;
+      } catch {
+        failed++;
+      }
+    }
+  } catch {
+    console.error("[cron] could not list score-alert leads");
+    failed++;
+  }
+  return Response.json({ sent: { ...sent, scoreChanges }, failed });
 }

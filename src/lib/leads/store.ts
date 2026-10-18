@@ -20,6 +20,8 @@ export interface LeadRow {
   day0_sent_at: string | null;
   day1_sent_at: string | null;
   day2_sent_at: string | null;
+  score_alerts: boolean;
+  alerted_score: number | null;
 }
 
 export type Day = 0 | 1 | 2;
@@ -51,7 +53,7 @@ async function call(path: string, init: RequestInit & { prefer?: string } = {}):
 const eq = (v: string) => `eq.${encodeURIComponent(v)}`;
 
 /** Saves a lead. Returns the row when it is new, null when that address was already on the list. */
-export async function addLead(input: { email: string; major_slug: string; score: number; ref: string | null; country: string | null }): Promise<LeadRow | null> {
+export async function addLead(input: { email: string; major_slug: string; score: number; ref: string | null; country: string | null; score_alerts: boolean }): Promise<LeadRow | null> {
   const rows = (await call("?on_conflict=email", {
     method: "POST",
     body: JSON.stringify({ ...input, email: input.email.trim().toLowerCase(), unsubscribe_token: randomBytes(24).toString("hex") }),
@@ -76,6 +78,16 @@ export async function dueLeads(day: Day, limit = 40): Promise<LeadRow[]> {
   return (await call(
     `?select=*&unsubscribed_at=is.null&${SENT_COLUMN[day]}=is.null&${earlier}&created_at=lte.${encodeURIComponent(cutoff)}&order=created_at.asc&limit=${limit}`
   )) as LeadRow[];
+}
+
+/** Subscribed leads who opted in to score-change alerts (the caller compares scores: they live in the site's code, not the database). */
+export async function scoreAlertLeads(limit = 2000): Promise<LeadRow[]> {
+  return (await call(`?select=*&score_alerts=is.true&unsubscribed_at=is.null&order=created_at.asc&limit=${limit}`)) as LeadRow[];
+}
+
+/** Remembers the score we just told this lead about, so the same change is never emailed twice. */
+export async function markAlerted(id: string, score: number): Promise<void> {
+  await call(`?id=${eq(id)}`, { method: "PATCH", body: JSON.stringify({ alerted_score: score }) });
 }
 
 /** Unsubscribes by the secret token from an email's link. Returns true when a subscribed lead was changed. */

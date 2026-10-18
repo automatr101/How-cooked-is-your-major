@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
 
   let lead;
   try {
-    lead = await addLead({ email, major_slug: major.slug, score: major.score, ref, country: country && /^[A-Za-z]{2}$/.test(country) ? country.toUpperCase() : null });
+    lead = await addLead({ email, major_slug: major.slug, score: major.score, ref, country: country && /^[A-Za-z]{2}$/.test(country) ? country.toUpperCase() : null, score_alerts: body.score_alerts === true });
   } catch (err) {
     console.error("[leads] could not save a lead", err instanceof LeadStoreError ? err.message : "");
     return reply({ error: "unavailable" }, 502);
@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
   if (lead && telegramEnabled()) {
     // The address itself is never put in the alert
     await sendTelegram(
-      [`📧 <b>New lead</b>${sending ? "" : " (email sending is OFF, nothing was sent)"}`, `📚 ${escapeHtml(major.name)} (${major.score}%)`, ref ? `🔗 ref: ${escapeHtml(ref)}` : "", visitorLine(req)].filter(Boolean).join("\n")
+      [`📧 <b>New lead</b>${sending ? "" : " (email sending is OFF, nothing was sent)"}`, `📚 ${escapeHtml(major.name)} (${major.score}%)${body.score_alerts === true ? " · 🔔 score alerts on" : ""}`, ref ? `🔗 ref: ${escapeHtml(ref)}` : "", visitorLine(req)].filter(Boolean).join("\n")
     );
   }
   return reply({ ok: true, emailed, extended: extendedRoast(major) });
