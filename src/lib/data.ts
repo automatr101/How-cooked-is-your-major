@@ -1839,15 +1839,142 @@ const ROWS: [string, number, number, number, number, number, number][] = [
   ["BSc. Human Resource Management",50,4,5,2,22,11],
 ];
 
-export const majors: Major[] = ROWS.map(([name, score, l, r, a, s, g]) => ({
-  name,
-  score,
-  level: LEVELS[l],
-  roast: ROASTS[r],
-  advice: ADVICE[a],
-  salary: SALARIES[s],
-  growth: GROWTHS[g],
-}));
+// ---- added majors: the owner's overseas list (2026-10-18), with the owner's own scores and verdicts --------------------
+// [name, score, verdict, category]. Pay range and growth are not known for these yet, so they are left empty (the page shows
+// a dash and skips them in emails and plans) instead of guessing. The live roast comes from the roast engine as for every major.
+export type Category = "stem" | "business" | "health" | "humanities" | "creative" | "trades";
+const ADDED: [string, number, string, Category][] = [
+  ["Artificial Intelligence", 78, "Cooked", "stem"],
+  ["Robotics Engineering", 30, "Slightly Cooked", "stem"],
+  ["Mechatronics Engineering", 28, "Slightly Cooked", "stem"],
+  ["Bioinformatics", 35, "Slightly Cooked", "stem"],
+  ["Biotechnology", 30, "Slightly Cooked", "stem"],
+  ["Biomedical Engineering", 18, "Not Cooked", "stem"],
+  ["Microbiology", 25, "Slightly Cooked", "stem"],
+  ["Genetics", 25, "Slightly Cooked", "stem"],
+  ["Molecular Biology", 25, "Slightly Cooked", "stem"],
+  ["Neuroscience", 20, "Not Cooked", "stem"],
+  ["Astronomy", 12, "Not Cooked", "stem"],
+  ["Geology", 15, "Not Cooked", "stem"],
+  ["Oceanography", 18, "Not Cooked", "stem"],
+  ["Marine Biology", 20, "Not Cooked", "stem"],
+  ["Environmental Engineering", 20, "Not Cooked", "stem"],
+  ["Nuclear Engineering", 12, "Not Cooked", "stem"],
+  ["Mining Engineering", 10, "Not Cooked", "stem"],
+  ["Web Development", 75, "Cooked", "stem"],
+  ["Cloud Computing", 70, "Cooked", "stem"],
+  ["Network Engineering", 40, "Slightly Cooked", "stem"],
+  ["Information Systems", 65, "Cooked", "stem"],
+  ["Data Analytics", 68, "Cooked", "stem"],
+  ["Operations Research", 45, "Kinda Cooked", "stem"],
+  ["Computational Biology", 30, "Slightly Cooked", "stem"],
+  ["Cognitive Science", 30, "Slightly Cooked", "stem"],
+  ["Aviation", 15, "Not Cooked", "stem"],
+  ["International Business", 55, "Kinda Cooked", "business"],
+  ["Hospitality Management", 58, "Kinda Cooked", "business"],
+  ["Risk Management and Insurance", 52, "Kinda Cooked", "business"],
+  ["Management Information Systems", 60, "Kinda Cooked", "business"],
+  ["Financial Economics", 60, "Kinda Cooked", "business"],
+  ["Sports Management", 50, "Kinda Cooked", "business"],
+  ["Aviation Management", 45, "Kinda Cooked", "business"],
+  ["Organizational Leadership", 50, "Kinda Cooked", "business"],
+  ["Medicine", 5, "Not Cooked", "health"],
+  ["Public Health", 20, "Not Cooked", "health"],
+  ["Epidemiology", 18, "Not Cooked", "health"],
+  ["Health Sciences", 20, "Not Cooked", "health"],
+  ["Kinesiology", 15, "Not Cooked", "health"],
+  ["Athletic Training", 12, "Not Cooked", "health"],
+  ["Occupational Therapy", 8, "Not Cooked", "health"],
+  ["Physical Therapy", 10, "Not Cooked", "health"],
+  ["Physician Assistant Studies", 8, "Not Cooked", "health"],
+  ["Speech-Language Pathology", 10, "Not Cooked", "health"],
+  ["Nutrition", 25, "Slightly Cooked", "health"],
+  ["Dental Hygiene", 10, "Not Cooked", "health"],
+  ["Paramedicine", 8, "Not Cooked", "health"],
+  ["Biomedical Sciences", 22, "Not Cooked", "health"],
+  ["Health Administration", 15, "Not Cooked", "health"],
+  ["Pharmaceutical Sciences", 35, "Slightly Cooked", "health"],
+  ["Criminology", 45, "Kinda Cooked", "humanities"],
+  ["Criminal Justice", 48, "Kinda Cooked", "humanities"],
+  ["International Relations", 40, "Slightly Cooked", "humanities"],
+  ["Anthropology", 40, "Slightly Cooked", "humanities"],
+  ["Archaeology", 25, "Slightly Cooked", "humanities"],
+  ["Philosophy", 35, "Slightly Cooked", "humanities"],
+  ["Linguistics", 40, "Slightly Cooked", "humanities"],
+  ["Communications", 65, "Cooked", "humanities"],
+  ["Journalism", 72, "Cooked", "humanities"],
+  ["Media Studies", 60, "Kinda Cooked", "humanities"],
+  ["Public Relations", 58, "Kinda Cooked", "humanities"],
+  ["Advertising", 62, "Cooked", "humanities"],
+  ["Film and Television Production", 65, "Cooked", "humanities"],
+  ["Creative Writing", 68, "Cooked", "humanities"],
+  ["Art History", 40, "Slightly Cooked", "humanities"],
+  ["Classics", 25, "Slightly Cooked", "humanities"],
+  ["Gender Studies", 35, "Slightly Cooked", "humanities"],
+  ["Ethnic Studies", 30, "Slightly Cooked", "humanities"],
+  ["Urban Studies", 35, "Slightly Cooked", "humanities"],
+  ["Environmental Studies", 40, "Slightly Cooked", "humanities"],
+  ["Human Services", 40, "Slightly Cooked", "humanities"],
+  ["Theater", 35, "Slightly Cooked", "humanities"],
+  ["Dance", 20, "Not Cooked", "humanities"],
+  ["Music", 50, "Kinda Cooked", "humanities"],
+  ["Photography", 70, "Cooked", "creative"],
+  ["Interior Design", 55, "Kinda Cooked", "creative"],
+  ["Industrial Design", 55, "Kinda Cooked", "creative"],
+  ["Game Design", 80, "Cooked", "creative"],
+  ["Animation", 85, "Very Cooked", "creative"],
+  ["UX Design", 60, "Kinda Cooked", "creative"],
+  ["Digital Media", 65, "Cooked", "creative"],
+  ["Music Production", 60, "Kinda Cooked", "creative"],
+  ["Fashion Merchandising", 60, "Kinda Cooked", "creative"],
+  ["Studio Art", 45, "Kinda Cooked", "creative"],
+  ["Aviation Maintenance", 10, "Not Cooked", "trades"],
+  ["Professional Flight", 15, "Not Cooked", "trades"],
+  ["Culinary Arts", 30, "Slightly Cooked", "trades"],
+  ["Horticulture", 15, "Not Cooked", "trades"],
+  ["Animal Science", 20, "Not Cooked", "trades"],
+  ["Equine Science", 15, "Not Cooked", "trades"],
+  ["Viticulture and Enology", 20, "Not Cooked", "trades"],
+  ["Fisheries and Wildlife", 15, "Not Cooked", "trades"],
+  ["Welding Engineering Technology", 8, "Not Cooked", "trades"]
+];
+
+const CATEGORY_ADVICE: Record<Category, string> = {
+  stem: "Learn the AI tools your field already uses, then go deeper than they can.",
+  business: "Move toward the decisions and the client relationships, away from the reports.",
+  health: "Stay close to patients and hands-on work. That part still needs a human.",
+  humanities: "Pair your writing and thinking with one hard skill: data, design or a second language.",
+  creative: "Use AI for the drafts and sell the taste and direction. That part is still yours.",
+  trades: "Keep your hands on the work and learn the tech that runs it.",
+};
+const FALLBACK_ROAST = {
+  low: "AI looked at this one and decided to leave it alone. For now.",
+  mid: "AI can do half of this. You still have the other half. Guard it.",
+  high: "AI already has a draft of your job description. It's shorter.",
+};
+const ADDED_NAMES = new Set(ADDED.map(([name]) => name));
+
+export const majors: Major[] = [
+  // the original rows, minus any generated row that shared a name with an added major (the added one replaces it)
+  ...ROWS.filter(([name]) => !ADDED_NAMES.has(name)).map(([name, score, l, r, a, s, g]) => ({
+    name,
+    score,
+    level: LEVELS[l],
+    roast: ROASTS[r],
+    advice: ADVICE[a],
+    salary: SALARIES[s],
+    growth: GROWTHS[g],
+  })),
+  ...ADDED.map(([name, score, level, category]) => ({
+    name,
+    score,
+    level,
+    roast: score >= 60 ? FALLBACK_ROAST.high : score >= 35 ? FALLBACK_ROAST.mid : FALLBACK_ROAST.low,
+    advice: CATEGORY_ADVICE[category],
+    salary: "",
+    growth: "",
+  })),
+];
 
 export function getLevelColor(level: string) {
   switch (level) {
@@ -1867,11 +1994,11 @@ export function getLevelColor(level: string) {
 // Those are not degrees anyone studies, so nothing public ranks, counts, suggests or features them: only `realMajors` does.
 const GENERATED_PREFIX = /^(Advanced|Applied|Clinical|Computational|Digital|Global|International|Strategic|Technical|Industrial)\s/;
 const GENERATED_SUFFIX = /\s(Analytics|Engineering|Management|Policy|Practice|Science|Studies|Technology)$/;
-const REAL_DESPITE_PATTERN = new Set(["Industrial Engineering"]);
+const REAL_DESPITE_PATTERN = new Set(["Industrial Engineering", "Business Analytics"]);
 const allNames = new Set(majors.map((m) => m.name));
 
 export function isGeneratedMajor(name: string): boolean {
-  if (REAL_DESPITE_PATTERN.has(name)) return false;
+  if (REAL_DESPITE_PATTERN.has(name) || ADDED_NAMES.has(name)) return false;
   if (GENERATED_PREFIX.test(name)) return true;
   // "<existing major> <suffix>" is generated; "Computer Science" or "BSc. Civil Engineering" are not (their base is not a major)
   return GENERATED_SUFFIX.test(name) && allNames.has(name.replace(GENERATED_SUFFIX, ""));
@@ -1897,6 +2024,26 @@ export const ALIASES: Record<string, string> = {
   "BSc. Software Engineering": "Software Engineering",
   "BA. Economics": "BSc. Economics",
   "BSc Administration (Human Resource Management)": "BSc. Human Resource Management",
+  "Machine Learning": "Artificial Intelligence",
+  "Astrophysics": "Astronomy",
+  "Earth Sciences": "Geology",
+  "Materials Science": "BSc. Materials Engineering",
+  "Supply Chain Management": "BSc. Procurement and Supply Chain Management",
+  "Exercise Science": "Kinesiology",
+  "Dietetics": "Nutrition",
+  "Radiography": "BSc. Medical Imaging",
+  "English": "BA. English",
+  "History": "BA. History",
+  "Economics": "BSc. Economics",
+  "Political Science": "BA. Political Studies",
+  "UI Design": "UX Design",
+  "Construction Management": "BSc. Construction Technology and Management",
+  "AI": "Artificial Intelligence",
+  "MBBS": "Medicine",
+  "MD": "Medicine",
+  "UI/UX": "UX Design",
+  "Product Design": "UX Design",
+  "Fine Arts": "Studio Art",
   "Cyber Security": "BSc Cyber Security",
   "Cybersecurity": "BSc Cyber Security",
 };

@@ -18,6 +18,7 @@ import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { LeadBox } from "@/components/lead-box";
+import { RequestMajor } from "@/components/major-search";
 import { scanId } from "@/lib/scan-id";
 import { track, trackShare, majorParams, slugify } from "@/lib/analytics";
 import { ReviewPopup } from "@/components/review-box";
@@ -39,6 +40,8 @@ export default function HomeClient() {
   const [copied, setCopied] = useState(false);
   const [comparisonQuery, setComparisonQuery] = useState("");
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
+  // A ?major= link to a major we don't have (shown with the request form instead of a result)
+  const [missingMajor, setMissingMajor] = useState<string | null>(null);
   const [comparedMajor, setComparedMajor] = useState<Major | null>(null);
   const [isScanning, setIsScanning] = useState(false);
   const [showComparisonSearch, setShowComparisonSearch] = useState(false);
@@ -153,6 +156,19 @@ export default function HomeClient() {
           setTimeout(() => {
             document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
           }, 500);
+        } else {
+          // A link to a major we don't have: say so, offer the request form, and log it once (never a made-up score)
+          const name = majorName.trim().slice(0, 60);
+          if (name.length >= 2) {
+            setMissingMajor(name);
+            try {
+              const key = `cm_missing_logged:${name.toLowerCase()}`;
+              if (!sessionStorage.getItem(key)) {
+                sessionStorage.setItem(key, "1");
+                fetch("/api/major-request", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query: name, source: "link" }) }).catch(() => {});
+              }
+            } catch {}
+          }
         }
       }
     }
@@ -308,6 +324,14 @@ export default function HomeClient() {
           results={filteredMajors}
           onSelect={handleSelect}
         />
+        {missingMajor && !selectedMajor && (
+          <div className="mx-auto mt-6 w-full max-w-xl rounded-3xl border border-border bg-card/60 p-5 text-left">
+            <p className="text-sm font-bold">
+              &ldquo;{missingMajor}&rdquo; isn&apos;t in our database yet. We&apos;re adding majors every week.
+            </p>
+            <RequestMajor query={missingMajor} />
+          </div>
+        )}
       </div>
 
       {/* Result Section */}
@@ -386,7 +410,7 @@ export default function HomeClient() {
                     <div className="space-y-0.5">
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">SALARY RANGE</p>
                       <p className="text-[10px] sm:text-base font-black tabular-nums tracking-tighter text-foreground">
-                        {selectedMajor.salary}
+                        {selectedMajor.salary || "Not rated yet"}
                       </p>
                     </div>
 
@@ -394,9 +418,9 @@ export default function HomeClient() {
                       <p className="text-[5px] sm:text-[8px] font-black text-muted-foreground tracking-[0.2em]">MARKET GROWTH</p>
                       <p className={cn(
                         "text-[10px] sm:text-base font-black tabular-nums tracking-tighter",
-                        selectedMajor.growth.includes("-") ? "text-destructive" : "text-emerald-500"
+                        !selectedMajor.growth ? "text-muted-foreground" : selectedMajor.growth.includes("-") ? "text-destructive" : "text-emerald-500"
                       )}>
-                        {selectedMajor.growth}
+                        {selectedMajor.growth || "Not rated yet"}
                       </p>
                     </div>
                   </div>
@@ -554,11 +578,11 @@ export default function HomeClient() {
                         <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/10">
                           <div>
                             <p className="text-[8px] font-black text-muted-foreground tracking-widest mb-1 uppercase">SALARY</p>
-                            <p className="text-sm font-black">{m.salary}</p>
+                            <p className="text-sm font-black">{m.salary || "Not rated yet"}</p>
                           </div>
                           <div>
                             <p className="text-[8px] font-black text-muted-foreground tracking-widest mb-1 uppercase">GROWTH</p>
-                            <p className="text-sm font-black">{m.growth}</p>
+                            <p className="text-sm font-black">{m.growth || "Not rated yet"}</p>
                           </div>
                         </div>
                       </div>

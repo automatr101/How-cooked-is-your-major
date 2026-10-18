@@ -48,7 +48,8 @@ export async function POST(req: NextRequest) {
     }
   }
   if (telegramEnabled()) {
-    await sendTelegram([`🔎 <b>Missing major requested:</b> ${escapeHtml(query)}`, rawEmail ? "📧 left an email to be told" : "", visitorLine(req)].filter(Boolean).join("\n")).catch(() => {});
+    const label = body.source === "link" ? "🔗 <b>Link to a missing major:</b>" : "🔎 <b>Missing major requested:</b>";
+    await sendTelegram([`${label} ${escapeHtml(query)}`, rawEmail ? "📧 left an email to be told" : "", visitorLine(req)].filter(Boolean).join("\n")).catch(() => {});
   }
   return reply({ ok: true });
 }

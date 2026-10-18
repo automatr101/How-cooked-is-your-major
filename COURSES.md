@@ -1,4 +1,4 @@
-# All courses on the site (107)
+# All courses on the site (201)
 
 One score per subject. Generated from src/lib/data.ts.
 
@@ -77,40 +77,134 @@ One score per subject. Generated from src/lib/data.ts.
 71. BSc. Telecommunication Engineering | 20% | Not Cooked
 72. BSc. Textile Design and Technology | 56% | Kinda Cooked
 73. Business | 55% | Kinda Cooked
-74. Chemistry | 25% | Slightly Cooked
-75. Computer Science | 75% | Cooked
-76. Data Science | 65% | Cooked
-77. Doctor of Optometry | 51% | Kinda Cooked
-78. Doctor of Pharmacy | 55% | Kinda Cooked
-79. Doctor of Veterinary Medicine | 42% | Kinda Cooked
-80. Education | 20% | Not Cooked
-81. Engineering | 15% | Not Cooked
-82. Finance | 58% | Kinda Cooked
-83. Graphic Design | 92% | Extremely Cooked
-84. Industrial Engineering | 10% | Not Cooked
-85. Information Technology | 70% | Cooked
-86. Law | 65% | Cooked
-87. Marketing | 60% | Kinda Cooked
-88. Mathematics | 40% | Slightly Cooked
-89. Nursing | 5% | Not Cooked
-90. Physics | 30% | Slightly Cooked
-91. Psychology | 12% | Not Cooked
-92. Software Engineering | 85% | Very Cooked
-93. BSc Administration (Public Administration) | 51% | Kinda Cooked
-94. BSc Administration (Health Services Management) | 10% | Not Cooked
-95. BSc Administration (Banking and Finance) | 63% | Cooked
-96. B.Ed. Early Grade Specialism | 24% | Slightly Cooked
-97. B.Ed. Upper-Grade Specialism | 16% | Not Cooked
-98. B.Ed. J.H.S Specialism | 22% | Slightly Cooked
-99. BSc. Mobile Computing | 70% | Cooked
-100. BSc. Business Information Systems | 61% | Cooked
-101. BSc. Data Science & Analytics | 63% | Cooked
-102. BSc Cyber Security | 71% | Cooked
-103. BSc. Procurement and Logistics | 55% | Kinda Cooked
-104. BSc. Financial Technology | 59% | Kinda Cooked
-105. BSc. Economics | 64% | Cooked
-106. BSc. Accounting with Computing | 87% | Very Cooked
-107. BSc. Human Resource Management | 50% | Kinda Cooked
+74. Business Analytics | 59% | Kinda Cooked
+75. Chemistry | 25% | Slightly Cooked
+76. Computer Science | 75% | Cooked
+77. Data Science | 65% | Cooked
+78. Doctor of Optometry | 51% | Kinda Cooked
+79. Doctor of Pharmacy | 55% | Kinda Cooked
+80. Doctor of Veterinary Medicine | 42% | Kinda Cooked
+81. Education | 20% | Not Cooked
+82. Engineering | 15% | Not Cooked
+83. Finance | 58% | Kinda Cooked
+84. Graphic Design | 92% | Extremely Cooked
+85. Industrial Engineering | 10% | Not Cooked
+86. Information Technology | 70% | Cooked
+87. Law | 65% | Cooked
+88. Marketing | 60% | Kinda Cooked
+89. Mathematics | 40% | Slightly Cooked
+90. Nursing | 5% | Not Cooked
+91. Physics | 30% | Slightly Cooked
+92. Psychology | 12% | Not Cooked
+93. Software Engineering | 85% | Very Cooked
+94. BSc Administration (Public Administration) | 51% | Kinda Cooked
+95. BSc Administration (Health Services Management) | 10% | Not Cooked
+96. BSc Administration (Banking and Finance) | 63% | Cooked
+97. B.Ed. Early Grade Specialism | 24% | Slightly Cooked
+98. B.Ed. Upper-Grade Specialism | 16% | Not Cooked
+99. B.Ed. J.H.S Specialism | 22% | Slightly Cooked
+100. BSc. Mobile Computing | 70% | Cooked
+101. BSc. Business Information Systems | 61% | Cooked
+102. BSc. Data Science & Analytics | 63% | Cooked
+103. BSc Cyber Security | 71% | Cooked
+104. BSc. Procurement and Logistics | 55% | Kinda Cooked
+105. BSc. Financial Technology | 59% | Kinda Cooked
+106. BSc. Economics | 64% | Cooked
+107. BSc. Accounting with Computing | 87% | Very Cooked
+108. BSc. Human Resource Management | 50% | Kinda Cooked
+109. Artificial Intelligence | 78% | Cooked
+110. Robotics Engineering | 30% | Slightly Cooked
+111. Mechatronics Engineering | 28% | Slightly Cooked
+112. Bioinformatics | 35% | Slightly Cooked
+113. Biotechnology | 30% | Slightly Cooked
+114. Biomedical Engineering | 18% | Not Cooked
+115. Microbiology | 25% | Slightly Cooked
+116. Genetics | 25% | Slightly Cooked
+117. Molecular Biology | 25% | Slightly Cooked
+118. Neuroscience | 20% | Not Cooked
+119. Astronomy | 12% | Not Cooked
+120. Geology | 15% | Not Cooked
+121. Oceanography | 18% | Not Cooked
+122. Marine Biology | 20% | Not Cooked
+123. Environmental Engineering | 20% | Not Cooked
+124. Nuclear Engineering | 12% | Not Cooked
+125. Mining Engineering | 10% | Not Cooked
+126. Web Development | 75% | Cooked
+127. Cloud Computing | 70% | Cooked
+128. Network Engineering | 40% | Slightly Cooked
+129. Information Systems | 65% | Cooked
+130. Data Analytics | 68% | Cooked
+131. Operations Research | 45% | Kinda Cooked
+132. Computational Biology | 30% | Slightly Cooked
+133. Cognitive Science | 30% | Slightly Cooked
+134. Aviation | 15% | Not Cooked
+135. International Business | 55% | Kinda Cooked
+136. Hospitality Management | 58% | Kinda Cooked
+137. Risk Management and Insurance | 52% | Kinda Cooked
+138. Management Information Systems | 60% | Kinda Cooked
+139. Financial Economics | 60% | Kinda Cooked
+140. Sports Management | 50% | Kinda Cooked
+141. Aviation Management | 45% | Kinda Cooked
+142. Organizational Leadership | 50% | Kinda Cooked
+143. Medicine | 5% | Not Cooked
+144. Public Health | 20% | Not Cooked
+145. Epidemiology | 18% | Not Cooked
+146. Health Sciences | 20% | Not Cooked
+147. Kinesiology | 15% | Not Cooked
+148. Athletic Training | 12% | Not Cooked
+149. Occupational Therapy | 8% | Not Cooked
+150. Physical Therapy | 10% | Not Cooked
+151. Physician Assistant Studies | 8% | Not Cooked
+152. Speech-Language Pathology | 10% | Not Cooked
+153. Nutrition | 25% | Slightly Cooked
+154. Dental Hygiene | 10% | Not Cooked
+155. Paramedicine | 8% | Not Cooked
+156. Biomedical Sciences | 22% | Not Cooked
+157. Health Administration | 15% | Not Cooked
+158. Pharmaceutical Sciences | 35% | Slightly Cooked
+159. Criminology | 45% | Kinda Cooked
+160. Criminal Justice | 48% | Kinda Cooked
+161. International Relations | 40% | Slightly Cooked
+162. Anthropology | 40% | Slightly Cooked
+163. Archaeology | 25% | Slightly Cooked
+164. Philosophy | 35% | Slightly Cooked
+165. Linguistics | 40% | Slightly Cooked
+166. Communications | 65% | Cooked
+167. Journalism | 72% | Cooked
+168. Media Studies | 60% | Kinda Cooked
+169. Public Relations | 58% | Kinda Cooked
+170. Advertising | 62% | Cooked
+171. Film and Television Production | 65% | Cooked
+172. Creative Writing | 68% | Cooked
+173. Art History | 40% | Slightly Cooked
+174. Classics | 25% | Slightly Cooked
+175. Gender Studies | 35% | Slightly Cooked
+176. Ethnic Studies | 30% | Slightly Cooked
+177. Urban Studies | 35% | Slightly Cooked
+178. Environmental Studies | 40% | Slightly Cooked
+179. Human Services | 40% | Slightly Cooked
+180. Theater | 35% | Slightly Cooked
+181. Dance | 20% | Not Cooked
+182. Music | 50% | Kinda Cooked
+183. Photography | 70% | Cooked
+184. Interior Design | 55% | Kinda Cooked
+185. Industrial Design | 55% | Kinda Cooked
+186. Game Design | 80% | Cooked
+187. Animation | 85% | Very Cooked
+188. UX Design | 60% | Kinda Cooked
+189. Digital Media | 65% | Cooked
+190. Music Production | 60% | Kinda Cooked
+191. Fashion Merchandising | 60% | Kinda Cooked
+192. Studio Art | 45% | Kinda Cooked
+193. Aviation Maintenance | 10% | Not Cooked
+194. Professional Flight | 15% | Not Cooked
+195. Culinary Arts | 30% | Slightly Cooked
+196. Horticulture | 15% | Not Cooked
+197. Animal Science | 20% | Not Cooked
+198. Equine Science | 15% | Not Cooked
+199. Viticulture and Enology | 20% | Not Cooked
+200. Fisheries and Wildlife | 15% | Not Cooked
+201. Welding Engineering Technology | 8% | Not Cooked
 
 ## Other names that open the same entry
 
@@ -128,5 +222,25 @@ One score per subject. Generated from src/lib/data.ts.
 - BSc. Software Engineering -> Software Engineering
 - BA. Economics -> BSc. Economics
 - BSc Administration (Human Resource Management) -> BSc. Human Resource Management
+- Machine Learning -> Artificial Intelligence
+- Astrophysics -> Astronomy
+- Earth Sciences -> Geology
+- Materials Science -> BSc. Materials Engineering
+- Supply Chain Management -> BSc. Procurement and Supply Chain Management
+- Exercise Science -> Kinesiology
+- Dietetics -> Nutrition
+- Radiography -> BSc. Medical Imaging
+- English -> BA. English
+- History -> BA. History
+- Economics -> BSc. Economics
+- Political Science -> BA. Political Studies
+- UI Design -> UX Design
+- Construction Management -> BSc. Construction Technology and Management
+- AI -> Artificial Intelligence
+- MBBS -> Medicine
+- MD -> Medicine
+- UI/UX -> UX Design
+- Product Design -> UX Design
+- Fine Arts -> Studio Art
 - Cyber Security -> BSc Cyber Security
 - Cybersecurity -> BSc Cyber Security

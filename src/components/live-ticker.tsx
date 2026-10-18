@@ -1,5 +1,6 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import { majors } from "@/lib/data";
 
@@ -34,7 +35,11 @@ const FEATURED = [
 
 const items = FEATURED.map((name) => majors.find((m) => m.name === name)).filter((m): m is NonNullable<typeof m> => !!m);
 
+const noop = () => () => {};
+
 export function LiveTicker() {
+  // True only in the browser (false in the server-rendered page), without a setState-in-effect
+  const inBrowser = useSyncExternalStore(noop, () => true, () => false);
   const renderItems = (copy: number) =>
     items.map((s, i) => (
       // The second copy only makes the loop seamless: hidden from screen readers so every score is read once
@@ -65,7 +70,8 @@ export function LiveTicker() {
             className="flex items-center gap-4 text-[12px] font-medium"
           >
             {/* Double the content for seamless loop */}
-            {[...renderItems(0), ...renderItems(1)]}
+            {/* The copy that makes the loop seamless is added only in the browser: the page itself lists each major once */}
+            {inBrowser ? [...renderItems(0), ...renderItems(1)] : renderItems(0)}
           </motion.div>
         </div>
       </div>

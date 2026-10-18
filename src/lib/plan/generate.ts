@@ -42,11 +42,15 @@ interface V {
   jobs: string | null;
 }
 
+/** "In our data, X pays ... and shows ..." only when the major has those figures (newer majors do not yet). */
+const payLine = (v: { nick: string; salary: string; growth: string }): string =>
+  v.salary && v.growth ? `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}.` : `We don't have pay and growth figures for ${v.nick} yet.`;
+
 const FRAMES: Record<PlanType, Frame> = {
   uncooking: {
     overview: (v) => `${v.name} scores ${v.score}% on our AI-risk scale. That is the high end: a lot of the entry-level work in ${v.nick} is the kind AI already does well. This plan is about changing your position before that reaches you. You move from doing the tasks AI can do to supervising, checking and directing them, and into the parts of ${v.nick} that need a person.`,
     whyScore: (v) => `A score of ${v.score}% means a large share of everyday ${v.nick} work, ${v.work}, can be drafted, summarised or analysed by current tools. The score measures exposure of tasks, not your worth or your future. The people who lose ground are the ones who keep doing the exposed tasks the old way.`,
-    outlook: (v) => `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}. Expect fewer junior roles that are only routine output, and more demand for people who combine ${v.nick} knowledge with AI fluency. The market rewards those who move early.`,
+    outlook: (v) => `${payLine(v)} Expect fewer junior roles that are only routine output, and more demand for people who combine ${v.nick} knowledge with AI fluency. The market rewards those who move early.`,
     roadmap: (v) => [
       { days: 30, theme: "Stop the bleeding", steps: [
         `List the ten tasks you or your field do most often. Mark each one AI can already do, can help with, or cannot do.`,
@@ -73,7 +77,7 @@ const FRAMES: Record<PlanType, Frame> = {
   future_proof: {
     overview: (v) => `${v.name} scores ${v.score}%, in the middle of our scale. Parts of ${v.nick} are exposed and parts are not. That is a good position, if you use it. This plan is about finding exactly which parts of your work AI will reach first and putting yourself on the right side of that line while there is time.`,
     whyScore: (v) => `A score of ${v.score}% means some everyday ${v.nick} work, ${v.work}, can be sped up or partly done by current tools, while other parts still depend on judgement, trust and presence. Your exposure sits in specific tasks, which means you can plan around it.`,
-    outlook: (v) => `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}. Expect the routine parts of the job to get faster and cheaper, and the human parts to be worth more. People who learn to use the tools well will be the ones who do the work of two.`,
+    outlook: (v) => `${payLine(v)} Expect the routine parts of the job to get faster and cheaper, and the human parts to be worth more. People who learn to use the tools well will be the ones who do the work of two.`,
     roadmap: (v) => [
       { days: 30, theme: "Map your exposure", steps: [
         `List the tasks in your field and mark which AI helps with, which it could replace, and which it cannot touch.`,
@@ -100,7 +104,7 @@ const FRAMES: Record<PlanType, Frame> = {
   advantage: {
     overview: (v) => `${v.name} scores ${v.score}%, which is on the safe end of our scale. A lot of the work in ${v.nick} depends on people, judgement and presence, which tools do not replace. But low risk is a starting point, and everyone else in your field has it too. This plan shows you how to turn that position into a real, lasting lead.`,
     whyScore: (v) => `A score of ${v.score}% means most of the core of ${v.nick}, ${v.work}, rests on things AI handles badly: trust, accountability, physical presence and decisions without clean data. Safe today does not mean safe forever, and it does not mean advanced. It means you can build.`,
-    outlook: (v) => `In our data, ${v.nick} pays ${v.salary} and shows ${v.growth}. The biggest gains will go to people in safe fields who also use AI well, because they can do more with the same hours than their peers.`,
+    outlook: (v) => `${payLine(v)} The biggest gains will go to people in safe fields who also use AI well, because they can do more with the same hours than their peers.`,
     roadmap: (v) => [
       { days: 30, theme: "Raise your baseline", steps: [
         `Start using ${v.tool1} and ${v.tool2} daily so that you save hours you can spend on deeper work.`,

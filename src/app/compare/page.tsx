@@ -157,12 +157,12 @@ export default function ComparePage() {
                        <div className="grid grid-cols-2 gap-4">
                           <div>
                             <p className="text-[10px] font-black text-muted-foreground tracking-widest mb-1 uppercase">SALARY RANGE</p>
-                            <p className="text-lg font-black">{m.salary}</p>
+                            <p className="text-lg font-black">{m.salary || "Not rated yet"}</p>
                           </div>
                           <div>
                             <p className="text-[10px] font-black text-muted-foreground tracking-widest mb-1 uppercase">MARKET GROWTH</p>
-                            <p className={cn("text-lg font-black", m.growth.includes('-') ? "text-destructive" : "text-emerald-500")}>
-                                {m.growth}
+                            <p className={cn("text-lg font-black", !m.growth ? "text-muted-foreground" : m.growth.includes('-') ? "text-destructive" : "text-emerald-500")}>
+                                {m.growth || "Not rated yet"}
                             </p>
                           </div>
                        </div>
