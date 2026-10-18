@@ -23,7 +23,7 @@ export default function PrivacyPage() {
     >
       <Section n={1} title="What We Collect">
         <P>
-          <B>Just visiting.</B> The free tools (searching a major, your score and roast, sharing, comparing, the leaderboard) need no account and ask for no name or email. The only optional exception is the free extended-roast signup described below. We receive anonymised usage data automatically, through analytics tools (see Sections 4 and 5): browser type and version, device type, pages visited and features used, referring website, approximate location (country or city level) and date and time of visit.
+          <B>Just visiting.</B> The free tools (searching a major, your score and roast, sharing, comparing, the leaderboard) need no account and ask for no name or email. The only optional exceptions are the free extended-roast signup and the campus ambassador program, described below. We receive anonymised usage data automatically, through analytics tools (see Sections 4 and 5): browser type and version, device type, pages visited and features used, referring website, approximate location (country or city level) and date and time of visit.
         </P>
         <P>
           <B>What you type into the search box.</B> When you pick a result, or when nothing matches, the words you typed (cut to 60 characters) are recorded in our analytics so we can see which majors people look for. Please do not type personal details into the search box.
@@ -36,6 +36,9 @@ export default function PrivacyPage() {
         </P>
         <P>
           <B>Asking for a major we don&apos;t have.</B> If your search finds nothing, you can ask us to add that major. We store what you typed, the country your visit came from and, only if you type it, your email address, so we can send you one email when the major is added. Our private alert says which major was asked for, never your email. Ask us any time to delete it.
+        </P>
+        <P>
+          <B>Campus ambassadors.</B> If you sign up as an ambassador on the <Int href="/ambassadors">ambassadors page</Int>, we store your name, email address and campus, the date you agreed to the program rules, how many visits your link brought, and, for each payment started through your link, its payment reference, amount, currency and your commission. We use your email only to arrange your payouts and about the program. We never store payment or mobile money details. Our private alert says only your name, campus and link code. If you arrive by an ambassador&apos;s link, we keep that link&apos;s code in a cookie (<code>cm_ref</code>) for 30 days so a purchase you make is credited to them; the ambassador sees only totals (visits, sales, earnings), never who you are or your email.
         </P>
         <P>
           <B>Ratings and reviews.</B> If you tap thumbs up or down on &ldquo;Was your score accurate?&rdquo;, we store that vote with the major you scanned. If you leave a star rating in the rating pop-up, we store the rating, any words you typed (up to 300 characters) and the major you scanned. If you bought a plan and review it, we store your stars, any words you typed, and the payment reference of your purchase, so we can mark the review &ldquo;Verified purchase&rdquo; and allow one review per purchase. We do not store your name, email address or IP address with a rating or review. We show your first name or initial, your major and your country next to a review only if you tick the box that allows it. The country is the one our hosting provider detected for your visit, never one you typed. A review is not shown publicly until we have read and approved it. Reviews are free text, so please do not include personal details such as your name, email address or phone number. We also receive a private message through Telegram when a rating or review arrives (for the star pop-up it includes your country, device type and browser).
@@ -61,6 +64,9 @@ export default function PrivacyPage() {
         <UL>
           <li>
             <B>Essential:</B> your light or dark theme and your sound on/off choice; and, only if you buy a plan or restore one, a signed unlock cookie (<code>cm_entitlement</code>) that tells the Site this browser has paid for that major. It is HttpOnly and lasts one year, so your plan is still there when you come back. You can delete it at any time; you can then restore your plan with your payment reference or the email you paid with.
+          </li>
+          <li>
+            <B>Ambassador link:</B> only if you arrive by a campus ambassador&apos;s link, an HttpOnly cookie (<code>cm_ref</code>) holding that link&apos;s code for 30 days, so a purchase is credited to them. It does not identify you.
           </li>
           <li>
             <B>Small reminders:</B> whether you already left a rating or chose &ldquo;maybe later&rdquo;, whether you already answered &ldquo;Was your score accurate?&rdquo; for a major, whether you already reviewed a plan, whether you already answered the &ldquo;where did you hear about us&rdquo; question, and, for the current tab only, which plans you opened. They stay in your own browser.
@@ -114,7 +120,7 @@ export default function PrivacyPage() {
           <li><B>Paystack</B>: processes payments and refunds for visitors in Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
           <li><B>Stripe</B>: processes payments and refunds for visitors outside Ghana and sends your receipt. It receives your email, the amount and the major, and the payment details you enter on its page.</li>
           <li><B>Resend</B>: sends the three emails if you signed up for them. It receives your email address and the message.</li>
-          <li><B>Supabase</B>: stores our purchase records, the ratings and reviews and the email signups described in Section 1, in a database hosted in the European Union (Ireland).</li>
+          <li><B>Supabase</B>: stores our purchase records, the ratings and reviews, the email signups and the ambassador records described in Section 1, in a database hosted in the European Union (Ireland).</li>
           <li><B>Vercel</B>: hosts the Site and measures its speed and performance.</li>
           <li><B>Google</B>: Analytics and AdSense (Sections 4 and 5).</li>
           <li><B>Telegram</B>: delivers the private alerts, rating notifications and contact messages to us.</li>
@@ -128,6 +134,7 @@ export default function PrivacyPage() {
         <UL>
           <li><B>Analytics:</B> Google Analytics event data is kept for 14 months.</li>
           <li><B>Purchase records:</B> kept for as long as needed to provide your plan, support you, handle refunds and meet financial record-keeping duties.</li>
+          <li><B>Ambassador records:</B> kept while you are an ambassador and as long as needed to settle what you earned, or until you ask us to delete them.</li>
           <li><B>Email signups:</B> kept until you unsubscribe and then only as a do-not-email record, or until you ask us to delete them.</li>
           <li><B>Ratings and reviews:</B> kept in our database until we delete them. A review shown on the Site stays there until we remove it or you ask us to.</li>
           <li><B>Contact messages and alerts:</B> kept in our private Telegram chat until we delete them.</li>

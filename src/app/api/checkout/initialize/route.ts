@@ -9,6 +9,7 @@ import { cleanText } from "@/lib/clean-text";
 import { funnelAlert } from "@/lib/payments/alerts";
 import { gateActive } from "@/lib/payments/gate";
 import { SafeError } from "@/lib/payments/types";
+import { ambassadorsEnabled, CODE_PATTERN, REF_COOKIE, startReferral } from "@/lib/ambassadors/store";
 
 // Step 1 of buying a plan. The browser says which major; the server decides the price, makes the
 // payment reference and (in live mode) creates the transaction with the provider. No secret key is
@@ -43,7 +44,10 @@ export async function POST(req: NextRequest) {
     const result = await provider.initialize({ reference, majorSlug: major.slug, majorName: major.name, email, callbackUrl, comeback: bundle ? false : comeback, bundle: bundle ?? undefined });
     const bundlePaid = bundle ? (provider.id === "stripe" ? { currency: "USD", amount: bundleMinor("USD", 0), provider: "Stripe" } : provider.id === "paystack" ? { currency: charge().currency, amount: bundleMinor(charge().currency, charge().amount) } : undefined) : undefined;
     const paid = bundle ? bundlePaid : provider.id === "stripe" ? { ...stripeCharge(new Date(), comeback), provider: "Stripe" } : provider.id === "paystack" && comeback ? activeCharge(new Date(), true) : undefined;
-    funnelAlert(req, "started", major, bundle ? [`📦 3-major bundle: ${bundle.map((b) => b.name).join(" + ")}`] : comeback ? ["🔁 comeback offer (30% off)"] : [], undefined, paid);
+    // Came through a campus ambassador's link: remember it against this payment, so the sale is credited when it is verified
+    const refCode = req.cookies.get(REF_COOKIE)?.value ?? "";
+    const referred = ambassadorsEnabled() && CODE_PATTERN.test(refCode) ? await startReferral(reference, refCode, email).catch(() => null) : null;
+    funnelAlert(req, "started", major, [...(bundle ? [`📦 3-major bundle: ${bundle.map((b) => b.name).join(" + ")}`] : comeback ? ["🔁 comeback offer (30% off)"] : []), ...(referred ? [`🎓 via ambassador ${referred}`] : [])], undefined, paid);
     return json({ provider: provider.id, reference: result.reference, authorizationUrl: result.authorizationUrl ?? null });
   } catch (err) {
     console.error("[checkout] could not start a payment"); // no details: they may contain keys or the email

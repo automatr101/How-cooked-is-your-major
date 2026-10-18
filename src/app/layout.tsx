@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/navbar";
+import { RefCapture } from "@/components/ref-capture";
 
 export const metadata: Metadata = {
   title: "How Cooked Is Your Major? | AI Risk Scan",
@@ -107,6 +108,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+          <RefCapture />
           {children}
           <SpeedInsights />
         </ThemeProvider>

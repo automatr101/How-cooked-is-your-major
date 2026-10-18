@@ -3,6 +3,7 @@ import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 import { charge } from "./paystack";
 import { hashEmail, recordPurchase, storeEnabled } from "./store";
 import { bundleKey } from "./bundle";
+import { ambassadorsEnabled, commissionOf, creditReferral } from "@/lib/ambassadors/store";
 
 // SERVER ONLY. What happens the first time a verified payment is seen. Called from two places that can both be
 // the first to see a payment: the buyer's browser coming back (/api/checkout/verify) and Paystack's own message
@@ -49,6 +50,14 @@ export async function registerPurchase(input: {
   }
 
   alerted.add(input.reference);
+  // A checkout that started through a campus ambassador's link: credit it now (once; the second caller finds it already paid)
+  let ambassador: string | null = null;
+  if (isNew && ambassadorsEnabled()) {
+    ambassador = await creditReferral(input.reference, paid).catch(() => {
+      console.error("[purchases] could not credit a referral");
+      return null;
+    });
+  }
   if (isNew && telegramEnabled()) {
     await sendTelegram(
       [
@@ -58,6 +67,7 @@ export async function registerPurchase(input: {
           : `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
         `💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}${input.provider === "stripe" ? " via Stripe" : ""}`,
         `🧾 ${escapeHtml(input.reference)}`,
+        ...(ambassador ? [`🎓 ambassador ${escapeHtml(ambassador)} earns ${(commissionOf(paid.amount) / 100).toFixed(2)} ${paid.currency}`] : []),
       ].join("\n")
     );
   }
