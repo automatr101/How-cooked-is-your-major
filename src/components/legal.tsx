@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // Shared look for the legal pages (privacy, terms, refunds), so they read the same and stay easy to edit.
 
-export const LEGAL_UPDATED = "October 16, 2026";
+export const LEGAL_UPDATED = "October 23, 2026";
 export const SITE_URL = "https://how-cooked-is-your-major.vercel.app";
 
 const PAGES = [

@@ -71,9 +71,9 @@ export async function POST(req: NextRequest) {
     }
   }
   if (lead && telegramEnabled()) {
-    // The address itself is never put in the alert
+    // The owner follows up by hand while email sending is off, so the alert carries the address (the privacy policy says so)
     await sendTelegram(
-      [`📧 <b>New lead</b>${sending ? "" : " (email sending is OFF, nothing was sent)"}`, `📚 ${escapeHtml(major.name)} (${major.score}%)${body.score_alerts === true ? " · 🔔 score alerts on" : ""}`, ref ? `🔗 ref: ${escapeHtml(ref)}` : "", visitorLine(req)].filter(Boolean).join("\n")
+      [`📧 <b>New lead</b>${sending ? "" : " (email sending is OFF, nothing was sent)"}`, `✉️ ${escapeHtml(lead.email)}`, `📚 ${escapeHtml(major.name)} (${major.score}%)${body.score_alerts === true ? " · 🔔 score alerts on" : ""}`, ref ? `🔗 ref: ${escapeHtml(ref)}` : "", visitorLine(req)].filter(Boolean).join("\n")
     );
   }
   return reply({ ok: true, emailed, extended: extendedRoast(major) });
