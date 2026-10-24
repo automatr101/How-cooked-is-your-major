@@ -206,6 +206,7 @@ export default function HomeClient() {
     setIsScanning(true);
     notifyScan(major.name);
     track("major_scan", majorParams(major));
+    track("scan_started", majorParams(major)); // same moment as major_scan, under the name the hero sample-card funnel uses
     // Preload the sound NOW during the click gesture (mobile needs this)
     preloadResultSound(major.score);
     loadRoastEngine().catch(() => {}); // warm up the roast engine while the scan animation runs

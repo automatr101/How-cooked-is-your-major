@@ -62,19 +62,19 @@ export function MenuCloseIcon({ size = 40, color = "currentColor", className, du
   const open = useAutoToggle(duration, active);
   return (
     <svg viewBox="0 0 40 40" fill="none" className={cn("", className)} style={{ width: size, height: size }}>
-      <motion.line x1="10" x2="30" stroke={color} strokeWidth={2.5} strokeLinecap="round"
+      <motion.line initial={false} x1="10" x2="30" stroke={color} strokeWidth={2.5} strokeLinecap="round"
         animate={open
           ? { y1: 20, y2: 20, rotate: 45 }
           : { y1: 12, y2: 12, rotate: 0 }}
         transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
         style={{ transformOrigin: "20px 20px" }}
       />
-      <motion.line x1="10" y1="20" x2="30" y2="20" stroke={color} strokeWidth={2.5} strokeLinecap="round"
+      <motion.line initial={false} x1="10" y1="20" x2="30" y2="20" stroke={color} strokeWidth={2.5} strokeLinecap="round"
         animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
         transition={{ duration: 0.2 }}
         style={{ transformOrigin: "20px 20px" }}
       />
-      <motion.line x1="10" x2="30" stroke={color} strokeWidth={2.5} strokeLinecap="round"
+      <motion.line initial={false} x1="10" x2="30" stroke={color} strokeWidth={2.5} strokeLinecap="round"
         animate={open
           ? { y1: 20, y2: 20, rotate: -45 }
           : { y1: 28, y2: 28, rotate: 0 }}
@@ -303,15 +303,15 @@ export function VolumeIcon({ size = 40, color = "currentColor", className, durat
   return (
     <svg viewBox="0 0 40 40" fill="none" className={cn("", className)} style={{ width: size, height: size }}>
       <path d="M8 16h5l7-6v20l-7-6H8a1 1 0 01-1-1V17a1 1 0 011-1z" stroke={color} strokeWidth={2} strokeLinejoin="round" />
-      <motion.path d="M26 14a8 8 0 010 12" stroke={color} strokeWidth={2} strokeLinecap="round"
+      <motion.path initial={false} d="M26 14a8 8 0 010 12" stroke={color} strokeWidth={2} strokeLinecap="round"
         animate={muted ? { opacity: 0, x: -3 } : { opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
       />
-      <motion.path d="M30 10a14 14 0 010 20" stroke={color} strokeWidth={2} strokeLinecap="round"
+      <motion.path initial={false} d="M30 10a14 14 0 010 20" stroke={color} strokeWidth={2} strokeLinecap="round"
         animate={muted ? { opacity: 0, x: -5 } : { opacity: 0.5, x: 0 }}
         transition={{ duration: 0.3, delay: 0.05 }}
       />
-      <motion.g
+      <motion.g initial={false}
         animate={muted ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.25 }}>
         <line x1="26" y1="16" x2="34" y2="24" stroke={color} strokeWidth={2.5} strokeLinecap="round" />
