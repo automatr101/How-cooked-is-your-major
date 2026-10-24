@@ -14,6 +14,7 @@ import { PlanReport } from "./plan-report";
 import { PointingHand } from "./pointing-hand";
 import { StickyCta } from "./sticky-cta";
 import { BundlePicker } from "./bundle-picker";
+import { PlanBook } from "./plan-book";
 import { majors as allMajors } from "@/lib/data";
 
 // The paid career plan, shown after the free result. The free score, roast, sharing, compare and
@@ -316,6 +317,9 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-60 w-60 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="offer-grid relative space-y-6">
+        {/* The product as a product: their plan's cover and a real page from inside, like a store page */}
+        <PlanBook major={major} preview={preview} />
+
         <div className="offer-head space-y-3">
           <div className="flex items-center justify-between gap-3">
             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">{copy.eyebrow}</p>
