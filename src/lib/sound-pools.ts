@@ -12,6 +12,8 @@
 // Processing (same as before): silence at the start removed, anything longer than 5 s cut at 5 s with a 0.5 s fade
 // (shakhed 17.6 s, app 23.1 s, jet2-holiday 11.7 s, bonba 12.9 s, laughter 20.9 s, baby-laughing 6.6 s,
 // du-bist-gut-genug 7.3 s), all set to the same loudness (-16 LUFS, peaks under -1.5 dB), 128 kbps MP3.
+// The earlier sounds stay in their old tiers (crowd-clap moved from green to 41-60, since green is now shakhed and app);
+// among-us-* and discord-* are kept as files but were never in a pool. fahhh-old is the earlier fahhh, renamed when the new one took its name.
 // Left out of the owner's folder on purpose: two gay-joke clips, the Pornhub intro, the Andrew Tate clip and two
 // gunshots (not for a site students share), the 10 kHz tone (painful), a duplicate rizz, and four 2-4 minute tracks.
 
@@ -27,9 +29,9 @@ export function soundTierOf(score: number): SoundTier {
 
 export const RESULT_SOUNDS: Record<SoundTier, string[]> = {
   low: ["shakhed", "app"],
-  mid: ["ding", "rizz", "taco-bell-bong", "laura-normal", "suiii", "six-seven", "gogogo", "jet2-holiday", "baby-laughing", "du-bist-gut-genug", "laughter"],
-  high: ["bruh", "fahhh", "fahhhhh", "metal-pipe-clang", "spongebob-fail", "bone-crack", "tuco-get-out", "error", "bonba"],
-  extreme: ["sad-violin", "eagle-scream", "metal-pipe-clang", "spongebob-fail", "bonba", "fart", "bruh", "fahhhhh"],
+  mid: ["ding", "rizz", "taco-bell-bong", "laura-normal", "suiii", "six-seven", "gogogo", "jet2-holiday", "baby-laughing", "du-bist-gut-genug", "laughter", "crowd-clap", "vine-boom", "atassa"],
+  high: ["bruh", "fahhh", "fahhhhh", "metal-pipe-clang", "spongebob-fail", "bone-crack", "tuco-get-out", "error", "bonba", "fahhh-old", "atassa", "vine-boom", "chicken-on-tree-screaming"],
+  extreme: ["sad-violin", "eagle-scream", "metal-pipe-clang", "spongebob-fail", "bonba", "fart", "bruh", "fahhhhh", "oh-my-god-bro-oh-hell-nah-man", "undertakers-bell", "chicken-on-tree-screaming", "shotgun-fahh", "vine-boom"],
 };
 
 /** How often a green (low) result plays a cooked sound instead, for the joke. */
