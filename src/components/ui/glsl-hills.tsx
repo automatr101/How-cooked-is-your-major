@@ -179,7 +179,7 @@ const GLSLHills = ({
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: false, alpha: true });
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer(); // THREE.Clock is deprecated
     const plane = new Plane();
 
     const resize = () => {
@@ -194,14 +194,15 @@ const GLSLHills = ({
     let requestID = 0;
     let running = false;
     const renderLoop = () => {
-      plane.render(clock.getDelta());
+      timer.update();
+      plane.render(timer.getDelta());
       renderer.render(scene, camera);
       requestID = requestAnimationFrame(renderLoop);
     };
     const start = () => {
       if (running || reduceMotion) return;
       running = true;
-      clock.getDelta(); // drop the time spent paused so the animation doesn't jump
+      timer.update(); // drop the time spent paused so the animation doesn't jump
       renderLoop();
     };
     const stop = () => {
