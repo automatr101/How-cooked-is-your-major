@@ -69,12 +69,21 @@ export function ReviewPopup({ majorName, hasResult }: { majorName?: string; hasR
   const [hp, setHp] = useState(""); // honeypot: real visitors never see or fill this
   const [status, setStatus] = useState<Status>("idle");
 
-  // Start the timer once a result is showing. No result, no popup.
+  // Start the timer once a result is showing. No result, no popup. It never opens on top of the paid-plan offer: while the
+  // offer is on screen it waits, checking again every 2 seconds, and asks only once the visitor has scrolled away from it.
   useEffect(() => {
     if (!hasResult || closed || open || reviewed) return;
-    const id = setTimeout(() => {
-      if (!getReviewed() && !snoozed()) setOpen(true);
-    }, RESULT_DELAY_MS);
+    let id: ReturnType<typeof setTimeout>;
+    const offerOnScreen = () => {
+      const r = document.getElementById("premium-offer")?.getBoundingClientRect();
+      return !!r && r.top < window.innerHeight && r.bottom > 0;
+    };
+    const tryOpen = () => {
+      if (getReviewed() || snoozed()) return;
+      if (offerOnScreen()) id = setTimeout(tryOpen, 2000);
+      else setOpen(true);
+    };
+    id = setTimeout(tryOpen, RESULT_DELAY_MS);
     return () => clearTimeout(id);
   }, [hasResult, closed, open, reviewed]);
 

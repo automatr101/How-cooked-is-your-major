@@ -499,9 +499,6 @@ export default function HomeClient() {
               </button>
             </div>
 
-            {/* Free extra behind an email: 3 more roasts + the numbers. Only shown when the leads database is set up. */}
-            <LeadBox major={selectedMajor} />
-
             {/* Replay Sound: a small, quiet text button, so it does not compete with the buttons that matter */}
             <div className="flex justify-center mt-2">
               <button
@@ -515,17 +512,19 @@ export default function HomeClient() {
 
             </div>
 
-            {/* The paid career plan, right after the roast: the roast is the moment the visitor cares most about their score,
-                so on phones the offer sits directly under it (and under "Roast Me Again"). On laptops and desktops it spans the
-                full width under both columns as a landscape card, instead of being squeezed into the narrow left column.
-                Renders nothing unless NEXT_PUBLIC_PAYMENTS_MODE is "test" or "live". */}
-            <div className="min-w-0 order-2 lg:order-3 lg:col-span-2">
+            {/* Right-hand column on laptops, straight under the card on phones: the paid plan comes first, so nobody has to scroll
+                past compare, share and the tips to find it (only about half of the people with a result used to reach it). Then the
+                free email extra, then compare, share and the tips. The offer renders nothing unless payments are on. */}
+            <div className="min-w-0 order-2">
+            <div className="lg:-mt-8">
               <PremiumOffer major={selectedMajor} />
             </div>
 
-            <div className="min-w-0 order-3 lg:order-2 lg:sticky lg:top-24">
+            {/* Free extra behind an email: 3 more roasts + the numbers. Only shown when the leads database is set up. */}
+            <LeadBox major={selectedMajor} />
+
             {/* Comparison Section */}
-            <div className="mt-12 lg:mt-0 w-full">
+            <div className="mt-12 w-full">
               {!showComparisonSearch && !comparedMajor && (
                 <button
                   onClick={() => setShowComparisonSearch(true)}
