@@ -18,7 +18,7 @@ fs.writeFileSync(
   path.join(out, "sound-pools.js"),
   ts.transpileModule(fs.readFileSync("src/lib/sound-pools.ts", "utf8"), { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2020 } }).outputText
 );
-const { RESULT_SOUNDS, pickResultSound, soundTierOf } = await import(pathToFileURL(path.join(out, "sound-pools.js")).href);
+const { RESULT_SOUNDS, TWIST_CHANCE, pickResultSound, soundTierOf } = await import(pathToFileURL(path.join(out, "sound-pools.js")).href);
 
 let failures = 0;
 const fail = (m) => { failures++; console.log("  ✗ " + m); };
@@ -55,10 +55,12 @@ for (const [tier, score] of [["low", 20], ["mid", 50], ["high", 70], ["extreme",
   const pool = RESULT_SOUNDS[tier];
   const recent = [];
   const counts = {};
-  let withinTwo = 0, backToBack = 0;
+  let withinTwo = 0, backToBack = 0, twists = 0;
   for (let i = 0; i < 5000; i++) {
     const pick = pickResultSound(score, recent, rng);
-    if (!pool.includes(pick)) fail(`"${pick}" picked for ${tier} but is not in its pool`);
+    const twist = tier === "low" && !pool.includes(pick) && (RESULT_SOUNDS.high.includes(pick) || RESULT_SOUNDS.extreme.includes(pick));
+    if (twist) twists++;
+    else if (!pool.includes(pick)) fail(`"${pick}" picked for ${tier} but is not in its pool`);
     if (recent[0] === pick) backToBack++;
     if (recent.slice(0, 2).includes(pick)) withinTwo++;
     counts[pick] = (counts[pick] ?? 0) + 1;
@@ -66,7 +68,8 @@ for (const [tier, score] of [["low", 20], ["mid", 50], ["high", 70], ["extreme",
     recent.length = Math.min(6, recent.length);
   }
   const spread = pool.map((n) => `${n} ${((100 * (counts[n] ?? 0)) / 5000).toFixed(0)}%`).join(", ");
-  console.log(`   ${tier.padEnd(8)} ${spread}`);
+  console.log(`   ${tier.padEnd(8)} ${spread}${tier === "low" ? ` | cooked-sound twist ${((100 * twists) / 5000).toFixed(0)}% (target ${TWIST_CHANCE * 100}%)` : ""}`);
+  if (tier === "low" && Math.abs(twists / 5000 - TWIST_CHANCE) > 0.03) fail(`low: twist rate ${twists / 50}% is off target`);
   if (pool.length >= 2 && backToBack > 0) fail(`${tier}: the same sound played back to back ${backToBack} times`);
   if (pool.length >= 4 && withinTwo > 0) fail(`${tier}: a sound repeated within two plays ${withinTwo} times`);
   for (const n of pool) if ((counts[n] ?? 0) === 0) fail(`${tier}: "${n}" never gets picked`);

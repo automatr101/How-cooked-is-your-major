@@ -5,17 +5,15 @@
 // played, so pressing through majors doesn't give the same sound twice in a row. A pool with one
 // sound simply repeats it.
 //
-// The mapping below is a first guess from the file names. Change a pool here and nothing else needs
-// to change. Every name is a file in public/sounds/<name>.mp3.
+// The owner's set of 2026-10-24 (raw files in Downloads/sounds): shakhed and app are for green results, the rest for
+// the cooked ones. And now and then a green result gets a cooked sound anyway, as a joke (TWIST_CHANCE).
+// Every name is a file in public/sounds/<name>.mp3. Change a pool here and nothing else needs to change.
 //
-// Processing notes for the six sounds added on 2026-10-03 (the raw files are the ones in Downloads):
-//   - silence at the start removed (each starts within ~30 ms, which is the MP3 encoder's own delay)
-//   - loudest moment of each set to about -13 dB and peaks kept under -1.5 dB, so no sound is louder
-//     than another (they ranged from -6 dB to -26 dB before)
-//   - ended at a natural pause with a fade: oh-my-god-bro-oh-hell-nah-man 10.8s -> 4.8s (cut at the
-//     pause after the loud burst), atassa 6.3s -> 5.0s, chicken-on-tree-screaming 5.7s -> 4.9s,
-//     undertakers-bell 4.2s -> 3.6s, fahhh 2.3s -> 1.9s, vine-boom unchanged at ~1.2s
-//   - atassa and vine-boom are mono (their two channels were identical), the rest stay stereo
+// Processing (same as before): silence at the start removed, anything longer than 5 s cut at 5 s with a 0.5 s fade
+// (shakhed 17.6 s, app 23.1 s, jet2-holiday 11.7 s, bonba 12.9 s, laughter 20.9 s, baby-laughing 6.6 s,
+// du-bist-gut-genug 7.3 s), all set to the same loudness (-16 LUFS, peaks under -1.5 dB), 128 kbps MP3.
+// Left out of the owner's folder on purpose: two gay-joke clips, the Pornhub intro, the Andrew Tate clip and two
+// gunshots (not for a site students share), the 10 kHz tone (painful), a duplicate rizz, and four 2-4 minute tracks.
 
 export type SoundTier = "low" | "mid" | "high" | "extreme";
 
@@ -28,11 +26,15 @@ export function soundTierOf(score: number): SoundTier {
 }
 
 export const RESULT_SOUNDS: Record<SoundTier, string[]> = {
-  low: ["crowd-clap"],
-  mid: ["crowd-clap", "vine-boom", "atassa"],
-  high: ["fahhh", "atassa", "vine-boom", "chicken-on-tree-screaming"],
-  extreme: ["oh-my-god-bro-oh-hell-nah-man", "undertakers-bell", "chicken-on-tree-screaming", "shotgun-fahh", "vine-boom"],
+  low: ["shakhed", "app"],
+  mid: ["ding", "rizz", "taco-bell-bong", "laura-normal", "suiii", "six-seven", "gogogo", "jet2-holiday", "baby-laughing", "du-bist-gut-genug", "laughter"],
+  high: ["bruh", "fahhh", "fahhhhh", "metal-pipe-clang", "spongebob-fail", "bone-crack", "tuco-get-out", "error", "bonba"],
+  extreme: ["sad-violin", "eagle-scream", "metal-pipe-clang", "spongebob-fail", "bonba", "fart", "bruh", "fahhhhh"],
 };
+
+/** How often a green (low) result plays a cooked sound instead, for the joke. */
+export const TWIST_CHANCE = 0.2;
+const TWIST_POOL = [...new Set([...RESULT_SOUNDS.high, ...RESULT_SOUNDS.extreme])];
 
 export const soundUrl = (name: string) => `/sounds/${name}.mp3`;
 
@@ -45,7 +47,9 @@ const AVOID_RECENT = 2;
  * avoids the one just played; a one-sound pool just returns that sound.
  */
 export function pickResultSound(score: number, recent: string[], rng: () => number = Math.random): string {
-  const pool = RESULT_SOUNDS[soundTierOf(score)];
+  const tier = soundTierOf(score);
+  // Plot twist: now and then "not cooked" still gets roasted by a cooked sound
+  const pool = tier === "low" && rng() < TWIST_CHANCE ? TWIST_POOL : RESULT_SOUNDS[tier];
   let options = pool.filter((n) => !recent.slice(0, AVOID_RECENT).includes(n));
   if (options.length === 0) options = pool.filter((n) => n !== recent[0]);
   if (options.length === 0) options = pool;
