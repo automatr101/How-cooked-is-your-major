@@ -202,7 +202,6 @@ function shouldPrefetch(): boolean {
 
 // The sound each cooked level will play next, chosen in advance so it can be downloaded before the scan.
 const TIERS: SoundTier[] = ["low", "mid", "high", "extreme"];
-const TIER_SCORE: Record<SoundTier, number> = { low: 20, mid: 50, high: 70, extreme: 90 };
 const nextPick: Partial<Record<SoundTier, string>> = {};
 const recentSounds: string[] = []; // played this visit, newest first, so the same one does not repeat
 
