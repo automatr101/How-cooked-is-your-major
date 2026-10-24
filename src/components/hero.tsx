@@ -3,7 +3,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { Plus, BrainCircuit } from "lucide-react";
-import { realMajors } from "@/lib/data";
+import { MONTHLY_VISITORS } from "@/content/stats";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
 import { FriendsRow } from "@/components/friends-row";
@@ -81,12 +81,12 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* A real result cycling through five confirmed scans, the button to scan your own right under it, and the true number of majors scored */}
+          {/* A real result cycling through five confirmed scans, the button to scan your own right under it, and the real monthly visitor count (src/content/stats.ts) */}
           <div className="flex w-full flex-col items-center gap-3 sm:pt-2">
             <SampleResultCard />
             <FriendsRow />
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-              <span className="text-foreground">{realMajors.length.toLocaleString("en-US")}</span> majors scored
+              <span className="text-foreground">{MONTHLY_VISITORS.display}</span> {MONTHLY_VISITORS.label}
             </p>
           </div>
 

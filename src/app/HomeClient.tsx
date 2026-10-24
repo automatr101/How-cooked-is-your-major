@@ -27,7 +27,6 @@ import { HeardFromPoll } from "@/components/heard-from";
 import { MajorSearch } from "@/components/major-search";
 import { PremiumOffer } from "@/components/premium/premium-offer";
 import { AccuracyPoll } from "@/components/reviews/accuracy-poll";
-import { PlanSample } from "@/components/premium/plan-sample";
 import { ReviewsSection } from "@/components/reviews/reviews-section";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
@@ -275,10 +274,9 @@ export default function HomeClient() {
       <Hero />
       <LiveTicker />
 
-      {/* Before a scan only: what the optional plan holds, with a real, labelled sample, then real reviews if there are any */}
+      {/* Before a scan only: real reviews, if there are any (the plan sample was taken off the home page to keep it calm) */}
       {!selectedMajor && (
         <>
-          <PlanSample />
           <ReviewsSection className="relative z-20 mt-8 w-full max-w-3xl px-6" />
         </>
       )}
