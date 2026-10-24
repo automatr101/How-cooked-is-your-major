@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { XLogo, WhatsAppLogo } from "@/components/brand-icons";
-import { Search, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2 } from "lucide-react";
+import { Search, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2, Share } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { canonicalMajor, searchMajors, Major, getLevelColor } from "@/lib/data";
@@ -38,6 +38,11 @@ export default function HomeClient() {
   // Brief "done" states for the Save card and Copy text buttons (their icons animate to a checkmark).
   const [saved, setSaved] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Known only in the browser (after the first render, so server and client HTML match)
+  const [canNativeShare, setCanNativeShare] = useState(false);
+  useEffect(() => {
+    setCanNativeShare(typeof navigator !== "undefined" && typeof navigator.share === "function");
+  }, []);
   const [comparisonQuery, setComparisonQuery] = useState("");
   const [selectedMajor, setSelectedMajor] = useState<Major | null>(null);
   // A ?major= link to a major we don't have (shown with the request form instead of a result)
@@ -251,6 +256,31 @@ export default function HomeClient() {
           from ? `?utm_source=${from.source}&utm_medium=${from.medium}&utm_campaign=major_share&utm_content=${slugify(selectedMajor.name)}` : ""
         }`
       : SITE_URL;
+
+  // The phone's share sheet when there is one; otherwise the link (with the short result text) goes to the clipboard
+  const handleShareLink = async () => {
+    if (!selectedMajor) return;
+    const emoji = selectedMajor.score > 80 ? "💀" : selectedMajor.score > 60 ? "🔥" : "🍳";
+    const text = `${selectedMajor.name}: ${selectedMajor.score}% AI risk, ${selectedMajor.level} ${emoji} How cooked is yours?`;
+    if (canNativeShare) {
+      try {
+        await navigator.share({ title: "How Cooked Is Your Major?", text, url: resultLink({ source: "share_sheet", medium: "referral" }) });
+        trackShare("native_share", selectedMajor.name);
+        return;
+      } catch (err) {
+        if (err instanceof DOMException && err.name === "AbortError") return; // they closed the sheet: not an error
+      }
+    }
+    const url = resultLink({ source: "copy_link", medium: "referral" });
+    try {
+      await navigator.clipboard.writeText(`${text} ${url}`);
+      trackShare("copy_link", selectedMajor.name);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      alert(`Couldn't copy. Here is your link: ${url}`);
+    }
+  };
 
   const handleShare = (platform: "x" | "wa") => {
     if (!selectedMajor) return;
@@ -624,22 +654,14 @@ export default function HomeClient() {
                 <DownloadDoneIcon active={saved} size={24} className="-ml-1" />
                 {saved ? "SAVED" : "SAVE CARD"}
               </button>
+              {/* Share link: phones open their own share sheet (Instagram, Snapchat, TikTok, Telegram, Messages...); computers
+                  without one copy the link instead */}
               <button
-                onClick={() => {
-                  const text = buildShareText(resultLink({ source: "copy_link", medium: "referral" }));
-                  navigator.clipboard
-                    .writeText(text)
-                    .then(() => {
-                      if (selectedMajor) trackShare("copy_link", selectedMajor.name);
-                      setCopied(true);
-                      setTimeout(() => setCopied(false), 2000);
-                    })
-                    .catch(() => alert("Couldn't copy. Select the text and copy it by hand."));
-                }}
+                onClick={handleShareLink}
                 className="py-4 rounded-2xl bg-card border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:bg-muted active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
-                <CopiedIcon active={copied} size={24} className="-ml-1" />
-                <span aria-live="polite">{copied ? "COPIED!" : "COPY TEXT"}</span>
+                {copied ? <CopiedIcon active size={24} className="-ml-1" /> : <Share className="w-[18px] h-[18px]" />}
+                <span aria-live="polite">{copied ? "LINK COPIED!" : canNativeShare ? "SHARE LINK" : "COPY LINK"}</span>
               </button>
             </div>
 
