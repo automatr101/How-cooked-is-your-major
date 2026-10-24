@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { B, ContactBox, Int, LegalPage, P, Section, SITE_URL, UL } from "@/components/legal";
 import { AmbassadorSignup } from "@/components/ambassador-signup";
 import { ambassadorsEnabled, commissionOf, COMMISSION_PERCENT, HOLD_DAYS, money, REF_DAYS } from "@/lib/ambassadors/store";
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
 };
 export const dynamic = "force-dynamic";
 
-export default function AmbassadorsPage() {
+export default async function AmbassadorsPage() {
+  // Vercel tells us the visitor's country: a Ghanaian campus as the example in Ghana, a famous one everywhere else
+  const country = (await headers()).get("x-vercel-ip-country")?.toUpperCase();
+  const campusExample = country === "GH" ? "KNUST" : "Harvard";
   // What one sale earns at the normal price, in each currency the plan is sold in
   const prices = [regularPriceForPage(false), regularPriceForPage(true)].filter((p, i, all) => all.findIndex((q) => q.currency === p.currency) === i);
   const perSale = prices.map((p) => `${money(commissionOf(p.minor), p.currency)} on a ${p.label} plan`).join(", or ");
@@ -27,7 +31,7 @@ export default function AmbassadorsPage() {
         </>
       }
     >
-      <AmbassadorSignup enabled={ambassadorsEnabled()} />
+      <AmbassadorSignup enabled={ambassadorsEnabled()} campusExample={campusExample} />
 
       <Section n={1} title="How It Works">
         <UL>
