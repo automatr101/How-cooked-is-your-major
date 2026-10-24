@@ -35,7 +35,8 @@ function CopyRow({ label, value, id }: { label: string; value: string; id: strin
   );
 }
 
-export function AmbassadorSignup({ enabled }: { enabled: boolean }) {
+/** campusExample: a well-known school from the visitor's own country (KNUST in Ghana, Harvard elsewhere). */
+export function AmbassadorSignup({ enabled, campusExample = "KNUST" }: { enabled: boolean; campusExample?: string }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [campus, setCampus] = useState("");
@@ -108,7 +109,7 @@ export function AmbassadorSignup({ enabled }: { enabled: boolean }) {
       <label className="sr-only" htmlFor="amb-email">Email</label>
       <input id="amb-email" type="email" inputMode="email" autoComplete="email" required maxLength={120} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@email.com" className={input} />
       <label className="sr-only" htmlFor="amb-campus">School or campus</label>
-      <input id="amb-campus" required maxLength={80} value={campus} onChange={(e) => setCampus(e.target.value)} placeholder="School or campus (e.g. KNUST)" className={input} />
+      <input id="amb-campus" required maxLength={80} value={campus} onChange={(e) => setCampus(e.target.value)} placeholder={`School or campus (e.g. ${campusExample})`} className={input} />
       {/* Hidden field real visitors never fill in */}
       <input type="text" tabIndex={-1} autoComplete="off" aria-hidden value={hp} onChange={(e) => setHp(e.target.value)} className="absolute left-[-9999px] h-0 w-0 opacity-0" />
       <label className="flex items-start gap-2.5 text-[11px] leading-relaxed text-muted-foreground">
