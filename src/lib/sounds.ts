@@ -4,7 +4,7 @@
 // ═══════════════════════════════════════════════
 
 import { useSyncExternalStore } from "react";
-import { pickResultSound, soundUrl } from "./sound-pools";
+import { pickResultSound, RESULT_SOUNDS, soundTierOf, soundUrl, type SoundTier } from "./sound-pools";
 
 const MUTE_KEY = "cm_muted";
 
@@ -34,7 +34,6 @@ const muted = () => {
 
 let audioUnlocked = false;
 let currentAudio: HTMLAudioElement | null = null;
-let pendingAudio: HTMLAudioElement | null = null;
 
 // AudioContext for bulletproof mobile unlock
 let audioCtx: AudioContext | null = null;
@@ -123,7 +122,8 @@ function clearTimers() {
 /** Stop whatever is playing right now (used on mute, tab switch and leaving the page). */
 export function stopAllSounds() {
   clearTimers();
-  for (const audio of [currentAudio, pendingAudio]) {
+  playToken++; // a sound still downloading must not start after this
+  for (const audio of [currentAudio]) {
     if (!audio) continue;
     audio.pause();
     audio.currentTime = 0;
@@ -152,16 +152,6 @@ function startPlayback(audio: HTMLAudioElement) {
   }, MAX_PLAY_MS - FADE_MS);
 }
 
-function playSound(src: string) {
-  if (muted()) return;
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-  }
-  currentAudio = new Audio(src);
-  startPlayback(currentAudio);
-}
-
 // ── Vibrate helper ─────────────────────────────
 function vibrate(pattern: number | number[]) {
   try {
@@ -172,42 +162,136 @@ function vibrate(pattern: number | number[]) {
 }
 
 // ═══════════════════════════════════════════════
-// PRE-LOAD for mobile: call during user gesture (click),
-// then call playPending() after setTimeout
+// LOADING: whole file first, then play (no streaming)
 // ═══════════════════════════════════════════════
-// The result sounds played so far this visit, newest first, so the same one doesn't repeat.
-const recentSounds: string[] = [];
+// A sound that streams while it plays stutters and cuts out on a slow connection. So every sound is downloaded in
+// full into memory (a blob URL) before it is allowed to play, and the next sound for each cooked level is fetched
+// ahead of time, so when a result appears its sound is usually already waiting. A sound that is still not ready
+// shortly after the result shows is replaced by one that is, or skipped: a late or broken sound is worse than none.
+
+const loaded = new Map<string, string>(); // name -> blob URL, fully downloaded
+const loading = new Map<string, Promise<string | null>>();
+
+function fetchSound(name: string): Promise<string | null> {
+  const done = loaded.get(name);
+  if (done) return Promise.resolve(done);
+  const inFlight = loading.get(name);
+  if (inFlight) return inFlight;
+  const p = fetch(soundUrl(name))
+    .then((r) => (r.ok ? r.blob() : Promise.reject(new Error(String(r.status)))))
+    .then((blob) => {
+      const url = URL.createObjectURL(blob);
+      loaded.set(name, url);
+      return url;
+    })
+    .catch(() => null) // a failed download can be tried again on a later scan
+    .finally(() => loading.delete(name));
+  loading.set(name, p);
+  return p;
+}
+
+/** Slow or data-saving connections: fetch only what is about to play, never ahead. */
+function shouldPrefetch(): boolean {
+  try {
+    const c = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    return !(c?.saveData || c?.effectiveType === "slow-2g" || c?.effectiveType === "2g");
+  } catch {
+    return true;
+  }
+}
+
+// The sound each cooked level will play next, chosen in advance so it can be downloaded before the scan.
+const TIERS: SoundTier[] = ["low", "mid", "high", "extreme"];
+const TIER_SCORE: Record<SoundTier, number> = { low: 20, mid: 50, high: 70, extreme: 90 };
+const nextPick: Partial<Record<SoundTier, string>> = {};
+const recentSounds: string[] = []; // played this visit, newest first, so the same one does not repeat
+
+function planNext(tier: SoundTier) {
+  // Plan only from the level's own pool (the occasional cooked sound on a green result is decided at scan time)
+  const pool = RESULT_SOUNDS[tier];
+  const avoid = new Set([...(Object.values(nextPick) as string[]), ...recentSounds.slice(0, 2)]);
+  const options = pool.filter((n) => !avoid.has(n));
+  const from = options.length ? options : pool;
+  const name = from[Math.floor(Math.random() * from.length)];
+  nextPick[tier] = name;
+  if (shouldPrefetch()) fetchSound(name);
+}
+
+let warmed = false;
+/** Download the next sound for every cooked level (a few hundred KB), once, when the browser is idle. */
+export function warmSounds() {
+  if (warmed || typeof window === "undefined") return;
+  warmed = true;
+  const run = () => TIERS.forEach((t) => !nextPick[t] && planNext(t));
+  const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
+  if (w.requestIdleCallback) w.requestIdleCallback(run, { timeout: 4000 });
+  else setTimeout(run, 1500);
+}
+
 function chooseResultSound(score: number): string {
-  const name = pickResultSound(score, recentSounds);
+  const tier = soundTierOf(score);
+  const fresh = pickResultSound(score, recentSounds); // includes the green-result joke when it comes up
+  const planned = nextPick[tier];
+  // Use the sound downloaded in advance, unless this scan drew the joke (a cooked sound on a green result)
+  const name = planned && RESULT_SOUNDS[tier].includes(fresh) ? planned : fresh;
   recentSounds.unshift(name);
   recentSounds.length = Math.min(recentSounds.length, 6);
-  return soundUrl(name);
+  if (name === planned) planNext(tier); // line up the one after it
+  return name;
 }
 
-export function preloadResultSound(score: number) {
-  // Choose the sound now (during the click) so the one that was loaded is the one that plays.
-  pendingAudio = new Audio(chooseResultSound(score));
-  pendingAudio.load(); // Primes the audio during the gesture window
+// ═══════════════════════════════════════════════
+// SCAN: choose + start downloading on the click, play when the result shows
+// ═══════════════════════════════════════════════
+const LATE_LIMIT_MS = 1200; // how long after the result shows a sound may still start
+let pending: { name: string; tier: SoundTier; ready: Promise<string | null>; token: number } | null = null;
+let playToken = 0;
+
+function vibrateFor(score: number) {
+  if (score > 80) vibrate([200, 100, 200, 100, 400]);
+  else if (score > 60) vibrate([100, 50, 100]);
+  else vibrate([50, 50, 50]);
 }
 
-export function playPendingSound(score: number) {
+function playUrl(url: string) {
   if (muted()) return;
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
-  if (pendingAudio) {
-    currentAudio = pendingAudio;
-    pendingAudio = null;
-    startPlayback(currentAudio);
-  } else {
-    // Fallback if preload wasn't called
+  currentAudio = new Audio(url);
+  startPlayback(currentAudio);
+}
+
+export function preloadResultSound(score: number) {
+  warmSounds();
+  // Chosen now (during the click), so the one downloading during the scan animation is the one that plays.
+  const name = chooseResultSound(score);
+  pending = { name, tier: soundTierOf(score), ready: fetchSound(name), token: ++playToken };
+}
+
+export function playPendingSound(score: number) {
+  vibrateFor(score);
+  if (muted()) return;
+  const p = pending;
+  pending = null;
+  if (!p) {
     playResultSound(score);
+    return;
   }
-  // Vibration
-  if (score > 80) vibrate([200, 100, 200, 100, 400]);
-  else if (score > 60) vibrate([100, 50, 100]);
-  else vibrate([50, 50, 50]);
+  const now = loaded.get(p.name);
+  if (now) {
+    playUrl(now);
+    return;
+  }
+  const late = new Promise<null>((r) => setTimeout(() => r(null), LATE_LIMIT_MS));
+  Promise.race([p.ready, late]).then((url) => {
+    if (p.token !== playToken || muted()) return; // the visitor has moved on: stay quiet
+    if (url) return playUrl(url);
+    // Not here in time: play a sound for this level that is already downloaded, or nothing at all
+    const backup = [...RESULT_SOUNDS[p.tier], ...recentSounds].find((n) => loaded.has(n));
+    if (backup) playUrl(loaded.get(backup)!);
+  });
 }
 
 // ═══════════════════════════════════════════════
@@ -215,11 +299,13 @@ export function playPendingSound(score: number) {
 // directly from a click handler with no delay)
 // ═══════════════════════════════════════════════
 export const playResultSound = (score: number) => {
+  vibrateFor(score);
   if (muted()) return;
-  playSound(chooseResultSound(score));
-  if (score > 80) vibrate([200, 100, 200, 100, 400]);
-  else if (score > 60) vibrate([100, 50, 100]);
-  else vibrate([50, 50, 50]);
+  const name = chooseResultSound(score);
+  const token = ++playToken;
+  fetchSound(name).then((url) => {
+    if (url && token === playToken) playUrl(url);
+  });
 };
 
 // Sounds only play in response to something the visitor just did (scanning a major, or

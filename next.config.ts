@@ -21,7 +21,12 @@ const nextConfig: NextConfig = {
   // later, remove this line (and list the remote hosts it should be allowed to fetch from).
   images: { unoptimized: true },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // Meme sounds: let browsers keep them for a week (and use a stale copy while checking for a new one), so a
+      // returning visitor's sounds play from their own device. A replaced file still updates within the week.
+      { source: "/sounds/:file*", headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }] },
+    ];
   },
   // A second Vercel project (cooked-major) also builds this repo. Vercel cannot redirect between two
   // projects' addresses, so the app does it: anything opened on the duplicate address goes to the main

@@ -12,7 +12,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { cn } from "@/lib/utils";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { playResultSound, replayLastSound, stopAllSounds, getReactionClass, unlockAudio, preloadResultSound, playPendingSound } from "@/lib/sounds";
+import { playResultSound, replayLastSound, stopAllSounds, getReactionClass, unlockAudio, preloadResultSound, playPendingSound, warmSounds } from "@/lib/sounds";
 
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
@@ -108,6 +108,7 @@ export default function HomeClient() {
       if (unlocked) return;
       unlocked = true;
       unlockAudio();
+      warmSounds(); // start downloading the next sound for each level, so results play instantly
       document.removeEventListener("touchstart", handleFirstInteraction);
       document.removeEventListener("click", handleFirstInteraction);
     };
