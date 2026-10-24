@@ -41,7 +41,7 @@ export function MajorSearch({
   results,
   onSelect,
   selected = false,
-  placeholder = "Search 200+ majors...",
+  placeholder = "Search 200+ courses...",
   label = "Search majors",
   compact = false,
   beamDuration = 3.1,
