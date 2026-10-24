@@ -48,7 +48,7 @@ export const Hero = () => {
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
 
       <div className="max-w-6xl w-full relative z-20 px-6">
-        <div className="flex flex-col items-center justify-center text-center space-y-5 sm:space-y-8">
+        <div className="flex flex-col items-center justify-center text-center space-y-5 sm:space-y-6">
           
           <div className="space-y-3 sm:space-y-4">
             <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/30 border border-border backdrop-blur-xl text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl">
@@ -68,7 +68,7 @@ export const Hero = () => {
 
           <div className="relative group max-w-2xl hidden sm:block">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <div className="relative bg-card/60 border border-border px-8 py-5 rounded-3xl backdrop-blur-2xl">
+            <div className="relative bg-card/60 border border-border px-8 py-4 rounded-3xl backdrop-blur-2xl">
               <div className="grid">
                 <p className={SENTENCE_CLASS}>{sentence(<TypeWriter strings={talkAbout} />)}</p>
                 {/* Invisible copies that only reserve room (see above); the "|" stands in for the typing cursor */}
