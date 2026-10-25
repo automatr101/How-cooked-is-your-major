@@ -15,6 +15,8 @@ export interface InitializeInput {
   comeback?: boolean;
   /** The 3-major bundle (see bundle.ts). When set, majorSlug/majorName describe the first major only. */
   bundle?: { slug: string; name: string }[];
+  /** The paid-unlock experiment (see lib/unlock): this payment reveals ONE result, at the experiment price. */
+  unlock?: boolean;
 }
 
 export interface InitializeResult {
@@ -32,6 +34,8 @@ export interface VerifyInput {
   session?: string;
   /** Verifying a 3-major bundle: majorSlug is then the three slugs joined with commas. */
   bundle?: boolean;
+  /** Verifying a paid-unlock payment (see lib/unlock): the product and the price differ from the plan's. */
+  unlock?: boolean;
 }
 
 export interface VerifyResult {

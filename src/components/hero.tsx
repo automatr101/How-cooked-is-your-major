@@ -8,6 +8,8 @@ import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
 import { FriendsRow } from "@/components/friends-row";
 import { SampleResultCard } from "@/components/sample-result-card";
+import { UnlockNotice } from "@/components/unlock/unlock-notice";
+import type { ExperimentView } from "@/lib/unlock/shared";
 
 // Three.js is ~140 KB gzipped and purely decorative, so load it after the hero text is interactive.
 const GLSLHills = dynamic(
@@ -28,7 +30,7 @@ const sentence = (typed: React.ReactNode) => (
   </>
 );
 
-export const Hero = () => {
+export const Hero = ({ experiment = null }: { experiment?: ExperimentView | null }) => {
   const talkAbout = [
     "Computer Science",
     "Digital Marketing",
@@ -64,7 +66,8 @@ export const Hero = () => {
           </div>
 
           {/* Phones: one short line instead of the typing card, so the sample result and its button fit above the fold */}
-          <p className="sm:hidden text-base text-muted-foreground font-medium">Free AI-risk score for any degree. Here&apos;s a real one:</p>
+          <p className="sm:hidden text-base text-muted-foreground font-medium">{experiment ? "AI-risk score for any degree. Here's a real one:" : <>Free AI-risk score for any degree. Here&apos;s a real one:</>}</p>
+          {experiment && <UnlockNotice experiment={experiment} />}
 
           <div className="relative group max-w-2xl hidden sm:block">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
@@ -83,7 +86,7 @@ export const Hero = () => {
 
           {/* A real result cycling through five confirmed scans, the button to scan your own right under it, and the real monthly visitor count (src/content/stats.ts) */}
           <div className="flex w-full flex-col items-center gap-3 sm:pt-2">
-            <SampleResultCard />
+            <SampleResultCard buttonLabel={experiment ? "Scan yours" : undefined} />
             <FriendsRow />
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
               <span className="text-foreground">{MONTHLY_VISITORS.display}</span> {MONTHLY_VISITORS.label}

@@ -3,6 +3,7 @@ import { PAYMENTS_MODE, PRICE_CURRENCY, PRICE_MINOR, PRODUCT_ID, PRODUCT_NAME } 
 import { activeLaunchUsd, launchUsdMinor } from "./launch";
 import { comebackMinor } from "./comeback";
 import { BUNDLE_PRODUCT_ID, bundleMetaSlugs, bundleMinor } from "./bundle";
+import { UNLOCK_PRODUCT_ID, UNLOCK_PRODUCT_NAME, UNLOCK_USD_MINOR } from "@/lib/unlock/config";
 import { SafeError, type InitializeInput, type InitializeResult, type PaymentProvider, type VerifyInput, type VerifyResult } from "./types";
 
 // Stripe Checkout, for visitors OUTSIDE Ghana (or everyone, see STRIPE_AUDIENCE), charged in US dollars. Ghana keeps Paystack
@@ -77,14 +78,18 @@ const isStripePage = (raw: string): boolean => {
 export const stripeProvider: PaymentProvider = {
   id: "stripe",
 
-  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback, bundle }: InitializeInput): Promise<InitializeResult> {
-    const { currency, amount } = bundle ? { currency: PRICE_CURRENCY, amount: bundleMinor(PRICE_CURRENCY, PRICE_MINOR) } : stripeCharge(new Date(), comeback);
+  async initialize({ reference, majorSlug, majorName, email, callbackUrl, comeback, bundle, unlock }: InitializeInput): Promise<InitializeResult> {
+    const { currency, amount } = unlock
+      ? { currency: PRICE_CURRENCY, amount: UNLOCK_USD_MINOR }
+      : bundle
+        ? { currency: PRICE_CURRENCY, amount: bundleMinor(PRICE_CURRENCY, PRICE_MINOR) }
+        : stripeCharge(new Date(), comeback);
     const f = new URLSearchParams();
     f.set("mode", "payment");
     f.set("line_items[0][quantity]", "1");
     f.set("line_items[0][price_data][currency]", currency.toLowerCase());
     f.set("line_items[0][price_data][unit_amount]", String(amount));
-    f.set("line_items[0][price_data][product_data][name]", (bundle ? `${PRODUCT_NAME} x3 (${bundle.map((b) => b.name).join(", ")})` : `${PRODUCT_NAME} (${majorName})`).slice(0, 120));
+    f.set("line_items[0][price_data][product_data][name]", (unlock ? `${UNLOCK_PRODUCT_NAME} (${majorName})` : bundle ? `${PRODUCT_NAME} x3 (${bundle.map((b) => b.name).join(", ")})` : `${PRODUCT_NAME} (${majorName})`).slice(0, 120));
     f.set("client_reference_id", reference);
     f.set("customer_email", email);
     // The buyer comes back to the result page with the reference and Stripe's own session id (Stripe fills in the
@@ -92,7 +97,7 @@ export const stripeProvider: PaymentProvider = {
     f.set("success_url", `${callbackUrl}&reference=${encodeURIComponent(reference)}&sid={CHECKOUT_SESSION_ID}`);
     f.set("cancel_url", callbackUrl.replace(/&cm_checkout=1$/, ""));
     for (const target of ["metadata", "payment_intent_data[metadata]"]) {
-      f.set(`${target}[product]`, bundle ? BUNDLE_PRODUCT_ID : PRODUCT_ID);
+      f.set(`${target}[product]`, unlock ? UNLOCK_PRODUCT_ID : bundle ? BUNDLE_PRODUCT_ID : PRODUCT_ID);
       f.set(`${target}[major_slug]`, bundle ? bundleMetaSlugs(bundle) : majorSlug);
       f.set(`${target}[reference]`, reference);
     }
@@ -119,7 +124,7 @@ export const stripeProvider: PaymentProvider = {
     return { reference, authorizationUrl: url };
   },
 
-  async verify({ reference, majorSlug, session, bundle }: VerifyInput): Promise<VerifyResult> {
+  async verify({ reference, majorSlug, session, bundle, unlock }: VerifyInput): Promise<VerifyResult> {
     if (!session || !SESSION_ID.test(session)) return { status: "failed", reason: "no_payment_found" };
     const { ok, httpStatus, body } = await call(`/v1/checkout/sessions/${encodeURIComponent(session)}`);
     if (httpStatus === 404) return { status: "failed", reason: "no_payment_found" };
@@ -128,7 +133,7 @@ export const stripeProvider: PaymentProvider = {
     // The session must be the one we made for this reference and this major
     if (body.client_reference_id !== reference) return { status: "failed", reason: "reference_mismatch" };
     const meta = (body.metadata ?? {}) as Record<string, unknown>;
-    if (meta.product !== (bundle ? BUNDLE_PRODUCT_ID : PRODUCT_ID) || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
+    if (meta.product !== (unlock ? UNLOCK_PRODUCT_ID : bundle ? BUNDLE_PRODUCT_ID : PRODUCT_ID) || meta.major_slug !== majorSlug) return { status: "failed", reason: "wrong_product" };
 
     if (body.payment_status === "paid") {
       // The normal dollar price, or the dollar launch price (also after it ended: that payment was started while it ran). The
@@ -136,7 +141,7 @@ export const stripeProvider: PaymentProvider = {
       const paid = Number(body.amount_total);
       const launched = launchUsdMinor(PRICE_MINOR);
       const currency = String(body.currency ?? "").toUpperCase();
-      const allowed = bundle ? [bundleMinor(PRICE_CURRENCY, PRICE_MINOR)] : [PRICE_MINOR, comebackMinor(PRICE_MINOR), ...(launched !== null ? [launched] : [])];
+      const allowed = unlock ? [UNLOCK_USD_MINOR] : bundle ? [bundleMinor(PRICE_CURRENCY, PRICE_MINOR)] : [PRICE_MINOR, comebackMinor(PRICE_MINOR), ...(launched !== null ? [launched] : [])];
       if (currency !== PRICE_CURRENCY || !allowed.includes(paid)) return { status: "failed", reason: "wrong_amount" };
       const email = (body.customer_details as { email?: unknown } | null | undefined)?.email ?? body.customer_email;
       const intent = typeof body.payment_intent === "string" ? body.payment_intent : String(body.id);

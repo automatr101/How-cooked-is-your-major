@@ -69,7 +69,7 @@ function slot(i: number, current: number, n: number): number {
   return d;
 }
 
-export function SampleResultCard() {
+export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonLabel?: string }) {
   const reduceMotion = !!useReducedMotion();
   const [index, setIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -193,7 +193,7 @@ export function SampleResultCard() {
         onClick={() => open("button")}
         className="w-full rounded-full bg-[#FFE0C3] px-6 py-3.5 text-sm font-black uppercase tracking-widest text-[#0C0C0C] transition hover:bg-[#FFD3AB] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]/70"
       >
-        Scan yours, free
+        {buttonLabel}
       </button>
     </div>
   );

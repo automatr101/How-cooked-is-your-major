@@ -3,6 +3,7 @@ import { findMajor } from "@/lib/payments";
 import { crossSite } from "@/lib/same-origin";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 import { extendedRoast } from "@/lib/leads/content";
+import { experimentActiveFor, mayView } from "@/lib/unlock/access";
 
 // Share-to-unlock: the extended roast (3 more roasts + the major's numbers), for a visitor who just shared their result.
 // It is free content, so this does not try to prove the share happened; it is rate limited and same-site only. Nothing about
@@ -27,6 +28,8 @@ export async function POST(req: NextRequest) {
   }
   const major = findMajor(body?.major);
   if (!major) return reply({ error: "unknown_major" }, 400);
+  // During the paid-unlock experiment the extended roast (it carries the score) is part of the locked result
+  if (experimentActiveFor(req) && !(await mayView(req, major.slug))) return reply({ error: "locked" }, 402);
   const via = typeof body.via === "string" && VIA.has(body.via) ? body.via : "other";
 
   if (telegramEnabled()) {

@@ -16,9 +16,9 @@ function message(reference: string, majorSlug: string, outcome: string, ts: stri
   return `mock|${reference}|${majorSlug}|${outcome}|${ts}`;
 }
 
-export function makeProof(reference: string, majorSlug: string, outcome: MockOutcome): string {
+export function makeProof(reference: string, majorSlug: string, outcome: MockOutcome, unlock = false): string {
   const ts = String(Date.now());
-  return `${outcome}.${ts}.${sign(message(reference, majorSlug, outcome, ts))}`;
+  return `${outcome}.${ts}.${sign(message(reference, unlock ? `unlock:${majorSlug}` : majorSlug, outcome, ts))}`;
 }
 
 export const mockProvider: PaymentProvider = {
@@ -28,7 +28,8 @@ export const mockProvider: PaymentProvider = {
     return { reference };
   },
 
-  async verify({ reference, majorSlug, proof }: VerifyInput): Promise<VerifyResult> {
+  async verify({ reference, majorSlug: slug, proof, unlock }: VerifyInput): Promise<VerifyResult> {
+    const majorSlug = unlock ? `unlock:${slug}` : slug;
     const [outcome, ts, signature] = (proof ?? "").split(".");
     if (!outcome || !ts || !signature) return { status: "failed", reason: "no_payment_found" };
     if (!verifySignature(message(reference, majorSlug, outcome, ts), signature)) return { status: "failed", reason: "invalid_proof" };

@@ -5,6 +5,7 @@ import { paystackProvider } from "@/lib/payments/paystack";
 import { PAYMENTS_MODE } from "@/lib/premium";
 import { registerPurchase } from "@/lib/payments/purchases";
 import { BUNDLE_PRODUCT_ID, bundleFromMetaSlugs } from "@/lib/payments/bundle";
+import { UNLOCK_PRODUCT_ID } from "@/lib/unlock/config";
 import { markPaid, markRefunded, storeEnabled } from "@/lib/payments/store";
 import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 
@@ -67,6 +68,7 @@ export async function POST(req: NextRequest) {
     if (seen.has(reference)) return ok();
 
     const meta = (data.metadata ?? {}) as Record<string, unknown>;
+    const unlock = meta.product === UNLOCK_PRODUCT_ID;
     const bundle = meta.product === BUNDLE_PRODUCT_ID ? bundleFromMetaSlugs(meta.major_slug) : null;
     const major = bundle ? bundle[0] : findMajor(meta.major_name);
     if (!major || (!bundle && major.slug !== meta.major_slug) || (meta.product === BUNDLE_PRODUCT_ID && !bundle)) {
@@ -78,7 +80,7 @@ export async function POST(req: NextRequest) {
     let result;
     try {
       // Ask Paystack again: status, reference, product, major, amount and currency are all checked there
-      result = await paystackProvider.verify({ reference, majorSlug: bundle ? String(meta.major_slug) : major.slug, bundle: !!bundle });
+      result = await paystackProvider.verify({ reference, majorSlug: bundle ? String(meta.major_slug) : major.slug, bundle: !!bundle, unlock });
     } catch {
       console.error("[paystack-webhook] could not re-check a payment");
       return new Response(null, { status: 500 }); // not a 2xx, so Paystack tries again later
@@ -95,6 +97,7 @@ export async function POST(req: NextRequest) {
         email: result.customerEmail,
         paid: result.amountMinor != null && result.currency ? { amount: result.amountMinor, currency: result.currency } : undefined,
         bundle: bundle ?? undefined,
+        unlock,
       });
     } else {
       await alert([
