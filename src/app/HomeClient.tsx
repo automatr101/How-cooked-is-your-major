@@ -31,7 +31,6 @@ import { ReviewsSection } from "@/components/reviews/reviews-section";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
 import { UnlockGate } from "@/components/unlock/unlock-gate";
-import { UnlockNotice } from "@/components/unlock/unlock-notice";
 import { setUnlockExperimentRunning, startAssessment, trackUnlock } from "@/lib/unlock/analytics";
 import type { ExperimentView } from "@/lib/unlock/shared";
 
@@ -368,7 +367,6 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
 
       {/* Search Section */}
       <div id="search" className="w-full max-w-xl mt-16 relative z-30 px-6">
-        {experiment && <UnlockNotice experiment={experiment} className="mb-4" />}
         <MajorSearch
           value={query}
           onChange={(value) => {

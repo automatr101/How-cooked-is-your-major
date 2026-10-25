@@ -8,7 +8,6 @@ import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
 import { FriendsRow } from "@/components/friends-row";
 import { SampleResultCard } from "@/components/sample-result-card";
-import { UnlockNotice } from "@/components/unlock/unlock-notice";
 import type { ExperimentView } from "@/lib/unlock/shared";
 
 // Three.js is ~140 KB gzipped and purely decorative, so load it after the hero text is interactive.
@@ -67,7 +66,6 @@ export const Hero = ({ experiment = null }: { experiment?: ExperimentView | null
 
           {/* Phones: one short line instead of the typing card, so the sample result and its button fit above the fold */}
           <p className="sm:hidden text-base text-muted-foreground font-medium">{experiment ? "AI-risk score for any degree. Here's a real one:" : <>Free AI-risk score for any degree. Here&apos;s a real one:</>}</p>
-          {experiment && <UnlockNotice experiment={experiment} />}
 
           <div className="relative group max-w-2xl hidden sm:block">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
