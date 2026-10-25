@@ -70,23 +70,19 @@ export function Recommendations({ score, majorName }: RecommendationsProps) {
 
   const tips = getTips();
 
+  // Three cards in a row that swipes sideways (one and a bit visible on a phone, two and a bit wider up, so it is obvious
+  // there is more), instead of three tall blocks stacked down the page.
   return (
-    <div className="w-full mt-8 bg-card/40 border border-border/50 rounded-3xl p-6 sm:p-8 backdrop-blur-xl">
-      <h3 className="text-xs font-black uppercase tracking-[0.4em] text-muted-foreground mb-6">WHAT YOU CAN DO</h3>
-      
-      <div className="space-y-6">
+    <div className="w-full mt-8">
+      <h3 className="mb-3 px-1 text-xs font-black uppercase tracking-[0.4em] text-muted-foreground">What you can do</h3>
+      <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
         {tips.map((tip, i) => (
-          <div key={i} className={cn(
-            "flex items-start gap-4 pb-6",
-            i !== tips.length - 1 && "border-b border-border/10"
-          )}>
-            <div className="p-2 bg-background rounded-xl shrink-0">
-              {tip.icon}
+          <div key={i} className={cn("w-[78%] shrink-0 snap-start rounded-2xl border border-border/50 bg-card/40 p-4 backdrop-blur-xl sm:w-[46%]")}>
+            <div className="flex items-center gap-2.5">
+              <div className="rounded-lg bg-background p-1.5 shrink-0 [&_svg]:h-4 [&_svg]:w-4">{tip.icon}</div>
+              <h4 className="text-[13px] font-black uppercase leading-tight text-foreground">{tip.title}</h4>
             </div>
-            <div>
-              <h4 className="text-sm font-black uppercase text-foreground mb-1">{tip.title}</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">{tip.text}</p>
-            </div>
+            <p className="mt-2 text-[13px] leading-snug text-muted-foreground">{tip.text}</p>
           </div>
         ))}
       </div>

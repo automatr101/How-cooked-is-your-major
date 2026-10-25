@@ -102,13 +102,13 @@ export function HeardFromPoll() {
             Skip
           </button>
         </div>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 [&::-webkit-scrollbar]:hidden">
           {CHANNELS.map((c) => (
             <button
               key={c.id}
               type="button"
               onClick={() => pick(c.id)}
-              className="min-h-10 rounded-full border border-border bg-muted px-4 py-2 text-xs font-black uppercase tracking-wider text-foreground transition hover:bg-foreground hover:text-background active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+              className="min-h-10 shrink-0 rounded-full border border-border bg-muted px-4 py-2 text-xs font-black uppercase tracking-wider text-foreground transition hover:bg-foreground hover:text-background active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
             >
               {c.label}
             </button>

@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Lock } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import type { Price } from "@/lib/premium";
 
 // A bar pinned to the bottom of a PHONE screen while the paid offer's own button is off-screen:
@@ -53,7 +53,7 @@ export function StickyCta({ show, price, approx, label = "Unlock your plan", onC
             onClick={onClick}
             className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-widest text-primary-foreground shadow-xl transition active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <Lock aria-hidden className="h-4 w-4 shrink-0" />
+            <ShoppingCart aria-hidden className="h-4 w-4 shrink-0" />
             <span>{label} · {approx ?? price.label}</span>
           </button>
         </motion.div>
