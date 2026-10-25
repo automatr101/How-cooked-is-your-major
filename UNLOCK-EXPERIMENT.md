@@ -28,7 +28,7 @@ results **by itself**. It is **off** unless you switch it on.
 
 1. Before scanning there is no notice (the owner removed it on 2026-10-25, once the experiment was confirmed working; it was shown in the hero and under the search box). The mobile hero line just drops the word "free" while the experiment runs.
 2. They scan; the meme sound plays at the usual moment; the card appears **masked** (blurred stand-ins, the real score and roast are not on the page).
-3. The paywall: "YOUR MAJOR HAS BEEN JUDGED." with your copy, an email field (only for the provider's receipt) and **UNLOCK MY RESULTS — $1.99**.
+3. The paywall: "YOUR MAJOR HAS BEEN JUDGED." with your copy, an email field (only for the provider's receipt) and **UNLOCK MY RESULTS — $1.99**. It carries no mention of the experiment or its end (removed 2026-10-25 at the owner's request).
 4. They pay on Stripe or Paystack (a fake checkout in test mode), come back, the server asks the provider, and only then the full result opens.
 5. A signed cookie (`cm_unlock`, one year) remembers it per major, so a refresh or a later visit does not ask again. A lost cookie can be restored with the payment reference ("Already paid? Restore your result").
 

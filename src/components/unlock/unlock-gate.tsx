@@ -6,7 +6,7 @@ import { BrainCircuit, Loader2, Lock, ShieldCheck, Sparkles } from "lucide-react
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { PAYMENTS_MODE } from "@/lib/premium";
 import { SITE_HOST } from "@/lib/site";
-import { formatEnd, type ExperimentView } from "@/lib/unlock/shared";
+import type { ExperimentView } from "@/lib/unlock/shared";
 import { setUnlockGated, trackUnlock, trackUnlockPurchase } from "@/lib/unlock/analytics";
 
 // The paid-unlock experiment, in front of the result. While it runs, the result (score, roast, card, everything under it) is
@@ -393,11 +393,6 @@ export function UnlockGate({ major, experiment, onLockedChange, children }: Prop
           <ShieldCheck aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />
           Secure payment{status?.provider === "stripe" ? " by Stripe" : status?.provider === "paystack" ? " by Paystack" : ""}. Charged but not unlocked? Contact us and we will refund you.
         </p>
-        {experiment && (
-          <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-            This is a short experiment. Free results come back on <time dateTime={experiment.endsAt}>{formatEnd(experiment.endsAt)}</time>.
-          </p>
-        )}
 
         {/* Already paid: a cleared browser or a new phone */}
         <div className="mt-3 border-t border-border/30 pt-3">
