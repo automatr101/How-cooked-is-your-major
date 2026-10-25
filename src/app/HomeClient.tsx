@@ -676,7 +676,7 @@ export default function HomeClient() {
 
             {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see.
                 Kept below the offer so nothing sits between the share buttons and the offer. */}
-            <HeardFromPoll />
+            <HeardFromPoll majorName={selectedMajor.name} />
 
             {/* Real reviews only: renders nothing until there are approved ones. Labelled by where they came from. */}
             <ReviewsSection majorSlug={slugify(selectedMajor.name)} className="mt-8" />

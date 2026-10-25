@@ -7,7 +7,7 @@ import { track } from "@/lib/analytics";
 //
 // Most visitors arrive by searching the site's name after seeing it somewhere else (a video, a post, a friend), which
 // no analytics tool can see. This asks them directly. The answer is one of a fixed list, sent to GA4 as `heard_from`
-// with a `heard_via` value: nothing typed by the visitor, nothing about who they are.
+// with a `heard_via` value, and to the owner as a Telegram alert: nothing typed by the visitor, nothing about who they are.
 //
 // It stays out of the way: "Skip" hides it for two weeks, answering hides it for good, and it is never shown to someone
 // who arrived through a tagged link (their source is already known) or to the owner's own browsers.
@@ -52,7 +52,7 @@ function shouldHide(): boolean {
   }
 }
 
-export function HeardFromPoll() {
+export function HeardFromPoll({ majorName }: { majorName?: string }) {
   const hidden = useSyncExternalStore(subscribe, shouldHide, () => true);
   const [thanks, setThanks] = useState(false);
 
@@ -64,6 +64,8 @@ export function HeardFromPoll() {
 
   const pick = (channel: string) => {
     track("heard_from", { heard_via: channel });
+    // Also a private Telegram alert for the owner (the answer and the major just scanned; nothing about the visitor)
+    fetch("/api/heard", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ channel, major: majorName }), keepalive: true }).catch(() => {});
     try {
       localStorage.setItem(ANSWERED_KEY, channel);
     } catch {}

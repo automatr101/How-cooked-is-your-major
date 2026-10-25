@@ -1,11 +1,11 @@
 import { NextRequest } from "next/server";
 import { findMajor } from "@/lib/payments";
 import { crossSite } from "@/lib/same-origin";
-import { BOT_UA, clientIp, rateLimited } from "@/lib/telegram";
+import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 import { insertReview, ReviewStoreError, reviewsEnabled } from "@/lib/reviews/store";
 
 // "Was your score accurate?" on the free result: a thumbs up or down for one major. It stores exactly that and nothing
-// else: no name, no country, no text, no IP. A thumb carries nothing that could be shown by itself, so it counts straight
+// else: no name, no country, no text, no IP. The owner also gets a private Telegram alert with the vote and the major. A thumb carries nothing that could be shown by itself, so it counts straight
 // away (it can still be hidden in the admin view). The count is only ever shown as a real number of real votes.
 
 const MAX_BODY_BYTES = 512;
@@ -56,6 +56,10 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[reviews] could not save a thumb", err instanceof ReviewStoreError ? err.message : "error");
     return status(502);
+  }
+  // A private alert for the owner: the vote, the major, and the country/device/browser line (no IP, nothing typed)
+  if (telegramEnabled()) {
+    await sendTelegram([`${body.accurate ? "👍 <b>Score feels accurate</b>" : "👎 <b>Score feels wrong</b>"}`, `📚 ${escapeHtml(major.name)} (${major.score}%)`, visitorLine(req)].join("\n"));
   }
   return status(204);
 }
