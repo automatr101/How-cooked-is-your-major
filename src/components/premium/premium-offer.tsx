@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Check, Lock, ShieldCheck } from "lucide-react";
+import { Check, Lock, ShieldCheck, ShoppingCart } from "lucide-react";
 import type { Major } from "@/lib/data";
 import { markInternal, slugify } from "@/lib/analytics";
 import { DEFAULT_PRICE, PAYMENTS_MODE, PLAN_COPY, offerCopy, planTypeFor, type Price } from "@/lib/premium";
@@ -316,7 +316,7 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
     <div ref={cardRef} id="premium-offer" className="relative mt-8 overflow-hidden rounded-3xl border border-primary/25 bg-card/60 p-6 backdrop-blur-xl sm:p-8">
       <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-60 w-60 rounded-full bg-primary/10 blur-3xl" />
 
-      <div className="offer-grid relative space-y-6">
+      <div className="offer-grid relative space-y-5">
         {/* The product as a product: their plan's cover and a real page from inside, like a store page */}
         <PlanBook major={major} preview={preview} />
 
@@ -330,12 +330,12 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
             )}
           </div>
           <h3 className="text-2xl font-black italic uppercase leading-[0.95] tracking-tighter sm:text-3xl">{words.headline}</h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">{words.blurb}</p>
+          <p className="hidden text-sm leading-relaxed text-muted-foreground sm:block">{words.blurb}</p>
         </div>
 
         {/* What is inside, short: three lines, every number counted from the plan the buyer actually gets for this major */}
         <ul className="offer-list space-y-1.5">
-          {insideList(preview, copy.preview).map((item) => (
+          {shortInsideList(preview, copy.preview).map((item) => (
             <li key={item} className="flex items-start gap-3 text-sm font-bold">
               <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
               {item}
@@ -345,25 +345,22 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
 
         <div className="offer-buy space-y-3 border-t border-border/20 pt-5">
           {launch && <LaunchBadge launch={launch} />}
-          <p className="flex flex-wrap items-baseline gap-x-2">
-            {launch && <span className="text-lg font-bold tabular-nums text-muted-foreground line-through decoration-2">{launch.regularApprox ?? launch.regular.label}</span>}
-            <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
-            <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one payment</span>
-          </p>
+          {/* Price on the left, the glove on the right pointing down at the button (no empty row reserved for it) */}
+          <div className="relative min-h-[66px] pr-14">
+            <p className="flex flex-wrap items-baseline gap-x-2 pt-3">
+              {launch && <span className="text-lg font-bold tabular-nums text-muted-foreground line-through decoration-2">{launch.regularApprox ?? launch.regular.label}</span>}
+              <span className="text-4xl font-black tabular-nums tracking-tighter">{approx ?? price.label}</span>
+              <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">one payment</span>
+            </p>
+            <PointingHand className="absolute bottom-0 right-8" />
+          </div>
           {approx && (
             // Only sent to visitors outside Ghana: the headline above is the dollar guide, this line says what is really charged
             <p className="text-xs leading-relaxed text-muted-foreground">
               You are charged {price.label} (Ghana cedis). Your bank converts it, so your statement may differ a little.
             </p>
           )}
-          <ul className="space-y-1 text-xs font-bold text-foreground/90">
-            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Instant access, no account, no subscription</li>
-            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Built from {shortName}&apos;s own score, pay and growth data</li>
-            <li className="flex items-center gap-2"><Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />Download it as a PDF and keep it</li>
-          </ul>
-          {/* The glove points at the button below it. The space above the button is always reserved, so it never shifts the page. */}
-          <div className="relative pt-[4.5rem]">
-            <PointingHand className="absolute right-8 top-0" />
+          <div>
             <button
               ref={buttonRef}
               type="button"
@@ -379,9 +376,16 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
                 (major.score < 30 ? "border border-primary/60 bg-transparent text-primary" : "bg-primary text-primary-foreground shadow-xl")
               }
             >
-              {copy.cta}
+              <span className="inline-flex items-center justify-center gap-2">
+                <ShoppingCart aria-hidden className="h-[18px] w-[18px] shrink-0" />
+                {copy.cta}
+              </span>
             </button>
           </div>
+          <p className="flex items-center justify-center gap-2 text-xs font-bold text-foreground/90">
+            <Check aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />
+            Instant access · no account · PDF you keep
+          </p>
           {bundleInfo &&
             (picking ? (
               <BundlePicker
@@ -400,17 +404,16 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
                 Choosing between majors? Get plans for 3 for {bundleInfo.approx ?? bundleInfo.price.label}
               </button>
             ))}
-          <div className="space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
+          <div className="space-y-1 text-[11px] leading-relaxed text-muted-foreground">
             <p>
-              <span className="font-bold text-foreground">7-day guarantee:</span> not worth what you paid? Tell us within 7 days and we refund you in full. No forms. Charged but no plan, or charged twice? Refunded too.{" "}
+              <span className="font-bold text-foreground">7-day money-back guarantee.</span> No forms.{" "}
               <a href="/refunds" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">Refund policy</a>
             </p>
-            <p className="flex items-start gap-1.5">
-              <ShieldCheck aria-hidden className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500" />
+            <p className="flex items-center gap-1.5">
+              <ShieldCheck aria-hidden className="h-3.5 w-3.5 shrink-0 text-emerald-500" />
               <span>
-                <span className="font-bold text-foreground">Secure payment by {providerName}.</span> Run by MajorLabs Intelligence ·{" "}
-                <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact</a> ·{" "}
-                <a href="https://twitter.com/cookedlabs_cto" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground">@cookedlabs_cto</a>
+                Secure payment by {providerName} ·{" "}
+                <a href="/contact" className="underline underline-offset-2 hover:text-foreground">Contact</a>
               </span>
             </p>
           </div>
@@ -459,6 +462,17 @@ function Offer({ major, unlocked, price, approx, launch, provider, gated, onView
   );
 }
 
+
+/** The offer card's three one-line "what's inside" items, counted from the real plan (the pay teaser is on the book above). */
+function shortInsideList(preview: PlanPreview | null, fallback: string[]): string[] {
+  if (!preview) return fallback.slice(0, 3);
+  const c = preview.counts;
+  return [
+    ...(c.realJobs ? [`${c.realJobs} real jobs and what they pay`] : []),
+    `30/60/90-day roadmap + ${c.projects} portfolio projects`,
+    `${c.skills} skills and ${c.aiTools} AI tools, with free courses`,
+  ];
+}
 
 /** The "what's inside" lines: real counts from the preview when it loaded, otherwise the short list the plan always had. */
 export function insideList(preview: PlanPreview | null, fallback: string[]): string[] {
