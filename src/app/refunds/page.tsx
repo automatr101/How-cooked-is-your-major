@@ -27,6 +27,7 @@ export default function RefundsPage() {
           <li>The Plan or its PDF will not open or download and we cannot fix it within a reasonable time</li>
           <li>The Plan is for the wrong major, or is missing sections that the offer said were included</li>
           <li>A charge was made without your authorisation (we will help investigate)</li>
+          <li>You paid to reveal a result during a short paid-result experiment and it did not unlock (or you were charged twice for the same result)</li>
         </UL>
       </Section>
 

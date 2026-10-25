@@ -13,6 +13,7 @@ import { sign, verifySignature } from "./signing";
 //                          the browser to get the cookie. Remove the variable (and redeploy) to open payments to all.
 
 const COOKIE = "cm_gate";
+export const GATE_COOKIE = COOKIE;
 const MAX_AGE_SECONDS = 7 * 24 * 60 * 60;
 
 function previewKey(): string | null {
@@ -39,14 +40,27 @@ export function gateCookie(): { name: string; value: string; maxAge: number } {
   return { name: COOKIE, value: `${payload}.${sign(payload)}`, maxAge: MAX_AGE_SECONDS };
 }
 
-function hasGateCookie(req: NextRequest): boolean {
-  const value = req.cookies.get(COOKIE)?.value;
+function validGateCookie(value: string | undefined): boolean {
   if (!value) return false;
   const cut = value.lastIndexOf(".");
   const payload = value.slice(0, cut);
   if (cut < 0 || !verifySignature(payload, value.slice(cut + 1))) return false;
   const expires = Number(payload.split(".")[1]);
   return Number.isFinite(expires) && expires > Date.now() / 1000;
+}
+
+function hasGateCookie(req: NextRequest): boolean {
+  return validGateCookie(req.cookies.get(COOKIE)?.value);
+}
+
+/** The same question for server pages, which read cookies without a NextRequest. */
+export function gateAllowsCookie(value: string | undefined): boolean {
+  if (!gateActive()) return true;
+  try {
+    return validGateCookie(value);
+  } catch {
+    return false;
+  }
 }
 
 /** May this request use the payment routes? Always yes when there is no gate; otherwise only with the cookie. */

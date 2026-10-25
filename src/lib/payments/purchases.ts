@@ -3,6 +3,7 @@ import { escapeHtml, sendTelegram, telegramEnabled } from "@/lib/telegram";
 import { charge } from "./paystack";
 import { hashEmail, recordPurchase, storeEnabled } from "./store";
 import { bundleKey } from "./bundle";
+import { unlockKey } from "@/lib/unlock/config";
 import { ambassadorsEnabled, commissionOf, creditReferral } from "@/lib/ambassadors/store";
 
 // SERVER ONLY. What happens the first time a verified payment is seen. Called from two places that can both be
@@ -23,6 +24,8 @@ export async function registerPurchase(input: {
   provider?: "paystack" | "stripe";
   /** A 3-major bundle: all three majors (input.major is the first). Stored as one row. */
   bundle?: { name: string; slug: string; score: number }[];
+  /** The paid-unlock experiment: this payment revealed ONE result (stored as "unlock:<slug>", so it can never open a plan). */
+  unlock?: boolean;
 }): Promise<void> {
   const planType = planTypeFor(input.major.score);
   const paid = input.paid ?? charge(); // what was actually paid (the launch price if that is what the buyer paid)
@@ -32,7 +35,7 @@ export async function registerPurchase(input: {
     try {
       isNew = await recordPurchase({
         reference: input.reference,
-        major_slug: input.bundle ? bundleKey(input.bundle) : input.major.slug,
+        major_slug: input.unlock ? unlockKey(input.major.slug) : input.bundle ? bundleKey(input.bundle) : input.major.slug,
         plan_type: planType,
         amount_minor: paid.amount,
         currency: paid.currency,
@@ -62,7 +65,9 @@ export async function registerPurchase(input: {
     await sendTelegram(
       [
         (input.provider === "stripe" ? process.env.STRIPE_SECRET_KEY : process.env.PAYSTACK_SECRET_KEY)?.trim().match(/^(sk|rk)_test_/) ? "🧪 <b>TEST purchase</b> (test key, no real money)" : "💰 <b>New purchase</b>",
-        input.bundle
+        input.unlock
+          ? `🔓 Result unlock (experiment): ${escapeHtml(input.major.name)} (${input.major.score}%)`
+          : input.bundle
           ? `📦 3-major bundle: ${input.bundle.map((b) => `${escapeHtml(b.name)} (${b.score}%)`).join(" + ")}`
           : `📚 ${escapeHtml(input.major.name)} (${input.major.score}%) · ${escapeHtml(PLAN_COPY[planType].name)}`,
         `💵 ${(paid.amount / 100).toFixed(2)} ${paid.currency}${input.provider === "stripe" ? " via Stripe" : ""}`,

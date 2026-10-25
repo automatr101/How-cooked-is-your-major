@@ -30,11 +30,29 @@ import { AccuracyPoll } from "@/components/reviews/accuracy-poll";
 import { ReviewsSection } from "@/components/reviews/reviews-section";
 import { CopiedIcon, DownloadDoneIcon } from "@/components/ui/animated-state-icons";
 import { SITE_HOST, SITE_URL } from "@/lib/site";
+import { UnlockGate } from "@/components/unlock/unlock-gate";
+import { UnlockNotice } from "@/components/unlock/unlock-notice";
+import { setUnlockExperimentRunning, startAssessment, trackUnlock } from "@/lib/unlock/analytics";
+import type { ExperimentView } from "@/lib/unlock/shared";
 
 
 
-export default function HomeClient() {
+export default function HomeClient({ experiment = null }: { experiment?: ExperimentView | null }) {
   const [query, setQuery] = useState("");
+  // The paid-unlock experiment (see lib/unlock). While the result is locked, nothing else about it (rating pop-up, shares...) shows.
+  const [resultLocked, setResultLocked] = useState(false);
+  useEffect(() => {
+    setUnlockExperimentRunning(!!experiment);
+    if (!experiment) return;
+    // Every share while the experiment runs is counted as result_shared (analytics.ts announces each share on the window)
+    const onShared = (e: Event) => {
+      const detail = (e as CustomEvent<{ major?: string; method?: string }>).detail;
+      const found = detail?.major ? canonicalMajor(detail.major) : undefined;
+      if (found) trackUnlock("result_shared", found, { method: detail?.method ?? "other" });
+    };
+    window.addEventListener("cm:shared", onShared);
+    return () => window.removeEventListener("cm:shared", onShared);
+  }, [experiment]);
   // Brief "done" states for the Save card and Copy text buttons (their icons animate to a checkmark).
   const [saved, setSaved] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -212,6 +230,10 @@ export default function HomeClient() {
     notifyScan(major.name);
     track("major_scan", majorParams(major));
     track("scan_started", majorParams(major)); // same moment as major_scan, under the name the hero sample-card funnel uses
+    if (experiment) {
+      startAssessment(major.name);
+      trackUnlock("assessment_started", major);
+    }
     // Preload the sound NOW during the click gesture (mobile needs this)
     preloadResultSound(major.score);
     loadRoastEngine().catch(() => {}); // warm up the roast engine while the scan animation runs
@@ -302,7 +324,7 @@ export default function HomeClient() {
   return (
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
       {/* Interactive Hero */}
-      <Hero />
+      <Hero experiment={experiment} />
       <LiveTicker />
 
       {/* Before a scan only: real reviews, if there are any (the plan sample was taken off the home page to keep it calm) */}
@@ -346,6 +368,7 @@ export default function HomeClient() {
 
       {/* Search Section */}
       <div id="search" className="w-full max-w-xl mt-16 relative z-30 px-6">
+        {experiment && <UnlockNotice experiment={experiment} className="mb-4" />}
         <MajorSearch
           value={query}
           onChange={(value) => {
@@ -379,6 +402,7 @@ export default function HomeClient() {
             {/* Laptops and desktops: the card and its tips on the left, compare and share on the right. Phones stack them. */}
             {/* Layout. Phones: card, share buttons, the paid plan, then compare and the tips. Laptops: the card, share buttons,
                 compare and the tips down the left; the paid plan and the email extra on the right, level with the card. */}
+            <UnlockGate major={selectedMajor} experiment={experiment} onLockedChange={setResultLocked}>
             <div className="grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)] lg:grid-rows-[auto_auto_1fr] lg:gap-x-12 lg:items-start lg:justify-center">
             <div className="min-w-0 lg:col-start-1 lg:row-start-1">
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
@@ -682,12 +706,13 @@ export default function HomeClient() {
             <ReviewsSection majorSlug={slugify(selectedMajor.name)} className="mt-8" />
             </div>
             </div>
+            </UnlockGate>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* The rating popup appears after a few seconds. Reviews go to Telegram; the scanned major (if any) is attached as context */}
-      <ReviewPopup majorName={selectedMajor?.name} hasResult={!!selectedMajor} />
+      <ReviewPopup majorName={selectedMajor?.name} hasResult={!!selectedMajor && !resultLocked} />
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-[calc(3rem_+_var(--sticky-cta-h,0px))] text-center space-y-3 opacity-60">

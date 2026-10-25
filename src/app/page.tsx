@@ -1,6 +1,12 @@
 import { Metadata } from 'next';
 import HomeClient from './HomeClient';
 import { canonicalMajor } from '@/lib/data';
+import { cookies, headers } from 'next/headers';
+import { PAYMENTS_MODE } from '@/lib/premium';
+import { GATE_COOKIE, gateAllowsCookie } from '@/lib/payments/gate';
+import { experimentWindow } from '@/lib/unlock/config';
+import { experimentView } from '@/lib/unlock/view';
+import type { ExperimentView } from '@/lib/unlock/shared';
 
 const SITE_URL = 'https://how-cooked-is-your-major.vercel.app';
 
@@ -16,6 +22,21 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const major = found?.name ?? "";
   const score = found ? String(found.score) : "";
   const level = found?.level ?? "";
+
+  // While the paid-unlock experiment runs, a ?major= link must not give the score away in the tab title or the preview card
+  const paywallOn = PAYMENTS_MODE !== "off" && experimentWindow().active;
+  if (found && paywallOn) {
+    const title = `${major}: how cooked is it? | How Cooked Is Your Major?`;
+    const description = "Scan any major and find out how cooked it is.";
+    return {
+      title,
+      description,
+      openGraph: { title, description, url: SITE_URL, siteName: 'How Cooked Is Your Major?', locale: 'en_US', type: 'website' },
+      twitter: { card: 'summary', title, description, site: '@cookedlabs_cto', creator: '@cookedlabs_cto' },
+      other: { 'google-adsense-account': 'ca-pub-9378010048800128' },
+      alternates: { canonical: SITE_URL },
+    };
+  }
 
   if (found) {
     const title = `${major} is ${level} — ${score}% AI Risk`;
@@ -97,7 +118,16 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   };
 }
 
-export default function Page() {
+export default async function Page() {
+  // Is the paid-unlock experiment running for THIS visitor? Decided here, on the server, on every request: the time window,
+  // payments being on, and the private gate (if one is closed, only the owner's browser sees the experiment).
+  const window = experimentWindow();
+  let experiment: ExperimentView | null = null;
+  if (PAYMENTS_MODE !== "off" && window.active && window.endsAt) {
+    const jar = await cookies();
+    if (gateAllowsCookie(jar.get(GATE_COOKIE)?.value)) experiment = experimentView(window.endsAt, (await headers()).get("x-vercel-ip-country"));
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -116,7 +146,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <HomeClient />
+      <HomeClient experiment={experiment} />
     </>
   );
 }

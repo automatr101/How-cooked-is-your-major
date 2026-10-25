@@ -6,6 +6,7 @@ import { addLead, LeadStoreError, leadsEnabled, markSent } from "@/lib/leads/sto
 import { emailEnabled, sendEmail } from "@/lib/leads/email";
 import { day0, extendedRoast } from "@/lib/leads/content";
 import { SITE_URL } from "@/lib/site";
+import { experimentActiveFor, mayView } from "@/lib/unlock/access";
 
 // "Get your extended roast + report sent to you": the visitor types an email and ticks the box that says they want 3 emails.
 // The server stores the lead, sends the Day 0 email (when sending is on) and returns the extended roast to show on the page.
@@ -47,6 +48,8 @@ export async function POST(req: NextRequest) {
   const major = findMajor(body.major);
   const email = typeof body.email === "string" ? body.email.trim() : "";
   if (!major) return reply({ error: "unknown_major" }, 400);
+  // During the paid-unlock experiment the extended roast this answers with (it carries the score) is part of the locked result
+  if (experimentActiveFor(req) && !(await mayView(req, major.slug))) return reply({ error: "locked" }, 402);
   if (email.length > 120 || !EMAIL_PATTERN.test(email)) return reply({ error: "invalid_email" }, 400);
   if (body.consent !== true) return reply({ error: "consent_required" }, 400); // the box must be ticked by the visitor
   const ref = typeof body.ref === "string" && /^[A-Za-z0-9_-]{1,40}$/.test(body.ref) ? body.ref : null;
