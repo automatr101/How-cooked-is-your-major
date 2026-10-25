@@ -377,8 +377,10 @@ export default function HomeClient() {
             id="result"
           >
             {/* Laptops and desktops: the card and its tips on the left, compare and share on the right. Phones stack them. */}
-            <div className="grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-x-12 lg:items-start lg:justify-center">
-            <div className="min-w-0 order-1">
+            {/* Layout. Phones: card, share buttons, the paid plan, then compare and the tips. Laptops: the card, share buttons,
+                compare and the tips down the left; the paid plan and the email extra on the right, level with the card. */}
+            <div className="grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)] lg:grid-rows-[auto_auto_1fr] lg:gap-x-12 lg:items-start lg:justify-center">
+            <div className="min-w-0 lg:col-start-1 lg:row-start-1">
             {/* The Actual Downloadable Card - Optimized for IG 4:5 Ratio */}
             <BackgroundGradient
               containerClassName="w-full max-w-[400px] mx-auto rounded-[30px]"
@@ -512,19 +514,57 @@ export default function HomeClient() {
 
             </div>
 
-            {/* Right-hand column on laptops, straight under the card on phones: the paid plan comes first, so nobody has to scroll
-                past compare, share and the tips to find it (only about half of the people with a result used to reach it). Then the
-                free email extra, then compare, share and the tips. The offer renders nothing unless payments are on. */}
-            <div className="min-w-0 order-2">
+            {/* Share, straight under the card (and under "Roast Me Again") */}
+            <div className="min-w-0 mt-6 lg:col-start-1 lg:row-start-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-3 px-4 lg:px-0">
+              {/* X and WhatsApp in their own official colours and marks, so they read as the real share buttons at a glance */}
+              <button
+                onClick={() => handleShare("x")}
+                className="py-4 rounded-2xl bg-black text-white border border-white/20 font-black text-sm flex items-center justify-center gap-2 hover:bg-neutral-900 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+              >
+                <XLogo className="w-4 h-4" />
+                POST ON X
+              </button>
+              <button
+                onClick={() => handleShare("wa")}
+                className="py-4 rounded-2xl bg-[#25D366] text-white font-black text-sm flex items-center justify-center gap-2 hover:bg-[#1EBE5A] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <WhatsAppLogo className="w-[18px] h-[18px]" />
+                WHATSAPP
+              </button>
+              <button
+                onClick={handleDownload}
+                className="py-4 rounded-2xl bg-[#FFE0C3] text-[#0C0C0C] font-black text-sm flex items-center justify-center gap-2 hover:bg-[#FFD3AB] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              >
+                <DownloadDoneIcon active={saved} size={24} className="-ml-1" />
+                {saved ? "SAVED" : "SAVE CARD"}
+              </button>
+              {/* Share link: phones open their own share sheet (Instagram, Snapchat, TikTok, Telegram, Messages...); computers
+                  without one copy the link instead */}
+              <button
+                onClick={handleShareLink}
+                className="py-4 rounded-2xl bg-card border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:bg-muted active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              >
+                {copied ? <CopiedIcon active size={24} className="-ml-1" /> : <Share className="w-[18px] h-[18px]" />}
+                <span aria-live="polite">{copied ? "LINK COPIED!" : canNativeShare ? "SHARE LINK" : "COPY LINK"}</span>
+              </button>
+            </div>
+            </div>
+
+            {/* The paid plan and the free email extra: right after the share buttons on phones, the right-hand column on laptops. */}
+            <div className="min-w-0 mt-8 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-3">
             <div className="lg:-mt-8">
               <PremiumOffer major={selectedMajor} />
             </div>
 
             {/* Free extra behind an email: 3 more roasts + the numbers. Only shown when the leads database is set up. */}
             <LeadBox major={selectedMajor} />
+            </div>
 
+            {/* Compare, the tips, the "where did you hear" poll and reviews: under the share buttons on laptops, after the plan on phones */}
+            <div className="min-w-0 lg:col-start-1 lg:row-start-3">
             {/* Comparison Section */}
-            <div className="mt-12 w-full">
+            <div className="mt-8 w-full">
               {!showComparisonSearch && !comparedMajor && (
                 <button
                   onClick={() => setShowComparisonSearch(true)}
@@ -629,40 +669,6 @@ export default function HomeClient() {
               )}
             </div>
 
-            {/* Actions for User */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-8 px-4 lg:px-0">
-              {/* X and WhatsApp in their own official colours and marks, so they read as the real share buttons at a glance */}
-              <button
-                onClick={() => handleShare("x")}
-                className="py-4 rounded-2xl bg-black text-white border border-white/20 font-black text-sm flex items-center justify-center gap-2 hover:bg-neutral-900 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-              >
-                <XLogo className="w-4 h-4" />
-                POST ON X
-              </button>
-              <button
-                onClick={() => handleShare("wa")}
-                className="py-4 rounded-2xl bg-[#25D366] text-white font-black text-sm flex items-center justify-center gap-2 hover:bg-[#1EBE5A] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                <WhatsAppLogo className="w-[18px] h-[18px]" />
-                WHATSAPP
-              </button>
-              <button
-                onClick={handleDownload}
-                className="py-4 rounded-2xl bg-[#FFE0C3] text-[#0C0C0C] font-black text-sm flex items-center justify-center gap-2 hover:bg-[#FFD3AB] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
-              >
-                <DownloadDoneIcon active={saved} size={24} className="-ml-1" />
-                {saved ? "SAVED" : "SAVE CARD"}
-              </button>
-              {/* Share link: phones open their own share sheet (Instagram, Snapchat, TikTok, Telegram, Messages...); computers
-                  without one copy the link instead */}
-              <button
-                onClick={handleShareLink}
-                className="py-4 rounded-2xl bg-card border border-border text-foreground font-black text-sm flex items-center justify-center gap-2 hover:bg-muted active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
-              >
-                {copied ? <CopiedIcon active size={24} className="-ml-1" /> : <Share className="w-[18px] h-[18px]" />}
-                <span aria-live="polite">{copied ? "LINK COPIED!" : canNativeShare ? "SHARE LINK" : "COPY LINK"}</span>
-              </button>
-            </div>
 
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
