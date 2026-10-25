@@ -26,7 +26,7 @@ results **by itself**. It is **off** unless you switch it on.
 
 ## What a visitor sees
 
-1. Before scanning (hero and under the search box): *"Short experiment: scan any major, then unlock the result for $1.99, one-time per major. Free results are back on {end}."* The "free" line in the mobile hero is replaced while it runs.
+1. Before scanning there is no notice (the owner removed it on 2026-10-25, once the experiment was confirmed working; it was shown in the hero and under the search box). The mobile hero line just drops the word "free" while the experiment runs.
 2. They scan; the meme sound plays at the usual moment; the card appears **masked** (blurred stand-ins, the real score and roast are not on the page).
 3. The paywall: "YOUR MAJOR HAS BEEN JUDGED." with your copy, an email field (only for the provider's receipt) and **UNLOCK MY RESULTS — $1.99**.
 4. They pay on Stripe or Paystack (a fake checkout in test mode), come back, the server asks the provider, and only then the full result opens.
@@ -55,7 +55,7 @@ To read it: GA4 > Explore > funnel on the events above, filtered by `experiment`
 
 ## Files
 
-New: `src/lib/unlock/*` (config, cookie, access, view, alerts, analytics, shared), `src/app/api/unlock/{status,initialize,verify,mock}/route.ts`, `src/components/unlock/{unlock-gate,unlock-notice}.tsx`, `scripts/unlock-window.mjs`.
+New: `src/lib/unlock/*` (config, cookie, access, view, alerts, analytics, shared), `src/app/api/unlock/{status,initialize,verify,mock}/route.ts`, `src/components/unlock/unlock-gate.tsx`, `scripts/unlock-window.mjs`.
 Changed: `payments/{types,paystack,stripe,mock,purchases,gate}.ts` and both webhooks (an `unlock` product alongside plan and bundle), `app/page.tsx`, `HomeClient.tsx`, `hero.tsx`, `sample-result-card.tsx`, `api/extended`, `api/leads`, privacy and refunds pages, `package.json`.
 
 ## Known limits (be aware before you read the numbers)
