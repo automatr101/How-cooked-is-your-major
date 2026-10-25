@@ -11,11 +11,3 @@ export interface ExperimentView {
   /** Shown next to a cedi price so the dollar price is never hidden. */
   approxLabel?: string;
 }
-
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-/** "28 Oct, 14:00 UTC". Done by hand so the server and the browser always print exactly the same thing. */
-export function formatEnd(iso: string): string {
-  const d = new Date(iso);
-  const pad = (n: number) => String(n).padStart(2, "0");
-  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}, ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} UTC`;
-}
