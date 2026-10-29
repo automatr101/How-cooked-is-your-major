@@ -59,7 +59,9 @@ export function stripeCharge(now: Date = new Date(), comeback = false): { curren
 async function call(path: string, init?: RequestInit) {
   const res = await fetch(`${API}${path}`, {
     ...init,
-    headers: { Authorization: `Bearer ${key()}`, ...(init?.headers ?? {}) },
+    // Pinned: with Adaptive Pricing on, this version keeps amount_total/currency in our USD price (the buyer's local
+    // price only appears in currency_conversion), so verification keeps comparing against the exact dollar amount.
+    headers: { Authorization: `Bearer ${key()}`, "Stripe-Version": "2024-06-20", ...(init?.headers ?? {}) },
     signal: AbortSignal.timeout(10000),
   });
   const body = (await res.json().catch(() => null)) as Record<string, unknown> | null;
