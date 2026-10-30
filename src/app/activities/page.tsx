@@ -41,6 +41,9 @@ export default function ActivitiesPage() {
             </li>
           ))}
         </ul>
+        <Link href="/activities/leaderboard" className="inline-block text-sm font-semibold underline underline-offset-4">
+          Today&apos;s leaderboards
+        </Link>
         <p className="text-xs text-muted-foreground">Entertainment, not career advice.</p>
       </div>
     </main>

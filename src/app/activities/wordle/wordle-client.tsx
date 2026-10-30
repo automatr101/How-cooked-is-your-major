@@ -9,6 +9,7 @@ import { track } from "@/lib/analytics";
 import { notifyGame } from "@/lib/notify";
 import { GameCard } from "@/components/games/game-card";
 import { ShareActions } from "@/components/games/share-actions";
+import { LeaderboardPanel } from "@/components/games/leaderboard-panel";
 
 const ROWS = 6;
 const LEN = 5;
@@ -199,6 +200,7 @@ export function WordleClient() {
                   </div>
                 </GameCard>
                 <ShareActions cardRef={cardRef} game="wordle" day={day} text={shareText} result={won ? String(guesses.length) : "fail"} />
+                <LeaderboardPanel game="wordle" day={day} answers={won ? guesses : undefined} />
                 <p className="text-center text-sm text-muted-foreground">
                   Streak {stats.streak} · Best {stats.best} · Won {stats.won}/{stats.played}. New word at midnight UTC.
                 </p>
