@@ -17,6 +17,7 @@ import { playResultSound, replayLastSound, stopAllSounds, getReactionClass, unlo
 import { Hero } from "@/components/hero";
 import { LiveTicker } from "@/components/live-ticker";
 import { Recommendations } from "@/components/recommendations";
+import { GamesStrip } from "@/components/games/games-strip";
 import { notifyVisit, notifyScan } from "@/lib/notify";
 import { LeadBox } from "@/components/lead-box";
 import { RequestMajor } from "@/components/major-search";
@@ -694,6 +695,7 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
 
             <div className="mt-8">
               <Recommendations score={selectedMajor.score} majorName={selectedMajor.name} />
+              <GamesStrip where="result" className="mt-8" />
             </div>
 
             {/* One tap, once per browser: where did this visitor hear about the site? Answers the traffic analytics cannot see.
@@ -711,6 +713,13 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
 
       {/* The rating popup appears after a few seconds. Reviews go to Telegram; the scanned major (if any) is attached as context */}
       <ReviewPopup majorName={selectedMajor?.name} hasResult={!!selectedMajor && !resultLocked} />
+
+      {/* The daily games. Under a result they sit below the offer instead (see GamesStrip where="result") */}
+      {!selectedMajor && (
+        <div className="relative z-30 mt-16 w-full px-6">
+          <GamesStrip where="home" />
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="mt-auto pt-24 pb-[calc(3rem_+_var(--sticky-cta-h,0px))] text-center space-y-3 opacity-60">
