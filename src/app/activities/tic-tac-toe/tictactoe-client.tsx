@@ -7,8 +7,9 @@ import { bestMove, easyMove, isFull, winner, type Board } from "@/lib/games/tict
 import { load, save } from "@/lib/games/daily";
 import { track } from "@/lib/analytics";
 import { notifyGame } from "@/lib/notify";
+import { TicTacToeOnline } from "@/components/games/ttt-online";
 
-type Mode = "easy" | "hard" | "friend";
+type Mode = "easy" | "hard" | "friend" | "online";
 type Tally = { win: number; loss: number; draw: number };
 type Saved = { easy: Tally; hard: Tally };
 
@@ -17,7 +18,8 @@ const NO_TALLY: Tally = { win: 0, loss: 0, draw: 0 };
 const MODES: { id: Mode; label: string }[] = [
   { id: "easy", label: "AI: easy" },
   { id: "hard", label: "AI: unbeatable" },
-  { id: "friend", label: "Two players" },
+  { id: "friend", label: "Same phone" },
+  { id: "online", label: "Online friend" },
 ];
 
 export function TicTacToeClient() {
@@ -27,17 +29,23 @@ export function TicTacToeClient() {
   const [round, setRound] = useState(0); // who opens alternates: you (X) on even rounds, the AI / player two (O) on odd ones
   const [tally, setTally] = useState<Saved>({ easy: NO_TALLY, hard: NO_TALLY });
   const [started, setStarted] = useState(false);
+  const [invite, setInvite] = useState<string | null>(null); // ?room=CODE from a friend's invite link
 
   useEffect(() => {
     const t = load<Saved>(KEY, { easy: NO_TALLY, hard: NO_TALLY });
     // Reading the saved score is browser-only, so it has to happen after mount
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTally(t);
+    const room = new URLSearchParams(location.search).get("room")?.toUpperCase() ?? "";
+    if (/^[A-Z0-9]{5}$/.test(room)) {
+      setInvite(room);
+      setMode("online");
+    }
   }, []);
 
   const win = winner(board);
   const over = !!win || isFull(board);
-  const vsAi = mode !== "friend";
+  const vsAi = mode === "easy" || mode === "hard";
 
   const reset = useCallback((nextRound: number) => {
     setBoard(Array(9).fill(null));
@@ -47,7 +55,7 @@ export function TicTacToeClient() {
 
   const finish = useCallback(
     (b: Board) => {
-      if (mode === "friend") return;
+      if (mode !== "easy" && mode !== "hard") return;
       const w = winner(b);
       const outcome: keyof Tally = w ? (w.who === "X" ? "win" : "loss") : "draw";
       setTally((prev) => {
@@ -104,7 +112,7 @@ export function TicTacToeClient() {
           : "AI is thinking..."
         : `${turn} to move.`;
 
-  const t = mode === "friend" ? null : tally[mode];
+  const t = mode === "easy" || mode === "hard" ? tally[mode] : null;
 
   return (
     <main className="min-h-screen bg-background px-4 pb-24 pt-6 font-sans text-foreground sm:p-6 md:p-12">
@@ -116,7 +124,7 @@ export function TicTacToeClient() {
           <h1 className="text-4xl font-black uppercase leading-[0.98]">
             Tic-Tac-<span className="text-[#FF6A00]">Toe.</span>
           </h1>
-          <p className="mt-2 text-sm text-muted-foreground">Beat the AI, or pass the phone to a friend. You are X.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Beat the AI, pass the phone, or play a friend online. You are X.</p>
         </header>
 
         <div role="radiogroup" aria-label="Mode" className="flex flex-wrap gap-2">
@@ -136,6 +144,10 @@ export function TicTacToeClient() {
           ))}
         </div>
 
+        {mode === "online" ? (
+          <TicTacToeOnline inviteCode={invite} />
+        ) : (
+          <>
         <div role="grid" aria-label="Board" className="mx-auto grid w-fit grid-cols-3 gap-2">
           {board.map((c, i) => {
             const onLine = win?.line.includes(i);
@@ -176,6 +188,8 @@ export function TicTacToeClient() {
             </p>
           )}
         </div>
+          </>
+        )}
       </div>
     </main>
   );
