@@ -6,7 +6,7 @@
 -- the browser sends (see src/lib/games/scores.ts), so a number cannot simply be typed in.
 --   wordle          score = number of guesses (1-6, lower is better); only solved puzzles are posted
 --   cooked-or-cap   score = correct answers (0-10, higher is better)
--- To remove a bad nickname: delete from public.game_scores where id = '...';
+-- To remove a bad nickname: /admin/games (or: delete from public.game_scores where id = ...)
 
 create table if not exists public.game_scores (
   id uuid primary key default gen_random_uuid(),
