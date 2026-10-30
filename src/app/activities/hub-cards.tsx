@@ -7,6 +7,7 @@ import { useTodayStatus, type TodayStatus } from "@/lib/games/status";
 const GAMES: { href: string; name: string; blurb: string; daily?: keyof TodayStatus }[] = [
   { href: "/activities/wordle", name: "Major Wordle", blurb: "One campus word a day. Six tries. Share the grid.", daily: "wordle" },
   { href: "/activities/cooked-or-cap", name: "Cooked or Cap?", blurb: "Ten true-or-cap questions on degrees and jobs, new every day.", daily: "cooked-or-cap" },
+  { href: "/activities/major-wars", name: "Major Wars", blurb: "Two degrees, one vote a day: which is more cooked? See the scan and the crowd.", daily: "major-wars" },
   { href: "/activities/tic-tac-toe", name: "Tic-Tac-Toe", blurb: "Beat the AI, or challenge a friend online." },
 ];
 

@@ -29,6 +29,7 @@ function gameLine(game: unknown, result: unknown, day: unknown): string | null {
   const r = typeof result === "string" ? result : "";
   if (game === "wordle" && /^([1-6]|fail)$/.test(r)) return `Major Wordle ${n}${r === "fail" ? "missed it" : `solved in ${r}/6`}`;
   if (game === "cooked-or-cap" && /^([0-9]|10)$/.test(r)) return `Cooked or Cap? ${n}scored ${r}/10`;
+  if (game === "major-wars" && r === "vote") return `Major Wars ${n}vote cast`;
   if (game === "tic-tac-toe" && /^(win|loss|draw)-(easy|hard)$/.test(r)) {
     const [outcome, level] = r.split("-");
     return `Tic-Tac-Toe vs AI (${level}): ${outcome === "win" ? "player won" : outcome === "loss" ? "AI won" : "draw"}`;

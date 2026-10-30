@@ -10,7 +10,7 @@ import { track } from "@/lib/analytics";
 
 type Props = {
   cardRef: RefObject<HTMLElement | null>;
-  game: "wordle" | "cooked-or-cap";
+  game: "wordle" | "cooked-or-cap" | "major-wars";
   day: number;
   text: string; // e.g. "Major Wordle #12 4/6" plus the emoji grid
   result: string; // for analytics, e.g. "4" or "fail"

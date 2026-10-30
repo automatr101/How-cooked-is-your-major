@@ -10,6 +10,7 @@ import { track } from "@/lib/analytics";
 const GAMES = [
   { key: "wordle", href: "/activities/wordle", name: "Major Wordle" },
   { key: "cooked-or-cap", href: "/activities/cooked-or-cap", name: "Cooked or Cap?" },
+  { key: "major-wars", href: "/activities/major-wars", name: "Major Wars" },
 ] as const;
 
 export function GamesStrip({ where, className = "" }: { where: "home" | "result"; className?: string }) {
