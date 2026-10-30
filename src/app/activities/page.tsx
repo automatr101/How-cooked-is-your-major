@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 const GAMES = [
   { href: "/activities/wordle", name: "Major Wordle", blurb: "One campus word a day. Six tries. Share the grid." },
   { href: "/activities/cooked-or-cap", name: "Cooked or Cap?", blurb: "Ten true-or-cap questions on degrees and jobs, new every day." },
+  { href: "/activities/tic-tac-toe", name: "Tic-Tac-Toe", blurb: "Beat the AI, or pass the phone to a friend." },
 ];
 
 export default function ActivitiesPage() {

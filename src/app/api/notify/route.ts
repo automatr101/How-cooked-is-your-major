@@ -23,6 +23,19 @@ function referrerHost(raw: unknown): string {
   }
 }
 
+// "Major Wordle #4 solved in 3/6". Null for anything that is not a known game with a result of the right shape.
+function gameLine(game: unknown, result: unknown, day: unknown): string | null {
+  const n = typeof day === "number" && Number.isInteger(day) && day > 0 && day < 100000 ? `#${day} ` : "";
+  const r = typeof result === "string" ? result : "";
+  if (game === "wordle" && /^([1-6]|fail)$/.test(r)) return `Major Wordle ${n}${r === "fail" ? "missed it" : `solved in ${r}/6`}`;
+  if (game === "cooked-or-cap" && /^([0-9]|10)$/.test(r)) return `Cooked or Cap? ${n}scored ${r}/10`;
+  if (game === "tic-tac-toe" && /^(win|loss|draw)-(easy|hard)$/.test(r)) {
+    const [outcome, level] = r.split("-");
+    return `Tic-Tac-Toe vs AI (${level}): ${outcome === "win" ? "player won" : outcome === "loss" ? "AI won" : "draw"}`;
+  }
+  return null;
+}
+
 export async function POST(req: NextRequest) {
   const done = () => new Response(null, { status: 204 });
 
@@ -48,7 +61,7 @@ export async function POST(req: NextRequest) {
     return new Response(null, { status: 400 });
   }
   if (typeof body !== "object" || body === null) return new Response(null, { status: 400 });
-  const { type, major: majorName, referrer } = body as Record<string, unknown>;
+  const { type, major: majorName, referrer, game, result, day } = body as Record<string, unknown>;
 
   const mode = process.env.TELEGRAM_NOTIFY_MODE === "all" ? "all" : "scans";
   const who = visitorLine(req);
@@ -63,6 +76,11 @@ export async function POST(req: NextRequest) {
     const found = typeof majorName === "string" ? majors.find((m) => m.name === majorName) : undefined;
     if (!found) return new Response(null, { status: 400 });
     text = `🔥 <b>Scan:</b> ${escapeHtml(found.name)} — ${found.score}% (${escapeHtml(found.level)})\n${who}\n${from}`;
+  } else if (type === "game") {
+    // Only known games and results of the right shape can ever be posted
+    const line = gameLine(game, result, day);
+    if (!line) return new Response(null, { status: 400 });
+    text = `🎮 <b>${line}</b>\n${who}\n${from}`;
   } else {
     return new Response(null, { status: 400 });
   }

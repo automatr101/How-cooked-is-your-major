@@ -1,6 +1,6 @@
 // Fire-and-forget pings to /api/notify (Telegram alerts). Never throws and never blocks the UI.
 
-function send(payload: Record<string, string>) {
+function send(payload: Record<string, string | number>) {
   try {
     const body = JSON.stringify({ ...payload, referrer: document.referrer });
     if (navigator.sendBeacon) {
@@ -22,4 +22,9 @@ export function notifyVisit() {
 
 export function notifyScan(majorName: string) {
   send({ type: "scan", major: majorName });
+}
+
+/** A finished game. `result` is the same short code the analytics event uses ("3", "fail", "win-hard"); the server checks its shape. */
+export function notifyGame(game: string, result: string, day?: number) {
+  send({ type: "game", game, result, ...(day ? { day } : {}) });
 }
