@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/activities", label: "Activities" },
   { href: "/leaderboard", label: "Leaderboard" },
   { href: "/compare", label: "Compare" },
   { href: "/ambassadors", label: "Ambassadors" },
@@ -105,7 +106,7 @@ export function Navbar() {
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-3 z-[100] px-3 sm:px-6">
       <nav aria-label="Main" className="relative mx-auto max-w-5xl">
-        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-black px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)] lg:grid-cols-[1fr_auto_1fr]">
+        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-black px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)] xl:grid-cols-[1fr_auto_1fr]">
           {/* Logo */}
           <Link
             href="/"
@@ -115,8 +116,8 @@ export function Navbar() {
             <BrainCircuit className="h-6 w-6 transition-transform duration-700 group-hover:[transform:rotateY(-360deg)] motion-reduce:transition-none" />
           </Link>
 
-          {/* Desktop links. Seven links only fit from 1024px up; below that the menu button takes over. */}
-          <ul className="col-start-2 hidden items-center gap-1 lg:flex">
+          {/* Desktop links. Nine links only fit from 1280px up; below that the menu button takes over. */}
+          <ul className="col-start-2 hidden items-center gap-1 xl:flex">
             {LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -144,7 +145,7 @@ export function Navbar() {
           <div className="col-start-3 flex items-center gap-2 justify-self-end">
             {/* Mute is always on the bar; the theme toggle moves into the menu on phones and tablets */}
             <MuteButton muted={muted} onToggle={handleMute} />
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <ThemeToggle />
             </div>
 
@@ -168,7 +169,7 @@ export function Navbar() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              className={cn(ICON_BUTTON, "relative lg:hidden")}
+              className={cn(ICON_BUTTON, "relative xl:hidden")}
             >
               <MenuCloseIcon active={open} size={28} className="absolute inset-0 m-auto" />
             </button>
@@ -179,7 +180,7 @@ export function Navbar() {
         <div
           id="mobile-menu"
           className={cn(
-            "absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[2rem] border border-white/10 bg-black p-6 text-white shadow-2xl transition-[opacity,transform,visibility] duration-300 motion-reduce:transition-none lg:hidden",
+            "absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[2rem] border border-white/10 bg-black p-6 text-white shadow-2xl transition-[opacity,transform,visibility] duration-300 motion-reduce:transition-none xl:hidden",
             open ? "visible translate-y-0 opacity-100" : "pointer-events-none invisible -translate-y-3 opacity-0"
           )}
         >
