@@ -9,6 +9,7 @@ import { track } from "@/lib/analytics";
 import { notifyGame } from "@/lib/notify";
 import { GameCard } from "@/components/games/game-card";
 import { ShareActions } from "@/components/games/share-actions";
+import { LeaderboardPanel } from "@/components/games/leaderboard-panel";
 
 const KEY = "cm_cooked_or_cap_v1";
 type Saved = { day: number; answers: number[]; stats: Stats & { totalCorrect: number } };
@@ -151,6 +152,7 @@ export function QuizClient() {
           </div>
         </GameCard>
         <ShareActions cardRef={cardRef} game="cooked-or-cap" day={day} text={shareText} result={String(score)} />
+        <LeaderboardPanel game="cooked-or-cap" day={day} answers={answers} />
         <p className="text-center text-sm text-muted-foreground">
           Streak {stats.streak} · Best {stats.best} · Days played {stats.played}. New questions at midnight UTC.
         </p>
