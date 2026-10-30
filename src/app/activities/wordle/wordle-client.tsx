@@ -6,6 +6,7 @@ import { ArrowLeft, Delete } from "lucide-react";
 import { WORDLE_ANSWERS } from "@/content/games";
 import { dayNumber, EMPTY_STATS, load, recordResult, save, type Stats } from "@/lib/games/daily";
 import { track } from "@/lib/analytics";
+import { notifyGame } from "@/lib/notify";
 import { GameCard } from "@/components/games/game-card";
 import { ShareActions } from "@/components/games/share-actions";
 
@@ -84,7 +85,11 @@ export function WordleClient() {
     const finished = current === answer || next.length >= ROWS;
     const newStats = finished ? recordResult(stats, day, current === answer) : stats;
     if (guesses.length === 0) track("game_start", { game: "wordle", day });
-    if (finished) track("game_complete", { game: "wordle", day, result: current === answer ? String(next.length) : "fail" });
+    if (finished) {
+      const result = current === answer ? String(next.length) : "fail";
+      track("game_complete", { game: "wordle", day, result });
+      notifyGame("wordle", result, day);
+    }
     setGuesses(next);
     setCurrent("");
     setNote("");

@@ -6,6 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { buildQuiz } from "@/lib/games/cooked-or-cap";
 import { dayNumber, EMPTY_STATS, load, save, type Stats } from "@/lib/games/daily";
 import { track } from "@/lib/analytics";
+import { notifyGame } from "@/lib/notify";
 import { GameCard } from "@/components/games/game-card";
 import { ShareActions } from "@/components/games/share-actions";
 
@@ -56,6 +57,7 @@ export function QuizClient() {
       setStats(newStats);
       save(KEY, { day, answers: next, stats: newStats });
       track("game_complete", { game: "cooked-or-cap", day, result: String(total) });
+      notifyGame("cooked-or-cap", String(total), day);
     } else {
       save(KEY, { day, answers: next, stats });
     }
