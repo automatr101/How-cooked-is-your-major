@@ -16,7 +16,8 @@ export async function POST(req: NextRequest) {
   try {
     const form = await req.formData();
     key = String(form.get("key") ?? "").slice(0, 200);
-    if (form.get("next") === "/admin/ambassadors") next = "/admin/ambassadors"; // only known admin pages, never a free address
+    const asked = form.get("next");
+    if (asked === "/admin/ambassadors" || asked === "/admin/games") next = asked; // only known admin pages, never a free address
   } catch {
     return notFound();
   }

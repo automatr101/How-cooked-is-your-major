@@ -114,3 +114,26 @@ export async function board(game: Game, day: number, playerId: string | null): P
   const strip = ({ rank, nickname, score }: (typeof all)[number]): BoardEntry => ({ rank, nickname, score });
   return { day, game, total: total ?? all.length, top: all.slice(0, 10).map(strip), you: mine ? strip(mine) : null };
 }
+
+// ---- admin ---------------------------------------------------------------------------------------------------------------
+
+export interface AdminEntry {
+  id: string;
+  created_at: string;
+  game: Game;
+  day: number;
+  nickname: string;
+  score: number;
+}
+
+/** Every entry for the last few days (newest first), for the owner's admin. */
+export async function listRecent(days: number): Promise<AdminEntry[]> {
+  const from = Math.max(1, currentDay() - (days - 1));
+  const { rows } = await call(`?select=id,created_at,game,day,nickname,score&day=gte.${from}&order=created_at.desc&limit=500`);
+  return rows as AdminEntry[];
+}
+
+/** Removes one entry (a bad nickname). The player can post again that day under a new name. */
+export async function deleteScore(id: string): Promise<void> {
+  await call(`?id=eq.${encodeURIComponent(id)}`, { method: "DELETE", prefer: "return=minimal" });
+}
