@@ -4,7 +4,7 @@ import { HubCards } from "./hub-cards";
 
 export const metadata: Metadata = {
   title: "Activities | How Cooked Is Your Major?",
-  description: "Daily games for students: Major Wordle and Cooked or Cap? New puzzles every day, free.",
+  description: "Daily games for students: Major Wordle, Cooked or Cap? and Major Wars. New puzzles every day, free.",
 };
 
 export default function ActivitiesPage() {
