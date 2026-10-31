@@ -7,6 +7,9 @@ export function dayNumber(now: Date = new Date()): number {
   return Math.max(1, Math.floor((now.getTime() - EPOCH_MS) / 86400000) + 1);
 }
 
+/** The UTC date a puzzle number belongs to, as a Date at 00:00 UTC. */
+export const dayStart = (day: number): Date => new Date(EPOCH_MS + (day - 1) * 86400000);
+
 /** Small deterministic random generator (mulberry32): same seed, same sequence. */
 export function seeded(seed: number): () => number {
   let a = seed >>> 0;

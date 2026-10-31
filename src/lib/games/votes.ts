@@ -44,3 +44,11 @@ export async function split(day: number): Promise<[number, number] | null> {
   const first = Math.round((a / total) * 100);
   return [first, 100 - first];
 }
+
+/** Raw vote counts [first, second] for a day. For the owner's digest only: never sent to the browser. */
+export async function counts(day: number): Promise<[number, number]> {
+  const count = async (choice: 0 | 1) =>
+    (await call(`?select=id&day=eq.${day}&choice=eq.${choice}&limit=1`, { prefer: "count=exact" })).total ?? 0;
+  const [a, b] = await Promise.all([count(0), count(1)]);
+  return [a, b];
+}
