@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BrainCircuit } from "lucide-react";
 import { MenuCloseIcon, VolumeIcon } from "@/components/ui/animated-state-icons";
 import { ThemeToggle } from "./theme-toggle";
 import { toggleMute, useMuted } from "@/lib/sounds";
@@ -105,19 +105,20 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-3 z-[100] px-3 sm:px-6">
-      <nav aria-label="Main" className="relative mx-auto max-w-5xl">
-        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-black px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)] xl:grid-cols-[1fr_auto_1fr]">
+      <nav aria-label="Main" className="relative mx-auto max-w-5xl xl:max-w-6xl">
+        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-black px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
           {/* Logo */}
           <Link
             href="/"
             aria-label="CookedMajor home"
-            className={cn("group grid h-12 w-12 place-items-center justify-self-start rounded-full bg-white text-black", FOCUS_RING)}
+            className={cn("group grid h-12 w-12 shrink-0 place-items-center justify-self-start rounded-[22.65%]", FOCUS_RING)}
           >
-            <BrainCircuit className="h-6 w-6 transition-transform duration-700 group-hover:[transform:rotateY(-360deg)] motion-reduce:transition-none" />
+            {/* The brand app icon (cap and flame on the dark tile), used as is */}
+            <Image src="/brand/icon.svg" alt="" width={48} height={48} priority className="h-12 w-12 transition-transform duration-700 group-hover:[transform:rotateY(360deg)] motion-reduce:transition-none" />
           </Link>
 
-          {/* Desktop links. Nine links only fit from 1280px up; below that the menu button takes over. */}
-          <ul className="col-start-2 hidden items-center gap-1 xl:flex">
+          {/* Desktop links. Nine links fit from 1280px up (compact type and padding, centred in the space between the logo and the buttons); below that the menu button takes over. */}
+          <ul className="col-start-2 hidden min-w-0 items-center justify-center gap-0.5 xl:flex">
             {LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -126,7 +127,7 @@ export function Navbar() {
                     href={href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "group relative block rounded-full px-3 py-2 text-sm font-medium transition-colors",
+                      "group relative block whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium transition-colors",
                       active ? "text-white" : "text-white/60 hover:text-white",
                       FOCUS_RING
                     )}
