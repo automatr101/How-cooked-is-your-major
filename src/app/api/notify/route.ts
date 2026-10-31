@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 import { majors } from "@/lib/data";
 import { crossSite } from "@/lib/same-origin";
+import { dayNumber } from "@/lib/games/daily";
+import { playsEnabled, recordPlay } from "@/lib/games/plays";
 import { BOT_UA, clientIp, escapeHtml, rateLimited, sendTelegram, telegramEnabled, visitorLine } from "@/lib/telegram";
 
 // Telegram visit/scan alerts. Silently does nothing until TELEGRAM_BOT_TOKEN and
@@ -43,7 +45,8 @@ export async function POST(req: NextRequest) {
   // Only our own pages report visits and scans: another website must not be able to fill the alert chat through a visitor.
   if (crossSite(req)) return new Response(null, { status: 403 });
 
-  if (!telegramEnabled()) return done();
+  // Alerts need Telegram; the finished-games tally (for the daily digest) only needs the database
+  if (!telegramEnabled() && !playsEnabled()) return done();
 
   const ua = req.headers.get("user-agent") ?? "";
   if (!ua || BOT_UA.test(ua)) return done();
@@ -81,11 +84,13 @@ export async function POST(req: NextRequest) {
     // Only known games and results of the right shape can ever be posted
     const line = gameLine(game, result, day);
     if (!line) return new Response(null, { status: 400 });
+    await recordPlay(game as string, dayNumber(), result as string); // the server's own UTC day, not the one the browser sent
     text = `🎮 <b>${line}</b>\n${who}\n${from}`;
   } else {
     return new Response(null, { status: 400 });
   }
 
+  if (!telegramEnabled()) return done();
   await sendTelegram(text);
   return done();
 }
