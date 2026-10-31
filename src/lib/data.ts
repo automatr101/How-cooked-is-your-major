@@ -1936,7 +1936,14 @@ const ADDED: [string, number, string, Category][] = [
   ["Equine Science", 15, "Not Cooked", "trades"],
   ["Viticulture and Enology", 20, "Not Cooked", "trades"],
   ["Fisheries and Wildlife", 15, "Not Cooked", "trades"],
-  ["Welding Engineering Technology", 8, "Not Cooked", "trades"]
+  ["Welding Engineering Technology", 8, "Not Cooked", "trades"],
+  // visitors searched for these and found nothing (Telegram "Missing major requested", Oct 2026); scores proposed from the closest majors above
+  ["Rail Transportation", 15, "Not Cooked", "trades"],
+  ["Technical Communication", 70, "Cooked", "humanities"],
+  ["SAP Consulting", 55, "Kinda Cooked", "business"],
+  ["Bangla Language and Literature", 40, "Slightly Cooked", "humanities"],
+  ["Cyber-Physical Systems Engineering", 25, "Slightly Cooked", "stem"],
+  ["Emergency Management and Homeland Security", 30, "Slightly Cooked", "humanities"]
 ];
 
 const CATEGORY_ADVICE: Record<Category, string> = {
@@ -2046,6 +2053,18 @@ export const ALIASES: Record<string, string> = {
   "Fine Arts": "Studio Art",
   "Cyber Security": "BSc Cyber Security",
   "Cybersecurity": "BSc Cyber Security",
+  "Aeronautical Engineering": "BSc. Aerospace Engineering",
+  "Aeronautics": "BSc. Aerospace Engineering",
+  "Quantum Physics": "Physics",
+  "Ecology": "BSc. Environmental Sciences",
+  "Molecular Life Sciences": "Molecular Biology",
+  "VLSI": "BSc. Electrical/Electronic Engineering",
+  "VLSI Design": "BSc. Electrical/Electronic Engineering",
+  "Homeland Security": "Emergency Management and Homeland Security",
+  "Emergency Management": "Emergency Management and Homeland Security",
+  "Bangla": "Bangla Language and Literature",
+  "Bengali": "Bangla Language and Literature",
+  "Railway Engineering": "Rail Transportation",
 };
 
 const byName = new Map(majors.map((m) => [m.name, m]));
@@ -2065,15 +2084,55 @@ const SEARCH_NAMES: { name: string; major: Major }[] = [
 ];
 
 /** Search the real, canonical majors (aliases included). Best matches first; equally good ones shorter-name first. */
+// Words visitors add around a major's name ("finance degree", "bsc in physics"): ignored when matching.
+const FILLER = new Set(["degree", "degrees", "major", "majors", "course", "courses", "program", "programme", "bsc", "bs", "ba", "msc", "b.sc", "of", "in", "the", "a", "and", "for", "with"]);
+// Too common to count as "the" word a visitor means, so a lone one never makes the fallback match (a real miss must still read as a miss).
+const COMMON = new Set(["engineering", "science", "sciences", "studies", "management", "technology", "design", "business", "systems", "applied", "general"]);
+const JOB_WORDS = new Set(["director", "manager", "officer", "specialist", "analyst", "consultant", "teacher", "student", "graduate", "jobs", "career"]);
+const words = (s: string) => s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+
+/** True when the two words differ by at most `max` single-letter edits (typos like "aeronotical"). */
+function near(a: string, b: string, max: number): boolean {
+  if (a === b) return true;
+  if (Math.abs(a.length - b.length) > max) return false;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i];
+    for (let j = 1; j <= b.length; j++) row[j] = Math.min(prev[j] + 1, row[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = row;
+  }
+  return prev[b.length] <= max;
+}
+const typoRoom = (w: string) => (w.length >= 8 ? 2 : w.length >= 5 ? 1 : 0);
+const wordMatches = (t: string, nameWords: string[]) => nameWords.some((w) => w.startsWith(t) || near(t, w, typoRoom(t)));
+
 export function searchMajors(query: string, limit = 10): Major[] {
   const q = query.toLowerCase().trim();
   if (!q) return [];
   const terms = q.split(/\s+/);
+  const keyTerms = words(q).filter((t) => !FILLER.has(t));
   const best = new Map<Major, number>();
   for (const { name, major } of SEARCH_NAMES) {
     const n = name.toLowerCase();
-    const score = n === q ? 100 : n.startsWith(q) ? 80 : n.includes(q) ? 60 : terms.every((t) => n.includes(t)) ? 40 : 0;
+    const nw = words(n);
+    let score = n === q ? 100 : n.startsWith(q) ? 80 : n.includes(q) ? 60 : terms.every((t) => n.includes(t)) ? 40 : 0;
+    // the whole name sits inside a longer phrase ("finance degree", "information technology director")
+    // (only when everything else in the phrase is filler or a job title, so "blorp engineering" is still a miss)
+    if (!score && n.length >= 6) {
+      const qw = words(q);
+      const rest = ` ${qw.join(" ")} `.includes(` ${nw.join(" ")} `) ? qw.filter((w) => !nw.includes(w)) : null;
+      if (rest && rest.every((w) => FILLER.has(w) || JOB_WORDS.has(w))) score = 50;
+    }
+    // every meaningful word matches a word of the name, allowing a typo ("aeronotical engineering")
+    if (!score && keyTerms.length > 0 && keyTerms.every((t) => wordMatches(t, nw))) score = 30;
     if (score > (best.get(major) ?? 0)) best.set(major, score);
+  }
+  // nothing close: fall back to names sharing one distinctive word ("psychology and spanish" finds Psychology)
+  if (best.size === 0) {
+    for (const { name, major } of SEARCH_NAMES) {
+      const nw = words(name);
+      if (keyTerms.some((t) => t.length >= 5 && !COMMON.has(t) && nw.some((w) => w === t || near(t, w, typoRoom(t))))) best.set(major, Math.max(best.get(major) ?? 0, 10));
+    }
   }
   return [...best.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].name.length - b[0].name.length)
