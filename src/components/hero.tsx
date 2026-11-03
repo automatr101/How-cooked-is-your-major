@@ -2,7 +2,6 @@
 
 import React from "react";
 import dynamic from "next/dynamic";
-import { Plus, BrainCircuit } from "lucide-react";
 import { MONTHLY_VISITORS } from "@/content/stats";
 import { TypeWriter } from "@/components/ui/hero-designali";
 import { cn } from "@/lib/utils";
@@ -52,11 +51,6 @@ export const Hero = ({ experiment = null }: { experiment?: ExperimentView | null
         <div className="flex flex-col items-center justify-center text-center space-y-5 sm:space-y-6">
           
           <div className="space-y-3 sm:space-y-4">
-            <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/30 border border-border backdrop-blur-xl text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl">
-              <BrainCircuit className="w-3 h-3 text-primary" />
-              Intelligence Vector V.04
-            </div>
-
             <h1 className="text-6xl sm:text-7xl md:text-9xl font-black tracking-tighter leading-[0.85] text-foreground">
               <span className="italic font-thin text-4xl sm:text-5xl md:text-7xl block mb-2 opacity-70">How </span>
               Cooked <br />
@@ -91,11 +85,6 @@ export const Hero = ({ experiment = null }: { experiment?: ExperimentView | null
             </p>
           </div>
 
-          {/* Plus decorations */}
-          <Plus strokeWidth={8} className="text-primary absolute left-0 top-0 h-12 w-12 opacity-20 -translate-x-1/2 -translate-y-1/2" />
-          <Plus strokeWidth={8} className="text-secondary absolute right-0 top-0 h-12 w-12 opacity-20 translate-x-1/2 -translate-y-1/2" />
-          <Plus strokeWidth={8} className="text-destructive absolute left-0 bottom-0 h-12 w-12 opacity-20 -translate-x-1/2 translate-y-1/2" />
-          <Plus strokeWidth={8} className="text-primary absolute right-0 bottom-0 h-12 w-12 opacity-20 translate-x-1/2 translate-y-1/2" />
         </div>
       </div>
     </main>
