@@ -38,7 +38,8 @@ async function fetchSplit(day: number): Promise<Pct> {
   }
 }
 
-export function WarsClient() {
+/** `locked`: the paid-unlock experiment is running, so the reveal shows who the scan picks but not the scores. */
+export function WarsClient({ locked = false }: { locked?: boolean }) {
   const [day, setDay] = useState(0);
   const [choice, setChoice] = useState<0 | 1 | null>(null);
   const [stats, setStats] = useState<Stats>(EMPTY_STATS);
@@ -127,7 +128,7 @@ export function WarsClient() {
                   <div key={m.name} style={{ border: `2px solid ${i === scan ? "#FF6A00" : "#303030"}`, borderRadius: 16, padding: "10px 14px" }}>
                     <div style={{ fontSize: 20, fontWeight: 900, textTransform: "uppercase", lineHeight: 1 }}>{m.name}</div>
                     <div style={{ fontSize: 12, color: "#A6A6A6", marginTop: 4 }}>
-                      Scan {m.score}
+                      {locked ? "Scan" : `Scan ${m.score}`}
                       {i === scan ? " · more cooked" : ""}
                       {i === choice ? " · your pick" : ""}
                     </div>
@@ -138,7 +139,8 @@ export function WarsClient() {
 
             <div className="space-y-2 rounded-2xl bg-foreground/5 p-4 text-sm">
               <p>
-                {choice === scan ? "You and the scan agree." : "The scan disagrees with you."} It scores {pair[scan].name} {pair[scan].score} and {pair[1 - scan].name} {pair[1 - scan].score}.
+                {choice === scan ? "You and the scan agree." : "The scan disagrees with you."}
+                {locked ? ` It says ${pair[scan].name} is more cooked.` : ` It scores ${pair[scan].name} ${pair[scan].score} and ${pair[1 - scan].name} ${pair[1 - scan].score}.`}
               </p>
               {pct ? (
                 <p>

@@ -325,7 +325,7 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
     <main className="relative min-h-screen bg-background text-foreground transition-colors duration-500 selection:bg-primary/30 flex flex-col items-center pb-24 overflow-hidden font-sans">
       {/* Interactive Hero */}
       <Hero experiment={experiment} />
-      <LiveTicker />
+      {!experiment && <LiveTicker />}
 
       {/* Before a scan only: real reviews, if there are any (the plan sample was taken off the home page to keep it calm) */}
       {!selectedMajor && (

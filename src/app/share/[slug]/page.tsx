@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { ALIASES, canonicalMajor, majors } from "@/lib/data";
 import { slugify } from "@/lib/analytics";
 import { SITE_URL } from "@/lib/site";
+import { scansLocked } from "@/lib/unlock/locked";
 import { ShareRedirect } from "./redirect";
 
 // A tiny page per major, built ahead of time, that exists for one reason: so link previews (X, WhatsApp,
@@ -15,6 +16,7 @@ import { ShareRedirect } from "./redirect";
 // The site's own Share on X, WhatsApp and Copy text buttons use these addresses: /share/<major-slug>.
 
 export const dynamicParams = false; // an unknown slug is a plain 404
+export const dynamic = "force-dynamic"; // reads the unlock window and cookie on every request (a locked link shows no score)
 
 // Old links to an alias ("/share/bsc-nursing") keep working and show the canonical entry
 const bySlug = new Map(majors.map((m) => [slugify(m.name), m.name in ALIASES ? canonicalMajor(m.name)! : m]));
@@ -33,6 +35,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const m = bySlug.get(slug);
   if (!m) return {};
+
+  // While the paid-unlock experiment runs a share link must not give the score away in the preview card either
+  if (await scansLocked()) {
+    const title = `${m.name}: how cooked is it? | How Cooked Is Your Major?`;
+    const description = "Scan any major and find out how cooked it is.";
+    return {
+      title,
+      description,
+      alternates: { canonical: SITE_URL },
+      robots: { index: false, follow: true },
+      openGraph: { title, description, url: `${SITE_URL}/share/${slug}`, siteName: "How Cooked Is Your Major?", locale: "en_US", type: "website" },
+      twitter: { card: "summary", title, description, site: "@cookedlabs_cto", creator: "@cookedlabs_cto" },
+    };
+  }
 
   const title = `${m.name} is ${m.level} — ${m.score}% AI Risk`;
   const description = `Survival Status: ${m.level.toUpperCase()}. Check how cooked your major is at MajorLabs Intelligence.`;
@@ -70,7 +86,8 @@ export default async function SharePage({ params }: Props) {
   const m = bySlug.get(slug);
   if (!m) return null; // unreachable: dynamicParams is false
 
-  const target = resultPath(m);
+  const locked = await scansLocked();
+  const target = locked ? `/?major=${encodeURIComponent(m.name)}` : resultPath(m); // no score in the address while locked
   const color = m.score > 80 ? "text-destructive" : m.score > 40 ? "text-orange-500" : "text-emerald-500";
 
   return (
@@ -79,8 +96,12 @@ export default async function SharePage({ params }: Props) {
       <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-16 text-center">
         <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">MajorLabs Intelligence</p>
         <h1 className="text-4xl font-black uppercase italic leading-[0.95] tracking-tighter sm:text-5xl">{m.name}</h1>
-        <p className={`text-7xl font-black tabular-nums tracking-tighter ${color}`}>{m.score}%</p>
-        <p className="text-lg font-black uppercase italic">{m.level}</p>
+        {!locked && (
+          <>
+            <p className={`text-7xl font-black tabular-nums tracking-tighter ${color}`}>{m.score}%</p>
+            <p className="text-lg font-black uppercase italic">{m.level}</p>
+          </>
+        )}
         <Link
           href={target}
           className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground transition active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
