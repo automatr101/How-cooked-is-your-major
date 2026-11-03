@@ -2,14 +2,14 @@
 
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { BrainCircuit, Zap, ArrowLeft, GitCompare } from "lucide-react";
+import { BrainCircuit, Zap, ArrowLeft, ArrowRight, GitCompare, Lock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { searchMajors, Major } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { track } from "@/lib/analytics";
 import { MajorSearch } from "@/components/major-search";
 
-export default function CompareClient() {
+export default function CompareClient({ locked = false }: { locked?: boolean }) {
   const [query1, setQuery1] = useState("");
   const [query2, setQuery2] = useState("");
   const [major1, setMajor1] = useState<Major | null>(null);
@@ -19,6 +19,7 @@ export default function CompareClient() {
   // when it is picked. Until it arrives (or if it fails to load) the roast stored in the data shows.
   const [roasts, setRoasts] = useState<Record<string, string>>({});
   useEffect(() => {
+    if (locked) return;
     for (const m of [major1, major2]) {
       if (!m) continue;
       import("@/lib/roast")
@@ -27,7 +28,7 @@ export default function CompareClient() {
         })
         .catch(() => {});
     }
-  }, [major1, major2]);
+  }, [major1, major2, locked]);
 
   // One event each time a pair is complete
   useEffect(() => {
@@ -73,6 +74,7 @@ export default function CompareClient() {
               <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">PRIMARY MAJOR</p>
               <MajorSearch
                 compact
+                hideScores={locked}
                 label="Primary major"
                 placeholder="Search major..."
                 beamDuration={3.1}
@@ -95,6 +97,7 @@ export default function CompareClient() {
               <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-2">COMPARISON MAJOR</p>
               <MajorSearch
                 compact
+                hideScores={locked}
                 label="Comparison major"
                 placeholder="Search major..."
                 beamDuration={3.6}
@@ -123,18 +126,18 @@ export default function CompareClient() {
             >
               {[major1, major2].map((m, idx) => {
                 const other = idx === 0 ? major2 : major1;
-                const isMoreAtRisk = m.score > other.score;
+                const isMoreAtRisk = !locked && m.score > other.score;
                 return (
                   <div key={idx} className={cn(
                     "rounded-[40px] p-8 sm:p-12 relative overflow-hidden transition-all duration-500",
-                    isMoreAtRisk ? "bg-destructive/5 border-4 border-destructive/20" : "bg-emerald-500/5 border-4 border-emerald-500/20"
+                    locked ? "bg-card border-4 border-border" : isMoreAtRisk ? "bg-destructive/5 border-4 border-destructive/20" : "bg-emerald-500/5 border-4 border-emerald-500/20"
                   )}>
                     <div className="flex justify-between items-start mb-8">
                       <span className={cn(
                         "px-4 py-1.5 rounded-full text-[10px] font-black tracking-widest uppercase",
-                        isMoreAtRisk ? "bg-destructive text-white" : "bg-emerald-500 text-white"
+                        locked ? "bg-muted text-muted-foreground" : isMoreAtRisk ? "bg-destructive text-white" : "bg-emerald-500 text-white"
                       )}>
-                        {isMoreAtRisk ? "MORE AT RISK" : "SAFER CHOICE"}
+                        {locked ? "LOCKED" : isMoreAtRisk ? "MORE AT RISK" : "SAFER CHOICE"}
                       </span>
                       <BrainCircuit className="w-8 h-8 opacity-20" />
                     </div>
@@ -143,6 +146,12 @@ export default function CompareClient() {
                         {m.name}
                     </h2>
 
+                    {locked ? (
+                      <div className="mb-8 flex items-baseline gap-2" aria-label="Score locked">
+                        <span aria-hidden className="select-none text-7xl sm:text-8xl font-black tracking-tighter text-muted-foreground blur-xl">00%</span>
+                        <Lock className="h-6 w-6 text-primary" aria-hidden />
+                      </div>
+                    ) : (
                     <div className="flex items-baseline gap-2 mb-8">
                        <span className={cn(
                          "text-7xl sm:text-8xl font-black tracking-tighter",
@@ -152,6 +161,7 @@ export default function CompareClient() {
                        </span>
                        <span className="text-xs font-black uppercase text-muted-foreground tracking-widest">{m.level}</span>
                     </div>
+                    )}
 
                     <div className="space-y-6 pt-8 border-t border-border/10">
                        <div className="grid grid-cols-2 gap-4">
@@ -168,7 +178,11 @@ export default function CompareClient() {
                        </div>
                        <div>
                           <p className="text-[10px] font-black text-muted-foreground tracking-widest mb-2 uppercase">AI ROAST</p>
-                          <p className="text-xl font-black italic text-foreground leading-tight">&ldquo;{roasts[m.name] ?? m.roast}&rdquo;</p>
+                          {locked ? (
+                            <p aria-hidden className="select-none text-xl font-black italic leading-tight text-muted-foreground blur-md">This roast is waiting for you to unlock it.</p>
+                          ) : (
+                            <p className="text-xl font-black italic text-foreground leading-tight">&ldquo;{roasts[m.name] ?? m.roast}&rdquo;</p>
+                          )}
                        </div>
                     </div>
                   </div>
@@ -177,6 +191,19 @@ export default function CompareClient() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {locked && major1 && major2 && (
+          <div className="flex flex-col items-center gap-4 text-center">
+            <p className="max-w-md text-sm font-bold text-muted-foreground">Scores and roasts are locked for now. Scan a major on the home page and unlock its result there.</p>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-black uppercase tracking-widest text-primary-foreground transition active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              Go to the scanner
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
 
         {/* CTA */}
         {(!major1 || !major2) && (

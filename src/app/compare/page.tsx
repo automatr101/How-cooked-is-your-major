@@ -1,8 +1,7 @@
 import { scansLocked } from "@/lib/unlock/locked";
-import { ScansLocked } from "@/components/unlock/scans-locked";
 import CompareClient from "./compare-client";
 
+// While the paid-unlock experiment runs, visitors can still pick two majors; the cards come back locked.
 export default async function ComparePage() {
-  if (await scansLocked()) return <ScansLocked title="Compare is locked" />;
-  return <CompareClient />;
+  return <CompareClient locked={await scansLocked()} />;
 }
