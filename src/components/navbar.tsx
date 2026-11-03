@@ -106,7 +106,7 @@ export function Navbar() {
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-3 z-[100] px-3 sm:px-6">
       <nav aria-label="Main" className="relative mx-auto max-w-5xl xl:max-w-6xl">
-        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-black px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
+        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center rounded-full border border-white/10 bg-[#141414] px-2 text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
           {/* Logo */}
           <Link
             href="/"
@@ -181,7 +181,7 @@ export function Navbar() {
         <div
           id="mobile-menu"
           className={cn(
-            "absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[2rem] border border-white/10 bg-black p-6 text-white shadow-2xl transition-[opacity,transform,visibility] duration-300 motion-reduce:transition-none xl:hidden",
+            "absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[2rem] border border-white/10 bg-[#141414] p-6 text-white shadow-2xl transition-[opacity,transform,visibility] duration-300 motion-reduce:transition-none xl:hidden",
             open ? "visible translate-y-0 opacity-100" : "pointer-events-none invisible -translate-y-3 opacity-0"
           )}
         >
