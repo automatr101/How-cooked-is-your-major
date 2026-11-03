@@ -27,6 +27,8 @@ interface MajorSearchProps {
   compact?: boolean;
   /** Seconds per lap of the glow. Give side-by-side boxes different values so they don't pulse together. */
   beamDuration?: number;
+  /** Leave the score out of the list (while results are locked). */
+  hideScores?: boolean;
 }
 
 // The search box used on the home page and the Compare page, as an accessible combobox:
@@ -45,6 +47,7 @@ export function MajorSearch({
   label = "Search majors",
   compact = false,
   beamDuration = 3.1,
+  hideScores = false,
 }: MajorSearchProps) {
   const id = useId();
   const listId = `${id}-list`;
@@ -248,14 +251,16 @@ export function MajorSearch({
                       {major.name}
                     </span>
                     <div className="flex items-center gap-3">
-                      <span
-                        className={cn(
-                          "text-xs font-black px-2 py-1 rounded-md bg-background border border-border",
-                          major.score > 70 ? "text-destructive" : "text-emerald-600 dark:text-emerald-400"
-                        )}
-                      >
-                        {major.score}%
-                      </span>
+                      {!hideScores && (
+                        <span
+                          className={cn(
+                            "text-xs font-black px-2 py-1 rounded-md bg-background border border-border",
+                            major.score > 70 ? "text-destructive" : "text-emerald-600 dark:text-emerald-400"
+                          )}
+                        >
+                          {major.score}%
+                        </span>
+                      )}
                       <ArrowRight
                         aria-hidden
                         className={cn(
