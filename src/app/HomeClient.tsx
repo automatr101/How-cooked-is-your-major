@@ -367,7 +367,7 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
       </AnimatePresence>
 
       {/* Search Section */}
-      <div id="search" className="w-full max-w-xl mt-16 relative z-30 px-6">
+      <div id="search" className="w-full max-w-xl mt-16 relative z-40 px-6">
         <MajorSearch
           value={query}
           onChange={(value) => {
@@ -716,7 +716,7 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
 
       {/* The daily games. Under a result they sit below the offer instead (see GamesStrip where="result") */}
       {!selectedMajor && (
-        <div className="relative z-30 mt-16 w-full px-6">
+        <div className="relative z-20 mt-16 w-full px-6">
           <GamesStrip where="home" />
         </div>
       )}
