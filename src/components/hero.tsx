@@ -78,7 +78,7 @@ export const Hero = ({ experiment = null }: { experiment?: ExperimentView | null
 
           {/* A real result cycling through five confirmed scans, the button to scan your own right under it, and the real monthly visitor count (src/content/stats.ts) */}
           <div className="flex w-full flex-col items-center gap-3 sm:pt-2">
-            <SampleResultCard buttonLabel={experiment ? "Scan yours" : undefined} />
+            <SampleResultCard buttonLabel={experiment ? "Scan yours" : undefined} locked={!!experiment} />
             <FriendsRow />
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
               <span className="text-foreground">{MONTHLY_VISITORS.display}</span> {MONTHLY_VISITORS.label}

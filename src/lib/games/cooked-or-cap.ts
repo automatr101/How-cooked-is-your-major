@@ -15,10 +15,18 @@ export type Question = {
 const POOL = realMajors.filter((m) => !/[.(]/.test(m.name) && m.name.length <= 24);
 
 /** Today's 10 questions, the same for everyone: 5 degree duels, 3 score claims (both built from the scan data, so the answers can never be wrong), 2 facts with sources. */
-export function buildQuiz(day: number): Question[] {
+export function buildQuiz(day: number, locked = false): Question[] {
   const rand = seeded(day * 7919 + 13);
   const pick = shuffled(POOL, rand);
   const out: Question[] = [];
+
+  // While scans are locked (the paid-unlock experiment) a duel or a score claim would give a score away, so the quiz is
+  // facts only: 10 sourced questions, no degree scores anywhere (see lib/unlock/locked.ts).
+  if (locked) {
+    return shuffled([...FACT_QUESTIONS.map((f) => ({ ...f })), ...SITE_FACT_QUESTIONS.map((f) => ({ ...f, source: undefined as string | undefined }))], rand)
+      .slice(0, 10)
+      .map((f, k) => ({ id: `fact-${k}`, prompt: `True or cap: ${f.text}`, options: ["True", "Cap"], correct: f.answer ? 0 : 1, reveal: f.why, source: f.source }));
+  }
 
   // Duels: two degrees at least 12 points apart
   let i = 0;

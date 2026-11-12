@@ -39,8 +39,25 @@ export function goToSearch() {
   window.setTimeout(() => target?.querySelector("input")?.focus({ preventScroll: true }), reduce ? 0 : 400);
 }
 
-function CardFace({ r }: { r: Result }) {
+function CardFace({ r, locked }: { r: Result; locked: boolean }) {
   const color = band(r.score);
+  // While results are locked (the paid-unlock experiment) the real score, verdict, bar and roast are not in the page at all: blurred stand-ins only
+  if (locked) {
+    return (
+      <>
+        <span className="inline-block rounded-full border border-[#303030] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.2em] text-[#A6A6A6]">Locked sample</span>
+        <p className="mt-4 truncate text-sm font-bold text-[#F4F4F4]">{r.name}</p>
+        <div className="mt-1 flex items-end justify-between gap-3">
+          <p aria-hidden className="select-none text-6xl font-black italic leading-none tracking-tighter tabular-nums text-[#6B6B6B] blur-lg">
+            00<span className="text-3xl">%</span>
+          </p>
+          <span className="mb-1 shrink-0 rounded-full bg-[#303030] px-3 py-1 text-[11px] font-black uppercase tracking-wider text-[#A6A6A6]">Locked</span>
+        </div>
+        <div className="mt-3 h-2 w-full rounded-full bg-[#303030]" />
+        <p aria-hidden className="mt-3 line-clamp-2 min-h-[2.5rem] select-none text-sm italic leading-snug text-[#6B6B6B] blur-sm">This roast is waiting for you to scan it.</p>
+      </>
+    );
+  }
   return (
     <>
       <span className="inline-block rounded-full border border-[#303030] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.2em] text-[#A6A6A6]">Real scan result</span>
@@ -69,7 +86,7 @@ function slot(i: number, current: number, n: number): number {
   return d;
 }
 
-export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonLabel?: string }) {
+export function SampleResultCard({ buttonLabel = "Scan yours, free", locked = false }: { buttonLabel?: string; locked?: boolean }) {
   const reduceMotion = !!useReducedMotion();
   const [index, setIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -109,7 +126,7 @@ export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonL
   const current = RESULTS[index];
 
   const open = (placement: "card" | "button") => {
-    track("sample_card_clicked", { item_id: slugify(current.name), cooked_score: current.score, placement });
+    track("sample_card_clicked", { item_id: slugify(current.name), ...(locked ? {} : { cooked_score: current.score }), placement });
     goToSearch();
   };
 
@@ -118,7 +135,7 @@ export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonL
       <div
         role="group"
         aria-roledescription="carousel"
-        aria-label="Real scan results"
+        aria-label={locked ? "Locked sample results" : "Real scan results"}
         className="relative h-[244px] w-full touch-pan-y select-none"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -155,7 +172,7 @@ export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonL
               type="button"
               tabIndex={middle ? 0 : -1}
               aria-hidden={!middle}
-              aria-label={middle ? `Real scan result: ${r.name}, ${r.score}% ${r.level}. Scan your own major` : undefined}
+              aria-label={middle ? (locked ? `Locked sample: ${r.name}. Scan your own major` : `Real scan result: ${r.name}, ${r.score}% ${r.level}. Scan your own major`) : undefined}
               onClick={() => {
                 if (swiped.current) return; // the end of a swipe, not a tap
                 setHeld(true);
@@ -176,7 +193,7 @@ export function SampleResultCard({ buttonLabel = "Scan yours, free" }: { buttonL
                 filter: middle ? "none" : "brightness(0.4)", // dimmed, not see-through, so overlapping cards never mix
               }}
             >
-              <CardFace r={r} />
+              <CardFace r={r} locked={locked} />
             </button>
           );
         })}

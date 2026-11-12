@@ -15,7 +15,7 @@ const KEY = "cm_cooked_or_cap_v1";
 type Saved = { day: number; answers: number[]; stats: Stats & { totalCorrect: number } };
 const EMPTY: Saved["stats"] = { ...EMPTY_STATS, totalCorrect: 0 };
 
-export function QuizClient() {
+export function QuizClient({ locked = false }: { locked?: boolean }) {
   const [day, setDay] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [stats, setStats] = useState<Saved["stats"]>(EMPTY);
@@ -30,7 +30,7 @@ export function QuizClient() {
     if (saved.day === d) setAnswers(saved.answers);
   }, []);
 
-  const quiz = useMemo(() => (day > 0 ? buildQuiz(day) : []), [day]);
+  const quiz = useMemo(() => (day > 0 ? buildQuiz(day, locked) : []), [day, locked]);
   const done = quiz.length > 0 && answers.length >= quiz.length;
   // while the answer is on screen the question stays the one just answered, even though answers has already grown
   const idx = shown ? answers.length - 1 : Math.min(answers.length, Math.max(quiz.length - 1, 0));

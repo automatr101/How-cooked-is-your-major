@@ -20,7 +20,7 @@ export class ScoreStoreError extends Error {}
  * The score the browser's answers really earn for this game and day, or null if they are not a valid finished game.
  * The browser never sends a score, only what it played: guesses for Wordle (must end on today's word), answers for the quiz.
  */
-export function verifiedScore(game: Game, day: number, payload: unknown): number | null {
+export function verifiedScore(game: Game, day: number, payload: unknown, locked = false): number | null {
   if (game === "wordle") {
     if (!Array.isArray(payload) || payload.length < 1 || payload.length > 6) return null;
     const answer = WORDLE_ANSWERS[(day - 1) % WORDLE_ANSWERS.length];
@@ -30,7 +30,7 @@ export function verifiedScore(game: Game, day: number, payload: unknown): number
     if (guesses.at(-1) !== answer || guesses.slice(0, -1).includes(answer)) return null;
     return guesses.length;
   }
-  const quiz = buildQuiz(day);
+  const quiz = buildQuiz(day, locked);
   if (!Array.isArray(payload) || payload.length !== quiz.length) return null;
   if (!payload.every((a, i) => Number.isInteger(a) && a >= 0 && a < quiz[i].options.length)) return null;
   return payload.filter((a, i) => a === quiz[i].correct).length;
