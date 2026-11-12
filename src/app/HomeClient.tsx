@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { XLogo, WhatsAppLogo } from "@/components/brand-icons";
-import { Search, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2, Share } from "lucide-react";
+import { Search, BrainCircuit, Sparkles, ChevronRight, LayoutGrid, Zap, Volume2, Share, Lock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { canonicalMajor, searchMajors, Major, getLevelColor } from "@/lib/data";
@@ -376,6 +376,7 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
           }}
           results={filteredMajors}
           onSelect={handleSelect}
+          hideScores={!!experiment}
         />
         {missingMajor && !selectedMajor && (
           <div className="mx-auto mt-6 w-full max-w-xl rounded-3xl border border-border bg-card/60 p-5 text-left">
@@ -628,12 +629,12 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
                               track("compare_major", { major_1: selectedMajor.name, major_2: m.name, where: "result" });
                               setShowComparisonSearch(false);
                               setComparisonQuery("");
-                              triggerSoundReaction(m.score);
+                              if (!experiment) triggerSoundReaction(m.score);
                             }}
                             className="w-full flex items-center justify-between px-6 py-4 hover:bg-muted rounded-xl text-left transition-all"
                           >
                             <span className="text-foreground font-bold">{m.name}</span>
-                            <span className="text-xs font-black text-muted-foreground">{m.score}%</span>
+                            {!experiment && <span className="text-xs font-black text-muted-foreground">{m.score}%</span>}
                           </button>
                         ))}
                       </motion.div>
@@ -649,25 +650,34 @@ export default function HomeClient({ experiment = null }: { experiment?: Experim
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mt-8 lg:mt-0"
                 >
                   {[selectedMajor, comparedMajor].map((m, idx) => {
+                    // While results are locked (paid-unlock experiment) the other major's score, verdict and who is safer stay hidden
+                    const hidden = !!experiment && idx === 1;
                     const isMoreAtRisk = idx === 0 ? selectedMajor.score > comparedMajor.score : comparedMajor.score > selectedMajor.score;
                     return (
                       <div key={m.name} className={cn(
                         "relative rounded-3xl p-6 bg-card border-4",
-                        isMoreAtRisk ? "border-destructive/50" : "border-emerald-500/50"
+                        experiment ? "border-border" : isMoreAtRisk ? "border-destructive/50" : "border-emerald-500/50"
                       )}>
                         <div className="flex justify-between items-start mb-4">
                           <h4 className="text-xl font-black uppercase tracking-tighter leading-none line-clamp-2">{m.name}</h4>
                           <span className={cn(
                             "px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest",
-                            isMoreAtRisk ? "bg-destructive text-white" : "bg-emerald-500 text-white"
+                            experiment ? "bg-muted text-muted-foreground" : isMoreAtRisk ? "bg-destructive text-white" : "bg-emerald-500 text-white"
                           )}>
-                            {isMoreAtRisk ? "MORE AT RISK" : "SAFER CHOICE"}
+                            {experiment ? (hidden ? "LOCKED" : "YOUR SCAN") : isMoreAtRisk ? "MORE AT RISK" : "SAFER CHOICE"}
                           </span>
                         </div>
-                        <div className="flex items-baseline gap-2 mb-4">
-                          <span className="text-5xl font-black">{m.score}%</span>
-                          <span className="text-xs font-bold text-muted-foreground uppercase">{m.level}</span>
-                        </div>
+                        {hidden ? (
+                          <div className="flex items-baseline gap-2 mb-4" aria-label="Score locked">
+                            <span aria-hidden className="select-none text-5xl font-black text-muted-foreground blur-lg">00%</span>
+                            <Lock className="h-5 w-5 text-primary" aria-hidden />
+                          </div>
+                        ) : (
+                          <div className="flex items-baseline gap-2 mb-4">
+                            <span className="text-5xl font-black">{m.score}%</span>
+                            <span className="text-xs font-bold text-muted-foreground uppercase">{m.level}</span>
+                          </div>
+                        )}
                         <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/10">
                           <div>
                             <p className="text-[8px] font-black text-muted-foreground tracking-widest mb-1 uppercase">SALARY</p>

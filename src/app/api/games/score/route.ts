@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { crossSite } from "@/lib/same-origin";
+import { scansLocked } from "@/lib/unlock/locked";
 import { BOT_UA, clientIp, rateLimited } from "@/lib/telegram";
 import { board, cleanNickname, currentDay, GAMES, insertScore, ScoreStoreError, scoresEnabled, verifiedScore, type Game } from "@/lib/games/scores";
 
@@ -47,7 +48,7 @@ export async function POST(req: NextRequest) {
   const nickname = cleanNickname(body.nickname);
   if (!nickname) return reply(400, { error: "bad_nickname" });
 
-  const score = verifiedScore(game, day, body.answers);
+  const score = verifiedScore(game, day, body.answers, await scansLocked());
   if (score === null) return reply(400, { error: "bad_game" });
 
   try {
