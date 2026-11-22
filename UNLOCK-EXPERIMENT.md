@@ -20,6 +20,7 @@ results **by itself**. It is **off** unless you switch it on.
   A page someone left open past the end also treats the result as free. Someone who paid just before the end still gets what they paid for.
 - **Stop now:** delete `UNLOCK_EXPERIMENT_START` in Vercel and redeploy (or set the end to a past time).
 - **Safety:** a window longer than 7 days, or an end before the start, is ignored (off). A typo cannot leave a permanent paywall.
+- **Open-ended lock:** set `UNLOCK_EXPERIMENT_END=open` (the exact word) and the lock has no end; `npm run unlock:window -- now open` prints the pair. It stays until you delete `UNLOCK_EXPERIMENT_START` in Vercel and redeploy. Only that word does this, so a typo still cannot do it.
 - Nothing was removed: the free result is the normal code path. The experiment is a lock in front of it (`UnlockGate`).
 - The private payments gate (`PAYMENTS_PREVIEW_KEY`) is respected: while it is closed, only the owner's browser sees the experiment.
   That is the way to try it on the real site before the public sees it.
